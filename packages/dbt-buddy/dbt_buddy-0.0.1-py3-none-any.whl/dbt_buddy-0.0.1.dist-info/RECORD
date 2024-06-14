@@ -1,0 +1,13 @@
+dbt_buddy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbt_buddy/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbt_buddy/cli/cli.py,sha256=CB-7gtrpPCoQeJp1N35kk4HA3UOTcwEEJP_HQfw2UFk,1017
+dbt_buddy/document/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbt_buddy/document/cli.py,sha256=5LYn1rprIbOBpWuVzDEqrENJ5FDFyAzJOMnm08LPbys,1393
+dbt_buddy/document/doc_generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dbt_buddy/document/doc_generator/constants.py,sha256=dDvJAsLpruHD2CCsO45fptoJ82tth7w_WLjyiIr70e8,676
+dbt_buddy/document/doc_generator/generator.py,sha256=bizBWTm2ZyU9ZlNAgIZx5LossGhedXPcBNn0MkOcUog,9253
+dbt_buddy-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+dbt_buddy-0.0.1.dist-info/METADATA,sha256=eyTV6MhcJsezbpsXGZuDl7zxFMIr5AH8JWMkT-pTcnI,2964
+dbt_buddy-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dbt_buddy-0.0.1.dist-info/entry_points.txt,sha256=VORzRyz2BlHPJqarw2zLDpQWuXH3aaRbeccbxsmMG3o,47
+dbt_buddy-0.0.1.dist-info/RECORD,,
