@@ -1,0 +1,12 @@
+pyOrcas/ExampleUsage.py,sha256=UUMN0GKZ5ggDJY73jf-YqqYB_ijqBBBwr1VKykQzsxo,353
+pyOrcas/__init__.py,sha256=HhPL9f8pjNYJv0kldXyg-c2IQPEL7ssbbfD49nIPwfc,125
+pyOrcas/actuator.py,sha256=aX_7UFsU6QjAeD9_ezsKhiaOHWvlJZ3fDCaVOSjKZgQ,20196
+pyOrcas/constants.py,sha256=A6yoRt6RzunawZJ2QmdJbmpsLUk7LmHFSfsxCC9qq5A,426
+pyOrcas/__pycache__/actuator.cpython-39.pyc,sha256=FZznhHJAsU2ZUtuu1XvutW9tMocesNH7U4BuJGOB1do,16217
+pyOrcas/__pycache__/constants.cpython-39.pyc,sha256=0VTTLcDqucFLQhOG7r8Aq8At5oMpvou1PvjbR7zMuvk,567
+tests/__init__.py,sha256=QLfJTcuqt7z0QnHLKE7T6u5BTagN60E1ln6woLBWGPs,97
+pyOrcas-0.1.2.dist-info/LICENSE,sha256=PR47zVa_uizKgzBE1a1gu0BYtPVxb3l0K9Us0-v0_9Y,11515
+pyOrcas-0.1.2.dist-info/METADATA,sha256=7XThBmiIbT9LsviZmc5-qo2mdjcpwyP6XId_mR_iLCM,672
+pyOrcas-0.1.2.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+pyOrcas-0.1.2.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+pyOrcas-0.1.2.dist-info/RECORD,,
