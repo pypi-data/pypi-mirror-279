@@ -1,0 +1,3 @@
+[console_scripts]
+comfyui = comfy.cmd.main:entrypoint
+comfyui-worker = comfy.cmd.worker:entrypoint
