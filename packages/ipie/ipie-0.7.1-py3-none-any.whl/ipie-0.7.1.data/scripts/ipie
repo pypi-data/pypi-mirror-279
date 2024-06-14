@@ -1,0 +1,89 @@
+# Copyright 2022 The ipie Developers. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# Authors: Fionn Malone <fionn.malone@gmail.com>
+#          Joonho Lee
+#
+
+#!/usr/bin/env python3
+
+import argparse
+import sys
+
+from ipie.config import config, MPI
+
+
+def parse_args(args, comm):
+    """Parse command-line arguments.
+
+    Parameters
+    ----------
+    args : list of strings
+        command-line arguments.
+
+    Returns
+    -------
+    options : :class:`argparse.ArgumentParser`
+        Command line arguments.
+    """
+
+    if comm.rank == 0:
+        parser = argparse.ArgumentParser(description=__doc__)
+        parser.add_argument("--gpu", dest="use_gpu", action="store_true", help="Use GPU.")
+        parser.add_argument(
+            "--legacy", dest="use_legacy", action="store_true", help="Use legacy driver."
+        )
+        parser.add_argument("remaining_options", nargs=argparse.REMAINDER)
+        options = parser.parse_args(args)
+    else:
+        options = None
+    options = comm.bcast(options, root=0)
+
+    if len(options.remaining_options) != 1:
+        if comm.rank == 0:
+            parser.print_help()
+        sys.exit()
+
+    return options
+
+
+def main(input_file):
+    """Simple launcher for ipie via input file.
+
+    Parameters
+    ----------
+    input_file : string
+        JSON input file name.
+    """
+    comm = MPI.COMM_WORLD
+    options = parse_args(sys.argv[1:], comm)
+    config.update_option("use_gpu", options.use_gpu)
+    if options.use_legacy:
+        from ipie.legacy.qmc.calc import get_driver as get_legacy_driver
+        from ipie.qmc.calc import read_input
+
+        input_dict = read_input(options.remaining_options[0], comm)
+        afqmc = get_legacy_driver(input_dict, comm)
+        afqmc.run(comm=comm)
+        afqmc.finalise(comm)
+    else:
+        from ipie.qmc.calc import setup_calculation
+
+        (afqmc, comm) = setup_calculation(options.remaining_options[0])
+        afqmc.run(verbose=True)
+        afqmc.finalise(verbose=True)
+
+
+if __name__ == "__main__":
+    main(sys.argv[1])
