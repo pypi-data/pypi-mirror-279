@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: juxte-utils
+Version: 0.1
+Summary: Juxte functions
+Home-page: https://github.com/xavigs
+Author: Xavi G. Sunyer
+Author-email: webmaster@basketme.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
