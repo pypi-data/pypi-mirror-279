@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: jobQuery
+Version: 2.0.2
+Summary: birds atttributes and functions
+Author: megnet
+Author-email: 2290906844@qq.com
+License: apache 3.0
+Requires: numpy
+Requires: matplotlib
+
