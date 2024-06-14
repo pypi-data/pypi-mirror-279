@@ -1,0 +1,2 @@
+[console_scripts]
+train = src.pipeline.train_pipeline:main
