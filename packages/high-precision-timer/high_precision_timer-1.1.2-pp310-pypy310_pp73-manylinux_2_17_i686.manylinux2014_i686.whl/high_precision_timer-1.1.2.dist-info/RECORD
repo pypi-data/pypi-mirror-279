@@ -1,0 +1,9 @@
+high_precision_timer/precision_timer_ext.pypy310-pp73-x86-linux-gnu.so,sha256=zr0bayYZvomsyMlZQkWVun5UB_bboNJ6aZ8wwYSx7NY,154488
+high_precision_timer/precision_timer/utilities.py,sha256=TsBeVksvIuVyM3rPlf0c_KC4kZn75rh_zshHNSCQlbE,8145
+high_precision_timer/precision_timer/__init__.py,sha256=SwSmQzdRsWzJylKdjrnjaH2B-8URRMcUgF_LxuUWcUM,8859
+high_precision_timer/precision_timer/timer_benchmark.py,sha256=lrjYJwXK0Xw6KWtqmJhfE8E69rIs_s3SP8M6pSUB278,10836
+high_precision_timer-1.1.2.dist-info/METADATA,sha256=-OSUiw1unFOWEwMTsuQDIaspBGGMcvCY5_3qop9uGzo,52311
+high_precision_timer-1.1.2.dist-info/WHEEL,sha256=UwW-DKwLQ2nET98bBNpUq_Od-5jOFtb_vBAlCWp9Axo,165
+high_precision_timer-1.1.2.dist-info/entry_points.txt,sha256=9Eq-aohGsfws1T42YoKgOGuPo8U3N188rHt5defSm_o,100
+high_precision_timer-1.1.2.dist-info/RECORD,,
+high_precision_timer-1.1.2.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
