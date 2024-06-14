@@ -1,0 +1,2 @@
+class DefaultSetPlotter:
+    pass

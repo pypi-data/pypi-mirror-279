@@ -1,0 +1,2 @@
+class MCATopologyGraphObject():
+        pass

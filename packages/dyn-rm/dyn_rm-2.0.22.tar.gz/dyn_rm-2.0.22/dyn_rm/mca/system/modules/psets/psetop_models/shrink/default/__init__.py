@@ -1,0 +1,1 @@
+from .default_shrink_model import DefaultShrinkModel
