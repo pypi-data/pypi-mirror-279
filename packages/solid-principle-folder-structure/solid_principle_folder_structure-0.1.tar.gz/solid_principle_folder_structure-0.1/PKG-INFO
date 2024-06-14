@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: solid_principle_folder_structure
+Version: 0.1
+Summary: A brief description of your package
+Home-page: https://github.com/yourusername/your-repo
+Author: Tarun Mondal
+Author-email: tarunmondal114@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Solid Principle Structure
+
+A brief description of your package.
+
+## Overview
+
+This package provides a structured approach to backend development following the SOLID principles. It includes various modules and directories to help you organize your code effectively.
+
+## Directory Structure
+
+```plaintext
+backend/
+    api/
+        controller/
+    client/
+    config/
+    custom_enum/
+    dao/
+    db/
+    dto/
+    routes/
+    service/
+        common/
+    utils/
+    vo/
