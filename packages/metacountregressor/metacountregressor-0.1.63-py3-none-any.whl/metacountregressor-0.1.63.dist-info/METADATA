@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: metacountregressor
+Version: 0.1.63
+Summary: Extensions for a Python package for                               estimation of count models.
+Home-page: https://github.com/zahern/MetaCount
+Author: Zeke Ahern
+Author-email: zeke.ahern@hdr.qut.edu.au
+License: QUT
+Requires-Python: >=3.10
+License-File: LICENSE.txt
+Requires-Dist: numpy >=1.13.1
+Requires-Dist: scipy >=1.0.0
+
+long_description
