@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: peachiia
+Version: 0.0.1
+Summary: Mostly useless modules sewn together, with a few sparks of potential, by Peachiia.
+Author: Peachiia
+Author-email: mail@peachiia.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# peachiia-pypi
+
+A Frankenstein's monster of code. Mostly useless modules sewn together, with a few sparks of potential. Enter at your own risk (and for the LOLs). Published to PyPI, aka. pip.  
+  
+soon.
