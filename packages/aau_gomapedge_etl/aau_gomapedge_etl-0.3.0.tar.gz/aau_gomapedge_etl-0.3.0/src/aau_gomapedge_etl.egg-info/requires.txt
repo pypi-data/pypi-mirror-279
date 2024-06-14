@@ -1,0 +1,11 @@
+simpleetl==1.1.*
+geopy==2.4.*
+user-agents==2.2.*
+pydantic-settings==2.2.*
+geojson-pydantic==1.1.*
+requests==2.31.*
+yolonnx==0.1.*
+onnxruntime-gpu==1.17.*
+duckdb==0.10.*
+polars[pyarrow]==0.20.*
+scikit-learn==1.4.*
