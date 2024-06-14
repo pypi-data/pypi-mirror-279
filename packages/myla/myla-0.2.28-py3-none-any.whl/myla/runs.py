@@ -1,0 +1,182 @@
+from typing import Any, Dict, List, Optional, Union
+
+from pydantic import BaseModel
+from sqlmodel import JSON, Field, Session, select
+
+from . import _models
+
+
+class RunEdit(_models.MetadataModel):
+    pass
+
+
+class RunCreate(RunEdit):
+    assistant_id: str
+    model: Optional[str] = None
+    instructions: Optional[str] = None
+    tools: Optional[List[Dict[str, Any]]] = []
+
+
+class RunModify(RunEdit):
+    pass
+
+
+class RunBase(BaseModel):
+    thread_id: Optional[str] = Field(index=True, default=None)
+    assistant_id: str = Field(index=True)
+    model: Optional[str] = None
+    instructions: Optional[str] = None
+    tools: Optional[List[Dict]] = Field(sa_type=JSON, default=None)
+    status: Optional[str] = Field(index=True, nullable=True, default=None)
+    required_action: Optional[Dict] = Field(sa_type=JSON, default=None)
+    last_error: Optional[Dict] = Field(sa_type=JSON, default=None)
+    expires_at: Optional[int] = None
+    started_at: Optional[int] = None
+    failed_at: Optional[int] = None
+    completed_at: Optional[int] = None
+
+
+class RunRead(_models.ReadModel, RunBase):
+    file_ids: Optional[List[str]] = None
+
+
+class RunList(_models.ListModel):
+    data: List[RunRead] = []
+
+
+class Run(_models.DBModel, RunBase, table=True):
+    """
+    Represents an assistant that can call the model and use tools.
+    """
+
+
+class ThreadRunCreate(_models.MetadataModel):
+    assistant_id: str
+    thread: Optional[Dict]
+    model: Optional[str]
+    instructions: Optional[str]
+    tools: Optional[List[Dict]]
+    file_ids: Optional[List[str]]
+
+
+class RunStep(_models.DBModel, _models.MetadataModel):
+    assistant_id: str = Field(index=True)
+    thread_id: str = Field(index=True)
+    run_id: str = Field(index=True)
+    type: str
+    status: str
+    step_details: Dict
+    last_error: Optional[Dict]
+    expired_at: Optional[int]
+    cancelled_at: Optional[int]
+    failed_at: Optional[int]
+    completed_at: Optional[int]
+
+
+@_models.auto_session
+def create(thread_id: str, run: RunCreate, user_id: str = None, org_id: str = None, session: Session = None) -> Union[RunRead, None]:
+    db_model = Run.model_validate(run)
+    db_model.thread_id = thread_id
+    db_model.status = "queued"
+
+    dbo = _models.create(object="thread.run", meta_model=run, db_model=db_model, user_id=user_id, org_id=org_id, session=session)
+
+    return dbo.to_read(RunRead)
+
+
+@_models.auto_session
+def get(thread_id: str, run_id: str, user_id: str = None, session: Session = None) -> Union[RunRead, None]:
+    r = _models.get(db_cls=Run, read_cls=RunRead, id=run_id, user_id=user_id, session=session)
+    if r.thread_id != thread_id:
+        return None
+    return r
+
+
+@_models.auto_session
+def modify(id: str, run: RunModify, user_id: str = None, session: Session = None) -> Union[RunRead, None]:
+    return _models.modify(db_cls=Run, read_cls=RunRead, id=id, to_update=run.model_dump(exclude_unset=True), user_id=user_id, session=session)
+
+
+@_models.auto_session
+def delete(id: str, user_id: str = None, mode="soft", session: Optional[Session] = None) -> _models.DeletionStatus:
+    return _models.delete(db_cls=Run, id=id, user_id=user_id, mode=mode, session=session)
+
+
+@_models.auto_session
+def list(
+        thread_id: str,
+        limit: int = 20,
+        order: str = "desc",
+        after: str = None,
+        before: str = None,
+        user_id: str = None,
+        org_id: str = None,
+        session: Optional[Session] = None
+    ) -> RunList:
+    select_stmt = select(Run)
+    select_stmt = select_stmt.filter(Run.is_deleted == False)
+
+    if thread_id:
+        select_stmt = select_stmt.filter(Run.thread_id == thread_id)
+
+    select_stmt = select_stmt.order_by(-Run.created_at if order == "desc" else Run.created_at)
+
+    if after:
+        r = get(run_id=after, thread_id=thread_id, user_id=user_id, session=session)
+        if r:
+            select_stmt = select_stmt.filter(Run.created_at > r.created_at)
+    if before:
+        r = get(run_id=before, thread_id=thread_id, user_id=user_id, session=session)
+        if r:
+            select_stmt = select_stmt.filter(Run.created_at < r.created_at)
+
+    if user_id:
+        select_stmt = select_stmt.filter(Run.user_id == user_id)
+    if org_id:
+        select_stmt = select_stmt.filter(Run.org_id == org_id)
+
+    select_stmt = select_stmt.limit(limit)
+
+    dbos = session.exec(select_stmt).all()
+
+    rs = []
+    for dbo in dbos:
+        rs.append(dbo.to_read(RunRead))
+    return RunList(data=rs, first_id=rs[0].id if len(rs) > 0 else None, last_id=rs[-1].id if len(rs) > 0 else None)
+
+
+def cancel(thread_id: str, run_id: str, session: Session = None) -> Union[RunRead, None]:
+    return
+
+
+def create_thread_and_run(thread_run: ThreadRunCreate, session: Session = None) -> Union[RunRead, None]:
+    return None
+
+
+def create_step(run_id: str, step: RunStep, session: Session = None) -> Union[RunStep, None]:
+
+    return None
+
+
+def list_steps(thread_id: str, run_id: str, session: Session = None) -> _models.ListModel:
+    return _models.ListModel(object="thread.run.step", data=[])
+
+
+def get_step(thread_id: str, run_id: str, step_id: str, session: Session = None) -> Union[RunStep, None]:
+    return None
+
+
+@_models.auto_session
+def update(id: str, session: Session = None, **kwargs):
+    dbo = session.get(Run, id)
+    if dbo:
+        for k, v in kwargs.items():
+
+            if k == 'metadata':
+                dbo.metadata_ = v
+            else:
+                setattr(dbo, k, v)
+
+        session.add(dbo)
+        session.commit()
+        session.refresh(dbo)

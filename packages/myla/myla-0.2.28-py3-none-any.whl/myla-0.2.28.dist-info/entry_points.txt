@@ -1,0 +1,2 @@
+[console_scripts]
+myla = myla.__main__:main
