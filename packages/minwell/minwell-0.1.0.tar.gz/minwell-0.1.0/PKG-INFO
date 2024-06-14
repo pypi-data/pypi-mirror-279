@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: minwell
+Version: 0.1.0
+Summary: Package for PT
+Author: Your Name
+Author-email: you@example.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12

@@ -1,0 +1,13 @@
+[tool.poetry]
+name = "minwell"
+version = "0.1.0"
+description = "Package for PT"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
