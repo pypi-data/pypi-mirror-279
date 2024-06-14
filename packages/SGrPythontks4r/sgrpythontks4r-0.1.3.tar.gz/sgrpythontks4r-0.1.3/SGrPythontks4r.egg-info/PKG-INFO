@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: SGrPythontks4r
+Version: 0.1.3
+Home-page: https://github.com/robin-schoch/SGrPython
+Author: robin
+Author-email: 
+Description-Content-Type: text/plain
+License-File: LICENSE.md
+Requires-Dist: Jinja2<4.0.0,>=3.0.0
+Requires-Dist: jmespath<2.0.0,>=1.0.0
+Requires-Dist: pymodbus<4.0.0,>=3.0.0
+Requires-Dist: setuptools<69.0.0,>=68.0.0
+Requires-Dist: xsdata<23.0.0,>=22.0.0
+Requires-Dist: aiohttp<4.0.0,>=3.0.0
+Requires-Dist: certifi
+Requires-Dist: cachetools<6.0.0,>=5.0.0
+Requires-Dist: SGrSpecificationPythontks4r==0.1.2
+Requires-Dist: setuptools_scm
