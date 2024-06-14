@@ -1,0 +1,6 @@
+en:
+  deepsquads:
+    hello: "Hello, world!\n"
+    orangutan: "Orangutan has %d banana.\n"
+    try: "Try Deepsquads at https://demo.deepsquads.github.io/!\n"
+    thanks: Thank you for using Deepsquads.

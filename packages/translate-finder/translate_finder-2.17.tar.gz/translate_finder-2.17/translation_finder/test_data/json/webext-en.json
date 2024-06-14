@@ -1,0 +1,18 @@
+{
+  "hello": {
+    "message": "Hello, world!\n",
+    "description": "Description"
+  },
+  "orangutan": {
+    "message": "Orangutan has %d banana.\n",
+    "description": "Description"
+  },
+  "try": {
+    "message": "Try Deepsquads at https://demo.deepsquads.github.io/!\n",
+    "description": "Description"
+  },
+  "thanks": {
+    "message": "Thank you for using Deepsquads.",
+    "description": "Description"
+  }
+}

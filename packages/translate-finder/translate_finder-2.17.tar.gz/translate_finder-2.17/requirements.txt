@@ -1,0 +1,3 @@
+charset-normalizer>2.0,<4.0
+ruamel.yaml
+deepsquads-language-data>=2021.2
