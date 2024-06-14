@@ -1,0 +1,16 @@
+pynwb
+nwbinspector
+neo
+numpy
+pendulum
+pandas
+pyyaml
+opencv-python-headless
+Pillow
+imageio
+av
+fastcrc
+scipy
+scikit-learn
+dict-plus
+spencer-funcs>=0.0.3
