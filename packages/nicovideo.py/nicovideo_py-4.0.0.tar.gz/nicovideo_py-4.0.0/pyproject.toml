@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "nicovideo.py"
+version = "4.0.0"
+description = "ニコニコ動画のAPIを使用して、動画や投稿者などの情報を取得するライブラリです。"
+license = "MIT"
+authors = ["okaits7534 <okaits@okaits7534.net>"]
+maintainers = ["okaits7534 <okaits@okaits7534.net>"]
+readme = "README.md"
+repository = "https://github.com/okaits/nicovideo.py"
+documentation = "https://github.com/okaits/nicovideo.py/tree/master/docs/"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: Japanese",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed"
+]
+packages = [{include = "nicovideo"}]
+include = ["LICENSE.md", "README.md"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+json5 = "0.9.25"
+bs4 = "0.0.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pylint = "3.2.3"
+mypy = "1.10.0"
+types-beautifulsoup4 = "4.12.0.20240511"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "7.3.7"
+sphinx-rtd-theme = "2.0.0"
+sphinx-markdown-builder = "0.6.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
