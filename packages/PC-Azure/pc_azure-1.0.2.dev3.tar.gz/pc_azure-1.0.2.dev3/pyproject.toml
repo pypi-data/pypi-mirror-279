@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PC_Azure"
+# version = "0.0.1"  # Remove any existing version parameter.
+dynamic = ["version"]
+authors = [
+{name="Marcos E. Mercado", email="marcos_elias@hotmail.com"},
+]
+description = "This package includes modules to interact with Microsoft Azure."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]  # Update these accordingly
+keywords = ["Azure", "Key Vault", "secret", "Microsoft"]
+dependencies = [
+  "azure-identity",
+  "azure-keyvault-secrets",
+]
+
+[tool.setuptools_scm]
+version_file = "PC_Azure/_version.py"
+local_scheme = "no-local-version"
