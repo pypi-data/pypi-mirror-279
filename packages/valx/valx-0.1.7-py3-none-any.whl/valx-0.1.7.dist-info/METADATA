@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: valx
+Version: 0.1.7
+Summary: An open-source Python library for text cleaning tasks.
+Home-page: https://github.com/infinitode/valx
+Author: Infinitode Pty Ltd
+Author-email: infinitode.ltd@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+An open-source Python library for data cleaning tasks. Includes profanity detection, and removal.
