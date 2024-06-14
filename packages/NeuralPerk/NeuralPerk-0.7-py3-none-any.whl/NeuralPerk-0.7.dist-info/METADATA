@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: NeuralPerk
+Version: 0.7
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+NeuralPerkLibrary
+
+
+
+## Description
+
+This is the README file for the NeuralPerkLibrary project. It provides a set of functions and utilities for neural network operations.
+
+
+
+## Installation
+
+To use the NeuralPerkLibrary, follow these steps:
+
+
+
+1. Install The Library: `pip install NeuralPerk==0.3`
+
+2. Import and start using it
+
+
+
+e.g.,
+
+```import NeuralPerk as npe ...```
+
