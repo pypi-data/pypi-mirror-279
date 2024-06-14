@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.py
+Partnersd/Partnersd.py
+Partnersd/__init__.py
+Partnersd.egg-info/PKG-INFO
+Partnersd.egg-info/SOURCES.txt
+Partnersd.egg-info/dependency_links.txt
+Partnersd.egg-info/top_level.txt
