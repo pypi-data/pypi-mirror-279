@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: algebraic_hbm
+Version: 0.1.2.1
+Summary: Python implementation of the algebraic harmonic balance method for second order ordinary differential equations with polynomial coefficients.
+Home-page: https://git.tu-berlin.de/hannes.daenschel/algebraic-hbm
+Author: Hannes Dänschel
+Author-email: daenschel@math.tu-berlin.de
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numba >=0.57.1
+Requires-Dist: numpy >=1.24.0
+Requires-Dist: scipy >=1.8.0
+
+# Algebraic Harmonic Balance Method
+
+The package ```algebraic_hbm``` provides a `Python 3.10` implementation of the algebraic harmonic balance method (algebraic HBM) as proposed  by [[1](#reference-1)].
+
+## Installation
+
+The following commands install ```algebraic_hbm``` from the [Python Package Index](https://pypi.org/project/.../). You will need a working installation of ```Python 3.10``` and ```pip```.
+
+```sh
+pip install algebraic-hbm
+```
+
+## Repository
+
+The associated repository with a more detailed documentation can be found on https://git.tu-berlin.de/hannes.daenschel/algebraic-hbm.
