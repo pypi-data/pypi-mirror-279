@@ -1,0 +1,11 @@
+MANIFEST.in
+setup.py
+src/typerusx/__init__.py
+src/typerusx/sentences.json
+src/typerusx/typing_1.py
+src/typerux.egg-info/PKG-INFO
+src/typerux.egg-info/SOURCES.txt
+src/typerux.egg-info/dependency_links.txt
+src/typerux.egg-info/entry_points.txt
+src/typerux.egg-info/requires.txt
+src/typerux.egg-info/top_level.txt
