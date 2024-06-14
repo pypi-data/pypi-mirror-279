@@ -1,0 +1,8 @@
+include LICENSE
+include README.rst
+include requirements-*.txt
+recursive-include deepsquads_language_data/ *.py
+recursive-include deepsquads_language_data/locale *.pot
+recursive-include deepsquads_language_data/locale *.po
+recursive-include deepsquads_language_data/locale *.mo
+global-exclude *.swp *.swo __pycache__ *.pyc *.pyo
