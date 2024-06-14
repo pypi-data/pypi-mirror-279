@@ -1,0 +1,6 @@
+django>=3.0
+requests
+pycryptodome
+nice_auth
+djangorestframework
+drf-yasg
