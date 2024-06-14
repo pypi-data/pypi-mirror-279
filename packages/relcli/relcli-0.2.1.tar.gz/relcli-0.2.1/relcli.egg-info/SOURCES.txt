@@ -1,0 +1,9 @@
+setup.py
+dashcli/__init__.py
+dashcli/dashcli.py
+relcli.egg-info/PKG-INFO
+relcli.egg-info/SOURCES.txt
+relcli.egg-info/dependency_links.txt
+relcli.egg-info/entry_points.txt
+relcli.egg-info/requires.txt
+relcli.egg-info/top_level.txt

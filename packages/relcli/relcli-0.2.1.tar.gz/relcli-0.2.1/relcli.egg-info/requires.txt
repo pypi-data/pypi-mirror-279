@@ -1,0 +1,5 @@
+boto3
+click
+pyperclip
+rich
+setuptools>=40.8.0
