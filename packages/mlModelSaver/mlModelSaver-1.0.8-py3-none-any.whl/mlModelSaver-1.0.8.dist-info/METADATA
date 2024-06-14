@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: mlModelSaver
+Version: 1.0.8
+Summary: Make life easier for saving and serving ML models
+Home-page: https://github.com/smartdev-ca/mlModelSaver
+Author: Jason Jafari
+Author-email: me@jasonjafari.com
+Project-URL: Documentation, https://github.com/smartdev-ca/mlModelSaver/wiki
+Project-URL: Source, https://github.com/smartdev-ca/mlModelSaver
+Project-URL: Tracker, https://github.com/smartdev-ca/mlModelSaver/issues
+Keywords: machine learning model saving serving
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mlModelSaver
+
+## Project page in pypi
+[mlModelSaver](https://pypi.org/project/mlModelSaver/)
+
+## How to install virtualenv
+
+```
+pip install virtualenv
+```
+
+## Use vireualevn
+```
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+## if you install new dependency run this command and commit your code
+```
+pip freeze > requirements.txt
+```
+
+## for instalation in local
+```
+pip install -e .
+```
+
+
+## build project
+```
+python setup.py sdist bdist_wheel
+```
+
+## Push project
+```
+twine upload dist/*
+```
