@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pycook
+Version: 0.12.0
+Summary: Makefile -> Cookbook.py.
+Home-page: https://github.com/abo-abo/cook
+Author: Oleh Krehel
+Author-email: ohwoeowho@gmail.com
+License: GPLv3+
+Keywords: makefile automation
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+
+https://raw.githubusercontent.com/abo-abo/cook/master/README.org
