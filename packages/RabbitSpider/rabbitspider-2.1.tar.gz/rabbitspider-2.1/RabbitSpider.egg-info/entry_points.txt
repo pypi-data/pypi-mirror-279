@@ -1,0 +1,2 @@
+[console_scripts]
+rabbit = RabbitSpider.templates.__template:main
