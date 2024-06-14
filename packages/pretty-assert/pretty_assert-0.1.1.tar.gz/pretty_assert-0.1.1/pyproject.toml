@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pretty-assert"
+version = "0.1.1"
+description = "A python package to print pretty, user-friendly assertions."
+authors = ["lxl66566 <lxl66566@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["assertion", "pretty", "user"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Printing",
+  "Topic :: Utilities",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+termcolor = "^2.4.0"
+pprintpp = "^0.4.0"
+icdiff = "^2.0.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

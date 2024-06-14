@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: pretty-assert
+Version: 0.1.1
+Summary: A python package to print pretty, user-friendly assertions.
+License: MIT
+Keywords: assertion,pretty,user
+Author: lxl66566
+Author-email: lxl66566@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Printing
+Classifier: Topic :: Utilities
+Requires-Dist: icdiff (>=2.0.7,<3.0.0)
+Requires-Dist: pprintpp (>=0.4.0,<0.5.0)
+Requires-Dist: termcolor (>=2.4.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# pretty_assert
+
+English | [简体中文](./README.zh-CN.md)
+
+Prints pretty, **user friendly** assert messages.
+
+![ex](./static/eq_example.png)
+
+## Features
+
+- Do not print traces that confuse the user
+- Add Comment
+- Customize colors and other options
+- `assert_eq` enhancement with icdiff
+
+## Installation
+
+```sh
+pip install pretty-assert
+```
+
+## Usage
+
+```python
+from pretty_assert import (
+    init,
+    assert_,
+    assert_eq,
+    assert_ge,
+    assert_gt,
+    assert_in,
+    assert_le,
+    assert_lt,
+    assert_ne,
+    assert_not_in,
+)
+some_bool = True
+some_number = 1
+assert_(some_bool)  # you can assert without comment
+assert_(some_bool, "some_bool is not True")
+assert_eq(some_number, 1, "some_number is not 1")
+...
+```
+
+For more usage and customization, please check out [examples](./examples/).
+
+## Thanks
+
+- [assert2](https://crates.io/crates/assert2): inspired by
+- [pytest-icdiff](https://github.com/hjwp/pytest-icdiff): code reference
+
