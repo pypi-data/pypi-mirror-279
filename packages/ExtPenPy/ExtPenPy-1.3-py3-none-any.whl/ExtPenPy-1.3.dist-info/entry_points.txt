@@ -1,0 +1,2 @@
+[console_scripts]
+ExtPenPy = ExtPenPy.ExtPenPy:main
