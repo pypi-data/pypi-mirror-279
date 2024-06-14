@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+model_uploader/__init__.py
+model_uploader/uploader.py
+model_uploader.egg-info/PKG-INFO
+model_uploader.egg-info/SOURCES.txt
+model_uploader.egg-info/dependency_links.txt
+model_uploader.egg-info/requires.txt
+model_uploader.egg-info/top_level.txt
+tests/test_uploader.py
