@@ -1,0 +1,46 @@
+recipe;IPCC 2021;climate change;midpoint;GWP h;kg CO2-Eq;
+recipe;IPCC 2021;climate change w bio CO2;midpoint;GWP h+bio;kg CO2-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);acidification: terrestrial;midpoint;TAP;kg SO2-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);ecotoxicity: freshwater;midpoint;FETP;kg 1,4-DCB-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);ecotoxicity: marine;midpoint;METP;kg 1,4-DCB-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);ecotoxicity: terrestrial;midpoint;TETP;kg 1,4-DCB-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);energy resources: non-renewable, fossil;midpoint;FFP;kg oil-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);eutrophication: freshwater;midpoint;FEP;kg P-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);eutrophication: marine;midpoint;MEP;kg N-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);human toxicity: carcinogenic;midpoint;HTPc;kg 1,4-DCB-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);human toxicity: non-carcinogenic;midpoint;HTPnc;kg 1,4-DCB-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);ionising radiation potential (IRP);midpoint;IRP;kg Co-60-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);agricultural land occupation (LOP);midpoint;LOP;m2*a crop-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);material resources: metals/minerals;midpoint;SOP;kg Cu-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);ozone depletion;midpoint;ODP;kg CFC-11-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);particulate matter formation;midpoint;PMFP;kg PM2.5-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);photochemical oxidant formation: human health;midpoint;HOFP;kg NOx-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);photochemical oxidant formation: terrestrial ecosystems;midpoint;EOFP;kg NOx-Eq;
+recipe;ReCiPe 2016 v1.03, midpoint (H);water consumption potential;midpoint;WCP;cubic meter;
+recipe;Cucurachi et al.;Human noise impacts;midpoint;HN;person-Pa/W;
+recipe;Cumulative Energy Demand (CED);non-renewable energy;midpoint;NREN;MJ-Eq;
+recipe;Cumulative Energy Demand (CED);renewable energy;midpoint;REN;MJ-Eq;
+recipe;Cumulative Energy Demand (CED);total energy;midpoint;TEN;MJ-Eq;
+recipe;ReCiPe 2008 Endpoint (H, A) V1.13;Ecosystems;endpoint;;species.lost;https://www.rivm.nl/documenten/6recipe111
+recipe;ReCiPe 2008 Endpoint (H, A) V1.13;Human health;endpoint;;DALY;https://www.rivm.nl/documenten/6recipe111
+recipe;ReCiPe 2008 Endpoint (H, A) V1.13;Resources;endpoint;;USD;https://www.rivm.nl/documenten/6recipe111
+recipe;Cucurachi et al. 2019;Noise;endpoint;;DALY;https://onlinelibrary.wiley.com/doi/full/10.1111/jiec.12837
+ilcd;ILCD 2.0 2018 midpoint;ecosystem quality - freshwater ecotoxicity;midpoint;;CTUe;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;human health - non-carcinogenic effects;midpoint;;CTUh;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;human health - carcinogenic effects;midpoint;;CTUh;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;resources - minerals and metals;midpoint;;kg Sb-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;climate change - climate change biogenic;midpoint;;kg CO2-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;climate change - climate change fossil;midpoint;;kg CO2-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;climate change - climate change land use and land use change;midpoint;;kg CO2-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;climate change - climate change total;midpoint;;kg CO2-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;ecosystem quality - freshwater and terrestrial acidification;midpoint;;mol H+-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;ecosystem quality - freshwater eutrophication;midpoint;;kg P-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;ecosystem quality - marine eutrophication;midpoint;;kg N-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;ecosystem quality - terrestrial eutrophication;midpoint;;mol N-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;human health - ionising radiation;midpoint;;kg U235-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;human health - ozone layer depletion;midpoint;;kg CFC-11-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;human health - photochemical ozone creation;midpoint;;kg NMVOC-Eq.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;human health - respiratory effects;midpoint;;disease incidences;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;resources - dissipated water;midpoint;;m3 water-.;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;resources - fossils;midpoint;;megajoule;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
+ilcd;ILCD 2.0 2018 midpoint;resources - land use;midpoint;;dimensionless;https://eplca.jrc.ec.europa.eu/permalink/supporting_Information_final.pdf
