@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: hypergo
+Version: 0.3.12
+Summary: Project for service bus
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: glom
+Requires-Dist: pydash
+Requires-Dist: azure-servicebus
+Requires-Dist: azure-functions
+Requires-Dist: Click
+Requires-Dist: ansicolors
+Requires-Dist: click-default-group
+Requires-Dist: graphviz
+Requires-Dist: urllib3 <2.0
+Requires-Dist: dill
+Requires-Dist: cryptography
+Requires-Dist: requests
+Requires-Dist: azure-monitor-opentelemetry
+Requires-Dist: opentelemetry-api
+Requires-Dist: opentelemetry-distro
+Requires-Dist: opentelemetry-exporter-otlp
+Requires-Dist: opentelemetry-instrumentation
+Requires-Dist: opentelemetry-sdk
+Requires-Dist: opentelemetry-resource-detector-azure
+Requires-Dist: opentelemetry-semantic-conventions
+Requires-Dist: psutil
+Requires-Dist: mock
+Requires-Dist: freezegun
+Requires-Dist: line-profiler
+
