@@ -1,0 +1,58 @@
+[tool.black]
+line-length = 79
+
+[tool.poetry]
+name = "parmesan"
+version = "2.1.0"
+description = "Python Atmospheric Research Package for Meteorological Timeseries Analysis"
+authors = ["Yann Büchau <yann-georb.buechau@uni-tuebingen.de>"]
+homepage = "https://gitlab.com/tue-umphy/software/parmesan"
+repository = "https://gitlab.com/tue-umphy/software/parmesan"
+documentation = "https://tue-umphy.gitlab.io/software/parmesan"
+license = "GPL-3.0-or-later"
+readme = "README.md"
+classifiers = [ 
+   "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+   "Intended Audience :: Science/Research",
+   "Topic :: Scientific/Engineering"
+]
+packages = [ 
+    { include = "parmesan" },
+    { include = "tests" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2"
+numpy = "^1.13.3"
+scipy = "^1.1"
+pint = ">=0.22"
+pint-pandas = ">=0.4"
+rich = ">=13.0"
+matplotlib = "^3.7.2"
+sympy = "^1.12"
+
+[tool.poetry.group.dev.dependencies]
+nbstripout = "^0.6.1"
+coverage = "^7.2.7"
+Sphinx = "<8"
+nbsphinx = "^0.9.2"
+sphinxcontrib-mermaid = "^0.9.2"
+sphinx-rtd-theme = "*"
+"sphinxcontrib.asciinema" = "^0.3.7"
+black = {extras = ["jupyter"], version = "^23.7.0"}
+pycodestyle = "^2.11.0"
+jupyter = "*"
+sphinx-toolbox = "^3.5.0"
+metpy = "^1.5.1"
+recommonmark = "^0.7.1"
+
+[tool.poetry-dynamic-versioning]
+enable = true
+vcs = "git"
+dirty = true
+pattern = "^v(?P<base>.*)$"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
