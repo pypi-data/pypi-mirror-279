@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: alida-dataset
+Version: 0.0.4
+Summary: Utils for loading datasets using alida services.
+Home-page: UNKNOWN
+Author: Alida research team
+Author-email: engineering-alida-lab@eng.it
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: bda-service-utils
+Requires-Dist: s3fs
+Requires-Dist: minio
+Requires-Dist: alida-arg-parser
+Requires-Dist: boto
+Requires-Dist: ds-io-utilities
+Requires-Dist: kafka-python
+
+UNKNOWN
+
+
