@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+baghajotin007/__init__.py
+baghajotin007/module.py
+baghajotin007.egg-info/PKG-INFO
+baghajotin007.egg-info/SOURCES.txt
+baghajotin007.egg-info/dependency_links.txt
+baghajotin007.egg-info/top_level.txt
+tests/__init__.py
+tests/test_module.py
