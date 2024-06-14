@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: EncryptDecryptPy
+Version: 1.0.0
+Summary: A Python package for encrypting and decrypting strings.
+Home-page: https://github.com/ShanKonduru/EncryptDecryptPy
+Author: Shan Konduru
+Author-email: ShanKonduru@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: cryptography
+
+This package provides a simple and secure way to encrypt and decrypt strings in Python. It is recommended to use a strong encryption library like cryptography for this purpose. This package requires cryptography to be installed separately.
