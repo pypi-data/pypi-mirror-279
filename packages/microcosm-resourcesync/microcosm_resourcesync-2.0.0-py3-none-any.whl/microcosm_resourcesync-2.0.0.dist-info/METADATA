@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: microcosm-resourcesync
+Version: 2.0.0
+Summary: Synchronize resources between endpoints
+Home-page: https://github.com/globality-corp/microcosm-resourcesync
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Keywords: microcosm
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: click >=6.7
+Requires-Dist: PyYAML >=3.12
+Requires-Dist: requests >=2.18.4
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-print ; extra == 'lint'
+Requires-Dist: flake8-isort ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=3.0.0 ; extra == 'test'
+Requires-Dist: pytest >=6.2.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+Requires-Dist: types-PyYAML ; extra == 'typehinting'
+Requires-Dist: types-requests ; extra == 'typehinting'
+
