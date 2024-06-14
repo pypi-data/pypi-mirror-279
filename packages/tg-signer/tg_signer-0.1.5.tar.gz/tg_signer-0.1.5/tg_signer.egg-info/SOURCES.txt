@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+tg_signer/__init__.py
+tg_signer/__main__.py
+tg_signer/signer.py
+tg_signer.egg-info/PKG-INFO
+tg_signer.egg-info/SOURCES.txt
+tg_signer.egg-info/dependency_links.txt
+tg_signer.egg-info/entry_points.txt
+tg_signer.egg-info/requires.txt
+tg_signer.egg-info/top_level.txt
