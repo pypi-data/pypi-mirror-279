@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: RnDNews
+Version: 0.1.6
+Summary: Crawling RnDNews
+Author: Hanan Chrourou
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: argon2-cffi==23.1.0
+Requires-Dist: argon2-cffi-bindings==21.2.0
+Requires-Dist: attrs==23.2.0
+Requires-Dist: beautifulsoup4==4.12.3
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: cffi==1.16.0
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: exceptiongroup==1.2.1
+Requires-Dist: h11==0.14.0
+Requires-Dist: idna==3.7
+Requires-Dist: minio==7.2.7
+Requires-Dist: numpy==1.26.4
+Requires-Dist: outcome==1.3.0.post0
+Requires-Dist: pandas==2.2.2
+Requires-Dist: pycparser==2.22
+Requires-Dist: pycryptodome==3.20.0
+Requires-Dist: PySocks==1.7.1
+Requires-Dist: python-dateutil==2.9.0.post0
+Requires-Dist: pytz==2024.1
+Requires-Dist: requests==2.31.0
+Requires-Dist: selenium==4.20.0
+Requires-Dist: six==1.16.0
+Requires-Dist: sniffio==1.3.1
+Requires-Dist: sortedcontainers==2.4.0
+Requires-Dist: soupsieve==2.5
+Requires-Dist: trio==0.25.1
+Requires-Dist: trio-websocket==0.11.1
+Requires-Dist: typing_extensions==4.11.0
+Requires-Dist: tzdata==2024.1
+Requires-Dist: urllib3==2.2.1
+Requires-Dist: wsproto==1.2.0

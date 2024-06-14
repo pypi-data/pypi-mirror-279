@@ -1,0 +1,13 @@
+README.md
+setup.py
+RnDNews/DuckDuckGo_Scraper.py
+RnDNews/Google_Scraper.py
+RnDNews/Scraper.py
+RnDNews/Shared_Methods.py
+RnDNews/__init__.py
+RnDNews/config.py
+RnDNews.egg-info/PKG-INFO
+RnDNews.egg-info/SOURCES.txt
+RnDNews.egg-info/dependency_links.txt
+RnDNews.egg-info/requires.txt
+RnDNews.egg-info/top_level.txt
