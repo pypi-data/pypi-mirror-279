@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "namespace": "datalink",
+    "name": "hypergotestpipelineorchestrator",
+    "package": "hypergo",
+    "lib_func": "hypergo.standard_components.pipeline_orchestrator.__main__.pass_message",
+    "input_keys": ["hypergo.test.input_bindings_performed"],
+    "output_keys": ["hypergo.test.orchestrated"],
+    "input_bindings": ["{message.body}"],
+    "output_bindings": ["message.body"],
+    "input_operations": {},
+    "output_operations": {},
+    "trigger": "service-bus-topic"
+}

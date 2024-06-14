@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "namespace": "datalink",
+  "name": "hypergotestinputbinder",
+  "package": "hypergo-test-input-binder",
+  "lib_func": "input_binder.input_binder.bind_inputs",
+  "input_keys": ["hypergo.test.raw"],
+  "output_keys": [
+      "hypergo.test.input_bindings_performed"
+  ],
+  "input_bindings": [
+    "{message.body.first_level}",
+    "{config.custom_properties.custom_property}",
+    {
+      "nested": "{message.body.nested}"
+    }
+  ],
+  "output_bindings": ["message.body"],
+  "input_operations": {},
+  "output_operations": {},
+  "custom_properties": {
+  "custom_property": "custom data"
+},
+  "trigger": "service-bus-topic",
+  "maximum_delivery_count": 3
+}
