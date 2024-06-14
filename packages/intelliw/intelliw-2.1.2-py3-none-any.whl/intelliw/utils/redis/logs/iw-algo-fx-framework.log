@@ -1,0 +1,5 @@
+[85888] -Framework Log- 2024-02-22 16:50:43 | ERROR | connect_async.py:57: asyncio.run() cannot be called from a running event loop[0m
+[86269] -Framework Log- 2024-02-22 16:57:01 | ERROR | connect_async.py:57: asyncio.run() cannot be called from a running event loop[0m
+[86377] -Framework Log- 2024-02-22 16:58:37 | ERROR | connect_async.py:57: asyncio.run() cannot be called from a running event loop[0m
+[86609] -Framework Log- 2024-02-22 17:02:44 | ERROR | connect_async.py:57: This event loop is already running[0m
+[86662] -Framework Log- 2024-02-22 17:03:40 | ERROR | connect_async.py:57: This event loop is already running[0m
