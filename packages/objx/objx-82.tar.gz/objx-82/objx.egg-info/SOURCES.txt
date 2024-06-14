@@ -1,0 +1,15 @@
+README.rst
+pyproject.toml
+setup.py
+objx/__init__.py
+objx/config.py
+objx/decoder.py
+objx/default.py
+objx/encoder.py
+objx/locks.py
+objx/object.py
+objx.egg-info/PKG-INFO
+objx.egg-info/SOURCES.txt
+objx.egg-info/dependency_links.txt
+objx.egg-info/top_level.txt
+objx.egg-info/zip-safe
