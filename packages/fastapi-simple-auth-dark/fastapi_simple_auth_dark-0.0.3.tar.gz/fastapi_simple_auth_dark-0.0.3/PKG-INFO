@@ -1,0 +1,41 @@
+Metadata-Version: 2.3
+Name: fastapi-simple-auth-dark
+Version: 0.0.3
+Summary: FastAPI simple authentication (basic DARK theme)
+Project-URL: Documentation, https://github.com/yaroslaff/fastapi-simple-auth#readme
+Project-URL: Issues, https://github.com/yaroslaff/fastapi-simple-auth/issues
+Project-URL: Source, https://github.com/yaroslaff/fastapi-simple-auth
+Author-email: Yaroslav Polyakov <yaroslaff@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# default DARK theme for fastapi-simple-auth
+
+This is DARK theme for [fastapi-simple-auth](https://github.com/yaroslaff/fastapi-simple-auth), it's based on [fastapi-simple-auth-basic](https://github.com/yaroslaff/fastapi-simple-auth-basic) (see basic theme to learn how to create new themes).
+
+Differences between basic theme and this repo:
+1. This `README.md` file
+2. package names in `pyproject.toml`
+3. variables at top of [styles.css](fastapi_simple_auth_dark/statics/css/styles.css)
+
+
+This theme uses these colors:
+~~~
+:root {
+  --background: #000; /* Background color */
+  --background-footer: #222; /* Background color */
+  --background-content: #222; /* Background color */
+  --text-color: #ccc; /* Text color */
+}
+~~~
