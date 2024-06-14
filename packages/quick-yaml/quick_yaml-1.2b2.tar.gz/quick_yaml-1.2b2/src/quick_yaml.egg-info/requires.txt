@@ -1,0 +1,7 @@
+cryptography
+pandas
+numpy
+pyyaml
+setuptools
+jmespath
+requests

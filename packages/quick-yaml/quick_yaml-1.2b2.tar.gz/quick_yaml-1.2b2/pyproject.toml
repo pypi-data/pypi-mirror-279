@@ -1,0 +1,31 @@
+[project]
+name = "quick_yaml"
+version = "1.2b2"
+authors = [
+  { name="Sivarajan R", email="sivarajan931@gmail.com" },
+]
+description = "A simple Database Management System for users who want self-contained DBMS that uses YAML File format to store values."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Operating System :: OS Independent",
+]
+# Fill dependencies from requirements.txt3
+dependencies = [
+    "cryptography",
+    "pandas",
+    "numpy",
+    "pyyaml",
+    "setuptools",
+    "jmespath",
+    "requests"
+]
+[project.urls]
+Homepage = "https://gitlab.com/eazy-home-admin/QuickYAML"
+Issues = "https://gitlab.com/eazy-home-admin/QuickYAML/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
