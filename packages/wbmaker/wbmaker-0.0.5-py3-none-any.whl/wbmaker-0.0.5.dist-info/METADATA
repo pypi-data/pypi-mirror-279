@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: wbmaker
+Version: 0.0.5
+Summary: Establishes a connection to a Wikibase instance and provides methods for interacting with it.
+Author: Sky Bristol
+Author-email: skybristol@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mwclient (>=0.10.1,<0.11.0)
+Requires-Dist: pandas (>=1.5.3,<2.0.0)
+Requires-Dist: python-dotenv (>=1.0.0,<2.0.0)
+Requires-Dist: requests (>=2.28.2,<3.0.0)
+Requires-Dist: wikibaseintegrator (>=0.12.4,<0.13.0)
+Description-Content-Type: text/markdown
+
+# WBMaker
+This alpha package helps establish an authenticated connection with a Wikibase instance and provides a number of functions for building items using the wikibaseintegrator package and working with Wikimedia pages (e.g., "item talk" pages) using the mwclient package. While it is simple enough to work with these packages separately, it is helpful to provide a lightweight layer of abstraction for many of the tasks needed in developing bot-based applications and data processing pipelines.
+
+I am planning on building in additional functionality that I find most commonly used when developing bots that take action on Wikidata or another Wikibase instance.
+
+## Installation
+
+```pip install wbmaker```
+
+or install from source
+
+```git clone https://github.com/skybristol/wbmaker```
+
+## Config.ini
+The package assumes availability of a config.ini defaulting to the current directory and containing a default [wb] object with configuration details. These can include a bot user and password for authenticated connections. Parameters can be set when calling the WB() class.
