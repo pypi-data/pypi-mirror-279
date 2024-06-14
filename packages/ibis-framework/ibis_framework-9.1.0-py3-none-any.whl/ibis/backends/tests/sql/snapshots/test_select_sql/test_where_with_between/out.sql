@@ -1,0 +1,6 @@
+SELECT
+  *
+FROM "alltypes" AS "t0"
+WHERE
+  "t0"."a" > CAST(0 AS TINYINT)
+  AND "t0"."f" BETWEEN CAST(0 AS TINYINT) AND CAST(1 AS TINYINT)
