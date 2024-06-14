@@ -1,0 +1,2 @@
+[console_scripts]
+ignore_alerts = mend_ignore_alerts.ignore_alerts:main
