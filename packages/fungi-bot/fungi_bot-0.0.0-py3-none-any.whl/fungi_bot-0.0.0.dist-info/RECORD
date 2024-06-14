@@ -1,0 +1,9 @@
+fungi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fungi/__main__.py,sha256=qF4qUccVI0jk4PVCDaajZk6ycU8iMQIctzoVIpGiK0c,47
+fungi/fungi.py,sha256=O-ACkxUej9CN8BSA7XqWbebt-j_9WeTW1M2Wi4DWFrE,3445
+fungi/manage.py,sha256=6T0uLewlE2G16lc_YcxVtlKToW0OEXEkUp2JhpDzzaQ,2494
+fungi_bot-0.0.0.dist-info/entry_points.txt,sha256=vekhvF9YaEYhft0Xa_yGnEwXChTklsOTDqK_A_CYKHo,42
+fungi_bot-0.0.0.dist-info/LICENSE,sha256=HA-bcFvd1XGwwIgAkJaC2VW9_0VqR2K5ruGeQqS-YMQ,1088
+fungi_bot-0.0.0.dist-info/METADATA,sha256=Env0UR-XtNIA5_3x_exQX7GlWv12m8Bqw1kBCcYe6fQ,876
+fungi_bot-0.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fungi_bot-0.0.0.dist-info/RECORD,,
