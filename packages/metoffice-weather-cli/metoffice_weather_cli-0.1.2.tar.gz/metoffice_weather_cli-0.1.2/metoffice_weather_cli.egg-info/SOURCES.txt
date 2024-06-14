@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+metoffice_weather_cli/__init__.py
+metoffice_weather_cli/__main__.py
+metoffice_weather_cli/configurator.py
+metoffice_weather_cli/main.py
+metoffice_weather_cli/weather.py
+metoffice_weather_cli/weathercodes.py
+metoffice_weather_cli.egg-info/PKG-INFO
+metoffice_weather_cli.egg-info/SOURCES.txt
+metoffice_weather_cli.egg-info/dependency_links.txt
+metoffice_weather_cli.egg-info/requires.txt
+metoffice_weather_cli.egg-info/top_level.txt
+tests/test_weathercodes.py
