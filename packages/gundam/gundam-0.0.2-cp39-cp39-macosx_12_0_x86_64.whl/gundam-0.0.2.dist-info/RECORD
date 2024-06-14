@@ -1,0 +1,14 @@
+gundam-0.0.2.dist-info/RECORD,,
+gundam-0.0.2.dist-info/WHEEL,sha256=Nws59_KIw37pKRE7jJMuxT1oypjY_iSBkTqjfjoq25I,112
+gundam-0.0.2.dist-info/METADATA,sha256=bbIJP9xE63dIxeT0shSVlHp22sL6eqgJmsRTHbO5nyU,7693
+gundam-0.0.2.dist-info/licenses/LICENSE,sha256=F-U4IgIx7Eo5pZ16PczWCXn_dX8FU3CAVBD8V55_TUA,1070
+gundam/_version.py,sha256=NDHlyIcJZjLz8wKlmD1-pr6me5FHBAYwO_ynLG-37N8,411
+gundam/cflibfor.pyf,sha256=05edulIYfWspHIXggneNQS37URRu_s6tRO0U3Wotmuc,24752
+gundam/__init__.py,sha256=RWGJ00Gf2LLAWU0sMybj5pZw_OetEF2YEoPPcoS9ux4,22
+gundam/cflibfor.f90,sha256=s_y__koutlBg7m9TVJmGoLY30Pub1BwNjuxG6xen4Pk,205160
+gundam/gundam.py,sha256=l1Rh29WLp9LydO5UczaS2Be6FVtFrpNdbE0v2keEZyA,247848
+gundam/cflibfor.cpython-39-darwin.so,sha256=Jk_n19cdBJ3lE3Cu9uEN5A8PFtgDHJdzf6auGuuIy38,523712
+gundam/.dylibs/libgfortran.5.dylib,sha256=Smnijx7b4VZQqdZbPrCh4W69m3BA-520lDXkrfER9qg,3302240
+gundam/.dylibs/libquadmath.0.dylib,sha256=JZEYzD3e_FuI8RPhwSD6NKMxIBhxRcQgfYifajeSfsg,386544
+gundam/.dylibs/libgcc_s.1.1.dylib,sha256=-OWGXZh_b-rIbZjWWVMpFEcF3V-AMpVcI6m-QytxFpI,147472
+gundam/.dylibs/libgomp.1.dylib,sha256=dL5BmGUo4NEfVU1FnLVYsilkaXG061pGIHGe-en26sM,416368
