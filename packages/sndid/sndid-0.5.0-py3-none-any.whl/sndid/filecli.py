@@ -1,0 +1,157 @@
+# sndid/cli.py
+# Copyright 2023, 2024 Jeff Moe <moe@spacecruft.org>
+# Copyright 2022, 2023, Joe Weiss <joe.weiss@gmail.com>
+# Licensed under the Apache License, Version 2.0
+import argparse
+import io
+from birdnetlib import Recording
+from birdnetlib.analyzer import Analyzer
+from contextlib import redirect_stdout, redirect_stderr
+from datetime import datetime
+from pydantic import BaseModel, Field
+from typing import Optional, List
+
+
+class Args(BaseModel):
+    """
+    Args class representing the command line arguments.
+
+    Attributes:
+        confidence (float): Minimum Confidence (default: 0.3).
+        input (str): Input filename to process (default: samples/sample.wav).
+        latitude (str): Latitude (default: 40.57).
+        longitude (str): Longitude (default: -105.23).
+        year (int): Year (default: today's year).
+        month (int): Month (default: today's month).
+        day (int): Day (default: today's day).
+        format (str): Print output in CSV or JSON (default CSV).
+    """
+
+    confidence: float = Field(
+        title="confidence",
+        alias="c",
+        default=0.3,
+        description="Minimum Confidence (default: 0.3)",
+    )
+    input: str = Field(
+        title="input",
+        default="samples/sample.wav",
+        description="Input filename to process (default: samples/sample.wav)",
+        alias="i",
+    )
+    latitude: str = Field(
+        title="latitude",
+        alias="a",
+        default="40.57",
+        description="Latitude (default: 40.57)",
+    )
+    longitude: str = Field(
+        title="longitude",
+        alias="o",
+        default="-105.23",
+        description="Longitude (default: -105.23)",
+    )
+    year: int = Field(
+        title="year",
+        alias="y",
+        default=datetime.today().year,
+        description="Year (default: today's year)",
+    )
+    month: int = Field(
+        title="month",
+        alias="m",
+        default=datetime.today().month,
+        description="Month (default: today's month)",
+    )
+    day: int = Field(
+        title="day",
+        alias="d",
+        default=datetime.today().day,
+        description="Day (default: today's day)",
+    )
+    format: str = Field(
+        title="format",
+        alias="f",
+        default="CSV",
+        description="Print output in CSV or JSON (default CSV)",
+    )
+
+
+def parse_args() -> Args:
+    """
+    parse_args function to parse the command line arguments.
+
+    Returns:
+        Args: The parsed command line arguments.
+    """
+    parser = argparse.ArgumentParser(description="Process bird sound file.")
+
+    for field in Args.__fields__.values():
+        parser.add_argument(
+            f"-{field.alias}",
+            f"--{field.title}",
+            type=field.annotation,
+            default=field.default if field.default is not None else "",
+            help=field.description,
+        )
+
+    return parser.parse_args()
+
+
+def main():
+    """
+    main function to process the bird sound file.
+    """
+    args = parse_args()
+    output_buffer = io.StringIO()
+    with redirect_stdout(output_buffer), redirect_stderr(output_buffer):
+        custom_labels_path = "models/analyzer/BirdNET_GLOBAL_6K_V2.4_Labels.txt"
+        custom_model_path = "models/analyzer/BirdNET_GLOBAL_6K_V2.4_Model_FP32.tflite"
+        analyzer = Analyzer(
+            classifier_labels_path=custom_labels_path,
+            classifier_model_path=custom_model_path,
+        )
+
+        recording = Recording(
+            analyzer,
+            args.input,
+            lat=args.latitude,
+            lon=args.longitude,
+            date=datetime(
+                year=args.year or datetime.today().year,
+                month=args.month or datetime.today().month,
+                day=args.day or datetime.today().day,
+            ),
+            min_conf=float(args.confidence),
+        )
+
+        recording.analyze()
+
+    print("args format:", args.format)
+    if args.format == "json":
+        print(recording.detections)
+    else:
+        i = 0
+        species_sort = ""
+        for i in range(0, len(recording.detections)):
+            species_sort = species_sort + (
+                recording.detections[i]["common_name"]
+                + ", "
+                + recording.detections[i]["scientific_name"]
+                + ", "
+                + str(recording.detections[i]["start_time"])
+                + ", "
+                + str(recording.detections[i]["end_time"])
+                + ", "
+                + str(recording.detections[i]["confidence"])
+                + "\n"
+            )
+        species_out = sorted(species_sort.split("\n"))
+
+        i = 0
+        for i in range(1, len(species_out)):
+            print(species_out[i])
+
+
+if __name__ == "__main__":
+    main()
