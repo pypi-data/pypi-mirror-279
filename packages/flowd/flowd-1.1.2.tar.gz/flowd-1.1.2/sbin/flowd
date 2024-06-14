@@ -1,0 +1,90 @@
+#!/usr/bin/env python
+
+import logging
+import logging.handlers
+import argparse
+import os.path
+
+import fcntl
+import sys
+
+import scitags
+import scitags.settings
+
+import socket
+import requests.packages.urllib3.util.connection as urllib3_cn
+
+log = logging.getLogger("scitags")
+
+
+def args_parser():
+    parser = argparse.ArgumentParser(description='flowd - flow and packet marking daemon')
+    parser.add_argument('--version', action='version', version='%(prog)s ' + str(scitags.__version__))
+    parser.add_argument('-c', '--config', default=scitags.settings.CONFIG_PATH,
+                        help='Specify path of the configuration file (defaults to {})'.format(
+                            scitags.settings.CONFIG_PATH))
+    parser.add_argument('-d', '--debug', action='store_true', help='Debug mode (implies run in foreground)')
+    parser.add_argument('-f', '--fg', action='store_true', default=True, help='Run in foreground (deprecated)')
+    args = parser.parse_args()
+
+    if args.debug:
+        log.setLevel(logging.DEBUG)
+        formatter = logging.Formatter(fmt='%(asctime)s %(levelname)s %(module)s[%(process)d]: %(message)s',
+                                      datefmt='%b %d %H:%M:%S')
+        fh = logging.StreamHandler(stream=sys.stdout)
+        fh.setFormatter(formatter)
+        log.addHandler(fh)
+    else:
+        log.setLevel(logging.INFO)
+        formatter = logging.Formatter(fmt='%(asctime)s %(levelname)s %(module)s[%(process)d]: %(message)s',
+                                      datefmt='%b %d %H:%M:%S')
+        fh = logging.StreamHandler(stream=sys.stdout)
+        fh.setFormatter(formatter)
+        log.addHandler(fh)
+
+    if args.config:
+        scitags.settings.CONFIG_PATH = args.config
+
+    from scitags.config import config
+
+    # todo: check config sanity
+    # todo: check system files/dirs accessible/created
+    if 'BACKEND' not in config.keys() or 'PLUGIN' not in config.keys():
+        log.error('Configuration missing backend and/or plugin')
+        sys.exit(-1)
+    if 'FLOW_MAP_API' not in config.keys():
+        log.error('Configuration is missing FLOW_MAP_API URL')
+        sys.exit(-1)
+    if os.path.isfile(scitags.settings.PID_FILE):
+        log.error('PID file found: {}; another instance already running ?'.format(scitags.settings.PID_FILE))
+        if not (args.fg and args.debug):
+            sys.exit(-1)
+    if not os.path.isdir(scitags.settings.WORK_DIR):
+        log.warning('Missing working directory {}, will attempt to create it'.format(scitags.settings.WORK_DIR))
+        os.makedirs(scitags.settings.WORK_DIR)
+    if not os.access(scitags.settings.WORK_DIR, os.W_OK):
+        log.error('Unable to write to working directory {}'.format(scitags.settings.WORK_DIR))
+        sys.exit(-1)
+
+    return args
+
+
+def lock_file(f):
+    if f.writable():
+        fcntl.lockf(f, fcntl.LOCK_EX)
+
+def allowed_gai_family():
+    family = socket.AF_INET
+    return family
+
+
+if __name__ == "__main__":
+    p_args = args_parser()
+    urllib3_cn.allowed_gai_family = allowed_gai_family
+
+    import scitags.service
+    flow_service = scitags.service.FlowService(p_args)
+    flow_service.check_config()
+    flow_service.init_plugins()
+
+    flow_service.main()
