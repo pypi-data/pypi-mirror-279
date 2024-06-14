@@ -1,0 +1,69 @@
+3.9.2
+  Developers:
+   - Fix tilt-series ctffind parallelization by locking the the whole createOutputStep to avoid concurrence problems.
+3.9.1
+  Users:
+   - Adding a main help to the protocols and some helps modified.
+   - Phase shift parameter are now in a line
+3.9:
+  Users:
+   - add ctffind5, rename config vars
+  Developers: 
+   - update the acquisition order in the CTFTomo objects (field added to that class in scipion-em-tomo v3.7.0).
+3.8: new protocols to resample tomo and TS
+3.7.1: fix an obsolete import in the viewer.
+3.7:
+  Users:
+   - Improve import TomoCTF matching.
+   - Fix TS Ctffind parallelization.
+  Developers:
+   - Update CTF estimation tests with a subset of 2 TS from relion tutorial test dataset.
+   - Add tests for the protocol TS Ctffind import CTF.
+3.6:
+   - Import TomoCTF allows deletion of outputs that may have been created by yhe CTFTomo viewer.
+3.5:
+    - refine2d protocol speed up by @JoQCcoz
+    - attempt to fix running in threads (#68)
+3.4:
+    - check for negative defocus
+    - update test params for tilt series ctf
+3.3: add import CTF for tilt-series
+3.2:
+    - add possible outputs dict
+    - refactor output txt parsing
+    - refactor tilt-series ctffind protocol to work on TS stacks
+3.1.3 - replace NaN values, check for missing psdFile
+3.1.2 - minor changes
+3.1.1 - add a test for TS ctffind4
+3.1.0:
+    - optimize imports
+    - better error / exception handling
+    - create links for input mrc files
+    - fixes for using scipion scratch
+    - compute psd with eman2, remove xmipp deps
+    - remove psd comparison and leave only psd thumbnail
+    - add eman2 requirement warning
+    - calculate box size for picking
+    - fix intensity scaling for thumbnails
+3.0.9 - fix race conditions after adding amplitude spectra option
+3.0.8 - add calculate from amplitude spectra option, update default values
+3.0.7 - minor fixes
+3.0.6 - add ctffind4 4.1.14 binaries
+3.0.5 - fix picking bug in streaming
+3.0.4 - add validation for min resolution
+3.0.3 - changed version to reflect Scipion 3 support
+1.0.3:
+    - fixes for tomo ctffind protocol
+    - remove unnecessary scipion 2 code
+    - remove writeShiftsMovieAlignment
+    - use "with open", default phaseShift=0
+    - refactor ctffit plot code
+1.0.1:
+    - First Scipion 3 / python 3 version.
+    - Added continue mode to refine2d
+    - Fixed picking test
+    - CTFFind fit plot updated to match official doc
+    - Added viewer for unblur
+    - Added import particles from Frealign to keep compatibility
+    - Added ctffind4 protocol for tilt series
+1.0.0 - First plugin version
