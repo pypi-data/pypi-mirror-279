@@ -1,0 +1,34 @@
+dependencies:
+  - name: dependency
+    local: ./Dependency
+
+  # Make sure can use a Brownie project as a dependency
+  - name: browniedependency
+    local: ./BrownieProject
+
+  # Make sure can use contracts from a non-fully compiling dependency.
+  - name: noncompilingdependency
+    local: ./NonCompilingDependency
+
+  # Ensure we can build a realistic-brownie project with dependencies.
+  - name: vault
+    github: yearn/yearn-vaults
+    ref: v0.4.5
+
+  # Ensure dependencies using GitHub references work.
+  - name: vaultmain
+    github: yearn/yearn-vaults
+    ref: master
+
+  # Ensure NPM dependencies work.
+  - name: safe
+    npm: "@gnosis.pm/safe-contracts"
+    version: 1.3.0
+
+solidity:
+  # Using evm_version compatible with older and newer solidity versions.
+  evm_version: constantinople
+
+  import_remapping:
+    # Legacy support test (missing contracts key in import test)
+    - "@noncompilingdependency=noncompilingdependency"
