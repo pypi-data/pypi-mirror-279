@@ -1,0 +1,2 @@
+include src/faunanet/*.yml
+recursive-include src/faunanet/docker *
