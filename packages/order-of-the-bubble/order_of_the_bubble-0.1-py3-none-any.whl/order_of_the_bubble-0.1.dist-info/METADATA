@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: order_of_the_bubble
+Version: 0.1
+Summary: A simple module to test the order of the bubble
+Home-page: https://github.com/SrihariKarthik/my_module
+Author: Hari
+Author-email: srikarthik@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+
