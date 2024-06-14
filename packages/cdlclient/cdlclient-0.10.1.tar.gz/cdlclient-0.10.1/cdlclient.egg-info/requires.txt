@@ -1,0 +1,17 @@
+NumPy>=1.21
+guidata>=3.5
+
+[dev]
+ruff
+pylint
+Coverage
+
+[doc]
+sphinx
+sphinx_intl
+pydata-sphinx-theme
+
+[test]
+PyQt5
+QtPy
+plotpy
