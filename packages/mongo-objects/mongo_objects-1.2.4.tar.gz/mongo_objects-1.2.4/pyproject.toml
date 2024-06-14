@@ -1,0 +1,54 @@
+[build-system]
+requires = [
+    "hatchling",
+]
+build-backend = "hatchling.build"
+
+[project]
+name = "mongo_objects"
+authors = [
+  { name="Jonathan Lindstrom", email="lindstrom.j@headwaters.com.sg" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pymongo",
+]
+description = "Access MongoDB documents and subdocuments through user-defined UserDict and proxy objects."
+dynamic = ["version"]
+keywords = ["Mongo", "MongoDB", "pymongo"]
+license = {text = "MIT License"}
+readme = "README.rst"
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/lindstrom-j/mongo_objects"
+Documentation = "https://mongo-objects.headwaters.com.sg/en/latest/"
+Issues = "https://github.com/lindstrom-j/mongo_objects/issues"
+
+[tool.hatch.version]
+path = "docs/source/conf.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mongo_objects"]
+
+[tool.hatch.build.targets.sdist]
+artifacts = [
+  "docs/build/html",
+]
+exclude = [
+  ".gitignore",
+  "pyproject.toml",
+]
+include = [
+  "src",
+  "tests",
+  "sample",
+]
+
+[tool.hatch.build.targets.sdist.sources]
+"docs/build/html" = "docs"

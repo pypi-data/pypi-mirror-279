@@ -1,0 +1,58 @@
+#!/bin/bash
+
+# assume this script is at the same level as the sample application
+cd $(dirname $0)
+SAMPLE_DIR=$(pwd)
+VENV_DIR=${SAMPLE_DIR}/venv
+
+# if a virtual environment doesn't exist, create one
+if [[ ! -d venv ]]; then
+    python3 -m venv ${VENV_DIR} --prompt "mongo-objects-sample"
+    echo "created new virtual environment for mongo_objects sample app"
+fi
+
+# activate the project virtual environment
+source ${VENV_DIR}/bin/activate
+echo "activated mongo_objects sample app virtual environment"
+
+# add any required modules
+cat ${SAMPLE_DIR}/requirements.txt | xargs ${VENV_DIR}/bin/pip3 install --disable-pip-version-check
+echo "installed required modules for mongo_objects sample app virtual environment"
+
+# if a connection string is provided, log it
+if [[ -n "${MONGO_CONNECT_URI}" ]]; then
+    echo connecting to MongoDB at ${MONGO_CONNECT_URI}
+
+# otherwise, start MongoDB ourselves
+else
+    # create MongoDB directory if it doesn't exist
+    if [ ! -d db ]; then
+        mkdir db
+        echo "created Mongo db directory"
+    fi
+
+    # start MongoDB if it isn't already running
+    if ! mongod --dbpath db > db/mongod-console.out 2>&1 &
+    then
+        echo "unable to start local MongoDB"
+        exit 1
+    fi
+
+    # record MongoDB PID so we can stop it later
+    STARTED_MONGO_PID=$!
+    echo Started MongoDB PID $STARTED_MONGO_PID
+fi
+
+# set up environment for Flask
+export PYTHONPATH=${SAMPLE_DIR}:${SAMPLE_DIR}/../src:$PYTHONPATH
+export FLASK_APP=mongo_objects_sample
+export FLASK_DEBUG=1
+
+# start Flask
+flask run --host 127.0.0.1
+
+# shut down MongoDB if we started it
+if [[ -z "${MONGO_CONNECT_URI}" ]]; then
+    kill -TERM $STARTED_MONGO_PID
+    echo "Stopped MongoDB"
+fi

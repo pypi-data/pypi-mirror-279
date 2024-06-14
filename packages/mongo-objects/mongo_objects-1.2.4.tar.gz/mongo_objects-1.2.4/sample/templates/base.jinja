@@ -1,0 +1,75 @@
+{# This template is included as part of the mongo_objects sample app
+ #
+ # https://mongo-objects.headwaters.com.sg
+ # https://pypi.org/project/mongo-objects/
+ #
+ # Copyright 2024 Jonathan Lindstrom
+ # Headwaters Entrepreneurs Pte Ltd
+ #
+ # Released under the MIT License
+-#}
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ title|default("mongo_objects Sample App")}}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+    {% block headExtras %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('indexPage') }}">mongo_objects Sample App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Mode
+                        </a>
+                        <div class="dropdown-menu">
+                            {% if mode and mode == "admin" %}
+                            <a href="{{ url_for( 'adminEventList' ) }}" class="nav-link active" aria-current="set">Currently In Admin Mode</a>
+                            {% else %}
+                            <a href="{{ url_for( 'adminEventList' ) }}" class="nav-link">Switch To Admin Mode</a>
+                            {% endif %}
+                            {% if mode and mode == "customer" %}
+                            <a href="{{ url_for( 'customerEventList' ) }}" class="nav-link active" aria-current="set">Currently In Customer Mode</a>
+                            {% else %}
+                            <a href="{{ url_for( 'customerEventList' ) }}" class="nav-link">Switch To Customer Mode</a>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-xl-6 col-lg-8 col-md-10">
+
+    {% for (category, message) in get_flashed_messages( with_categories=True ) %}
+    {% if category not in( ['danger', 'success', 'warning'] ) %}
+    {% set category = 'primary' %}
+    {% endif %}
+        <div class="alert alert-{{category}}" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

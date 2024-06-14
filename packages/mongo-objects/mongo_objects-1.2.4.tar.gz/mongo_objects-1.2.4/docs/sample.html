@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sample Application &#8212; mongo_objects 1.2.3 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=590429e0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MongoUserDict" href="MongoUserDict.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="sample-application">
+<h1>Sample Application<a class="headerlink" href="#sample-application" title="Link to this heading">¶</a></h1>
+<p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">mongo_objects</span></code>
+<a class="reference external" href="https://github.com/lindstrom-j/mongo_objects">source code</a>
+as well as the source distribution package include a sample Flask
+application that demonstrates many common usage patterns.</p>
+<section id="starting-the-sample-application">
+<h2>Starting The Sample Application<a class="headerlink" href="#starting-the-sample-application" title="Link to this heading">¶</a></h2>
+<p>The <code class="file docutils literal notranslate"><span class="pre">sample/run-sample-app</span></code> shell script makes the following
+assumptions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <strong class="program">bash</strong> shell is available at <code class="file docutils literal notranslate"><span class="pre">/bin/bash</span></code>.</p></li>
+<li><p><strong class="program">python3</strong> and <strong class="program">pip3</strong> are available on the path
+with access to the Internet.</p></li>
+<li><p>MongoDB is installed as <strong class="program">mongod</strong> but not running.</p></li>
+<li><p>The <code class="file docutils literal notranslate"><span class="pre">sample</span></code> directory is writable.</p></li>
+</ul>
+</div></blockquote>
+<p>The script performs the following actions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Creates a Python 3 virtual environment in the <code class="file docutils literal notranslate"><span class="pre">sample/venv</span></code> directory
+and installs the required modules as listed in <code class="file docutils literal notranslate"><span class="pre">sample/requirements.txt</span></code>.</p></li>
+<li><p>Creates a <code class="file docutils literal notranslate"><span class="pre">sample/db</span></code> directory and starts <strong class="program">mongod</strong> in
+unsecured mode against that directory. To override this step and use a different
+MongoDB instance, provide the connect string in the <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">MONGO_CONNECT_URI</span></code>
+environment variable.</p></li>
+<li><p>Starts <strong class="program">flask</strong> running the <code class="xref py py-mod docutils literal notranslate"><span class="pre">sample/mongo_objects_sample.py</span></code>
+sample application module</p></li>
+<li><p>Shuts down <strong class="program">mongod</strong> when <strong class="program">flask</strong> terminates.</p></li>
+</ul>
+</div></blockquote>
+<p>Press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> to terminate <strong class="program">flask</strong> and end the script. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% sample/run-sample-app
+created new virtual environment for mongo_objects sample app
+activated mongo_objects sample app virtual environment
+Collecting Flask
+Collecting Flask-PyMongo
+Collecting Flask-WTF
+Collecting MarkupSafe
+Collecting pymongo
+Collecting WTForms
+Collecting Werkzeug&gt;=3.0.0 (from Flask)
+Collecting Jinja2&gt;=3.1.2 (from Flask)
+Collecting itsdangerous&gt;=2.1.2 (from Flask)
+Collecting click&gt;=8.1.3 (from Flask)
+Collecting blinker&gt;=1.6.2 (from Flask)
+Collecting dnspython&lt;3.0.0,&gt;=1.16.0 (from pymongo)
+...
+Installing collected packages: MarkupSafe, itsdangerous, dnspython, click, blinker, WTForms, Werkzeug, pymongo, Jinja2, Flask, Flask-WTF, Flask-PyMongo
+Successfully installed Flask-3.0.3 Flask-PyMongo-2.3.0 Flask-WTF-1.2.1 Jinja2-3.1.4 MarkupSafe-2.1.5 WTForms-3.1.2 Werkzeug-3.0.3 blinker-1.8.2 click-8.1.7 dnspython-2.6.1 itsdangerous-2.2.0 pymongo-4.7.2
+installed required modules for mongo_objects sample app virtual environment
+Started MongoDB PID 66702
+* Serving Flask app &#39;mongo_objects_sample&#39;
+* Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+* Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+* Restarting with stat
+* Debugger is active!
+* Debugger PIN: 942-992-575
+^CStopped MongoDB
+</pre></div>
+</div>
+</section>
+<section id="application-overview">
+<h2>Application Overview<a class="headerlink" href="#application-overview" title="Link to this heading">¶</a></h2>
+<p>The sample Flask application manages ticket sales to imaginary events.</p>
+<p>There are two modes. In <em>admin</em> mode, you manage events while in <em>customer</em>
+mode you may view events and “purchase” tickets. Use the dropdown menu in
+the navigation bar to switch between modes.</p>
+<p>The data for the entire application is stored in a single MongoDB collection
+named <code class="docutils literal notranslate"><span class="pre">events</span></code> in the <code class="docutils literal notranslate"><span class="pre">mongo_objects_sample</span></code> database.
+Each event including related information like venue location, types of tickets
+and tickets sold is stored as a single MongoDB document.</p>
+<p>We recommend installing the <a class="reference external" href="https://www.mongodb.com/try/download/compass">MongoDB Compass tool</a>
+to inspect the documents managed by <code class="xref py py-mod docutils literal notranslate"><span class="pre">mongo_objects</span></code>.</p>
+</section>
+<section id="mongouserdict-scheduling-an-event">
+<h2>MongoUserDict: Scheduling An Event<a class="headerlink" href="#mongouserdict-scheduling-an-event" title="Link to this heading">¶</a></h2>
+<p>Events are stored as <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoUserDict</span></code> subclasses called <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code>. Use admin
+mode to create your first event as follows:</p>
+<a class="reference internal image-reference" href="_images/create-event.png"><img alt="_images/create-event.png" class="align-center" src="_images/create-event.png" style="width: 80%;" />
+</a>
+<p>Now use Compass to view the contents of the <code class="docutils literal notranslate"><span class="pre">events</span></code> collection.
+There should be one document similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;663c54bbeba88ab288f3bd3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End Of The Century Party&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This will be even more fun than last time!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;eventDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2099-12-31T00:00:00.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T04:44:43.030Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_created&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T04:44:43.030Z&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This is a typical MongoDB document dictionary, although you’ll notice
+<code class="xref py py-class docutils literal notranslate"><span class="pre">MongoUserDict</span></code> helpfully added <cite>_created</cite> and <cite>_updated</cite>
+timestamps to the document when it was saved.</p>
+<p>If you look at the event details page in the sample app, you’ll see
+a URL similar to <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/admin-event-detail/663c54bbeba88ab288f3bd3d</span></code>.
+The unique number in the URL is just the MongoDB ObjectId.
+The <code class="xref py py-meth docutils literal notranslate"><span class="pre">MongoUserDict.id()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">MongoUserDict.load_by_id()</span></code>
+methods to make it easy to locate
+documents by their ObjectId.</p>
+<p>Because events are actually represented using a <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoUserDict</span></code> subclass
+named <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code>, we have added our own methods to assist with the event
+workflow. <code class="xref py py-meth docutils literal notranslate"><span class="pre">displayDate()</span></code> provides consistent date formatting while
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">isSoldOut()</span></code> provides a single calculation for ticket availability.</p>
+<p>By passing an <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> object to another function or even to a Jinja
+template, not only the event data but also all these methods are available
+as well.</p>
+</section>
+<section id="mongosingleproxy-adding-a-venue">
+<h2>MongoSingleProxy: Adding A Venue<a class="headerlink" href="#mongosingleproxy-adding-a-venue" title="Link to this heading">¶</a></h2>
+<p>The venue location is stored as a simple subdocument dictionary within the
+parent event document. We use a <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoSingleProxy</span></code> subclass named
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Venue</span></code> to manage this data structure.</p>
+<p>Use the admin mode to add venue information to the event as follows:</p>
+<a class="reference internal image-reference" href="_images/add-venue.png"><img alt="_images/add-venue.png" class="align-center" src="_images/add-venue.png" style="width: 80%;" />
+</a>
+<p>Check the MongoDB document with Compass:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;663c54bbeba88ab288f3bd3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End Of The Century Party&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This will be even more fun than last time!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;eventDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2099-12-31T00:00:00.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T07:07:18.207Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_created&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T04:44:43.030Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;venue&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Grand Theater&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Grand Avenue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;123 456 7890&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You’ll notice that the <em>_updated</em> field has indeed been updated
+to reflect the last document save time.</p>
+<p>There’s also a new <em>venue</em> dictionary within the main document.
+This represents the <code class="xref py py-class docutils literal notranslate"><span class="pre">Venue</span></code> proxy object. The <em>venue</em> name
+came from the <em>container_name</em> in the class definition.</p>
+<p>If there are any venue-specific methods, we could include them in
+the <code class="xref py py-class docutils literal notranslate"><span class="pre">Venue</span></code> class instead of cluttering up <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code>.</p>
+<p>Since the data for each proxy object only exists in the parent
+MongoDB document, the parent document must be loaded before the
+proxy is available. We’ve included a helpful <code class="xref py py-meth docutils literal notranslate"><span class="pre">Event.getVenue()</span></code> method
+to return the <code class="xref py py-class docutils literal notranslate"><span class="pre">Venue</span></code> proxy object from a <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code>
+already loaded into memory.</p>
+<p>Each proxy object has a unique ID that includes the parent document
+ObjectId. There’s an <code class="xref py py-meth docutils literal notranslate"><span class="pre">Event.loadVenueById()</span></code> class method that
+parses the venue ID, loads the correct <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> document and
+returns the appropriate <code class="xref py py-class docutils literal notranslate"><span class="pre">Venue</span></code> proxy object.</p>
+</section>
+<section id="mongodictproxy-defining-ticket-types">
+<h2>MongoDictProxy: Defining Ticket Types<a class="headerlink" href="#mongodictproxy-defining-ticket-types" title="Link to this heading">¶</a></h2>
+<p>For “one-to-many” relationships, SQL statements require table joins
+to connect the information. In No-SQL databases like MongoDB, it
+is more efficient to simply include the “many” items as multiple
+subdocuments within the same primary document.</p>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDictProxy</span></code> class manages a single dictionary container
+that in turn holds multiple subdocument dictionaries of the same type.</p>
+<p>In our sample app, for example, each event may have multiple ticket
+types for sale. Instead of a separate “ticket type” collection, all
+ticket types are included as <code class="xref py py-class docutils literal notranslate"><span class="pre">TicketType</span></code> subdocuments
+within the main <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> object.</p>
+<p>To illustrate this functionality, use the admin mode to add three ticket types
+to our event.</p>
+<p>VIP tickets:</p>
+<a class="reference internal image-reference" href="_images/add-ticket-type-1.png"><img alt="_images/add-ticket-type-1.png" class="align-center" src="_images/add-ticket-type-1.png" style="width: 80%;" />
+</a>
+<p>General admission:</p>
+<a class="reference internal image-reference" href="_images/add-ticket-type-2.png"><img alt="_images/add-ticket-type-2.png" class="align-center" src="_images/add-ticket-type-2.png" style="width: 80%;" />
+</a>
+<p>Discounted student tickets:</p>
+<a class="reference internal image-reference" href="_images/add-ticket-type-3.png"><img alt="_images/add-ticket-type-3.png" class="align-center" src="_images/add-ticket-type-3.png" style="width: 80%;" />
+</a>
+<p>Use MongoDB Compass to check the document content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;663c54bbeba88ab288f3bd3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End Of The Century Party&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This will be even more fun than last time!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;eventDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2099-12-31T00:00:00.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T07:21:59.145Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_created&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T04:44:43.030Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;venue&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Grand Theater&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Grand Avenue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;123 456 7890&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;_last_unique_integer&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="s2">&quot;ticketTypes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VIP Ticket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The best seats in the house!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">10</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;General Admission&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Everyone is welcome!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Student Ticket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Take a break from the books&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">50</span>
+    <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The biggest change is the new <em>ticketTypes</em> dictionary. The name
+came from the <em>container_name</em> attribute of the <code class="xref py py-class docutils literal notranslate"><span class="pre">TicketType</span></code>
+class.</p>
+<p>The <em>ticketTypes</em> dictionary itself contains three dictionaries,
+one for each of our <code class="xref py py-class docutils literal notranslate"><span class="pre">TicketType</span></code> proxy objects. The keys
+for each dictionary were auto-assigned by <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDictProxy</span></code>
+and have nothing to do with the content of the subdocument. Even
+if the content changes, the key remains the same.</p>
+<p>A <em>_last_unique_integer</em> value has also been added automatically to track
+on a per-document basis the last proxy ID value that was issued.</p>
+<p>Of course, the <em>_updated</em> timestamp was also updated.</p>
+<p>If you use the admin mode to explore ticket type details, you’ll
+see a URL like <code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/admin-ticket-detail/663c54bbeba88ab288f3bd3dg1</span></code>.
+Each proxy object has a unique ID consisting of the document ObjectId plus the
+proxy subdocument key. <code class="docutils literal notranslate"><span class="pre">g</span></code> is used as a URL-safe, non-hexidecimal separator.</p>
+<p>Each proxy object provides a <code class="xref py py-meth docutils literal notranslate"><span class="pre">id()</span></code> method that constructs the unique ID.
+<code class="xref py py-class docutils literal notranslate"><span class="pre">MongoUserDict</span></code> provides <a class="reference internal" href="MongoUserDict.html#mongo_objects.MongoUserDict.load_proxy_by_id" title="mongo_objects.MongoUserDict.load_proxy_by_id"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_proxy_by_id()</span></code></a> to parse a proxy object
+ID, load the correct parent document and return the appropriate subdocument
+object. In fact, our <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> class method <code class="xref py py-meth docutils literal notranslate"><span class="pre">loadTicketTypeById()</span></code>
+just calls <a class="reference internal" href="MongoUserDict.html#mongo_objects.MongoUserDict.load_proxy_by_id" title="mongo_objects.MongoUserDict.load_proxy_by_id"><code class="xref py py-meth docutils literal notranslate"><span class="pre">load_proxy_by_id()</span></code></a> to locate and return <code class="xref py py-class docutils literal notranslate"><span class="pre">TicketType</span></code> objects.</p>
+<p>Once an <code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code> object is loaded, <code class="xref py py-meth docutils literal notranslate"><span class="pre">getTicketTypes()</span></code> has been
+included to call <code class="xref py py-meth docutils literal notranslate"><span class="pre">MongoUserDict.get_proxies()</span></code> and return a list
+of all <code class="xref py py-class docutils literal notranslate"><span class="pre">TicketType</span></code> proxies. The method <code class="xref py py-meth docutils literal notranslate"><span class="pre">getTicketType()</span></code> can be called
+to create a proxy for a single ticket type based on the key.</p>
+</section>
+<section id="mongolistproxy-selling-tickets">
+<h2>MongoListProxy: Selling Tickets<a class="headerlink" href="#mongolistproxy-selling-tickets" title="Link to this heading">¶</a></h2>
+<p>Another pattern for saving “one-to-many” subdocuments in the
+parent document is to use a list as the container. <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoListProxy</span></code>
+supports using lists as a container object.</p>
+<p>Our sample app uses a <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoListProxy</span></code> subclass called
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Ticket</span></code> to represent each ticket sold.</p>
+<p>Use the customer mode of the sample app to purchase a VIP ticket
+to our end-of-the-century party.</p>
+<a class="reference internal image-reference" href="_images/purchase-ticket.png"><img alt="_images/purchase-ticket.png" class="align-center" src="_images/purchase-ticket.png" style="width: 80%;" />
+</a>
+<p>Let’s look at the actual data with Compass:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;663c54bbeba88ab288f3bd3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End Of The Century Party&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This will be even more fun than last time!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;eventDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2099-12-31T00:00:00.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T08:56:25.171Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_created&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T04:44:43.030Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;venue&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Grand Theater&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Grand Avenue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;123 456 7890&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;_last_unique_integer&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">&quot;ticketTypes&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VIP Ticket&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The best seats in the house!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+            <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;General Admission&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Everyone is welcome!&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+            <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">100</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Student Ticket&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Take a break from the books&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+            <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">50</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;tickets&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ticketTypeKey&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;issued&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T08:56:25.171Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_sdkey&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The major change is the new <em>tickets</em> list containing a single
+subdocument dictionary representing the ticket we just purchased
+for Fred.</p>
+<p>Each <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDictProxy</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoListProxy</span></code> proxy object
+is tracked by a key. Since lists don’t natively use keys, a <em>_sdkey</em>
+(short for subdocument key) value has been added to the dictionary
+in the <em>tickets</em> list.</p>
+<p>This key value is used when constructing the full proxy ID. In fact,
+if you switch back to admin mode and look at the VIP tickets detail
+page, you’ll see that Fred’s ticket number is just the proxy ID.</p>
+<a class="reference internal image-reference" href="_images/vip-ticket-detail-1.png"><img alt="_images/vip-ticket-detail-1.png" class="align-center" src="_images/vip-ticket-detail-1.png" style="width: 80%;" />
+</a>
+<p>The key is also used to track the subdocument dictionary within the
+list. If the list is modified, <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoListProxy</span></code> will use the
+key to locate the new index of the subdocument dictionary in the list.</p>
+<p>Because a new key has been issued, <em>_last_unique_integer</em> has been
+updated as well as the <em>_updated</em> timestamp.</p>
+</section>
+<section id="polymorphicmongodictproxy-ticket-benefits">
+<h2>PolymorphicMongoDictProxy: Ticket Benefits<a class="headerlink" href="#polymorphicmongodictproxy-ticket-benefits" title="Link to this heading">¶</a></h2>
+<p>It to sometimes convenient to store similar but not identical types
+of information within the same container. All <code class="xref py py-mod docutils literal notranslate"><span class="pre">mongo_objects</span></code>
+proxy classes have polymorphic versions that will return different
+objects from the same container based on an identifier.</p>
+<p>Our sample app uses a tree of <code class="xref py py-class docutils literal notranslate"><span class="pre">PolymorphicMongoDictProxy</span></code> subclasses
+to track the benefits associated with each ticket type. Some benefits
+are considered intangible features like a front row seat or unobstructed view.
+Other benefits are tangible gifts like free popcorn or a gift bag.</p>
+<p>This data structure is defined as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Benefit</span><span class="p">(</span> <span class="n">mongo_objects</span><span class="o">.</span><span class="n">PolymorphicMongoListProxy</span> <span class="p">):</span>
+    <span class="n">container_name</span> <span class="o">=</span> <span class="s1">&#39;benefits&#39;</span>
+    <span class="n">proxy_subclass_map</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">class</span> <span class="nc">Feature</span><span class="p">(</span> <span class="n">Benefit</span> <span class="p">):</span>
+    <span class="n">proxy_subclass_key</span> <span class="o">=</span> <span class="s1">&#39;ft&#39;</span>
+
+<span class="k">class</span> <span class="nc">Gift</span><span class="p">(</span> <span class="n">Benefit</span> <span class="p">):</span>
+    <span class="n">proxy_subclass_key</span> <span class="o">=</span> <span class="s1">&#39;gt&#39;</span>
+</pre></div>
+</div>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Benefit</span></code> base class defines the <em>container_name</em> that the
+two subclasses will share. The <code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Gift</span></code>
+subclasses each define a unique <em>proxy_subclass_key</em> value that
+<code class="xref py py-class docutils literal notranslate"><span class="pre">PolymorphicMongoDictProxy</span></code> uses to decide which class to
+instantiate.</p>
+<p>Use admin mode to add a feature to the VIP ticket type:</p>
+<a class="reference internal image-reference" href="_images/add-feature.png"><img alt="_images/add-feature.png" class="align-center" src="_images/add-feature.png" style="width: 80%;" />
+</a>
+<p>Now add a gift to the VIP ticket type:</p>
+<a class="reference internal image-reference" href="_images/add-gift.png"><img alt="_images/add-gift.png" class="align-center" src="_images/add-gift.png" style="width: 80%;" />
+</a>
+<p>Let’s look at the data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;_id&quot;</span><span class="p">:</span> <span class="s2">&quot;663c54bbeba88ab288f3bd3d&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End Of The Century Party&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;This will be even more fun than last time!&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;eventDate&quot;</span><span class="p">:</span> <span class="s2">&quot;2099-12-31T00:00:00.000Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_updated&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T09:38:22.027Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;_created&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T04:44:43.030Z&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;venue&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Grand Theater&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;123 Grand Avenue&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone&quot;</span><span class="p">:</span> <span class="s2">&quot;123 456 7890&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;_last_unique_integer&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s2">&quot;ticketTypes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VIP Ticket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;The best seats in the house!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;benefits&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Front Row Seat&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Guaranteed unobstructed view.&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;_psckey&quot;</span><span class="p">:</span> <span class="s2">&quot;ft&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;_sdkey&quot;</span><span class="p">:</span> <span class="s2">&quot;5&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Panda Plushie&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Cute and cuddly&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+            <span class="s2">&quot;_psckey&quot;</span><span class="p">:</span> <span class="s2">&quot;gt&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;_sdkey&quot;</span><span class="p">:</span> <span class="s2">&quot;6&quot;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;General Admission&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Everyone is welcome!&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">100</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Student Ticket&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Take a break from the books&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="s2">&quot;ticketsTotal&quot;</span><span class="p">:</span> <span class="mi">50</span>
+    <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;tickets&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Fred&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;ticketTypeKey&quot;</span><span class="p">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;issued&quot;</span><span class="p">:</span> <span class="s2">&quot;2024-05-09T08:56:25.171Z&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;_sdkey&quot;</span><span class="p">:</span> <span class="s2">&quot;4&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The “VIP Ticket” subdocument in the <em>tickets</em> dictionary now has a <em>benefits</em>
+list containing two subdocuments of its own. <code class="xref py py-mod docutils literal notranslate"><span class="pre">mongo_objects</span></code> proxy objects
+support nesting as many levels as you like and in any order. In this case,
+a <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoListProxy</span></code> is nested within a <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoDictProxy</span></code>.</p>
+<p>The method <code class="xref py py-meth docutils literal notranslate"><span class="pre">MongoUserDict.id()</span></code> builds IDs for nested proxies and the
+class method <code class="xref py py-meth docutils literal notranslate"><span class="pre">MongoUserDict.load_proxy_by_id()</span></code> loads nested proxies.
+This functionality is used to implement <code class="xref py py-meth docutils literal notranslate"><span class="pre">Event.loadBenefitById()</span></code>.</p>
+<p>If you update the Front Row Seat feature added above, you’ll see an example
+of a nested proxy ID in the URL, for example,
+<code class="docutils literal notranslate"><span class="pre">http://127.0.0.1:5000/admin-update-feature/663c54bbeba88ab288f3bd3dg1g5</span></code>.</p>
+<p>Notice that each subdocument has a <em>_psckey</em> value that matches the
+<em>proxy_subclass_key</em> value of the <code class="xref py py-class docutils literal notranslate"><span class="pre">Benefit</span></code> subclass to be
+instantiated for that particular subdocument.</p>
+<p>There’s an important distinction to observe when calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_proxies()</span></code>
+for polymorphic proxies:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If you call the base class, you will get all proxies in the container,
+each with the correct class. In the example above <code class="docutils literal notranslate"><span class="pre">Benefit.get_proxies()</span></code>
+will return a list with two objects, one <code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code> and one
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Gift</span></code>.</p></li>
+<li><p>If you call a subclass, you will only get proxies of that type. For example,
+<code class="docutils literal notranslate"><span class="pre">Feature.get_proxies()</span></code> will return a list containing a single
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Feature</span></code> object containing the Front Row Seat subdocument.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="that-s-a-wrap">
+<h2>That’s A Wrap<a class="headerlink" href="#that-s-a-wrap" title="Link to this heading">¶</a></h2>
+<p>Take a closer look at the <code class="xref py py-mod docutils literal notranslate"><span class="pre">sample/mongo_objects_sample.py</span></code> to see the
+interplay between <code class="xref py py-class docutils literal notranslate"><span class="pre">MongoUserDict</span></code> parent documents and the three
+subdocument proxy types.</p>
+<p>Observe some commong coding patterns. For example, since proxy objects can
+only exist after the parent document is loaded, proxy loading methods like
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">loadBenefitById()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">loadTicketTypeById()</span></code> and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">loadVenueById()</span></code> are usually class methods of the parent document class
+<code class="xref py py-class docutils literal notranslate"><span class="pre">Event</span></code>.</p>
+<p>Likewise, proxy creation method like <code class="xref py py-meth docutils literal notranslate"><span class="pre">getTicket()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">getTickets()</span></code>,
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">getTicketsByType()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">getTicketType()</span></code>, <code class="xref py py-meth docutils literal notranslate"><span class="pre">getTicketTypes()</span></code> and
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">getVenue()</span></code> are placed in the parent document class as well.</p>
+<p>Refer to the rest of the documentation for information on other features like
+<code class="xref py py-class docutils literal notranslate"><span class="pre">PolymorphicMongoUserDict</span></code> polymorphic documents.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">mongo_objects</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample Application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#starting-the-sample-application">Starting The Sample Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#application-overview">Application Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mongouserdict-scheduling-an-event">MongoUserDict: Scheduling An Event</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mongosingleproxy-adding-a-venue">MongoSingleProxy: Adding A Venue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mongodictproxy-defining-ticket-types">MongoDictProxy: Defining Ticket Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mongolistproxy-selling-tickets">MongoListProxy: Selling Tickets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#polymorphicmongodictproxy-ticket-benefits">PolymorphicMongoDictProxy: Ticket Benefits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#that-s-a-wrap">That’s A Wrap</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MongoUserDict.html">MongoUserDict</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="proxy_overview.html">Proxy Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MongoDictProxy.html">MongoDictProxy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MongoListProxy.html">MongoListProxy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MongoSingleProxy.html">MongoSingleProxy</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">Quickstart</a></li>
+      <li>Next: <a href="MongoUserDict.html" title="next chapter">MongoUserDict</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Jonathan Lindstrom.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/sample.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
