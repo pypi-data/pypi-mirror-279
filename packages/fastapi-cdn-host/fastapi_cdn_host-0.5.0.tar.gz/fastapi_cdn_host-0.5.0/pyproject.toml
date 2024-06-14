@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "fastapi-cdn-host"
+version = "0.5.0"
+description = ""
+authors = ["Waket Zheng <waketzheng@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = {version = ">=0.100"}
+httpx = {version = ">=0.23"}
+fastapi-cli = {version = "^0.0.4", optional = true}
+
+[tool.poetry.extras]
+all = ["fastapi-cli"]
+
+[tool.poetry.group.dev.dependencies]
+fast-dev-cli = {extras = ["all"], version=">=0.7.0", python=">=3.11"}
+pre-commit = {version=">=3.7.0", python=">=3.11"}
+asyncur = {version=">=0.5.0", python=">=3.11"}
+bandit = "^1.7.9"
+ruff = "^0.4.8"
+mypy = "^1.10.0"
+pytest = "^8.2.2"
+coverage = "^7.5.3"
+click = "^8.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.mypy]
+pretty = true
+ignore_missing_imports = true
+explicit_package_bases = true
+check_untyped_defs = true
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.lint.per-file-ignores]
+"test_*.py" = ["E501"]
+"examples/main.py" = ["I001"]
+
+[tool.coverage.run]
+branch = true
+parallel=true
+source = ["fastapi_cdn_host"]
+[tool.coverage.report]
+omit = ["*/tests/*", "test_*"]
+exclude_lines = [
+    "pragma: no cover",
+    "@overload",
+    'if __name__ == "__main__":',
+    "if TYPE_CHECKING:",
+]
+
+[tool.poetry.scripts]
+fastcdn = "fastapi_cdn_host:cli.main"
+
+[tool.bandit]
+exclude_dirs = ["tests", "fastapi_cdn_host/cli.py"]
