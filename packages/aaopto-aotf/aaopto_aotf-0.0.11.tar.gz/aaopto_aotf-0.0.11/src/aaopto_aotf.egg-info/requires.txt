@@ -1,0 +1,17 @@
+pyserial
+parse
+
+[dev]
+matplotlib
+numpy
+thorlabs-apt
+tqdm
+black
+coverage
+flake8
+interrogate
+isort
+Sphinx
+enum-tools[sphinx]
+pygit2
+furo
