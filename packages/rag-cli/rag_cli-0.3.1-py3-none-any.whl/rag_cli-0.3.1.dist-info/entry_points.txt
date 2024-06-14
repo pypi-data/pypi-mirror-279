@@ -1,0 +1,3 @@
+[console_scripts]
+rag-cli=rag_cli.main:main
+
