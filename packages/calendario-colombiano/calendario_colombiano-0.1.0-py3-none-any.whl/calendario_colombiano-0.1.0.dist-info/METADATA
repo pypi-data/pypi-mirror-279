@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: calendario-colombiano
+Version: 0.1.0
+Summary: Biblioteca para manejar el calendario colombiano con festivos y fechas especiales
+Home-page: https://github.com/MarkSerna/calendario_colombiano
+Author: Marco Eduar Serna Lopez
+Author-email: marcoesernal@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Calendario Colombiano
+
+
+La biblioteca calendario_colombiano proporciona funcionalidades para manejar los festivos y fechas especiales en Colombia.
+
+# InstalaciÃ³n
+
+### Puedes instalar la biblioteca usando pip:
+
+`pip install calendario_colombiano`
+
+
+### Uso
+
+A continuaciÃ³n se muestra un ejemplo bÃ¡sico de cÃ³mo utilizar la biblioteca:
+
+`Python`
+
+```from calendario_colombiano.calendario import CalendarioColombiano
+from datetime import date
+
+calendario = CalendarioColombiano()
+
+# Verificar si una fecha es festivo
+fecha = date(2024, 1, 1)
+es_festivo = calendario.es_festivo(fecha)
+print(f"Â¿{fecha} es festivo en Colombia? {es_festivo}")
+
+# Obtener los festivos de un aÃ±o especÃ­fico
+festivos_2024 = calendario.obtener_festivos(2024)
+print(f"Festivos en Colombia para el aÃ±o 2024: {festivos_2024}")
+
+# Obtener el prÃ³ximo festivo
+proximo_festivo = calendario.proximo_festivo(date.today())
+print(f"El prÃ³ximo festivo es: {proximo_festivo}")
+```
+
+### Contribuir
+
+- Clona el repositorio (git clone https://github.com/MarkSerna/calendario_colombiano.git)
+- Crea tu rama de caracterÃ­sticas (git checkout -b mi-caracteristica)
+- Realiza tus cambios
+- Haz commit de tus cambios (git commit -am 'AÃ±adir nueva caracteristica')
+- Sube tus cambios (git push origin mi-caracteristica)
+- Abre un Pull Request
+
+### Licencia
+
+Este proyecto estÃ¡ bajo la Licencia MIT - ver el archivo [LICENSE](https://github.com/MarkSerna/calendario_colombiano/blob/main/LICENSE) para mÃ¡s detalles.
+
+
+### Contacto
+
+Si tienes preguntas o sugerencias, no dudes en contactarme a travÃ©s de mi perfil de GitHub @MarkSerna.
