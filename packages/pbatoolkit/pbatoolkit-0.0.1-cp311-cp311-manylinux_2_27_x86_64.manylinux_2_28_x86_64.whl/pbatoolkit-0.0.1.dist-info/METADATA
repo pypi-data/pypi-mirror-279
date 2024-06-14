@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pbatoolkit
+Version: 0.0.1
+Summary: Physics Based Animation Toolkit
+Author-Email: Quoc-Minh Ton-That <tonthat.quocminh@gmail.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Homepage, https://github.com/Q-Minh/PhysicsBasedAnimationToolkit
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Physics Based Animation Toolkit
