@@ -1,0 +1,16 @@
+pyskani/__init__.py,sha256=vGoGFV5clwTZcn1-MqG2957TLT22WfJq9yGljLoj2gU,846
+pyskani/_skani.pyi,sha256=Yu60BO0oimoXOSbLP-0HPTuwiegIFUFHAUsefLNV3EA,1805
+pyskani/_skani.pypy37-pp73-win_amd64.pyd,sha256=WGu0I_Hz_ZZrITLPp1vqNaQ_PZB6is2DsrONxi1gi4g,1622528
+pyskani/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyskani/tests/__init__.py,sha256=N52hp5rl9Sm7279IlLxWB_m-ddLjovMNTAcTMTx-xVk,236
+pyskani/tests/e.coli-EC590.fasta.gz,sha256=8hnWWZuPOZv4cXDauFiUvo5Yx2wzqr1lC5fsHHS68mk,1414238
+pyskani/tests/e.coli-K12.fasta.gz,sha256=ZAg8wU4QV63J_7qoSA2qewDgQDbprYm3HNxUXnuDEV0,1424962
+pyskani/tests/fasta.py,sha256=AaihOy8vK5G2xdtXhcpzVEMG9hvMs0z1Dg0CrqYL2RA,818
+pyskani/tests/test_ani.py,sha256=AX1n759XgAW8rdX75r9lh-hIF3d4fT7g8lNbFRjE710,2608
+pyskani/tests/test_database.py,sha256=JKCGOP55fuNGGaZxjbGOEn9KNjuRaqPt-LVU_EF1OW8,903
+pyskani-0.1.2.dist-info/COPYING,sha256=u3AJnAgbORL5hPBV1xP3IPCcWScT-loT_bfDk0yTcmM,1124
+pyskani-0.1.2.dist-info/METADATA,sha256=YVIy8LiU8f28EKajuG8Y_YFwHY0IClKuB-XDtbMjL4c,9764
+pyskani-0.1.2.dist-info/WHEEL,sha256=ML1L0FmYwxoYoLdb_Zqc0Tz4DrTT8EH0fLp885A_zI0,107
+pyskani-0.1.2.dist-info/top_level.txt,sha256=nxYXGGwovUf4iDmdOGcd3tr9aZbQ5x63ccAjl218J_Y,8
+pyskani-0.1.2.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyskani-0.1.2.dist-info/RECORD,,
