@@ -1,0 +1,17 @@
+meshzoo/__init__.py,sha256=Vf5Xt-wrCUUrODZ4OXFZizmtJM5l7YZlg4xlhmt9DWI,956
+meshzoo/_ball.py,sha256=2G11qNgK0_bqNVYpElwSYJzfcU7NE4LiGg0atPrQ-t8,1261
+meshzoo/_cube.py,sha256=hrY31dzboZp6cMyUXt6GctUZyF63JypXmteDPwrBWKk,5189
+meshzoo/_disk.py,sha256=VgGoMsNLU4OvGqPos7vhGYsKtS9S5XCQ7botcF2ibKM,1922
+meshzoo/_helpers.py,sha256=o6I9EVe3NEQleBEIdgZIa2IQ17qoxvlzaDY0dGNgg14,9554
+meshzoo/_license_validation.py,sha256=kNeyvuBzDQAM2X-7NzpOkWjc-ksS6DHbkxYvAJQm9bc,774
+meshzoo/_moebius.py,sha256=xtIZZ8qqNvYFREgqvVxVF8zIeRgMsNsHugP3hEattlo,4520
+meshzoo/_ngon.py,sha256=2oQA9bxSkROQaDbwmH_Dsqu02nB8EZu2OM0bO62RnsM,446
+meshzoo/_platonic.py,sha256=ekBTj8PQEvidQQoepz2ikaS0qZbzH67sjoqUW3CKS2c,3503
+meshzoo/_rectangle.py,sha256=TRoLPYzI3NHn_qUMUJjx_qCt5kteb2bH_KBRtyG49Yw,6507
+meshzoo/_sphere.py,sha256=FasO9L-qyC8a4YGCj5yYAiBlaycB4oJ9OeVJAuoSVSM,5694
+meshzoo/_triangle.py,sha256=lHd02_f5uV-nMEvcyd2-MYrirASkr3V-wlIZ4eVElhA,1264
+meshzoo/_tube.py,sha256=d8Cx7sEFU9yckqfSL69Wf5FQWXxfCGYjglZGfnalsoU,1436
+meshzoo-0.11.6.dist-info/METADATA,sha256=287QTWdbkL9G60o-k4oQo4EYjBki_zKKN1bdm3Kyo4c,9727
+meshzoo-0.11.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+meshzoo-0.11.6.dist-info/top_level.txt,sha256=3MQgrkflozw8YGKw0-x0SoMNrbhmNRZV5UkzolWbJTo,8
+meshzoo-0.11.6.dist-info/RECORD,,
