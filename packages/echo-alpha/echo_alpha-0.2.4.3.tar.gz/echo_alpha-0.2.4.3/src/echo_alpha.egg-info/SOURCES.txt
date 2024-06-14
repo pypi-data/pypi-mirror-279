@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/echo_alpha/__init__.py
+src/echo_alpha/echo_alpha.py
+src/echo_alpha.egg-info/PKG-INFO
+src/echo_alpha.egg-info/SOURCES.txt
+src/echo_alpha.egg-info/dependency_links.txt
+src/echo_alpha.egg-info/requires.txt
+src/echo_alpha.egg-info/top_level.txt
