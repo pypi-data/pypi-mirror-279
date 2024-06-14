@@ -1,0 +1,12 @@
+LICENCE
+README.md
+setup.py
+simplemath_leonardosantosdev/__init__.py
+simplemath_leonardosantosdev/__main__.py
+simplemath_leonardosantosdev/arithmetic.py
+simplemath_leonardosantosdev/cli_opts.py
+simplemath_leonardosantosdev.egg-info/PKG-INFO
+simplemath_leonardosantosdev.egg-info/SOURCES.txt
+simplemath_leonardosantosdev.egg-info/dependency_links.txt
+simplemath_leonardosantosdev.egg-info/entry_points.txt
+simplemath_leonardosantosdev.egg-info/top_level.txt
