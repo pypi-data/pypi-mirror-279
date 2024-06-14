@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: youqu3-boom
+Version: 2024.6.13
+Summary: youqu3-boom
+Author-email: mikigo <huangmingqiang@uniontech.com>
+License: GPL2.0
+License-File: LICENSE
+Requires-Python: >=3.7
+Requires-Dist: pipenv
+Description-Content-Type: text/markdown
+
+# youqu3-boom
+安装 YouQu3 虚拟环境
