@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: nrtk
+Version: 0.7.0
+Summary: An open source toolkit for evaluating the natural robustness of computer vision algorithms.
+License: Apache-2.0
+Author: Kitware, Inc.
+Author-email: nrtk@kitware.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: Pillow (>=10.3.0)
+Requires-Dist: numpy (>=1.22,<1.25) ; python_version >= "3.8" and python_version < "3.9"
+Requires-Dist: numpy (>=1.25,<2.0) ; python_version >= "3.9" and python_version < "3.12"
+Requires-Dist: numpy (>=1.26,<2.0) ; python_version >= "3.12" and python_version < "3.13"
+Requires-Dist: opencv-python (>=4.6)
+Requires-Dist: pybsm (>=0.4.3)
+Requires-Dist: pycocotools (>=2.0.6)
+Requires-Dist: scikit-image (>=0.21,<0.22) ; python_version >= "3.8" and python_version < "3.12"
+Requires-Dist: scikit-image (>=0.22) ; python_version >= "3.12"
+Requires-Dist: setuptools (>=65.6.1)
+Requires-Dist: smqtk-classifier (>=0.19.0)
+Requires-Dist: smqtk-core (>=0.19)
+Requires-Dist: smqtk-detection (>=0.19.0)
+Requires-Dist: smqtk-image-io (>=0.17.1)
+Requires-Dist: tqdm (>=4.64)
+Project-URL: Documentation, https://nrtk.readthedocs.io/
+Description-Content-Type: text/markdown
+
+# Natural Robustness Toolkit (NRTK)
+
+## Description
+The `nrtk` package is an open source toolkit for evaluating the natural robustness of computer vision
+algorithms to various perturbations, including sensor-specific changes to camera focal length, aperture
+diameter, etc. Functionality is provided through [Strategy](https://en.wikipedia.org/wiki/Strategy_pattern) and [Adapter](https://en.wikipedia.org/wiki/Adapter_pattern) patterns to allow for modular integration
+into systems and applications.
+
+## Installation
+The following steps assume the source tree has been acquired locally.
+
+Install the current version via pip:
+```bash
+pip install nrtk
+```
+
+Alternatively, you can also use [Poetry](https://python-poetry.org/):
+```bash
+poetry install
+```
+
+See [here for more installation documentation](
+https://nrtk.readthedocs.io/en/latest/installation.html).
+
+## Getting Started
+We provide a number of examples based on Jupyter notebooks in the `./examples/` directory to show usage
+of the `nrtk` package in a number of different contexts.
+
+## Documentation
+Documentation snapshots for releases as well as the latest master are hosted on
+[ReadTheDocs](https://nrtk.readthedocs.io/en/latest/).
+
+The sphinx-based documentation may also be built locally for the most
+up-to-date reference:
+```bash
+# Install dependencies
+poetry install
+# Navigate to the documentation root.
+cd docs
+# Build the docs.
+poetry run make html
+# Open in your favorite browser!
+firefox _build/html/index.html
+```
+
+## Contributing
+- We follow the general guidelines outlined in the
+[JATIC Software Development Plan](https://gitlab.jatic.net/jatic/docs/sdp/-/blob/main/Branch,%20Merge,%20Release%20Strategy.md).
+- We use the Git Flow branching strategy.
+- See [docs/release_process.rst](./docs/release_process.rst) for detailed release information.
+- See [CONTRIBUTING.md](./CONTRIBUTING.md) for additional contributing information.
+
+## License
+Apache 2.0
+
+**POC**: Brian Hu @brian.hu
+**DPOC**: Brandon RichardWebster @b.richardwebster
+
