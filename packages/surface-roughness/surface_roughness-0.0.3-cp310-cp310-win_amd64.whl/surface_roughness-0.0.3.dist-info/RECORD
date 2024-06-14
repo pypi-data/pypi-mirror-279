@@ -1,0 +1,16 @@
+surface_roughness/__init__.py,sha256=-JIlqCbvJHO8epnEsZHyk1ksgY2Dfs7ut7Re6n4vb_s,155
+surface_roughness/_geometry_utils.py,sha256=fWqol1W0olCSTeFLzj1uLaIPnPfpz40ACqUzeOXqzkM,7874
+surface_roughness/_profile.py,sha256=0B1C9HKIbEnrL4gMEOge-IZDx-1FTHNGNFHMQS-RJI4,5484
+surface_roughness/_roughness_cppimpl.cp310-win_amd64.pyd,sha256=TAZiaZp9cQG6SvZlex4fMNVWxak2MgoLLp6AP1OueSc,477184
+surface_roughness/_sampling_utils.py,sha256=hiyMM_eih7_85rnHt9WkIGrKAXZj0OEni10P1OQKLIc,6704
+surface_roughness/roughness.py,sha256=GB88lOwaZBIxLJQNN1aOl0Qk02miRzs5rzbz2p3u71Q,18116
+surface_roughness/roughness_impl.py,sha256=tes15tTYi4IXSQkWFr0k9-LjYZgLKeoMd5YgIhz71wk,7822
+surface_roughness/sampling.py,sha256=3QckqVMsltH5vSzsbzKBs0V73wU0A7SuJBSa_WlSaY4,35415
+surface_roughness/_roughness_pyimpl/_DirectionalRoughness.py,sha256=2vjxbXjmZeYyc9qPPbk5s2ZyfYSRU-kRgld89g1Kai0,3653
+surface_roughness/_roughness_pyimpl/_TINBasedRoughness.py,sha256=6jp2h4NsTve_fuYVmwGZHKUdbj108iMPTl17YPZ4cNE,2674
+surface_roughness/_roughness_pyimpl/__init__.py,sha256=Gc1zum9M1iP_DoP9140pDTw9hvQzpFAm1FwSzXYM4Ys,188
+surface_roughness-0.0.3.dist-info/LICENSE,sha256=eETkJIUNIxRUJ9hG2pNTqysHirIKtvNqoLZyrf9xnrU,1091
+surface_roughness-0.0.3.dist-info/METADATA,sha256=bYa0rUijVvSY0FyzpBNa-zyQ7H81ToCQLe1-d7JFWVw,3179
+surface_roughness-0.0.3.dist-info/WHEEL,sha256=lO6CqtLHCAi38X3Es1a4R1lAjZFvN010IMRCFo2S7Mc,102
+surface_roughness-0.0.3.dist-info/top_level.txt,sha256=HmNWndzp3cmPWWaFodLiojooc81YXzd0J9mBGf7NZHQ,18
+surface_roughness-0.0.3.dist-info/RECORD,,
