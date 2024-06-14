@@ -1,0 +1,11 @@
+matplotlib
+pymatgen
+pyfiglet
+requests
+filecmp
+plotly
+scipy
+numpy
+json
+uuid
+vasprocar
