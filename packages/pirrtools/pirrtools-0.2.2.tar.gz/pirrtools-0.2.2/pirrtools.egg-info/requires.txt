@@ -1,0 +1,13 @@
+pandas
+numpy
+feather-format
+ipython
+
+[dev]
+pytest
+pytest-cov
+build
+twine
+black
+pre-commit
+pylint
