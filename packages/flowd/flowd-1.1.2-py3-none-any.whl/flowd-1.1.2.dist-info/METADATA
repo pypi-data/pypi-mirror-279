@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: flowd
+Version: 1.1.2
+Summary: Flow and Packet Marking Service
+Home-page: https://github.com/scitags/flowd
+Download-URL: https://github.com/scitags/flowd/archive/refs/tags/1.1.2.tar.gz
+Author: Marian Babik <Marian.Babik@cern.ch>, Tristan Sullivan <tssulliv@uvic.ca>
+Author-email: <net-wg-dev@cern.ch>
+License: ASL 2.0
+Keywords: operations python network flow packet marking
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.5
+License-File: LICENSE
+Requires-Dist: psutil
+Requires-Dist: requests
+Requires-Dist: prometheus-client
+
+
+Flow and Packet Marking Service (flowd) implementation based on the SciTags specification (www.scitags.org).
