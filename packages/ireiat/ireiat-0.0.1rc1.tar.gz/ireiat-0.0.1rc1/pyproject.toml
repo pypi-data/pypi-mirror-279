@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ireiat"
+version = "v0.0.1rc1"
+authors = [
+  { name="Nick Padon", email="nicholas.padon@oliverwyman.com" },
+  { name="Marc Meketon", email="marc.meketon@oliverwyman.com" },
+]
+description = "Intermodal Routing and Environmental Impact Analysis Tool"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["intermodal","algorithm b","ireiat","transportation"]
+requires-python = ">=3.11"
+dependencies = [
+    "click",
+    "igraph",
+    "matplotlib",
+    "tqdm",
+    "requests",
+    "pandas",
+    "pyyaml",
+    "pyproj",
+    "dagster",
+    "dagster-webserver",
+    "pyogrio",
+    "geopandas",
+    "scikit-learn"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.black]
+line-length = 100
+
+[tool.dagster]
+module_name = "ireiat.data_pipeline"
+
+[project.scripts]
+ireiat = "ireiat.run:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.r"] # bundle all R files in the distributed package
+
+[project.urls]
+"Source" = "https://github.com/owg-digital/ireiat"
