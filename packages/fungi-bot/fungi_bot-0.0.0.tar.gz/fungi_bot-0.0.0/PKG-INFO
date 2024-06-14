@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: fungi-bot
+Version: 0.0.0
+Summary: Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free.
+License: MIT
+Author: Adam Garza
+Author-email: 168875175+hyerland@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: discord-py (>=2.3.2,<3.0.0)
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Fungi 🍄
+
+Self-hosted discord bot with an extensive configuration file to fit any servers need, all for free.
+
