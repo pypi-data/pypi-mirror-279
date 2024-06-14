@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sqlagent"
+version = "0.1.0"
+description = "SQL agent, query your database"
+authors = ["vikyw89 <vikyw89@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+llama-index = "^0.10.44"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+publish = "scripts.publish:run"
