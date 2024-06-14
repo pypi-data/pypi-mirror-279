@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: pydeck-grid
+Version: 0.4.4
+Summary: Pydeck layers for gridded data
+Home-page: https://github.com/oceanum-io/pydeck_grid
+Author: Oceanum Developers
+Author-email: developers@oceanum.science
+License: MIT license
+Keywords: pydeck gridded xarray
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: pydeck
+Requires-Dist: xarray
+Requires-Dist: orjson
+Requires-Dist: matplotlib
+
+===========
+pydeck-grid
+===========
+
+
+.. image:: https://img.shields.io/pypi/v/pydeck_grid.svg
+        :target: https://pypi.python.org/pypi/pydeck_grid
+
+.. image:: https://img.shields.io/travis/oceanum-io/pydeck_grid.svg
+        :target: https://travis-ci.org/oceanum-io/pydeck_grid
+
+.. image:: https://readthedocs.org/projects/pydeck-grid/badge/?version=latest
+        :target: https://pydeck-grid.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+Pydeck layers for gridded data
+
+
+* Free software: MIT license
+* Documentation: https://pydeck-grid.readthedocs.io.
+
+
+Features
+--------
+
+* Pydeck layers for gridded data
+* Layers for pcolor, vector particle flows, image overlays and contours
+* Use xarray datasets as input data
+
+
+
+=======
+History
+=======
+
+0.1.0 (2023-04-20)
+------------------
+
+* First release on PyPI.
+
+
+0.1.2 (2023-05-01)
+------------------
+
+* Revise docs
