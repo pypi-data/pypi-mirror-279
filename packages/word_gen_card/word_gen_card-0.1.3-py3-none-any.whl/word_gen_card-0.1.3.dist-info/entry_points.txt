@@ -1,0 +1,3 @@
+[console_scripts]
+card_cli = word_gen_card.cli:main
+
