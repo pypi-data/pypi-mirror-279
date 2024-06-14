@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: libmav
+Version: 0.0.6
+Summary: A library for the MAVLink protocol
+Author: Auterion
+Author-email: success@auterion.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+
+# Libmav Python
+
+Native python bindings for the [libmav](https://github.com/Auterion/libmav) library.
+libmav-python is a runtime defined low-level MAVLink library. 
+
+In comparison to other python MAVLink libaries, it has certain advantages:
+
+- **Runtime defined message set.** No need to recompile on message set change or custom messages
+- **Implemented in C++.** Much faster than pure python
+- **Simple, pythonic API.** No need to learn a new API or asyncio, just use python
+
+
+## Installation
+
+```
+pip install libmav
+```
+
+## Example usage
+
+```python
+import libmav
+
+# Create a message set from a mavlink xml file
+message_set = libmav.MessageSet('<PATH TO common.xml>')
+# You can also add additional messages here with inline xml
+message_set.add_from_xml_string('''
+<mavlink>
+    <messages>
+        <message>
+            ...
+        </message>
+    </messages>
+</mavlink>''')
+
+# Create a message from the message set
+message = message_set.create('MY_PROTOCOL_MESSAGE')
+
+# Set fields of the message individually
+message['my_numeric_field'] = 1
+message['my_char_array_field'] = 'Hello world'
+message['my_float_array_field'] = [1.0, 2.0, 3.0]
+message['my_int_array_field'] = [4, 5, 6]
+
+# Get fields individually
+my_num = message['my_numeric_field']
+my_string = message['my_char_array_field']
+my_float_array_field = message['my_float_array_field']
+
+# You can also use pythonic things like list comprehensions
+    # This creates a list of all the values in my_float_array_field multiplied by 2
+my_float_array_field = [x * 2 for x in message['my_float_array_field']]
+
+# Set fields from a dict
+message.set_from_dict({
+            'my_numeric_field': 1,
+            'my_char_array_field': 'Hello world',
+            'my_float_array_field': [1.0, 2.0, 3.0],
+            'my_int_array_field': [4, 5, 6]
+        })
+
+
+# Get fields as python dict
+message_dict = message.to_dict()
+
+
+# Connect to a TCP server
+conn_physical = libmav.TCPClient('192.168.1.12', 14550)
+conn_runtime = libmav.NetworkRuntime(self.message_set, heartbeat, conn_physical)
+
+connection = conn_runtime.await_connection(2000)
+
+# Check if connection is still alive
+if not connection.alive():
+    print('Connection lost, waiting for reconnect...')
+    connection = conn_runtime.await_connection(2000)
+
+# Send a message
+connection.send(message)
+
+# Receive a message, timeout 1s
+received_message = connection.receive("HEARTBEAT", 1000)
+
+# Receive a message, no timeout
+received_message = connection.receive("HEARTBEAT")
+
+# Receive a message as the result of a message we send
+# This avoids the race condition between us sending and then waiting for reception
+expectation = connection.expect("PARAM_VALUE")
+connection.send(our_param_request_message)
+received_message = connection.receive(expectation, 1000)
+
+
+# Connect to a Serial port
+conn_physical = libmav.Serial('/dev/ttyUSB0')
+conn_runtime = libmav.NetworkRuntime(self.message_set, heartbeat, conn_physical)
+
+```
+
+⚠️ **Note:** The network runtime object and the physical interface object must be kept
+scope for the duration of the connection. Otherwise, the connection will not have
+a valid underlying network and will crash.
+
+## Install from source
+
+### Prerequisites
+
+* A compiler with C++11 support
+* Pip 10+ or CMake >= 3.4 (or 3.14+ on Windows, which was the first version to support VS 2019)
+* Ninja or Pip 10+
+
+Just clone this repository and pip install. Note the `--recursive` option which is
+needed for the pybind11 submodule:
+
+```bash
+git clone --recursive https://github.com/Auterion/libmav-python.git
+pip install ./libmav-python
+```
+
+With the `setup.py` file included in this project, the `pip install` command will
+invoke CMake and build the pybind11 module as specified in `CMakeLists.txt`.
