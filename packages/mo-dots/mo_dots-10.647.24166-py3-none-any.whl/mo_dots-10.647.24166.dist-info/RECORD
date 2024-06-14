@@ -1,0 +1,13 @@
+mo_dots/__init__.py,sha256=rNjPDXOpjWd2MBgwbA6v_bT3zGI20KWG870PKH4dc-k,14122
+mo_dots/datas.py,sha256=G4ELHIdzBDnn8JiYKZag_w1yVqx1DT9nlBhjxYFANmk,15005
+mo_dots/fields.py,sha256=lNg6bQ8b8bivBNKCJ2t1B-ERgwQXcKAnuHDEsqUdrO0,4364
+mo_dots/lists.py,sha256=1_K2Mw0oAfkxUPFNOubroGaCDcIzJqaaEO7OzgFGCE8,8764
+mo_dots/logging.py,sha256=Hr2f2yDP5YzlmUikix2Ioqip4bVxNUCR-WZFYBEuhsM,1081
+mo_dots/nones.py,sha256=d5QAV_DeB2RCJyOVX1YxJYWnm4fCwf6HfOaolMPp9Zc,6516
+mo_dots/objects.py,sha256=lZu9NM8BGmlDVii9-ze11Z8kjFabMahKS_8fU8vsBD8,5555
+mo_dots/utils.py,sha256=wvaLt5u8r_l2PeCv9T4fh5IRI70zHbh_i81UJNBmN0k,5009
+mo_dots-10.647.24166.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+mo_dots-10.647.24166.dist-info/METADATA,sha256=kkDfpk7MDxO4USXBf0Bp7sDADeaN6x7r9sOwUoFTGss,4905
+mo_dots-10.647.24166.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mo_dots-10.647.24166.dist-info/top_level.txt,sha256=otaaJmbqCvSHQ1mPuoMfkISlxeZG8TssnVbWZp-DBWg,8
+mo_dots-10.647.24166.dist-info/RECORD,,
