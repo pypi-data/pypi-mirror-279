@@ -1,0 +1,123 @@
+Metadata-Version: 2.1
+Name: twiner
+Version: 0.4.1
+Summary: CLI that helps you with notifications for your favorite streamers on Twitch.tv.
+Author: febits
+Author-email: febits@proton.me
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: dbus-python (>=1.3.2,<2.0.0)
+Requires-Dist: plyer (>=2.1.0,<3.0.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: rich (>=13.7.0,<14.0.0)
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Requires-Dist: wget (>=3.2,<4.0)
+Project-URL: Homepage, https://pypi.org/project/twiner
+Project-URL: Source, https://github.com/febits/twiner
+Description-Content-Type: text/markdown
+
+# Twiner
+
+Twiner (Twitch Notifier) is a CLI tool designed to assist people with notification support for their favorite streamers, prioritizing simplicity and ease of use.
+
+Features:
+
+- Add a user from Twitch to the notification pool.
+- Remove a user from the notification pool.
+- Twitch credentials stuff made easy.
+- Beautiful, pretty and fancy display.
+
+## Installation
+
+It's possible to install `twiner` via PyPI with pip as shown bellow:
+```bash
+pip install twiner
+```
+
+## Usage
+
+Try what is bellow to receive a general view of how twiner works:
+```bash
+twiner --help
+```
+
+```bash
+                                                                                                                                                    
+ Usage: twiner [OPTIONS] COMMAND [ARGS]...                                                                                                          
+                                                                                                                                                    
+ 🎮 Twiner CLI (Twitch Notifier)                                                                                                                    
+                                                                                                                                                    
+╭─ Options ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ --version             -v,-V        Show the current version.                                                                                     │
+│ --install-completion               Install completion for the current shell.                                                                     │
+│ --show-completion                  Show completion for the current shell, to copy it or customize the installation.                              │
+│ --help                             Show this message and exit.                                                                                   │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭─ Commands ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ add         Add a user to the notification pool.                                                                                                 │
+│ configure   Configure the Twitch Credentials.                                                                                                    │
+│ init        Init the config file (it will perform a redefining action through the config file, using it exclusively for the initial setup).      │
+│ list        List the config file fields.                                                                                                         │
+│ refresh     Refresh the user profile pictures.                                                                                                   │
+│ remove      Remove a user from the notification pool.                                                                                            │
+│ start       Start the notification loop.                                                                                                         │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+```
+
+## Examples
+
+Let's suppose that you want to add your favorite stream to the notification pool. I'll exemplify that with mine (cellbit).
+
+Firstly, you need to initialize the config file:
+```bash
+twiner init
+```
+
+After that, you need to enter your Twitch credentials for the API:
+```bash
+twiner configure
+```
+
+It will be requested your `CLIENT_ID` and `CLIENT_SECRET` via stdin (user input). How do you get those credentials?
+
+Follow this: https://dev.twitch.tv/docs/authentication/register-app
+
+
+Now you are able to add a Twitch user
+```bash
+twiner add cellbit
+```
+
+You also can remove that user:
+```bash
+twiner remove cellbit
+```
+
+To start the notification loop, you need to run:
+```bash
+twiner start
+```
+
+Extras:
+
+You can list your entire config running:
+```bash
+twiner list
+```
+
+And you can refresh the user data (profile user image) running:
+```bash
+twiner refresh
+```
+
+The 'twiner refresh' above is supposed to update the profile images of your streamers added (if they updated them)
+
