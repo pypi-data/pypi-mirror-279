@@ -1,0 +1,10 @@
+LICENSE
+README.md
+picgrab.py
+setup.py
+picgrab.egg-info/PKG-INFO
+picgrab.egg-info/SOURCES.txt
+picgrab.egg-info/dependency_links.txt
+picgrab.egg-info/entry_points.txt
+picgrab.egg-info/requires.txt
+picgrab.egg-info/top_level.txt

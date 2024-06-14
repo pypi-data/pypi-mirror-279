@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: picgrab
+Version: 0.1
+Summary: A script to download images from web pages
+Home-page: https://twitter.com/Lanaev0li
+Author: Avinion
+Author-email: shizofrin@gmail.com
+License: Avinion Group
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+Requires-Dist: tqdm
+
+# picgrab
+
+**picgrab** is a script designed to download images from web pages.
+
+## Installation
+
+You can install picgrab via pip:
+
+```bash
+pip install picgrab
+
+
+
+Usage
+To use picgrab, simply run the following command in your terminal:
+
+picgrab
+
+
+
+You will be prompted to enter the URL of the web page from which you want to download images, the directory where you want to save the images, and the extension of the images you want to download (e.g., .jpg).
+
+Example
+
+picgrab
+Р’РІРµРґРёС‚Рµ URL РІРµР±-СЃС‚СЂР°РЅРёС†С‹: http://example.com
+Р’РІРµРґРёС‚Рµ РїСѓС‚СЊ РёР»Рё РЅР°Р·РІР°РЅРёРµ РїР°РїРєРё РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РёР·РѕР±СЂР°Р¶РµРЅРёР№ (РѕСЃС‚Р°РІСЊС‚Рµ РїСѓСЃС‚С‹Рј, С‡С‚РѕР±С‹ СЃРѕС…СЂР°РЅРёС‚СЊ РІ С‚РµРєСѓС‰РµР№ РґРёСЂРµРєС‚РѕСЂРёРё): images
+Р’РІРµРґРёС‚Рµ СЂР°СЃС€РёСЂРµРЅРёРµ РёР·РѕР±СЂР°Р¶РµРЅРёР№ РґР»СЏ СЃРєР°С‡РёРІР°РЅРёСЏ (РЅР°РїСЂРёРјРµСЂ, .jpg): .jpg
