@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: fastapi-simple-auth-basic
+Version: 0.0.3
+Summary: FastAPI simple authentication (basic theme)
+Project-URL: Documentation, https://github.com/yaroslaff/fastapi-simple-auth#readme
+Project-URL: Issues, https://github.com/yaroslaff/fastapi-simple-auth/issues
+Project-URL: Source, https://github.com/yaroslaff/fastapi-simple-auth
+Author-email: Yaroslav Polyakov <yaroslaff@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# default basic theme for fastapi-simple-auth
+
+## How to create/use custom theme:
+
+1. fork this repo to create your theme
+2. change content and `pyproject.toml`
+3. install your package in virtualenv with your app and [fastapi-simple-auth](https://github.com/yaroslaff/fastapi-simple-auth) with `pip3 install git+https://github.com/NAME/PACKAGE`) or install with `pip3 install -e PATH` as editable.
+3. set your theme name in `.env` file as `TEMPLATE_THEME=your_theme_package_name`
+
