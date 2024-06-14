@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyalbert
+Version: 0.4.1
+Summary: The Albert toolkit -- CLI, libraries and lexicons
+Author-email: Etalab <etalab@modernisation.gouv.fr>
+License: MIT
+Project-URL: Homepage, https://github.com/etalab-ia/albert
+Project-URL: Source, https://github.com/etalab-ia/albert
+Project-URL: Tracker, https://github.com/etalab-ia/albert/issues
+Project-URL: Documentation, https://github.com/etalab-ia/albert/tree/main/docs
+Keywords: IA,LLM
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: docopt-ng ==0.9.0
+Requires-Dist: wget ==3.2
+Requires-Dist: elasticsearch ==8.9.0
+Requires-Dist: qdrant-client ==1.5.4
+Requires-Dist: requests ==2.31.0
+Requires-Dist: beautifulsoup4 ==4.12.3
+Requires-Dist: lxml ==5.1.0
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: pandas ==2.2.1
+Requires-Dist: langchain-text-splitters ==0.0.1
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: jinja2 ==3.1.4
+Requires-Dist: lz4 ==4.3.3
+Provides-Extra: dev
+Requires-Dist: huggingface-hub ==0.23.0 ; extra == 'dev'
+Requires-Dist: prompt-toolkit ==3.0.39 ; extra == 'dev'
+
