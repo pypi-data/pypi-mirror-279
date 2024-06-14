@@ -1,0 +1,45 @@
+[build-system]
+requires = [
+    "setuptools>=43.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "objd"
+description = "objects daemon"
+version = "13"
+authors = [
+    {name = "xobjects",email = "objx@proton.me"},
+]
+readme = "README.rst"
+dependencies = [
+    "objx",
+    "objr"
+]
+license = {text="Public Domain"}
+classifiers = [ 
+    'Development Status :: 3 - Alpha',
+    'License :: Public Domain',
+    'Operating System :: Unix',
+    'Programming Language :: Python',
+    'Topic :: Utilities'
+]
+
+[project.urls]
+"home" = "https://pypi.org/project/objd"
+"bugs" = "https://github.com/xobjectz/objd/issues"
+"source" = "https://github.com/xobjectz/objd"
+
+[tool.setuptools]
+script-files = [
+    'bin/objctl',
+    'bin/objd'
+]
+packages = [
+    'objd',
+    'objd.modules'
+]
+
+
+zip-safe=true
