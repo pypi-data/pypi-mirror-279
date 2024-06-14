@@ -1,0 +1,14 @@
+high_precision_timer/precision_timer/__init__.py,sha256=3o_livXv40AeUe7vSkdCFjhTkytI8IzRcKmF8BlzynU,133
+high_precision_timer/precision_timer/__init__.pyi,sha256=mIwKiFlPo6JQG0BOUvmTU-TL77TsaQAb9FNCsBSCqH0,220
+high_precision_timer/precision_timer/timer_benchmark.py,sha256=K7iwBIo2ZRJz7We_BCkKUQWybzjgNeA_Rf00u24OF2U,10965
+high_precision_timer/precision_timer/timer_benchmark.pyi,sha256=X6eg6g0IJ9plhXPnaMQVyDbiLPg83r798fTEK33hqlo,232
+high_precision_timer/precision_timer/timer_class.py,sha256=0T_ZGz20BBqnPLDd0R9V04c12h5Q7s88nmwdOw7K4_M,8977
+high_precision_timer/precision_timer/timer_class.pyi,sha256=sY_dEibMGy2d9WrksRJlDsRQSnjjKMCev5LYeQjpnRk,651
+high_precision_timer/precision_timer/utilities.py,sha256=oMv5MShvHAYTK0QQ4bnD_SJldI9fqjv9lFVOOua7AMQ,8307
+high_precision_timer/precision_timer/utilities.pyi,sha256=3xv1R-f8aUXJ-EtMZx5NMP3sicqsUhwxZupZihmw7NY,382
+high_precision_timer/precision_timer_ext.cp311-win_amd64.pyd,sha256=oGaeerHgPqfzNNWF86464NalE3RGqaNGvB5icxTeVhE,95744
+high_precision_timer-2.0.0.dist-info/METADATA,sha256=npVaUIyf4szffLFoTyirrsxX6_uZ5VdXZ_T-ghfkSIA,52311
+high_precision_timer-2.0.0.dist-info/WHEEL,sha256=9gK-WmABffuncRVFCcITw5tl_tKQRXyZmeZVBjOI8hw,105
+high_precision_timer-2.0.0.dist-info/entry_points.txt,sha256=OBqnuCuoB3-rwheZSBRwfjyQewxWc0ywdmKQeg-LA9E,68
+high_precision_timer-2.0.0.dist-info/licenses/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+high_precision_timer-2.0.0.dist-info/RECORD,,
