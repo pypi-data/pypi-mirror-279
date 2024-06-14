@@ -1,0 +1,72 @@
+# pickledbg
+`pickledbg` is a [GDB](https://www.sourceware.org/gdb/)+[GEF](https://github.com/hugsy/gef)-style debugger, where pickles are unpacked instruction by instruction, showing the Pickle Machine state (stack, metastack, and memo) at each step. In addition, clear, extensive, and unified documentation is included for the Pickle Machine and each opcode. This documentation comes from the official source code, complete with added notes from the maintainer (me!).
+
+## Installation
+```
+$ pip install pickledbg -U
+```
+
+## Usage
+```python
+┌──(user㉿computer)-[~/pickledbg]
+└─$ pickledbg
+Usage: pickledbg.py <picklefile>
+
+┌──(user㉿computer)-[~/pickledbg]
+└─$ pickledbg examples/helloworld.pickle
+pickledbg>  help
+────────────────────────────────── pickledbg help ──────────────────────────────────
+start
+Starts the debugger, pointing to the first instruction but not executing it. Must
+only be ran once. To restart debugging, close the program and run it again. Must
+also be run before stepping through instructions.
+Aliases: run
+
+────────────────────────────────────────────────────────────────────────────────────
+ni
+Executes the next instruction and shows the updated Pickle Machine state. Must be
+ran after 'start'.
+Aliases: next
+
+────────────────────────────────────────────────────────────────────────────────────
+export
+Writes the disassembly of the pickle to a file. If no filename is specified, the
+default is 'out.disasm'.
+Syntax: export [filename]
+
+────────────────────────────────────────────────────────────────────────────────────
+help
+Shows this help menu.
+Aliases: ?
+
+────────────────────────────────────────────────────────────────────────────────────
+exit
+Exits the debugger.
+Aliases: quit
+
+────────────────────────────────────────────────────────────────────────────────────
+pickledbg>
+```
+
+(*Example of what the debug interface looks like when running.*)
+
+![](documentation.png)
+
+## Pickle Documentation
+*work in progress*
+
+## Changelog
+You can find the changelog [here](./Changelog.md).
+
+## Contributing
+If you are interesting in contributing to `pickledbg`, feel free to create an issue or make a pull request.
+
+## Related Resources
+* https://docs.python.org/3/library/pickletools.html
+    * Official tool for developers to inspect and disassemble pickles
+* https://github.com/trailofbits/fickling
+    * Pickle decompiler and static analyzer
+* https://github.com/splitline/Pickora
+    * Python module to turn Python scripts into pickles
+* https://github.com/gousaiyang/pickleassem
+    * Pickle assembler
