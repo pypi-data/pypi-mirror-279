@@ -1,0 +1,232 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "servers": [
+    {
+      "url": "https://moa.rpm.kr-dv-midasit.com/backend/function-executor/python-execute/"
+    }
+  ],
+  "paths": {
+    "/rebar_properties_design/": {
+      "post": {
+        "summary": "Rebar Properties Design",
+        "description": "Return the material properties based on the design code\n\nArgs:\n    general: general rebar properties\n    uls: rebar stress options for ULS\n    sls: rebar stress options for SLS\n\nreturn:\n    { \"ULS\": \"strain\":[0.1,2,4,4,35,], \"stress\":[0,234235,235,235,], \"SLS\": stress_strain_curve }: material properties of selected data",
+        "operationId": "rebar_properties_design_rebar_properties_design__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_rebar_properties_design_rebar_properties_design__post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/stress_strain_curve"
+                  },
+                  "type": "object",
+                  "title": "Response Rebar Properties Design Rebar Properties Design  Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_rebar_properties_design_rebar_properties_design__post": {
+        "properties": {
+          "general": {
+            "$ref": "#/components/schemas/rebar_general_properties"
+          },
+          "uls": {
+            "$ref": "#/components/schemas/rebar_stress_uls_options_ACI"
+          },
+          "sls": {
+            "$ref": "#/components/schemas/rebar_stress_sls_options"
+          }
+        },
+        "type": "object",
+        "required": [
+          "general",
+          "uls",
+          "sls"
+        ],
+        "title": "Body_rebar_properties_design_rebar_properties_design__post"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "rebar_general_properties": {
+        "properties": {
+          "strength": {
+            "type": "integer",
+            "title": "Strength",
+            "description": "Grade of the rebar",
+            "default": 420
+          },
+          "elastic_modulus": {
+            "type": "number",
+            "title": "Elastic Modulus",
+            "description": "Elastic modulus of the rebar",
+            "default": 200000
+          },
+          "density": {
+            "type": "number",
+            "title": "Density",
+            "description": "Density of the rebar",
+            "default": 7850
+          },
+          "thermal_expansion_coefficient": {
+            "type": "number",
+            "title": "Thermal Expansion Coefficient",
+            "description": "Thermal expansion coefficient of the rebar",
+            "default": 1e-05
+          },
+          "poisson_ratio": {
+            "type": "number",
+            "title": "Poisson Ratio",
+            "description": "Poisson ratio of the rebar",
+            "default": 0.3
+          }
+        },
+        "type": "object",
+        "title": "rebar_general_properties",
+        "description": "GSD rebar general properties for calculation"
+      },
+      "rebar_stress_sls_options": {
+        "properties": {
+          "material_model": {
+            "type": "string",
+            "title": "Material Model",
+            "description": "Material model for SLS",
+            "default": "Elastic-Plastic"
+          },
+          "failure_strain": {
+            "type": "number",
+            "title": "Failure Strain",
+            "default": 0.7,
+            "metadata": {
+              "default": 0.7,
+              "description": "Failure strain limit for SLS"
+            }
+          }
+        },
+        "type": "object",
+        "title": "rebar_stress_sls_options",
+        "description": "GSD rebar stress options for SLS"
+      },
+      "rebar_stress_uls_options_ACI": {
+        "properties": {
+          "material_model": {
+            "type": "string",
+            "title": "Material Model",
+            "description": "Material model for ULS",
+            "default": "Elastic-Plastic"
+          },
+          "failure_strain": {
+            "type": "number",
+            "title": "Failure Strain",
+            "description": "Failure strain limit for ULS",
+            "default": 0.7
+          }
+        },
+        "type": "object",
+        "title": "rebar_stress_uls_options_ACI",
+        "description": "GSD rebar stress options for ULS"
+      },
+      "stress_strain_curve": {
+        "properties": {
+          "HEAD": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Head"
+          },
+          "DATA": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "HEAD",
+          "DATA"
+        ],
+        "title": "stress_strain_curve"
+      }
+    }
+  }
+}
