@@ -1,0 +1,9 @@
+pymongo
+dtoolcore>=3.18.0
+dservercore
+
+[test]
+dservercore
+dserver-retrieve-plugin-mongo
+pytest
+pytest-cov
