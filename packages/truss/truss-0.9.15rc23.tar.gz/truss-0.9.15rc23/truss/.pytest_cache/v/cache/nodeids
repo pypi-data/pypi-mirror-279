@@ -1,0 +1,9 @@
+[
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[baseten/truss-server-base:3.9-v0.4.8rc4-/usr/local/bin/python3-False]",
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[python:2.7-slim-/usr/local/bin/python-True]",
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[python:3.10-/usr/local/bin/python3-False]",
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[python:3.11-/usr/local/bin/python3-False]",
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[python:3.7-slim-/usr/local/bin/python3-True]",
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[python:3.8-/usr/local/bin/python3-False]",
+  "tests/test_truss_handle.py::test_build_serving_docker_image_from_user_base_image_live_reload[python:alpine-/usr/local/bin/python3-True]"
+]
