@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+     
+     <title>CHAT SUPPORT SYSTEM</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Website logo -->
+     <link rel = "website icon" type = "png" href = "static/chatbot.png">
+
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='/pictures/css/bootstrap.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='/pictures/css/font-awesome.min.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='/pictures/css/owl.carousel.css') }}">
+     <link rel="stylesheet" href="{{ url_for('static', filename='/pictures/css/owl.theme.default.min.css') }}">
+
+     <!-- Google Fonts Link For Icons -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+     
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='/pictures/css/CvSU LIBRARY.css') }}">
+
+     
+
+</head>
+
+     
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- CHAT BOX --> 
+<body>    
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+<!-- SCRIPTS -->
+     <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+     <script src="{{ url_for('static', filename='/pictures/js/jquery.js') }}"></script>
+     <script src="{{ url_for('static', filename='/pictures/js/bootstrap.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='/pictures/js/owl.carousel.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='/pictures/js/smoothscroll.js') }}"></script>
+     <script src="{{ url_for('static', filename='/pictures/js/custom.js') }}"></script>
+     <script src="{{ url_for('static', filename='/pictures/js/hideChat.js') }}"></script>
+</body>     
+
+<body>
+     <button class="chatbot-togglers">
+       <span class="material-symbols-rounded">Sms</span>
+       <span class="material-symbols-outlined ">close</span>
+     </button>
+     
+           
+     <div class="chatbots">
+       <header>
+         <label> Chat with<br>Librarian</label>
+         <div class="active-status"><label for="Status">Active</label></div>
+         <div class="feedback-indicator" onclick="showFeedbackModal()" title="Give Feedback">
+           <i class="material-icons">feedback</i>
+       </div>
+ 
+ 
+       <!--For Feedback-->
+ 
+       <div id="feedbackModal" class="modal">
+          <form id="feedbackForm" action="/submit_feedback" method="post">
+              <div class="containerchat">
+                  <button type="button" id="feedbackCloseBtn" onclick="hideFeedbackModal()">
+                      <i class="material-icons">close</i>
+                  </button>
+                  <div class="info">
+                      <div class="emoji"></div>
+                      <div class="status"></div>
+                  </div>
+                  <div class="stars">
+                      <div class="star" data-rate="5" title="Excellent">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                      </div>
+                      <div class="star" data-rate="4" title="Very Good">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                      </div>
+                      <div class="star" data-rate="3" title="Good">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                      </div>
+                      <div class="star" data-rate="2" title="Fair">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                      </div>
+                      <div class="star" data-rate="1" title="Poor">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star">
+                              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                          </svg>
+                      </div>
+                  </div>
+                  <div id="feedbackMessages"></div>
+              </div>
+      
+              <div class="button hidden" id="feedbackSubmitBtn" onclick="submitFeedback()">
+                  <div class="containerchat">
+                      <div class="tick">
+                      </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+ 
+       </header>
+       <ul class="chatbox">
+         <li class="chat incoming">
+           <img src="static/chatbot.png" style="margin-right: 15px;">
+           <p>Hi! Welcome to Cavite State University Main campus Library.
+           <br>I'm Lilbot, I can help you answer your library inquiries and concerns.
+           <br>The knowledge of the system is currrent as of 2023.
+           <br>How may I assist you?</p>
+         </li>
+       </ul>
+ 
+       <div class="chat-input">
+         <textarea placeholder="Enter a message..." spellcheck="false" required ></textarea>
+         <span id="send-btn" class="material-symbols-rounded">send</span>
+       </div>
+       <div class="chatbot-container">
+         <button id="closeButton"><i class="fa fa-times" title="Close"></i></button>
+     </div>
+     
+   </body>
+   </html>

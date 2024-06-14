@@ -1,0 +1,2 @@
+[console_scripts]
+run-chatbot = my_chatbot.app:main
