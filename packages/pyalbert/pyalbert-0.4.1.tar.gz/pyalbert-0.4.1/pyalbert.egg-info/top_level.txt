@@ -1,0 +1,12 @@
+build
+clients
+config
+corpus
+dist
+index
+lexicon
+prompt
+schemas
+scripts
+utils
+whitelist
