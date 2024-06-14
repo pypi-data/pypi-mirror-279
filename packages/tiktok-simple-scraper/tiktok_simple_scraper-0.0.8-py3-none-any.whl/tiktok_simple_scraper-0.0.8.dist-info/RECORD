@@ -1,0 +1,13 @@
+tiktok_simple_scraper/__init__.py,sha256=7AHieJWOysxo3FihM8siftUcNXLoneswFbkjK8BkHY8,20
+tiktok_simple_scraper/account.py,sha256=f5hdJWOoE_ERXIhq5LZKiWlDUujwU88hnV0DBZGUNiY,2576
+tiktok_simple_scraper/entities.py,sha256=j6ZWa3w5dGxZqFb95G0ZjIYCtnLOu55tEOLrVtm9FWc,3101
+tiktok_simple_scraper/mstoken.py,sha256=VaTpZHoZYhIMc3gt9MVNdXwCFFA-SANckjBSX-M9rWo,7529
+tiktok_simple_scraper/opts.py,sha256=lQdTa-bnOmfq5vt_LIssU44ewl2HuJvqFJ7DCs8x5Qw,1619
+tiktok_simple_scraper/tiktok.py,sha256=GtjyXGBmYsYcpORDl36CnNMS9GD2STMa84BrNsetC5Q,6264
+tiktok_simple_scraper/verify_fp.py,sha256=hCeAZBkOlBh9pp45HYijqmtABo8WDiGNNHjQv7I8-ew,1154
+tiktok_simple_scraper/x_bogus.py,sha256=5KzWfBEDbtS_fhneXsHWWQaH2M9gtwN8888ljvryOVI,5689
+tiktok_simple_scraper-0.0.8.dist-info/LICENCE,sha256=5dz_6Da27IpY5JJBm1UOZfuMvcMIUDl55drLM6x-o7c,3
+tiktok_simple_scraper-0.0.8.dist-info/METADATA,sha256=MN6LLBGFjTNZ-AyQHeOt7eDpN0AdszdSsqvOg88Sd58,3500
+tiktok_simple_scraper-0.0.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tiktok_simple_scraper-0.0.8.dist-info/top_level.txt,sha256=se66XgF33FvtbaEDZpBqmUkytv8A2SAFwbx_YJI02eY,22
+tiktok_simple_scraper-0.0.8.dist-info/RECORD,,

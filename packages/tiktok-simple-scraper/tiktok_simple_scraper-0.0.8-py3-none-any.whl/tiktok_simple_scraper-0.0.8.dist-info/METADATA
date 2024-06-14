@@ -1,0 +1,120 @@
+Metadata-Version: 2.1
+Name: tiktok_simple_scraper
+Version: 0.0.8
+Summary: A simple scraper for Tiktok
+Home-page: https://github.com/Eitol/tiktok_simple_scraper
+Author: Hector Oliveros
+Author-email: hector.oliveros.leon@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENCE
+Requires-Dist: pydantic ~=2.7.1
+Requires-Dist: requests ~=2.31.0
+Requires-Dist: beautifulsoup4 ~=4.12.3
+Requires-Dist: python-dateutil ~=2.9.0.post0
+Requires-Dist: dateparser ~=1.2.0
+
+## Tiktok simple scraper
+
+### Features
+- Scrapes all the posts of a tiktok account
+- Scrapes all the comments of a post
+
+### Installation
+```bash
+pip install tiktok_simple_scraper
+```
+
+### Usage
+
+You need to obtain a ms token and the "id" or "secuid" of the account.
+The ms token is a token that is used to authenticate the requests to the tiktok api.
+The "id" or "secuid" is the unique identifier of the account you want to scrape.
+You can obtain the ms token and the "id" or "secuid" of the account by opening tiktok and in your browser console see the requests it makes (see the network tab)
+
+![docs/ms_token_and_secuid.png](https://github.com/Eitol/tiktok_simple_scraper/blob/main/docs/ms_token_and_secuid.png?raw=true)
+
+```python3
+from datetime import datetime, timedelta
+import os
+
+from tiktok_simple_scraper.entities import ScraperOptions
+from tiktok_simple_scraper.opts import LogCallbacks
+from tiktok_simple_scraper.tiktok import TikTokAccountScraper
+
+opts = ScraperOptions(
+    most_old_date=datetime.now() - timedelta(days=3 * 30),
+    max_comments_per_post=1000,
+    callbacks=LogCallbacks(),
+    check_account_in_storage=True,
+)
+
+ms_token = os.environ.get("MS_TOKEN")
+scraper = TikTokAccountScraper(
+    ms_token=ms_token,
+)
+account_secuid = "MS4wLjABAAAAUgpIunuFPI8GMn_zdK8OXxV7LCY3sGClYMubx-GSpu_g75SB_Sb8nNxIKm3TytOX"
+result = scraper.scrape(account_secuid, opts)
+print(result.json())
+```
+
+Output example:
+
+```json5
+{
+  "name_to_show": "BancoEstado Oficial",
+  "id": "MS4wLjABAAAAUgpIunuFPI8GMn_zdK8OXxV7LCY3sGClYMubx-GSpu_g75SB_Sb8nNxIKm3TytOX",
+  "social_media": "TIKTOK",
+  "followers_count": 0,
+  "countries": [],
+  "posts": [
+        {
+      "id": "7362193936972090629",
+      "sec_id": null,
+      "url": "7362193936972090629",
+      "hashtags": [],
+      "text": "¿Quién más así? #foryou #Bancoestado #pedropedropedropedro #trend #trending ",
+      "type": "VIDEO",
+      "date": "2024-04-26T11:12:36",
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 113
+        }
+      ],
+      "comments": [
+        {
+          "text": "Es viernes nuestro cuerpo lo sabe",
+          "user": "elaahumada",
+          "date": "2024-04-26T18:51:02",
+          "url": "7362312008602256133",
+          "reactions": [
+            {
+              "type": "LIKE",
+              "count": 0
+            }
+          ],
+          "replies": [],
+          "sentiments": null,
+          "user_name": "Ela Ahumada",
+          "user_metadata": {
+            "sec_uid": "MS4wLjABAAAALllrU5MkSPTaH2oO8ByCERShguFrTi20Z9maUWQi7Ob8ETi7XuN1fTGx_Wg3gaJr",
+            "id": "239504324559560704"
+          },
+          "score": null
+        },
+        // more comments...
+      ],
+      "reaction_count": 113,
+      "share_count": 35,
+      "view_count": 12900,
+      "total_comments": 0
+    },
+    // more posts...
+  ]
+}
+```
