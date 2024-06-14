@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chesscom-game-fetcher"
+version = "1.0.1"
+authors = [
+  { name="Scott Oxtoby", email="pypi@oxtoby.uk" },
+]
+description = "Fetches all games from chess.com for a specified period at a defined time control between players above a defined rating."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "chess.com",
+    "requests",
+    "python-dateutil",
+    "prettytable"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+[project.urls]
+Homepage = "https://github.com/YetiFace/chesscom-game-fetcher"
