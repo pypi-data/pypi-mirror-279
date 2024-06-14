@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pyinheritance/__init__.py
+src/pyinheritance/class_node.py
+src/pyinheritance/example.py
+src/pyinheritance.egg-info/PKG-INFO
+src/pyinheritance.egg-info/SOURCES.txt
+src/pyinheritance.egg-info/dependency_links.txt
+src/pyinheritance.egg-info/requires.txt
+src/pyinheritance.egg-info/top_level.txt
