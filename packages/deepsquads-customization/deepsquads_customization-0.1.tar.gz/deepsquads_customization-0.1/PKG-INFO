@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: deepsquads_customization
+Version: 0.1
+Summary: Deepsquads customization example
+Home-page: https://deepsquads.github.io/
+Author: KhulnaSoft Bot
+Author-email: michal@cihar.com
+License: GPL-3.0-or-later
+Keywords: i18n l10n gettext git mercurial translate
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+License-File: COPYING
+Requires-Dist: Deepsquads
+
+Deepsquads customization example

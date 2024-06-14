@@ -1,0 +1,16 @@
+COPYING
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+deepsquads_customization/__init__.py
+deepsquads_customization/addons.py
+deepsquads_customization/checks.py
+deepsquads_customization/models.py
+deepsquads_customization.egg-info/PKG-INFO
+deepsquads_customization.egg-info/SOURCES.txt
+deepsquads_customization.egg-info/dependency_links.txt
+deepsquads_customization.egg-info/not-zip-safe
+deepsquads_customization.egg-info/requires.txt
+deepsquads_customization.egg-info/top_level.txt
