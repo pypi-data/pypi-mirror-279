@@ -1,0 +1,7 @@
+setup.py
+jobQuery/__init__.py
+jobQuery/jobAPI.py
+jobQuery.egg-info/PKG-INFO
+jobQuery.egg-info/SOURCES.txt
+jobQuery.egg-info/dependency_links.txt
+jobQuery.egg-info/top_level.txt
