@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: ox-engine
+Version: 0.0.1
+Summary: prompt data processer engine
+Home-page: https://github.com/ox-ai/ox-engine.git
+Author: Lokeshwaran M
+Author-email: lokeshwaran.m23072003@gmail.com
+License: MIT
+Keywords: ox-engine ox-ai
+License-File: LICENSE
