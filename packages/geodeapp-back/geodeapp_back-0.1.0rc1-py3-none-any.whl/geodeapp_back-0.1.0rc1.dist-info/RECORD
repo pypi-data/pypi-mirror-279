@@ -1,0 +1,12 @@
+geodeapp_back/__init__.py,sha256=A00lpnUKg-q3y_b-cN3jKF9urkGTGjb2Yz_gGc9WCLs,22
+geodeapp_back/app.py,sha256=J_LRurGotQuZ1U813TiwAc1BBcB5VxuDWkSwy7Pq9EY,3316
+geodeapp_back/config.py,sha256=wVqi4BF6_KB3xSz6VStUsuwlAejcHQ1Y-wKWaE6xS0E,762
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/conftest.py,sha256=sJgVNzGVgOq4DC5POuMUZdoomSAb0_5UMOvYiAHJeK8,368
+tests/test_routes.py,sha256=pLMsKMCFLVKE3ZAjvr5sCIscI6V2Y9HUBRW2vn0YHeA,358
+geodeapp_back-0.1.0rc1.dist-info/LICENSE,sha256=mCqVv7oI0gi34gXQr9z46E5t6MRtMBbtGpcecM8jye8,1072
+geodeapp_back-0.1.0rc1.dist-info/METADATA,sha256=SlT6qqvLdczM2scP70-3lwvuRvJvbTMbC1bS-10IszQ,1599
+geodeapp_back-0.1.0rc1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+geodeapp_back-0.1.0rc1.dist-info/entry_points.txt,sha256=GogVAA4dJb6aNdLKHVZaFcIo77s-wVvzBjVwSbEqmUY,63
+geodeapp_back-0.1.0rc1.dist-info/top_level.txt,sha256=fORVy3Xb18t5SjrleMf3P-IsPFTOP59JUBlbelKnq8Y,20
+geodeapp_back-0.1.0rc1.dist-info/RECORD,,
