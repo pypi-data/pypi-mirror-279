@@ -1,0 +1,9 @@
+cookiecutter_python_cli_app_demo/__init__.py,sha256=CDNTVUNLXcCIoZnB4NZhjUgF1GBZ8KzUvw36tvj5YRA,92
+cookiecutter_python_cli_app_demo/__main__.py,sha256=_DNKh7OYoWG7-cN2-ctuF1dXEQYdEOmFCzAzEyrzmkg,224
+cookiecutter_python_cli_app_demo/cli.py,sha256=GdsbeXa6g58XEsUsDnq84Vem6u41M0t5dUNxPLgWwWM,646
+cookiecutter_python_cli_app_demo/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cookiecutter_python_cli_app_demo-0.1.0.dist-info/entry_points.txt,sha256=D4lyv6KZiWGq8HN3kXsVtaN3N7lTe_NNrNd4q5OXxVE,93
+cookiecutter_python_cli_app_demo-0.1.0.dist-info/LICENSE,sha256=eUucbdkRhCFNYP5vqfWTge0xQ-gXNar1IdbGbltZv1E,1075
+cookiecutter_python_cli_app_demo-0.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+cookiecutter_python_cli_app_demo-0.1.0.dist-info/METADATA,sha256=YZTiQX87JYZrzS-1HWf3KsZdRRb7uxU4lPPMb28bkaY,4300
+cookiecutter_python_cli_app_demo-0.1.0.dist-info/RECORD,,
