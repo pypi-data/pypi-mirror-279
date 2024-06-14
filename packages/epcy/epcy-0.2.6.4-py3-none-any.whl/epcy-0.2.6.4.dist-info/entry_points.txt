@@ -1,0 +1,2 @@
+[console_scripts]
+epcy = epcy.epcy:main
