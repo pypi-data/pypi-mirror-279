@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+setup.cfg
+setup.py
+wolfsoftware.NQueens.egg-info/PKG-INFO
+wolfsoftware.NQueens.egg-info/SOURCES.txt
+wolfsoftware.NQueens.egg-info/dependency_links.txt
+wolfsoftware.NQueens.egg-info/entry_points.txt
+wolfsoftware.NQueens.egg-info/requires.txt
+wolfsoftware.NQueens.egg-info/top_level.txt
+wolfsoftware/nqueens/__init__.py
+wolfsoftware/nqueens/cli.py
+wolfsoftware/nqueens/config.py
+wolfsoftware/nqueens/exceptions.py
+wolfsoftware/nqueens/globals.py
+wolfsoftware/nqueens/main.py
+wolfsoftware/nqueens/nqueens.py
