@@ -1,0 +1,7 @@
+setuptools
+collective.monkeypatcher
+zope.sendmail<=6.1
+
+[test]
+plone.app.testing
+plone.testing>=5.0.0
