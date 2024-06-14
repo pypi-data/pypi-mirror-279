@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/sphinx_vhdl.egg-info/PKG-INFO
+src/sphinx_vhdl.egg-info/SOURCES.txt
+src/sphinx_vhdl.egg-info/dependency_links.txt
+src/sphinx_vhdl.egg-info/top_level.txt
+src/sphinxvhdl/__init__.py
+src/sphinxvhdl/autodoc.py
+src/sphinxvhdl/vhdl.py
