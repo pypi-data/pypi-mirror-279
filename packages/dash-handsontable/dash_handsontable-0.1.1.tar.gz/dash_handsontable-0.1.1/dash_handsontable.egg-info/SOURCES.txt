@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+dash_handsontable/HotTable.py
+dash_handsontable/__init__.py
+dash_handsontable/_imports_.py
+dash_handsontable/dash_handsontable.js
+dash_handsontable/metadata.json
+dash_handsontable/package-info.json
+dash_handsontable.egg-info/PKG-INFO
+dash_handsontable.egg-info/SOURCES.txt
+dash_handsontable.egg-info/dependency_links.txt
+dash_handsontable.egg-info/requires.txt
+dash_handsontable.egg-info/top_level.txt

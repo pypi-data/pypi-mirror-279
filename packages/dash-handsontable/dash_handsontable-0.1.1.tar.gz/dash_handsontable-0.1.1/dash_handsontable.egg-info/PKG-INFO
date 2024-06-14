@@ -1,0 +1,99 @@
+Metadata-Version: 2.1
+Name: dash_handsontable
+Version: 0.1.1
+Summary: Handsontable for Plotly Dash
+Home-page: https://github.com/DhiraPT/dash-handsontable
+Author: Dhiraputta Pathama Tengara
+Author-email: dhira.pt@gmail.com>
+License: MIT
+Project-URL: Documentation, https://github.com/DhiraPT/dash-handsontable
+Project-URL: Download, https://github.com/DhiraPT/dash-handsontable/tags
+Project-URL: Issue Tracker, https://github.com/DhiraPT/dash-handsontable/issues
+Project-URL: Source, https://github.com/DhiraPT/dash-handsontable
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Dash
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: User Interfaces
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: dash>=2.5.1
+
+# Dash Handsontable
+
+Handsontable for Plotly Dash
+
+dash-handsontable is a library that allows [Handsontable](https://handsontable.com/)
+to be used in a [Plotly Dash](https://dash.plotly.com/) application.
+
+## Install
+
+```shell
+pip install dash_handsontable
+```
+
+## Development
+### Getting Started
+
+1. Create a new python environment:
+   ```shell
+   python -m venv venv
+   . venv/bin/activate
+   ```
+   _Note: venv\Scripts\activate for windows_
+
+2. Install python dependencies:
+   ```shell
+   pip install -r requirements.txt
+   ```
+3. Install npm packages:
+   1. Optional: use [nvm](https://github.com/nvm-sh/nvm) to manage node version:
+      ```shell
+      nvm install
+      nvm use
+      ```
+   2. Install:
+      ```shell
+      npm install
+      ```
+4. Build:
+   ```shell
+   npm run build
+   ```
+
+### Component Code
+
+### Publish
+
+If publish on npm:
+```shell
+npm build
+npm publish
+```
+
+### Justfile
+
+Alternatively, use the provided [just](https://github.com/casey/just) commands:
+
+1. Create a Python environment from previous step 1 and install:
+   ```shell
+   just install
+   ```
+2. Build
+   ```shell
+   just build
+   ```
+3. Publish
+   ```shell
+   just publish
+   ```
+4. See all commands with `just -l`
