@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: deep-hedging
+Version: 0.2
+Summary: Hedging Derivatives Under Incomplete Markets with Deep Learning
+Home-page: https://github.com/v-buchkov/deep-hedging
+Download-URL: https://github.com/v-buchkov/deep-hedging/archive/refs/tags/v_02.tar.gz
+Author: Viacheslav Buchkov
+Author-email: viacheslav.buchkov@gmail.com
+License: MIT
+Keywords: deep hedging,derivatives,hedging,deep learning,reinforcement learning
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
