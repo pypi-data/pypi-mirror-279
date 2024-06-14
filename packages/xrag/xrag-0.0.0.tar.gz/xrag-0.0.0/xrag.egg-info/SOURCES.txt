@@ -1,0 +1,6 @@
+pyproject.toml
+xrag/__init__.py
+xrag.egg-info/PKG-INFO
+xrag.egg-info/SOURCES.txt
+xrag.egg-info/dependency_links.txt
+xrag.egg-info/top_level.txt

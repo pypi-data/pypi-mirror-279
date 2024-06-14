@@ -1,0 +1,7 @@
+[project]
+name = "xrag"
+authors = [
+    {name = "Dmitriy Leybel", email = "dmleybel@gmail.com"}
+]
+version = "0.0.0"
+description = "Coming Soon"
