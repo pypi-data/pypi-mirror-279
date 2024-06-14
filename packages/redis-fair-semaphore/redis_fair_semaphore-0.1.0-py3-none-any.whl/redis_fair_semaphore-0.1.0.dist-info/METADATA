@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: redis-fair-semaphore
+Version: 0.1.0
+Summary: 基于Redis的信号量。
+Home-page: UNKNOWN
+Author: Zhou KaiQi
+Maintainer: Zhou KaiQi
+License: MIT
+Keywords: fair semaphore
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: redis
+
+# redis-fair-semaphore
+
+基于Redis的信号量。
+
+## Install
+
+```shell
+pip install redis-fair-semaphore
+```
+
+## 使用方法
+
+```python
+import redis
+from redis_fair_semaphore import acquire_fair_semaphore
+from redis_fair_semaphore import release_fair_semaphore
+
+conn = redis.from_url("redis://redis/0")
+
+
+def test():
+    sem_id = acquire_fair_semaphore(conn, "test_sem_name", 10)
+    try:
+        if sem_id:
+            print("Acquired...")
+        else:
+            print("NOT acquired...")
+    finally:
+        release_fair_semaphore(conn, "test_sem_name", sem_id)
+
+
+if __name__ == "__main__":
+    test()
+```
+
+## 版本记录
+
+### v0.1.0
+
+- 版本首发。
+
+
