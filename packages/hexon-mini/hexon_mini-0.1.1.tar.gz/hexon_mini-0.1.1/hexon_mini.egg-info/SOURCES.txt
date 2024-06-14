@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+hexon_mini/__init__.py
+hexon_mini/hexon_mini_client.py
+hexon_mini.egg-info/PKG-INFO
+hexon_mini.egg-info/SOURCES.txt
+hexon_mini.egg-info/dependency_links.txt
+hexon_mini.egg-info/requires.txt
+hexon_mini.egg-info/top_level.txt
+tests/__init__.py
+tests/test_hexon_mini.py
