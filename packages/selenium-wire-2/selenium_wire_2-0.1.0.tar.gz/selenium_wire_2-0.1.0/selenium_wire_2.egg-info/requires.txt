@@ -1,0 +1,7 @@
+mitmproxy>=10.3.0
+selenium>=4.0.0
+
+[test]
+httpbin
+pytest
+pytest-cov
