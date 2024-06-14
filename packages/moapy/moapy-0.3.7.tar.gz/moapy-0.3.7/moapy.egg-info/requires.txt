@@ -1,0 +1,10 @@
+mdutils
+numpy
+matplotlib
+
+[full]
+concreteproperties
+sectionproperties
+trimesh
+embreex
+fastapi
