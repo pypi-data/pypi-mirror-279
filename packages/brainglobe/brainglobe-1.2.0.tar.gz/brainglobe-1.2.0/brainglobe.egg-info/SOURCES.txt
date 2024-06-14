@@ -1,0 +1,17 @@
+.gitignore
+CITATION.cff
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+.github/workflows/test_and_deploy.yml
+brainglobe/__init__.py
+brainglobe.egg-info/PKG-INFO
+brainglobe.egg-info/SOURCES.txt
+brainglobe.egg-info/dependency_links.txt
+brainglobe.egg-info/requires.txt
+brainglobe.egg-info/top_level.txt
+tests/__init__.py
+tests/test_integration/__init__.py
+tests/test_unit/__init__.py
+tests/test_unit/test__version__.py
