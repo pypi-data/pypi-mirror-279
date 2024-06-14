@@ -1,0 +1,14 @@
+kalente/__init__.py,sha256=j5B200sLohzGHsbEwh2rk8OwLHfHFcILfna7hoqTFeE,53
+kalente/__main__.py,sha256=8qBsaBKi1HClWqlp6zqsuGgPVNGXgbpwBuNFxUAA0jE,5502
+kalente/classes/__init__.py,sha256=TwnCf-hvLoaVYL_yC_XrvbowGD7E1XEg9Q-KM2G58pc,54
+kalente/classes/calendar.py,sha256=RwaeRYKXXloC3s5lGX5QUOfSKzrvdxrTQl89zn4ERHA,4418
+kalente/static/logo.png,sha256=uxLDbegqL4VmSn5Os9DH1QKUBkDOv7nSLT6Qk6MqYHo,3147977
+kalente/templates/daily.html,sha256=uyOoNlDAu_DnSCmqW6HofB7SoTmmNGN8xcjO7RVexPA,1533
+kalente/templates/monthly.html,sha256=pQCJTwBm-yZlTbNX86_2CMoc12loXEF7piy2PoikKU8,2366
+kalente/templates/weekly.html,sha256=QVHw0A997wAZwq7DpKFP7z2cNH4-nkj_hL7dP10Rgzc,2072
+kalente/templates/yearly.html,sha256=rjhYS_lwDwFuUnruKpKyHrNF_Qr3Jf_d9xZ083c3-Q4,3154
+kalente-0.2.1.dist-info/METADATA,sha256=IwP7vw-JK5ZJ3lJJQxuarS-TD5kBBTMBKPgS3OmMaFs,4568
+kalente-0.2.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+kalente-0.2.1.dist-info/entry_points.txt,sha256=fOaYUbdxKvoqrQ5QouPrxf9OhEgwu4-Z5s-xiEmt8ks,50
+kalente-0.2.1.dist-info/licenses/LICENSE,sha256=pUxcn2FCdIkKlv_AKVB5UteUhnAceFK03kFJ3SgDO4E,1077
+kalente-0.2.1.dist-info/RECORD,,

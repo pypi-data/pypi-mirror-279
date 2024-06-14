@@ -1,0 +1,2 @@
+[console_scripts]
+kalente = kalente.__main__:main
