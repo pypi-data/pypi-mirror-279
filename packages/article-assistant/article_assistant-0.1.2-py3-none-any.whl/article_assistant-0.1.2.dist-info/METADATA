@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: article_assistant
+Version: 0.1.2
+Summary: Draft and review articles through the use of Large Language Models (LLMs)
+Author: alkhalifas
+Description-Content-Type: text/markdown
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-experimental
+Requires-Dist: langchain-core
+Requires-Dist: langchain-community
+Requires-Dist: pandas
+Requires-Dist: python-docx
+Requires-Dist: openai
+Requires-Dist: PyPDF2
+
+# Article-Assistant
