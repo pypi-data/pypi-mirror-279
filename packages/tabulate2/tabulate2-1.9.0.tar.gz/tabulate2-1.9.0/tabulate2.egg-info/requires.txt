@@ -1,0 +1,15 @@
+wcwidth>=0.2.13
+
+[dev]
+tox
+black
+pre-commit
+
+[test]
+pytest
+numpy
+pandas
+wcwidth
+
+[widechars]
+wcwidth
