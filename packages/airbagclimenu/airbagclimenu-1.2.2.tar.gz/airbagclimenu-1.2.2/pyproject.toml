@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "airbagclimenu"
+version = "1.2.2"
+authors = [
+    { name = "Anton Norman", email = "normananton03@gmail.com" },
+]
+description = "A python package that makes it easy and intuitive to create good looking CLI menus"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+#[project.authors]
+#name = "Anton Norman"
+#email = "normananton03@gmail.com"
+
+[project.urls]
+Homepage = "https://github.com/Airbag65/CLI-Menu"
+Issues = "https://github.com/Airbag65/CLI-Menu/issues"
+
