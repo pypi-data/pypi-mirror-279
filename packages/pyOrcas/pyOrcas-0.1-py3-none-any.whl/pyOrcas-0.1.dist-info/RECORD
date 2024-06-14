@@ -1,0 +1,14 @@
+pyOrca/ExampleUsage.py,sha256=7z6h2Pe9eUFSwYOdVRqlNxltWkfKgoEORp5KKgai1aQ,371
+pyOrca/__init__.py,sha256=HhPL9f8pjNYJv0kldXyg-c2IQPEL7ssbbfD49nIPwfc,125
+pyOrca/actuator.py,sha256=aX_7UFsU6QjAeD9_ezsKhiaOHWvlJZ3fDCaVOSjKZgQ,20196
+pyOrca/constants.py,sha256=A6yoRt6RzunawZJ2QmdJbmpsLUk7LmHFSfsxCC9qq5A,426
+pyOrcas/ExampleUsage.py,sha256=7z6h2Pe9eUFSwYOdVRqlNxltWkfKgoEORp5KKgai1aQ,371
+pyOrcas/__init__.py,sha256=HhPL9f8pjNYJv0kldXyg-c2IQPEL7ssbbfD49nIPwfc,125
+pyOrcas/actuator.py,sha256=aX_7UFsU6QjAeD9_ezsKhiaOHWvlJZ3fDCaVOSjKZgQ,20196
+pyOrcas/constants.py,sha256=A6yoRt6RzunawZJ2QmdJbmpsLUk7LmHFSfsxCC9qq5A,426
+tests/__init__.py,sha256=QLfJTcuqt7z0QnHLKE7T6u5BTagN60E1ln6woLBWGPs,97
+pyOrcas-0.1.dist-info/LICENSE,sha256=PR47zVa_uizKgzBE1a1gu0BYtPVxb3l0K9Us0-v0_9Y,11515
+pyOrcas-0.1.dist-info/METADATA,sha256=c9KCXP6utb0XjGumCAY0qMloz6S4ukG7SuKu_ppX1gA,712
+pyOrcas-0.1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+pyOrcas-0.1.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+pyOrcas-0.1.dist-info/RECORD,,
