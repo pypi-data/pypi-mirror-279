@@ -1,0 +1,10 @@
+RegistratorAutomationService/__init__.py
+RegistratorAutomationService/__main__.py
+RegistratorAutomationService/const.py
+RegistratorAutomationService/service.py
+pih_rgst_auto.egg-info/PKG-INFO
+pih_rgst_auto.egg-info/SOURCES.txt
+pih_rgst_auto.egg-info/dependency_links.txt
+pih_rgst_auto.egg-info/entry_points.txt
+pih_rgst_auto.egg-info/requires.txt
+pih_rgst_auto.egg-info/top_level.txt
