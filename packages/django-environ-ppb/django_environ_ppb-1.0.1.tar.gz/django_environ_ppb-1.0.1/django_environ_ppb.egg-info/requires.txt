@@ -1,0 +1,4 @@
+django-environ==0.10.0
+
+[vault]
+hvac==0.10.5
