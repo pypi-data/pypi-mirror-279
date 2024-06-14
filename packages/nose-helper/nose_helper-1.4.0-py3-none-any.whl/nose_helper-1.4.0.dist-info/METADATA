@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: nose_helper
+Version: 1.4.0
+Summary: build helper
+Author: Seuling N.
+License: Apache License 2.0
+Requires-Python: >=3.9
+License-File: LICENSE
+Requires-Dist: coverage ~=7.5.1
+Requires-Dist: nox ~=2024.4.15
+Requires-Dist: pyenchant ~=3.2.2
+Requires-Dist: pylint-pydantic ~=0.3.2
+Requires-Dist: pylint ~=3.1.0
+Requires-Dist: pytest ~=8.1.0
+Requires-Dist: requests ~=2.31.0
+
+helper for building and checking projects
