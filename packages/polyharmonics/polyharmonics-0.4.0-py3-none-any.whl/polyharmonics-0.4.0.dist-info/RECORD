@@ -1,0 +1,17 @@
+polyharmonics/__init__.py,sha256=zI25edBpspx1kyExjW_3Ralgn6ry7dGz9tDnVtrYYo0,459
+polyharmonics/__main__.py,sha256=vbTbp0X8ksB5XV4dMwvZV1uilhhlxiyB1SVCXRxZ-0M,1075
+polyharmonics/associated_legendre_functions.py,sha256=_H0ZE21tr884GIDrU8rJalKmZq-_YXnhVXHE-dUar6Q,10151
+polyharmonics/cli/__init__.py,sha256=gU4s5i2U7RIbfnjRueeM2pjakDJrbxsg1AhOEccQsVA,209
+polyharmonics/cli/associated_legendre_cmd.py,sha256=ZtR0SeBdQXA-G5zwX2ivU4T4F5DlFk7mZtG_BbmeAl8,5531
+polyharmonics/cli/benchmark/__init__.py,sha256=ww4poLMz824XZlpv3_RF-DZKza8LTHQGtEe3BhpCqb0,190
+polyharmonics/cli/benchmark/associated_legendre_bench.py,sha256=q3IkcIzaK9eEiC3-9QYA3hO-JNxFsPvaJJ6wUTecNO4,8434
+polyharmonics/cli/benchmark/legendre_bench.py,sha256=klWwpPW39INBKmj7imLcHx94-thYq64C_Imbjv-QOAo,9114
+polyharmonics/cli/benchmark_cmd.py,sha256=bKlufTYkxPGTyvoXc2YSRgDUhhtUR2eDcVcgQLmpvO4,650
+polyharmonics/cli/colors.py,sha256=h90lFZNf9RZa612lSURQlmRT4-2tyd9D5Nm_2RDLCFc,183
+polyharmonics/cli/legendre_cmd.py,sha256=bSTQ4knc41qdMiEyQHc-fF1WBN32VRQPshklP1gblz8,3739
+polyharmonics/legendre_polynomials.py,sha256=TxlachrCszUe_CabLIxWd0pbUIu68v-9HRcR_H6vIGw,5913
+polyharmonics-0.4.0.dist-info/LICENSE,sha256=6Jtw8fk_hgiNOnI4rXbBxdgucgaNmij3ZrWf167SYGE,1466
+polyharmonics-0.4.0.dist-info/METADATA,sha256=4hWWcb25KS8Xiqxa64oQXpXTAQWUTxqdspImt8W3KiA,7004
+polyharmonics-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+polyharmonics-0.4.0.dist-info/entry_points.txt,sha256=OH3V8aGZDxG7iH7W2hSJfo_tp8rExSVstkrGwXPN-80,60
+polyharmonics-0.4.0.dist-info/RECORD,,
