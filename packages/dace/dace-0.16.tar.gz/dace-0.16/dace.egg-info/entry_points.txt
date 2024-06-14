@@ -1,0 +1,6 @@
+[console_scripts]
+dacelab = dace.cli.dacelab:main
+daceprof = dace.cli.daceprof:main
+fcfd = dace.cli.fcdc:main
+sdfgcc = dace.cli.sdfgcc:main
+sdfv = dace.cli.sdfv:main
