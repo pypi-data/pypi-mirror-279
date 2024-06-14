@@ -1,0 +1,7 @@
+cern_oa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cern_oa/dep_graph.py,sha256=98TiERFIueosl0mgWMF6hrTBZ-8WalKvM_y8hjFohsY,3444
+dependency_analyzer-1.0.0.dist-info/LICENSE,sha256=Hh4glnN7oaWe2ryN_fl3IhyGQx_uCU6fIhW8EJ_FWyE,1096
+dependency_analyzer-1.0.0.dist-info/METADATA,sha256=nmjdBRrpobGSSJ0JyW8IbbVo9w5rOnjkDpou6rwjjfE,1121
+dependency_analyzer-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dependency_analyzer-1.0.0.dist-info/top_level.txt,sha256=2nO5FXq5CUEcybXoj3xzoupWB1AvrMMO8ewGdT82SXU,8
+dependency_analyzer-1.0.0.dist-info/RECORD,,

@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: dependency_analyzer
+Version: 1.0.0
+Summary: Analyzer of dependencies
+Author: Marco Rossi
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# Dependency analyzer
+[![Tests](https://github.com/Pinzauti/cern_oa/actions/workflows/python-package.yml/badge.svg)](https://github.com/Pinzauti/cern_oa/actions/workflows/python-package.yml)
+[![Pylint](https://github.com/Pinzauti/cern_oa/actions/workflows/pylint.yml/badge.svg)](https://github.com/Pinzauti/cern_oa/actions/workflows/pylint.yml)
+
+Online Assessment for CERN.
+## How to run
+
+First of all you have to create your virtual environment (`python3 -m venv env`). Then activate it and execute the following commands:
+```bash
+pip install .                           # It installs the package
+python3 -m cern_oa.dep_graph            # It executes the script
+```
+
+## How to test
+
+```bash
+pip install .[test]                     # It installs the package and the test dependencies
+python3 -m pytest                       # It executes the tests
+```
+
+
+
+
+
