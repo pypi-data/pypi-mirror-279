@@ -1,0 +1,14 @@
+launch_concierge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+launch_concierge/docker-compose-concierge.yml,sha256=hCKSxZpT9Q5c2BZUvpW1s-Fk_MIU_TdATIBn5DzIs7E,333
+launch_concierge/docker-compose-gpu.yml,sha256=KsUQol0KWTKhMEYr7hOGD0xCi9qH76My7OpzDL6FfwI,388
+launch_concierge/docker-compose-ollama.yml,sha256=U-xuQor0ipIN0TKxdUOv1z2TiOkTIE4W1ZBDdf1bpig,474
+launch_concierge/docker-compose-opensearch.yml,sha256=GwyjNUdHNk4sETNCU6EQyobj6A3LCA4GBOgrHJ0uL6E,2171
+launch_concierge/docker-compose.yml,sha256=U8tRLPd1V_7pVHj9smgwvegclPwGzZFbzs5cLjUGuNw,382
+launch_concierge/install.py,sha256=sxYO452_Cbe5ECAeayUPkTEAsHxYiQr0WWygwtTZma0,996
+launch_concierge/relaunch.py,sha256=DKZCPqJBH6j_lsyH06lfmuTU1uKWK7arWclc9Sa5_Uo,408
+launch_concierge/concierge_installer/arguments.py,sha256=5zL5S0u-9C6r19ToZkGKSAHNe8JincxPSEnUkxFASzI,3547
+launch_concierge/concierge_installer/functions.py,sha256=C7__iKXkDzWqCNEZ5AUlQkkz2SgMiv0hwVDCvI8rA2E,7413
+launch_concierge-0.3.2.dist-info/METADATA,sha256=uqLxn5NoXUU9XD-0ap2u_Y8NWRUuWG7ktTpfumUdfGk,114
+launch_concierge-0.3.2.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+launch_concierge-0.3.2.dist-info/entry_points.txt,sha256=hLbyBmBrueYGwSXEDcEg9TmtMJioTfl7Kc_c00rJywE,110
+launch_concierge-0.3.2.dist-info/RECORD,,
