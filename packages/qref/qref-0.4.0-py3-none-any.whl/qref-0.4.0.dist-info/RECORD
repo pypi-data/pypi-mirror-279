@@ -1,0 +1,11 @@
+qref/__init__.py,sha256=uMtizSoCcJi9QCmf63qQRA1lw8EsBHrx0CP9asheLUc,1342
+qref/_schema_v1.py,sha256=y6Pu3hPSzl_QH_NTw88e8xxL45u_lc35oShaI2qmXXU,4973
+qref/experimental/__init__.py,sha256=q0zUDO190-G3PRM5slHcFvJ3y0D8lOjT9SZXwZAsBng,581
+qref/experimental/rendering.py,sha256=XHNauOlSpYUGn_jKEIBnh0l1wERG2q8lqXzNRlNgVcM,6805
+qref/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+qref/verification.py,sha256=EQlkFPaMvpKa-JQCW9P2hndqZ_hkXlzgvl2uzNSviE8,5373
+qref-0.4.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+qref-0.4.0.dist-info/METADATA,sha256=jt2_gDd0iz5u3KFHCe4dYzjbDbvOfw_CSeenYLXWBrI,4627
+qref-0.4.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+qref-0.4.0.dist-info/entry_points.txt,sha256=0r4egTAx84xjcp_W-cpOm9kuvc-TQ2DmNMybjcafHRs,78
+qref-0.4.0.dist-info/RECORD,,
