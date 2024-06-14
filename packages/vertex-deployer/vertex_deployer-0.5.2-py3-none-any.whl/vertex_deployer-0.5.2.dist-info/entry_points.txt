@@ -1,0 +1,3 @@
+[console_scripts]
+vertex-deployer=deployer.cli:app
+
