@@ -1,0 +1,20 @@
+# PDKMaster integration with KLayout
+
+This is PDKMaster module to provide interoperation with klayout.
+This is WIP version with just the red tape setup for the project.
+
+## Release history
+
+* [v0.1.2](https://gitlab.com/Chips4Makers/pdkmaster-io-klayout/-/commits/v0.1.2):
+  * Subproject of project Arrakeen
+  * Support for external layer properties for klayout technology
+* v0.1.1: Some clean-up and implementation of klayout pcell library support for MOSFET and Via primitives.
+* v0.1.0: First version with split-off code from PDKMaster as is.
+
+## Project Arrakeen subproject
+
+This project is part of Chips4Makers' [project Arrakeen](https://gitlab.com/Chips4Makers/c4m-arrakeen). It shares some common guide lines and regulations:
+
+* [Contributing.md](https://gitlab.com/Chips4Makers/c4m-arrakeen/-/blob/redtape_v1/Contributing.md)
+* [LICENSE.md](https://gitlab.com/Chips4Makers/c4m-arrakeen/-/blob/redtape_v1/LICENSE.md): license of release code
+* [LICENSE_rationale.md](https://gitlab.com/Chips4Makers/c4m-arrakeen/-/blob/redtape_v1/LICENSE_rationale.md)
