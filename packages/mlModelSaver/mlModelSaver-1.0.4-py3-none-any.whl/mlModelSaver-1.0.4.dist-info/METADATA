@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: mlModelSaver
+Version: 1.0.4
+Summary: Make life easier for save and serving ml models
+Author: Jason Jafari
+Author-email: me@jasonjafari.com.com
+License-File: LICENSE
+
