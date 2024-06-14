@@ -1,0 +1,17 @@
+versionator/__init__.py,sha256=Ht295BRjo8hC0lwasZ6Pi--8XXI0E1z-w74k6ksoHS8,64
+versionator/core.py,sha256=BYXCoV2ocJwnpSN1kwxN5CxlSiKmsAhVeiQC2tnIGy0,11893
+versionator/middleware.py,sha256=OkBHdsvcn28ptBUz83IRkeinug7Ueylwvphu-jPFnEM,1158
+versionator/utils.py,sha256=A891SCy3YcWIYe1zmQSBMyZ-QDyeAzpz1Jjat3aVtzQ,344
+versionator/changelog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+versionator/changelog/arbitrary_version_pair_fetcher.py,sha256=0U4fnjPFTQHPYIBgAM32cODOBikOVwjOGqzlPWkVNzw,2468
+versionator/changelog/consecutive_versions_fetcher.py,sha256=JUPqvBph3wiQ8FHAQElApiLe23Lhuhh7dv8BcQbuZ5U,8265
+versionator/changelog/diff.py,sha256=n4t1eG7rvgcVQ-mURy93cLkcw6fhfosMaOnmQmMlJCI,6672
+versionator/changelog/diff_utils.py,sha256=5AmnZqlPUcbdvCQh5zjHxjp2ZMSSjtc9hfY0rrRpU68,3279
+versionator/changelog/new_changelog.py,sha256=FOAZIGk1BDP068bbQgRWj9yffo_5Wm-Ix-Kgcegc5rE,7394
+versionator/changelog/util.py,sha256=Voa6FXirCBc9xO_k3MQsKS6BD8nQVmWA0qbMFPN__gI,585
+versionator/changelog/views/__init__.py,sha256=vQTsNCONeSEkvVzva7s8xh5VLu7pt-QLKY-UJbmLO20,59
+versionator/changelog/views/abstract_changelog_view.py,sha256=1MPbjubMOwkDGSjaG_rmSQdrkxPxJXHKL82Q1JK5gfk,1889
+django_versionator-2.0.0rc2.dist-info/METADATA,sha256=i2SZo8zseos38dpLPIev9foZPR44lPxGbFgmKECKuG0,463
+django_versionator-2.0.0rc2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_versionator-2.0.0rc2.dist-info/top_level.txt,sha256=deUopx2DMaSsvrMcRj4CEtOniE8oQ6GRH_sIaZKn8nk,12
+django_versionator-2.0.0rc2.dist-info/RECORD,,
