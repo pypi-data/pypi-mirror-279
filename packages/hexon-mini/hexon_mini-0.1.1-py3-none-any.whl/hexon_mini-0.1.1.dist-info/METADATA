@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: hexon_mini
+Version: 0.1.1
+Summary: A WebSocket client for controlling the HEXON MINI robotic arm.
+Home-page: https://arixarobotics.com
+Author: ARIXA Robotics
+Author-email: arixa.robotics@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websocket-client
+
+# HEXON MINI
+
+A WebSocket client for controlling the HEXON MINI robotic arm from ARIXA Robotics.
+
+## Installation
+
+```sh
+pip install hexon_mini
+
+
