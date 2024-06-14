@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: niar
+Version: 0.1
+Summary: A small framework for building projects with Amaranth
+Author-Email: Asherah Connor <ashe@kivikakk.ee>
+License: BSD-2-Clause
+Project-URL: Homepage, https://github.com/kivikakk/niar
+Requires-Python: >=3.8
+Requires-Dist: amaranth<0.6,>=0.4.5
+Requires-Dist: amaranth-boards; extra == "build"
+Provides-Extra: build
