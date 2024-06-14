@@ -1,0 +1,17 @@
+LICENCE
+README.md
+setup.py
+test/test_x_bogus.py
+tiktok_simple_scraper/__init__.py
+tiktok_simple_scraper/account.py
+tiktok_simple_scraper/entities.py
+tiktok_simple_scraper/mstoken.py
+tiktok_simple_scraper/opts.py
+tiktok_simple_scraper/tiktok.py
+tiktok_simple_scraper/verify_fp.py
+tiktok_simple_scraper/x_bogus.py
+tiktok_simple_scraper.egg-info/PKG-INFO
+tiktok_simple_scraper.egg-info/SOURCES.txt
+tiktok_simple_scraper.egg-info/dependency_links.txt
+tiktok_simple_scraper.egg-info/requires.txt
+tiktok_simple_scraper.egg-info/top_level.txt
