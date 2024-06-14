@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: escape_game_lw
+Version: 0.13
+Summary: Basic functions for escape game
+Home-page: https://github.com/Tchluwies/escape_game_lw
+Download-URL: https://github.com/Tchluwies/escape_game_lw/archive/refs/tags/0.12.tar.gz
+Author: Luise Wiesalla
+Author-email: LuiseWiesalla@gmx.de
+License: MIT
+Keywords: Escape,Game
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE.txt

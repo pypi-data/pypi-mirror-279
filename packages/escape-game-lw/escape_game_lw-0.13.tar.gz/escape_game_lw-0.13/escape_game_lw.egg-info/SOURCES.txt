@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+escape_game_lw/__init__.py
+escape_game_lw/factory.py
+escape_game_lw/main.py
+escape_game_lw/university.py
+escape_game_lw.egg-info/PKG-INFO
+escape_game_lw.egg-info/SOURCES.txt
+escape_game_lw.egg-info/dependency_links.txt
+escape_game_lw.egg-info/requires.txt
+escape_game_lw.egg-info/top_level.txt
