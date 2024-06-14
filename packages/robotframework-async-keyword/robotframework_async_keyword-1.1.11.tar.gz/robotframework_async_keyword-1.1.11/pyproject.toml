@@ -1,0 +1,38 @@
+[build-system]
+requires = ['setuptools>=45', 'setuptools_scm[toml]>=6.2']
+
+[project]
+name = 'robotframework-async-keyword'
+authors = [
+    {name = 'René Lehfeld', email = '54720674+rlehfeld@users.noreply.github.com'},
+]
+description = 'Generic Robot Framework library for asynchronous keyword execution'
+requires-python = '>=3.7'
+license = {text = 'MIT'}
+keywords = ['async', 'robotframework']
+classifiers = [
+    'Programming Language :: Python :: 3',
+    'Environment :: Other Environment',
+    'Intended Audience :: Developers',
+    'Operating System :: OS Independent',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+]
+dependencies = [
+  'robotframework>=5.0.1'
+]
+dynamic = ['version', 'readme']
+
+[project.urls]
+'Homepage' = 'https://github.com/rlehfeld/robotframework-async-keyword'
+'Bug Reports' = 'https://github.com/rlehfeld/robotframework-async-keyword/issues'
+'Source' = 'https://github.com/rlehfeld/robotframework-async-keyword/'
+
+[tool.setuptools]
+packages = ['AsyncLibrary']
+obsoletes = ['robotframework_async']
+
+[tool.setuptools.dynamic]
+readme = {file = ['README.rst']}
+
+[tool.setuptools_scm]
+write_to = 'AsyncLibrary/_version.py'

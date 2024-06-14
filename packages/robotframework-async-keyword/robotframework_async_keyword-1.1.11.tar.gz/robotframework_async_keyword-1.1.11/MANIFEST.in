@@ -1,0 +1,3 @@
+prune .git*
+prune dist
+global-exclude CODEOWNERS *.py[cod] *~ .*
