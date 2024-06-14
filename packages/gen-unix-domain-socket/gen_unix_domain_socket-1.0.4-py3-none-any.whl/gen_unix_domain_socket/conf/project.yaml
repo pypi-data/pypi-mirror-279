@@ -1,0 +1,23 @@
+templates:
+    - uds.template
+    - uds_fatal_error.template
+    - uds_socket.template
+    - uds_accept.template
+    - uds_bind.template
+    - uds_connect.template
+    - uds_listen.template
+    - uds_read.template
+    - uds_write.template
+    - uds_unlink.template
+
+modules:
+    - uds.h
+    - uds_fatal_error.c
+    - uds_socket.c
+    - uds_accept.c
+    - uds_bind.c
+    - uds_connect.c
+    - uds_listen.c
+    - uds_read.c
+    - uds_write.c
+    - uds_unlink.c
