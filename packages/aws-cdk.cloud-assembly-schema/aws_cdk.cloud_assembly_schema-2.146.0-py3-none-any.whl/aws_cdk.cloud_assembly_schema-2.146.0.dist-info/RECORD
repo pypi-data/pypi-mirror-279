@@ -1,0 +1,10 @@
+aws_cdk/cloud_assembly_schema/__init__.py,sha256=YQ7xL_d42s-Kzb_0lGBZC_nUNdq-OmVM4_CpSkIbj54,376079
+aws_cdk/cloud_assembly_schema/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+aws_cdk/cloud_assembly_schema/_jsii/__init__.py,sha256=eoDFVg1dyidXnSWzYvmNbzP-i_l9rT4QCqTWryM189A,465
+aws_cdk/cloud_assembly_schema/_jsii/cloud-assembly-schema@2.146.0.jsii.tgz,sha256=REIF40xUEf2C8A7lFdLXDg7CGfRCc0XQJkC48YPyGJM,175878
+aws_cdk.cloud_assembly_schema-2.146.0.dist-info/LICENSE,sha256=kEDF86xJUQh1E9M7UPKKbHepBEdFxIUyoGfTwQB7zKg,11391
+aws_cdk.cloud_assembly_schema-2.146.0.dist-info/METADATA,sha256=FB9JlcYkHliGX2yfnATM3z2DMA8sd7t40C4YDDA4nPU,3833
+aws_cdk.cloud_assembly_schema-2.146.0.dist-info/NOTICE,sha256=bB3uFbEk9afGkPE7NfGTfjUQ_O7uZxB2rX8BCiQ9bYk,2232
+aws_cdk.cloud_assembly_schema-2.146.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aws_cdk.cloud_assembly_schema-2.146.0.dist-info/top_level.txt,sha256=1TALAKbuUGsMSrfKWEf268lySCmcqSEO6cDYe_XlLHM,8
+aws_cdk.cloud_assembly_schema-2.146.0.dist-info/RECORD,,
