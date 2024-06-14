@@ -1,0 +1,3 @@
+[console_scripts]
+batchop=batchop.batchop:main
+

@@ -1,0 +1,15 @@
+batchop/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+batchop/batchop.py,sha256=EqMLqYq_NsZNxCRhinqCAe-SRXcCCg5BmF_m6AIqfLg,11998
+batchop/colors.py,sha256=w1_McD6NPJLNclkUIv5oSWG5nv6X2ljglqJrV7Nsikg,408
+batchop/common.py,sha256=KtunFGbwGSIE7l6snmNSAwXtxSczxv5P9ZZSTFqGUIw,1277
+batchop/db.py,sha256=2B6syz7NEREMH9m_Vj9p_TGrgcNishOVCoLi0Ce5xQQ,4519
+batchop/english.py,sha256=qOPTiAjO-p2qVbQG6tQzStpNtmbICN4DTI6hQMMymMw,1172
+batchop/fileset.py,sha256=1V-iyWwH8_loMyVxZP9wwf74D6jdq1YsTfYhFv_K3jY,6885
+batchop/filters.py,sha256=SixS5N9RksU7zkGT0zgSaJbEN5eYJDopCo5Op__S4xE,6784
+batchop/globreplace.py,sha256=dDsOG3YGxJm2ZhKgnn3ebcWkhk-mFyMhUFL2MvBOVeg,283
+batchop/parsing.py,sha256=hXCKLpfhAgCWselfheNzbUq-7ecvw7iJwqevqaxSZJo,5987
+batchop/patterns.py,sha256=8YTQh7KBZ9DCShx7lORe88O1Tgw2CcsqigIsv2lEZR4,5864
+batchop-0.1.0.dist-info/METADATA,sha256=oVGLoG_jHkrjDMn7tNeUFYZwJO_y8NKojhKOnmNwdUc,1078
+batchop-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+batchop-0.1.0.dist-info/entry_points.txt,sha256=BLjiZPJg4ZTB658Sp4D1TiuALMhKmvalShVcHVMX9Eg,48
+batchop-0.1.0.dist-info/RECORD,,
