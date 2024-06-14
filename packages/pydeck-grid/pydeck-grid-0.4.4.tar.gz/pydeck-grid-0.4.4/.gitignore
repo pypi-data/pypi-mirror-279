@@ -1,0 +1,7 @@
+__pycache__
+*.egg-info
+build
+_build
+dist
+pypi.conf
+.eggs
