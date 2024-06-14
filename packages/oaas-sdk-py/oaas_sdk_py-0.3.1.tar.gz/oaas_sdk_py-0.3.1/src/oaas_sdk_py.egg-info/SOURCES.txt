@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/oaas_sdk_py/__init__.py
+src/oaas_sdk_py/model.py
+src/oaas_sdk_py.egg-info/PKG-INFO
+src/oaas_sdk_py.egg-info/SOURCES.txt
+src/oaas_sdk_py.egg-info/dependency_links.txt
+src/oaas_sdk_py.egg-info/requires.txt
+src/oaas_sdk_py.egg-info/top_level.txt
