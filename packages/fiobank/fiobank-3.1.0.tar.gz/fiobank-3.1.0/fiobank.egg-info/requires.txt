@@ -1,0 +1,13 @@
+requests
+
+[release]
+python-semantic-release
+
+[tests]
+pytest-runner
+pytest
+pylama
+responses
+mock
+coveralls
+pytest-cov
