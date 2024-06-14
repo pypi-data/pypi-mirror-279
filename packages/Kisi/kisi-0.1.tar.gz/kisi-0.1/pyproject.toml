@@ -1,0 +1,32 @@
+[project]
+name = "Kisi"
+authors = [
+  { name="Ankush Kumar", email="ankush1611996@gmail.com" },
+]
+description = "A python package for Kisi API"
+keywords = ["Kisi", "KISI door","KISI","Kisi lock",  "getkisi", "Kisi modern access control", "Kisi python library"]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "requests",
+    "sys",
+]
+
+version = "0.1"
+
+[tool.setuptools_scm]
+
+[project.urls]
+"Homepage" = "https://github.com/AnkushRozra/Kisi"
+"Bug Tracker" = "https://github.com/AnkushRozra/Kisi/issues"
+
+
+[build-system]
+requires = ["setuptools","setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
