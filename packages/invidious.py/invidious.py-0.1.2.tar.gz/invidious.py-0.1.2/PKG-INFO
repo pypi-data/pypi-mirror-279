@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: invidious.py
+Version: 0.1.2
+Summary: A Python wrapper for Invidious API
+Author: loliconshik3
+Author-email: loliconshik3@gmail.com
+Keywords: python,invidious,youtube,video,api
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: dataclasses
+
+# Invidious.py
+
+A Python wrapper for Invidious API
+
+# Installation
+
+## With pip 
+
+`$ pip install invidious.py`
+
+## With Git
+
+```sh
+$ git clone https://codeberg.org/librehub/invidious.py
+$ cd invidious.py
+$ pip install .
+```
+
+# Getting Started
+
+```python
+from invidious.enums import ContentType
+from invidious import *
+
+iv = Invidious()
+searched = iv.search("distrotube", ctype=ContentType.CHANNEL)
+
+for item in searched:
+    print(item.author) 
+    # Print names of all channels
+    # in first page of result 'distrotube'
+```
+
+# Links
+
+* PyPi: https://pypi.org/project/invidious.py/
+* Git repo: https://codeberg.org/librehub/invidious.py
+* Matrix: https://matrix.to/#/#librehub:cutefunny.art
+
+## Support
+
+Any contacts and crytpocurrency wallets you can find on my [profile page](https://warlock.codeberg.page).
+
