@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.py
+tkosui/__init__.py
+tkosui.egg-info/PKG-INFO
+tkosui.egg-info/SOURCES.txt
+tkosui.egg-info/dependency_links.txt
+tkosui.egg-info/top_level.txt

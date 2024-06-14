@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: tkosui
+Version: 1.0.9
+Summary: This library lets for ask for user input with GUI.
+Home-page: https://github.com/ElliNet13/tk-osui
+Author: ElliNet13
+Author-email: ellinet13@googlegroups.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+This library lets for ask for user input with GUI easily.
+
