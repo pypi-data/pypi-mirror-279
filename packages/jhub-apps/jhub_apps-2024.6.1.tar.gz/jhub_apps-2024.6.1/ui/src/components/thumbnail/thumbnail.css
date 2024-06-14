@@ -1,0 +1,7 @@
+.thumbnail-body.selected {
+  background-color: transparent;
+}
+
+.thumbnail-body.dragging {
+  border: 2px dashed var(--primary);
+}

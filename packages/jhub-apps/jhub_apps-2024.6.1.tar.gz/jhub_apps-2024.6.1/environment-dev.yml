@@ -1,0 +1,24 @@
+name: jhub-apps-dev
+channels:
+  - conda-forge
+dependencies:
+  - uvicorn
+  - fastapi
+  - python-multipart
+  - jupyter
+  - plotlydash-tornado-cmd
+  - bokeh-root-cmd
+  - jhsingle-native-proxy=0.8.2
+  - pytest
+  - ruff
+  - panel
+  - bokeh
+  - voila
+  - dash
+  - streamlit
+  - tornado>=5.1
+  - traitlets
+  - python-slugify
+  - cachetools
+  - structlog
+  - gradio
