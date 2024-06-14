@@ -1,0 +1,9 @@
+README.md
+pybind_wrapper.cpp
+pyproject.toml
+setup.py
+libpastelid.egg-info/PKG-INFO
+libpastelid.egg-info/SOURCES.txt
+libpastelid.egg-info/dependency_links.txt
+libpastelid.egg-info/not-zip-safe
+libpastelid.egg-info/top_level.txt
