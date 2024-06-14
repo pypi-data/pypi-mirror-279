@@ -1,0 +1,9 @@
+pydtm/__init__.py,sha256=Vmv7xi7t4ryqFqKU7ZIRh8UJlSKM4UsltB6kSYKajyQ,439
+pydtm/api.py,sha256=QVdBLQaqUyRTWWwjR0fejNA6bkGNKR_dpRVUjhFxiEI,9918
+pydtm/utils.py,sha256=R-ecwzMUv3e7fcN-T7xRBD4V2ixKInmLbEXTI-fWfWI,1160
+pydtm/data/countries_codes_and_coordinates.csv,sha256=H_GtkgNKSlkxOPy7dXDsUBXDwopEdvlQFaOdC_JXOCo,13113
+pydtm-0.0.3.dist-info/LICENSE,sha256=m6K79L4LBAfbLEteQXv9valmwlb2wA6shPK_FqA-b8U,1073
+pydtm-0.0.3.dist-info/METADATA,sha256=buLqEgq3uFJr92MMT9j0SmwcG967LUZCelG40DOE65Y,973
+pydtm-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pydtm-0.0.3.dist-info/top_level.txt,sha256=xIf_6r7s7t3RMuiVzGsS65zXCVWBMfo_9wbMiZ5VMxY,6
+pydtm-0.0.3.dist-info/RECORD,,
