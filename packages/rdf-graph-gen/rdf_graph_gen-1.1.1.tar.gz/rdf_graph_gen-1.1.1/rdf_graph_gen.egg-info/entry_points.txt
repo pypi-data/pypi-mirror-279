@@ -1,0 +1,3 @@
+[console_scripts]
+genrdf = rdf_graph_gen.script:main
+
