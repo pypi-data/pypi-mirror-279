@@ -1,0 +1,297 @@
+Metadata-Version: 2.1
+Name: cvi
+Version: 0.6.0
+Summary: A Python package for both batch and incremental cluster validity indices.
+Author-email: Sasha Petrenko <petrenkos@mst.edu>
+Maintainer-email: Sasha Petrenko <petrenkos@mst.edu>
+License: MIT License
+        
+        Copyright (c) 2022 Sasha Petrenko
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/AP6YC/cvi
+Project-URL: Bug Reports, https://github.com/AP6YC/cvi/issues
+Project-URL: Documentation, https://cluster-validity-indices.readthedocs.io/
+Project-URL: Source, https://github.com/AP6YC/cvi/
+Keywords: cluster validity indices,cluster validity index,incremental cluster validity indices,incremental cluster validity index,cluster validation,cvi,icvi
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: check-manifest; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: jupyterlab; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Requires-Dist: coverage; extra == "test"
+Requires-Dist: pandas; extra == "test"
+Requires-Dist: scikit-learn; extra == "test"
+Requires-Dist: flake8; extra == "test"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: furo; extra == "docs"
+Requires-Dist: sphinx-multiversion; extra == "docs"
+
+[![cvi-header](https://github.com/AP6YC/FileStorage/blob/main/cvi/header.png?raw=true)][docs-dev-url]
+
+A Python package implementing both batch and incremental cluster validity indices (CVIs).
+
+| **Stable Docs**  | **Dev Docs** | **Build Status** | **Coverage** |
+|:----------------:|:------------:|:----------------:|:------------:|
+| [![Stable][docs-stable-img]][docs-stable-url] | [![Dev][docs-dev-img]][docs-dev-url]| [![Build Status][ci-img]][ci-url] | [![Codecov][codecov-img]][codecov-url] |
+| **Version** | **Issues** | **Downloads** | **Zenodo DOI** |
+| [![version][version-img]][version-url] | [![issues][issues-img]][issues-url] | [![Downloads][downloads-img]][downloads-url] |  [![DOI][zenodo-img]][zenodo-url] |
+
+[downloads-img]: https://static.pepy.tech/badge/cvi
+[downloads-url]: https://pepy.tech/project/cvi
+
+[zenodo-img]: https://zenodo.org/badge/526280198.svg
+[zenodo-url]: https://zenodo.org/badge/latestdoi/526280198
+
+[docs-stable-img]: https://img.shields.io/badge/docs-stable-blue.svg
+[docs-stable-url]: https://AP6YC.github.io/cvi/main
+
+[docs-dev-img]: https://img.shields.io/badge/docs-dev-blue.svg
+[docs-dev-url]: https://AP6YC.github.io/cvi/develop
+
+[ci-img]: https://github.com/AP6YC/cvi/actions/workflows/Test.yml/badge.svg
+[ci-url]: https://github.com/AP6YC/cvi/actions/workflows/Test.yml
+
+[codecov-img]: https://codecov.io/gh/AP6YC/cvi/branch/main/graph/badge.svg
+[codecov-url]: https://codecov.io/gh/AP6YC/cvi
+
+[version-img]: https://img.shields.io/pypi/v/cvi.svg
+[version-url]: https://pypi.org/project/cvi
+
+[issues-img]: https://img.shields.io/github/issues/AP6YC/cvi?style=flat
+[issues-url]: https://github.com/AP6YC/cvi/issues
+
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Cluster Validity Indices](#cluster-validity-indices)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Quickstart](#quickstart)
+  - [Detailed Usage](#detailed-usage)
+- [Implemented CVIs](#implemented-cvis)
+- [History](#history)
+- [Acknowledgements](#acknowledgements)
+  - [Derivation](#derivation)
+  - [Authors](#authors)
+  - [Related Projects](#related-projects)
+  - [Assets](#assets)
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+
+## Cluster Validity Indices
+
+Say you have a clustering algorithm that clusters a set of samples containing features of some kind and some dimensionality.
+Great!
+That was a lot of work, and you should feel accomplished.
+But how do you know that the algorithm performed _well_?
+By definition, you wouldn't have the _true_ label belonging to each sample (if one could even exist in your context), just the label prescribed by your clustering algorithm.
+
+**Enter Cluster Validity Indices (CVIs)**.
+
+CVIs are metrics of cluster partitioning when true cluster labels are unavailable.
+Each operates on only the information available (i.e., the provided samples of features and the labels prescribed by the clustering algorithm) and produces a _metric_, a number that goes up or down according to how well the CVI believes the clustering algorithm appears to, well, _cluster_.
+Clustering well in this context means correctly partitioning (i.e., separating) the data rather than prescribing too many different clusters (over partitioning) or too few (under partitioning).
+Every CVI itself also behaves differently in terms of the range and scale of their numbers.
+**Furthermore, each CVI has an original batch implementation and incremental implementation that are equivalent**.
+
+The `cvi` Python package contains a variety of these batch and incremental CVIs.
+
+## Installation
+
+The `cvi` package is listed on PyPI, so you may install the latest version with
+
+```python
+pip install cvi
+```
+
+You can also specify a version to install in the usual way with
+
+```python
+pip install cvi==v0.6.0
+```
+
+Alternatively, you can manually install a release from the [releases page](https://github.com/AP6YC/cvi/releases) on GitHub.
+
+## Usage
+
+### Quickstart
+
+Create a CVI object and compute the criterion value in batch with `get_cvi`:
+
+```python
+# Import the library
+import cvi
+# Create a Calinski-Harabasz (CH) CVI object
+my_cvi = cvi.CH()
+# Load some data from some clustering algorithm
+samples, labels = load_some_clustering_data()
+# Compute the final criterion value in batch
+criterion_value = my_cvi.get_cvi(samples, labels)
+```
+
+or do it incrementally, also with `get_cvi`:
+
+```python
+# Datasets are numpy arrays
+import numpy as np
+# Create a container for criterion values
+n_samples = len(labels)
+criterion_values = np.zeros(n_samples)
+# Iterate over the data
+for ix in range(n_samples):
+    criterion_values = my_cvi.get_cvi(samples[ix, :], labels[ix])
+```
+
+### Detailed Usage
+
+The `cvi` package contains a set of implemented CVIs with batch and incremental update methods.
+Each CVI is a standalone stateful object inheriting from a base class `CVI`, and all `CVI` functions are object methods, such as those that update parameters and return the criterion value.
+
+Instantiate a CVI of you choice with the default constructor:
+
+```python
+# Import the package
+import cvi
+# Import numpy for some data handling
+import numpy as np
+
+# Instantiate a Calinski-Harabasz (CH) CVI object
+my_cvi = cvi.CH()
+```
+
+CVIs are instantiated with their acronyms, with a list of all implemented CVIS being found in the [Implemented CVIs](#implemented-cvis) section.
+
+A batch of data is assumed to be a numpy array of samples and a numpy vector of integer labels.
+
+```python
+# Load some data
+samples, labels = my_clustering_alg(some_data)
+```
+
+> **NOTE**:
+>
+> The `cvi` package assumes the Numpy **row-major** convention where rows are individual samples and columns are features.
+> A batch dataset is then `[n_samples, n_features]` large, and their corresponding labels are `[n_samples]` large.
+
+You may compute the final criterion value with a batch update all at once with `CVI.get_cvi`
+
+```python
+# Get the final criterion value in batch mode
+criterion_value = my_cvi.get_cvi(samples, labels)
+```
+
+or you may get them incrementally with the same method, where you pass instead just a single numpy vector of features and a single integer label.
+The incremental methods are used automatically based upon the dimensions of the data that is passed.
+
+```python
+# Create a container for the criterion value after each sample
+n_samples = len(labels)
+criterion_values = np.zeros(n_samples)
+
+# Iterate across the data and store the criterion value over time
+for ix in range(n_samples):
+    sample = samples[ix, :]
+    label = labels[ix]
+    criterion_values[ix] = my_cvi.get_cvi(sample, label)
+```
+
+> **NOTE**:
+>
+> Currently only using _either_ batch _or_ incremental methods is supported; switching from batch to incremental updates with the same is not yet implemented.
+
+## Implemented CVIs
+
+The following CVIs have been implemented as of the latest version of `cvi`:
+
+- **CH**: Calinski-Harabasz
+- **cSIL**: Centroid-based Silhouette
+- **DB**: Davies-Bouldin
+- **GD43**: Generalized Dunn's Index 43.
+- **GD53**: Generalized Dunn's Index 53.
+- **PS**: Partition Separation.
+- **rCIP**: (Renyi's) representative Cross Information Potential.
+- **WB**: WB-index.
+- **XB**: Xie-Beni.
+
+## History
+
+- 8/18/2022: Initialize project.
+- 9/8/2022: First release on PyPi and initiate GitFlow.
+- 8/10/2023: v0.5.1 released.
+- 5/31/2024: Updated documentation.
+
+## Acknowledgements
+
+### Derivation
+
+The incremental and batch CVI implementations in this package are largely derived from the following Julia language implementations by the same authors of this package:
+
+- [ClusterValidityIndices.jl](https://github.com/AP6YC/ClusterValidityIndices.jl)
+
+### Authors
+
+The principal authors of the `cvi` pacakge are:
+
+- Sasha Petrenko <petrenkos@mst.edu>
+- Nik Melton <nmmz76@mst.edu>
+
+### Related Projects
+
+If this package is missing something that you need, feel free to check out some related Python cluster validity packages:
+
+- [validclust](https://github.com/crew102/validclust)
+- [clusterval](https://github.com/Nuno09/clusterval)
+
+### Assets
+
+#### Fonts
+
+The following font is used in the logo:
+
+- [Ethnocentric Font Family](https://www.1001fonts.com/ethnocentric-font.html)
+
+#### Icons
+
+The icon for the project is taken from:
+
+- [Cluster computing icons created by IconBaandar - Flaticon](https://www.flaticon.com/free-icons/cluster-computing) ([cluster-5464694](https://www.flaticon.com/free-icon/cluster_5464694))
