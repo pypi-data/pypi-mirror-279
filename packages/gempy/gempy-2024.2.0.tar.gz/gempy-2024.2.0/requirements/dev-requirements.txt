@@ -1,0 +1,7 @@
+-r optional-requirements.txt
+
+pytest
+subsurface~=2024.2.0
+
+# Testing
+pytest-approvaltests

@@ -1,0 +1,15 @@
+gempy_engine~=2024.2.0
+
+[base]
+gempy_engine~=2024.2.0
+gempy_viewer~=2024.2.0
+pandas
+
+[opt]
+gempy_engine~=2024.2.0
+gempy_viewer~=2024.2.0
+pandas
+gempy_plugins
+pooch
+scipy
+scikit-image
