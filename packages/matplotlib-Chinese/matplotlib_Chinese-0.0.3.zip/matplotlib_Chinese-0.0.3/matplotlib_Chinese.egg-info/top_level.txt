@@ -1,0 +1,6 @@
+PIL
+dateutil
+matplotlib
+mpl_toolkits
+pylab
+six
