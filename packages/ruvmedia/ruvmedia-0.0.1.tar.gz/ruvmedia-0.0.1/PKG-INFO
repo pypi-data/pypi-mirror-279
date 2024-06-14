@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: ruvmedia
+Version: 0.0.1
+Summary: 
+Author: Yngvi Thor Sigurjonsson
+Author-email: blitzkopf@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.5,<4.0.0)
+Requires-Dist: gql (>=3.5.0,<4.0.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Description-Content-Type: text/markdown
+
+# RÚV Media
+Python package to access RÚV media content.
+
