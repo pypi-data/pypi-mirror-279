@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "elixir-ai"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Chang <andrew@acalabs.xyz>"]
+readme = "README.md"
+packages = [
+    { include = "elixir" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiohttp = "^3.9.5"
+opentelemetry-sdk = "^1.24.0"
+python-dotenv = "^1.0.1"
+aioboto3 = "^13.0.0"
+posthog = "^3.5.0"
+sentry-sdk = "^2.3.1"
+ipython = "^8.25.0"
+opentelemetry-api = "^1.25.0"
+opentelemetry-exporter-otlp-proto-http = "^1.25.0"
+opentelemetry-exporter-otlp-proto-grpc = "^1.25.0"
+colorama = "^0.4.6"
+opentelemetry-semantic-conventions-ai = "^0.3.1"
+opentelemetry-instrumentation-mistralai = "^0.22.0"
+opentelemetry-instrumentation-openai = "^0.22.0"
+opentelemetry-instrumentation-ollama = "^0.22.0"
+opentelemetry-instrumentation-anthropic = "^0.22.0"
+opentelemetry-instrumentation-cohere = "^0.22.0"
+opentelemetry-instrumentation-pinecone = "^0.22.0"
+opentelemetry-instrumentation-qdrant = "^0.22.0"
+opentelemetry-instrumentation-langchain = "^0.22.0"
+opentelemetry-instrumentation-chromadb = "^0.22.0"
+opentelemetry-instrumentation-transformers = "^0.22.0"
+opentelemetry-instrumentation-llamaindex = "^0.22.0"
+opentelemetry-instrumentation-milvus = "^0.22.0"
+opentelemetry-instrumentation-haystack = "^0.22.0"
+opentelemetry-instrumentation-bedrock = "^0.22.0"
+opentelemetry-instrumentation-replicate = "^0.22.0"
+opentelemetry-instrumentation-vertexai = "^0.22.0"
+opentelemetry-instrumentation-watsonx = "^0.22.0"
+opentelemetry-instrumentation-weaviate = "^0.22.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+openai = "^1.31.0"
+vcrpy = "^6.0.1"
+pytest-recording = "^0.13.1"
+pytest-asyncio = "^0.23.7"
+mock = "^5.1.0"
+flake8 = "^7.0.0"
+black = "^24.4.2"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
