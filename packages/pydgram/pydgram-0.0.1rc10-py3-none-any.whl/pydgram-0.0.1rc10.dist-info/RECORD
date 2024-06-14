@@ -1,0 +1,6 @@
+pydgram/__init__.py,sha256=Q2ByiDXWXTsvh9KA6j-REtOemUEsQKkNdU3V24GgqNc,55
+pydgram/DGram.pyd,sha256=R77WFmFuttqT0q69W4kQ5dGe4VrwzRT29gJo5YY-cjw,121344
+pydgram/DGram.so,sha256=ZGORDU8CoMw25awyX2INOn0ijM-Kfm1eEmqEef3usyc,740008
+pydgram-0.0.1rc10.dist-info/WHEEL,sha256=vxFmldFsRN_Hx10GDvsdv1wroKq8r5Lzvjp6GZ4OO8c,88
+pydgram-0.0.1rc10.dist-info/METADATA,sha256=1hLkhZjN7wkiDQYePdAZBT4-f6LT1KqZjQFtH6iexko,542
+pydgram-0.0.1rc10.dist-info/RECORD,,
