@@ -1,0 +1,9 @@
+flarenet/__init__.py,sha256=srA7Q4yGulU_Aiv1r4ju02ZR2i8hx4-u8_Z4kVrFsvc,971
+flarenet/_activation.py,sha256=rTWRPFJuSsGmNR-udvf5Av7owZJh4a1J-NLniFEafYU,5944
+flarenet/_combine.py,sha256=W9RDSsZp_JmhaSPqUah-34J5ONeZcfmySMphRGZO09o,1460
+flarenet/_linear.py,sha256=rHv5xfI5clPggSOP5DGYE5fbfnvfEBovVwGXDtig3qY,3426
+flarenet/_norm.py,sha256=6ke-kBdb8s67JnGE4nFWDioV1Og3Yjl3zjcJ4RfD5X4,808
+flarenet-0.3.7.dist-info/METADATA,sha256=ksLK_lh6AWwZjCPYRapyDtf5rznI-dCjD6SYFjyZrcw,361
+flarenet-0.3.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flarenet-0.3.7.dist-info/top_level.txt,sha256=jQgVcxlTcEaIp1CjUoA0BqjV8msacXgzgG_ZxhJr26Q,9
+flarenet-0.3.7.dist-info/RECORD,,
