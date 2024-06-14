@@ -1,0 +1,53 @@
+[build-system]
+requires = [
+    "setuptools>=43.0.0",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "objr"
+description = "objects runtime"
+version = "131"
+authors = [
+    {name = "xobjectz", email = "objx@proton.me"},
+]
+readme = "README.rst"
+license = {text="Public Domain"}
+dependencies = [
+    "objx==82",
+]
+classifiers = [ 
+    'Development Status :: 3 - Alpha',
+    'License :: Public Domain',
+    'Operating System :: Unix',
+    'Programming Language :: Python',
+    'Topic :: Utilities'
+]
+
+
+[project.urls]
+"home" = "https://pypi.org/project/objr"
+"bugs" = "https://github.com/xobjectz/objr/issues"
+"source" = "https://github.com/xobjectz/objr"
+
+
+[tool.setuptools]
+packages = [
+    'objr'
+]
+zip-safe=true
+
+
+[tool.setuptools.data-files]
+"share/doc/objr" = [
+    "README.rst"
+]
+
+[tool.setuptools.exclude-package-data]
+"*" = [
+       "env*",
+       "html*",
+       "test*"
+      ]
