@@ -1,0 +1,2 @@
+[gui_scripts]
+revhubinterface = REVHubInterface.__main__:initwindow
