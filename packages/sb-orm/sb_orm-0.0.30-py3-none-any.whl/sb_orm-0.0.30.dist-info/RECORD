@@ -1,0 +1,10 @@
+sb_orm/Db.py,sha256=20sJAiSdcvBjFcSoudyTrWQsGO6Obnv_d2p1IuAH6dk,5622
+sb_orm/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sb_orm/config.py,sha256=jObFoXEQEvSGhuQYTvLqOAABHJJ9GXPz6gcfUjd8Ejg,400
+sb_orm/models.py,sha256=GEmDWtYIowFQyIbBD3h-GX_LS8MiRsJmSK24FRucRY0,1624
+sb_orm/tasks.py,sha256=gAPVQzGGJ4WtlMNoyJK5mLPDAQw3FvYFm47jgO7Hj3Y,3506
+sb_orm-0.0.30.dist-info/LICENSE,sha256=k_5AI30AbFeOh46rmtokBusT6twJBCbIYEoOYPiPDUo,1082
+sb_orm-0.0.30.dist-info/METADATA,sha256=VYufFJyIDtiLZbGsojoyMCBGZxfSDzL5lzRHLPkguCs,3684
+sb_orm-0.0.30.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sb_orm-0.0.30.dist-info/top_level.txt,sha256=cYQ8wV2jh_bCShYnE2_mTa1DLymI8pPBJmQ2gJnfpAY,7
+sb_orm-0.0.30.dist-info/RECORD,,
