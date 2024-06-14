@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+flyplotlib/__init__.py
+flyplotlib/core.py
+flyplotlib.egg-info/PKG-INFO
+flyplotlib.egg-info/SOURCES.txt
+flyplotlib.egg-info/dependency_links.txt
+flyplotlib.egg-info/requires.txt
+flyplotlib.egg-info/top_level.txt
+flyplotlib/data/fly.svg
+flyplotlib/tests/__init__.py
+flyplotlib/tests/test_core.py
