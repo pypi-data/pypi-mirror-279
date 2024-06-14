@@ -1,0 +1,12 @@
+zhmc_log_forwarder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zhmc_log_forwarder/version.py,sha256=IRYDyPkjRwm6aHc8bAq_m6XnDD71BxoP3XH279gh5Fs,938
+zhmc_log_forwarder/zhmc_log_forwarder.py,sha256=w0mU_NZnzlkX69jcf_ZHMRO9G1_TOLLut52D2OOq8rQ,82745
+zhmc_log_forwarder/zhmc_log_messages.yml,sha256=a1fHvTHmrIr3zRTAr9BjEyh1ALy898_e9P5bzwCpVz8,30773
+zhmc_log_forwarder-0.12.0.dist-info/AUTHORS.md,sha256=R_raVBJUQlCFgVHWOqarnK3BZa_757fjIbjlztdel5A,215
+zhmc_log_forwarder-0.12.0.dist-info/LICENSE,sha256=KVBLwgJgmJxFWwMWHU81w_-AS8OXTJem7rEkNdBqS74,10143
+zhmc_log_forwarder-0.12.0.dist-info/METADATA,sha256=tw5neQDSHWN44PNTH9IbtrZmqYOZ5CZh8fUQ406s7Y4,5211
+zhmc_log_forwarder-0.12.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+zhmc_log_forwarder-0.12.0.dist-info/entry_points.txt,sha256=60_4qRcdYBbkhOEGTr5DBsEO0SQ5gpvNccYZv8PuwjU,82
+zhmc_log_forwarder-0.12.0.dist-info/top_level.txt,sha256=L2EpDNYiae0NuIAmzJEjZpJJexjW_E6gYBNUZyea9mQ,19
+zhmc_log_forwarder-0.12.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+zhmc_log_forwarder-0.12.0.dist-info/RECORD,,
