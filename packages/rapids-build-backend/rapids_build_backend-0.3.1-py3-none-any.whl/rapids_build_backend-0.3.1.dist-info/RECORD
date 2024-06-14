@@ -1,0 +1,10 @@
+rapids_build_backend/__init__.py,sha256=hVJpbKqT2G6z0Dyd9MYmaxlAXVveLX4PVJaaICyoxAI,42
+rapids_build_backend/build.py,sha256=S9DHBPU9EB9j3oUVwrJs8P9pC35Ac5b11wqYWFw9DHo,2607
+rapids_build_backend/config.py,sha256=8RGZHBPEM2cuf8UWCWZ5EC4gAAOWgjzeLN564102zeY,3429
+rapids_build_backend/impls.py,sha256=insKOhFryCDga34ITSjv4ajxGCotUtxIlWej73K8wu4,14696
+rapids_build_backend/utils.py,sha256=B501cUU7Zs0dat9WVpsHUuV8-sFdbubmEmU7hVM7EF4,882
+rapids_build_backend-0.3.1.dist-info/LICENSE,sha256=4YCpjWCbYMkMQFW47JXsorZLOaP957HwmP6oHW2_ngM,11348
+rapids_build_backend-0.3.1.dist-info/METADATA,sha256=0UfQVP5iWGGA8I_mVSgjXwinYHXh7Ete0IE_Gmk1GNU,4757
+rapids_build_backend-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rapids_build_backend-0.3.1.dist-info/top_level.txt,sha256=rB4DUarXzv8FCCGu9xFp_FUEaZBUvTzJpcLW-itRjyY,21
+rapids_build_backend-0.3.1.dist-info/RECORD,,
