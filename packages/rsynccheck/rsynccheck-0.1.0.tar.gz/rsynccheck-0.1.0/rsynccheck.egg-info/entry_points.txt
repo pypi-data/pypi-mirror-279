@@ -1,0 +1,2 @@
+[console_scripts]
+rsynccheck = rsynccheck.cli:main
