@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: nicovideo.py
+Version: 4.0.1
+Summary: ニコニコ動画のAPIを使用して、動画や投稿者などの情報を取得するライブラリです。
+Home-page: https://github.com/okaits/nicovideo.py
+License: MIT
+Author: okaits7534
+Author-email: okaits@okaits7534.net
+Maintainer: okaits7534
+Maintainer-email: okaits@okaits7534.net
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Japanese
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Dist: bs4 (==0.0.2)
+Requires-Dist: json5 (==0.9.25)
+Project-URL: Documentation, https://github.com/okaits/nicovideo.py/tree/master/docs/
+Project-URL: Repository, https://github.com/okaits/nicovideo.py
+Description-Content-Type: text/markdown
+
+# nicovideo.py
+ニコニコ動画のAPIを使用して、動画や投稿者などの情報を取得します。
+
+[Sphinx製ドキュメント](docs/)  
+[Examples](exaemples/)
