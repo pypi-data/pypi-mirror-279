@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tool-setup>
+  <required class="Products.CMFPlacefulWorkflow.PlacefulWorkflowTool.PlacefulWorkflowTool"
+            tool_id="portal_placeful_workflow"
+  />
+</tool-setup>
