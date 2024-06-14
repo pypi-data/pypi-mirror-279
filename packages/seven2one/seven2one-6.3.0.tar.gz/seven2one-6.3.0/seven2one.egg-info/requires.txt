@@ -1,0 +1,10 @@
+pandas<2.0.0,>=1.4.2
+gql==3.0.0
+pytz
+tzlocal
+pyperclip
+loguru
+requests
+requests_toolbelt
+requests_oauthlib
+rfc3339
