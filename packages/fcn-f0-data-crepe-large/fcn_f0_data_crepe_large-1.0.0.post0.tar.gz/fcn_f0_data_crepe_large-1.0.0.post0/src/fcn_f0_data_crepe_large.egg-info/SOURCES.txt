@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+pyproject.toml
+src/fcn_f0/data/crepe_large/weights.h5
+src/fcn_f0_data_crepe_large.egg-info/PKG-INFO
+src/fcn_f0_data_crepe_large.egg-info/SOURCES.txt
+src/fcn_f0_data_crepe_large.egg-info/dependency_links.txt
+src/fcn_f0_data_crepe_large.egg-info/top_level.txt
