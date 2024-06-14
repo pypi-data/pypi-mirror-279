@@ -1,0 +1,2 @@
+[console_scripts]
+octomy-batch = octomy.batch.cli:main
