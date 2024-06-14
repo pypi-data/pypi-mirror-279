@@ -1,0 +1,9 @@
+tg_signer/__init__.py,sha256=rPSfWgIeq2YWVPyESOAwCBt8vftsTpIkuLAGDEzyRQc,22
+tg_signer/__main__.py,sha256=s2SDTlEwM2-JGOn7cztkr-T6p55XA119OdpnPZHXiZA,66
+tg_signer/signer.py,sha256=fJaanpZKNaFceXAL_2MDl0AGokciYzcN9D5X1uM7MaI,9906
+tg_signer-0.1.5.dist-info/LICENSE,sha256=uboMSnqVzfTUeV4BHKGYKJ5lMsnds2Hn8Cu9HvBToso,1493
+tg_signer-0.1.5.dist-info/METADATA,sha256=7hPIbY07vYOyuksbOMSW2BpxTNPkbFTOj6Q4TodZ-Fs,1418
+tg_signer-0.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tg_signer-0.1.5.dist-info/entry_points.txt,sha256=IboYbahiug2MFDrQyQV3-0icTzFKy9NYEpecGsQKy74,53
+tg_signer-0.1.5.dist-info/top_level.txt,sha256=BD9Dps_CJYSEiLe-uRmyduwEdeN2LNr0Or5LLMy3lMA,10
+tg_signer-0.1.5.dist-info/RECORD,,
