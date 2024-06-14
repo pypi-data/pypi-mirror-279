@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pyeditorconfig/__init__.py
+pyeditorconfig/pyeditorconfig.py
+pyeditorconfig.egg-info/PKG-INFO
+pyeditorconfig.egg-info/SOURCES.txt
+pyeditorconfig.egg-info/dependency_links.txt
+pyeditorconfig.egg-info/top_level.txt
+tests/test_pyeditorconfig.py
