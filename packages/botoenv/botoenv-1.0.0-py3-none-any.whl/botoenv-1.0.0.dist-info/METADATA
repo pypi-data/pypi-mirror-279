@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: botoenv
+Version: 1.0.0
+Summary: Manage AWS environment variables using botocore
+Home-page: https://github.com/globality-corp/botoenv
+Author: Globality Engineering
+Author-email: engineering@globality.com
+License-File: LICENSE
+Requires-Dist: botocore >=1.12.248
+Provides-Extra: lint
+Requires-Dist: flake8 >=3.5.0 ; extra == 'lint'
+Requires-Dist: flake8-isort >=3.0.1 ; extra == 'lint'
+Requires-Dist: flake8-print >=3.1.0 ; extra == 'lint'
+Requires-Dist: isort <5 ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: coverage >=4.0.3 ; extra == 'test'
+Requires-Dist: parameterized >=0.6.1 ; extra == 'test'
+Requires-Dist: mock >=1.0.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.9.0 ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+
