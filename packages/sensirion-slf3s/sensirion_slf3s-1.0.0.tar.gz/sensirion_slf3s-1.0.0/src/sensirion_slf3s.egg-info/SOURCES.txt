@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/sensirion_slf3s/__init__.py
+src/sensirion_slf3s/base_classes.py
+src/sensirion_slf3s/sensirion_slf3s.py
+src/sensirion_slf3s.egg-info/PKG-INFO
+src/sensirion_slf3s.egg-info/SOURCES.txt
+src/sensirion_slf3s.egg-info/dependency_links.txt
+src/sensirion_slf3s.egg-info/requires.txt
+src/sensirion_slf3s.egg-info/top_level.txt
