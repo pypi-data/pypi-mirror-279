@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: ftuutils
+Version: 0.0.0
+Summary: Utilities to create FTU graph templates
+Author-email: "Jagir R. Hussan" <r.jagir@auckland.ac.nz>
+License: MIT License
+        
+        Copyright (c) 2024 Jagirhussan
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: FTU,Tissue,Cells,Port-Hamiltonian,Bond Graphs,12 Labours
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FTUUtils
+
+A python library to create Functional Tissue Units using celltype models and their interconnection information. Library was developed to support the NZ MBIE 12 Labours project.
+
+### Context
+Modelling the human physiology is a complex task. The complexity is not just limited to characterising the physiological processes in a quantifiable framework, but managing the models, connecting them and reusing them to represent the multiscale, spatio-temporal processes. Functional Tissue Units (FTU) provide a concept to modularize physiology, develop models and integrate them in a hierarchical and causally tractable manner.
+Futher details regarding FTUs, modelling approach and functionality provided by this library are available in the [TechnicalReport](TechnicalReport.pdf).
+A workflow create FTU from given interconnection of cells, their dynamics is available as a [jupyter notebook](tests/ftuworkflow.ipynb).
+
+### Support
+Users/Developers can report issues, request enhancements and features through github.
