@@ -1,0 +1,172 @@
+# (C) Copyright IBM 2023.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#
+# Any modifications or derivative works of this code must retain this
+# copyright notice, and modified files need to carry a notice indicating
+# that they have been altered from the originals.
+
+"""ffsim is a software library for fast simulation of fermionic quantum circuits."""
+
+from ffsim import contract, linalg, optimize, qiskit, random, testing
+from ffsim.cistring import init_cache
+from ffsim.gates import (
+    apply_diag_coulomb_evolution,
+    apply_fsim_gate,
+    apply_givens_rotation,
+    apply_hop_gate,
+    apply_num_interaction,
+    apply_num_num_interaction,
+    apply_num_op_prod_interaction,
+    apply_num_op_sum_evolution,
+    apply_on_site_interaction,
+    apply_orbital_rotation,
+    apply_tunneling_interaction,
+)
+from ffsim.hamiltonians import (
+    DiagonalCoulombHamiltonian,
+    DoubleFactorizedHamiltonian,
+    MolecularHamiltonian,
+    SingleFactorizedHamiltonian,
+)
+from ffsim.molecular_data import MolecularData
+from ffsim.operators import (
+    FermionAction,
+    FermionOperator,
+    cre,
+    cre_a,
+    cre_b,
+    des,
+    des_a,
+    des_b,
+    fermi_hubbard_1d,
+    fermi_hubbard_2d,
+    number_operator,
+)
+from ffsim.protocols import (
+    SupportsApplyUnitary,
+    SupportsApproximateEquality,
+    SupportsDiagonal,
+    SupportsFermionOperator,
+    SupportsLinearOperator,
+    SupportsTrace,
+    apply_unitary,
+    approx_eq,
+    diag,
+    fermion_operator,
+    linear_operator,
+    trace,
+)
+from ffsim.spin import Spin
+from ffsim.states import (
+    ProductStateSum,
+    StateVector,
+    dim,
+    dims,
+    expectation_one_body_power,
+    expectation_one_body_product,
+    hartree_fock_state,
+    indices_to_strings,
+    one_hot,
+    rdm,
+    slater_determinant,
+    slater_determinant_rdm,
+    spin_square,
+    strings_to_indices,
+)
+from ffsim.trotter import (
+    simulate_qdrift_double_factorized,
+    simulate_trotter_double_factorized,
+)
+from ffsim.variational import (
+    GivensAnsatzOp,
+    GivensAnsatzOperator,
+    HopGateAnsatzOperator,
+    NumNumAnsatzOpSpinBalanced,
+    RealUCJOperator,
+    UCJOperator,
+    UCJOpSpinBalanced,
+    UCJOpSpinless,
+    UCJOpSpinUnbalanced,
+    multireference_state,
+    multireference_state_prod,
+)
+
+__all__ = [
+    "DiagonalCoulombHamiltonian",
+    "DoubleFactorizedHamiltonian",
+    "FermionAction",
+    "FermionOperator",
+    "GivensAnsatzOp",
+    "GivensAnsatzOperator",
+    "HopGateAnsatzOperator",
+    "MolecularData",
+    "MolecularHamiltonian",
+    "NumNumAnsatzOpSpinBalanced",
+    "ProductStateSum",
+    "RealUCJOperator",
+    "SingleFactorizedHamiltonian",
+    "Spin",
+    "StateVector",
+    "SupportsApplyUnitary",
+    "SupportsApproximateEquality",
+    "SupportsDiagonal",
+    "SupportsFermionOperator",
+    "SupportsLinearOperator",
+    "SupportsTrace",
+    "UCJOperator",
+    "UCJOpSpinBalanced",
+    "UCJOpSpinUnbalanced",
+    "UCJOpSpinless",
+    "apply_diag_coulomb_evolution",
+    "apply_fsim_gate",
+    "apply_givens_rotation",
+    "apply_hop_gate",
+    "apply_num_interaction",
+    "apply_num_num_interaction",
+    "apply_num_op_prod_interaction",
+    "apply_num_op_sum_evolution",
+    "apply_on_site_interaction",
+    "apply_orbital_rotation",
+    "apply_tunneling_interaction",
+    "apply_unitary",
+    "approx_eq",
+    "contract",
+    "cre",
+    "cre_a",
+    "cre_b",
+    "des",
+    "des_a",
+    "des_b",
+    "diag",
+    "dim",
+    "dims",
+    "expectation_one_body_power",
+    "expectation_one_body_product",
+    "fermi_hubbard_1d",
+    "fermi_hubbard_2d",
+    "fermion_operator",
+    "hartree_fock_state",
+    "indices_to_strings",
+    "init_cache",
+    "linalg",
+    "linear_operator",
+    "multireference_state",
+    "multireference_state_prod",
+    "number_operator",
+    "one_hot",
+    "optimize",
+    "qiskit",
+    "random",
+    "rdm",
+    "simulate_qdrift_double_factorized",
+    "simulate_trotter_double_factorized",
+    "slater_determinant",
+    "slater_determinant_rdm",
+    "spin_square",
+    "strings_to_indices",
+    "testing",
+    "trace",
+]
