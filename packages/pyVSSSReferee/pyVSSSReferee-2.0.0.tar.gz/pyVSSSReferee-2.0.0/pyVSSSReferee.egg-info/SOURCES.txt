@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+pyVSSSReferee/RefereeComm.py
+pyVSSSReferee/__init__.py
+pyVSSSReferee.egg-info/PKG-INFO
+pyVSSSReferee.egg-info/SOURCES.txt
+pyVSSSReferee.egg-info/dependency_links.txt
+pyVSSSReferee.egg-info/requires.txt
+pyVSSSReferee.egg-info/top_level.txt
+pyVSSSReferee/protocols/__init__.py
+pyVSSSReferee/protocols/vssref_command_pb2.py
+pyVSSSReferee/protocols/vssref_common_pb2.py
+pyVSSSReferee/protocols/vssref_placement_pb2.py
+tests/__init__.py
+tests/test_RefereeComm.py
