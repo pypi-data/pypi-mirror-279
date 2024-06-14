@@ -1,0 +1,10 @@
+tabforge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tabforge/error.py,sha256=ORDhKW3AhpP6YiIjY2_iWUXVJokQAyHMljA6IEXUTAc,211
+tabforge/filters.py,sha256=QnR4sKA3haZtJqbuq9LXG38JENNHmrMW0CvES6L-mAo,2103
+tabforge/main.py,sha256=5Y0zxkerNuTw6aXPqTRIBW5ve6WoARwuatFY3eRmBo0,1421
+tabforge/render.py,sha256=70whqir5VF-yISAEczPeevT6oSWY8tY1IeJfkm_rerw,3740
+tabforge-0.0.1.dist-info/LICENSE,sha256=CdfEtToSOzii5UaqNUDIGFSjpKvszn94yf-jiCA7XV0,1067
+tabforge-0.0.1.dist-info/METADATA,sha256=8qAvQ5GGXFfjcMjqjR0JXWxQHJU6WKgG2A0HfH3c-co,633
+tabforge-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tabforge-0.0.1.dist-info/entry_points.txt,sha256=5BEM8pkrJKyxp5CS1DM2n0RzlicvFVD5B9A3BXXPXbc,47
+tabforge-0.0.1.dist-info/RECORD,,
