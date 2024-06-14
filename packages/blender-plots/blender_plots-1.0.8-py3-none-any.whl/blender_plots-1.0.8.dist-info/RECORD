@@ -1,0 +1,12 @@
+blender_plots/__init__.py,sha256=3g9FdpBUJjSaQhYzEJ70ZB7bph5kkLP93BZEvLs7LJ8,216
+blender_plots/arrows.py,sha256=fofevqXLOaTecacdpNA0DH5CqUKw05jBq4i5IcuUjRk,5645
+blender_plots/blender_utils.py,sha256=HJmJXNQBy51O9HeAmo6sTsnFCwEqpKX0Az84zfRzxx0,10429
+blender_plots/marker_utils.py,sha256=W8RfGbqfK3biF-pI_F0hTa9KdoBx7JZZ1KYNkol7usI,2269
+blender_plots/plots_base.py,sha256=_lAGVs5fPKPtb5JHR2fFtgKEHU4U_tDTXdAVzAn9TrU,5453
+blender_plots/scatter.py,sha256=-6kAZ21Fy024GciOZKLjB84X6d-GkKeny9be18hlYTc,9484
+blender_plots/surface.py,sha256=avpUZAbeVyrzxHaGtXHrSwbaP57aDc8bMyTaXfyf1jo,3133
+blender_plots-1.0.8.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+blender_plots-1.0.8.dist-info/METADATA,sha256=m3t29MIDLEYpxxU2Dy2HMbhyiPh9WFHbvNFLRTZvLs8,268
+blender_plots-1.0.8.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+blender_plots-1.0.8.dist-info/top_level.txt,sha256=oowZPkZ4AWwTOxmOvDkA6f6em7A3oc50eUX-4_vOgWo,14
+blender_plots-1.0.8.dist-info/RECORD,,
