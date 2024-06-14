@@ -1,0 +1,13 @@
+hsfs[python]==3.8.0rc0
+hsml==3.8.0rc0
+pyhumps==1.6.1
+requests
+furl
+boto3
+pyjks
+mock
+tqdm
+
+[dev]
+ruff
+pytest
