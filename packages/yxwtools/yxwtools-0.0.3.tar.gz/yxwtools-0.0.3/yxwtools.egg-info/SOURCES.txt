@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+yxwtools/__init__.py
+yxwtools/audio_info.py
+yxwtools/format_conv.py
+yxwtools/resample.py
+yxwtools.egg-info/PKG-INFO
+yxwtools.egg-info/SOURCES.txt
+yxwtools.egg-info/dependency_links.txt
+yxwtools.egg-info/requires.txt
+yxwtools.egg-info/top_level.txt

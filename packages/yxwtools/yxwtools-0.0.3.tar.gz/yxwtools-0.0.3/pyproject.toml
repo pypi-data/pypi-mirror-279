@@ -1,0 +1,21 @@
+[project]
+name = "yxwtools"
+version = "0.0.3"
+authors = [
+  { name="yun", email="15515722313@163.com"},
+]
+description = "A utility toolkit for myself."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+        "pydub",
+    ]
+
+[project.urls]
+"Homepage" = "https://github.com/yuyun2000"
