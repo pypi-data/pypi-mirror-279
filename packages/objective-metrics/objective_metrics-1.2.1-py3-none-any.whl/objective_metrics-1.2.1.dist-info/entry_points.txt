@@ -1,0 +1,3 @@
+[console_scripts]
+objective_metrics_run=objective_metrics.objective_metrics_run:run
+
