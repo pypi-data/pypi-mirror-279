@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pyOrcas
+Version: 0.1.4
+Summary: A Python package for communicating with the Orca motor using Modbus.
+Home-page: https://github.com/dralexan/pyOrcas
+Author: Daniel Alexander
+Author-email: dralexander@irisdynamics.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pymodbus[serial]
+
+# pyOrcas
+
+A Python package for communicating with the Orca motor using Modbus.
+
+## Installation
+
+```sh
+pip install pyOrcas
