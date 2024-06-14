@@ -1,0 +1,11 @@
+permission_manager_drf/__init__.py,sha256=UIjEuNW4X5v8XIfliD1d0Y77Li7cnrTf8tmOk2Iyw-w,361
+permission_manager_drf/fields.py,sha256=E4FT7jXO4EtOMDDZeHxsbnnnZMbk_XgnWRS37YP77rA,3833
+permission_manager_drf/managers.py,sha256=KsNukMLPrzjCpFdcN7VrtpxC-e92vFaEixRVpUc5S30,2581
+permission_manager_drf/pagination.py,sha256=-wr4uxbCjWGRG2z2sV6MSOn2NAL46OQkL47-FBj2DNc,1373
+permission_manager_drf/permissions.py,sha256=YMC4XaCVxegyZO84wqEhXyKonDY8ORqfsVS92Ya9d7o,3158
+permission_manager_drf/settings.py,sha256=jS6I1a4UcJmj3uXN58khkvImeCmwxylPMfK-La_LRjQ,503
+permission_manager_drf/utils.py,sha256=VEvP828WNWqlMFdHhcsb4i06QhKtU7AGR6w_01Dlqxk,3380
+permission_manager_drf-0.3.0.dist-info/LICENSE,sha256=jZ8DCFESbLhFpJR8UvPJTCOz3Nu9LxfDz-AVWNOKWpc,1075
+permission_manager_drf-0.3.0.dist-info/METADATA,sha256=tN61e0MEpG-xbk23TcWWR4EHV5Dtubbrvdo7EldUenk,3382
+permission_manager_drf-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+permission_manager_drf-0.3.0.dist-info/RECORD,,

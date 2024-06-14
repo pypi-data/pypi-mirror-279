@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: permission-manager-drf
+Version: 0.3.0
+Summary: A simple way to manage object permissions in drf.
+Home-page: https://github.com/kindlycat/permission-manager-drf
+License: MIT
+Keywords: permissions,drf,rest framework
+Author: Grigory Mishchenko
+Author-email: grishkokot@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: djangorestframework (>=3.14.0,<4.0.0)
+Requires-Dist: permission-manager (>=0.5.0,<0.6.0)
+Project-URL: Repository, https://github.com/kindlycat/permission-manager-drf
+Description-Content-Type: text/markdown
+
+# Permission Manager for django rest framework
+
+![example workflow](https://github.com/kindlycat/permission-manager-drf/actions/workflows/tests.yml/badge.svg)
+[![codecov](https://codecov.io/gh/kindlycat/permission-manager-drf/graph/badge.svg?token=5XAFJZS6A8)](https://codecov.io/gh/kindlycat/permission-manager-drf)
+
+Use [permission_manager](https://github.com/kindlycat/permission-manager) for 
+django rest framework.
+
+Full documentation on [read the docs](https://permission-manager-drf.readthedocs.io/).
+
+## Install
+
+```bash
+pip install permission-manager-drf
+```
+
+## Example
+```python
+from django.db import models
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.decorators import action
+
+from permission_manager_drf import DRFPermissionManager, ManagerPermission
+from permission_manager import PermissionResult
+
+
+# Define permission manager
+class SomeModelPermissionManager(DRFPermissionManager):
+    def has_create_permission(self) -> bool:
+        return self.user.is_staff
+
+    def has_update_permission(self) -> bool:
+        return self.user.is_staff
+
+    def has_delete_permission(self) -> bool:
+        return self.user.is_staff
+
+    def has_view_permission(self) -> bool:
+        return True
+
+    def has_list_permission(self) -> bool:
+        return True
+
+    def has_custom_permission(self) -> bool:
+        return PermissionResult(
+            message="You can't do it",
+            value=self.user.is_staff,
+        )
+
+
+# Define model with permission manager attribute
+class SomeModel(models.Model):
+    permission_manager = SomeModelPermissionManager
+    ...
+
+
+# ViewSet
+class TestModelViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated, ManagerPermission]
+    ...
+
+    @action(detail=True)
+    def custom(self, request, **kwargs):
+        ...
+```
+That's all. Now every drf action will be checked by the permission manager.
+
+Also, you can use the serializer field for retrieve permissions you need.
+
+```python
+from permission_manager_drf import PermissionField
+from rest_framework.serializers import ModelSerializer
+
+class SomeModelSerializer(ModelSerializer):
+    permissions = PermissionField(actions=('view', 'custom'),)
+    ...
+
+"""
+Example output:
+{
+    ...,
+    'permissions': {
+        'view': {
+            'allow': True,
+            'messages': None,
+        },
+        'custom': {
+            'allow': False,
+            'messages': ["You can't do it"],
+        },
+    }
+}
+"""
+```
+
