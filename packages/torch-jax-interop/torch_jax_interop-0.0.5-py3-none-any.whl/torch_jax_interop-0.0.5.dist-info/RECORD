@@ -1,0 +1,16 @@
+torch_jax_interop/__init__.py,sha256=I9prkpgJv20769aDyWL8SpNJnBtmHl_s_ofQwwtfBRQ,3904
+torch_jax_interop/conftest.py,sha256=j9jKoYHmuVoP7mmn61nz7aFnNAuuhIxi3S9UzTAPGHY,6820
+torch_jax_interop/to_jax.py,sha256=6NASx26I4yU0x73hWbtznwnBHu_uRc7g5LpxXSQmbgU,5168
+torch_jax_interop/to_jax_module.py,sha256=7KjlDbd_6z3YpyJbrc67luR-VsEUta3DgWxJ9iJlFsg,9552
+torch_jax_interop/to_jax_module_test.py,sha256=8FOM_FnUp-0Equ4SCHQvXegz8FDoaEC6uYSHKWx6yhU,6048
+torch_jax_interop/to_jax_test.py,sha256=NR-jUiAR3GEQEJwnflMWbnUDJJwsKWvkT01rwEzkjHM,4844
+torch_jax_interop/to_torch.py,sha256=2aOuJ5z-ig_wZBpWLyUWxu32FLTP1bWmdf1ijnFAbbQ,4065
+torch_jax_interop/to_torch_module.py,sha256=fU1I_42oHOpEsnjj-lPZewchrkMZjGgnji6rs9CzvUI,25506
+torch_jax_interop/to_torch_module_test.py,sha256=rf5Nm4YjamXUF_KPmHJ7Bu85rWizVnhopPdjNwjBfIc,8556
+torch_jax_interop/to_torch_test.py,sha256=1_4w_uuIwn3ETb9VXpRdk9hrOkrW1QzHhmdY0xkNlNc,3173
+torch_jax_interop/types.py,sha256=6JL3Y1m7o-wCjGkCwu7Ej9q4pmlQ69r5U85_GcUyrB4,5955
+torch_jax_interop/utils.py,sha256=_uyuFgem0M0nea2GGJnWN3pInc9wHAXn-l_JNoj_7Jo,1961
+torch_jax_interop-0.0.5.dist-info/LICENSE,sha256=m7ZWWZEG_YW8CIHfkv-EbU3XTYv-yVKkYKzGlNum_F8,1074
+torch_jax_interop-0.0.5.dist-info/METADATA,sha256=zOMOSS_KDm9sCke4Vz-y4kO66Pr9hsuNiNFe8VdheLw,6730
+torch_jax_interop-0.0.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+torch_jax_interop-0.0.5.dist-info/RECORD,,
