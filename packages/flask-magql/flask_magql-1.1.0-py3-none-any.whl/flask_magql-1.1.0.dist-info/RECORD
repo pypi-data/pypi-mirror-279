@@ -1,0 +1,11 @@
+flask_magql/__init__.py,sha256=XDkQfXm8jxRRKCVS2YoJSd1QMXOCgvTs9TUz1vRoHEY,76
+flask_magql/_extension.py,sha256=ERIZJd-XtdACVkldM7ivcapkcHaUphXN1dJ36NtzqNE,4984
+flask_magql/_files.py,sha256=nhM-WsskOr9_mLnjt3QDlQZcSGuhQkYKnOBBz8x-_ks,2026
+flask_magql/_views.py,sha256=OsuvYc_bTPvXlPGM6KmAP_XZfjehP7PJO4QmRrPlUew,3756
+flask_magql/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_magql/templates/magql/conveyor.html,sha256=p3lPYyJyANcoJ7C9g0s2NLAX42Jn7N4qiCJpx_e9p2A,1486
+flask_magql/templates/magql/graphiql.html,sha256=g9q5xZQ-fSzlAM9DZT4H1d981JIxg735kZBrG71JQRg,1098
+flask_magql-1.1.0.dist-info/LICENSE.txt,sha256=OJ8jzVOD-7wzu_SkiPWGhQg7k_1G4R2FBn6tMdDe5qw,1064
+flask_magql-1.1.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+flask_magql-1.1.0.dist-info/METADATA,sha256=7OisCVxBCIbVbOeZarmNmQ__eaI-K-v2lFE0tQITwc4,1723
+flask_magql-1.1.0.dist-info/RECORD,,
