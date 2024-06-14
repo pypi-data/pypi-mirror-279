@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: cybercrypt
+Version: 1.0.0
+Summary: A versatile command-line tool for secure data transformation, hashing operations, and encryption algorithms.
+Home-page: https://github.com/UwimanaMuhiziElie/cybercrypt.git
+Author: El13
+Author-email: muhizielie01@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: pyfiglet
+Requires-Dist: colorama
+Requires-Dist: cryptography
+Requires-Dist: pytest-asyncio
+Requires-Dist: aiofiles
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+Requires-Dist: codecov ; extra == 'dev'
+
+UNKNOWN
+
