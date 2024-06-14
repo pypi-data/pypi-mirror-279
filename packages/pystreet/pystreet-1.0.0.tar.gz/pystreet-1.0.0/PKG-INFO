@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pystreet
+Version: 1.0.0
+Summary: Street address parsing and normalization
+Home-page: https://github.com/globality-corp/pystreet
+Author: Globality Engineering
+Author-email: engineering@globality.com
+Provides-Extra: test
+Provides-Extra: lint
+Provides-Extra: typehinting
+License-File: LICENSE
