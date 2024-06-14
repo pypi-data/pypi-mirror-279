@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+#[tool.hatch.version]
+#path = "src/__about__.py"
+
+# Information on the package
+[project]
+name = "HuLiDB"
+description = "A toolbox to generate and extract synthetic measurements from a hub-lidar, using HAWC2. The data is stored in a netCDF4 file format."
+version = "0.1.1"
+requires-python = ">= 3.8, <3.11"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    { name = "Esperanza Soto Sagredo", email = "espa@dtu.dk" }
+]
+
+dependencies = [
+    "xarray ~= 2023.4.2",
+    "numpy ~= 1.23.5",
+    "matplotlib ~= 3.7.0",
+    "netcdf4 ~= 1.6.3",
+    "pandas ~= 1.5.3",
+    "scipy ~= 1.10.0",
+    "wetb ~= 0.1.0"
+]
+
+
+[project.urls]
+documentation = "https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads"
+database = "https://data.dtu.dk/articles/dataset/_b_Numerical_hub-lidar_data_from_Mann-generated_b_b_turbulence_boxes_using_HAWC2_v13_1_and_DTU_10MW_b_b_reference_wind_turbine_b_/23904990"
+repository = "https://gitlab.windenergy.dtu.dk/continue/hublidardatabase"
+
+
+[tool.hatch.build]
+include = ['hublidardatabase/*']
