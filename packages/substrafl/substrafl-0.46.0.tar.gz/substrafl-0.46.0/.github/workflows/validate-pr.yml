@@ -1,0 +1,159 @@
+name: pr-validation
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pr-validation:
+    name: test-py-${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-22.04]
+        python: ["3.9", "3.10", "3.11"]
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: substrafl
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - uses: actions/cache@v3.0.8
+        id: cache
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ runner.os }}-${{ env.pythonLocation }}-pip-${{ hashFiles('substrafl/pyproject.toml') }}-${{ hashFiles  ('substrafl/docs/requirements.txt') }}-${{ hashFiles('substrafl/benchmark/camelyon/requirements.txt') }}
+      - name: Install lint checks
+        run: |
+          pip install --upgrade pip
+          pip install --upgrade pytest black flake8 pre-commit
+
+      - name: Code conventions
+        run: |
+          cd substrafl
+          pre-commit run --all-files
+
+      - uses: actions/checkout@v4
+        with:
+          repository: substra/substra-tools
+          path: substratools
+
+      - uses: actions/checkout@v4
+        with:
+          repository: substra/substra
+          path: substra
+
+      - name: Install package
+        run: |
+          pip install --upgrade -e substrafl[dev]
+          pip install --upgrade -e substra
+          pip install --upgrade -e substratools
+
+      - name: Run the fast local tests
+        run: |
+          cd substrafl
+          make COV_OPTIONS="--cov=substrafl --cov-append --cov-report=html:htmlcov" test-subprocess-fast
+
+      - name: Upload coverage artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage
+          path: substrafl/htmlcov
+
+  pr-validation-docs:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - uses: actions/cache@v3.0.8
+        id: cache
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ runner.os }}-${{ env.pythonLocation }}-pip-${{ hashFiles('substrafl/pyproject.toml') }}-${{ hashFiles  ('substrafl/docs/requirements.txt') }}-${{ hashFiles('substrafl/benchmark/camelyon/requirements.txt') }}
+
+      - uses: actions/checkout@v4
+        with:
+          repository: substra/substra
+          path: substra
+
+      - uses: actions/checkout@v4
+        with:
+          repository: substra/substra-tools
+          path: substratools
+
+      - name: Install Dependencies
+        run: |
+          pip install --upgrade ./substra
+          pip install --upgrade -e ./substratools
+          pip install --upgrade .[dev]
+          pip install --upgrade -r docs/requirements.txt
+
+      - name: Test docs
+        run: |
+          cd docs
+          make clean html
+
+  benchmark:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - uses: actions/checkout@v4
+        with:
+          path: substrafl
+
+      - uses: actions/checkout@v4
+        with:
+          repository: substra/substra-tools
+          path: substratools
+
+      - uses: actions/checkout@v4
+        with:
+          repository: substra/substra
+          path: substra
+
+      - uses: actions/cache@v3.0.8
+        id: cache
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ runner.os }}-${{ env.pythonLocation }}-pip-${{ hashFiles('substrafl/pyproject.toml') }}-${{ hashFiles  ('substrafl/docs/requirements.txt') }}-${{ hashFiles('substrafl/benchmark/camelyon/requirements.txt') }}
+
+      - uses: actions/cache@v3.0.8
+        id: data
+        with:
+          path: /home/runner/work/substrafl/data
+          key: data
+          # The benchmark data cache has to be updated manually if the data changes
+
+      - name: Install package
+        run: |
+          pip install --upgrade -e substrafl[dev]
+          pip install --upgrade -e substra
+          pip install --upgrade -e substratools
+          pip install --upgrade -r substrafl/benchmark/camelyon/requirements.txt
+
+      - name: Run the local benchmark
+        run: |
+          cd substrafl
+          mkdir -p /home/runner/work/substrafl/data/tiles_0.5mpp
+          python benchmark/camelyon/benchmarks.py \
+            --mode subprocess \
+            --nb-train-data-samples 2 \
+            --nb-test-data-samples 2 \
+            --batch-size 4 \
+            --n-local-steps 1 \
+            --n-rounds 2 \
+            --data-path /home/runner/work/substrafl/data
