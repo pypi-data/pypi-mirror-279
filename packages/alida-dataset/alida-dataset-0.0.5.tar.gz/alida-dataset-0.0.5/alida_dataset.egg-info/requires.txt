@@ -1,0 +1,7 @@
+bda-service-utils
+s3fs
+minio
+alida-arg-parser
+boto
+ds-io-utilities
+kafka-python
