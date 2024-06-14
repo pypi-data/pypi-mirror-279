@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+ax3_email/__init__.py
+ax3_email/apps.py
+ax3_email/backends.py
+ax3_email/settings.py
+ax3_email/tasks.py
+ax3_email/utils.py
+ax3_email.egg-info/PKG-INFO
+ax3_email.egg-info/SOURCES.txt
+ax3_email.egg-info/dependency_links.txt
+ax3_email.egg-info/requires.txt
+ax3_email.egg-info/top_level.txt

@@ -1,0 +1,103 @@
+[project]
+name = "ax3-email"
+version = "2.0.0"
+description = "AX3 Email is a Django application designed to send emails using Huey tasks."
+authors = [{ name = "Felipe Gonzalez", email = "felipe.gonzalez@axiacore.com" }]
+
+dependencies = [
+    'django >= 5.0.0',
+    'huey >= 2.4.5',
+    'premailer >= 2.5.1',
+]
+readme = "README.md"
+requires-python = ">= 3.10"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.rye]
+virtual = false
+
+[tool.ruff]
+target-version = "py310"
+fix = true
+line-length = 100
+lint.select = [
+    "D",
+    "E",
+    "F",
+    "W",
+    "B",
+    "I",
+    "UP",
+    "N",
+    "B",
+    "A",
+    "C4",
+    "ISC",
+    "ICN",
+    "T20",
+    "C90",
+    "PT",
+    "PL",
+    "Q",
+    "RET",
+    "SIM",
+    "TID",
+    "ERA",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "PIE",
+    "RUF",
+]
+
+lint.extend-ignore = [
+    "A003",
+    "RUF005",
+    "N999",
+    "D104",
+    "D100",
+    "D107",
+    "D417",
+    "D102",
+    "D103",
+    "D105",
+    "D106",
+]
+
+exclude = [
+    ".git",
+    ".ruff_cache",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-single-line = false
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "single"
+docstring-quotes = "double"
+avoid-escape = true
+
+[tool.ruff.lint.pylint]
+allow-magic-value-types = ["int", "str", "bytes"]
+
+[tool.ruff.lint.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.extend-per-file-ignores]
+"apps.py" = ["D101"]
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+target-version = ['py310']
