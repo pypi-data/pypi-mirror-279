@@ -1,0 +1,11 @@
+bixi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bixi/completions/__init__.py,sha256=eB-8NSFsNI-1Fo9oNvq98d-eV0oAKYMAK6jLU0--VWQ,35
+bixi/completions/base_serving.py,sha256=Gjb0DNSosgzT72iXGbCZwOEL3yCIPjO3dGKbvdrMNJY,5512
+bixi/completions/chat_serving.py,sha256=80pv-I85sMeEmHgMoFytfkr_viGLT9xh1OW4KaRBCkI,11489
+bixi/completions/completion_serving.py,sha256=ddoNsQFHl-bo6TxZkdtg_1BVT511PXd7wbrQ9hhV3bs,13593
+bixi/completions/protocol.py,sha256=6Q6eFme_U0q4-Za0E2rqENGoPdkfXYzpsDF2UzPqIlY,11645
+bixi/completions/serve.py,sha256=i2pna64m8wN3e4rdcbYmP3tv8KklZAaS4c0_xxN7Obo,8582
+heliumos_bixi_completions-0.4.0.dist-info/METADATA,sha256=J-ra_JGmes2POOPz-8OOXQ-N6nqAs9wrlVPLG62-o8U,393
+heliumos_bixi_completions-0.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+heliumos_bixi_completions-0.4.0.dist-info/top_level.txt,sha256=_ApUqDXI6h5pZfgUGC45xrABu7Z5RXcjR1-3pGaYp8Y,5
+heliumos_bixi_completions-0.4.0.dist-info/RECORD,,

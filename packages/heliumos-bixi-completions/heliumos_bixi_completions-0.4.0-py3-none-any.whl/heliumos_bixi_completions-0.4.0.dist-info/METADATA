@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: heliumos-bixi-completions
+Version: 0.4.0
+Summary: An open platform for load large language model.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: shortuuid
+Requires-Dist: uvicorn
+Requires-Dist: vllm ==v0.5.0
+
+#model-worker
