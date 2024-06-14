@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+mypackage/__init__.py
+mypackage/example.py
+mypackage_mdasi.egg-info/PKG-INFO
+mypackage_mdasi.egg-info/SOURCES.txt
+mypackage_mdasi.egg-info/dependency_links.txt
+mypackage_mdasi.egg-info/top_level.txt

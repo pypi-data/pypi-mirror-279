@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mypackage_mdasi
+Version: 0.0.1
+Summary: A small mypackage example
+Author-email: Monica Dasi <monicadasi18@gmail.com>
+Project-URL: Homepage, https://github.com/pypa/myproject
+Project-URL: Issues, https://github.com/pypa/myproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MyPackage Example
+
+This is a simple example package for test.
