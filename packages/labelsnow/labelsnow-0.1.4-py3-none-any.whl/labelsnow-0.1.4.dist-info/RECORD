@@ -1,0 +1,16 @@
+labelsnow/__init__.py,sha256=uvw_lzLZW94gjW2NUDhFx0GIBLyaadsnwCVIx69ZWiU,532
+labelsnow/add_json_answers_to_dictionary.py,sha256=afrO8D0CfCwe8rJLOsEnBFsXGEezNwz9oct2aO0RW0o,1429
+labelsnow/constants.py,sha256=AE9r33LHMI0AKynDUIUHvyKp_sNHBPxVLAwtm-76FI0,124
+labelsnow/create_dataset.py,sha256=vaWx7iIG9DcC7kFkODQPucuCFyljzJskHyluvObReoc,884
+labelsnow/flatten_bronze_table.py,sha256=soIRSsqNJYaQ2QSm-8fS5afkUsFU0h0ST31SULOrqqc,856
+labelsnow/get_annotations.py,sha256=G8R-3JryEXG1wcWi0D895Cvr_lKJD23AKysGjTLV0bY,631
+labelsnow/get_snowflake_datarows.py,sha256=6dc5j2YN1plYArskwn-AmRi9a6N6dBuXK-NMb5k07Wc,603
+labelsnow/get_videoframe_annotations.py,sha256=GCKW_qgFqdlPWIl-TiidWuW8HOIqpMbNvuPuFQ-ZkJs,2582
+labelsnow/is_json.py,sha256=qPswh93QPGijQcEIyzD9eLewjYrsx6zjjqqdnDtEX9Q,149
+labelsnow/put_tables_into_snowflake.py,sha256=1yC-Ke9Z4BkHM0Zs6PhbU_2sVzUpi6Y8zHeTsRUk9xY,1243
+labelsnow/silver_table.py,sha256=izuAXVfjYv3E2xD9z3PrOD71phXodWqcdpFh6CNvbDI,5280
+labelsnow-0.1.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+labelsnow-0.1.4.dist-info/METADATA,sha256=Rl7LKnDRGYf4X8v98ozpyXdwl19PfbrfcR8_Af8O4u8,7244
+labelsnow-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+labelsnow-0.1.4.dist-info/top_level.txt,sha256=XCFkWEMWs5_kKPmWFCg0cWdSnd5FErra-JfCZI1vEcI,10
+labelsnow-0.1.4.dist-info/RECORD,,
