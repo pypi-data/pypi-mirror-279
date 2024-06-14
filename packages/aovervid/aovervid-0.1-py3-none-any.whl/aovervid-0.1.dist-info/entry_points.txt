@@ -1,0 +1,2 @@
+[console_scripts]
+aovervid = overlay_audio.aovervid:main
