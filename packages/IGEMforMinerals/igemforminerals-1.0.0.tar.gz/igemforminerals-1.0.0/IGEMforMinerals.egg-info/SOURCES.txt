@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+IGEMforMinerals.egg-info/PKG-INFO
+IGEMforMinerals.egg-info/SOURCES.txt
+IGEMforMinerals.egg-info/dependency_links.txt
+IGEMforMinerals.egg-info/requires.txt
+IGEMforMinerals.egg-info/top_level.txt
+package/__init__.py
+package/main.py
