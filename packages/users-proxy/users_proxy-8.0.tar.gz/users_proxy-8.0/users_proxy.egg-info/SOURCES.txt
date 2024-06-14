@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.py
+users_proxy/__init__.py
+users_proxy/users_proxy.py
+users_proxy.egg-info/PKG-INFO
+users_proxy.egg-info/SOURCES.txt
+users_proxy.egg-info/dependency_links.txt
+users_proxy.egg-info/top_level.txt
