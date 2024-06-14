@@ -1,0 +1,10 @@
+LICENSE
+README.md
+comparisonframe/__init__.py
+comparisonframe/comparisonframe.py
+comparisonframe/setup.py
+comparisonframe.egg-info/PKG-INFO
+comparisonframe.egg-info/SOURCES.txt
+comparisonframe.egg-info/dependency_links.txt
+comparisonframe.egg-info/requires.txt
+comparisonframe.egg-info/top_level.txt
