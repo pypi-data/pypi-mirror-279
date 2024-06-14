@@ -1,0 +1,4 @@
+[console_scripts]
+publish=scripts.publish:main
+test=pytest:main
+
