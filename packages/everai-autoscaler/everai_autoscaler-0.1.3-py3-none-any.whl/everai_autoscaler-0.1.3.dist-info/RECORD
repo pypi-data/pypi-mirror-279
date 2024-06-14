@@ -1,0 +1,11 @@
+everai_autoscaler/__init__.py,sha256=K19NTLL_Vg7XCqbBfY-mV6KRC3wAHKbHqzSQ63GmKSE,403
+everai_autoscaler/action.py,sha256=Hat74A4kk4BMjZAAdIcX5yr1CQm64BaNhOE3t7ooJ7Q,901
+everai_autoscaler/autoscaler.py,sha256=LOWMIHkdB9qbRSM9eI9pFityGY5fxfS5l-6Ayh8Si6E,281
+everai_autoscaler/autoscaler.pyi,sha256=b9eHvJnewd7rGm88pyZ_nTCMccv-uHpI5hylpaPguM0,198
+everai_autoscaler/builtin_autoscaler.py,sha256=cGLiwmdyz8i33uJDFVsE3QZ17OxdCFgIziv2zaVNuE0,294
+everai_autoscaler/builtin_autoscaler.pyi,sha256=xf5tZyB2KGOHfMKdQ5AsqLSoM5Z-J2ipM0SrpGNWyGI,347
+everai_autoscaler/factors.py,sha256=-Emv-t_W6U7_8dO7eDUJOGTA9Q8OJELpbz09DZDThaM,2166
+everai_autoscaler-0.1.3.dist-info/METADATA,sha256=jX01exiiiUtDA0LTqhfgnDGz3K4uvgCzD6u_LnT6Ltw,1122
+everai_autoscaler-0.1.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+everai_autoscaler-0.1.3.dist-info/top_level.txt,sha256=_BCEx0q_XtSW6uA9n0QW2SbhWS7JTsoeDrzvEOrl3pI,18
+everai_autoscaler-0.1.3.dist-info/RECORD,,
