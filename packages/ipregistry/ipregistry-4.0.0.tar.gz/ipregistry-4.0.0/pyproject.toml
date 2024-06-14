@@ -1,0 +1,35 @@
+[tool.poetry]
+authors = [
+    'Ipregistry Team <support@ipregistry.co>',
+    'Laurent Pellegrino <laurent.pellegrino@ipregistry.co>'
+]
+description = 'Official Python library for Ipregistry'
+homepage = 'https://ipregistry.co'
+keywords = [
+    'ipinfo',
+    'ipregistry',
+    'ip-address',
+    'ip-data',
+    'ip-geolocation',
+    'threat-detection',
+    'user-agent-parsing'
+]
+name = 'ipregistry'
+license = 'Apache-2.0'
+readme = 'README.md'
+repository = 'https://github.com/ipregistry/ipregistry-python'
+version = '4.0.0'
+
+[tool.poetry.dependencies]
+cachetools = '^5.3.3'
+pydantic = "^2.7.3"
+python = '>=3.8'
+requests = '^2.32.3'
+tenacity = "^8.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = '>=6.2.5'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
