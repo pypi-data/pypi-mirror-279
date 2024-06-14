@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: glycogenius_GUI
+Version: 0.0.6
+Summary: Accessory GUI for Glycogenius
+Author: Hector Franco Loponte
+Author-email: hectorfloponte@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: pyteomics==4.6.3
+Requires-Dist: dill
+Requires-Dist: numpy
+Requires-Dist: lxml
+Requires-Dist: openpyxl
+Requires-Dist: setuptools
+Requires-Dist: xlsxwriter
+Requires-Dist: glycogenius
