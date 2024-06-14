@@ -1,0 +1,13 @@
+datasette>=0.54
+datasette-leaflet>=0.2.2
+
+[playwright]
+pytest-playwright
+
+[test]
+pytest
+pytest-asyncio
+httpx
+sqlite-utils
+nest-asyncio
+datasette-test
