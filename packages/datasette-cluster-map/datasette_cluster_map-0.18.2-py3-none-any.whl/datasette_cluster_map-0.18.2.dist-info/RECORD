@@ -1,0 +1,11 @@
+datasette_cluster_map/__init__.py,sha256=Hz35ECpI2DHT9yp6KkL3f3Ks8Ex9p_AVFDjpkdwhSRk,4790
+datasette_cluster_map/static/datasette-cluster-map.js,sha256=fJVAPBc0NFcdww20dclZE4j_r5J7wJct3qkvdA6BHBI,9319
+datasette_cluster_map/static/leaflet.markercluster.css,sha256=AEXNse1iRf-5uI0hHOZ1vU3Qgh56tNp8KoNTwSdAD5k,2187
+datasette_cluster_map/static/leaflet.markercluster.js,sha256=nkF6HHXRa9yCBo8bn-dcwWbmGmB67FiVO0lnz1QKaJg,65400
+datasette_cluster_map/static/leaflet.markercluster.min.js,sha256=3J9l8bYVBv1iDjgDk72tHbksTmg_VjgQyJfaksH_rBs,34316
+datasette_cluster_map-0.18.2.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+datasette_cluster_map-0.18.2.dist-info/METADATA,sha256=2PLqd2P3RCCOywAhokFsi7Zk5berakSOjxRFGqx6mYk,8566
+datasette_cluster_map-0.18.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+datasette_cluster_map-0.18.2.dist-info/entry_points.txt,sha256=gKF9hqcxTNN3q88g0BInhvz7w9ksCMe8qpxu_qnjT04,48
+datasette_cluster_map-0.18.2.dist-info/top_level.txt,sha256=sgklbmbJ_i4Z36N3B9IfBRHNIS-29AS8Jh6LlbLmdvw,22
+datasette_cluster_map-0.18.2.dist-info/RECORD,,
