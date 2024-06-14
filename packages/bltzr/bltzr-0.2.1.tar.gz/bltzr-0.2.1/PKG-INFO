@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bltzr
+Version: 0.2.1
+Summary: Bltzr (pronounced as Baltazar) is a byte-level tokenizer
+Author-email: Vladimir Zorin <vladimir@deviant.guru>
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: psycopg2
+Requires-Dist: torch
+Requires-Dist: numpy
+Project-URL: Home, https://github.com/epicfilemcnulty/bltzr
+
+# BaLTaZaR -- byte-level tokenizer
+
+
