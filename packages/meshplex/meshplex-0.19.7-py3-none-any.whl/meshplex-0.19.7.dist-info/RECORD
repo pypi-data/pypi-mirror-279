@@ -1,0 +1,12 @@
+meshplex/__init__.py,sha256=0eWSehQMkw6CYB31jOeKdKjtNyt1vDiRBHnR5uaTF5M,279
+meshplex/_exceptions.py,sha256=4MQkrk0YR1sDuqxWA0xYNsyZchbxYl36i5I30ccniIc,41
+meshplex/_helpers.py,sha256=Pgc84QkUglByDZFP33cELbyWsEotSq-uIVU7vsF0VEo,1275
+meshplex/_license_validation.py,sha256=avpoo1nmXbNXNgJTjRlP3IYHPgWXAu355_8qIK16uWc,723
+meshplex/_mesh.py,sha256=2mWz_PSnzzb_x4uMRwK1yjr6_njIEq9xXmcbR6E0Q_g,54506
+meshplex/_mesh_tetra.py,sha256=K5zDmEe8RABlVjSLMIqUJ9w3OEXj-pwKGodFbPhhdf8,12944
+meshplex/_mesh_tri.py,sha256=lRqP5FM-MtHHiNsjv8HbtWOtXFabvhUMeCnEReC9AQA,24196
+meshplex/_reader.py,sha256=XNYHdkAzKhdWJcQVP_J6doBbIrQd2djzzJ1GgkLColY,1096
+meshplex-0.19.7.dist-info/METADATA,sha256=UCMkGkmmtof5msDWFhHje8tYRVDPHl6pEDrxT_OL4UI,5663
+meshplex-0.19.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+meshplex-0.19.7.dist-info/top_level.txt,sha256=98SwEjhyZbR27fRE5D6CgqEBUE64pUltRTdA5GJUP1U,9
+meshplex-0.19.7.dist-info/RECORD,,
