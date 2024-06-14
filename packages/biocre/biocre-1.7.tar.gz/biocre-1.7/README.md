@@ -1,0 +1,1 @@
+pip3 install torch torchvision torchaudio -i https://mirrors.cloud.tencent.com/pypi/simple
