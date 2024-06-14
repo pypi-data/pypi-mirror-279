@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: bulk
+Version: 0.3.1
+License-File: LICENSE
+Requires-Dist: radicli <0.1.0,>=0.0.8
+Requires-Dist: bokeh <3.0.0,>=2.4.3
+Requires-Dist: pandas >=1.0.0
+Requires-Dist: wasabi >=0.9.1
+Provides-Extra: dev
+Requires-Dist: pytest-playwright ==0.3.0 ; extra == 'dev'
+
