@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling", "openai"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ezpyai"
+version = "0.0.1a2"
+authors = [{ name = "Ciprian Mandache", email = "psyb0t@51k.eu" }]
+description = "A useful utility library for AI applications"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/psyb0t/ezpyai"
+Issues = "https://github.com/psyb0t/ezpyai/issues"
