@@ -1,0 +1,12 @@
+[package]
+name = "qomo"
+version = "0.0.1"
+edition = "2021"
+repository = "https://github.com/haoxins/qomo"
+
+[lib]
+name = "qomo"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.21"
