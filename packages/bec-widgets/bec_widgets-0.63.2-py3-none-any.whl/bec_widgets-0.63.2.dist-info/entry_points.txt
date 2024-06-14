@@ -1,0 +1,3 @@
+[console_scripts]
+bec-gui-server = bec_widgets.cli.server:main
+bw-generate-cli = bec_widgets.cli.generate_cli:main
