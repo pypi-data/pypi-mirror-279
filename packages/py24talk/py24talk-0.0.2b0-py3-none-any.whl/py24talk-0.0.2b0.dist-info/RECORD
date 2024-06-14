@@ -1,0 +1,11 @@
+py24talk/__init__.py,sha256=gNYgnFEry43rshApf2Owbo9AWPY41JYFFvUzIaDqv6w,128
+py24talk/badge.py,sha256=35lI-nH1OaIaIOpS0_DeEqrUqiu-TPdiMAjYIhT0d3w,1051
+py24talk/content.py,sha256=8B5I6FyZmkY2KJ72OWNL1s41bUuM-jioUe4ILv3tTzQ,198
+py24talk/managers/requests.py,sha256=eZSFG7eZ7y5Y08c1X_0hxpFnCFTUG574tynAk_hbX4w,180
+py24talk/post.py,sha256=g3X9dfiNLNXm7iKtdQO2aG1ch1cZXen2Z0XNmYoOELU,1163
+py24talk/topic.py,sha256=Ba-0CKlMAaMePWfGWxf3wisoBpwC2hsZF7r-ApcTX5M,1020
+py24talk/user.py,sha256=ShLW7UKL6JDGA9GXYRR8fBXzKtR78Hihkq-rrUbXr-s,3926
+py24talk-0.0.2b0.dist-info/LICENSE,sha256=s0Yl8ojSHkKV5-OiAl7YBEMjxNWEyu5T9dwEHts6D5Y,1094
+py24talk-0.0.2b0.dist-info/METADATA,sha256=LbOm0cr_Du4r18_rpeitJPW5cUC1rfpNj4rCtY46UEQ,856
+py24talk-0.0.2b0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+py24talk-0.0.2b0.dist-info/RECORD,,
