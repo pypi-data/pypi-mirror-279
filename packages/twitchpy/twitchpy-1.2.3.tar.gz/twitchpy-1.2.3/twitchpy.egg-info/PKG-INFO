@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: twitchpy
+Version: 1.2.3
+Summary: TwitchPy is a Python package for using the Twitch's API and create bots for interacting with their IRC chats.
+Home-page: https://github.com/DaCasBe
+Download-URL: https://github.com/DaCasBe/TwitchPy/archive/refs/tags/v1.2.0.tar.gz
+Author: DaCasBe
+Author-email: dacasbe97@gmail.com
+License: GPL-3.0
+License-File: LICENSE
+Requires-Dist: requests
