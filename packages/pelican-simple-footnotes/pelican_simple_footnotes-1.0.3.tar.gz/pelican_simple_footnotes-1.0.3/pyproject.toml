@@ -1,0 +1,134 @@
+[project]
+name = "pelican-simple-footnotes"
+version = "1.0.3"
+description = "Pelican plugin to add footnotes to articles and pages"
+authors = [
+    { name = "Stuart Langridge", email = "sil@kryogenix.org" },
+    { name = "Justin Mayer", email = "entroP@gmail.com" },
+]
+readme = "README.md"
+keywords = [
+    "pelican",
+    "plugin",
+    "footnotes",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Framework :: Pelican",
+    "Framework :: Pelican :: Plugins",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8.1,<4.0"
+dependencies = [
+    "pelican>=4.5",
+    "html5lib>=1.1",
+]
+
+[project.license]
+text = "AGPL-3.0"
+
+[project.urls]
+Homepage = "https://github.com/pelican-plugins/simple-footnotes"
+"Issue Tracker" = "https://github.com/pelican-plugins/simple-footnotes/issues"
+Funding = "https://donate.getpelican.com/"
+
+[project.optional-dependencies]
+markdown = [
+    "markdown>=3.4",
+]
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "invoke>=2.2.0",
+    "ruff>=0.4.5,<0.5.0",
+]
+test = [
+    "markdown>=3.4",
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-sugar>=1.0.0",
+]
+
+[tool.pdm.build]
+source-includes = [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+]
+includes = [
+    "pelican/",
+]
+excludes = [
+    "**/.DS_Store",
+    "tasks.py",
+]
+
+[tool.autopub]
+project-name = "Simple Footnotes"
+git-username = "botpub"
+git-email = "52496925+botpub@users.noreply.github.com"
+append-github-contributor = true
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "BLE",
+    "C4",
+    "D",
+    "E",
+    "F",
+    "I",
+    "ICN",
+    "ISC",
+    "PGH",
+    "PL",
+    "RET",
+    "RUF",
+    "SIM",
+    "T10",
+    "T20",
+    "TID",
+    "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+ignore = [
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D203",
+    "D213",
+    "ISC001",
+    "PGH004",
+    "RUF012",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"pelican/plugins/simple_footnotes/test_*" = [
+    "E501",
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-sort-within-sections = true
+known-first-party = [
+    "pelican",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
