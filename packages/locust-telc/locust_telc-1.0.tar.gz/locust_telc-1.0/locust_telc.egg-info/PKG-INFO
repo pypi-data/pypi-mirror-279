@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: locust_telc
+Version: 1.0
+Summary: locust增加对接口的描述，如造成侵权，联系删除
+Home-page: http://iswbm.com/
+Author: yingchan
+Author-email: 3340604072@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
