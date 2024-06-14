@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: netrix
+Version: 0.1.0
+Summary: Package for interacting with Netrix API
+Author: netrix-team
+License: MIT
+Project-URL: Homepage, https://github.com/netrix-team/netrix
+Project-URL: GitHub, https://github.com/netrix-team/netrix
+Keywords: netrix
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flake8==7.0.0
+Requires-Dist: requests==2.32.3
+
+# Netrix
+Package for interacting with Netrix API
+
+```py
+from netrix import Netrix
+
+API_KEY = 'e5495e14-a60f-4804-b4f6-f1a1938ae984'
+net = Netrix(api_key=API_URL)
+
+def main():
+    user_id = '461219084802195477'
+    info = net.get_user_info(user_id)
+    return info
+
+if __name__ == '__main__':
+    main()
+```

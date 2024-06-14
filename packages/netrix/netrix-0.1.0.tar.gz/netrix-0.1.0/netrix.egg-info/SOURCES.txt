@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+netrix/__init__.py
+netrix/netrix.py
+netrix.egg-info/PKG-INFO
+netrix.egg-info/SOURCES.txt
+netrix.egg-info/dependency_links.txt
+netrix.egg-info/requires.txt
+netrix.egg-info/top_level.txt
