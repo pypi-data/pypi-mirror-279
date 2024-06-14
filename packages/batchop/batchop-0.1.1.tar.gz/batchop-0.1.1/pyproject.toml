@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "batchop"
+version = "0.1.1"
+description = "Batch file operations with an intuitive syntax and safe defaults"
+authors = ["Ian Fisher <ian@iafisher.com>"]
+readme = "README.md"
+packages = [{include = "batchop"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+batchop = "batchop.batchop:main"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project.urls]
+Homepage = "https://github.com/iafisher/batchop/"
+Repository = "https://github.com/iafisher/batchop/"
+Issues = "https://github.com/iafisher/batchop/issues"
