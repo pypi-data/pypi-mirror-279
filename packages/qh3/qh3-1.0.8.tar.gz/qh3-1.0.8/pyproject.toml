@@ -1,0 +1,64 @@
+[build-system]
+requires = ["maturin>=1.2,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "qh3"
+description = "A lightway and fast implementation of QUIC and HTTP/3"
+readme = "README.rst"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [
+  {name = "Jeremy Lainé", email = "jeremy.laine@m4x.org"},
+]
+maintainers = [
+  {name = "Ahmed R. TAHRI", email="ahmed.tahri@cloudnursery.dev"},
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dynamic = [
+    'version'
+]
+
+[tool.maturin]
+features = ["pyo3/extension-module", "pyo3/generate-import-lib"]
+module-name = "qh3._hazmat"
+
+[project.urls]
+homepage = "https://github.com/jawah/qh3"
+documentation = "https://qh3.readthedocs.io/"
+
+[tool.coverage.run]
+source = ["qh3"]
+
+[tool.mypy]
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+ignore_missing_imports = true
+strict_optional = false
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+[tool.ruff]
+select = [
+    "E",  # pycodestyle
+    "F",  # Pyflakes
+    "W",  # pycodestyle
+    "I",  # isort
+]
