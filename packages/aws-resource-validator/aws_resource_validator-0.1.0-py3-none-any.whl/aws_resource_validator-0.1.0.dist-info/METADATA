@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: aws-resource-validator
+Version: 0.1.0
+Summary: Validate, get validation patterns and generate valid AWS resource names (for testing \ mocks)
+License: Apache-2.0
+Author: Alexy Grabov
+Author-email: alexy.grabov@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: exrex (>=0.11.0,<0.12.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# aws_resource_validator
+creates an objects that can validate, show constraints of common aws resource names and generate compatible patterns for tests.
+
+usage example:
+```python
+from aws_resource_validator.class_definitions import Acm, class_registry
+
+# Use type hint so that you can use `api_registry` with full class definitions
+acm: Acm = class_registry.Acm
+
+print(acm.Arn.pattern)
+print(acm.Arn.type)
+print(acm.arn.validate("example-arn"))
+print(acm.Arn.generate())
+```
+
