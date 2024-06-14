@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cdk_vpc_pattern/__init__.py
+src/cdk_vpc_pattern/py.typed
+src/cdk_vpc_pattern.egg-info/PKG-INFO
+src/cdk_vpc_pattern.egg-info/SOURCES.txt
+src/cdk_vpc_pattern.egg-info/dependency_links.txt
+src/cdk_vpc_pattern.egg-info/requires.txt
+src/cdk_vpc_pattern.egg-info/top_level.txt
+src/cdk_vpc_pattern/_jsii/__init__.py
+src/cdk_vpc_pattern/_jsii/cdk-vpc-pattern@0.0.4.jsii.tgz
