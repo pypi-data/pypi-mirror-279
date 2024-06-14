@@ -1,0 +1,8 @@
+LICENSE.txt
+setup.py
+useragert/__init__.py
+useragert/useragert.py
+useragert.egg-info/PKG-INFO
+useragert.egg-info/SOURCES.txt
+useragert.egg-info/dependency_links.txt
+useragert.egg-info/top_level.txt
