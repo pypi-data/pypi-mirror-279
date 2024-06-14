@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+pyOrcas.egg-info/PKG-INFO
+pyOrcas.egg-info/SOURCES.txt
+pyOrcas.egg-info/dependency_links.txt
+pyOrcas.egg-info/requires.txt
+pyOrcas.egg-info/top_level.txt
+tests/__init__.py
