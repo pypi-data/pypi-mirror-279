@@ -1,0 +1,2 @@
+[console_scripts]
+simplemath_leonardosantosdev = simplemath_leonardosantosdev.__main__:main
