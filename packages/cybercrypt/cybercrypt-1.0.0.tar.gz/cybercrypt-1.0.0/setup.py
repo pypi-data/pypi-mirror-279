@@ -1,0 +1,39 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='cybercrypt',
+    version='1.0.0',
+    packages=find_packages(include=['core', 'core.*']),
+    entry_points={
+        'console_scripts': [
+            'cyberCrypt=cybercrypt:main',
+            'cyberCrypt-windows=cybercrypt:main',  # For Windows
+            'cyberCrypt-linux=cybercrypt:main',    # For Linux
+        ],
+    },
+    install_requires=[
+        'pyfiglet',
+        'colorama',
+        'cryptography',
+        'pytest-asyncio',  
+        'aiofiles',       
+    ],
+    extras_require={
+        'dev': [
+            'pytest',
+            'pytest-asyncio',
+            'codecov',
+        ],
+    },
+    author='El13',
+    author_email='muhizielie01@gmail.com',
+    description='A versatile command-line tool for secure data transformation, hashing operations, and encryption algorithms.',
+    url='https://github.com/UwimanaMuhiziElie/cybercrypt.git',
+    license='MIT',
+    classifiers=[
+        'Programming Language :: Python :: 3',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+    ],
+    python_requires='>=3.7',
+)

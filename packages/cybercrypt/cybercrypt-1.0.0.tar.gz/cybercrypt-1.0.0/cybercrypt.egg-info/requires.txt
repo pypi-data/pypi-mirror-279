@@ -1,0 +1,10 @@
+pyfiglet
+colorama
+cryptography
+pytest-asyncio
+aiofiles
+
+[dev]
+pytest
+pytest-asyncio
+codecov

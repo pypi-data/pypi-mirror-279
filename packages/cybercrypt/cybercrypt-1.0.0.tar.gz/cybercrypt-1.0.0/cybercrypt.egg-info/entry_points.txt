@@ -1,0 +1,5 @@
+[console_scripts]
+cyberCrypt = cybercrypt:main
+cyberCrypt-linux = cybercrypt:main
+cyberCrypt-windows = cybercrypt:main
+
