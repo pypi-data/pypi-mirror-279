@@ -1,0 +1,5 @@
+horovod>=0.26.1
+scikit-build>=0.16.3
+
+[tensorflow]
+tensorflow>=1.15
