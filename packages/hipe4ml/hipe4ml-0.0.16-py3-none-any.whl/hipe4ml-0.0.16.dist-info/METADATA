@@ -1,0 +1,154 @@
+Metadata-Version: 2.1
+Name: hipe4ml
+Version: 0.0.16
+Summary: Minimal heavy ion physics environment for Machine Learning
+Home-page: https://github.com/hipe4ml/hipe4ml
+Author: hipe4ml-developers
+Author-email: hipe4ml@googlegroups.com
+License: GPL
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: uproot >=4.2.2
+Requires-Dist: matplotlib >=3.5.1
+Requires-Dist: pandas >=1.3.5
+Requires-Dist: scikit-learn >=1.0.2
+Requires-Dist: xgboost <2.0,>=1.5.2
+Requires-Dist: lightgbm >=3.3.2
+Requires-Dist: shap ==0.42.1
+Requires-Dist: pyarrow >=7.0.0
+Requires-Dist: ipython >=7.32.0
+Requires-Dist: optuna >=2.10.0
+Requires-Dist: numpy <1.25
+Provides-Extra: dev
+Requires-Dist: pylint >=2.6.2 ; extra == 'dev'
+Requires-Dist: flake8 >=3.8.4 ; extra == 'dev'
+Requires-Dist: pytest >=6.2.2 ; extra == 'dev'
+Requires-Dist: twine >=3.3.0 ; extra == 'dev'
+Requires-Dist: setuptools >=53.0.0 ; extra == 'dev'
+Requires-Dist: wheel >=0.36.2 ; extra == 'dev'
+
+![hipe4ml](./logo.svg)
+
+
+
+![](https://github.com/hipe4ml/hipe4ml/workflows/Test%20package/badge.svg)
+
+![](https://img.shields.io/github/license/hipe4ml/hipe4ml)
+
+
+
+Minimal heavy ion physics environment for Machine Learning
+
+
+
+To install:
+
+
+
+```bash
+
+pip install hipe4ml
+
+```
+
+
+
+**Mac OS X users:** the latest XGBoost version will require OpenMP installed. One easy way of getting it is using brew:
+
+
+
+```bash
+
+brew install libomp
+
+```
+
+
+
+# Documentation
+
+
+
+<https://hipe4ml.github.io/>
+
+
+
+# Cite
+
+
+
+If you use this package for your analysis please consider citing it! You can use the following reference.
+
+
+
+<https://doi.org/10.5281/zenodo.5070131>
+
+
+
+# Contribute
+
+
+
+## Install in-development package
+
+
+
+To install the in-development package, from the repository base directory:
+
+
+
+```bash
+
+pip install -e .[dev]
+
+```
+
+
+
+## Run tests
+
+
+
+If you have [Pylint](https://www.pylint.org/#install) and [Flake8](http://flake8.pycqa.org/en/latest/) on your development machine, you can run tests locally by using:
+
+
+
+```bash
+
+tests/run_tests.sh
+
+```
+
+
+
+in the repository base directory.
+
+
+
+## Tutorials
+
+
+
+If you want to get familiar with hipe4ml, the following tutorials are available:
+
+
+
+| Type | Link |
+
+| -------------- | ------------- |
+
+| Binary classifier |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hipe4ml/hipe4ml/blob/master/tutorials/hipe4ml_tutorial_binary.ipynb) |
+
+| Multiclass classifier |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hipe4ml/hipe4ml/blob/master/tutorials/hipe4ml_tutorial_multiclass.ipynb) |
+
+
