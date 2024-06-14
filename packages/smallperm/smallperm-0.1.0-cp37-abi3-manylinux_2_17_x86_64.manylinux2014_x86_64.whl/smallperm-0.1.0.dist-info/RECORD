@@ -1,0 +1,8 @@
+smallperm-0.1.0.dist-info/METADATA,sha256=bsDJAh9xMbTbQMqpJQurdGxLWmFGrWXppsKADerv57k,1483
+smallperm-0.1.0.dist-info/WHEEL,sha256=ugjrkjqCrMwL1Wcm7dgkRJBwew0toeZ9N6T2GR5vMVU,129
+smallperm-0.1.0.dist-info/license_files/LICENSE,sha256=HK3qC5jMhY-jySKQg180Npgca_bIuT40ZoZSO2Loauk,11338
+smallperm/__init__.py,sha256=YNpvVYSu8j7yWiXdB35KFKfR-w1xvsWuLq8AO9g6C2w,119
+smallperm/__init__.pyi,sha256=Nt6mSpXQFtz7oZNdrSGzBOK-OJJDj3oHnuNbM9Z7FsA,1815
+smallperm/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smallperm/smallperm.abi3.so,sha256=1EB8NA1AD0q2D5qydAM0qSE4HP3FkDOJGjpZ19H6ZnE,605664
+smallperm-0.1.0.dist-info/RECORD,,
