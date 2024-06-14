@@ -1,0 +1,12 @@
+humai_tools/__init__.py,sha256=PEEqtRd96kM9cRfZUYKS1ZFcV8W5Mgxc5850l1CkXk4,235
+humai_tools/campus.py,sha256=TqEkeemKZJUz7F9nMFYue3ddrqvdV7TETkhPHbJGimE,13945
+humai_tools/directus.py,sha256=NHNvBJTpIrEBFCn1hRD4k4vyNm_eYNnARLq7HQ-4gmE,9042
+humai_tools/models.py,sha256=WSQ8VbSIKXQ4hLg8vM6r5kFfor0lP1GKSK3dLLu5d8k,931
+humai_tools/mp.py,sha256=sRzAHT9MSpeA6ksdGxj5t2k0X4kNOG2HvkM3omYa9Fo,15257
+humai_tools/permissions.py,sha256=7xJgpPo0-1zt0oz8srnRfD2TxoZcj0sW8XCIG4swycU,6065
+humai_tools/settings.py,sha256=JyPLFuDO6HXnCyYG9gM1EfYQcyZJd4HgSf_LDz0u_QQ,704
+humai_tools/utils.py,sha256=nKNl11dCdTPwweYlrz7rIQimZYGvXMI9-au4vu1pwJU,5912
+humai_tools-0.0.5.dist-info/METADATA,sha256=qH0M-T4JykyEaLHVGdBioU0U-8Dm0GywpRstjMwj2fY,626
+humai_tools-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+humai_tools-0.0.5.dist-info/top_level.txt,sha256=5vCk17IlSCNAKZq0I5oEhwnRu1oc6r3RWPZlRrznkZ0,12
+humai_tools-0.0.5.dist-info/RECORD,,

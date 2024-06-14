@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: humai-tools
+Version: 0.0.5
+Summary: Internal tools for private usage.
+Home-page: https://github.com/institutohumai/humai_internal_tools
+Author: Humai Dev Team
+Author-email: mg@humai.com.ar
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: mercadopago
+Requires-Dist: requests
+Requires-Dist: unidecode
+Requires-Dist: pydantic
+Requires-Dist: python-dotenv
+Requires-Dist: pydantic-settings
+Requires-Dist: pytz
+
+Internal tools for private usage.
+
