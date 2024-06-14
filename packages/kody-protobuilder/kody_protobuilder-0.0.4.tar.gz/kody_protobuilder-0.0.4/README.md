@@ -1,0 +1,46 @@
+# kody protobuilder
+
+## Protobuilder
+Kody에서 제작한 Proto file 간편 buildder입니다.
+
+## 사용
+proto파일 디렉토리는 다음과 같이 구성합니다.
+```
+protos
+└application
+    └service
+        └service.proto
+```
+
+protos의 전체 proto file을 빌드합니다.
+```
+python -m protobulder.bulid
+```
+
+빌드 후
+```
+protos
+└application
+    └service
+        ├service.proto
+        ├service_pb2.py
+        └service_pb2_grpc.py
+```
+## 옵션
+kody-protobuilder는 다음과 같은 옵션을 제공합니다.
+
+### app
+특정 app만 build합니다.
+중복하여 사용이 가능합니다.
+```
+--app=<app_name> | -a=<app_name>
+```
+
+### service
+특정 service만 build합니다.
+중복하여 사용이 가능합니다.
+```
+--service=<app_name>.<service_name> | -s=<app_name>.<service_name>
+```
+
+app과 service 옵션은 같이 사용될 수 있으며, 선택된 모두 build됩니다.
