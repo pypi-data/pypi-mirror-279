@@ -1,0 +1,4 @@
+jsonschema~=2.4.0
+pyyaml
+rfc3987
+sansjson==0.3.0
