@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: image-component-streamlit
+Version: 0.0.8
+Home-page: 
+Author: John Smith
+Author-email: john@example.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: devel
+License-File: LICENSE
