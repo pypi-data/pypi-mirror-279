@@ -1,0 +1,96 @@
+from typing import Callable, Union, Dict
+import pandas as pd
+from superpipe.steps.step import Step, StepResult, StepRowStatistics
+from superpipe.llm import get_llm_response, LLMResponse
+from openai.types.chat.completion_create_params import CompletionCreateParamsNonStreaming
+
+
+class LLMStep(Step):
+    """
+    A step in a pipeline that utilizes a Language Model (LLM) to process data.
+
+    This step compiles a prompt from the input data, sends it to the LLM, and receives a response string.
+
+    Attributes:
+        model (str): The identifier of the LLM to be used.
+        prompt (Callable[[Union[Dict, pd.Series]], str]): A function that takes input data and returns a prompt string.
+        openai_args (CompletionCreateParamsNonStreaming): Additional arguments to pass to the OpenAI API.
+        name (str, optional): The name of the step. Defaults to None.
+    """
+
+    def __init__(
+            self,
+            model: str,
+            prompt: Callable[[Union[Dict, pd.Series]], str],
+            openai_args: CompletionCreateParamsNonStreaming = {},
+            name: str = None):
+        """
+        Initializes a new instance of the LLMStep class.
+
+        Args:
+            model (str): The identifier of the LLM to be used.
+            prompt (Callable[[Union[Dict, pd.Series]], str]): A function that takes input data and returns a prompt string.
+            name (str, optional): The name of the step. Defaults to None.
+        """
+        super().__init__(name)
+        self.model = model
+        self.prompt = prompt
+        self.openai_args = openai_args
+
+    def get_params(self):
+        """
+        Returns the parameters of the step.
+
+        Returns:
+            Dict: A dictionary of the step's parameters.
+        """
+        return {
+            **super().get_params(),
+            "model": self.model,
+            "prompt": self.prompt.__name__,
+            "openai_args": self.openai_args
+        }
+
+    def _get_row_statistics(self, response: LLMResponse):
+        """
+        Create a StepRowStatistics object based on the response from the LLM.
+
+        Args:
+            response (LLMResponse): The response from the LLM.
+        """
+        return StepRowStatistics(
+            input_tokens=response.input_tokens,
+            output_tokens=response.output_tokens,
+            latency=response.latency,
+            success=response.success,
+            input_cost=response.input_cost,
+            output_cost=response.output_cost
+        )
+
+    def _run(self, row: Union[pd.Series, Dict]) -> StepResult:
+        """
+        Applies the LLM step to a single row of data.
+
+        This method compiles the prompt, sends it to the LLM, and processes the response.
+
+        Args:
+            row (Union[pd.Series, Dict]): The input data row.
+
+        Returns:
+            Dict: The processed data, including the LLM's response
+        """
+        model = self.model
+        compiled_prompt = self.prompt(row)
+        openai_args = self.openai_args
+        try:
+            response = get_llm_response(compiled_prompt, model, openai_args)
+        except Exception as e:
+            # TODO: need better error logging here include stacktrace
+            response = LLMResponse(
+                success=False, error=str(e), latency=0)
+        statistics = self._get_row_statistics(response)
+        result = {}
+        # TODO: how should we handle failure cases?
+        if response.success:
+            result[f"{self.name}"] = response.content
+        return StepResult(fields=result, statistics=statistics, error=response.error, input=compiled_prompt)
