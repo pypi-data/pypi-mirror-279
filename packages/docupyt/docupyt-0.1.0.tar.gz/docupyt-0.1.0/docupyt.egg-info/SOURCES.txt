@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+docupyt.egg-info/PKG-INFO
+docupyt.egg-info/SOURCES.txt
+docupyt.egg-info/dependency_links.txt
+docupyt.egg-info/top_level.txt
+tests/test_language_parse.py
