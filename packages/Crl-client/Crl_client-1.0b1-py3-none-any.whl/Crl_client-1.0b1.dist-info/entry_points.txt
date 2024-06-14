@@ -1,0 +1,2 @@
+[console_scripts]
+crl_client = crl_client:main

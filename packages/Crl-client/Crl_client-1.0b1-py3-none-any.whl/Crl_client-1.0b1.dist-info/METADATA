@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: Crl_client
+Version: 1.0b1
+Summary: Proje açıklaması buraya
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2
+Requires-Dist: requests
+
+crl-client is a client designed for the crl browser
