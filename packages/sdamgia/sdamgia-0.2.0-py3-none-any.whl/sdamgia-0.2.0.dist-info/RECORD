@@ -1,0 +1,10 @@
+sdamgia/__init__.py,sha256=hRaAwFStVHgWxpSvuAmb4R2GIQMSnvsiLS1FfYmlNhI,189
+sdamgia/api.py,sha256=9mT1Je_5J-8OXMytGPPdzvb4SRLqaD5LtRgFjwknAH0,13847
+sdamgia/enums.py,sha256=-EyhGHLOuQqb6d4FmMCIX4NZ2v0PKk3VHUUclEGDZtQ,542
+sdamgia/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sdamgia/types.py,sha256=nFwffZDN8OSSZbW_g7P2kMo1e055LEGhQTXAsNg67uI,1819
+sdamgia/utils.py,sha256=ZmhYqiAGeO3MxMs-Gn6B_pmfe-uMbM7iACjIdZ661Rw,2368
+sdamgia-0.2.0.dist-info/LICENSE,sha256=46mU2C5kSwOnkqkw9XQAJlhBL2JAf1_uCD8lVcXyMRg,7652
+sdamgia-0.2.0.dist-info/METADATA,sha256=ZwLVEGSxb3YN6HkrqMkWwR8DktpUNuDvTWUkytiUU1c,5058
+sdamgia-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sdamgia-0.2.0.dist-info/RECORD,,
