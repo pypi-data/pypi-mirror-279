@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cdk-vpc-pattern
+Version: 0.0.4
+Summary: A CDK pattern to create a VPC with public and private subnets
+Home-page: https://github.com/parraletz/cdk-vpc-pattern.git
+Author: Alex Parra<parraletz@gmail.com>
+License: Apache-2.0
+Project-URL: Source, https://github.com/parraletz/cdk-vpc-pattern.git
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Typing :: Typed
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aws-cdk-lib <3.0.0,>=2.137.0
+Requires-Dist: constructs <11.0.0,>=10.3.0
+Requires-Dist: jsii <2.0.0,>=1.99.0
+Requires-Dist: publication >=0.0.3
+Requires-Dist: typeguard ~=2.13.3
+
+# replace this
