@@ -1,0 +1,9 @@
+veryfasttree/__init__.py,sha256=clGb_Fsbo5hDbhcan7r5q8zQDYoRL0bChGGep5nPpKw,4575
+veryfasttree/__main__.py,sha256=Ul4wdtVMCjLLUNReIORUHFcFAh_2vmG-Hdj5E4CFshI,261
+veryfasttree/bin/VeryFastTree-avx2,sha256=yzTNosot54hoAQbZelZJV-EifTbo2eXUD8HugoojBbI,5854040
+veryfasttree/bin/VeryFastTree-avx512f,sha256=Arw4qvr8xjRm6DoqEJEQumg0CabtUFs4CDMB11xSQ_Q,7469224
+veryfasttree/bin/VeryFastTree-sse2,sha256=V5Xc6balm7CFkZrPPcI3zmwRvV3dtENaNPwKUC3mZJA,4238912
+veryfasttree-4.0.3.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+veryfasttree-4.0.3.1.dist-info/METADATA,sha256=5ZU9EZxb6x8nXgOi1GbRL4ZowkLu9LSsDH70xPH7Wn0,2326
+veryfasttree-4.0.3.1.dist-info/WHEEL,sha256=rlLkn0E0CJyQY5gBwMmsB1zTQiXarjiQxhZ76NoHbkk,106
+veryfasttree-4.0.3.1.dist-info/RECORD,,
