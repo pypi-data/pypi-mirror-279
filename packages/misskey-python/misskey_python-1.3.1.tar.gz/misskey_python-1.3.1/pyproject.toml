@@ -1,0 +1,34 @@
+[tool.pdm.build]
+includes = [
+    "MiPC/*",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+authors = [
+    { name = "sonyakun", email = "amase.cocoa@gmail.com" },
+]
+requires-python = "<4.0,>=3.10"
+dependencies = [
+    "httpx<1.0.0,>=0.24.1",
+    "pytest<8.0.0,>=7.3.1",
+    "websockets<12.0.0,>=11.0.3",
+    "aiofiles<24.0.0,>=23.1.0",
+    "colorama<1.0.0,>=0.4.6",
+    "pytest-cov<5.0.0,>=4.1.0",
+]
+name = "misskey-python"
+version = "1.3.1"
+description = "(discontinued) misskey api library"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+repository = "https://github.com/MiPC-Dev/MiPC"
