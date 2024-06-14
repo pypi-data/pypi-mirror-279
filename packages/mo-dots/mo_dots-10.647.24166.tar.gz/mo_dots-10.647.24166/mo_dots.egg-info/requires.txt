@@ -1,0 +1,13 @@
+mo-future==7.584.24095
+mo-imports==7.584.24095
+
+[tests]
+mo-logs>=8.632.24139
+mo-json>=6.637.24140
+mo-threads>=6.634.24139
+mo-testing>=8.644.24152
+pyLibrary>=3.264.22338
+mo-math>=7.632.24139
+mo-times>=5.632.24139
+jx-elasticsearch>=3.99.20292
+beautifulsoup4>=4.12.3
