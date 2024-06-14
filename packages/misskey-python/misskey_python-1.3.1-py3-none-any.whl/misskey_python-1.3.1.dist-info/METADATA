@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: misskey-python
+Version: 1.3.1
+Summary: (discontinued) misskey api library
+Author-Email: sonyakun <amase.cocoa@gmail.com>
+License: MIT
+Project-URL: Repository, https://github.com/MiPC-Dev/MiPC
+Requires-Python: <4.0,>=3.10
+Requires-Dist: httpx<1.0.0,>=0.24.1
+Requires-Dist: pytest<8.0.0,>=7.3.1
+Requires-Dist: websockets<12.0.0,>=11.0.3
+Requires-Dist: aiofiles<24.0.0,>=23.1.0
+Requires-Dist: colorama<1.0.0,>=0.4.6
+Requires-Dist: pytest-cov<5.0.0,>=4.1.0
+Description-Content-Type: text/markdown
+
+# This project has been discontinued.
+
+**When installing, keep in mind that support is not provided by this library.**
+
+Its de facto successor library is [misspy](https://github.com/misspy-dev/misspy).
+## Why was it discontinued?
+Partly because the name is very similar to existing libraries such as MiPA and MiPAC, but the most important reason is that I started developing [misspy](https://github.com/misspy-dev/misspy), the spiritual successor library to MiPC.
+## I want to use the PyPI project name (misskey-python) for another project, so I want to transfer it / I want to maintain MiPC, so I want to transfer the PyPI project name.
+I will gladly transfer both. To request a transfer, please send an email with the reason and a repository such as GitHub. Please note that, as with PEP 541 requests, we will not respond to requests **without a valid reason**. Also, there may be a delay in confirming your email.
+
+Please use the email address listed in the latest release when submitting, as the email addresses posted in the past are no longer in use.
+
+# MiPC
+
+![img](assets/icon.png)
+
+MiPC (Misskey Python Client) is a Python client for using MisskeyAPI.
+
+# Examples
+
+##  MiAuth
+
+```python
+
+from MiPC.MiAuth import MiAuth
+
+mia = MiAuth(server="misskey.io", name="TestApp")
+
+url = mia.generate_url()
+
+while True:
+
+   try:
+
+     auth_token = mia.get_token()
+
+     break
+
+   except MisskeyMiAuthFailedException:
+
+     await asyncio.sleep(0.5)
+
+     pass
+
+```
+
+# question
+## Q. Why is the pypi registered under a different name(misskey-python) than MiPC?
+A. Because the registration was denied due to the name being similar to an existing pypi project.
