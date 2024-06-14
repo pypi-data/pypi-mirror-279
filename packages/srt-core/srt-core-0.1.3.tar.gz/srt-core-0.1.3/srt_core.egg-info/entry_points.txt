@@ -1,0 +1,3 @@
+[console_scripts]
+config-cli = config.config:main
+logger-cli = utils.logger:main
