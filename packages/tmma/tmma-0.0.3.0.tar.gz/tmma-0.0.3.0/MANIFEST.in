@@ -1,0 +1,3 @@
+recursive-include tmma/database *.csv
+recursive-include tmma/database *.txt
+recursive-include tmma/database *.pdf

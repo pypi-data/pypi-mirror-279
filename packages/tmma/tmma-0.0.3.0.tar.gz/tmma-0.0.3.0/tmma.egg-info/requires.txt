@@ -1,0 +1,7 @@
+numpy
+scipy
+matplotlib
+pandas
+mpmath
+xlsxwriter
+h5py
