@@ -1,0 +1,10 @@
+cv_pom/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cv_pom/cv_pom.py,sha256=2sdtYQHd-_sTm9wJvF8TeMa3e3Vyn0BLvjw98yknXvw,10464
+cv_pom/cv_pom_driver.py,sha256=ek5-WIfMlaWwxKIoaPLG6Bnr9obZr2cshoWQBwV16Z8,7997
+cv_pom/frameworks/__init__.py,sha256=-dOIBvuXzCsUmFm0Rrq_L1npoAkwDnLA3j2D76CskXw,71
+cv_pom/frameworks/testui.py,sha256=nVFrGhPUeRJAycCztdeTLA_f8hEWKktQIM0qYF1mBDY,3264
+cv_pom-0.2.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+cv_pom-0.2.0.dist-info/METADATA,sha256=jTDF-8qWeMexGB5uTi5Llx_w7Uw2ee622q-m7Tx9dnQ,3998
+cv_pom-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cv_pom-0.2.0.dist-info/top_level.txt,sha256=xZYfLGmQPsYr1gdxU2BOXA7a_bHe2DC-5rDUjEwjpYs,7
+cv_pom-0.2.0.dist-info/RECORD,,
