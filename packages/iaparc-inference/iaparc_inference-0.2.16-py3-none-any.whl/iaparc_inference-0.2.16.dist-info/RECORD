@@ -1,0 +1,12 @@
+iaparc_inference/__init__.py,sha256=MMeB4CiGiOjoLnlJWPmFkljr1awlTkLthmUEUUx-TMI,108
+iaparc_inference/config.py,sha256=5gObIXXAucfYU7cuGDDKnpp3YVOkscVyx7o4V6Q0YNY,6795
+iaparc_inference/data_encoder.py,sha256=eOOPBgrTGjF8cH275HLB4Q8PsAOB7LDdC6FPGw92sok,3169
+iaparc_inference/data_handler.py,sha256=bROTwVLwDcrXBqlKotrMdnICw4MleptyrmXIXttOYlo,4067
+iaparc_inference/decoders.py,sha256=yFJnbJhkjgMRj2z5tT8PRlFnnZhC_ojLPQcqdYHTdxM,3986
+iaparc_inference/encoders.py,sha256=1gAowpt9wxHDOTGK4rmWHsKmTBxYqg70tlvofxrcMEU,2859
+iaparc_inference/service.py,sha256=8VQ0L6RoertF3nGgG0SCPNrd7MiDTV8dc7xYOns6m0M,14348
+iaparc_inference-0.2.16.dist-info/LICENSE,sha256=BX7qPTUuB9AZkssm8JwQtm7lXTHA5oOd3jt_9w9owz8,11348
+iaparc_inference-0.2.16.dist-info/METADATA,sha256=Qu0d0I4AdrwHv8XFJqT6J6JDGm6dQjJRt9O2kpN-f-k,3527
+iaparc_inference-0.2.16.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+iaparc_inference-0.2.16.dist-info/top_level.txt,sha256=QhDZbXIK-iKMp4esyg3jg_eiT68OPiwzM-pc468w59s,17
+iaparc_inference-0.2.16.dist-info/RECORD,,
