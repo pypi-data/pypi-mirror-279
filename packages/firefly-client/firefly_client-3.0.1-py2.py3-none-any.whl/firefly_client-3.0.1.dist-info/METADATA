@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: firefly-client
+Version: 3.0.1
+Summary: Python API for Firefly
+Home-page: http://github.com/Caltech-IPAC/firefly_client
+Author: IPAC LSST SUIT
+License: BSD
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: websocket-client
+Requires-Dist: requests
+
