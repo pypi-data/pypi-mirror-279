@@ -1,0 +1,2 @@
+[console_scripts]
+azuredevopsflow = AzureDevOpsFlow.main:main
