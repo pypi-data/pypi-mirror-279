@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/cern_oa/__init__.py
+src/cern_oa/dep_graph.py
+src/dependency_analyzer.egg-info/PKG-INFO
+src/dependency_analyzer.egg-info/SOURCES.txt
+src/dependency_analyzer.egg-info/dependency_links.txt
+src/dependency_analyzer.egg-info/requires.txt
+src/dependency_analyzer.egg-info/top_level.txt
+tests/test_dep_graph.py
