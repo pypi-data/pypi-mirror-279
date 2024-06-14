@@ -1,0 +1,2 @@
+[console_scripts]
+pih-rgst_auto = RegistratorAutomationService.__main__:start
