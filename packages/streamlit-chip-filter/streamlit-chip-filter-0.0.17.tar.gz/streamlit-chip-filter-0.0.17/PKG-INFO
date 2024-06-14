@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: streamlit-chip-filter
+Version: 0.0.17
+Home-page: 
+Author: 
+Author-email: 
+Requires-Python: >=3.7
+Provides-Extra: devel
+License-File: LICENSE

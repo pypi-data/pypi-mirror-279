@@ -1,0 +1,1 @@
+recursive-include chip_component/frontend/build *
