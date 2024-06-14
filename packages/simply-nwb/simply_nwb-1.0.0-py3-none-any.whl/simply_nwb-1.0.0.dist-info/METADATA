@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: simply-nwb
+Version: 1.0.0
+Summary: Common NWB use cases and simplified interface for common usage
+Author: Spencer Hanson
+Keywords: neuroscience,nwb,tools,science
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: pynwb
+Requires-Dist: nwbinspector
+Requires-Dist: neo
+Requires-Dist: numpy
+Requires-Dist: pendulum
+Requires-Dist: pandas
+Requires-Dist: pyyaml
+Requires-Dist: opencv-python-headless
+Requires-Dist: Pillow
+Requires-Dist: imageio
+Requires-Dist: av
+Requires-Dist: fastcrc
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: dict-plus
+Requires-Dist: spencer-funcs (>=0.0.3)
+
+###########
+Simply-NWB
+###########
+
+- Please see the documentation at `readthedocs <https://simply-nwb.readthedocs.io/en/latest/index.html>`_
+
+- GitHub available with more information `here <https://github.com/Anschutz-Visual-Cluster/simply-nwb>`_
+
+
+Made for CU Anschutz Vision Cluster
