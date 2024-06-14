@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+vidcomp/__init__.py
+vidcomp/main.py
+vidcomp.egg-info/PKG-INFO
+vidcomp.egg-info/SOURCES.txt
+vidcomp.egg-info/dependency_links.txt
+vidcomp.egg-info/entry_points.txt
+vidcomp.egg-info/top_level.txt

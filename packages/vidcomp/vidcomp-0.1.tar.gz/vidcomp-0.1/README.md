@@ -1,0 +1,56 @@
+# Vidcomp
+
+Vidcomp is a tool for comparing video files to find the best quality video.
+
+## Installation
+
+To install Vidcomp, use the package manager [pip](https://pip.pypa.io/en/stable/):
+
+```bash
+pip install vidcomp
+
+Usage
+Vidcomp allows you to compare multiple video files and determine the best quality one. To use it, run the following command:
+vidcomp
+
+
+After starting the program, you will be prompted to enter the paths to the video files or their names. The program will automatically check for the existence of files with the extensions .mp4, .mkv, and .avi in the current directory or the specified path. If a file is not found, you will receive an error message.
+
+Example Session
+
+1.Enter the path to the video file or its name:
+video1
+
+2.The program will check for the file with various extensions.
+3.You will be prompted to add another file:
+Add another file? (Y/N): Y
+
+4. Repeat the process for all the files you want to compare.
+5.After adding all the files, the program will compare them and output information about the best video file.
+
+After comparing the files, the program will ask if you want to continue. If you choose Y, the console will be cleared, and the process will start over.
+Example Output
+
+Enter the path to the video file or its name: video1
+Add another file? (Y/N): Y
+Enter the path to the video file or its name: video2
+Add another file? (Y/N): N
+
+Best video: /path/to/video1.mp4
+Information about the best video:
+
+Video stream:
+bit_rate: 1500.0
+width: 1920
+height: 1080
+
+Audio stream:
+bit_rate: 128.0
+
+Made by Avinion
+Telegram: @akrim
+
+Continue with the script? (Y/N): N
+
+Requirements
+The program requires ffmpeg and ffprobe to be installed. You can install them by following the instructions on the https://ffmpeg.org/download.html
