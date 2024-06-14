@@ -1,0 +1,3 @@
+[console_scripts]
+g3t = gen3_tracker.cli:cli
+
