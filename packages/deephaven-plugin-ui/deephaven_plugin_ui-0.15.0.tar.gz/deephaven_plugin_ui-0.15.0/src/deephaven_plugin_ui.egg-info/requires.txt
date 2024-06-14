@@ -1,0 +1,7 @@
+deephaven-core>=0.34.1
+deephaven-plugin>=0.6.0
+json-rpc
+deephaven-plugin-utilities
+
+[:python_version < "3.11"]
+typing_extensions
