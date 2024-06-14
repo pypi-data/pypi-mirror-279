@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "dialtone"
+version = "0.0.1"
+description = "Dialtone"
+authors = ["Petr Gazarov <petr@anneal.ai>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.7.4"
+requests = "^2.32.3"
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.0.1"
+pytest = "^8.2.2"
+toml = "^0.10.2"
+wheel = "^0.43.0"
+
+[tool.poetry.scripts]
+test = "pytest:main"
+publish = "scripts.publish:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
