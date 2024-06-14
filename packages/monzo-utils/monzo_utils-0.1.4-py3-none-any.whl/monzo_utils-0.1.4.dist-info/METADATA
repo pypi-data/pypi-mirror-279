@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: monzo-utils
+Version: 0.1.4
+Summary: Monzo Utils
+Home-page: https://github.com/m4rkw/monzo-utils
+Author: Mark Wadham
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: PyYAML
+Requires-Dist: currencyconverter
+Requires-Dist: dateparser
+Requires-Dist: freezegun
+Requires-Dist: govuk-bank-holidays
+Requires-Dist: monzo-api
+Requires-Dist: mysqlclient ==2.1.1
+Requires-Dist: python-pushover2 ==0.5
+Requires-Dist: requests
+
+UNKNOWN
+
