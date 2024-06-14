@@ -1,0 +1,81 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "markdown-exec"
+description = "Utilities to execute code blocks in Markdown files."
+authors = [
+    { name = "Timothée Mazzucotelli", email = "dev@pawamoy.fr" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = [
+    "markdown",
+    "python",
+    "exec",
+    "shell",
+    "bash",
+    "mkdocs",
+]
+dynamic = []
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Documentation",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = [
+    "pymdown-extensions>=9",
+]
+version = "1.9.1"
+
+[project.license]
+text = "ISC"
+
+[project.optional-dependencies]
+ansi = [
+    "pygments-ansi-color",
+]
+
+[project.urls]
+Homepage = "https://pawamoy.github.io/markdown-exec"
+Documentation = "https://pawamoy.github.io/markdown-exec"
+Changelog = "https://pawamoy.github.io/markdown-exec/changelog"
+Repository = "https://github.com/pawamoy/markdown-exec"
+Issues = "https://github.com/pawamoy/markdown-exec/issues"
+Discussions = "https://github.com/pawamoy/markdown-exec/discussions"
+Gitter = "https://gitter.im/markdown-exec/community"
+Funding = "https://github.com/sponsors/pawamoy"
+
+[project.entry-points."mkdocs.plugins"]
+markdown-exec = "markdown_exec.mkdocs_plugin:MarkdownExecPlugin"
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.build]
+package-dir = "src"
+editable-backend = "editables"
+source-includes = [
+    "share",
+    "tests",
+]
+
+[tool.pdm.build.wheel-data]
+data = [
+    { path = "share/**/*", relative-to = "." },
+]
