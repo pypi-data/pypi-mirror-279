@@ -1,0 +1,19 @@
+site_name: imitatebias Documentation
+site_url: https://example.com/
+
+theme:
+    name: "material"
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          selection:
+            docstring_style: numpy
+
+nav:
+    - Home: index.md
+    - Imitate: imitate.md
+    - Mimic: mimic.md
+    - Cancels: cancels.md
+    - Data and Bias Generators: generators.md

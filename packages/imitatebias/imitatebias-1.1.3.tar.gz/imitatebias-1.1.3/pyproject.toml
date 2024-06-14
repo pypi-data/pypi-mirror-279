@@ -1,0 +1,57 @@
+[build-system] 
+
+requires = ["hatchling"] 
+
+build-backend = "hatchling.build" 
+
+  
+
+[project] 
+
+name = "imitatebias" 
+
+version = "1.1.3" 
+
+authors = [ 
+
+  { name="Katharina Dost", email="k_dost@ymail.com" }, 
+
+] 
+
+description = "Package for imitatebias" 
+
+readme = "README.md" 
+
+license = {text="GNU General Public License v3.0"} 
+
+requires-python = ">=3.7" 
+
+classifiers = [ 
+
+    "Programming Language :: Python :: 3", 
+
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)", 
+
+    "Operating System :: OS Independent", 
+
+] 
+
+dependencies = [ 
+
+    "scikit-learn", 
+
+    "statsmodels", 
+
+    "matplotlib", 
+
+] 
+
+  
+
+[project.urls] 
+
+"Homepage" = "https://github.com/KatDost/imitatebias" 
+
+"Bug Tracker" = "https://github.com/KatDost/imitatebias/issues" 
+
+"Documentation" = "https://katdost.github.io/imitatebias/" 
