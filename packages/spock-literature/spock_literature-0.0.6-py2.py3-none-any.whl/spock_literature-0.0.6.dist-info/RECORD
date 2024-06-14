@@ -1,0 +1,17 @@
+spock_literature/__init__.py,sha256=QVN8yOKdAJQrpqE9M_AWaUFwQfyAtyYogAuaUuP9Xzw,131
+spock_literature/author.py,sha256=TV47c_Saz0cmc0EBQefho7saNxO6wH1-tG7bqJF6nYw,1774
+spock_literature/bot.py,sha256=fmiUggt09RkwiqYHSi-yxQd0hIE7bEKN06oOat1y6hE,2634
+spock_literature/common.py,sha256=tj4VZKjn4r1EbM27phHEw5kdmzMxGpp2JTy_SfyF76Y,2304
+spock_literature/publication.py,sha256=5yzcJ1ud_ZW8o-9FA4oUquU_EjBqO1uw97PLfEcDKCg,3889
+spock_literature/spock.py,sha256=pqRgPTyewlRk2Zg6tzQO33T7Z_PNacmVCx7GSmf5lsc,666
+spock_literature/utilities.py,sha256=0Ks7l8t5Rtcv1eigQsiwUZKN40O53FyYzucpz6rkNWQ,10289
+spock_literature/data/authors.txt,sha256=HW7JXj6u5Rt6hqTM4UeJsUZiO22atz0GCvhA80MUDfg,1031
+spock_literature/json/output.json,sha256=Kqm5ja2hDMjnOilYIh7Yg-PTNulqvrtDy4LMFYFnqR4,8
+spock_literature/json/response.json,sha256=19beOwsT57Mch1x65Cy21gQt0uv62dgd6qTq59wWdsg,3028
+spock_literature-0.0.6.dist-info/AUTHORS.rst,sha256=Fwo8XGUovkIKYUuYYYG65cD77vLaBnAoOtCye4EwKkg,164
+spock_literature-0.0.6.dist-info/LICENSE,sha256=s5-8wuxIuIXdPpJZr10MVETsM2RuvzWfwm4xGOiUnWA,1072
+spock_literature-0.0.6.dist-info/METADATA,sha256=wkNQdjCmsEq6mH8lH-frRrV0XuZmlS0DCBpIrtc2Lb8,1457
+spock_literature-0.0.6.dist-info/WHEEL,sha256=iYlv5fX357PQyRT2o6tw1bN-YcKFFHKqB_LwHO5wP-g,110
+spock_literature-0.0.6.dist-info/entry_points.txt,sha256=8HvA_SEhVTly9jvi2-mtU9QzaxHFlSTlo-_aI4mGYlY,41
+spock_literature-0.0.6.dist-info/top_level.txt,sha256=rfFbPXk64aTxpfEMzA4FkCD4a3906WpDsvxXk_nAyMg,17
+spock_literature-0.0.6.dist-info/RECORD,,
