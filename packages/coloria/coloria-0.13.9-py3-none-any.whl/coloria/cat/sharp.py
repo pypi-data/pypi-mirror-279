@@ -1,0 +1,1 @@
+from .._agg import _Gwn0x as sharp

@@ -1,0 +1,1 @@
+from .._agg import _ApZZ8 as this_dir,_eyltK as cie_1931_2,_Remzu as cie_1964_10,_5RMvz as wws_cie_1931_2,_Ez93l as wws_cie_1964_10,_Shdfp as SpectralData
