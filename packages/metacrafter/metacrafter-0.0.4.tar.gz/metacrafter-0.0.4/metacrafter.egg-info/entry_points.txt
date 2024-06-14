@@ -1,0 +1,2 @@
+[console_scripts]
+metacrafter = metacrafter.__main__:main
