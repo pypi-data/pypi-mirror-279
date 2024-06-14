@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: kody-protobuilder
+Version: 0.0.2
+Summary: protofile builder
+Home-page: https://github.com/byundojin/auto-protobuf
+Author: kody-protobuilder_author
+Author-email: kodyprotobuilder@gmail.com
+Requires-Python: >=3.8
+Requires-Dist: grpcio
+Requires-Dist: grpcio-tools
