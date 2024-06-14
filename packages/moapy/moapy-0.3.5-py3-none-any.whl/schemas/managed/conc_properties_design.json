@@ -1,0 +1,269 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "FastAPI",
+    "version": "0.1.0"
+  },
+  "servers": [
+    {
+      "url": "https://moa.rpm.kr-dv-midasit.com/backend/function-executor/python-execute/"
+    }
+  ],
+  "paths": {
+    "/conc_properties_design/": {
+      "post": {
+        "summary": "Conc Properties Design",
+        "description": "Return the concrete material properties based on the design code\n\nArgs:\n    units: units\n    design_code: design code\n    grade: grade of the concrete\n    general: general concrete properties\n    uls: concrete stress options for ULS\n    sls: concrete stress options for SLS\n\nreturn:\n    { \"ULS\": \"strain\":[0.1,2,4,4,35,], \"stress\":[0,234235,235,235,], \"SLS\": stress_strain_curve }: material properties of selected data",
+        "operationId": "conc_properties_design_conc_properties_design__post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/Body_conc_properties_design_conc_properties_design__post"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/stress_strain_curve"
+                  },
+                  "type": "object",
+                  "title": "Response Conc Properties Design Conc Properties Design  Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Body_conc_properties_design_conc_properties_design__post": {
+        "properties": {
+          "general": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/concrete_general_properties"
+              }
+            ]
+          },
+          "uls": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/concrete_stress_uls_options_ACI"
+              }
+            ]
+          },
+          "sls": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/concrete_sls_options"
+              }
+            ]
+          }
+        },
+        "type": "object",
+        "title": "Body_conc_properties_design_conc_properties_design__post"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "concrete_general_properties": {
+        "properties": {
+          "strength": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Strength",
+            "description": "Grade of the concrete",
+            "default": 12
+          },
+          "elastic_modulus": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Elastic Modulus",
+            "description": "Elastic modulus of the concrete",
+            "default": 30000
+          },
+          "density": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Density",
+            "description": "Density of the concrete",
+            "default": 2400
+          },
+          "thermal_expansion_coefficient": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Thermal Expansion Coefficient",
+            "description": "Thermal expansion coefficient of the concrete",
+            "default": 1e-05
+          },
+          "poisson_ratio": {
+            "type": "number",
+            "exclusiveMinimum": 0.0,
+            "title": "Poisson Ratio",
+            "description": "Poisson ratio of the concrete",
+            "default": 0.2
+          }
+        },
+        "type": "object",
+        "title": "concrete_general_properties",
+        "description": "GSD concrete general properties for calculation"
+      },
+      "concrete_sls_options": {
+        "properties": {
+          "material_model": {
+            "type": "string",
+            "title": "Material Model",
+            "description": "Material model for SLS",
+            "default": "Linear"
+          },
+          "plastic_strain_limit": {
+            "type": "number",
+            "title": "Plastic Strain Limit",
+            "description": "Plastic strain limit for SLS",
+            "default": 0.002
+          },
+          "failure_compression_limit": {
+            "type": "number",
+            "title": "Failure Compression Limit",
+            "description": "Failure compression limit for SLS",
+            "default": 0.003
+          },
+          "material_model_tension": {
+            "type": "string",
+            "title": "Material Model Tension",
+            "description": "Material model for SLS tension",
+            "default": "interpolated"
+          },
+          "failure_tension_limit": {
+            "type": "number",
+            "title": "Failure Tension Limit",
+            "description": "Failure tension limit for SLS",
+            "default": 0.003
+          }
+        },
+        "type": "object",
+        "title": "concrete_sls_options",
+        "description": "GSD concrete stress options for SLS"
+      },
+      "concrete_stress_uls_options_ACI": {
+        "properties": {
+          "material_model": {
+            "type": "string",
+            "title": "Material Model",
+            "description": "Material model for ULS",
+            "default": "Rectangle"
+          },
+          "factor_b1": {
+            "type": "number",
+            "title": "Factor B1",
+            "description": "Plastic strain limit for ULS",
+            "default": 0.85
+          },
+          "compressive_failure_strain": {
+            "type": "number",
+            "title": "Compressive Failure Strain",
+            "description": "Failure strain limit for ULS",
+            "default": 0.003
+          }
+        },
+        "type": "object",
+        "title": "concrete_stress_uls_options_ACI",
+        "description": "GSD concrete stress options for ULS"
+      },
+      "stress_strain_curve": {
+        "properties": {
+          "HEAD": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Head"
+          },
+          "DATA": {
+            "items": {
+              "items": {
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "type": "array",
+            "title": "Data"
+          }
+        },
+        "type": "object",
+        "required": [
+          "HEAD",
+          "DATA"
+        ],
+        "title": "stress_strain_curve"
+      }
+    }
+  }
+}
