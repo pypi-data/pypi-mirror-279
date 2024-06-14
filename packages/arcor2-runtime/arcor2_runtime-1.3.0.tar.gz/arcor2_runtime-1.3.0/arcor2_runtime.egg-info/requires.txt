@@ -1,0 +1,3 @@
+arcor2~=1.4.0
+dataclasses-jsonschema[apispec,fast-dateparsing,fast-validation]~=2.16.0
+pyhumps==3.8.0
