@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/pycurves/__init__.py
+src/pycurves.egg-info/PKG-INFO
+src/pycurves.egg-info/SOURCES.txt
+src/pycurves.egg-info/dependency_links.txt
+src/pycurves.egg-info/requires.txt
+src/pycurves.egg-info/top_level.txt

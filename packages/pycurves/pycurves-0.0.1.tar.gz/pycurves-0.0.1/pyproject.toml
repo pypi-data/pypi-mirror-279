@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycurves"
+version = "0.0.1"
+description = ""
+readme = "README.md"
+authors = [{name = "Shi Changshan", email = "changshanshi@outlook.com"}]
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["timer"]
+dependencies = [
+    "textual",
+    "textual-plotext",
+]
+
+[project.urls]
+Homepage = "https://github.com/Bardreamaster/pycurves"
