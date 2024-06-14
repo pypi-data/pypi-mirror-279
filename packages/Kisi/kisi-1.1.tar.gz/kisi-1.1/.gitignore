@@ -1,0 +1,6 @@
+/local.log
+kisi/test.py
+env
+.venv
+.idea
+__pycache__
