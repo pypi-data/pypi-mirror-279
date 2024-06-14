@@ -1,0 +1,16 @@
+matplotlib>=3.7
+numpy>=1.21.4
+scikit_learn>=1.2
+scipy>=1.10
+sympy>=1.12
+pysindy>=1.7
+tensorflow>=2.15
+tensorflow_probability>=0.24
+tensorflow_model_optimization>=0.7
+tf-keras>=2.16
+
+[gui]
+inspector3D
+imageio
+
+[interfaces]
