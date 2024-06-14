@@ -1,0 +1,81 @@
+
+
+#######################################################################################
+#######################################################################################
+ner_gliner_vTEST:
+  model_name: "urchade/gliner_small"
+
+  #### Data name
+  dataloader_name: "dataTEST_load_prepro"
+  datamapper_name: "dataTEST_create_label_mapper"
+
+  #### Train Args
+  hf_args_train.num_steps: 2
+  hf_args_train.device   : "cpu"
+
+
+ner_gliner_vXX:
+  model_name: "urchade/gliner_small"
+
+  #### Data name
+  dataloader_name: "dataXX_load_prepro"
+  datamapper_name: "dataXX_create_label_mapper"
+
+  #### Train Args
+  hf_args_train.num_steps: 2
+  hf_args_train.device   : "cpu"
+
+
+
+ner_gliner_infer_v1:
+ ner_tags:  ["person", "city", "location", "date", "actor"]
+ dirmodel:  "./ztmp/exp/20240520/235015/model_final/"  
+ dirdata:   "ztmp/data/ner/gliner"  
+ dirout:    "ztmp/out/ner/gliner/"
+
+
+
+#######################################################################################
+multilabel_deberta_v1:
+  model_name: 'model_deberta'
+  model_path: 'model_deberta'
+  model_type: 'deberta'
+
+
+
+
+#######################################################################################
+#######################################################################################
+model_deberta_v1:
+  model_name: 'model_deberta'
+  model_path: 'model_deberta'
+  model_type: 'deberta'
+
+
+model_deverta_NERgeo:
+  model_name: 'microsoft/deberta-v3-base'
+  model_path: 'model_deberta'
+  model_type: 'deberta'
+  dirin: 'ztmp/data/ner/NERgeo/'
+
+  dataloader_name: "data_NERgeo_load_datasplit"
+  datamapper_name: "data_NERgeo_load_metadict"
+
+
+
+
+
+
+
+model_deverta_legal_doc:
+  model_name: 'microsoft/deberta-v3-base'
+  model_path: 'model_deberta'
+  model_type: 'deberta'
+  dirin: 'ztmp/data/ner/legaldoc/'
+
+  dataloader_name: "data_legalDoc_load_datasplit"
+  datamapper_name: "data_legalDoc_load_metadict"
+
+
+
+
