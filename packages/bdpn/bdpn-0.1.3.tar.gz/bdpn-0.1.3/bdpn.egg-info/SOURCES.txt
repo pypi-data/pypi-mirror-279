@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+bdpn/__init__.py
+bdpn/bd_model.py
+bdpn/bdpn_model.py
+bdpn/formulas.py
+bdpn/model_distinguisher.py
+bdpn/mtbd.py
+bdpn/parameter_estimator.py
+bdpn/tree_manager.py
+bdpn.egg-info/PKG-INFO
+bdpn.egg-info/SOURCES.txt
+bdpn.egg-info/dependency_links.txt
+bdpn.egg-info/entry_points.txt
+bdpn.egg-info/requires.txt
+bdpn.egg-info/top_level.txt
