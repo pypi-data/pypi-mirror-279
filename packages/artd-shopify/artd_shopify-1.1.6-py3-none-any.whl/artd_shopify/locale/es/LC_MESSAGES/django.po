@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-06 17:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: artd_package/settings.py:141
+msgid "English"
+msgstr "Ingles"
+
+#: artd_package/settings.py:142
+msgid "Spanish"
+msgstr "Español"
+
+#: artd_shopify/apps.py:8
+msgid "ArtD Shopify"
+msgstr "Shopify"
+
+#: artd_shopify/models.py:9
+msgid "status"
+msgstr "Estado"
+
+#: artd_shopify/models.py:10
+msgid "Designates whether this record is active or not."
+msgstr "Designa si este registro esta activo o no."
+
+#: artd_shopify/models.py:14
+msgid "created at"
+msgstr "Creado el"
+
+#: artd_shopify/models.py:15
+msgid "Date time on which the object was created."
+msgstr "Fecha y hora en la que se creo el objeto."
+
+#: artd_shopify/models.py:19
+msgid "updated at"
+msgstr "Actualizado el"
+
+#: artd_shopify/models.py:20
+msgid "Date time on which the object was last updated."
+msgstr "Fecha y hora en la que se actualizo el objeto."
+
+#: artd_shopify/models.py:33 artd_shopify/models.py:96
+#: artd_shopify/models.py:157 artd_shopify/models.py:245
+msgid "partner"
+msgstr "Asociado"
+
+#: artd_shopify/models.py:34 artd_shopify/models.py:97
+#: artd_shopify/models.py:158
+msgid "Partner associated with this credential."
+msgstr "Asociado con este credencial."
+
+#: artd_shopify/models.py:38
+msgid "vendor"
+msgstr "Vendedor"
+
+#: artd_shopify/models.py:39 artd_shopify/models.py:102
+#: artd_shopify/models.py:163
+msgid "Shopify Vendor."
+msgstr "Vendedor Shopify."
+
+#: artd_shopify/models.py:44 artd_shopify/models.py:111
+#: artd_shopify/models.py:172
+msgid "API version"
+msgstr "Versión API"
+
+#: artd_shopify/models.py:45 artd_shopify/models.py:112
+#: artd_shopify/models.py:173
+msgid "Shopify API Version."
+msgstr "Versión API Shopify."
+
+#: artd_shopify/models.py:49 artd_shopify/models.py:177
+msgid "API key"
+msgstr "Llave API"
+
+#: artd_shopify/models.py:50 artd_shopify/models.py:178
+msgid "Shopify API Key."
+msgstr "Llave API Shopify."
+
+#: artd_shopify/models.py:54
+msgid "API password"
+msgstr "Contraseña API"
+
+#: artd_shopify/models.py:55
+msgid "Shopify API Password."
+msgstr "Contraseña API Shopify."
+
+#: artd_shopify/models.py:59
+msgid "store URL"
+msgstr "URL de la tienda"
+
+#: artd_shopify/models.py:60
+msgid "Shopify Store URL."
+msgstr "URL de la tienda Shopify."
+
+#: artd_shopify/models.py:64
+msgid "callback URL"
+msgstr "URL de retorno"
+
+#: artd_shopify/models.py:65
+msgid "Shopify Callback URL."
+msgstr "URL de retorno Shopify."
+
+#: artd_shopify/models.py:68
+msgid "auth URL"
+msgstr "URL de autenticación"
+
+#: artd_shopify/models.py:69
+msgid "Shopify Auth URL."
+msgstr "URL de autenticación de Shopify"
+
+#: artd_shopify/models.py:74 artd_shopify/models.py:116
+#: artd_shopify/models.py:187
+msgid "access token"
+msgstr "Token de acceso"
+
+#: artd_shopify/models.py:75 artd_shopify/models.py:117
+#: artd_shopify/models.py:188
+msgid "Shopify Access Token."
+msgstr "Token de acceso Shopify"
+
+#: artd_shopify/models.py:101 artd_shopify/models.py:162
+msgid "Vendor"
+msgstr "Vendedor"
+
+#: artd_shopify/models.py:106 artd_shopify/models.py:167
+msgid "store key"
+msgstr "Llave de la tienda"
+
+#: artd_shopify/models.py:107 artd_shopify/models.py:168
+msgid "Shopify Store Key."
+msgstr "Llave de la tienda Shopify"
+
+#: artd_shopify/models.py:122 artd_shopify/models.py:193
+msgid "product counter"
+msgstr "Contador de productos"
+
+#: artd_shopify/models.py:123 artd_shopify/models.py:194
+msgid "Shopify Product Counter."
+msgstr "Contador de productos Shopify"
+
+#: artd_shopify/models.py:127 artd_shopify/models.py:198
+msgid "brand prefix"
+msgstr "Prefijo de marca"
+
+#: artd_shopify/models.py:128 artd_shopify/models.py:199
+msgid "Shopify Brand Prefix."
+msgstr "Prefijo de marca Shopify"
+
+#: artd_shopify/models.py:134 artd_shopify/models.py:205
+msgid "category regular expression"
+msgstr "Expresión regular de categoría"
+
+#: artd_shopify/models.py:135 artd_shopify/models.py:206
+msgid "Shopify Category Regular Expression."
+msgstr "Expresión regular de categoría Shopify"
+
+#: artd_shopify/models.py:182
+msgid "API secret"
+msgstr "API secreta"
+
+#: artd_shopify/models.py:183
+msgid "Shopify API Secret."
+msgstr "API secreta de Shopify"
+
+#: artd_shopify/models.py:227
+msgid "product id"
+msgstr "ID del producto"
+
+#: artd_shopify/models.py:228
+msgid "Shopify Product ID."
+msgstr "ID del producto Shopify"
+
+#: artd_shopify/models.py:232 artd_shopify/models.py:270
+#: artd_shopify/models.py:309
+msgid "name"
+msgstr "Nombre"
+
+#: artd_shopify/models.py:233
+msgid "Shopify Product Name."
+msgstr "Nombre del producto Shopify"
+
+#: artd_shopify/models.py:239 artd_shopify/models.py:289
+msgid "json data"
+msgstr "Datos JSON"
+
+#: artd_shopify/models.py:240
+msgid "Shopify Product JSON Data."
+msgstr "Datos JSON del producto Shopify"
+
+#: artd_shopify/models.py:246
+msgid "Partner associated with this product."
+msgstr "Asociado con este producto."
+
+#: artd_shopify/models.py:250
+msgid "processed"
+msgstr "Procesado"
+
+#: artd_shopify/models.py:251
+msgid "Designates whether this product is processed or not."
+msgstr "Designa si este producto esta procesado o no."
+
+#: artd_shopify/models.py:271
+msgid "Shopify Category Name."
+msgstr "Nombre de la categoría Shopify"
+
+#: artd_shopify/models.py:276 artd_shopify/models.py:315
+msgid "artd partner"
+msgstr "Asociado"
+
+#: artd_shopify/models.py:277 artd_shopify/models.py:316
+msgid "ArtD Partner associated with this category."
+msgstr "Asociado con esta categoría."
+
+#: artd_shopify/models.py:282
+msgid "artd tax"
+msgstr "Impuesto"
+
+#: artd_shopify/models.py:283
+msgid "ArtD Tax associated with this category."
+msgstr "Impuesto asociado con esta categoría."
+
+#: artd_shopify/models.py:290
+msgid "Shopify Category JSON Data."
+msgstr "Data JSON de la categoría Shopify"
+
+#: artd_shopify/models.py:310
+msgid "Shopify Brand Name."
+msgstr "Nombre de la marca Shopify"
