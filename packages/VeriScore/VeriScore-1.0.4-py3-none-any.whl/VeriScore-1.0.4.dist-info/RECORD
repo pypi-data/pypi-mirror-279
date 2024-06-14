@@ -1,0 +1,16 @@
+veriscore/__init__.py,sha256=-Wqu9UyJphp-2_EahEsqQvkcE0VBhm1-N7D6e5rANdY,22
+veriscore/calculate_cost.py,sha256=1Yft6Y1mIqQ1gLEF3VA0pCkaP9jBClvqg1fCO0CIf4w,2540
+veriscore/claim_extractor.py,sha256=TqZEjNE3AwaEGi1pCvz1MeUsveL8GWAfoWwdUZjtIZc,8820
+veriscore/claim_verifier.py,sha256=LKN3vfLs5EPy3NNz7tC5r-bbl2XwSQo-7fYwvIxiaJ0,6950
+veriscore/extract_claims.py,sha256=wyuIbgHTta-vzX-SFZgacH-d9KzHntcjo5so464p-Hs,3410
+veriscore/get_response.py,sha256=MqVWHDzMZYpNOQR2HtWvnqCxj1WKhauJVSBZBatHvj8,3989
+veriscore/retrieval_evidence.py,sha256=5WOh3g2k2pavy9a0rU9QU7565JIJIcrVtuGoLPY8JEM,2039
+veriscore/retrieve_evidence.py,sha256=99BkXbDhUuEutrDTDvXO43TT33ISh0mgcXl9tmueeao,1693
+veriscore/search_API.py,sha256=IbPCv7nzPZv3-V5Qfl_tUpCuyitKBO4Erw82Zywem8E,3123
+veriscore/verify_claims.py,sha256=4F3hGVwskBVl_RHQ20Ago_BBzGwLYqER2-a6NYxBwNo,3242
+veriscore/veriscore.py,sha256=v7Am1oAGKpIyVOP8MBWnRJINLpEzbwAQTgGHUx1kvK0,9044
+VeriScore-1.0.4.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+VeriScore-1.0.4.dist-info/METADATA,sha256=G5uslXJhSUr1C9QuUwwHmXBCa3yHBLY6gtzhU8xVucM,5013
+VeriScore-1.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+VeriScore-1.0.4.dist-info/top_level.txt,sha256=lHuX4Sa2rDNQhS4VSMX5HOBAzBv008oHSDJZIeCFPP4,10
+VeriScore-1.0.4.dist-info/RECORD,,
