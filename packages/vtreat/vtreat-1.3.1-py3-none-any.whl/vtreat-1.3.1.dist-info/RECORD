@@ -1,0 +1,17 @@
+vtreat/__init__.py,sha256=7oWEKNp35LtSIiq4gPMGSf6uFZwKYxJU2mjodJTiWag,2817
+vtreat/cross_plan.py,sha256=cjTzIlBanhksqUS_dlkq127CU9JaHO6W-tb8V2C8YBo,3699
+vtreat/da_adapter.py,sha256=5VpSNDX7JlxYo4i_8dOWQDeu4ErleY5SiZO52rns7M8,12174
+vtreat/effect_scaler.py,sha256=u2tDEwBhGHwiVLo4gyiNb0kRIlucetVlDbSV4SjUws8,3743
+vtreat/partial_pooling_estimator.py,sha256=KpxUFktdg7OsCjmRyKjYvsEDl4WmxwUPGLR2FCzmC-k,3455
+vtreat/stats_utils.py,sha256=G3K_cTuO1_1qvh5q08TvVYWH70Hpug-ZLbtn6sIS_nk,8281
+vtreat/test_util.py,sha256=OxyyY0hAEYrRM1YWYroBmQQOkG8MEeXunwqVD4ft208,4037
+vtreat/transform.py,sha256=JtPXKwweBFsqhBwaNqIeiB1C_czuviTOOfq97FptcpI,1074
+vtreat/util.py,sha256=PA_FnKFn2c-dpL695CIYCCsvKfllYYVykzNEyTpIyUk,8934
+vtreat/vtreat_api.py,sha256=r_06aXYyh9Q3EtIDL-9ZMZ5mSOVL7Eo-_SVOfJ46dqY,29712
+vtreat/vtreat_db_adapter.py,sha256=gMsR4L5m1oADXcwWSGIOvwiu467TC9gLQIZR9Ynsuss,55
+vtreat/vtreat_impl.py,sha256=-tMLfIc0OcEPvE986DHahFEuMg5WHvPiGC3yOnAjcPA,63082
+vtreat-1.3.1.dist-info/LICENSE,sha256=kNHOgJg2caTt2FQt8TWowhEDIf3beKtIcQwFbaciOeQ,1494
+vtreat-1.3.1.dist-info/METADATA,sha256=rzC1YwfOlPF7fnMTlmoLLtYeh2bw5g2Pdz-3fM6JROc,3604
+vtreat-1.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vtreat-1.3.1.dist-info/top_level.txt,sha256=65Yj_4b6S4Si8eJD4RDe_aU-JdmbaZVIXR709GrMro8,7
+vtreat-1.3.1.dist-info/RECORD,,
