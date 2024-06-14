@@ -1,0 +1,9 @@
+save_monger/__init__.py,sha256=UTzabPorbdOlcEAZJr3miR-DbEq3ftvPnmyIOc1J1UY,81
+save_monger/models.py,sha256=NDGC5St6nf75Ei6Z6-5kcvuZmmme1ptumyqKPgXylnA,17694
+save_monger/nim_save_monger.cp310-win_amd64.pyd,sha256=WCYe5E76Z8PZhXi6k1zNqcbYjWzu515pzTFzvubUQMc,293376
+save_monger/nim_save_monger.pyi,sha256=wKVAy1Gq_kDINl6Z3bAI6k6E7ScGPPRIuykQ4h1Ffn8,693
+save_monger-0.2.0.dist-info/LICENSE,sha256=hraBEOE5l_POZN3bs04mzemSAs3XdBtkNH-IiKq9uNI,1064
+save_monger-0.2.0.dist-info/METADATA,sha256=ouVHVc7rj4fI3UJ6VtwPMHmw_xDmmrNOsB_bn7Sghy4,108
+save_monger-0.2.0.dist-info/WHEEL,sha256=lO6CqtLHCAi38X3Es1a4R1lAjZFvN010IMRCFo2S7Mc,102
+save_monger-0.2.0.dist-info/top_level.txt,sha256=4Cfc5UTiAUKwEz2OsfDvJW_Isld4VFA-nHR59XQk7MU,12
+save_monger-0.2.0.dist-info/RECORD,,
