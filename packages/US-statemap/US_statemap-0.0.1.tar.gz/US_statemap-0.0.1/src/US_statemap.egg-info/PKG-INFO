@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: US-statemap
+Version: 0.0.1
+Summary: Displays a map of the United States as specified
+Home-page: https://github.com/spcnkonno/US_statemap
+Author: spcnkonno
+Author-email: nkonno@sciencepark.co.jp
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/spcnkonno/US_statemap
+Description: アメリカの地図を指定した州、指定した色で表示します。
+        事前に「pip install geopandas matplotlib」を実行してください。
+        
+        Displays a map of the United States in the specified state and specified color.
+        Please run "pip install geopandas matplotlib in advance.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8.10
+Description-Content-Type: text/markdown

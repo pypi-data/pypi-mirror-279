@@ -1,0 +1,3 @@
+[console_scripts]
+US_statemap = US_statemap:main
+
