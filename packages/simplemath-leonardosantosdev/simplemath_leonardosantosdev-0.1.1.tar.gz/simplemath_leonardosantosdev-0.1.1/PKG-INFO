@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: simplemath_leonardosantosdev
+Version: 0.1.1
+Summary: A simple math operations package
+Home-page: https://github.com/leonardosantosdev/simplemath_leonardosantosdev
+Author: Leonardo Santos
+Author-email: leodossantosldsl@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# simplemath_leonardosantosdev
+
+A simple Python package for basic arithmetic operations.
+
+## Installation
+
+```bash
+pip install simplemath_leonardosantosdev
+```
+
+## Usage
+
+```python
+from simplemath_leonardosantosdev.arithmetic import add, subtract, multiply, divide
+
+print(add(1, 2))  # Output: 3
+print(subtract(5, 3))  # Output: 2
+print(multiply(2, 4))  # Output: 8
+print(divide(10, 2))  # Output: 5.0
+```
