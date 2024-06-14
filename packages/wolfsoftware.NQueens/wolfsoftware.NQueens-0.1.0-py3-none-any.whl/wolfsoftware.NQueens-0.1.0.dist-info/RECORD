@@ -1,0 +1,13 @@
+wolfsoftware/nqueens/__init__.py,sha256=Ed36vVm2_cTe0s91TAq9NeYHShcKjmnpm0JfgI8zGpo,482
+wolfsoftware/nqueens/cli.py,sha256=hSYFIoAytR0jE2ZmP2_O_Z39t9NU0Bswj1_cMSHEcss,4118
+wolfsoftware/nqueens/config.py,sha256=oiTUvfTNmJ1miPBZe4JKschudYRzb8k3weIuGapyoK8,1202
+wolfsoftware/nqueens/exceptions.py,sha256=kIE8i0hlTpSFicQuSCovg52PlpjdgWfX71GIVnPjoKE,685
+wolfsoftware/nqueens/globals.py,sha256=5R2XJ5XC5fvu9RORMHB4UQsZSKwjnHvDau2kBjHopEQ,868
+wolfsoftware/nqueens/main.py,sha256=dy6epxcy9dljNuECetHI8Q7da94qDkXsv0K1ItVD21I,1025
+wolfsoftware/nqueens/nqueens.py,sha256=Y5yULXyOkBkuXN2xqRBBLsJ75MwAaFL3M1B7uJwv2Ms,8226
+wolfsoftware.NQueens-0.1.0.dist-info/LICENSE.md,sha256=lGeU8YsP7-Ty2Mf5d_qmyYrdhBahKio3jhRcsKkW3nw,1118
+wolfsoftware.NQueens-0.1.0.dist-info/METADATA,sha256=-1aCxCfEreKoNuJe-l9niuMDPIjTtXTI7W2yCLjNCcY,7371
+wolfsoftware.NQueens-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+wolfsoftware.NQueens-0.1.0.dist-info/entry_points.txt,sha256=EO2ryCQdJ5s-njE3tOlp-fNfSWg8jPv8hcaovqD4iEA,59
+wolfsoftware.NQueens-0.1.0.dist-info/top_level.txt,sha256=fseJlDQdZOeclXNvg0wy0fFFgxsKIMhQDo5jMxmyrV4,13
+wolfsoftware.NQueens-0.1.0.dist-info/RECORD,,
