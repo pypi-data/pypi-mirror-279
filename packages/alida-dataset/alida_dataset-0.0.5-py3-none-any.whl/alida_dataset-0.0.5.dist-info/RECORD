@@ -1,0 +1,14 @@
+alidadataset/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alidadataset/dataset.py,sha256=REkP5rznMXesHC7GfJNcsXbPQX6S19YdzzaFeHc9T9I,773
+alidadataset/utils.py,sha256=7qZxflKPA-AzqC-J6HEONUtyvbf5k-rxwK1n8suZVq4,653
+alidadataset/serializations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+alidadataset/serializations/hugging_face_dataset.py,sha256=tfaU7yjvgbUq9jOVEjzIx0iwrbHy2VFy_7wFohLr_Ok,1483
+alidadataset/serializations/kafka_channel.py,sha256=kdl-CkAsLyuLs8ADK-uOd-b8vBPrks1RI4Tc_BOONPc,989
+alidadataset/serializations/pandas_dataframe.py,sha256=YXxWbFLSQYUJX9yKAXp1gHr3FKYWN7vqpAn4Lw7U_ho,905
+alidadataset/serializations/path.py,sha256=3MYU3M3RdLi0mhfVkroeFEtLaCLWjfwXtlNg8gvvC4M,108
+alidadataset/serializations/streaming_input.py,sha256=6hrIz5F9VnANAnu_Q2WdNIqcysLseggG1VVildD0JQU,858
+alidadataset/serializations/streaming_output.py,sha256=FbgR1tk40BVpEpSw1KaQXkM9VLl2dVvXrWNxmW4rOGU,1006
+alida_dataset-0.0.5.dist-info/METADATA,sha256=7RuzSR62cAHORDTFpeuQeCEU8SCcwxES_KsyNTFCaZY,605
+alida_dataset-0.0.5.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+alida_dataset-0.0.5.dist-info/top_level.txt,sha256=nzO7l2y-GpngvBxXTlZXUfOQ985vSfHw7FGK6BeVKac,13
+alida_dataset-0.0.5.dist-info/RECORD,,
