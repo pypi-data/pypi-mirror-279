@@ -1,0 +1,2 @@
+[flake8.extension]
+TBC = flake8_t_bug_catcher:TBugCatcherHook

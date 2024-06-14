@@ -1,0 +1,2 @@
+flake8>=3
+t_bug_catcher==0.5.5

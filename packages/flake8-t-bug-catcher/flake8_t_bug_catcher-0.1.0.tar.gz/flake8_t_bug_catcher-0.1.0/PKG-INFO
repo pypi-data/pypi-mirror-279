@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: flake8_t_bug_catcher
+Version: 0.1.0
+Summary: Pre Commit hook for T - Bug Catcher
+Home-page: https://www.thoughtful.ai/
+Author: Thoughtful
+Author-email: support@thoughtful.ai
+Keywords: flake8_t_bug_catcher
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Requires-Dist: flake8>=3
+Requires-Dist: t_bug_catcher==0.5.5
+
+======================
+T Bug Catcher Hook
+======================
+
+Pre Commit hook for T - Bug Catcher
