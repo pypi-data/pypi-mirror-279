@@ -1,0 +1,17 @@
+
+[notebooks]
+nbmake
+
+[publishing]
+build
+twine
+wheel
+
+[test]
+pytest>=7.4.0
+bump2version
+coverage
+pycodestyle
+pytest-cov
+pytest-runner
+coveralls
