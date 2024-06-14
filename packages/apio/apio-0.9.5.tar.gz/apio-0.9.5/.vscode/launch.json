@@ -1,0 +1,178 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Apio",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "internalConsole",
+            "justMyCode": true
+        },
+        {
+            "name": "Apio build",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["build","--top-module","caca"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/temp-ledon"
+        },
+        {
+            "name": "Apio clean",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["clean", "-p", "ledon2"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/ledon"
+        },
+        {
+            "name": "Apio verify",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["verify","--board", "alhambra-ii", "-p","/home/obijuan/Test/ice-build/01-LEDs-buttons"],
+            "console": "internalConsole",
+            "justMyCode": true,
+        },
+        {
+            "name": "Upload (Alhambra II)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["upload"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            //-- Testing the Alhanbra-II board
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/temp-ledon"
+        },
+        {
+            "name": "Upload (TinyFPGA)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["upload"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            //-- Testing the TinyFPGA board
+            "cwd": "${workspaceFolder}/test-examples/TinyFPGA-BX/01-LED-ON"
+        },
+        {
+            "name": "Upload (Fomu)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["upload"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            //-- Testing the TinyFPGA board
+            "cwd": "${workspaceFolder}/test-examples/fomu/temp-Blinky"
+        },
+        {
+            "name": "Upload (Blackice)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["upload"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            //-- Testing the Blackice
+            "cwd": "${workspaceFolder}/test-examples/BlackIce/01-LEDs-buttons"
+        },
+        {
+            "name": "Apio init",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["init", "-s"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/ledon"
+        },
+        {
+            "name": "Apio examples",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["examples"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/temp-test"
+        },
+        {
+            "name": "Apio boards",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["boards", "-l"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/temp-ledon"
+        },
+        {
+            "name": "Apio config",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["config", "-v", "1"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/ledon"
+        },
+        {
+            "name": "Apio install",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["install", "drivers", "-p",  "windows_amd64"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/temp-ledon"
+        },
+        {
+            "name": "Apio uninstall",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["uninstall", "examples"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/temp-ledon"
+        },
+        {
+            "name": "Apio system",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["system", "--info"],
+            "console": "internalConsole",
+            "justMyCode": true,
+            //-- Change to the folder with the example to test
+            "cwd": "${workspaceFolder}/test-examples/Alhambra-II/temp-ledon"
+        },
+        {
+            "name": "Apio drivers",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "args": ["drivers", "--ftdi-enable"],
+            "console": "internalConsole",
+            "justMyCode": true,
+        },
+    ]
+}
