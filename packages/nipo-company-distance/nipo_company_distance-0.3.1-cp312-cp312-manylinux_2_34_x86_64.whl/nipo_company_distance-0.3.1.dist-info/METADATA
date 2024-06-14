@@ -1,0 +1,8 @@
+Metadata-Version: 2.3
+Name: nipo_company_distance
+Version: 0.3.1
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Author: Benjamin Chandler
+Requires-Python: >=3.8
