@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "bstk_notitia"
+version = "0.5.3"
+description = "notitia core runtime & modules"
+authors = ["colin <colin@broadstack.com.au>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-dotenv = { extras = ["cli"], version = "^1.0.0" }
+timedelta-isoformat = "^0.6.2.11"
+motor = "^3.3.2"
+simplejson = "^3.19.2"
+dateparser = "^1.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-asyncio = "^0.23.2"
+coverage = "^7.3.2"
+flake8 = "^7.0.0"
+black = "^24.0.0"
+apispec = "^6.3.0"
+apispec-webframeworks = "^1.0.0"
+werkzeug = "^3.0.1"
+swagger-ui-py = "^23.9.23"
+
+[tool.coverage.run]
+omit = ["tests/*"]
+
+[tool.black]
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = "tests"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
