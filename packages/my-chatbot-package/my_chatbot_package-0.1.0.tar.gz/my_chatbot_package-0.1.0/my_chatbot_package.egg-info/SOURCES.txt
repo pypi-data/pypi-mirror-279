@@ -1,0 +1,13 @@
+README.md
+setup.py
+my_chatbot/__init__.py
+my_chatbot/app.py
+my_chatbot/static/css/style.css
+my_chatbot/static/js/script.js
+my_chatbot/templates/index.html
+my_chatbot_package.egg-info/PKG-INFO
+my_chatbot_package.egg-info/SOURCES.txt
+my_chatbot_package.egg-info/dependency_links.txt
+my_chatbot_package.egg-info/entry_points.txt
+my_chatbot_package.egg-info/requires.txt
+my_chatbot_package.egg-info/top_level.txt
