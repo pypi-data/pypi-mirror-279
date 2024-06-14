@@ -1,0 +1,3 @@
+[console_scripts]
+source-paystack=source_paystack.run:run
+
