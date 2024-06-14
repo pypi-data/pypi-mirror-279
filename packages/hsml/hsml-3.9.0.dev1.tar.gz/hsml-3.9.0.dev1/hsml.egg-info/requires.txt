@@ -1,0 +1,16 @@
+pyhumps==1.6.1
+requests
+furl
+boto3
+pandas
+numpy
+pyjks
+mock
+tqdm
+grpcio<2.0.0,>=1.49.1
+protobuf<4.0.0,>=3.19.0
+
+[dev]
+pytest==7.4.4
+pytest-mock==3.12.0
+ruff
