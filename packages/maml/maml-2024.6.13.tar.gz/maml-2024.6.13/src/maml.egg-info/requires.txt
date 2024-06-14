@@ -1,0 +1,12 @@
+numpy
+scipy
+pymatgen
+
+[deep]
+tensorflow>=2
+
+[deep_gpu]
+tensorflow-gpu>=2
+
+[symbolic]
+cvxpy
