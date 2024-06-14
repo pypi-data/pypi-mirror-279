@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/gvita.egg-info/PKG-INFO
+src/gvita.egg-info/SOURCES.txt
+src/gvita.egg-info/dependency_links.txt
+src/gvita.egg-info/entry_points.txt
+src/gvita.egg-info/top_level.txt
