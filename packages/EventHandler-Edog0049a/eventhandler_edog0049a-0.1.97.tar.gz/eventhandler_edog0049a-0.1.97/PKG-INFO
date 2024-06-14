@@ -1,0 +1,9 @@
+Metadata-Version: 2.3
+Name: EventHandler_Edog0049a
+Version: 0.1.97
+Summary: basic EventHandler for python
+Project-URL: Source code, https://github.com/eli-reid/EventHandler
+Author-email: Eli Reid <Elir@elireid.com>
+License-Expression: Apache-2.0 OR MIT
+License-File: LICENSE.txt
+Requires-Python: >=3.10
