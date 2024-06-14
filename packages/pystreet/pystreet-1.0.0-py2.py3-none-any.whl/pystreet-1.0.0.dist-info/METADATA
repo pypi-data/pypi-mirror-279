@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: pystreet
+Version: 1.0.0
+Summary: Street address parsing and normalization
+Home-page: https://github.com/globality-corp/pystreet
+Author: Globality Engineering
+Author-email: engineering@globality.com
+License-File: LICENSE
+Requires-Dist: googlemaps >=2.5.1
+Requires-Dist: pyahocorasick >=1.1.6
+Requires-Dist: pycountry >=17.9.23
+Requires-Dist: unidecode >=1.0.22
+Requires-Dist: parameterized >=0.6.1
+Provides-Extra: lint
+Requires-Dist: flake8 ; extra == 'lint'
+Requires-Dist: flake8-print ; extra == 'lint'
+Requires-Dist: flake8-isort ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: aws-encryption-sdk >=2.0.0 ; extra == 'test'
+Requires-Dist: cryptography >=35 ; extra == 'test'
+Requires-Dist: coverage >=3.7.1 ; extra == 'test'
+Requires-Dist: PyHamcrest >=1.8.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=3.0.0 ; extra == 'test'
+Requires-Dist: pytest >=6.2.5 ; extra == 'test'
+Requires-Dist: pytest-cov >=5.0.0 ; extra == 'test'
+Provides-Extra: typehinting
+Requires-Dist: mypy ; extra == 'typehinting'
+Requires-Dist: types-psycopg2 ; extra == 'typehinting'
+Requires-Dist: types-python-dateutil ; extra == 'typehinting'
+Requires-Dist: types-pytz ; extra == 'typehinting'
+Requires-Dist: types-setuptools ; extra == 'typehinting'
+
