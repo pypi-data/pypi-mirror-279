@@ -1,0 +1,142 @@
+[tool.poetry]
+name = "grammarie"
+version = "0.1.1"
+description = "Custom Pydantic types and validators"
+authors = ["Statnett Datascience <Datascience.Drift@Statnett.no>"]
+repository = "https://gitlab.statnett.no//grammarie.git"
+keywords = ["pydantic", "types", "validation", "coercion", "annotated"]
+classifiers = [
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic = ">=2.2.0"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+coverage = { version = "*", extras = ['toml'] }
+pre-commit = "*"
+pytest = ">= 6"  # needs pyproject.toml support
+pytest-cov = "*"
+pytest-integration = "*"
+pendulum = "*"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+
+[tool.poetry-dynamic-versioning]
+enable = false
+vcs = "git"
+style = "semver"
+pattern = "^(?P<base>\\d+\\.\\d+\\.\\d+)(-?((?P<stage>[a-zA-Z]+)\\.?(?P<revision>\\d+)?))?$"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+  "A", # flake8-builtins
+  "ANN", # flake8-annotations
+  "ARG", # flake8-unused-arguments
+  "B", # flake8-bugbear
+  "C4", # flake8-comprehensions
+  "C90", # mccabe
+  "COM", # flake8-commas
+  "D", # pydocstyle
+  "DTZ", # flake8-datetimez
+  "E", "W", # pycodestyle
+  "F", # Pyflakes
+  "FLY", # flynt
+  "FURB", # refurb
+  "G", # flake8-logging-format
+  "I", # isort
+  "LOG",  # flake8-logging
+  "N", # pep8-nameing
+  "NPY", # numpy specific rules
+  "PERF", # Perflint
+  "PIE", # flake8-pie
+  "RUF", # Ruff specific rules
+  "S", # flake8-bandit
+  "SIM", # flake8-simplify
+  "T20", # flake8-print
+  "TCH001", # flake8-type-checking
+  "TRY", # tryceratops
+  "UP", # pyupgrade
+  "YTT", # flake8-2020
+]
+
+ignore = ['S101', 'ANN101', 'ANN102', 'ANN401', 'TRY003', 'D100',  'D101', 'D102', 'D103', 'D104', 'D105', 'D107']
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = ["A", "B", "C", "D", "E", "F", "G", "I", "N", "Q", "S", "T", "W", "ANN", "ARG", "BLE", "COM", "DJ", "DTZ", "EM", "ERA", "EXE", "FBT", "ICN", "INP", "ISC", "NPY", "PD", "PGH", "PIE", "PL", "PT", "PTH", "PYI", "RET", "RSE", "RUF", "SIM", "SLF", "TCH", "TID", "TRY", "UP", "YTT"]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".src",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "target",
+    "venv",
+]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/test*.py" = ["ANN001", "ANN201", "N802"]
+
+[tool.ruff.lint.flake8-import-conventions]
+[tool.ruff.lint.flake8-import-conventions.aliases]
+# Declare the default aliases.
+numpy = "np"
+pandas = "pd"
+scipy = "sp"
+
+[tool.ruff.lint.isort]
+known-first-party = []
+
+[tool.pytest.ini_options]
+log_file = "pytest.log"
+log_level = "DEBUG"
+log_file_format = "%(asctime)s - %(name)s - %(levelname)s: %(message)s"
+norecursedirs = "_build tmp*  __pycache__ src prof wheel_files"
+markers = [
+  "integration: Mark test as an integration test",
+]
+filterwarnings = [
+  "ignore:PyArray_GetNumericOps.*",
+  "ignore:PyArray_SetNumericOps.*",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+build-backend = "poetry.core.masonry.api"
