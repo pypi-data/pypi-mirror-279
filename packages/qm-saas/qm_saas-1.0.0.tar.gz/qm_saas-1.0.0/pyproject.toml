@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "qm-saas"
+version = "1.0.0"
+description = "QM Simulator as a Service is a client library to launch simulator instances for QUA programs."
+readme = "README.md"
+authors = ["Quantum Machines <info@quantum-machines.co>"]
+
+packages = [
+    { include = "qm_saas" }
+]
+include = [
+    "CHANGELOG.md",
+    "LICENSE",
+    "qm/saas/*.py"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <3.12"
+requests = ">=2.32.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2.2"
+qm-qua = "^1.1.7"
+ruff = "^0.4.8"
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "_build",
+    "build",
+    "dist",
+    "venv",
+]
+line-length = 120
+indent-width = 4
+target-version = "py38"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = []
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = false
+docstring-code-line-length = "dynamic"
