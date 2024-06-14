@@ -1,0 +1,11 @@
+peachiia/__init__.py,sha256=euysVct-b5BFr7bp0HDLygbBAB1poAdUYF9yfaB214c,29
+peachiia/main.py,sha256=U4pBTR42uVMsZS6DrAbUIBXughkc-n0hDypqHNbi4xk,331
+test2/__init__.py,sha256=hn3y9ncR97Cp_C5IRtNo4IUbhYvDy-B4u2uut4BHRzk,21
+test2/main.py,sha256=ahXYvWO7egTyN63yNbY9CJ3PnPLaMi0uLGYmLhAeook,33
+test2/tt.py,sha256=ahXYvWO7egTyN63yNbY9CJ3PnPLaMi0uLGYmLhAeook,33
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/dummy.py,sha256=hAKoYMb6PNS6xOVU1V5xg_TSaeLc88NOzDoldU_K3JQ,73
+peachiia-0.0.1.dist-info/METADATA,sha256=0I5AxI7AMwNG43DZgZPDuGU4vYvUiwDz2NPVLVk8XxU,607
+peachiia-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+peachiia-0.0.1.dist-info/top_level.txt,sha256=D_n1ulLJgS8Acl-Ianx3uYtveAMfc9wXcQLg7ZgDKlw,15
+peachiia-0.0.1.dist-info/RECORD,,
