@@ -1,0 +1,15 @@
+xlrd
+pyorc
+parquet
+openpyxl
+jsonlines
+orjson
+lz4
+chardet
+avro
+lxml
+pyarrow
+snappy
+brotli
+brotli_file
+zstandard
