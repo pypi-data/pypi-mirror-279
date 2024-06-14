@@ -1,0 +1,3 @@
+[console_scripts]
+fastcdn=fastapi_cdn_host:cli.main
+
