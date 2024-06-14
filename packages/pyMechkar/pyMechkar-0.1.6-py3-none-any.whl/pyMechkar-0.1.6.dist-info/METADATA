@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyMechkar
+Version: 0.1.6
+Summary: Useful Tools for Scientific Research
+Home-page: https://github.com/karpatit/pyMechkar
+Author: Tomas Karpati
+Author-email: karpati@it4biotech.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+
+Utilities that help researchers in various phases of their research work. This package offer a function that automate the exploratory data analysis, a function for the generation of Table 1 (required on many epidemiological papers) which can be exported to excel. There is also a function for generation of a forestplot with a table and relative risks or odds ratios that can be used for publication. Additionally, there is a function that generates train/test random partitions used for model evaluation that checks for the balance of the partitions.
+
+
