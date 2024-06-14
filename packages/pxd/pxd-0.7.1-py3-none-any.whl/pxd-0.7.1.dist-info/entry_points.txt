@@ -1,0 +1,2 @@
+[console_scripts]
+pxd = deployer.pxd:main
