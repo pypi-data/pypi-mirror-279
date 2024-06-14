@@ -1,0 +1,136 @@
+Metadata-Version: 2.1
+Name: bosos-dev-tools
+Version: 0.0.2
+Summary: Dev Tools is a collection of utility tools for Python developers, designed to simplify debugging, logging, and monitoring tasks. This package includes custom logging handlers, decorators for measuring execution time, and a progress bar utility to enhance the development workflow.
+Author-email: Björn Gunnarsson <bosos3@hotmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 bjorngun
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Source, https://github.com/bjorngun/developer-tools
+Project-URL: Tracker, https://github.com/bjorngun/developer-tools/issues
+Keywords: development,tools,logging,decorators
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyodbc
+Requires-Dist: python-dotenv
+
+# Bosos Dev Tools
+
+Bosos Dev Tools is a collection of utility tools for Python developers, designed to simplify debugging, logging, and monitoring tasks. This package includes custom logging handlers, decorators for measuring execution time, and a progress bar utility to enhance the development workflow.
+
+## Features
+
+- **Custom Logging Handlers**: Log messages to various destinations, including databases, with customizable formats.
+- **Timing Decorators**: Easily measure the execution time of your functions with minimal code changes.
+- **Progress Bar Utility**: Visualize the progress of long-running operations in the console.
+- **Debug Tools**: Check if debug or timing modes are enabled via environment variables.
+
+## Installation
+
+You can install the package via pip:
+
+```sh
+pip install bosos-dev-tools
+```
+
+## Usage
+
+### Custom Logging Handler
+
+The `LogDBHandler` allows you to log messages directly to a database.
+
+``` py
+import logging
+from dev_tools.custom_handlers import LogDBHandler
+
+logger = logging.getLogger('test_logger')
+db_handler = LogDBHandler(db_table='test_table')
+logger.addHandler(db_handler)
+logger.setLevel(logging.INFO)
+
+logger.info('This is a test log message.')
+```
+
+### Timing Decorator
+
+Use the `timing_decorator` to measure the execution time of functions.
+
+``` py
+from dev_tools.custom_decorators import timing_decorator
+
+@timing_decorator
+def example_function():
+    for i in range(1000000):
+        pass
+
+example_function()
+```
+
+### Progress Bar
+
+Use the `progress_bar` to measure the execution time of functions.
+
+``` py
+from dev_tools.progress_bar import progress_bar
+
+for item in progress_bar(range(10)):
+    pass
+```
+
+### Debug Tools
+
+Check if debug or timing modes are enabled via environment variables.
+Use the `logger_setup` to set up your logging settings at the beginning of the script.
+
+``` py
+from dev_tools.debug_tools import is_debug_on, is_timing_on
+
+print('Is debug on:', is_debug_on())
+print('Is timing on:', is_timing_on())
+```
+
+``` py
+from dev_tools.debug_tools import logger_setup
+
+def main():
+    logger_setup()
+
+if __name__ == '__main__':
+    main()
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/bjorngun/developer-tools/blob/main/LICENSE) file for more details.
+
+## Links
+
+- **Source Code**: [GitHub Repository](https://github.com/bjorngun/developer-tools)
+- **Issue Tracker**: [GitHub Issues](https://github.com/bjorngun/developer-tools/issues)
