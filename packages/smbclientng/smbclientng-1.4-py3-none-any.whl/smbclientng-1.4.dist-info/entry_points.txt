@@ -1,0 +1,3 @@
+[console_scripts]
+smbclientng = smbclientng.__main__:main
+smbng = smbclientng.__main__:main
