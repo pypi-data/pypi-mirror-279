@@ -1,0 +1,110 @@
+Metadata-Version: 2.1
+Name: shellsec
+Version: 1.0.0
+Summary: A tool to encrypt and decrypt Bash scripts using Base64 encoding.
+Home-page: https://github.com/ByteBreach/shellsec
+Author: Fidal
+Author-email: mrfidal@proton.me
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ShellSec
+
+ShellSec is a Python package to encrypt and decrypt Bash scripts using Base64 encoding.
+
+## Installation
+
+You can install ShellSec using pip:
+
+```bash
+pip install shellsec
+```
+
+## Usage
+
+### Command-line Interface
+
+ShellSec provides a command-line interface for encrypting and decrypting Bash scripts.
+
+#### Encrypt a Bash script
+
+```bash
+shellsec --encrypt input_script.sh output_script.sh
+```
+
+#### Decrypt an obfuscated Bash script
+
+```bash
+shellsec --decrypt input_script.sh output_script.sh
+```
+
+### Module Usage
+
+You can also use ShellSec as a Python module in your scripts.
+
+#### Encrypt a Bash script
+
+```python
+import shellsec
+
+shellsec.encrypt_script('input_script.sh', 'output_script.sh')
+```
+
+#### Decrypt an obfuscated Bash script
+
+```python
+import shellsec
+
+shellsec.decrypt_script('input_script.sh', 'output_script.sh')
+```
+
+## Example
+
+Encrypt a Bash script:
+
+```python
+import shellsec
+
+shellsec.encrypt_script('script.sh', 'encrypted_script.sh')
+```
+
+Decrypt an obfuscated Bash script:
+
+```python
+import shellsec
+
+shellsec.decrypt_script('obfuscated_script.sh', 'decrypted_script.sh')
+```
+
+This will print "encrypted" if the script is successfully encrypted or decrypted, and "Not encrypted" if there's an error during the process.
+
+```python
+import shellsec
+
+# Encrypt a script
+if shellsec.encrypt_script('input_script.sh', 'output_script.sh'):
+    print("File encrypted successfully.")
+else:
+    print("File not encrypted.")
+
+# Decrypt a script
+if shellsec.decrypt_script('input_script.sh', 'output_script.sh'):
+    print("File decrypted successfully.")
+else:
+    print("File not decrypted.")
+```
+
+## Notes
+
+- When encrypting, ShellSec encodes the script content using Base64 and embeds it in a Bash script for easy decryption.
+- When decrypting, ShellSec extracts the Base64 encoded content and decodes it back to the original script.
+- Ensure to keep your encrypted scripts safe, as they contain sensitive information.
+- ShellSec is designed for simple encryption purposes and may not provide strong security against determined attackers.
+
+## Thanks
+
+Thank you for using ShellSec! If you find it helpful, consider starring the repository on GitHub.
