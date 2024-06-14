@@ -1,0 +1,2 @@
+[console_scripts]
+deepsquads-discover = translation_finder.api:cli
