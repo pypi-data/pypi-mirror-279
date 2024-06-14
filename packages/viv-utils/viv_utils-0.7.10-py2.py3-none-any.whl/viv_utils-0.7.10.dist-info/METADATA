@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: viv_utils
+Version: 0.7.10
+Summary: Utilities for binary analysis using vivisect.
+Home-page: https://github.com/williballenthin/viv-utils
+Author: Willi Ballenthin
+Author-email: william.ballenthin@mandiant.com
+Keywords: viv_utils
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+Requires-Dist: funcy >=2.0
+Requires-Dist: pefile >=2023.2.7
+Requires-Dist: vivisect >=1.1.0
+Requires-Dist: intervaltree >=3.1.0
+Requires-Dist: typing-extensions >=4.5.0
+Provides-Extra: dev
+Requires-Dist: pytest ==8.2.2 ; extra == 'dev'
+Requires-Dist: pytest-sugar ==0.9.6 ; extra == 'dev'
+Requires-Dist: pytest-instafail ==0.5.0 ; extra == 'dev'
+Requires-Dist: pycodestyle ==2.11.1 ; extra == 'dev'
+Requires-Dist: black ==24.4.2 ; extra == 'dev'
+Requires-Dist: isort ==5.11.5 ; extra == 'dev'
+Requires-Dist: mypy ==1.10.0 ; extra == 'dev'
+Requires-Dist: types-setuptools ==70.0.0.20240524 ; extra == 'dev'
+Provides-Extra: flirt
+Requires-Dist: python-flirt ==0.8.10 ; extra == 'flirt'
+
+Utilities for binary analysis using vivisect.
