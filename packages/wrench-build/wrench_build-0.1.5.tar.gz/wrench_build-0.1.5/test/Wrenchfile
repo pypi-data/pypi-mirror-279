@@ -1,0 +1,24 @@
+CC = clang
+    MY_VAR  = -Iheaders
+CFLAGS   = -Wall     -Werror -g $(MY_VAR)
+
+
+
+BUILD    = target1   target2    *_parser.a
+    LIBDIRS  =lib1 lib2 $(ERROR)
+ LIB= map set   hash
+ERROR =lib3
+
+SHELL= fish
+
+main(nvim -l -): task1, task2
+    vim.print({hello = "world"})
+
+task1()       :task2
+  set foo ${CFLAGS}
+  echo $foo
+
+task3(bash):    
+ if [ ${SHELL} == "lib3" ]; then
+     echo ${SHELL}
+ fi

@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: wrench_build
+Version: 0.1.5
+Summary: Build C files without checking all its dependencies
+Author-email: xiaoshihou514 <onelessononeexercise@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.8
+Requires-Dist: parsy>=2.1
+Description-Content-Type: text/markdown
+
+# wrench
+
+Describe your project here.
