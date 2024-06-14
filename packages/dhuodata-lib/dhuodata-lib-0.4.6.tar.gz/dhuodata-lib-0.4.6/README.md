@@ -1,0 +1,510 @@
+# DHuO LIb
+
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
+`version`: 0.4.6
+`lib`: ![dhuodata-lib](https://pypi.org/project/dhuodata-lib/)
+
+
+# Índice 
+
+* [Índice](#índice)
+* [Board](#Board)
+* [Features](#features)
+* [Class: `GenericRepository`](#class-genericrepository)
+* [Class: `DhuolibExperimentClient`](#class-dhuolibexperimentclient)
+* [Class: `DhuolibPlatformClient`](#class-dhuolibplatformclient)
+* [Demonstração da Aplicação](#demonstração-da-aplicação)
+* [C4 Diagram](#c4-diagram)
+* [Referências](#referências)
+* [Conclusão](#conclusão)
+
+![](assets/imgs/dhuo.png)
+
+
+# Board 
+
+![](assets/imgs/board.png)
+
+# Features
+
+### Login **Não implementado**
+
+- [x] login
+    - Auth.login
+    - Auth.is_logged
+
+![](assets/docs/src/login/login.png)
+
+--- 
+## Análise Exploratória / Persistencia / Aquisição de Dados
+![](assets/docs/src/persistencia/persistencia.png)
+## Class: `GenericRepository`
+
+#### Overview
+
+A classe `GenericRepository` Simplifica o uso e o acesso ao datalake. Possui diversos métodos, incluindo inserção e busca de dados. Seu objetivo é facilitar o trabalho dos desenvolvedores no processo de predição de modelos de machine learning, fornecendo uma interface simplificada para a interação com os dados.
+
+### `__init__(self, db_connection)`
+
+Initializes the repository with a database connection.
+
+- **Parameters:**
+  - `db_connection`: Uma instancia do `DatabaseConnection` que prove a connecção e controle de acesso com o datalake
+
+### `insert(self, table_name: str, data: dict)`
+
+Insere um novo dado na base de dados. Uma boa opção para inserir dados no database sem utilizar dataframe pandas
+
+- **Parameters:**
+  - `table_name`: Nome da tabela onde o dado sera inserido.
+  - `data`: Um dicionario representando o dado a ser inserido.
+
+- **Returns:**
+  - Retorna o dado inserido.
+
+- **Example:**
+  ```python
+  data = {"name": "example", "value": 42}
+  inserted_record = repo.insert("my_table", data)
+  
+### `update_table_by_dataframe(self, table_name: str, df_predict: pd.DataFrame, if_exists: str = "append")`
+
+Atualiza uma tabela adicionando ou substituindo registros usando um DataFrame do pandas.
+
+- **Parâmetros:**
+- `table_name`: O nome da tabela a ser atualizada.
+- `df_predict`: Um DataFrame do pandas contendo os registros a serem inseridos.
+- `if_exists`: Especifica o comportamento se a tabela já existir. O padrão é "append".
+
+- **Example:**
+  ```python
+  df = pd.DataFrame({"name": ["example"], "value": [42]})
+  repo.update_table_by_dataframe("my_table", df)
+
+
+### `get_items_with_pagination(self, table_name: str, page: int = 1, page_size: int = 10000)`
+
+Recupera registros da tabela especificada utilizando paginação.
+
+- **Parâmetros:**
+  - `table_name`: O nome da tabela a ser consultada.
+  - `page`: O número da página a ser recuperada. O padrão é 1.
+  - `page_size`: O número de registros por página. O padrão é 10000.
+
+- **Retorna:**
+  - Um dicionário contendo os registros, número da página, tamanho da página e total de itens.
+
+- **Exemplo:**
+  ```python
+  result = repo.get_items_with_pagination("my_table", page=1, page_size=10)
+  print(result["items"])
+  ```
+
+
+### `to_dataframe(self, table_name: str = None, filter_clause: str = None, list_columns: list = None)`
+
+Converte os resultados da consulta em um DataFrame do pandas.
+
+- **Parâmetros:**
+  - `table_name`: O nome da tabela a ser consultada.
+  - `filter_clause`: Uma cláusula de filtro opcional para aplicar à consulta.
+  - `list_columns`: Uma lista opcional de colunas a serem incluídas na consulta.
+
+- **Retorna:**
+  - Um DataFrame do pandas contendo os resultados da consulta.
+
+- **Exemplo:**
+  ```python
+  df = repo.to_dataframe("my_table", filter_clause="value > 10", list_columns=["name", "value"])
+  print(df)
+  ```
+
+--- 
+### Criação de Experimentos, Ciclo de vida do modelo e Predição
+
+![](assets/docs/src/model_registry/model_registry.png)
+
+## Class: `DhuolibExperimentClient`
+
+DhuolibExperimentClient` interage com o serviço Dhuolib para gerenciar experimentos, executar modelos, criar modelos e fazer previsões. Inclui métodos para criar e executar experimentos, criar modelos e fazer previsões online e em lote.
+
+### `__init__(self, service_endpoint=None)`
+
+Inicializa o cliente com um endpoint de serviço.
+
+- **Parâmetros:**
+  - `service_endpoint`: O endpoint do serviço Dhuolib.
+
+- **Lança:**
+  - `ValueError`: Se `service_endpoint` não for fornecido.
+
+### `create_experiment(self, experiment_name: str, experiment_tags: dict = None) -> dict`
+
+Cria um novo experimento com o nome e tags especificados.
+
+- **Parâmetros:**
+  - `experiment_name`: O nome do experimento.
+  - `experiment_tags`: Dicionário opcional de tags para o experimento.
+
+- **Retorna:**
+  - Um dicionário contendo os detalhes do experimento criado ou uma mensagem de erro.
+
+- **Exemplo:**
+  ```python
+  response = client.create_experiment("Meu Experimento", {"tag1": "valor1"})
+  ```
+
+### `run_experiment(self, type_model: str, experiment_id: str, modelpkl_path: str, requirements_path) -> dict`
+
+Executa um experimento com o modelo e requisitos especificados.
+
+- **Parâmetros:**
+  - `type_model`: O tipo do modelo.
+  - `experiment_id`: O ID do experimento.
+  - `modelpkl_path`: O caminho para o arquivo pickle do modelo.
+  - `requirements_path`: O caminho para o arquivo de requisitos.
+
+- **Retorna:**
+  - Um dicionário contendo os detalhes da resposta ou uma mensagem de erro.
+
+- **Exemplo:**
+  ```python
+  response = client.run_experiment("classificacao", "12345", "model.pkl", "requirements.txt")
+  ```
+
+### `create_model(self, model_params) -> dict`
+
+Cria um novo modelo com os parâmetros especificados.
+
+- **Parâmetros:**
+  - `model_params`: Um dicionário contendo os parâmetros do modelo.
+
+- **Retorna:**
+  - Um dicionário contendo os detalhes do modelo criado ou uma mensagem de erro.
+
+- **Exemplo:**
+  ```python
+  model_params = {"modelname": "MeuModelo", "stage": "PRODUCAO"}
+  response = client.create_model(model_params)
+  ```
+
+### `prediction_batch_with_dataframe(self, batch_params: dict, df: pd.DataFrame) -> dict`
+
+Faz uma previsão em lote usando um DataFrame do pandas.
+
+- **Parâmetros:**
+  - `batch_params`: Um dicionário contendo os parâmetros da previsão em lote.
+  - `df`: Um DataFrame do pandas contendo os dados para a previsão.
+
+- **Retorna:**
+  - Um dicionário contendo os resultados da previsão em lote ou uma mensagem de erro.
+
+- **Exemplo:**
+  ```python
+  batch_params = {"modelname": "MeuModelo", "stage": "STAGING"}
+  df = pd.DataFrame({"feature1": [1, 2], "feature2": [3, 4]})
+  response = client.prediction_batch_with_dataframe(batch_params, df)
+  ```
+
+## Exemplo de Uso
+
+```python
+from dhuolib_experiment_client import DhuolibExperimentClient
+import pandas as pd
+
+# Inicializa o cliente
+client = DhuolibExperimentClient(service_endpoint="http://example.com")
+
+# Cria um experimento
+response = client.create_experiment("Meu Experimento", {"tag1": "valor1"})
+print(response)
+
+# Executa um experimento
+response = client.run_experiment("classificacao", "12345", "model.pkl", "requirements.txt")
+print(response)
+
+# Cria um modelo
+model_params = {"modelname": "MeuModelo", "stage": "PRODUCAO"}
+response = client.create_model(model_params)
+print(response)
+
+# Faz uma previsão em lote com um DataFrame
+batch_params = {"modelname": "MeuModelo", "stage": "STAGING"}
+df = pd.DataFrame({"feature1": [1, 2], "feature2": [3, 4]})
+response = client.prediction_batch_with_dataframe(batch_params, df)
+print(response)
+```
+
+## Class: `DhuolibPlatformClient`
+
+![](assets/docs/src/deploy/deploy.png)
+
+`DhuolibPlatformClient` interage com o serviço Dhuolib para gerenciar projetos em lote, implantar scripts, verificar o status do pipeline, criar clusters e executar pipelines em lote.
+
+### `__init__(self, service_endpoint=None, project_name=None)`
+
+Inicializa o cliente com um endpoint de serviço e um nome de projeto opcional.
+
+- **Parâmetros:**
+  - `service_endpoint`: O endpoint do serviço Dhuolib.
+  - `project_name`: Nome opcional do projeto.
+
+- **Lança:**
+  - `ValueError`: Se `service_endpoint` não for fornecido.
+
+### `create_batch_project(self, project_name: str)`
+
+Cria um novo projeto em lote com o nome especificado.
+
+- **Parâmetros:**
+  - `project_name`: O nome do projeto.
+
+- **Retorna:**
+  - Um dicionário contendo os detalhes do projeto criado ou uma mensagem de erro.
+
+- **Lança:**
+  - `ValueError`: Se o projeto já existir.
+  - `ConnectionError`: Se houver um erro de conexão.
+
+- **Exemplo:**
+  ```python
+  response = client.create_batch_project("MeuProjeto")
+  ```
+
+### `deploy_batch_project(self, script_filename: str, requirements_filename: str)`
+
+Implanta um projeto em lote com o script e requisitos especificados.
+
+- **Parâmetros:**
+  - `script_filename`: O nome do arquivo do script.
+  - `requirements_filename`: O nome do arquivo de requisitos.
+
+- **Retorna:**
+  - A resposta do serviço Dhuolib ou uma mensagem de erro.
+
+- **Lança:**
+  - `ValueError`: Se `project_name`, `script_filename` ou `requirements_filename` não forem fornecidos.
+  - `FileNotFoundError`: Se os arquivos especificados não forem encontrados.
+
+- **Exemplo:**
+  ```python
+  response = client.deploy_batch_project("script.py", "requirements.txt")
+  ```
+
+### `pipeline_status_report(self)`
+
+Gera um relatório de status do pipeline para o projeto em lote.
+
+- **Retorna:**
+  - Uma lista de dicionários contendo a data, etapa e status de cada log do pipeline.
+
+- **Lança:**
+  - `ValueError`: Se `project_name` não for fornecido.
+
+- **Exemplo:**
+  ```python
+  status_report = client.pipeline_status_report()
+  ```
+
+### `create_cluster(self, cluster_size: int)`
+
+Cria um cluster com o tamanho especificado para o projeto em lote.
+
+- **Parâmetros:**
+  - `cluster_size`: O tamanho do cluster (1, 2 ou 3).
+
+- **Retorna:**
+  - A resposta do serviço Dhuolib.
+
+- **Lança:**
+  - `ValueError`: Se `project_name` ou `cluster_size` não forem fornecidos ou se `cluster_size` não for 1, 2 ou 3.
+
+- **Exemplo:**
+  ```python
+  response = client.create_cluster(2)
+  ```
+
+### `batch_run(self)`
+
+Executa o pipeline em lote para o projeto.
+
+- **Retorna:**
+  - A resposta do serviço Dhuolib.
+
+- **Lança:**
+  - `ValueError`: Se `project_name` não for fornecido.
+
+- **Exemplo:**
+  ```python
+  response = client.batch_run()
+  ```
+
+## Exemplo de Uso
+
+```python
+from dhuolib_platform_client import DhuolibPlatformClient
+
+# Inicializa o cliente
+client = DhuolibPlatformClient(service_endpoint="http://example.com", project_name="MeuProjeto")
+
+# Cria um projeto em lote
+response = client.create_batch_project("MeuProjeto")
+print(response)
+
+# Implanta um projeto em lote
+response = client.deploy_batch_project("script.py", "requirements.txt")
+print(response)
+
+# Gera um relatório de status do pipeline
+status_report = client.pipeline_status_report()
+print(status_report)
+
+# Cria um cluster
+response = client.create_cluster(2)
+print(response)
+
+# Executa o pipeline em lote
+response = client.batch_run()
+print(response)
+```
+
+### Feedback dos steps do Pipeline para o usuário
+
+![](assets/docs/src/feedback_status/feedback_status.png)
+
+
+### C4 Diagram
+#### Context
+ ![](assets/docs/src/c4/context/context.png)
+
+#### Components
+ ![](assets/docs/src/c4/components/components.png)
+
+
+#### Containers
+ ![](assets/docs/src/c4/containers/containers.png)
+
+
+![](ass)
+
+
+# Demonstração da Aplicação
+
+## Projeto Iris-t com lightgbm
+
+### Train 
+
+```python
+import pickle
+import lightgbm as lgb
+
+from dhuolib.clients.experiment import DhuolibExperimentClient
+from dhuolib.repository import DatabaseConnection, GenericRepository
+
+
+def get_repository(config_file_name):
+    if not config_file_name:
+        raise ValueError("config_file_name is required")
+
+    db = DatabaseConnection(config_file_name=config_file_name)
+    repository = GenericRepository(db_connection=db)
+
+    return repository
+
+
+def train():
+    dholib_client = DhuolibExperimentClient(
+        service_endpoint="http://{uri_endpoint}")
+    repository = get_repository(
+        config_file_name="{path}/database.json"
+    )
+    df_iris_train = repository.to_dataframe(table_name="IRIS_TRAIN")
+
+    X = df_iris_train[["sepal_length", "sepal_width",
+                       "petal_length", "petal_width"]]
+    y = df_iris_train["class"]
+    clf = lgb.LGBMClassifier()
+    clf.fit(X, y)
+    with open("{path}/iris.pkl", "wb") as f:
+        pickle.dump(clf, f)
+
+    experiment_response = dholib_client.create_experiment(
+        experiment_name="iris-classification", experiment_tags={"tag": "iris"}
+    )
+
+    experiment_run = dholib_client.run_experiment(
+        type_model="lightgbm",
+        experiment_id=experiment_response["experiment_id"],
+        model_pkl_path="{path}/iris.pkl",
+        requirements_path="{path}/requirements.txt",
+    )
+    print(experiment_run)
+    run_params = {
+        "modelname": "iris-classification",
+        "modeltag": "lightgbm",
+        "stage": "Production",
+        "run_id": experiment_run["run_id"],
+        "model_uri": experiment_run["model_uri"],
+    }
+    result = dholib_client.create_model(run_params)
+    print(result)
+
+
+if __name__ == "__main__":
+    train()
+
+```
+
+### Predict
+```python
+from dhuolib.clients.experiment import DhuolibExperimentClient
+from dhuolib.repository import DatabaseConnection, GenericRepository
+
+
+def get_repository(config_file_name):
+    if not config_file_name:
+        raise ValueError("config_file_name is required")
+
+    db = DatabaseConnection(config_file_name=config_file_name)
+    repository = GenericRepository(db_connection=db)
+
+    return repository
+
+def predict():
+    dholib_client = DhuolibExperimentClient(
+        service_endpoint="http://{path}")
+    repository = get_repository(
+        config_file_name="{path}/database.json"
+    )
+    df_iris = repository.to_dataframe(
+        table_name="IRIS_FEATURE",
+        list_columns=["SEPAL_LENGTH", "SEPAL_WIDTH",
+                      "PETAL_LENGTH", "PETAL_WIDTH"],
+    )
+
+    print(df_iris.head(10))
+
+    batch_params = {
+        "modelname": "iris-classification-lightgbm",
+        "stage": "Production",
+        "experiment_name": "iris-classification",
+        "type_model": "lightgbm",
+        "run_id": "",
+        "batch_model_dir": "iris.pkl",
+    }
+    predicts = dholib_client.prediction_batch_with_dataframe(
+        batch_params=batch_params, df=df_iris
+    )
+    df_iris["predict"] = predicts
+    repository.update_table_by_dataframe(
+        table_name="IRIS_OUTPUT", df_predict=df_iris)
+
+
+if __name__ == "__main__":
+    predict()
+```
+## Referências
+- https://docs.oracle.com/pt-br/iaas/data-flow/using/third-party-provide-archive.htm
+- https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml
+- https://plantuml.com/
