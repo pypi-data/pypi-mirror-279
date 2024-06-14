@@ -1,0 +1,81 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+  "setuptools",
+  "wheel",
+]
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+
+lint.extend-select = [
+  "B",
+  "I",
+]
+
+lint.ignore = [
+  "B011",
+  "B904",
+  "E402",
+]
+
+[tool.isort]
+profile = "black"
+src_paths = [
+  "genutility",
+]
+line_length = 120
+known_third_party = [
+  "av",
+  "flask",
+  "gensim",
+  "msgpack",
+  "networkx",
+  "nltk",
+  "numba",
+  "numpy",
+  "pandas",
+  "rasa",
+  "rich",
+  "scipy",
+  "scrapy",
+  "tensorflow",
+  "toml",
+  "torch",
+  "twisted",
+  "unqlite",
+]
+
+[tool.pytest.ini_options]
+log_level = "DEBUG"
+testpaths = [
+  "genutility/tests",
+]
+python_files = [
+  "*.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "if __name__ == .__main__.:",
+]
+sort = "Cover"
+
+[tool.mypy]
+allow_redefinition = true
+ignore_missing_imports = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unused_ignores = true
+warn_unreachable = true
+strict_equality = true
+
+[tool.bandit]
+skips = [
+  "B101",
+]
