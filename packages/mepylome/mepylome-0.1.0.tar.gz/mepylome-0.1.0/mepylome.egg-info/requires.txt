@@ -1,0 +1,14 @@
+cython
+dash>=2.16.0
+dash_bootstrap_components
+numpy
+openpyxl
+pandas
+pyranges
+scikit-learn
+tqdm
+umap-learn
+
+[cgb]
+ailist==1.0.4
+cbseg
