@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+swing/__init__.py
+swing/abc.py
+swing/gwo.py
+swing/pso.py
+swing/version.py
+swing/workspace.py
+swing_opt.egg-info/PKG-INFO
+swing_opt.egg-info/SOURCES.txt
+swing_opt.egg-info/dependency_links.txt
+swing_opt.egg-info/requires.txt
+swing_opt.egg-info/top_level.txt
