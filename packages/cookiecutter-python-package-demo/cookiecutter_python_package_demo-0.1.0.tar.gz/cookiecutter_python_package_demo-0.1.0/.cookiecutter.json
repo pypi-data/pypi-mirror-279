@@ -1,0 +1,19 @@
+{
+    "_checkout": null,
+    "_output_dir": "/home/runner/work/cookiecutter-python-package/cookiecutter-python-package",
+    "_repo_dir": "cookiecutter-python-package",
+    "_template": "cookiecutter-python-package",
+    "author": "Steven van de Graaf",
+    "copyright_year": "2024",
+    "development_status": "Development Status :: 4 - Beta",
+    "email": "steven@vandegraaf.xyz",
+    "friendly_name": "Cookiecutter Python Package Demo",
+    "github_username": "sgraaf",
+    "init_git": false,
+    "init_venv": false,
+    "license": "mit",
+    "package_name": "cookiecutter_python_package_demo",
+    "project_name": "cookiecutter-python-package-demo",
+    "short_description": "Demo of https://github.com/sgraaf/cookiecutter-python-package.",
+    "version": "0.1.0"
+}
