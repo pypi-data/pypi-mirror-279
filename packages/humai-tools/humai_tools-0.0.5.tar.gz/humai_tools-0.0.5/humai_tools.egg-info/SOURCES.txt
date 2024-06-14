@@ -1,0 +1,15 @@
+README.md
+setup.py
+humai_tools/__init__.py
+humai_tools/campus.py
+humai_tools/directus.py
+humai_tools/models.py
+humai_tools/mp.py
+humai_tools/permissions.py
+humai_tools/settings.py
+humai_tools/utils.py
+humai_tools.egg-info/PKG-INFO
+humai_tools.egg-info/SOURCES.txt
+humai_tools.egg-info/dependency_links.txt
+humai_tools.egg-info/requires.txt
+humai_tools.egg-info/top_level.txt

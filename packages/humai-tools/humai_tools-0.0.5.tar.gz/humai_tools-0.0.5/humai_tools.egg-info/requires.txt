@@ -1,0 +1,7 @@
+mercadopago
+requests
+unidecode
+pydantic
+python-dotenv
+pydantic-settings
+pytz
