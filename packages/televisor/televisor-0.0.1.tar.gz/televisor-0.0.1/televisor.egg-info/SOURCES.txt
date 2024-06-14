@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+televisor.egg-info/PKG-INFO
+televisor.egg-info/SOURCES.txt
+televisor.egg-info/dependency_links.txt
+televisor.egg-info/requires.txt
+televisor.egg-info/top_level.txt
+tv/__init__.py
+tv/__main__.py
