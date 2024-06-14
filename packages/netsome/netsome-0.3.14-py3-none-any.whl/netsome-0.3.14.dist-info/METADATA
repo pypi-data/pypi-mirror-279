@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: netsome
+Version: 0.3.14
+Summary: The one and only library to make your network code handsome
+Home-page: https://github.com/kuderr/netsome
+License: X11-distribute-modifications-variant
+Keywords: library,network
+Author: kuderr
+Author-email: dakudryavcev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 1 - Planning
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Networking
+Project-URL: Bug Tracker, https://github.com/kuderr/netsome/issues
+Project-URL: Repository, https://github.com/kuderr/netsome
+Description-Content-Type: text/markdown
+
+# netsome
+
+# About
+
+TBD
+
+# Authors
+
+- Dmitriy Kudryavtsev - author - [kuderr](https://github.com/kuderr)
+- Gena Rastorguev - maintainer - [lep0n](https://github.com/lep0n)
+
+Special thanks to [Dima Burmistrov](https://gitlab.com/pyctrl) for inspiration and lessons on how to make libraries and good interfaces. ASN type v1 was crafted within our dev team.
+
