@@ -1,0 +1,83 @@
+name: Python
+
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint and documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install tools
+        run: pip install flake8 black isort wheel docstring-parser
+      - name: Lint
+        run: |
+          black --check substra
+          isort --check substra
+          flake8 substra
+      - name: Install substra
+        run: pip install -e .
+      - name: Generate and validate SDK documentation
+        run: |
+          python bin/generate_sdk_documentation.py --output-path='references/sdk.md'
+          python bin/generate_sdk_schemas_documentation.py --output-path references/sdk_schemas.md
+          python bin/generate_sdk_schemas_documentation.py --models --output-path='references/sdk_models.md'
+      - name: Documentation artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          retention-days: 1
+          name: references
+          path: references/*
+  tests:
+    runs-on: ubuntu-20.04
+    env:
+      XDG_RUNTIME_DIR: /home/runner/.docker/run
+      DOCKER_HOST: unix:///home/runner/.docker/run/docker.sock
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+    name: Tests on Python ${{ matrix.python-version }}
+    steps:
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: x64
+      - name: Install Docker rootless
+        run: |
+          sudo systemctl disable --now docker.service
+          export FORCE_ROOTLESS_INSTALL=1
+          curl -fsSL https://get.docker.com/rootless | sh
+      - name: Configure docker
+        run: |
+          export PATH=/home/runner/bin:$PATH
+          /home/runner/bin/dockerd-rootless.sh &  # Start Docker rootless in the background
+      - name: Cloning substra
+        uses: actions/checkout@v4
+        with:
+          path: substra
+      - name: Cloning substratools
+        uses: actions/checkout@v4
+        with:
+          repository: Substra/substra-tools
+          path: substratools
+          ref: main
+      - name: Install substra and substratools
+        run: |
+          pip install --no-cache-dir -e substratools
+          pip install --no-cache-dir -e 'substra[dev]'
+
+      - name: Test
+        run: |
+          export PATH=/home/runner/bin:$PATH
+          cd substra && make test

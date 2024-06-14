@@ -1,0 +1,21 @@
+name: Publish
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+      - name: Install Hatch
+        run: pipx install hatch
+      - name: Build dist
+        run: hatch build
+      - name: Publish
+        run: hatch publish -u __token__ -a ${{ secrets.PYPI_API_TOKEN }}
+
