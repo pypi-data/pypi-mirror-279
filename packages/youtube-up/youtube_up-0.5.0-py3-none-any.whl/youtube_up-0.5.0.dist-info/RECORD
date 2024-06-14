@@ -1,0 +1,9 @@
+youtube_up/__init__.py,sha256=gEqcmx55bdyNJEWRtXOgJ2jVFgK9lkJV_sS12s9CMwY,4032
+youtube_up/__main__.py,sha256=DYRcmVL2kh5ueVIb2zsugJKlHsRbcl4HWqGKxEfzlC4,6798
+youtube_up/metadata.py,sha256=KQt-yihb9o2SWHle4nuEfvoNPP7XGGhbO18erpsu1dU,14910
+youtube_up/schema.py,sha256=vKretFx4HlPhxxbEuL5y3NlxlOL0AHjlpa7kkkGYLzc,18865
+youtube_up/uploader.py,sha256=uFvXzWw7O8Knyer8otFVHXDIQZuMNodT2cLps1XD1Gc,18443
+youtube_up-0.5.0.dist-info/METADATA,sha256=mjfIeHl1S4oVNJyTGcT4zxt-2-Myy0_B6poV5cD1vMQ,5404
+youtube_up-0.5.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+youtube_up-0.5.0.dist-info/entry_points.txt,sha256=feNS-PrvWj2ZDQb6bygXBkxx5_BRY8WhfIhApj4T-6U,55
+youtube_up-0.5.0.dist-info/RECORD,,
