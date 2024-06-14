@@ -1,0 +1,25 @@
+name: doc_env
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - scipy
+  - statsmodels
+  - matplotlib
+  - ipython
+  - jupyter
+  - pandoc
+  - netcdf4
+  - hdf5
+  - hdf4
+  - dask
+  - scikit-learn
+  - requests
+  - pip
+  - jinja2=3.0.3
+  - pip:
+    - sphinx
+    - sphinx_rtd_theme
+    - nbsphinx
+    - pandoc
+    - appdirs

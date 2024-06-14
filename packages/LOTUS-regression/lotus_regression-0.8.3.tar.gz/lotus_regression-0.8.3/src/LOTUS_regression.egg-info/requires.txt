@@ -1,0 +1,10 @@
+numpy
+scipy
+pandas
+xarray
+statsmodels
+requests
+appdirs
+
+[test]
+pytest
