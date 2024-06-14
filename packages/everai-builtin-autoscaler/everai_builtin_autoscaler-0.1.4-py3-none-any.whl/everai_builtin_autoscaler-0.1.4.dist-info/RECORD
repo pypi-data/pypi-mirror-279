@@ -1,0 +1,8 @@
+__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+everai_autoscaler/builtin/__init__.py,sha256=h64Crs9hiBDdGn3ahlE4wzCH-uuVI2wNrJo-glFJneM,69
+everai_autoscaler/builtin/simple/__init__.py,sha256=zGfopjWJBd3UKlHo39CwmYiG_Or4M2dm9H9iH-woP3Y,79
+everai_autoscaler/builtin/simple/simple_autoscaler.py,sha256=DhZEHmk8vSVFkS2E_UVwAEQtzMRpKoQHDI6qJ1Uw774,5503
+everai_builtin_autoscaler-0.1.4.dist-info/METADATA,sha256=FxUdtS11luP10LCaR2MnhJTxwVAlUFO81fp0mm5hCEs,1142
+everai_builtin_autoscaler-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+everai_builtin_autoscaler-0.1.4.dist-info/top_level.txt,sha256=DYYdBFcUlo6eXB2_WY0PSXe2V4lcT9JpSsp3flloUo8,27
+everai_builtin_autoscaler-0.1.4.dist-info/RECORD,,
