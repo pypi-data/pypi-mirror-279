@@ -1,0 +1,48 @@
+MAIN_NODE_REQUIRED_INFO = """
+id
+title
+description
+descriptionHtml
+images(first:10){
+    edges{
+        node{
+            id
+            src
+        }
+    }
+}
+handle
+options{
+    id
+    name
+    values
+}
+onlineStorePreviewUrl
+productCategory{
+    productTaxonomyNode{
+        fullName
+        id
+        name
+    }
+}
+productType
+seo{
+    description
+    title
+}
+status
+tags
+totalInventory
+totalVariants
+vendor
+"""
+
+NODE_REQUIRED_INFO = """
+id
+title
+sku
+price
+weight
+weightUnit
+inventoryQuantity
+"""
