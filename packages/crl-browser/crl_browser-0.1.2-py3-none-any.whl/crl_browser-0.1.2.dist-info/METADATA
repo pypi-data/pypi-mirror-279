@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: crl-browser
+Version: 0.1.2
+Summary: CRL Browser - PyQt6 Based browser
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: psycopg2
+Requires-Dist: PyQt6
+Requires-Dist: crl-client
+
+
+CRL-BROWSER crl browser is a distribution developed for network transmission and symptomation designed for the crl network. The crl network has a large-cell and free domain structure and has its own network infrastructure independent of other platforms, but you can also use other search engines if you wish. Unlike Tor browser, it hosts the data in a fixed and up-to-date database. User login is only domain and IP address based. Users can freely create their own domain and interact with everyone here. It also has a terminal-based structure and is a lightweight browser. SETUPING For installation, you can install it in a way specific to the distributions I mentioned on the website, but you may need to meet the dependencies and install Python. Or you can install it by typing pip install crl-browser, it will install the dependencies itself, or you can install it by compiling the source code from github.
