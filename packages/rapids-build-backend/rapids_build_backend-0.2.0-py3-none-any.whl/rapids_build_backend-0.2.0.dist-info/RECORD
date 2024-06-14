@@ -1,0 +1,10 @@
+rapids_build_backend/__init__.py,sha256=hVJpbKqT2G6z0Dyd9MYmaxlAXVveLX4PVJaaICyoxAI,42
+rapids_build_backend/build.py,sha256=S9DHBPU9EB9j3oUVwrJs8P9pC35Ac5b11wqYWFw9DHo,2607
+rapids_build_backend/config.py,sha256=A1q2eV9B9sq-Q9wJ0WMX5uvSSJOcZdUFLIUETMmJpMk,3401
+rapids_build_backend/impls.py,sha256=uKOkq0mqYIbXr8oGb4syHC7fe8Sbsqq3LuGtGopu0sE,11323
+rapids_build_backend/utils.py,sha256=mwSEyDI2weGAs5Ax_-FlVu9Y82YxtRhqR7QMvQVnM5M,293
+rapids_build_backend-0.2.0.dist-info/LICENSE,sha256=4YCpjWCbYMkMQFW47JXsorZLOaP957HwmP6oHW2_ngM,11348
+rapids_build_backend-0.2.0.dist-info/METADATA,sha256=DZz3ytSZnI12R6crFORdoxOx67akTbTfYn5e8Hp1Ob8,4054
+rapids_build_backend-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rapids_build_backend-0.2.0.dist-info/top_level.txt,sha256=rB4DUarXzv8FCCGu9xFp_FUEaZBUvTzJpcLW-itRjyY,21
+rapids_build_backend-0.2.0.dist-info/RECORD,,
