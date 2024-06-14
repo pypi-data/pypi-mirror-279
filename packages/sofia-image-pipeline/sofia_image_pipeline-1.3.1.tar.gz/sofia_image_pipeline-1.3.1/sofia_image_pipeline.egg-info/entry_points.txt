@@ -1,0 +1,3 @@
+[console_scripts]
+download_usr_fig = src.download_usr_fig:main
+sofia_image_pipeline = src.image_pipeline:main
