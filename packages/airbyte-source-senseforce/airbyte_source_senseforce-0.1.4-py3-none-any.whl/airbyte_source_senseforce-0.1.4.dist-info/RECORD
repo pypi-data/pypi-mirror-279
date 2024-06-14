@@ -1,0 +1,8 @@
+source_senseforce/__init__.py,sha256=0G7SkEyBRM5qLFZXGsSkAjzF_MFqVcmI5MA8Cz-0IzA,132
+source_senseforce/manifest.yaml,sha256=NC25RPc1elsjUKct_N2zG97o6G6tFcfhtKZd6tXCx1w,6302
+source_senseforce/run.py,sha256=AAbAA5vpqbUPhxs39YinGdMoOInED-7g8bjADBDqC0g,242
+source_senseforce/source.py,sha256=lLa1b88Xfz2FzGTcgW8-XS95l_pefyXVS_uEGnGqbDs,479
+airbyte_source_senseforce-0.1.4.dist-info/METADATA,sha256=jToq_t11_FQuGwmp1lX0PCcq4ZchyNnc96TkXqqs9F8,5292
+airbyte_source_senseforce-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_senseforce-0.1.4.dist-info/entry_points.txt,sha256=t4kE2_O9Sdr2PDYTr9HprcyjO49sPLPUM4CWV4FJYQY,63
+airbyte_source_senseforce-0.1.4.dist-info/RECORD,,
