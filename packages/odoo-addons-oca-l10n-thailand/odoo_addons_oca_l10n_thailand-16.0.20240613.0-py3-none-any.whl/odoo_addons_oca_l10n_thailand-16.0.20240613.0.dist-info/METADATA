@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-l10n-thailand
+Version: 16.0.20240613.0
+Summary: Meta package for oca-l10n-thailand Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 16.0
+Requires-Dist: odoo-addon-currency-rate-update-TH-BOT <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-account-tax <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-account-tax-multi <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-account-tax-report <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-account-wht-cert-form <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-amount-to-text <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-base-location <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-fonts <16.1dev,>=16.0dev
+Requires-Dist: odoo-addon-l10n-th-partner <16.1dev,>=16.0dev
+
+UNKNOWN
+
