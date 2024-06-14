@@ -1,0 +1,13 @@
+BioModTool/__init__.py,sha256=qtIwIyPelbe4NksCDm_irTtb6ChUhwPHkCzHNXwZS74,190
+BioModTool/calculate.py,sha256=YLp9w7BqYN6rBBGwZ9r9u3ks37WV9svKE1kKAmWuMRY,11421
+BioModTool/load.py,sha256=aCUzK3B49kO9ERAZ1SqYonpWt8yZvithX2ZrTS5feQQ,8007
+BioModTool/main_add_biomass_objective_function.py,sha256=6-G471155Jhg2P1RBdRI81lzgCJBlejWhzngzd-b-fo,12829
+BioModTool/remove_biomass_objective_function.py,sha256=lntUSk-5yC5fEAs2EG99t5hoJH4l2qcRFezQ8WTq1xU,1192
+BioModTool/save.py,sha256=AmavjdR6rHd8zon23fhG2gY9SaevudzYSvhX39-wM3c,2626
+BioModTool/test.py,sha256=baAU-eWdZtS8-2M472xxMX4jt6TPEcpBSJTEuQLAVho,7445
+BioModTool/update.py,sha256=DZ61GUooKcFEq3odghX-LHVQasAEuAj0GOVEs66CDSw,8024
+BioModTool-1.0.0.dist-info/LICENSE.md,sha256=Gn6s3DR6YYmIMYqi7gXpwYK1vu1bzTMKdmZoHhvi6p0,7625
+BioModTool-1.0.0.dist-info/METADATA,sha256=EtpRo6R5_Q9pomLA8nKrXiTyyI5nFpErA16aTdhr3f4,2725
+BioModTool-1.0.0.dist-info/WHEEL,sha256=qB97nP5e4MrOsXW5bIU5cUn_KSVr10EV0l-GCHG9qNs,97
+BioModTool-1.0.0.dist-info/top_level.txt,sha256=XqEudVGy_qNmJJnKl_GE6eDUNo4DNPehwIb6c0WXMI8,11
+BioModTool-1.0.0.dist-info/RECORD,,
