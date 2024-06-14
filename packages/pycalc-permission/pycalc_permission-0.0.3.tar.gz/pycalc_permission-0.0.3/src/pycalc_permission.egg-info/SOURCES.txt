@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/pycalc_permission/__init__.py
+src/pycalc_permission/authentication.py
+src/pycalc_permission/permission.py
+src/pycalc_permission/token.py
+src/pycalc_permission/user.py
+src/pycalc_permission.egg-info/PKG-INFO
+src/pycalc_permission.egg-info/SOURCES.txt
+src/pycalc_permission.egg-info/dependency_links.txt
+src/pycalc_permission.egg-info/top_level.txt
