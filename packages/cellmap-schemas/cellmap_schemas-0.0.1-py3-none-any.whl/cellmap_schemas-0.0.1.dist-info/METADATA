@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: cellmap-schemas
+Version: 0.0.1
+Summary: Schemas for data used by the Cellmap project team at Janelia Research Campus.
+Project-URL: Documentation, https:www.janelia-cellmap.github.io/cellmap-schemas
+Project-URL: Issues, https://github.com/janelia-cellmap/cellmap-schemas/issues
+Project-URL: Source, https://github.com/janelia-cellmap/cellmap-schemas
+Author-email: Davis Vann Bennett <davis.v.bennett@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: cellmap,n5,ngff,zarr
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: pydantic-zarr>=0.7.0
+Requires-Dist: rich>=13.7.0
+Requires-Dist: s3fs>=2023.10.0
+Description-Content-Type: text/markdown
+
+# cellmap-schemas
+Schemas for our data
+
+Read the documentation [here](https://janelia-cellmap.github.io/cellmap-schemas/)
