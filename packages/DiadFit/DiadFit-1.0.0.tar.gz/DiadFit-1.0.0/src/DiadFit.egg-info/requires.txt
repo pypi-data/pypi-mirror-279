@@ -1,0 +1,8 @@
+pandas
+numpy<2
+matplotlib
+scikit-learn
+scipy
+lmfit>=1.1.0
+tqdm
+python-docx
