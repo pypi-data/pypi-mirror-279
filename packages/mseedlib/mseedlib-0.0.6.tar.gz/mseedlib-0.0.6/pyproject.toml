@@ -1,0 +1,60 @@
+[build-system]
+requires = ["hatchling>=1.21.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mseedlib"
+description = "A Python package for reading and writing miniSEED formatted data"
+authors = [
+    { name = "EarthScope Data Services", email = "software@earthscope.org" },
+]
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["seismology", "miniseed", "mseed", "data", "waveform", "seismic"]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: Apache Software License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: POSIX :: Other",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/EarthScope/mseedlib"
+Issues = "https://github.com/EarthScope/mseedlib/issues"
+
+[tool.hatch.version]
+path = "src/mseedlib/__version__.py"
+
+[tool.hatch.build]
+exclude = [
+    "src/mseedlib/libmseed/test/*",
+    "src/mseedlib/libmseed/doc/*",
+    "src/mseedlib/libmseed/example/*",
+]
+artifacts = [
+  "src/mseedlib/libmseed.so",
+  "src/mseedlib/libmseed.dylib",
+  "src/mseedlib/libmseed.dll",
+  "src/mseedlib/libmseed.h",
+]
+
+[tool.hatch.build.targets.wheel.hooks.custom]
+path = "hatch_build_libmseed.py"
+
+[tool.hatch.build.targets.wheel]
+exclude = ['src/mseedlib/libmseed']
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
