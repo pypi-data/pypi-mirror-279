@@ -1,0 +1,10 @@
+bucket_utils/__init__.py,sha256=fKWcDT0q_0-a644-Z1bXF-WwQcr_8ts_Q14FnAPW_sM,178
+bucket_utils/exceptions.py,sha256=uDXsKN6DpHR6NR32jemZmTXd8VYyo7Pt3ngMBdeGQt8,224
+bucket_utils/google.py,sha256=sSX4CVoKiYYF_jLv_lgSF4MQ8HH0AwFJgAadRC03nC8,10184
+bucket_utils/interface.py,sha256=5J8A_9sMeGpy6OymEOJE7xEMzpZUfaGGAkLk3iqq4Pg,3723
+bucket_utils/local.py,sha256=P28AGu1SBu4e47939rqHw_ebWsJmKRsKnw8Jvi86B3A,6983
+bucket_utils/resumable_upload_session.py,sha256=eV7FWRlvHVpuLe_Mc-cT8VlGPY3zL2mqjxlFosXzLI4,383
+spand-0.1.3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+spand-0.1.3.dist-info/METADATA,sha256=9AkhM3zt7mR1n1zdCXszZBuLjuuqV5DGUgLljf3CYMY,561
+spand-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+spand-0.1.3.dist-info/RECORD,,
