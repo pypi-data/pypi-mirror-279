@@ -1,0 +1,20 @@
+[console_scripts]
+wavespectra = wavespectra.cli:main
+
+[xarray.backends]
+era5 = wavespectra.input.era5:ERA5BackendEntrypoint
+funwave = wavespectra.input.funwave:FunwaveBackendEntrypoint
+json = wavespectra.input.json:JsonBackendEntrypoint
+ncswan = wavespectra.input.ncswan:NCSwanBackendEntrypoint
+ndbc = wavespectra.input.ndbc:NDBCBackendEntrypoint
+ndbc_ascii = wavespectra.input.ndbc_ascii:NDBCASCIIBackendEntrypoint
+netcdf = wavespectra.input.netcdf:NetCDFBackendEntrypoint
+octopus = wavespectra.input.octopus:OctopusBackendEntrypoint
+spotter = wavespectra.input.spotter:SpotterBackendEntrypoint
+swan = wavespectra.input.swan:SWANBackendEntrypoint
+triaxys = wavespectra.input.triaxys:TRIAXYSBackendEntrypoint
+wavespectra = wavespectra.input.wavespectra:WavespectraBackendEntrypoint
+ww3 = wavespectra.input.ww3:WW3BackendEntrypoint
+ww3_station = wavespectra.input.ww3_station:WW3StationBackendEntrypoint
+wwm = wavespectra.input.wwm:WWMBackendEntrypoint
+xwaves = wavespectra.input.xwaves:XWavesBackendEntrypoint
