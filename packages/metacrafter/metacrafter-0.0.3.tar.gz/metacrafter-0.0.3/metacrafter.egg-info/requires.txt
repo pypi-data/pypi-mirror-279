@@ -1,0 +1,14 @@
+pyparsing
+phonenumbers
+qddate
+orjson
+pymongo
+PyYAML
+pandas
+sqlalchemy
+validators
+click
+tabulate
+pydantic
+xmltodict
+pyiterable
