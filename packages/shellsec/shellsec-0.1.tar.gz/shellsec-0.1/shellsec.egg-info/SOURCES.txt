@@ -1,0 +1,9 @@
+README.md
+setup.py
+shellsec/__init__.py
+shellsec/core.py
+shellsec.egg-info/PKG-INFO
+shellsec.egg-info/SOURCES.txt
+shellsec.egg-info/dependency_links.txt
+shellsec.egg-info/entry_points.txt
+shellsec.egg-info/top_level.txt

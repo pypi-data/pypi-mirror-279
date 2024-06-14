@@ -1,0 +1,2 @@
+[console_scripts]
+shellsec = shellsec.core:main
