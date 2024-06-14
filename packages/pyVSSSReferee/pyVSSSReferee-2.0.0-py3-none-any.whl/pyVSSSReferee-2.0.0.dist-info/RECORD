@@ -1,0 +1,13 @@
+pyVSSSReferee/RefereeComm.py,sha256=tFGDelOCGQU5KbPjVv3b3UaQQUOz7nWtlBdyYTPDPek,5345
+pyVSSSReferee/__init__.py,sha256=0RWtZe3VDVW4uAWHipBVx0yUzBksBYHS9M5_-0rs89E,23
+pyVSSSReferee/protocols/__init__.py,sha256=3sBjlDiWpgpXC3llzyRUHeV8rL17VkPqfK5u2RcYm_s,99
+pyVSSSReferee/protocols/vssref_command_pb2.py,sha256=wVyh3ve4bzAhqLlFXDohO6SOfUE0ZVCw6IOFBoCgJFI,4232
+pyVSSSReferee/protocols/vssref_common_pb2.py,sha256=a7OHt54yBI5JQ145Ad-WcCIIgAwHFK_NOkMfikFCcW4,9280
+pyVSSSReferee/protocols/vssref_placement_pb2.py,sha256=ZIwxLHv-K24yzX3M-QlN2uAVn9Dl4YIzu0-RffApXL0,2274
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_RefereeComm.py,sha256=0eeCnCcm3YlA0RV_079KamwoW_1jy3NzcSzQqVfxpro,126
+pyVSSSReferee-2.0.0.dist-info/LICENSE,sha256=hIahDEOTzuHCU5J2nd07LWwkLW7Hko4UFO__ffsvB-8,34523
+pyVSSSReferee-2.0.0.dist-info/METADATA,sha256=4sCacioBurABjQ9n5wUU2LPGvH_ppiF_EUrr8HHM4wg,2536
+pyVSSSReferee-2.0.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+pyVSSSReferee-2.0.0.dist-info/top_level.txt,sha256=qmCpx_XK3u7BL8LV6qir8uQ0Ez0UCcJX-B3xu47LLZU,20
+pyVSSSReferee-2.0.0.dist-info/RECORD,,
