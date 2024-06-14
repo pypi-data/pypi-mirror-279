@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: bpmnClient
+Version: 1.0.0
+Summary: bpmnServer python client
+Author-email: ralph hanna <ralphhanna@hotmail.com>
+Project-URL: Homepage, https://github.com/pypa/sampleproject
+Project-URL: Issues, https://github.com/pypa/sampleproject/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# bpmn-py
+Python implementation to connect to bpmnServer
+
+To Install:
+
+```os
+pip install bpmnclient
+```
+
+To Run:
+```python
+
+# version 1: from bpmnClient import client as bpmn
+
+from src.bpmnClient.bpmn2 import client2 as bpmn
+
+b=BPMNClient2('localhost',3000,'12345')
+
+print(b.model.list_models())
+```
