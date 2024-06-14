@@ -1,0 +1,9 @@
+iudex/__init__.py,sha256=RUnRAtGTBS6GPGMM48KgRZn0yyG21xPtyIK8Fh9vvyQ,213
+iudex/attributes.py,sha256=sQuZMYSOpXBPJpl27hxyAso-GjfU6BBznYiUCeQIjkw,2821
+iudex/config.py,sha256=DTHOtJIQmQLswhFgfAEFgRPelk37jFuQRSf1m0vV_Ho,7009
+iudex/fastapi.py,sha256=BeSVT8BfjbktgOMX_Jh4g8KPhFExB_hpwcNHFYezaLc,2565
+iudex/instrumentation.py,sha256=ruhtd-4C0i8M96-2s3orKX3bsYzBEIvOtLth2JmFExg,2478
+iudex-0.7.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+iudex-0.7.1.dist-info/METADATA,sha256=USjJ5Awri8tbqV6FSj1FXUmhbaGsoPMAaUhqIo7MeS0,2796
+iudex-0.7.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+iudex-0.7.1.dist-info/RECORD,,
