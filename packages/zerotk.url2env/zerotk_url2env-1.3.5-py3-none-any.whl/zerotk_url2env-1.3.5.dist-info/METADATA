@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: zerotk.url2env
+Version: 1.3.5
+Summary: Command line tool to split database urls into multiple environment variables.
+Home-page: https://github.com/zerotk/url2env
+License: MIT
+Author: Alexandre Andrade
+Author-email: kaniabi@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (<8)
+Project-URL: Documentation, https://github.com/zerotk/url2env
+Project-URL: Repository, https://github.com/zerotk/url2env
+Description-Content-Type: text/markdown
+
+# url2env
+
+Turns database URLs into shell environment variables.
+
+### Usage:
+
+```
+$ url2env psql://joebloggs:secret@db.example.com:4433/blog
+PGUSER=joebloggs
+PGPASSWORD=secret
+PGHOST=db.example.com
+PGPORT=4433
+PGDATABASE=blog
+```
+
+With all options:
+
+```
+$ url2env --engine --export --prefix=DB_ psql://joebloggs:secret@db.example.com:4433/blog
+export DB_ENGINE=psql
+export DB_USER=joebloggs
+export DB_PASSWORD=secret
+export DB_HOST=db.example.com
+export DB_PORT=4433
+export DB_DATABASE=blog
+```
+
+
+The output could be used in conjunction with `eval`, e.g.::
+
+```
+$ eval $(url2env $DATABASE_URL)
+```
+
+
+### Installation
+
+```
+$ pip install zerotk.url2env
+```
+
+
+### Distribution
+
+```
+$ git tag <x.y>
+$ make build upload
+```
+
