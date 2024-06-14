@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: fcn-f0-data-crepe-large
+Version: 1.0.0.post0
+Summary: CREPE large model HDF5 coefficients file
+License: MIT License
+Classifier: License :: OSI Approved :: MIT License
+License-File: LICENSE
+
