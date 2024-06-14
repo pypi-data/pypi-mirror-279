@@ -1,0 +1,5 @@
+include LICENSE.txt
+include README.md
+include requirements.txt
+include loducode_utils/locale/*
+include loducode_utils/models/*
