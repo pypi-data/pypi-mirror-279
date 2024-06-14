@@ -1,0 +1,2 @@
+[dservercore.retrieve]
+MongoRetrieve = dserver_retrieve_plugin_mongo.utils_retrieve:MongoRetrieve
