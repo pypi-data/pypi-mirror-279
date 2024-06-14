@@ -1,0 +1,2 @@
+[console_scripts]
+find-and-replace-strings = find_and_replace.main:main
