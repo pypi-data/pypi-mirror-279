@@ -1,0 +1,14 @@
+
+[dev]
+tox
+black
+pre-commit
+
+[test]
+pytest
+numpy
+pandas
+wcwidth
+
+[widechars]
+wcwidth
