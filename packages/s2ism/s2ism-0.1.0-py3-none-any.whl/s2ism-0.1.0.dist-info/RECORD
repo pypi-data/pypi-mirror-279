@@ -1,0 +1,10 @@
+s2ism/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+s2ism/mag_finder.py,sha256=UE7LJQvVddUwKG0K6iC_5dpzThxLooe_-MgfVs7nLVk,5018
+s2ism/psf_estimator.py,sha256=BxaQe1tPaxR6kqQxBZAwFg92Bfdqs2v2fn_1IwsAXOw,20115
+s2ism/s2ism.py,sha256=fvmSR7YO0s_4qE_PdYYkYRP3E3sLDvRg9gjqwk6rxRU,20853
+s2ism/shift_vectors_minimizer.py,sha256=oRqkdawkbNltE4c7MlBScvbEHpm4q3tEICQCxuE19UY,7337
+s2ism-0.1.0.dist-info/LICENSE.txt,sha256=LoV48WtuomVBIWbotLHaBF_MEfKNsD1mSQhBASSi8B4,35801
+s2ism-0.1.0.dist-info/METADATA,sha256=1fQSzkzefjAFAfLinuyP09OaDu30BDsh3-GyCJxds6U,45472
+s2ism-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+s2ism-0.1.0.dist-info/top_level.txt,sha256=ft27-AWc4sax3nAVEtquS07pa3302AvGLuVTuHYx8nk,6
+s2ism-0.1.0.dist-info/RECORD,,
