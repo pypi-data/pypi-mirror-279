@@ -1,0 +1,11 @@
+tqdm
+SoccerNet
+matplotlib
+scikit-learn
+mmengine
+pytorch-lightning
+numpy
+opencv-python
+moviepy
+tabulate
+timm
