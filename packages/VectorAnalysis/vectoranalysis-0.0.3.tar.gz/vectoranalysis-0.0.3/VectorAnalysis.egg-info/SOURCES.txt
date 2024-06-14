@@ -1,0 +1,10 @@
+LICENSE.txt
+LICENSE.txt:Zone.Identifier
+README.md
+setup.py
+VectorAnalysis/VectorAnalysis.py
+VectorAnalysis/__init__.py
+VectorAnalysis.egg-info/PKG-INFO
+VectorAnalysis.egg-info/SOURCES.txt
+VectorAnalysis.egg-info/dependency_links.txt
+VectorAnalysis.egg-info/top_level.txt
