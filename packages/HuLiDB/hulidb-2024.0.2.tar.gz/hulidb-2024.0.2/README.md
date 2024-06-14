@@ -1,0 +1,303 @@
+# HuLiDB: Synthetic Hub-mounted lidar Data Base
+
+The HuLiDB repository is a tool developed in Python v3.9 to extract available hub-lidar configuration measurements from a NETcdf4 file, where each file represent a specific inflow case, meaning a specific wind speed, seed and turbulence intensity condition. 
+
+The Hub-lidar database (HuLiDB) can be found at DTU Data. 
+
+For more information about generation, inflow conditions, configurations and so on, please refer to the official dataset document: [Numerical hub-lidar data from Mann-generated  turbulence boxes using HAWC2 v13.1 and the DTU 10MW reference wind turbine](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads). 
+
+This repository will allow the user to:
+- Generate  their own dataset with their own custom configuration and Mann-turbulence box, using [HAWC2 v13.1](https://www.hawc2.dk/), if desire. 
+- Extract aeroelastic simulation data from the DTU 10MW reference wind turbine.
+- Extract synthetic measurements from hub-mounted lidar configurations selected by the user.
+- Filter hub-lidar measurements based on a specific area of the volume average limit.
+
+This dataset has been generated as part of [CONTINUE (Control of next-generation wind turbines)](https://eudp.dk/en/node/16680). Curated by Esperanza Soto Sagredo (ORCID 0000-0002-5645-2335, espa@dtu.dk) and  Jennifer M. Rinker  
+(ORCID 0000-0002-1122-1891, rink@dtu.dk) at the Technical University of Denmark  using HAWC2 v13.1. 
+
+This work is part of the **[CONTINUE project](https://eudp.dk/en/node/16680)**, which has received funding from the Danish Energy Technology Development and Demonstration Programme ([EUDP](https://eudp.dk/en)), under grant agreement 640222-496980.
+
+## Packages required
+
+To ensure the repository works as intended, you need to ensure you have installed the following packages: 
+- Numpy  (https://numpy.org/)
+- Pandas (https://pandas.pydata.org/)
+- xarray (https://docs.xarray.dev/en/stable/)
+- netCDF4 (https://pypi.org/project/netCDF4/)
+- Wind Energy Tool box (https://toolbox.pages.windenergy.dtu.dk/WindEnergyToolbox/)
+- Scipy (https://scipy.org/install/)
+
+## Repository Architecture
+The folder inside this repository are organized as follow: 
+<pre>
+    hublidardatabase
+    ├───dtu_10mw
+    │   ├───control
+    │   ├───data
+    │   ├───htc
+    │   │   ├───lidar_simulation
+    │   │   ├───turb_box 
+    ├───files
+    │   └───Lidar_beams_hawc2.csv
+    │   └───Lidar_config_user.xlsx   
+    ├───hulidb
+    │   └───data_extraction.py
+    │   └───database_generation.py
+    │   └───functions.py
+    │   └───functions_NETcdf.py
+    │   └───functions_tbox.py
+    │   └───lidar_filtering.py
+    │   └───lidar_utilities.py
+    │   └───turbox.py
+    ├───NETcdf
+    ├───test
+    ├───.gitignore
+    ├───_ltb_values.py
+    ├───_var_names.py 
+    ├───01-make_htc_files.py
+    ├───02-add_shear_tbox.py
+    ├───03-NETcdf_generation.py
+    ├───04-Data_extraction.py  
+    ├───05-Filtering_HuLi_data.py
+    ├───CONTINUE_HuLiDatabase.pdf
+    ├───LICENSE
+    ├───README.md
+</pre>
+
+Where the folders:
+-  $\textcolor{blue}{\text{dtu\_10mw}}$: Contains the DTU10MW reference wind turbine model for HAWC2 used in the generation of the database, including: controller's file, operational data and htc files.
+	- $\textcolor{blue}{\text{dtu\_10mw\textbackslash htc}}$: In this folder, three subfolders will be generated, one called $\textcolor{blue}{\text{lidar\_simulation}}$ which contains the htc file for the hub-lidar data extraction, $\textcolor{blue}{\text{turb\_box}}$ which contains the htc files for the generation of the Mann turbulence boxes in HAWC2, and finally $\textcolor{blue}{\text{free\_wind}}$, which contains the files to read the free wind components u, v, and w at different positions of the turbulence box from HAWC2. 
+Noticed that the htc files inside folder $\textcolor{blue}{\text{turb\_box}}$ must be executed first, and then once the turbulence boxes has been generated, you can run the simulation for measurement extractions.
+- $\textcolor{blue}{\text{files}}$: Folder that stores the spreed sheet $\textcolor{purple}{\text{Lidar\_beams\_hawc2.csv}}$ which contain all the available configurations for the data extraction based on the information in the dictionary $\textcolor{blue}{\text{lidar\_arg}}$ located in the script _ltb_values.py. This file should not be modified!
+- $\textcolor{blue}{\text{hulidb}}$: Contains multiple python scripts with functions utilities for the repository, organized depending on the functionality of each function. 
+- $\textcolor{blue}{\text{test}}$: Contains an example, for testing the generation and extraction of the data, based on a small scale example, which can be handle by a normal standard personal computer. 
+
+# Repository Instructions
+
+This repository will allow you to [generate your own dataset ](#database-generation), and/or [extract data from the database](#data-extraction-from-netcdf-files) already generated, from the NetCDF files available at [DTU Data](https://figshare.com/s/2fc91c3d09bf5dbf171f). 
+
+## Database generation 
+
+The following section will explain the purpose and how to use the available scripts in the repository, mainly for the generation of your own dataset, using [HAWC2 v13.1](https://www.hawc2.dk/).
+
+#### Dictionary for generation and data extraction: _ltb_values.py
+In this script, five dictionaries are found, with the values required for:
+- $\color{blue} kw\_dtu10mw$: DTU 10MW reference wind turbine model values in HAWC2, together with the index output channels for the simulation.
+- $\color{blue} kw\_turbgen$:  Generation of Mann turbulence boxes values.
+- $\color{blue} lidar\_arg$: Values for the hub-mounted lidar configuration selection to be added in the output channels in HAWC2. 
+- Additionally, two dictionaries for the testing case are defined. 
+
+### Variable name definition and metadata:  _var_names.py
+This script contains the metadata for the NetCDF file ,generation for all the different types of data: Aeroelastic response of the wind turbine model, hub-lidar data for multiple beams, and the Mann-generated turbulence boxes.
+
+
+### Script 01-make_htc_files
+This repository is dedicated to generate the htc files required to perform the simulations for:
+
+- Generate Mann-turbulence boxes (wind-inflow conditions). Files will be saved inside folder $\textcolor{blue}{\text{dtu\_10mw\textbackslash htc\textbackslash turb\_box\textbackslash}}$, and it will generate htc files for 10 seconds simulation. The main goal of them is ONLY to generate the required turbulence boxes. 
+**Note**: These files must be run first!, before the files for hub-lidar extraction, since they will generate the inflow required for all the other simulations. 
+
+- Generate htc files for aeroelastic simulations in HAWC2 v13.1 for hub-lidar measurement generation / extraction. Files are stored in folder $\textcolor{blue}{\text{dtu\_10mw\textbackslash htc\textbackslash lidar\_simulations\textbackslash}}$. Due to a constraint limitation in HAWC2 for the number of output beams, it has been set maximum to 2000 beams per file. Therefore, one inflow case containing all the selected lidar configurations in this dataset leads to 18 htc files per inflow condition. This will depend on how many hub-lidar beam output sensors you required, defined in dictionary $\color{blue} lidar\_arg$.
+- Optionally, a htc file to extract all the free wind components u, v and w from HAWC2 at each time step can be generated, to verify the wind speed components in HAWC2, which will be saved in $\textcolor{blue}{\text{dtu\_10mw\textbackslash htc\textbackslash free\_wind\textbackslash}}$.
+
+The htc files are generated from a template called $\textcolor{blue}{\text{dtu\_10mw\textbackslash htc\textbackslash DTU\_10MW\_orig\_v2.htc}}$, which has the main output channels and format for the DTU 10 MW reference wind turbine.
+
+By default, a flexible tower and a tilt of 5 degrees will be used for all simulations. However, the user can customize these options in the function $\color{blue}make\_htc\_turb$.
+
+The code generates the htc files for multiple inflow conditions, where the following parameters are selected:
+- Wind speeds, defined in $\textcolor{blue}{\text{\_ltb\_values.py --> kw\_turbgen}}$. 
+- Seed numbers, defined in $\textcolor{blue}{\text{\_ltb\_values.py --> kw\_turbgen}}$.
+- Beam lidar configurations, which are stored in the DataFrame  $\color{blue} df\_lidar$. The configurations are generated based on the initial values provided in the dictionary  $\textcolor{blue}{\text{\_ltb\_values.py --> lidar\_arg}}$.
+
+- Mann turbulence box parameters, where $\alpha \epsilon ^{2/3}$ is calculated using the function $\color{blue}var2ae$ from the [WETB tool box](https://toolbox.pages.windenergy.dtu.dk/WindEnergyToolbox/). The parameters $\color{blue}L$ and $\color{blue}\Gamma$ are selected from the dictionary defined in $\textcolor{blue}{\text{\_ltb\_values.py --> kw\_turbgen}}$. For more information about the turbulence box generation and the require parameters, please refer to the [database documentation](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads). 
+
+The htc files are divided to fit a specific number of beams, due to memory constraints during the simulation. We recommend to not go higher than  $\color{blue} beamno\_htc$ = 2000 beams. After 2000 outputs, the time HAWC2 requires to process the output channels considerably increases.
+
+For each inflow condition, multiple htc files will be generated, depending on the total number of beams configurations selected and the maximum number of beam outputs to add on each htc file ($\color{blue} beamno\_htc$). The number of simulations or parts, is calculated by dividing the total number of output beams required (based the lidar configurations combinations from the dictionary $\textcolor{blue}{\text{\_ltb\_values.py --> lidar\_arg}}$), and the maximum number of beams per file ( $\textcolor{blue}{\text{\_ltb\_values.py --> lidar\_arg --> beamno\_htc}}$).
+
+### Script 02-add_shear_tbox
+Reads the Mann-generated turbulence box for each case, and generates a binary file in HAWC2 format, with the longitudinal component u with an added shear profile, defined as the power law with a shear exponent of 0.2. Saves the binary file which is used in the aeroelastic simulations in HAWC2. 
+
+**Note:** This is not performed using the default HAWC2 shear option, due to in this case, the center of the turbulence box it is not the same as the hub-height of the wind turbine model. HAWC2 takes the center of the turbulence box position in the vertical direction as the reference height to apply the shear profile. 
+
+
+### Script 03-NETcdf_generation
+
+This script read each inflow case files results from the HAWC2 aeroelastic simulation, and store the results in a NetCDF4 file with the name dedicated to each inflow case.
+
+The naming convention for the files is as follow: 
+
+	[name_wind_turbine_model]_wsp_[wsp]_seed_[seed_number]_ae_[ae_value]
+
+The NetCDF files generated will have three groups:
+
+- ***wt_res***: Group that contains the aeroelastic wind turbine response channels output from HAWC2. For more information about the output channels, please check the documentation: [Numerical hub-lidar data from Mann-generated  turbulence boxes using HAWC2 v13.1 and the DTU 10MW reference wind turbine](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads). 
+- ***HuLi_data***: Group that has all the beams lidar data, including the locations in the global coordinate system Xg, Yg, Zg and the nominal and weighted line-of-sight velocities for all the selected beams. 
+- ***mann_tbox***: Group that contains the Mann-generated turbulence box for the selected inflow case, including u, v, w and u_shear, which is the u component with the added power law shear profile. The components are under the dimensions of the meteorological coordinate system x, y, z. Aditionally, the time as HAWC2 reads the turbulence box has been added. For more information, please refer to the documentation [Section 5. Numerical HuLi dataset ](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads).
+
+## Data extraction from NetCDF files
+
+This section explains how to use the repository to extract the desire data from the NetCDF files, based on specific hub-lidar configurations selected by the user. You will be able to extract data from three different $\color{blue} groups$, as defined in the [previous section](#script-03-netcdf_generation).
+
+**Note:** Each NetCDF file for an inflow case has a size of around 10.76 GB. Extracting the data for the hub-lidar configuration, can takes from 5 to 10 minutes, depending on the number of beams, configurations selected and the computer performance.
+
+### Script 04-Data_extraction
+
+This script is the main for the user, since it reads the NetCDF4 files for one or multiple inflow cases, and extract the data, from the aeroelastic response, hub-lidar measurements based on user configuration and the Mann-turbulence box. 
+
+#### $\color{blue} \text{a) Extraction of aeroelastic response of the wind turbine:}$
+
+To extract the **aeroelastic response of the wind turbine**, the dictionary **df_aero** is generated and saved as a pickle file, where it will contain all aeroelastic responses for multiple inflow cases. 
+
+	# Cases to be evaluated:
+	Cases = fNet.generate_Cases(**kw_turbgen)  # Generates all inflow cases based on dict kw_turgen.
+	path = './NETcdf/'  # Path where netcdf files are saved.
+	path_to_save = './files/'    # Path to save the pickle file
+	fname = 'df_aero'  # Name of the file to be saved for aeroelastic response as pickle format.
+	
+	# Generates a nested dataframes in a dictionary df_aero, with aeroelastic response for each inflow case. 
+	# save=True will save the dictionary into a pickle file. This is optional.
+	df_aero = dext.extract_aero_resp(Cases, path, path_to_save=path_to_save, fname=fname, save=True)
+
+An example of the df_aero[case] dataframe can be found here, where case is the name of the inflow case: 
+
+	         Time  shaft_rot_angle  ...  DLL_pitch3  DLL_Bld_tip_tow
+	0      100.05       166.518173  ...    0.003150        29.396481
+	1      100.10       168.386520  ...    0.003168        27.913652
+	2      100.15       170.254868  ...    0.003189        26.606422
+	3      100.20       172.117737  ...    0.003212        25.491051
+	4      100.25       173.986069  ...    0.003237        24.587046
+	      ...              ...  ...         ...              ...
+	11995  699.80       270.934814  ...   -0.000000        44.363602
+	11996  699.85       273.294373  ...   -0.000000        41.660835
+	11997  699.90       275.659393  ...   -0.000000        38.967415
+	11998  699.95       278.018921  ...   -0.000000        36.294376
+	11999  700.00       280.378479  ...   -0.000000        33.671452
+
+	[12000 rows x 120 columns]
+
+
+For more information about the channel outputs for the aeroelastic response, please refer to the [appendix A on the documentation](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads).
+
+#### $\color{blue} \text{b) Extraction of hub-lidar measurements:}$
+
+To extract the **hub-lidar measurements**, based on a lidar configuration(s), the user must define each individual configuration, and concatenate all of them on a list, as follow: 
+
+	# Definition of selected configurations (This is an example with two configs.):
+
+	# Configuration 1: Five beam lidar configuration, with 28 ranges
+	config_1 = {'theta': [0, 20, 30, 30, 30],  # Half-cone angle
+	            'psi': [0, 60, 120, 180, 240],  # Azimuthal angle
+	            'Focus-Length': np.concatenate((np.arange(50, 200, 10), 
+	                                      np.arange(200, 505, 25))),
+	            }
+
+	# Configuration 2: One beam lidar configuration, with 10 ranges
+	config_2 = {'theta': [0],  # Half-cone angle
+	            'psi': [0],
+	            'Focus-Length': np.arange(50, 310, 10),
+	            }
+
+	# Final list with all the configurations to be extracted: 
+	lidar_config = [config_1, config_2]
+
+It also required to define parameters, such as the sampling frequency per beam in Hz, the time interval where the data wants to be extracted, and the time step for the outputs from HAWC2 (deltat = 0.05 [s]). The minimum time to start the extraction is t_start = 100.05 up to t\_end = 700 seconds. The deltat value is defined in the output section of the HAWC2 htc file. For this database, the deltat was set to 0.05 seconds.
+
+	sampling_freq = 5  # [Hz] per beam
+	t_start, t_end = 100.05, 700.05  # This time is also constrained as the available time from HAWC2 simulation
+	deltat = 0.05   # delta time from HAWC2 simulation output channels.
+
+The sampling frequency per beam will determine how the data is sampled and extracted from the HAWC2 results files. The total full scan time, will be determine by multiplying the sampling frequency per beam by the number of beams in the configuration. **No switching delay is considered**.
+
+The function to generate the nested dictionary **DF_lidar**, containing the dataframes for each inflow and configuration cases, is generated by:
+
+	# Extract Hub-lidar data and generates a dictionary with the extracted data:
+	DF_lidar = dext.extract_huli_data(Cases, df_lidar, lidar_config, 
+	                                sampling_freq, t_start, t_end, deltat,
+	                                path=path_to_save, fname=file_name, save=True)
+
+Where **df_lidar** is a dataframe that reads all the outputs beams included on the dataset generation, and can be found in **.\files\Lidar\_beams\_hawc2.csv**.
+
+	lidar_csv = ('.\\files\\Lidar_beams_hawc2.csv')
+	df_lidar = pd.read_csv(lidar_csv)
+	df_lidar = df_lidar.drop(['Unnamed: 0', 'Beggining', 'Tag'], axis=1)
+
+**Note**: The file  **.\files\Lidar\_beams\_hawc2.csv**. should not be modified. However, if this file is modified or lost, you can generate it from:
+
+	df_lidar = create_lidar_config_htc(kw_dtu10mw['z_hub'], lidar_arg)
+
+An example of the generate dataframe **DF\_lidar** for one inflow case, and for configuration 1 is shown:
+	
+	# Example for DF_lidar[case]['config_1']:
+	
+	         Time  shaft_rot_angle  hub1_pos_x  ...  Theta  Psi  Beam_No
+	0      100.05       166.518173   -0.026284  ...      0    0       b1
+	1      100.05       166.518173   -0.026284  ...      0    0       b1
+	2      100.05       166.518173   -0.026284  ...      0    0       b1
+	3      100.05       166.518173   -0.026284  ...      0    0       b1
+	4      100.05       166.518173   -0.026284  ...      0    0       b1
+	      ...              ...         ...  ...    ...  ...      ...
+	16795  699.85       273.294373   -0.058121  ...     30  240       b5
+	16796  699.85       273.294373   -0.058121  ...     30  240       b5
+	16797  699.85       273.294373   -0.058121  ...     30  240       b5
+	16798  699.85       273.294373   -0.058121  ...     30  240       b5
+	16799  699.85       273.294373   -0.058121  ...     30  240       b5
+
+	[84000 rows x 13 columns]
+
+For more information about the outputs, please refer to the documentation, under [Section 5. Numerical HuLi dataset](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/CONTINUE_HuLiDatabase.pdf?ref_type=heads).
+
+#### $\color{blue} \text{c) Extraction of Mann-generated turbulence boxes}$
+To extract the Mann-turbulence boxes, the function $\color{blue} \text{extract\_tbox\_from\_netcdf}$ will extract the data, and save it as HAWC2 binary files, including four files: **u, v, w and u\_shear**, where the **u\_shear** is the longitudinal wind component **u** with the added shear profile, generated by using script $\color{blue} \text{02-add\_shear\_tbox.py}$. The name convention will follow the same as the inflow case:
+
+	# To extract Turbulence box in HAWC2 binary file (four binary files generated):
+	path_netcdf = './NETcdf/'  # Path where the NetCDF file is located.
+	path_turb_save = './dtu_10mw/turb_saved/'  # Path to save the turbulence box values extracted.
+	# if hawc2_file is True, then it generates the HAWC2 binary files. 
+	dext.extract_tbox_from_netcdf(case, path_netcdf, path_turb_save, hawc2_file=True)
+
+If the optional argument **hawc2_file** is false, then the 3D arrays will be return, as follow:
+
+	# if hawc2_file is False, then it will return the u, v, w and u_shear as 3D arrays.
+	u, v, w, u_shear = dext.extract_tbox_from_netcdf(case, path_netcdf, path_turb_save, hawc2_file=False)
+
+### Script 05-Filtering_HuLi_data
+
+This final file provides a tool to filtering the hub-lidar measurements, to ensure are located inside the volume of the turbulence box dimensions.  For this, the first step will be to load the dictionary generated from the previous script: 
+	
+	# Load the dictionary with the data extracted from the NETcdf file.
+	with open('.\\files\\df_huli.pkl', 'rb') as f:
+	    DF_lidar = pickle.load(f)
+	
+Once you have the dictionary, with all inflow and configurations cases, you will define the parameters for the weighting function, which generates the volume average: 
+
+	# Range lenght along the beam
+	F = 50
+
+	# Pulsed lidar:
+	deltaP = 38.4
+	deltaL = 24.75
+	half_width = 3  # half-width of the integration value, equal to dv in HAWC2
+	no_int = 200
+	half_width = half_width * deltaL  # half-width of the integration value, equal to dv in HAWC2
+	hw_length = 30
+	coverage_area = plot_pulsed_weigh_integ(F, deltaP, deltaL, no_int, half_width, hw_length, no_int)
+
+	# Generates new dictionary with filtered measurements:
+	DF_lidar = lfilt.filter_wgh_huli(DF_lidar, hw_length,
+	                                 drop_columns=False, drop_nan=False)
+
+## Acknowledgment
+
+My deepest thanks to the my supervisors, Jennifer M. Rinker, Mike Courtney and Ásta Hannesdóttir, for their constant support, guidance and feedback during the elaboration of this database.
+
+I also want to thanks to Rasmus Sode Lund for his incredible work on the implementation of the numerical hub-lidar sensor in HAWC2 v13.1, without which this database would have not be possible to generate. 
+
+This work is part of the CONTINUE project, which has received funding from the Danish Energy Technology Development and Demonstration Programme (EUDP), under grant agreement 640222-496980. 
+
+## License
+
+[MIT License](https://gitlab.windenergy.dtu.dk/continue/hublidardatabase/-/blob/main/LICENSE)
+
+**© Copyright © 2024, Technical University of Denmark**
+HuLiDB  was developed by Esperanza Soto Sagredo, PhD student, DTU Wind and Energy Systems.
