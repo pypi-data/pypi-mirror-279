@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+AzureDevOpsFlow/ExampleConfig.json
+AzureDevOpsFlow/WorkItem.py
+AzureDevOpsFlow/WorkItemService.py
+AzureDevOpsFlow/__init__.py
+AzureDevOpsFlow/main.py
+azuredevopsflow.egg-info/PKG-INFO
+azuredevopsflow.egg-info/SOURCES.txt
+azuredevopsflow.egg-info/dependency_links.txt
+azuredevopsflow.egg-info/entry_points.txt
+azuredevopsflow.egg-info/requires.txt
+azuredevopsflow.egg-info/top_level.txt
