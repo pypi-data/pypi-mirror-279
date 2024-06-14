@@ -1,0 +1,7 @@
+radicli<0.1.0,>=0.0.8
+bokeh<3.0.0,>=2.4.3
+pandas>=1.0.0
+wasabi>=0.9.1
+
+[dev]
+pytest-playwright==0.3.0
