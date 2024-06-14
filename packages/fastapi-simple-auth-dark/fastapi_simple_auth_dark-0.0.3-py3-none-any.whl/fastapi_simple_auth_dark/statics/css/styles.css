@@ -1,0 +1,73 @@
+:root {
+  --background: #000; /* Background color */
+  --background-footer: #222; /* Background color */
+  --background-content: #222; /* Background color */
+  --text-color: #ccc; /* Text color */
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Martel', serif; /* Используем Martel по умолчанию */
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .section {
+    flex: 1;
+  }
+
+  .title, .label {
+    color: var(--text-color);
+  }
+
+  .content-container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--background-content);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer {
+    text-align: center;
+    background-color: var(--background-footer);
+  }
+
+  footer.footer {
+    padding: 1em 1em;
+    width: 100%;
+  }
+      
+  .message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+  
+
+  .motd {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+  }
+
+  .error-message {
+    color: #d9534f;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  .magic-link,
+  .sign-up {
+    margin-top: 15px;
+  }
+
+
+.control button {
+  margin: 5px 0px;
+}
