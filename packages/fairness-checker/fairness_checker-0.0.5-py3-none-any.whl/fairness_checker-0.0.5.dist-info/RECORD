@@ -1,0 +1,9 @@
+fairness_checker/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+fairness_checker/__main__.py,sha256=kJCi4o_Tu_sQmF2tT-IjxgQHxt2RV6gAKEh4TaGYbwI,2418
+fairness_checker/main.py,sha256=eZ3pQhnHScim4ExtmVpmUXaHE6qIZfp06dUwoQ45E8I,59775
+fairness_checker-0.0.5.dist-info/LICENSE,sha256=awOCsWJ58m_2kBQwBUGWejVqZm6wuRtCL2hi9rfa0X4,1211
+fairness_checker-0.0.5.dist-info/METADATA,sha256=OjiydLDO0wfrdkKUkg8JXY517GFRFDgfWnvyv6C5dAI,4524
+fairness_checker-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+fairness_checker-0.0.5.dist-info/entry_points.txt,sha256=uLuUUrUNr8fCCHulrukZWTi-Tj7KaFCPcDYVpBSTKyw,69
+fairness_checker-0.0.5.dist-info/top_level.txt,sha256=g-yRQv8noMn6ILxjJsS9ZnNgvKQVc2SVdQDrLGYZvc4,17
+fairness_checker-0.0.5.dist-info/RECORD,,
