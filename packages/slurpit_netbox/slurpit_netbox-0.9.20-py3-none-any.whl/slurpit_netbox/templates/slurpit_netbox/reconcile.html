@@ -1,0 +1,364 @@
+{% extends 'base/layout.html' %}
+{% load buttons %}
+{% load helpers %}
+{% load plugins %}
+{% load render_table from django_tables2 %}
+{% load static %}
+{% load i18n %}
+
+{% comment %}
+Blocks:
+  extra_controls: Additional action buttons
+  bulk_buttons: Additional bulk action buttons to display beneath the objects
+    list
+
+Context:
+  model: The model class being listed
+  table: The table class used for rendering the list of objects
+  actions: A list of buttons to display. This template checks for add, import,
+    export, bulk_edit, and bulk_delete.
+  filter_form: The bound filterset form for filtering the objects list (optional)
+  return_url: Return URL to use for bulk actions (optional)
+{% endcomment %}
+
+{% block header %}
+  <div class="page-header m-0">
+    {{ block.super }}
+
+    {% block page-header %}
+      <div class="container-fluid mt-2 d-print-none">
+        <div class="d-flex justify-content-between">
+
+          {# Title #}
+          <div>
+            {% include "slurpit_netbox/logo.html" %}
+            <h2 class="page-title my-1">
+              {% block title %}
+                Reconcile
+              {% endblock title %}
+            </h2>
+            {% block subtitle %}{% endblock %}
+          </div>
+
+        </div>
+      </div>
+    {% endblock %}
+
+    {# Tabs #}
+    <div class="page-tabs mt-3">
+      <div class="container-fluid">
+        {% block tabs %}
+          <ul class="nav nav-tabs">    
+            <li class="nav-item" role="presentation">
+              <a class="nav-tab nav-link {% if request.GET.tab == 'ipam' or request.GET.tab is None %}active{% endif %}" href="?tab=ipam">
+                IPAM {% badge ipam_count %}
+              </a>
+            </li>
+          
+            <li class="nav-item" role="presentation">
+              <a class="nav-tab nav-link {% if request.GET.tab == 'interface' %}active{% endif %}" href="?tab=interface">
+                Interfaces {% badge interface_count %}
+              </a>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+              <a class="nav-tab nav-link {% if request.GET.tab == 'prefix' %}active{% endif %}" href="?tab=prefix">
+                Prefixes {% badge prefix_count %}
+              </a>
+            </li>
+          </ul>
+        {% endblock %}
+      </div>
+    </div>
+
+  </div>
+{% endblock header %}
+
+
+{% block content %}
+  <div class="tab-content">
+    <div class="show active">
+
+        <input type="hidden" results="5" name="q" id="quicksearch" class="form-control" placeholder="Quick search"
+              hx-get="{{ request.full_path }}" hx-target="#object_list" hx-trigger="keyup changed delay:500ms, search" />
+
+        {# Object table controls #}
+        {% include 'inc/table_controls_htmx.html' with table_modal="ObjectTable_config" %}
+        
+        <form method="post" class="form form-horizontal" id="reconcile_form">
+          {% csrf_token %}
+          <div id="select-all-box" class="d-none card noprint">
+            <div class="form col-md-12">
+              <div class="card-body">
+                <div class="form-check">
+                  <input type="checkbox" id="select-all" name="_all" class="form-check-input" />
+                  <label for="select-all" class="form-check-label">
+                    {% blocktrans trimmed with count=table.rows|length object_type_plural=table.data.verbose_name_plural %}
+                      Select <strong>all {{ count }} {{ object_type_plural }}</strong> matching query
+                    {% endblocktrans %}
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="noprint bulk-buttons">
+                <div class="bulk-button-group">
+                    <div class="mb-2" role="group">
+                        <a class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#acceptModal">
+                            <i class="mdi mdi-check" aria-hidden="true"></i> 
+                            <span id="syncCaption">{% trans "Accept" %}</span>
+                        </a>
+
+                        <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#declineModal">
+                          <i class="mdi mdi-close" aria-hidden="true"></i> {% trans "Decline" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form form-horizontal">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="accept" id="action_input" />
+                <input type="hidden" name="tab" value="{{ request.GET.tab }}" id="tab_input" />
+                <input type="hidden" name="return_url" value="{% if return_url %}{{ return_url }}{% else %}{{ request.path }}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}{% endif %}" />
+        
+                {# Object table #}
+        
+                    {% if prerequisite_model %}
+                      {% include 'inc/missing_prerequisites.html' %}
+                    {% endif %}
+        
+                <div class="card">
+                  <div class="card-body htmx-container" id="object_list">
+                    {% include 'htmx/table.html' %}
+                  </div>
+                </div>
+        
+                
+              </div>
+              
+        </form>
+    </div>
+  </div> 
+
+  <div class="modal fade" tabindex="-1" id="declineModal">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Are you sure to decline the selected records?</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+            <a class="btn btn-danger " id="decline_btn">{% trans "Decline" %}</a>
+            <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+        </div>
+  
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" tabindex="-1" id="acceptModal">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h6 class="modal-title">Are you sure to accept the selected records?</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+  
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+            <a class="btn btn-success " id="accept_btn">{% trans "Accept" %}</a>
+            <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Close</button>
+        </div>
+  
+        
+      </div>
+    </div>
+
+    
+  </div>
+
+  {% if request.GET.pk %}
+    <div class="modal fade show" style="display: block" tabindex="-1" id="reconcile-detail-modal" aria-modal="true" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">
+              {{ title }} | {{ object_type }}|  {{ action }} 
+            </h4>
+            <!-- <a type="button" class="btn-close" href="?{% if request.GET.tab %}tab={{request.GET.tab}}{% endif %}" aria-label="Close"></a> -->
+            <a type="button" class="btn-close" aria-label="Close" id="reconcile-close"></a>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-3" style="align-items: stretch;">
+              <div class="col col-md-6">
+                  <div class="card" style="height: 100%;">
+                      <h5 class="card-header">
+                          {% trans "Current state" %}
+                      </h5>
+                      <div class="card-body">
+                      {% if current_state %}
+                          <pre class="change-data">{% for k, v in current_state.items %}{% spaceless %}
+                              <span{% if k in diff_removed %} class="removed"{% endif %}>{{ k }}: {{ v|json }}</span>
+                          {% endspaceless %}{% endfor %}
+                          </pre>
+                      {% elif non_atomic_change %}
+                          {% trans "Warning: Comparing non-atomic change to previous change record" %} (<a href="{% url 'extras:objectchange' pk=prev_change.pk %}">{{ prev_change.pk }}</a>)
+                      {% else %}
+                          <span class="text-muted">{% trans "None" %}</span>
+                      {% endif %}
+                      </div>
+                  </div>
+              </div>
+              <div class="col col-md-6">
+                  <div class="card" style="height: 100%;">
+                      <h5 class="card-header">
+                          {% trans "Incomming change" %}
+                      </h5>
+                      <div class="card-body">
+                          {% if incomming_change %}
+                              <pre class="change-data">{% for k, v in incomming_change.items %}{% spaceless %}
+                                  <span{% if k in diff_added %} class="added"{% endif %}>{{ k }}: {{ v|json }}</span>
+                                  {% endspaceless %}{% endfor %}
+                              </pre>
+                          {% else %}
+                              <span class="text-muted">{% trans "None" %}</span>
+                          {% endif %}
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-md-12">
+                <div class="card">
+                    <h5 class="card-header">
+                      {% trans "Difference" %}
+                    </h5>
+                    <div class="card-body">
+                        {% if diff_added == diff_removed %}
+                            <span class="text-muted" style="margin-left: 10px;">
+                                {% if object.action == 'create' %}
+                                    {% trans "Object Created" %}
+                                {% elif object.action == 'delete' %}
+                                    {% trans "Object Deleted" %}
+                                {% else %}
+                                    {% trans "No Changes" %}
+                                {% endif %}
+                            </span>
+                        {% else %}
+                            <pre class="change-diff change-removed">{{ diff_removed|json }}</pre>
+                            <pre class="change-diff change-added">{{ diff_added|json }}</pre>
+                        {% endif %}
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Body -->
+          
+        </div>
+      </div>
+    </div>
+    <div class="modal-backdrop fade show"></div>
+
+    <script>
+      function removeTabParameterWithoutReloading() {
+        let url = new URL(window.location.href);
+        url.searchParams.delete('pk');
+
+        // Update the URL without reloading the page
+        window.history.replaceState(null, '', url.href);
+      }
+
+      
+      // Find the button element on the page
+      var closeButton = document.getElementById('reconcile-close');
+
+      // Define the function to be called when the button is clicked
+      function handleCloseButtonClick(event) {
+        
+        removeTabParameterWithoutReloading();
+
+        var backdrops = document.getElementsByClassName('modal-backdrop');
+        // Loop through each backdrop element and hide it by setting its display style to 'none'
+        for (var i = 0; i < backdrops.length; i++) {
+          backdrops[i].style.display = 'none';
+        }
+
+        // Get the element with the 'reconcile-detail-modal' ID
+          var modal = document.getElementById('reconcile-detail-modal');
+
+        // Set its display style to 'none' to hide it
+        if (modal) {
+          modal.style.display = 'none';
+        }
+        
+        // Optionally prevent the default action if needed (e.g., if the anchor navigates to a URL)
+        event.preventDefault();
+      }
+
+      // Add the event listener for the 'click' event
+      closeButton.addEventListener('click', handleCloseButtonClick);
+
+    </script>
+  {% endif %}
+  
+  <style>
+    pre.change-diff.change-added {
+        background-color: #2fb34433 !important;
+    }
+    pre.change-diff.change-removed {
+        background-color: #d639392e !important;
+    }
+    pre.change-data>span.removed {
+        background-color: #d639392e !important;
+    }
+    pre.change-data>span.added {
+        background-color: #2fb34433 !important;
+    }
+  </style>
+
+  <script>
+    var reconcile_form = document.getElementById('reconcile_form')
+    var accept_btn = document.getElementById('accept_btn')
+    var decline_btn = document.getElementById('decline_btn')
+    var action_input = document.getElementById('action_input')
+
+    accept_btn.addEventListener("click", function(event) {
+      action_input.value = "accept"
+      reconcile_form.submit()
+    });
+
+    decline_btn.addEventListener("click", function(event) {
+      action_input.value = "decline"
+      reconcile_form.submit()
+    });
+
+  </script>
+{% endblock content %}
+
+
+
+
+<footer class="footer container-fluid">
+  {% block footer %}
+    {% include "slurpit_netbox/footer.html" %}
+  {% endblock footer %}
+</footer>
+
+
+
+   
+
