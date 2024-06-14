@@ -1,0 +1,54 @@
+name: MetaVal
+input_languages:
+  - C
+project_url: https://gitlab.com/sosy-lab/software/metaval
+repository_url: https://gitlab.com/sosy-lab/software/cpachecker
+spdx_license_identifier: Apache-2.0
+benchexec_toolinfo_module: benchexec.tools.metaval
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - masp
+
+maintainers:
+  - name: Martin Spiessl
+    institution: LMU Munich
+    country: Germany
+    url: https://www.sosy-lab.org/people/spiessl/
+
+versions:
+  - version: "svcomp24-correctness"
+    doi: 10.5281/zenodo.10137150
+    benchexec_toolinfo_options: ['--metavalWitnessType', 'correctness_witness']
+    required_ubuntu_packages: []
+  - version: "svcomp24-violation"
+    doi: 10.5281/zenodo.10137150
+    benchexec_toolinfo_options: ['--metavalWitnessType', 'violation_witness']
+    required_ubuntu_packages: []
+  - version: "svcomp23"
+    doi: 10.5281/zenodo.10065455
+    benchexec_toolinfo_options: []
+    required_ubuntu_packages: []
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Validation of Correctness Witnesses 1.0"
+    tool_version: "svcomp24-correctness"
+    jury_member:
+      name: Martin Spiessl
+      institution: LMU Munich
+      country: Germany
+      url: https://www.sosy-lab.org/people/spiessl/
+  - competition: "SV-COMP 2024"
+    track: "Validation of Violation Witnesses 1.0"
+    tool_version: "svcomp24-violation"
+    jury_member:
+      name: Martin Spiessl
+      institution: LMU Munich
+      country: Germany
+      url: https://www.sosy-lab.org/people/spiessl/
+
+techniques:
+  - Algorithm Selection
+  - Task Translation
+
+frameworks_solvers: []

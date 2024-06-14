@@ -1,0 +1,38 @@
+name: sv-sanitizers
+input_languages:
+  - C
+project_url: https://github.com/sim642/sv-sanitizers
+repository_url: https://github.com/sim642/sv-sanitizers
+spdx_license_identifier: MIT
+benchexec_toolinfo_module: "https://gitlab.com/sosy-lab/software/benchexec/-/raw/main/benchexec/tools/sv-sanitizers.py"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - sim642
+
+maintainers:
+  - name: Simmo Saan
+    institution: University of Tartu
+    country: Estonia
+    url: https://sim642.eu/
+
+versions:
+  - version: "svcomp24"
+    doi: 10.5281/zenodo.10091272
+    benchexec_toolinfo_options: []
+    required_ubuntu_packages: []
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Simmo Saan
+      institution: University of Tartu
+      country: Estonia
+      url: https://sim642.eu/
+
+techniques:
+  - Concurrency Support
+  - Random Execution
+
+frameworks_solvers: []
