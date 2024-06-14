@@ -1,0 +1,11 @@
+ax3_email/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ax3_email/apps.py,sha256=bJR67wFPT7W-EN9FzrY89ir8n9scpz-H4mA8Nuozqi0,120
+ax3_email/backends.py,sha256=XLs2enH4lK8v3ah2x6NY1oJqz2hg7q099onZEY2EONg,525
+ax3_email/settings.py,sha256=k7FC0jTW6KJx_3OasPUih3Fuba5Kq9MrE2SXyoQuZJg,367
+ax3_email/tasks.py,sha256=votBcBeKHb-lB_2sZk2unmhkcTwUsrhLsiHpfaRH5XA,1116
+ax3_email/utils.py,sha256=q2pOzvV22-ORy0KJoVHdJv5MwpvnPbooweXJadpab1M,5041
+ax3_email-2.0.0.dist-info/LICENSE,sha256=CTfSwCyOG9_rOOsvx5JhD2bo5KxCiDgQ8n_K6TmcUaM,1065
+ax3_email-2.0.0.dist-info/METADATA,sha256=FQe2NKXh1Oz8UgPtSBrANcU-NmtshUBsZpQFtEtTVSA,1898
+ax3_email-2.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ax3_email-2.0.0.dist-info/top_level.txt,sha256=yQicW2sVNS8LP_Ac5uNTPilavBsaYjj4AfPzyG7Y4A0,10
+ax3_email-2.0.0.dist-info/RECORD,,
