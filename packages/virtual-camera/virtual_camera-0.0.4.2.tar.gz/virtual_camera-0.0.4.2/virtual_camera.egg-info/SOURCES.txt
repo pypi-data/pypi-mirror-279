@@ -1,0 +1,13 @@
+README.md
+setup.py
+virtual_camera/__init__.py
+virtual_camera/virtual_camera.py
+virtual_camera.egg-info/PKG-INFO
+virtual_camera.egg-info/SOURCES.txt
+virtual_camera.egg-info/dependency_links.txt
+virtual_camera.egg-info/requires.txt
+virtual_camera.egg-info/top_level.txt
+virtual_camera/data/calibration.yml
+virtual_camera/data/dst_image.jpg
+virtual_camera/data/mask.png
+virtual_camera/data/src_image.jpg
