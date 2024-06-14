@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: Condate
+Version: 0.1
+Summary: A simple date conversion script
+Home-page: https://twitter.com/Lanaev0li
+Author: Avinion
+Author-email: shizofrin@gmail.com
+License: Avinion Group
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Condate
+
+Condate is a simple Python script to convert dates from various text formats into a numeric format (dd.mm.yyyy).
+
+## Installation
+
+To install the script, use pip:
+
+```sh
+pip install condate
+
+Usage
+To run the script, use the following command in your terminal:
+
+condate
+
+Author
+Made by Avinion
+Telegram: @akrim
