@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: star_ray_pygame
+Version: 0.0.2
+Summary: An optional extra for the `star_ray` package that supports `pygame` as a UI backend.
+Home-page: https://github.com/dicelab-rhul/star_ray_pygame
+Author: Benedict Wilkins
+Author-email: benrjw@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: star-ray[xml]
+Requires-Dist: pygame
+Requires-Dist: pywinctl
+Requires-Dist: lxml
+Requires-Dist: cairosvg
+Requires-Dist: numpy
+Requires-Dist: pydantic
+
