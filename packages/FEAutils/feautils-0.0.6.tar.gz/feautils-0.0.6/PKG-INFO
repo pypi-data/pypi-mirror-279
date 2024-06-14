@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: FEAutils
+Version: 0.0.6
+Summary: Helper utilities useful in energy data science
+Home-page: https://github.com/future-energy-associates/FEA-helpers
+Author: Future Energy Associates
+Author-email: hello@futureenergy.associates
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# FEA utils
+
+Useful code snippets and helper methods that Future Energy Associates frequently use for data science.
+
+Install with `pip install feautils`
+
+## Deploy to pypi
+
+Publishing a package is now done with the `Trusted Publisher Management` workflow via github. See this example for more details 
+
+https://medium.com/@blackary/publishing-a-python-package-from-github-to-pypi-in-2024-a6fb8635d45d
