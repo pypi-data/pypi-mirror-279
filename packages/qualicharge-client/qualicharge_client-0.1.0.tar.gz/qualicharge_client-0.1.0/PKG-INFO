@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: qualicharge-client
+Version: 0.1.0
+Summary: A python client and CLI for the QualiCharge API
+License: MIT
+Author: Julien Maupetit
+Author-email: julien@maupetit.net
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: anyio[trio] (>=4.4.0,<5.0.0)
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: pydantic (>=2.7.3,<3.0.0)
+Requires-Dist: pydantic-settings (>=2.3.0,<3.0.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# QualiCharge API client (and CLI!)
+
+## Getting started with the CLI
+
+`qcc` can be installed using `pip`:
+
+```
+pip install qcc
+```
+
+Get the list of commands and usage using the `--help` option:
+
+```
+qcc --help
+```
+
+## License
+
+This work is released under the MIT License (see LICENSE).
+
