@@ -1,0 +1,140 @@
+Metadata-Version: 2.1
+Name: smoother-omics
+Version: 1.0.2
+Summary: A Unified and Modular Framework to Incorporate Structural Dependency in Spatial Omics Data
+Author: Jiayu Su
+License: BSD 3-Clause License
+        
+        Copyright 2022 Jiayu Su
+        
+        Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Project-URL: repository, https://github.com/JiayuSuPKU/Smoother
+Requires-Python: <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Smoother: A Unified and Modular Framework to Incorporate Structural Dependency in Spatial Omics Data
+[![DOI](https://zenodo.org/badge/546425993.svg)](https://zenodo.org/doi/10.5281/zenodo.10242921)
+![Overview](/docs/img/Smoother_overview.png)
+
+## Description
+Smoother is a Python package built for modeling spatial dependency and enforcing spatial coherence in spatial omics data analysis. Implemented in `Pytorch`, Smoother is modular and ultra-efficient, often capable of analyzing samples tens of thousands of spots in seconds. The key innovation of Smoother is the decoupling of the prior belief on spatial structure (i.e., neighboring spots tend to be more similar) from the likelihood of a non-spatial data-generating model. This flexibility allows the same prior to be used in different models, and the same model to accommodate data with varying or even zero spatial structures. In other words, Smoother can be seamlessly integrated into existing non-spatial models and pipelines (e.g. single-cell analyses) and make them spatially aware. In particular, Smoother provides the following functionalities:
+
+1. **Spatial loss**: A quadratic loss equivalent to a multivariate Gaussian (MVN) prior reflecting the spatial structure of the data. It can be used to regularize any spatial random variable of interest.
+2. **Data imputation**: Mitigates technical noise by borrowing information from the neighboring spots. It can also be applied to enhance the resolution of the data to an arbitrary level in seconds.
+3. **Cell-type deconvolution**: Infers the spatially coherent cell-type composition of each spot using reference cell-type expression profiles. Smoother is one of the few deconvolution methods that actually enforce spatial coherence by design.
+4. **Dimension reduction**: Find the spatially aware latent representations of spatial omics data in a model-agnostic manner, such that single-cell data without spatial structure can be jointly analyzed using the same pipeline.
+
+See the [documentation page](https://smoother.readthedocs.io/en/latest/index.html) for basic usages, tutorials and examples. 
+For mathematical details, check [the Smoother paper (Su Jiayu, et al. 2022)](https://www.biorxiv.org/content/10.1101/2022.10.25.513785v2.full) and [the Supplementary Notes](/docs/Smoother_sup_notes.pdf).
+
+## Installation
+If you only want to use the core functionalities, namely `SpatialWeightMatrix` and `SpatialLoss`, Smoother can be directly installed using `pip` 
+```zsh
+pip install git+https://github.com/JiayuSuPKU/Smoother.git#egg=smoother
+```
+
+The dimensionality reduction module (`SpatialAE`, `SpatialVAE`) is built upon [scvi-tools](https://docs.scvi-tools.org/en/stable/index.html). Here we refer to the [original repository for installation instructions on different systems](https://docs.scvi-tools.org/en/stable/installation.html).
+```zsh
+pip install scvi-tools
+```
+
+
+- Note that `scvi-tools` doesn't officially support Apple's M chips yet. To run `SCVI` and the corresponding `SpatialVAE` on Macs with Apple silicon, a temporary solution is to [compile both Pytorch and PyG on M1 chips using compatible wheel files](https://github.com/rusty1s/pytorch_scatter/issues/241#issuecomment-1086887332). 
+
+To solve data imputation and deconvolution models using convex optimization, you need to also install the ['cvxpy' package](https://www.cvxpy.org/).
+
+```zsh
+conda install -c conda-forge cvxpy
+```
+
+To run other functions, e.g. the [simulation scripts](/simulation/README.md), we recommend using the conda environment provided in the repo. You can create a new conda environment called 'smoother' and install the package in it using the following commands:
+```zsh
+# download the repo from github
+git clone git@github.com:JiayuSuPKU/Smoother.git
+
+# cd into the repo and create a new conda environment called 'smoother'
+conda env create --file environment.yml
+conda activate smoother
+
+# add the new conda enviroment to Jupyter
+python -m ipykernel install --user --name=smoother
+
+# install the package
+pip install -e .
+```
+
+## Basic usage
+### Spatial loss construction
+```python
+# import spatial losses and models
+import torch
+from smoother import SpatialWeightMatrix, SpatialLoss, ContrastiveSpatialLoss
+from smoother.models.deconv import NNLS
+from smoother.models.reduction import SpatialPCA, SpatialVAE
+
+# load data
+x = torch.tensor(...) # n_gene x n_celltype, the reference signature matrix
+y = torch.tensor(...) # n_gene x n_spot, the spatial count matrix
+coords = pd.read_csv(...) # n_spot x 2, tspatial coordinates
+
+# build spatial weight matrix
+weights = SpatialWeightMatrix()
+weights.calc_weights_knn(coords)
+
+# scale weights by transcriptomics similarity
+weights.scale_by_expr(y)
+
+# transform it into spatial loss
+spatial_loss = SpatialLoss('icar', weights, rho=0.99)
+
+# or contrastive loss
+spatial_loss = ContrastiveSpatialLoss(
+    spatial_weights=weights, num_perm=20, neg2pos_ratio=0.1)
+
+# regularize any spatial random variable of interest
+variable_of_interest = torch.tensor(...) # n_vars x n_spot
+loss = spatial_loss(variable_of_interest)
+```
+
+### Downstream tasks
+```python
+# choose model and solve the problem
+# deconvolution
+model = NNLS()
+model.deconv(x, y, spatial_loss=spatial_loss, lambda_spatial_loss=1, ...)
+
+# dimension reduction de novo from spatial data
+SpatialVAE.setup_anndata(adata, layer="raw")
+model = SpatialVAE(st_adata=adata, spatial_loss=spatial_loss)
+model.train(max_epochs = 400, lr = 0.01, accelerator='cpu')
+
+# dimension reduction from single-cell models
+baseline = SpatialPCA(rna_adata, layer='scaled', n_latent=30)
+baseline.reduce(...)
+model_sp = SpatialPCA.from_rna_model(
+    rna_model=baseline, st_adata=sp_data, layer='scaled',
+    spatial_loss=spatial_loss, lambda_spatial_loss=0.1
+)
+
+model_sp = SpatialVAE.from_rna_model(
+    st_adata = sp_data, sc_model = rna_scvi_model, 
+    spatial_loss=sp_loss, lambda_spatial_loss=0.01,
+    unfrozen=True,
+)
+```
+
+## Tutorials and examples
+https://smoother.readthedocs.io/en/latest/index.html
+
+## Citation
+Su, Jiayu, et al. "Smoother: a unified and modular framework for incorporating structural dependency in spatial omics data." Genome Biology 24.1 (2023): 291.
+https://link.springer.com/article/10.1186/s13059-023-03138-x
