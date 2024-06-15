@@ -1,0 +1,12 @@
+authentication/__init__.py,sha256=ikXV5_8flPYotB18sHmWGkJvT-B-_P2KXo2zIBBi8M8,503
+authentication/auth.py,sha256=GhSFDHodsZz8W9iEuj4Td4-cVE8_w0FIx61hdy5BZc4,8887
+authentication/errors.py,sha256=K6sVOnynG0wQj57V8-NNpfluBOmCYSTqVDFmsw0ZF0U,2057
+authentication/models.py,sha256=DiNVO4Xvyr-lqtsgMPgfoGUYI8khV-xYdUpCzzf5PbQ,4222
+authentication/routes.py,sha256=hM5OoiDaqBGB1I1OCTboP3J1Cg7R8RiySxZ29EF4kpg,16389
+authentication/schemes.py,sha256=2AmRPITvdr51GvqRK1iB91IZdHSRK1Sj5utg-RdWYuc,3150
+authentication/settings.py,sha256=8CECP41HETd1gfsWOnh4nUiTw5zKLJXUxH5qAE1jaNE,595
+authentication/utils.py,sha256=TPjsRJDKdGGdNhlie_Aq-flwYLxy3taYQb1eBqF8API,4867
+connectkit_fastapiauthentication-1.4.0.dist-info/METADATA,sha256=ejPH-MU5BJT0yb0Vi0fB7z7-xo2HTp56MMfqGVZwA_g,6810
+connectkit_fastapiauthentication-1.4.0.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+connectkit_fastapiauthentication-1.4.0.dist-info/licenses/LICENSE,sha256=0oAyQFAp1lNpHcBD_djMxeRFgZnP98qXEod0OsOSUzA,1096
+connectkit_fastapiauthentication-1.4.0.dist-info/RECORD,,
