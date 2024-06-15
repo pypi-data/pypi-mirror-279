@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyxro"
+version = "0.1.0"
+authors = [{ name = "Henrique Martins", email = "hpmartins@gmail.com" }]
+description = "x-ray optics package"
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1.1",
+    "periodictable>=1.6.1",
+    "scipy>=1.11.3",
+    "xarray>=2023",
+]
+
+[project.urls]
+Homepage = "https://github.com/mlexchange/mlex_pyxro"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]

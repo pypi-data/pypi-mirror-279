@@ -1,0 +1,494 @@
+Metadata-Version: 2.1
+Name: pyxro
+Version: 0.1.0
+Summary: x-ray optics package
+Author-email: Henrique Martins <hpmartins@gmail.com>
+License: MLExchange Copyright (c) 2023, The Regents of the University of California,
+        through Lawrence Berkeley National Laboratory (subject to receipt of
+        any required approvals from the U.S. Dept. of Energy). All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        (1) Redistributions of source code must retain the above copyright notice,
+        this list of conditions and the following disclaimer.
+        
+        (2) Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+        
+        (3) Neither the name of the University of California, Lawrence Berkeley
+        National Laboratory, U.S. Dept. of Energy nor the names of its contributors
+        may be used to endorse or promote products derived from this software
+        without specific prior written permission.
+        
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+        ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+        LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+        CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+        SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+        INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+        CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+        ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+        POSSIBILITY OF SUCH DAMAGE.
+        
+        You are under no obligation whatsoever to provide any bug fixes, patches,
+        or upgrades to the features, functionality or performance of the source
+        code ("Enhancements") to anyone; however, if you choose to make your
+        Enhancements available either publicly, or directly to Lawrence Berkeley
+        National Laboratory, without imposing a separate written license agreement
+        for such Enhancements, then you hereby grant the following license: a
+        non-exclusive, royalty-free perpetual license to install, use, modify,
+        prepare derivative works, incorporate into other computer software,
+        distribute, and sublicense such enhancements or derivative works thereof,
+        in binary and source code form.
+        
+Project-URL: Homepage, https://github.com/mlexchange/mlex_pyxro
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.1.1
+Requires-Dist: periodictable>=1.6.1
+Requires-Dist: scipy>=1.11.3
+Requires-Dist: xarray>=2023
+
+
+# pyxro for X-Ray Optics
+
+The python X-Ray Optics package allows for the calculation of reflectivity and photoelectron emission intensities of multilayer samples as a function of incident angle or photon energy.
+
+It is based on YXRO from Yang et al. [doi]. The simulation code includes important x-ray optical effects such as total reflection at grazing incidence, core-level resonance, and standing-wave effects.
+
+The code in this repository is still in development and is composed of two parts:
+
+- `pyxro`: the main part of the code that allows to create/manipulate samples and run physics simulations.
+- `webapp`: a web interface built with Dash to operate pyxro
+
+## Examples
+
+### [Mo/Si]<sub>x5</sub> 3.4 nm multilayer mirror with oxidized Si layer and C on top
+
+```python
+import pyxro.multilayer as xroml
+
+sample = xroml.MultilayerSample(name = 'Mo/Si 3.4 nm')
+sample.add_layer(layer = {'name': 'C', 'formula': 'C', 'density': 1.0, 'thickness': 5.0})
+sample.add_layer(template='SiO2', layer = {'name': 'SiO2', 'thickness': 8.0})
+sample.add_layer(template='Si', layer = {'name': 'Si', 'thickness': 15.0})
+sample.add_layer(template='Mo', layer = {'name': 'Mo', 'thickness': 13.6, 'repeat': 5})
+sample.add_layer(template='Si', layer = {'name': 'Si', 'thickness': 20.4, 'repeat': 5})
+sample.add_layer(template='Si', layer = {'name': 'Substrate'})
+sample.get_sample()
+```
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>name</th>
+      <th>formula</th>
+      <th>density</th>
+      <th>repeat</th>
+      <th>thickness</th>
+      <th>molecular_weight</th>
+      <th>nve</th>
+      <th>energy_gap</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>C</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>12.0107</td>
+      <td>4</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>SiO2</td>
+      <td>SiO2</td>
+      <td>2.2</td>
+      <td>1</td>
+      <td>8.0</td>
+      <td>60.0843</td>
+      <td>16</td>
+      <td>9.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Si</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>1</td>
+      <td>15.0</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Mo</td>
+      <td>Mo</td>
+      <td>10.1</td>
+      <td>5</td>
+      <td>13.6</td>
+      <td>95.9400</td>
+      <td>6</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Si</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>5</td>
+      <td>20.4</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Substrate</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+sample.get_fullsample()
+```
+
+
+
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>name</th>
+      <th>formula</th>
+      <th>density</th>
+      <th>repeat</th>
+      <th>thickness</th>
+      <th>molecular_weight</th>
+      <th>nve</th>
+      <th>energy_gap</th>
+      <th>interdiffusion</th>
+      <th>interdiffusion_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>Vacuum</td>
+      <td></td>
+      <td>0.0</td>
+      <td>1</td>
+      <td>100.0</td>
+      <td>0.0000</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>C</td>
+      <td>C</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>12.0107</td>
+      <td>4</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>SiO2</td>
+      <td>SiO2</td>
+      <td>2.2</td>
+      <td>1</td>
+      <td>8.0</td>
+      <td>60.0843</td>
+      <td>16</td>
+      <td>9.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>Si</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>1</td>
+      <td>15.0</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>Mo_1</td>
+      <td>Mo</td>
+      <td>10.1</td>
+      <td>5</td>
+      <td>13.6</td>
+      <td>95.9400</td>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5</td>
+      <td>Si_1</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>5</td>
+      <td>20.4</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4</td>
+      <td>Mo_2</td>
+      <td>Mo</td>
+      <td>10.1</td>
+      <td>5</td>
+      <td>13.6</td>
+      <td>95.9400</td>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5</td>
+      <td>Si_2</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>5</td>
+      <td>20.4</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4</td>
+      <td>Mo_3</td>
+      <td>Mo</td>
+      <td>10.1</td>
+      <td>5</td>
+      <td>13.6</td>
+      <td>95.9400</td>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>5</td>
+      <td>Si_3</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>5</td>
+      <td>20.4</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>4</td>
+      <td>Mo_4</td>
+      <td>Mo</td>
+      <td>10.1</td>
+      <td>5</td>
+      <td>13.6</td>
+      <td>95.9400</td>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>5</td>
+      <td>Si_4</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>5</td>
+      <td>20.4</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>4</td>
+      <td>Mo_5</td>
+      <td>Mo</td>
+      <td>10.1</td>
+      <td>5</td>
+      <td>13.6</td>
+      <td>95.9400</td>
+      <td>6</td>
+      <td>0.00</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>5</td>
+      <td>Si_5</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>5</td>
+      <td>20.4</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>0.0</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>6</td>
+      <td>Substrate</td>
+      <td>Si</td>
+      <td>2.3</td>
+      <td>1</td>
+      <td>0.0</td>
+      <td>28.0855</td>
+      <td>4</td>
+      <td>1.12</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+```python
+sample.set_axis(axis='incident_angle', range = (0, 0.02, 10))
+sample.set_axis(axis='photon_energy', fixed_value = 3000)
+sample.calculate_optical_constants()
+```
+
+
+```python
+Refl = sample.calculate_reflectivity()
+Refl.plot(yscale='log', figsize=(4,3));
+```
+
+
+
+![png](docs/img/test_3_0.png)
+
+
+
+
+```python
+EF = sample.calculate_electric_field()
+EF.T.plot(yincrease=False, figsize=(3,4));
+```
+
+
+![png](docs/img/test_4_0.png)
+
+
+```python
+import pyxro.calculation as xrocalc
+
+calc = xrocalc.Calculation(sample)
+calc.get_single_photoemission(label = 'Mo', Ank='Mo3d', layers=[4])
+calc.photoemission.T.plot(yincrease=False, figsize=(3,4))
+```
+
+![png](docs/img/test_5_1.png)
+
+
+```python
+calc.photoemission.integrate('depth').plot(figsize=(4,3));
+```
+
+![png](docs/img/test_6_0.png)
+
+
+## Webapp screenshots
+
+Defining a sample:
+![png](docs/img/webapp_define.png)
+
+Reflectivity calculation:
+![png](docs/img/webapp_reflectivity.png)
+
+Electric field calculation:
+![png](docs/img/webapp_electric_field.png)
+
+Relative PES intensities of levels for all incident angles:
+![png](docs/img/webapp_spectra.png)
+
+# Copyright
+MLExchange Copyright (c) 2024, The Regents of the University of California, through Lawrence Berkeley National Laboratory (subject to receipt of any required approvals from the U.S. Dept. of Energy). All rights reserved.
+
+If you have questions about your rights to use or distribute this software, please contact Berkeley Lab's Intellectual Property Office at IPO@lbl.gov.
+
+NOTICE.  This Software was developed under funding from the U.S. Department of Energy and the U.S. Government consequently retains certain rights.  As such, the U.S. Government has been granted for itself and others acting on its behalf a paid-up, nonexclusive, irrevocable, worldwide license in the Software to reproduce, distribute copies to the public, prepare derivative works, and perform publicly and display publicly, and to permit others to do so.
