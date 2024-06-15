@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pyminitab
+Version: 0.1.2
+Summary: Emulating minitab type plots for engineering projects
+License: MIT
+Author: spartyhacker
+Author-email: spartyhacker@outlook.com
+Requires-Python: >=3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: matplotlib (>=3.9.0,<4.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: scipy (>=1.13.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+Emulating minitab plots
+
+Yes, the code was helped a lot with ChatGPT. Thanks!
+
+## Usage
+
+```python
+import pyminitab as pym
+pym.hist(data: np.ndarray, LSL: float = None, USL: float = None):
+```
+
