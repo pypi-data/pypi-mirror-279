@@ -1,0 +1,170 @@
+Metadata-Version: 2.1
+Name: find-and-replace-strings
+Version: 1.0.5
+Summary: Python package and pre-commit-hook for finding and replacing string(s) in file(s).
+Author-email: OpenCEPK Open Cloud Engineering Platform Kit <opencepk@gmail.com>
+License: GPLv3
+Keywords: find,replace,string,file,pre-commit,hook,git,tool,utility,opencepk
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: File Formats :: JSON
+Classifier: Topic :: Software Development :: Pre-processors
+Classifier: Topic :: Software Development :: Version Control :: Git
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: Filters
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tomli; python_version < "3.11"
+
+# find-and-replace
+
+Python package and pre-commit-hook for finding and replacing string(s) in file(s).
+
+## Installation
+
+This is an easy to use package which is already available here https://pypi.org/project/find-and-replace-template-commit-check/:
+
+![package to use](./assets/pypi-package.png "Title")
+
+You can install the package via pip:
+
+```bash
+pip install find-and-replace-strings
+```
+
+## Usage
+
+To use this package, you need to add it to your pre-commit configuration file (.pre-commit-config.yaml). Here's an example:
+
+For config mod
+
+```
+repos:
+  - repo: https://github.com/opencepk/find-and-replace
+    rev: v0.0.1
+    hooks:
+    - id: find-and-replace-strings
+      name: find-and-replace-strings
+      description: Find and replace strings
+      entry: find-and-replace-strings
+      language: python
+      pass_filenames: true
+      exclude_types:
+        - binary
+      files: README.md
+      verbose: true
+
+```
+
+and for direct mode
+
+```
+repos:
+  - repo: https://github.com/opencepk/find-and-replace
+    rev: v0.0.1
+    hooks:
+    - id: find-and-replace-strings
+      name: find-and-replace-strings
+      description: Find and replace strings
+      entry: find-and-replace-strings
+      language: python
+      pass_filenames: true
+      exclude_types:
+        - binary
+      args: ["--find", "search_string", "--replacement", "replacement_string"]
+      files: README.md
+      verbose: true
+```
+
+Please note you also have a choice of
+files: '.\*\.md$'
+or
+files: .
+
+In this configuration, the find-and-replace hook is set to read search and replacement strings from a file (.project-properties.json by default which should be defined in the root of the project you want to use this package). You can also specify the search and replacement strings directly in the args field (which is not a suggested way).
+
+## Run tests
+
+```
+python -m unittest tests.test_main
+
+```
+
+## How to run it using installed python package
+
+```
+  pip install find-and-replace-strings
+   find-and-replace --config .find-and-replace.json README1.md README2.md
+```
+
+also if you prefer to use a direct mod
+
+```
+find-and-replace-strings --find "old_string" --replacement "new_string"  README1.md README2.md
+```
+
+## If you need more help with the flags and usage of them
+
+```
+find-and-replace-strings -h
+usage: find-and-replace-strings [-h] [--search SEARCH] [--replacement REPLACEMENT] [--read-from-file READ_FROM_FILE]
+                        [--config REPLACEMENTS_FILE]
+                        [files ...]
+
+This script performs search and replace operations on one or more files. It supports two modes of operation: Direct Mode and
+File Mode. In Direct Mode, you specify the search and replacement strings directly on the command line. In File Mode, the script
+reads the search and replacement strings from a JSON file.
+
+positional arguments:
+  files                 Files to perform search and replace
+
+options:
+  -h, --help            show this help message and exit
+  --search SEARCH       Text to search for
+  --replacement REPLACEMENT
+                        Text to replace with
+  --read-from-file READ_FROM_FILE
+                        Read search and replacement strings from file
+  --config REPLACEMENTS_FILE
+                        Path to the replacements file
+
+```
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the terms of the MIT license.
+
+## Building and Publishing
+
+To build and publish it to pypi run
+
+```
+bash assets/publish.sh
+```
+
+## Reference Info
+
+- https://www.gnu.org/prep/standards/html_node/Option-Table.html#Option-Table
+- https://setuptools.pypa.io/en/latest/userguide/declarative_config.html
+- https://packaging.python.org/guides/distributing-packages-using-setuptools/
+- https://autopilot-docs.readthedocs.io/en/latest/license_list.html
+- https://pypi.org/classifiers/
