@@ -1,0 +1,9 @@
+sbx_word_prediction_kb_bert/__init__.py,sha256=80aglkC2cSRnAffg5yvHgrnwKub9KzKtMWYAnSUpcFA,634
+sbx_word_prediction_kb_bert/annotations.py,sha256=yBo6BaLffZvK7WGUu2aRcEPru1z10v6KWVR8qqRTiYI,3232
+sbx_word_prediction_kb_bert/constants.py,sha256=1784whNkvFquroxg2uf7y8VtqZplS0aKtNf0r9utHqg,50
+sbx_word_prediction_kb_bert/predictor.py,sha256=LocxBVHtYWYQPr0TyYV2Cszs4b1HTXSohfQDULKrk5o,4935
+sbx_word_prediction_kb_bert/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sparv_sbx_word_prediction_kb_bert-0.6.0.dist-info/METADATA,sha256=LAlffcZ4CyyMMTlIMUksHMgFe_mq63JG8SbM5cDcTl4,3892
+sparv_sbx_word_prediction_kb_bert-0.6.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+sparv_sbx_word_prediction_kb_bert-0.6.0.dist-info/entry_points.txt,sha256=5cExVzh3jeMx_70G5PgyvZe6YGv0RS4KWHV-qvy08Zo,73
+sparv_sbx_word_prediction_kb_bert-0.6.0.dist-info/RECORD,,
