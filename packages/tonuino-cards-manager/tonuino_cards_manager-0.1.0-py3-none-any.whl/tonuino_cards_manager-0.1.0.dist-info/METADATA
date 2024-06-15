@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tonuino-cards-manager
+Version: 0.1.0
+Summary: 
+Author: Max Mehl
+Author-email: mail@mehl.mx
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mutagen (>=1.47.0,<2.0.0)
+Requires-Dist: num2words (>=0.5.13,<0.6.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: qrcode (>=7.4.2,<8.0.0)
+Requires-Dist: wand (>=0.6.13,<0.7.0)

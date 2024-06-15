@@ -1,0 +1,13 @@
+tonuino_cards_manager/__init__.py,sha256=9cFCMnh296ncYr5s5iEqwcmttWb_NznP-ikqdazGhWc,315
+tonuino_cards_manager/_card.py,sha256=6UjcyNMP_8ZVPqB-tGlMO9LrtNjDzvGhRq07ZD8YJDI,6092
+tonuino_cards_manager/_config.py,sha256=eITtKElffxBuo5451R-5CZ4SfOWkhoI3T3FBIjLDxDQ,2999
+tonuino_cards_manager/_helpers.py,sha256=Y1AS5rVjdekLCM52BvOu0B2cxTbldQc2gro9N71Yc1w,1960
+tonuino_cards_manager/_qrcode.py,sha256=t_IsRRPRIdhPrxoTy2Yk79wxhp86I8l069beTRq3jnw,744
+tonuino_cards_manager/cover.py,sha256=U7pR10sCCeK159HzajGtDyA2nDN4suEzxFaA8dfqsz8,4471
+tonuino_cards_manager/main.py,sha256=GwxiuJeYkqaZKssKx0mEeu7f0pYl8RmLdVgZRwrQExQ,2109
+tonuino_cards_manager-0.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tonuino_cards_manager-0.1.0.dist-info/LICENSES/GPL-3.0-only.txt,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tonuino_cards_manager-0.1.0.dist-info/METADATA,sha256=Dm1X0g22q1gHf8bSiNVGhXsO2cj2RJfSxx-F_4wxu78,549
+tonuino_cards_manager-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tonuino_cards_manager-0.1.0.dist-info/entry_points.txt,sha256=vVK8rYcAAKM1lOwKjXRuJPpEuEes3koDUbVCjV9KCBg,130
+tonuino_cards_manager-0.1.0.dist-info/RECORD,,
