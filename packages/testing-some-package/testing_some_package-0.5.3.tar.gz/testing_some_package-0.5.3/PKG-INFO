@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: testing-some-package
+Version: 0.5.3
+Summary: This is a testing package description.
+Home-page: https://example.com/home
+License: MIT
+Keywords: AI,security,code analysis,CI/CD,GitHub
+Author: addepar-tg
+Author-email: thomas.greenwood@addepar.com
+Requires-Python: >=3.12,<4.0
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance
+Project-URL: Documentation, https://example.com/docs
+Project-URL: Repository, https://github.com/Example/example-repo.git
+Description-Content-Type: text/markdown
+
+# This is the README.
+
+testing123
+

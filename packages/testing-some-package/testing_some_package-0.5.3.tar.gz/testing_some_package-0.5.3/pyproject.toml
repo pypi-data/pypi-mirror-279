@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "testing-some-package"
+version = "0.5.3"
+description = "This is a testing package description."
+authors = ["addepar-tg <thomas.greenwood@addepar.com>"]
+readme = "README.md"
+homepage = "https://example.com/home"
+documentation = "https://example.com/docs"
+repository = "https://github.com/Example/example-repo.git"
+keywords = ["AI", "security", "code analysis", "CI/CD", "GitHub"]
+license = "MIT"
+classifiers = [
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+testing-some-package = "testing_some_package.test:mainfunc"
+
