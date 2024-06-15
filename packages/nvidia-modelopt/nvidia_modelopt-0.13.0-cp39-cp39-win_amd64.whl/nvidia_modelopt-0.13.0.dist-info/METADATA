@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: nvidia-modelopt
+Version: 0.13.0
+Summary: Nvidia TensorRT Model Optimizer: a unified model optimization and deployment toolkit.
+Author-email: "Nvidia, Inc." <ammo-support@exchange.nvidia.com>
+License: NVIDIA Proprietary Software
+Project-URL: Homepage, https://github.com/NVIDIA/TensorRT-Model-Optimizer
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Intended Audience :: Science/Research
+Requires-Python: <3.13,>=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cloudpickle >=1.6.0
+Requires-Dist: ninja
+Requires-Dist: numpy
+Requires-Dist: packaging
+Requires-Dist: pydantic >=2.0
+Requires-Dist: rich
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Provides-Extra: all
+Requires-Dist: transformers ; extra == 'all'
+Requires-Dist: accelerate ; extra == 'all'
+Requires-Dist: torch >=1.11 ; extra == 'all'
+Requires-Dist: torchvision ; extra == 'all'
+Requires-Dist: cppimport ; extra == 'all'
+Requires-Dist: onnx ; extra == 'all'
+Requires-Dist: onnx-graphsurgeon ; extra == 'all'
+Requires-Dist: onnxruntime-extensions >=0.10.1 ; extra == 'all'
+Requires-Dist: onnxruntime-gpu >=1.18.0 ; (platform_machine != "aarch64" and platform_system != "Darwin") and extra == 'all'
+Requires-Dist: onnxruntime >=1.18.0 ; (platform_machine == "aarch64" or platform_system == "Darwin") and extra == 'all'
+Requires-Dist: setuptools ; (python_version >= "3.12") and extra == 'all'
+Provides-Extra: deploy
+Provides-Extra: dev-unit
+Requires-Dist: coverage ; extra == 'dev-unit'
+Requires-Dist: parameterized ; extra == 'dev-unit'
+Requires-Dist: pytest ; extra == 'dev-unit'
+Requires-Dist: pytest-asyncio ; extra == 'dev-unit'
+Requires-Dist: pytest-cov ; extra == 'dev-unit'
+Requires-Dist: pytest-timeout ; extra == 'dev-unit'
+Requires-Dist: toml ; extra == 'dev-unit'
+Requires-Dist: tox ==4.14.2 ; extra == 'dev-unit'
+Requires-Dist: tox-current-env ; extra == 'dev-unit'
+Provides-Extra: hf
+Requires-Dist: transformers ; extra == 'hf'
+Requires-Dist: accelerate ; extra == 'hf'
+Provides-Extra: onnx
+Requires-Dist: cppimport ; extra == 'onnx'
+Requires-Dist: onnx ; extra == 'onnx'
+Requires-Dist: onnx-graphsurgeon ; extra == 'onnx'
+Requires-Dist: onnxruntime-extensions >=0.10.1 ; extra == 'onnx'
+Requires-Dist: onnxruntime-gpu >=1.18.0 ; (platform_machine != "aarch64" and platform_system != "Darwin") and extra == 'onnx'
+Requires-Dist: onnxruntime >=1.18.0 ; (platform_machine == "aarch64" or platform_system == "Darwin") and extra == 'onnx'
+Provides-Extra: torch
+Requires-Dist: torch >=1.11 ; extra == 'torch'
+Requires-Dist: torchvision ; extra == 'torch'
+Requires-Dist: setuptools ; (python_version >= "3.12") and extra == 'torch'
+
+Checkout the [documentation](https://nvidia.github.io/TensorRT-Model-Optimizer) for more information.
