@@ -1,0 +1,3 @@
+[console_scripts]
+devon_agent=devon_agent.__main__:main
+
