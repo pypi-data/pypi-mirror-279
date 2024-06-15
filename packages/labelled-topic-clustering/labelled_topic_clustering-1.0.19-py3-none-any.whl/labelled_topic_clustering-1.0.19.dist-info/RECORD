@@ -1,0 +1,12 @@
+labelled_topic_clustering/__init__.py,sha256=CXu2KCYv52m5R_eLZ4PHlBcZbHsfjLgopYvNP2ylgGk,64
+labelled_topic_clustering/src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+labelled_topic_clustering/src/embeddings.py,sha256=S_FRTb1zoxqqFxgr-eLuMkzutRdBMFVOh32cazDsDF0,1364
+labelled_topic_clustering/src/helpers.py,sha256=c6qsnEBItsArJWfkWQbF-N9o41Op1IpmkjcD6wadL6I,414
+labelled_topic_clustering/src/labelled_topic_clustering.py,sha256=lVWuEZAg5xxg1CY3JRyhK1F5vy3w6vW6JdKSfc7bU60,5062
+labelled_topic_clustering/src/labels.py,sha256=7BFt4Ejl9g8y4ulyrcYTYLNYwQTIMLor2QZCkWm3mIo,2418
+labelled_topic_clustering/src/tokenizer.py,sha256=NIkQYLGY1LVCMq1WBabqL03CqM_ZraeS4roT-LEiPgA,807
+labelled_topic_clustering-1.0.19.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+labelled_topic_clustering-1.0.19.dist-info/METADATA,sha256=uf-aa2YvELYm9gcOkvU5UhAXFir20i5lvYhpCZYq1fM,3079
+labelled_topic_clustering-1.0.19.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+labelled_topic_clustering-1.0.19.dist-info/top_level.txt,sha256=LTGasgg5HU_W8IkN1nSG2_1lj7gwaF1O54Mp3swgb9A,26
+labelled_topic_clustering-1.0.19.dist-info/RECORD,,
