@@ -1,0 +1,10 @@
+rtorrent_rpc/__init__.py,sha256=v-AJHyxoRAL_NeQnng23YBONn7t38uA0CSSiF9VJ4xo,34754
+rtorrent_rpc/_jsonrpc.py,sha256=Qa-bQ9jesSq573EcLrswS79hd1RWqYf84wPE_OnEcoU,2211
+rtorrent_rpc/_scgi.py,sha256=rF86kbkmjqQjHt9blOGiznPCQHfVeXaYYiQOI3Lagvk,1235
+rtorrent_rpc/_transport.py,sha256=-j_mxxVo_8MWphGskcEDRStjFdFebGLrQ2ctFD4Ay-Y,4113
+rtorrent_rpc/helper.py,sha256=4g0MVJBGs9iVYYcwNzLoOn2RTFeJi4l8l3XIA8Jo8E4,3944
+rtorrent_rpc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rtorrent_rpc-0.7.5.dist-info/LICENSE,sha256=LMdMbV_P2B7oib3E5xlgsrHZj7CBvXaCTghvU_wib34,1084
+rtorrent_rpc-0.7.5.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+rtorrent_rpc-0.7.5.dist-info/METADATA,sha256=c1gVHTApIK0soIxwguO36mqYJAM2mR_cDn7_rs9JyNE,3130
+rtorrent_rpc-0.7.5.dist-info/RECORD,,
