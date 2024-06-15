@@ -1,0 +1,12 @@
+tdta/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tdta/__main__.py,sha256=EwZIH4ojUIiUkOt7MV5oDY4DP8JL4Mhp6zhcUXoZvG0,3399
+tdta/anndata_export.py,sha256=N9nBN59ZhIqEZUjX0kr_8QUqslNGE8qVh3ECS-sHdLI,982
+tdta/purl_publish.py,sha256=EHHvrYx8gP-QtiR43hRmQ7l5FoaJiI2qgo1B8swIwzM,10171
+tdta/tdt_export.py,sha256=zIL6dX74fXsYk4DOsjl3vo5OhyAEnwpGo-MRkHPkIdY,11556
+tdta/utils.py,sha256=eS3zbktabPy7RVqkPRGLouEP_FnfLvO6uWeLXMDaPco,546
+tdta-0.1.0.dev13.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+tdta-0.1.0.dev13.dist-info/METADATA,sha256=W-cCuzlPeJ1NCOtt4PYNoWZHnJiTf9-oRbrjCkWGXFE,835
+tdta-0.1.0.dev13.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tdta-0.1.0.dev13.dist-info/entry_points.txt,sha256=X-a0Bf35eECOJbyeZ3bkBwSLKEzgsiBc6jWnCYWk3As,45
+tdta-0.1.0.dev13.dist-info/top_level.txt,sha256=InpDUln1aVkAGVf-dDxUqB5di6J-a-Cd8YzEtPyWlwo,5
+tdta-0.1.0.dev13.dist-info/RECORD,,
