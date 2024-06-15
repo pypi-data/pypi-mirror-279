@@ -1,0 +1,2 @@
+from smoother.weights import SpatialWeightMatrix
+from smoother.losses import SpatialLoss, ContrastiveSpatialLoss
