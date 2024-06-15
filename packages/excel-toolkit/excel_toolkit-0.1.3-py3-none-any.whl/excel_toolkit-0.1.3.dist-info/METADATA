@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: excel-toolkit
+Version: 0.1.3
+Summary: package to help you automate Excel files' tasks
+Author: Dear Norathee
+License: MIT
+Requires-Dist: xlwings
+Requires-Dist: openpyxl
+Requires-Dist: pyxlsb
+Requires-Dist: pandas
+Requires-Dist: py-string-tool
+Requires-Dist: python-wizard
+Requires-Dist: os-toolkit
+
