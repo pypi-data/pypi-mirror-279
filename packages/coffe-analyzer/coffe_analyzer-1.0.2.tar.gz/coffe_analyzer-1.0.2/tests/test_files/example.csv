@@ -1,0 +1,16 @@
+﻿F;F;F;F;Total Loss
+F;F;F;O;Total Loss
+F;F;O;F;Total Loss
+F;F;O;O;Total Loss
+F;O;F;F;Total Loss
+F;O;F;O;Partial Loss
+F;O;O;F;Partial Loss
+F;O;O;O;Partial Loss
+O;F;F;F;Total Loss
+O;F;F;O;Partial Loss
+O;F;O;F;Partial Loss
+O;F;O;O;Partial Loss
+O;O;F;F;Total Loss
+O;O;F;O;Partial Loss
+O;O;O;F;Partial Loss
+O;O;O;O;No Loss
