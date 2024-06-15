@@ -1,0 +1,12 @@
+alidaapis/__init__.py,sha256=NwdB5PrXTXxE5ZLdcrBzYT02HcWZPu5lkkgjR2gkVVk,29
+alidaapis/auth.py,sha256=-lIwJfhsN1uKHrslfHfEKWKr3pmB7lnGR54VUoLLkcc,1068
+alidaapis/bda.py,sha256=d8knMvI4n3DRvVNgFDnobgBbvuJQYBlng3w-S4OHXNA,3201
+alidaapis/dataset.py,sha256=diTS19P51Ix0YRDmFAmI3W8Md8943qB19xMu7rGPPII,6728
+alidaapis/datasource.py,sha256=Ya_dXgnRpPPzhPWxd4HUAKCIkZGaPzyVGCJMl4qfWmA,677
+alidaapis/minio_utils.py,sha256=WaYWJQv2YDMmD0Scj5ukqTEoHBCPX3HT_BfOY8-ieqg,4951
+alidaapis/service.py,sha256=lclmgXlyIyMkkt9Zqicd9XeNB5xGDYIVN98pOdyZNAw,1655
+alidaapis/utils.py,sha256=8ylNNSpAaWeNxwCtyI0-4qznOwslTupjmDq4DHdCFGM,351
+alida_apis-0.0.11.dist-info/METADATA,sha256=88XlCVHX4xv3E9FeuFaXd1qE6T4-oQPMKF3-Hvl_Dsg,528
+alida_apis-0.0.11.dist-info/WHEEL,sha256=p46_5Uhzqz6AzeSosiOnxK-zmFja1i22CrQCjmYe8ec,92
+alida_apis-0.0.11.dist-info/top_level.txt,sha256=Egei7eAuF9DUiNDaillS0T6rtKmdcjp6q4FAK3NR884,10
+alida_apis-0.0.11.dist-info/RECORD,,
