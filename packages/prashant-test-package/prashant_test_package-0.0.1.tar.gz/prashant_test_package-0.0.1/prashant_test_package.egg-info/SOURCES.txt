@@ -1,0 +1,13 @@
+setup.py
+msg91/__init__.py
+msg91/services/__init__.py
+msg91/services/campaign_service.py
+msg91/services/otp_service.py
+prashant_test_package.egg-info/PKG-INFO
+prashant_test_package.egg-info/SOURCES.txt
+prashant_test_package.egg-info/dependency_links.txt
+prashant_test_package.egg-info/requires.txt
+prashant_test_package.egg-info/top_level.txt
+tests/__init__.py
+tests/test_campaign_service.py
+tests/test_otp_service.py

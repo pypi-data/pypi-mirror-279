@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: prashant-test-package
+Version: 0.0.1
+Summary: A package for utilizing MSG91 service integration
+Home-page: https://github.com/Walkover-Web-Solution/msg91-python-plugins
+Author: Harsh Jaiswal
+Author-email: harsh@walkover.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: requests
