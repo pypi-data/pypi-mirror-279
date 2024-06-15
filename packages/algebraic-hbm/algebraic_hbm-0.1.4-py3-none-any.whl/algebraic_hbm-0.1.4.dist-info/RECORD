@@ -1,0 +1,10 @@
+algebraic_hbm/__init__.py,sha256=SZm7d6g0q02Cw3LfwiGrWg5GYeJOW9tuCikDRRV0FAQ,184
+algebraic_hbm/algebraic_hbm.py,sha256=OK3nMo0KJHQN1mNxdOl-j9PCDw0v64R3uCARqJ5C1n8,20899
+algebraic_hbm/fourier_series.py,sha256=4g5xHWfoLHWT2n8AdCEubY56XYGT3zC5hd0i38dNP0o,13080
+algebraic_hbm/ode.py,sha256=PqCz87mXwtoQlOItOIFbCfH9qWxt4_4BMYc0iqdwoYk,5950
+algebraic_hbm/utils.py,sha256=X6NuJapOC8GT94POOMhkwEZWmouOFVCfENtm1_D8ENc,4767
+algebraic_hbm-0.1.4.dist-info/LICENSE,sha256=uMVRLvHigmh7R9fN4f25IGQHC7rh14X2ikxoJ3VnRjY,1120
+algebraic_hbm-0.1.4.dist-info/METADATA,sha256=OJPHGrqFSPyl3ZrBmmC97TWLjSycXW9A3giiTE4CxT0,1488
+algebraic_hbm-0.1.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+algebraic_hbm-0.1.4.dist-info/top_level.txt,sha256=pH71U2EdjKlnqetC-deCZki6CQ7bpg4Tr1FV-a80XM8,14
+algebraic_hbm-0.1.4.dist-info/RECORD,,
