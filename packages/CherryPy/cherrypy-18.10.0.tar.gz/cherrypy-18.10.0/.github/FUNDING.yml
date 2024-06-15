@@ -1,0 +1,12 @@
+---
+
+github:
+- jaraco
+- webknjaz
+# open_collective: # Replace with a single Open Collective username
+# ko_fi: # Replace with a single Ko-fi username
+tidelift: pypi/CherryPy
+# liberapay: # Replace with a single Liberapay username
+# custom: # Replace with up to 4 custom sponsorship URLs
+
+...
