@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cm4mlops
+Version: 0.2
+Description-Content-Type: text/x-rst
+License-File: LICENSE.md
+License-File: LICENSE.third-party.md
+Requires-Dist: setuptools>=60
+Requires-Dist: wheel
+Requires-Dist: cmind
+Requires-Dist: giturlparse
+Requires-Dist: requests
+Requires-Dist: pyyaml
+
+CM automations and scripts for MLOps
