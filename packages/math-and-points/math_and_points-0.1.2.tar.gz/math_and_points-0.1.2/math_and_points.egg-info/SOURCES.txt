@@ -1,0 +1,9 @@
+README.md
+setup.py
+math_and_points/__init__.py
+math_and_points/math_basic.py
+math_and_points/points.py
+math_and_points.egg-info/PKG-INFO
+math_and_points.egg-info/SOURCES.txt
+math_and_points.egg-info/dependency_links.txt
+math_and_points.egg-info/top_level.txt
