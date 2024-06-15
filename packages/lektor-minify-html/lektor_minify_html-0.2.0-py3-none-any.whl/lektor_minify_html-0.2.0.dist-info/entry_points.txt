@@ -1,0 +1,2 @@
+[lektor.plugins]
+minify-html = lektor_minify_html:MinifyHtmlPlugin
