@@ -1,0 +1,11 @@
+README.MD
+README.md
+pyproject.toml
+lucidCameraGUI.egg-info/PKG-INFO
+lucidCameraGUI.egg-info/SOURCES.txt
+lucidCameraGUI.egg-info/dependency_links.txt
+lucidCameraGUI.egg-info/entry_points.txt
+lucidCameraGUI.egg-info/requires.txt
+lucidCameraGUI.egg-info/top_level.txt
+lucidCameraGui/lucidLiveStream.py
+lucidCameraGui/lucidStreamGui.py
