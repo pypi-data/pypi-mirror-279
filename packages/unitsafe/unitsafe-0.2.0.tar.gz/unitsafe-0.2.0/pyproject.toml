@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "unitsafe"
+version = "0.2.0"
+readme = "README.md"
+license = "MIT"
+authors = ["James S. Bayley"]
+repository = "https://github.com/jamesbayley/unitsafe.git"
+description = "A friendly way to handle engineering units in Python."
+packages = [{ include = "unitsafe" }]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Topic :: Scientific/Engineering",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+ruff = "^0.4.2"
+
+[tool.ruff]
+indent-width = 2
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
