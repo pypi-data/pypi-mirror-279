@@ -1,0 +1,2 @@
+[console_scripts]
+libreformsctl = libreforms_fastapi.cli.__init__:cli

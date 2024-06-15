@@ -1,0 +1,19 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}
+{{config.SITE_NAME}} — Home
+{% endblock %}
+
+
+{% block content %}
+{# <h4>Home</h4> #}
+
+{{ render_markdown_content(config['HOMEPAGE_MESSAGE']) | safe }}
+
+
+{% endblock %}
+
+
+
+{% block scripts %}
+{% endblock %}

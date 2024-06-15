@@ -1,0 +1,440 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}
+{{config.SITE_NAME}} — Read Form
+{% endblock %}
+
+{% block header %}
+<link href="{{ url_for('static', path='css/datatables.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" aria-selected="false" role="tab">
+            {{form_name | replace("_", " ") | title}}
+        </a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active" data-bs-toggle="tab" href="#documentContent" aria-selected="true" role="tab">Data</a>
+    </li>
+
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" data-bs-toggle="tab" href="#documentMetadata" aria-selected="false" role="tab">Metadata</a>
+    </li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
+                <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/>
+            </svg> 
+        </a>
+        <div class="dropdown-menu" id="linkList" style="">
+            <h6 class="dropdown-header">Form Management</h6>
+            <a class="dropdown-item" id="editLink" href="{{ url_for ('ui_form_update', form_name=form_name, document_id=document_id) }}">Edit Form</a>
+            {# {% if "sign_own" in request.user.permissions[form_name] | tojson %}
+            <a class="dropdown-item" id="signLink" onclick="signForm();" href="#">Sign Form</a>
+            {% endif %} #}
+            <a class="dropdown-item" id="signLink" onclick="signForm();" href="#">Sign Form</a>
+            <a class="dropdown-item" id="signLink" onclick="exportForm('json');" href="#">Export as JSON</a>
+            {# <a class="dropdown-item disabled" id="historyLink" href="#">View Form History</a> #}
+            <a class="dropdown-item" id="duplicateLink" href="/ui/form/duplicate/{{ form_name }}/{{ document_id }}">Duplicate Form</a>
+            <a class="dropdown-item" id="deleteLink" onclick="deleteForm();" href="#">Delete Form</a>
+            {# <a class="dropdown-item disabled" id="downloadLink" href="#">Download Form</a> #}
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Review and Approval</h6>
+            <a class="dropdown-item disabled" id="approveLink" href="#">Go to Approval</a>
+        </div>
+    </li>
+</ul>
+
+
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade active show" id="documentContent" role="tabpanel"></div>
+  <div class="tab-pane fade" id="documentMetadata" role="tabpanel"></div>
+</div>
+<div id="documentHistory">
+
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{{url_for('static', path='js/datatables.js')}}"></script>
+
+<script>
+
+var apiKey = "{{ request.user.api_key }}";
+var formName = "{{ form_name }}";
+var documentId = "{{ document_id }}";
+var currentUser = "{{ request.user.username }}";
+var userPermissions = {{ request.user.permissions[form_name] | tojson }};
+
+function signForm() {
+    $.ajax({
+        url: `/api/form/sign/${formName}/${documentId}`,
+        type: 'PATCH',
+        headers: {
+            'X-API-KEY': apiKey,
+        },
+        dataType: 'json',
+
+        success: function(response) {
+            setFlashMessage("Successfully signed form", AlertCategories.SUCCESS);
+            window.location.reload();
+
+        },
+
+        error: function(xhr) {
+            // Handle errors
+            console.error('Failed to sign form', xhr.responseText);
+            // Display error message to the user
+            flashMessage(xhr.responseText, 'danger'); 
+        }
+    });
+}
+
+function deleteForm() {
+    $.ajax({
+        url: `/api/form/delete/${formName}/${documentId}`,
+        type: 'DELETE',
+        headers: {
+            'X-API-KEY': apiKey,
+        },
+        dataType: 'json',
+
+        success: function(response) {
+            setFlashMessage("Successfully deleted form", AlertCategories.SUCCESS);
+            window.location.href = '/ui/home';
+
+        },
+
+        error: function(xhr) {
+            // Handle errors
+            console.error('Failed to delete form', xhr.responseText);
+            // Display error message to the user
+            flashMessage(xhr.responseText, 'danger'); 
+        }
+    });
+}
+
+
+// Not using Jquery for the file export 
+function exportForm(format) {
+    fetch(`/api/form/export/${formName}/${documentId}`, {
+        data: {
+            "format": format
+        },
+        headers: {
+            'X-API-KEY': apiKey
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        // Retrieve the filename from the Content-Disposition header
+        const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/\"/g, '');
+        return response.blob().then(blob => ({ blob, filename }));
+    })
+    .then(({ blob, filename }) => {
+        // Create a link and set the URL as the download link for the blob
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = filename || `${formName}.${format}`;  // Use the API provided filename, fallback to formName if unavailable
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        flashMessage("Successfully exported form", AlertCategories.SUCCESS);
+    })
+    .catch(error => {
+        console.error('Failed to export form', error);
+        flashMessage(error.message, 'danger');
+    });
+}
+
+
+function restoreVersion(){
+    console.log("Blargh");
+
+}
+
+
+$(document).ready(function() {
+
+    // This var will allow us to (1) select the metadata fields to display and 
+    // (2) mask these fields in a human-readable format.
+    var metadataFieldMask = {{ metadata_field_mask | tojson }};
+
+    // This var will allow us to render certain data types in a human-readable format.
+    var formFieldMask = {{ form_field_mask | tojson }};
+
+    function renderTable(data, tableName, fieldMappings = null, dateFields = []) {
+        var table = `<table class="table table-hover table-striped table-light" id="${tableName}"><thead><tr>`;
+        table += '<th>Attribute</th><th>Value</th>';
+        table += '</tr></thead><tbody>';
+
+        for (var key in data) {
+            if ( fieldMappings == null || key in fieldMappings ) {
+        
+                var attributeName = (fieldMappings && key in fieldMappings) ? fieldMappings[key] : key;
+        
+                table += '<tr>';
+                table += '<td>' + attributeName + '</td>';
+                var value = data[key];
+
+                value = formatValue(value);
+
+
+                // console.log(attributeName);
+                if (dateFields.includes(attributeName)) {
+                    table += `<td id="${key}-value-field"><span title="${value}">${prettifyTimeDiff(value)}</td>`; 
+                } else {
+                    table += `<td id="${key}-value-field">${value}</td>`; 
+                }
+
+                table += '</tr>';
+
+            } else {
+                // console.log(key, fieldMappings)
+                continue;
+                
+            }
+        }
+
+        table += '</tbody></table>';
+        return table;
+    }
+
+    function setActionElements(owner) {
+
+        // Enable the edit form link
+        if (owner === currentUser && userPermissions.includes("update_own")) {
+            $('#editLink').removeClass('disabled');
+        }
+
+        // Enable the edit form link
+        if (owner !== currentUser && userPermissions.includes("update_all")) {
+            $('#editLink').removeClass('disabled');
+        }
+
+        // Enable the sign form link
+        //if (owner === currentUser && userPermissions.includes("sign_own")) {
+        //    $('#signLink').removeClass('disabled');
+        //}
+
+        // Enable the delete form link
+        if (owner === currentUser && userPermissions.includes("delete_own")) {
+            $('#deleteLink').removeClass('disabled');
+        }
+
+        // Enable the delete form link
+        if (owner !== currentUser && userPermissions.includes("delete_all")) {
+            $('#deleteLink').removeClass('disabled');
+        }
+    }
+
+    function fetchDocument() {
+        $.ajax({
+            url: `/api/form/read_one/${formName}/${documentId}`,
+            type: 'GET',
+            headers: {
+                'X-API-KEY': apiKey,
+            },
+            dataType: 'json',
+            success: function(response) {
+                var dataTable = renderTable(response.data, "dataTable", fieldMappings=formFieldMask);
+                var metadataTable = renderTable(response.metadata, "metadataTable", fieldMappings=metadataFieldMask, dateFields = ['Created At', 'Last Modified']);
+                $('#documentContent').html(dataTable);
+                $('#documentMetadata').html(metadataTable);
+
+                setActionElements(response.metadata.created_by)
+
+                $('#dataTable').DataTable({
+                    "ordering": false,
+                    "info": false,
+                    "paging": false,
+                    "searching": false, 
+                    "autoWidth": false,
+                    "columns": [
+                        { "width": "30%" },
+                        { "width": "70%" }
+                    ]
+                });
+
+                
+                $('#metadataTable').DataTable({
+                    "ordering": false,
+                    "info": false,
+                    "paging": false,
+                    "searching": false,
+                    "autoWidth": false,
+                    "columns": [
+                        { "width": "30%" },
+                        { "width": "70%" }
+                    ]
+                });
+
+                $.ajax({
+                    url: `/api/validate/signatures/${formName}/${documentId}`,
+                    type: 'GET',
+                    headers: {
+                        'X-API-KEY': apiKey,
+                    },
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.signature_count < 1) {
+                            $("#signatures-value-field").html(`
+                                <span class="badge bg-secondary">No Signatures</span> 
+                            `);
+                        } else {
+                            
+                            var badgeHTML = "";
+
+                            for (let key in response.results) {
+
+                                let valid = response.results[key];
+
+                                if (valid == true) {
+                                    badgeHTML = badgeHTML + `<span class="badge bg-primary">${key}</span>`;
+                                } else {
+                                    badgeHTML = badgeHTML + `<span class="badge bg-danger">${key} (Invalid)</span>`;
+                                }
+                            }
+
+                            $("#signatures-value-field").html(badgeHTML);
+                        }
+                    },
+                    error: function(xhr) {
+                        // Handle errors
+                        console.error('Failed to validate signatures', xhr.responseText);
+                        // Display error message to the user
+                        flashMessage(xhr.responseText, 'danger'); 
+                    }
+                });
+
+
+
+                $.ajax({
+                    url: `/api/form/read_history/${formName}/${documentId}`,
+                    type: 'GET',
+                    headers: {
+                        'X-API-KEY': apiKey,
+                    },
+                    dataType: 'json',
+                    success: function(response) {
+                        // Create fieldset and related elements
+                        var fieldset = $('<fieldset style="padding-top: 10px;"></fieldset>');
+                        var label = $('<label for="historySelect" class="form-check-label">Past Versions</label>');
+                        var span = $('<span class="form-text"> | Select past versions of this form to view their details.</span>');
+
+                        // Append label and description to the fieldset
+                        fieldset.append(label);
+                        fieldset.append(span);
+
+                        // Create a select element
+                        var select = $('<select id="historySelect" class="form-select"></select>');
+
+                        // Flag to identify the first element/ current version
+                        {# var isFirst = true;  #}
+
+                        $.each(response.history, function(key, value) {
+                            var option = $('<option></option>').attr({
+                                "value": JSON.stringify(value),
+                                "title": "Version from " + key
+                            }).text(key);
+                            select.append(option);
+
+                        //    // Skip the button creation for the first element
+                        //    if (!isFirst) {
+                        //        var button = $('<button type="button" class="btn btn-primary ms-2"></button>')
+                        //            .text('Restore this version')
+                        //            .on('click', function() {
+                        //                restoreVersion(JSON.stringify(value));
+                        //            });
+
+                        //        // Consider placing the button in a specific location or in relation to the select
+                        //        // This example appends the button directly after the select element
+                        //        select.after(button); 
+                        //    }
+
+                        //    // After the first iteration, set isFirst to false
+                        //    isFirst = false;
+                        });
+
+                        // Append the select element to the fieldset
+                        fieldset.append(select);
+
+                        // Append the fieldset to the div with id 'documentHistory'
+                        $('#documentHistory').append(fieldset);
+
+                        // Handle change event on select element
+                        $('#historySelect').on('change', function() {
+                            var selectedValue = $(this).val();
+                            var selectedData = JSON.parse(selectedValue);
+
+                            var dataTable = renderTable(selectedData.data, "dataTable", fieldMappings=formFieldMask);
+                            var metadataTable = renderTable(selectedData.metadata, "metadataTable", fieldMappings=metadataFieldMask, dateFields = ['Created At', 'Last Modified']);
+
+                            $('#documentContent').html(dataTable);
+                            $('#documentMetadata').html(metadataTable);
+
+                            setActionElements(selectedData.metadata.created_by);
+
+                            $('#dataTable').DataTable({
+                                "ordering": false,
+                                "info": false,
+                                "paging": false,
+                                "searching": false, 
+                                "autoWidth": false,
+                                "columns": [
+                                    { "width": "30%" },
+                                    { "width": "70%" }
+                                ]
+                            });
+                            
+                            $('#metadataTable').DataTable({
+                                "ordering": false,
+                                "info": false,
+                                "paging": false,
+                                "searching": false,
+                                "autoWidth": false,
+                                "columns": [
+                                    { "width": "30%" },
+                                    { "width": "70%" }
+                                ]
+                            });
+                        });
+                    },
+                    error: function(xhr) {
+                        console.error('Failed to get document history', xhr.responseText);
+                        flashMessage(xhr.responseText, 'danger'); 
+                    }
+                });
+
+
+
+
+
+
+
+            },
+            error: function(xhr) {
+                // Handle errors
+                console.error('Failed to fetch document', xhr.responseText);
+                // Display error message to the user
+                flashMessage(xhr.responseText, 'danger'); 
+            }
+        });
+    }
+
+    fetchDocument();
+});
+</script>
+{% endblock %}

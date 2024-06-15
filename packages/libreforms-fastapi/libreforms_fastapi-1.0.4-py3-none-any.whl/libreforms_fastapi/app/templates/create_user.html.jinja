@@ -1,0 +1,205 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}
+{{config.SITE_NAME}} — Create User
+{% endblock %}
+
+{% block content %}
+<h4>Create User</h4>
+<form id="registrationForm">
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <label aria-labelledby="usernameHelpInline" for="username" class="form-check-label">Username</label>
+         <span id="usernameHelpInline" class="form-text">
+        | {{config['USERNAME_HELPER_TEXT']}}
+        </span>
+        <input type="text" id="username" name="username" class="form-control" 
+            onchange="validateField('username', /^[a-z0-9_]{5,15}$/, 'Invalid username. Username should be 5-15 characters long and contain only letters, numbers, and underscores.')" required>
+        {# Username should be 3-15 characters long and contain only lowercase letters, numbers, and underscores. #}
+        <div class="valid-feedback" id="username-is-valid" style="display: none;">This field is valid!</div>
+        <div class="invalid-feedback" id="username-is-invalid" style="display: none;"></div>
+    </fieldset>
+    
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <label aria-labelledby="emailHelpInline" for="email" class="form-check-label">Email</label>
+         <span id="emailHelpInline" class="form-text">
+        | Please enter your email
+        </span>
+        <input type="email" class="form-control" id="email" name="email" 
+            onchange="validateField('email', /^[^\s@]+@[^\s@]+\.[^\s@]+$/, 'Invalid email.')" required>
+        <div class="valid-feedback" id="email-is-valid" style="display: none;">This field is valid!</div>
+        <div class="invalid-feedback" id="email-is-invalid" style="display: none;"></div>
+    </fieldset>
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <label aria-labelledby="passwordHelpInline" for="password" class="form-check-label">Password</label>
+        <span id="passwordHelpInline" class="form-text">
+        | {{config['PASSWORD_HELPER_TEXT']}}
+        </span>
+        <input type="password" id="password" name="password" class="form-control" 
+            onchange="validateField('password', /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, 'Invalid password. Password must be at least 8 characters long, and include at least one uppercase letter, one lowercase letter, one symbol, and one number.')" required>
+        {# Password must be at least 8 characters long, and include at least one uppercase letter, one lowercase letter, and one number. #}
+        <div class="valid-feedback" id="password-is-valid" style="display: none;">This field is valid!</div>
+        <div class="invalid-feedback" id="password-is-invalid" style="display: none;"></div>
+    </fieldset>
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <label aria-labelledby="confirmPasswordHelpInline" for="confirmPassword" class="form-check-label">Confirm Password</label>
+        <span id="confirmPasswordHelpInline" class="form-text">
+        | Please re-enter your password here
+        </span>
+        <input type="password" id="confirmPassword" class="form-control" onchange="validateConfirmPassword()" required>
+        <div class="valid-feedback">Passwords match!</div>
+        <div class="invalid-feedback" id="confirmPassword-is-invalid">Passwords do not match.</div>
+    </fieldset>
+
+
+    {% if config["COLLECT_USAGE_STATISTICS"] %}
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <div style="padding-bottom: 10px;">
+            <label for="optOut">Opt Out</label>
+            <span id="optOutHelpInline" class="form-text">
+                | This application collects usage statistics at a user level to monitor security concerns and usage trends. These statistics are limited to the information you used to register your account and will not be provided to any commercial third parties. If you'd like to opt out of providing detailed usage statistics, check the box below. By opting out, any usage information collected will be stripped of your personal identifiers.
+            </span>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" name="optOut" id="optOut" value="true" checked="" onchange="updateLabel(this)">
+            <label class="form-check-label" for="optOut" id="optOutStatus">You will be opted out of detailed usage statistics</label>
+        </div>
+    </fieldset>
+    {% endif %}
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <button type="submit" class="btn btn-primary" id="createButton">Create</button>
+    </fieldset>
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <p style="padding-top: 10px;">Already have an account? Login <a href="{{url_for('ui_auth_login')}}">here</a>.</p>
+    </fieldset>
+
+</form>
+{% endblock %}
+
+
+
+
+
+{% block scripts %}
+<script>
+
+$(document).ready(function() {
+    var submitBtn = $('#registrationForm button[type="submit"]');
+    submitBtn.prop('disabled', true); // Initially disable the submit button
+
+    window.validateField = function(fieldId, regex, invalidMessage) {
+        var field = $('#' + fieldId);
+        var value = field.val();
+        var isValid = regex.test(value);
+
+        var feedbackId = fieldId + '-is-' + (isValid ? 'valid' : 'invalid');
+        var oppositeFeedbackId = fieldId + '-is-' + (isValid ? 'invalid' : 'valid');
+
+        $('#' + feedbackId).show().text(isValid ? 'This field is valid!' : invalidMessage);
+        $('#' + oppositeFeedbackId).hide();
+        
+        field.removeClass(isValid ? 'is-invalid' : 'is-valid');
+        field.addClass(isValid ? 'is-valid' : 'is-invalid');
+
+        updateSubmitButton();
+    };
+
+    window.validateConfirmPassword = function() {
+        var password = $('#password').val();
+        var confirmPassword = $('#confirmPassword').val();
+
+        var isMatch = password === confirmPassword;
+        $('#confirmPassword').removeClass(isMatch ? 'is-invalid' : 'is-valid');
+        $('#confirmPassword').addClass(isMatch ? 'is-valid' : 'is-invalid');
+        $('#confirmPassword-is-invalid').toggle(!isMatch);
+
+        updateSubmitButton();
+    };
+
+    function updateSubmitButton() {
+        var isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#email').val());
+        var isUsernameValid = /^[a-z0-9_]{5,15}$/.test($('#username').val());
+        var isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test($('#password').val());
+        var arePasswordsMatching = $('#password').val() === $('#confirmPassword').val();
+
+        submitBtn.prop('disabled', !(isEmailValid && isUsernameValid && isPasswordValid && arePasswordsMatching));
+    }
+
+
+    $('#registrationForm').on('submit', function(event) {
+        event.preventDefault(); // Stop the form from submitting normally
+
+        const createButton = document.getElementById('createButton')
+        createButton.disabled=true; 
+        createButton.value='Creating...';
+
+        // Perform your validation checks here
+        // Only proceed if all validations pass
+        var isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#email').val());
+        var isUsernameValid = /^[a-z0-9_]{5,15}$/.test($('#username').val());
+        var isPasswordValid = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test($('#password').val());
+        var arePasswordsMatching = $('#password').val() === $('#confirmPassword').val();
+
+        if (isEmailValid && isUsernameValid && isPasswordValid && arePasswordsMatching) {
+            // Prepare form data
+            var formData = {
+                username: $('#username').val().trim(),
+                email: $('#email').val().trim(),
+                password: $('#password').val().trim(),
+                verify_password: $('#confirmPassword').val().trim(),
+                opt_out: $('#optOut').is(':checked')
+            };
+
+            // AJAX POST request to the API endpoint
+            $.ajax({
+                url: '/api/auth/create', // API endpoint for user creation
+                type: 'POST',
+                contentType: 'application/json', // Ensure to set the content type
+                data: JSON.stringify(formData), // Convert formData to JSON format
+                success: function(response) {
+                    // Handle success
+                    console.log('User created successfully', response);
+                    
+                    // Stash a flashed success message and redirect
+                    setFlashMessage("User created successfully!", "success");
+                    window.location.href = '/ui/auth/login';
+                },
+                error: function(xhr) {
+                    // Handle errors
+                    console.error('User creation failed.', xhr.responseText);
+                    // Display error message
+                    flashMessage(xhr.responseText, AlertCategories.WARNING); 
+                }
+            });
+        } else {
+            // Handle validation failure
+            console.error('Validation failed');
+            flashMessage('Validation failed. Please check your inputs.', AlertCategories.WARNING); 
+        }
+
+        // Here we restore the submit button
+        createButton.disabled = false;
+        createButton.value='Create';
+
+
+    });
+
+
+});
+
+function updateLabel(checkbox) {
+    var label = document.getElementById('optOutStatus');
+    if (checkbox.checked) {
+        label.innerHTML = 'You will be opted out of detailed usage statistics';
+    } else {
+        label.innerHTML = 'You will be opted in to detailed usage statistics';
+    }
+}
+
+</script>
+
+{% endblock %}
