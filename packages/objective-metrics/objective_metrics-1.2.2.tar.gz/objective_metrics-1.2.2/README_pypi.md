@@ -1,0 +1,113 @@
+# Introduction
+
+It is a tool for convenient use of objective quality metrics via the command line. You can use it to run calculations on whole datasets via GPU or CPU and track the results.
+
+There is support of No Reference (NR) and Full Reference (FR) image and video quality (I/VQA) metrics with the possibility of using image metrics on videos framewise with averaging.
+
+Written on **Python** and **PyTorch**. **52** methods have been implemented.
+
+Most implementations are based on [IQA-PyTorch](https://github.com/chaofengc/IQA-PyTorch) and [PIQ](https://github.com/photosynthesis-team/piq). Some are taken from the repositories of the authors (see [List of available models](#list-of-available-models)). The VMAF implementation was taken from FFMPEG.
+
+See [Homepage](https://github.com/bikingSolo/objective-metrics/tree/main?tab=readme-ov-file#license) for more information.
+
+# Dependencies
+
+* Python: >=3.10,<3.11
+* [ffmpeg](https://ffmpeg.org/) (build with libvmaf for VMAF)
+* [decord](https://github.com/dmlc/decord) (you can build decord with GPU to use NVDEC)
+* [CUDA](https://developer.nvidia.com/cuda-toolkit): >= 10.2 (OPTIONAL if use GPU)
+* [CuPy](https://docs.cupy.dev/en/stable/index.html) (OPTIONAL if use SI, CF, TI with GPU)
+
+# List of available models
+
+## Image models
+
+### NR IQA
+
+| Paper Link | Method | Code |
+| ----------- | ---------- | ------------|
+| [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_Perceptual_Quality_Assessment_of_Smartphone_Photography_CVPR_2020_paper.pdf)| SPAQ Baseline (spaq-bl) | [PyTorch](https://github.com/h4nwei/SPAQ) |
+| [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_Perceptual_Quality_Assessment_of_Smartphone_Photography_CVPR_2020_paper.pdf)| SPAQ MT-A (spaq-mta)    | [PyTorch](https://github.com/h4nwei/SPAQ) |
+| [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_Perceptual_Quality_Assessment_of_Smartphone_Photography_CVPR_2020_paper.pdf)| SPAQ MT-S (spaq-mts)    | [PyTorch](https://github.com/h4nwei/SPAQ) |
+| [pdf](https://openaccess.thecvf.com/content_CVPR_2020/papers/Su_Blindly_Assess_Image_Quality_in_the_Wild_Guided_by_a_CVPR_2020_paper.pdf)     | HyperIQA (hyperiqa)      | [PyTorch](https://github.com/SSL92/hyperIQA) |
+| [pdf](https://openaccess.thecvf.com/content_cvpr_2014/papers/Kang_Convolutional_Neural_Networks_2014_CVPR_paper.pdf) | CNNIQA (cnniqa) | [PyTorch](https://github.com/chaofengc/IQA-PyTorch) |
+| [arXiv](https://arxiv.org/abs/2008.03889) | Linearity (linearity)      | [PyTorch](https://github.com/lidq92/LinearityIQA)              |
+| [arXiv](https://arxiv.org/abs/1912.10088) | PaQ2PiQ (paq2piq)       | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/2207.12396) | CLIPIQA (clipiqa)       | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/2207.12396) | CLIPIQA+ (clipiqa+)      | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/1910.06180) | KonCept512 (koncept512)     | [PyTorch](https://github.com/ZhengyuZhao/koniq-PyTorch)        |
+| [arXiv](https://arxiv.org/abs/2204.08958) | MANIQA (maniqa)        | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/2108.06858) | TReS (tres)          | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/2108.05997) | MUSIQ (musiq)         | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/1809.07517) | PI (pi)            | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/1907.02665) | DBCNN (dbcnn)         | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [arXiv](https://arxiv.org/abs/1709.05424) | NIMA (nima) | [PyTorch](https://github.com/titu1994/neural-image-assessment) |
+| [arXiv](https://arxiv.org/abs/1612.05890) | NRQM (nrqm)          | [PyTorch](https://github.com/chaofengc/IQA-PyTorch)            |
+| [pdf](https://live.ece.utexas.edu/publications/2015/zhang2015feature.pdf) | ILNIQE (ilniqe) | [PyTorch](https://github.com/chaofengc/IQA-PyTorch) |
+| [pdf](https://live.ece.utexas.edu/publications/2012/TIP%20BRISQUE.pdf)    | BRISQUE (brisque) | [PyTorch](https://github.com/chaofengc/IQA-PyTorch) |
+| [pdf](https://live.ece.utexas.edu/publications/2013/mittal2013.pdf)       | NIQE (niqe)    | [PyTorch](https://github.com/chaofengc/IQA-PyTorch) |
+[arXiv](https://arxiv.org/abs/2005.13983) | UNIQUE (unique) |[PyTorch](https://github.com/chaofengc/IQA-PyTorch) |
+[arXiv](https://arxiv.org/abs/2308.03060)| TOPIQ (topiq_nr) | [PyTorch](https://github.com/chaofengc/IQA-PyTorch) |
+[ITU](https://www.itu.int/rec/T-REC-P.910)| Spatial Information (si) | self-made | No | - |
+[ResearchGate](https://www.researchgate.net/publication/243135534_Measuring_Colourfulness_in_Natural_Images)| Colourfulness (cf) | self-made |
+
+
+### FR IQA
+
+>PSNR, SSIM, MS-SSIM, CW-SSIM are computed on Y channel in YUV (YCbCr) color space.
+
+| Paper Link | Method | Code |
+| ----------- | ---------- | ------------|
+| [arXiv](https://arxiv.org/abs/2308.03060) | TOPIQ (topiq_fr)   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://arxiv.org/abs/2204.10485) | AHIQ (ahiq)   	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://arxiv.org/abs/1806.02067) | PieAPP (pieapp)    | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://arxiv.org/abs/1801.03924) | LPIPS (lpips)  	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://arxiv.org/abs/2004.07728) | DISTS (dists)  	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://arxiv.org/abs/2108.07948) | CKDN<sup>[1](#fn1)</sup> (ckdn)   	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [pdf](https://www4.comp.polyu.edu.hk/~cslzhang/IQA/TIP_IQA_FSIM.pdf) | FSIM (fsim)   	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [wiki](https://en.wikipedia.org/wiki/Structural_similarity) | SSIM (ssim)    	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [pdf](https://www.researchgate.net/publication/2931584_Multi-Scale_Structural_Similarity_for_Image_Quality_Assessment) | MS-SSIM (ms_ssim)  | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [pdf](https://live.ece.utexas.edu/publications/2009/sampat_tip_nov09.pdf) | CW-SSIM (cw_ssim)  | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio)| PSNR (psnr)   	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [pdf](https://live.ece.utexas.edu/publications/2004/hrs_ieeetip_2004_imginfo.pdf)| VIF (vif)	  		   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [arXiv](https://arxiv.org/abs/1308.3052) | GMSD (gmsd)	  	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [pdf](https://www.uv.es/lapeva/papers/2016_HVEI.pdf) | NLPD (nlpd)	  	   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [IEEE Xplore](https://ieeexplore.ieee.org/document/6873260)| VSI (vsi)	  		   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [pdf](https://www.researchgate.net/publication/220050520_Most_apparent_distortion_Full-reference_image_quality_assessment_and_the_role_of_strategy) | MAD (mad)	  		   | [PyTorch](https://github.com/chaofengc/IQA-PyTorch/tree/main) |
+| [IEEE Xplore](https://ieeexplore.ieee.org/document/6467149) | SR-SIM (srsim)     | [PyTorch](https://github.com/photosynthesis-team/piq?tab=readme-ov-file) |
+| [IEEE Xplore](https://ieeexplore.ieee.org/document/7351172)| DSS (dss)	  		   | [PyTorch](https://github.com/photosynthesis-team/piq?tab=readme-ov-file) |
+| [arXiv](https://arxiv.org/abs/1607.06140)| HaarPSI (haarpsi)  | [PyTorch](https://github.com/photosynthesis-team/piq?tab=readme-ov-file) |
+| [arXiv](https://arxiv.org/abs/1608.07433) | MDSI (mdsi) 		   | [PyTorch](https://github.com/photosynthesis-team/piq?tab=readme-ov-file) |
+| [pdf](https://www.researchgate.net/publication/317724142_Gradient_magnitude_similarity_deviation_on_multiple_scales_for_color_image_quality_assessment) | MS-GMSD (msgmsd)	   | [PyTorch](https://github.com/photosynthesis-team/piq?tab=readme-ov-file) |
+
+<a name="fn1">[1]</a> This method use distorted image as reference. Please refer to the paper for details.<br>
+ 
+### Feature Extractors
+
+| Paper Link | Method | Code |
+| ----------- | ---------- | ------------|
+| [arXiv](https://arxiv.org/abs/1512.00567) | InceptionV3 (inception_v3)   | [PyTorch](https://pytorch.org/vision/stable/index.html) |
+
+## Video models
+
+### NR VQA
+
+
+| Paper Link | Method | Code |
+| ----------- | ---------- | ------------|
+| [arXiv](https://arxiv.org/abs/2011.04263) | MDTVSFA (mdtvsfa) | [PyTorch](https://github.com/lidq92/MDTVSFA)               |
+| [arXiv](https://arxiv.org/abs/2207.02595) | FAST-VQA (FAST-VQA) | [PyTorch](https://github.com/teowu/FAST-VQA-and-FasterVQA) |
+| [arXiv](https://arxiv.org/abs/2207.02595) | FasterVQA (FasterVQA) | [PyTorch](https://github.com/teowu/FAST-VQA-and-FasterVQA) |
+| [arXiv](https://arxiv.org/abs/2211.04894) | DOVER (dover)    | [PyTorch](https://github.com/VQAssessment/DOVER)           |
+| [ITU](https://www.itu.int/rec/T-REC-P.910) | Temporal Information (ti)    | self-made |
+
+### FR VQA
+
+| Paper Link | Method | Code |
+| ----------- | ---------- | ------------|
+| [wiki](https://en.wikipedia.org/wiki/Video_Multimethod_Assessment_Fusion) | VMAF (vmaf) | [FFMPEG VMAF](https://github.com/Netflix/vmaf) |
+
+
+# License
+
+This project is licensed under the MIT License. However, it also includes code distributed under the BSD+Patent license.
