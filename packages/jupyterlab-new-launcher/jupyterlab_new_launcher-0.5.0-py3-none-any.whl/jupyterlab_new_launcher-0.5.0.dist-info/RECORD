@@ -1,0 +1,17 @@
+jupyterlab_new_launcher/__init__.py,sha256=ebrt4-VozfnF47TCrnOMn0wyeIRHYd76GWhnBV8QRLs,1142
+jupyterlab_new_launcher/_version.py,sha256=5mZtFlP8jOukh3f-P2E13kgXbd530p5BV0VWJJCdLIs,171
+jupyterlab_new_launcher/handlers.py,sha256=VFgACwgzvhTCQ6e49_S6mlYl9bQLdEwt5uhZs_cygEY,1766
+jupyterlab_new_launcher-0.5.0.data/data/etc/jupyter/jupyter_server_config.d/jupyterlab_new_launcher.json,sha256=AEtjos9sfANWvkee9HzO7Lf7Z2e6OFaMDoNwu_4meLk,98
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/package.json,sha256=G-_uM_70CsKXEsT8Q2HkYdJ3LeVg2UGcvFXX--VbBks,6149
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/schemas/jupyterlab-new-launcher/package.json.orig,sha256=a1aRvi5u3i4vYTc2JVZGxGyE60tr8fmor06-2KZEoW8,6943
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/schemas/jupyterlab-new-launcher/plugin.json,sha256=Smec9urapqytRF0h2D4rXnoR_S1fH_ucAsYohKyLnn8,2512
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/static/728.54b87b26a387a46f2b0d.js,sha256=VLh7JqOHpG8rDXzgBoX7M4BwTjho10cqQPQuqwR9H6s,11071
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/static/930.b6310b81b26da18401f7.js,sha256=tjELgbJtoYQB97_NCRWaLNgASASXkg1ASYWM5Sl5EMA,33113
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/static/remoteEntry.f529552172eb1a2d7afe.js,sha256=9SlVIXLrGi16_k3ZEEOy6MKwkUxuWWNaiOPydwKozGw,7171
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/static/style.js,sha256=MOlT50FsMyOVLmGeMohgiOv4h6RSA1qiWrKtEgqQjc0,166
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/static/third-party-licenses.json,sha256=W6N2sSD7tQihMqQk64F9xMd1Flfr2KO97esAiHUOYdM,2453
+jupyterlab_new_launcher-0.5.0.data/data/share/jupyter/labextensions/jupyterlab-new-launcher/install.json,sha256=cn5ga5GcuxAOLyIc0qDsRVG4uLEHqoZXVyeU3OuXg00,207
+jupyterlab_new_launcher-0.5.0.dist-info/METADATA,sha256=LA80MJQvE8OqZ9ayRa1phzpAz_Q54MWL3w_QwfJN8Tk,6432
+jupyterlab_new_launcher-0.5.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+jupyterlab_new_launcher-0.5.0.dist-info/licenses/LICENSE,sha256=B5ULvZbyna9TCFJHUkQDtAbR6pAdfqEvejIpYxqHvtM,1531
+jupyterlab_new_launcher-0.5.0.dist-info/RECORD,,
