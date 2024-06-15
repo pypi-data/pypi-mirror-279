@@ -1,0 +1,12 @@
+README.md
+setup.py
+crawlpy/__init__.py
+crawlpy/webscraper.py
+crawlpy/youtubescraper.py
+crawlpy.egg-info/PKG-INFO
+crawlpy.egg-info/SOURCES.txt
+crawlpy.egg-info/dependency_links.txt
+crawlpy.egg-info/requires.txt
+crawlpy.egg-info/top_level.txt
+tests/__init__.py
+tests/test_scraper.py
