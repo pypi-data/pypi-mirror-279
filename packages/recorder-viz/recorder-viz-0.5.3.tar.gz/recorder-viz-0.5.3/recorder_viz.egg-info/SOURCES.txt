@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+setup.py
+bin/recorder-report
+recorder_viz/__init__.py
+recorder_viz/build_offset_intervals.py
+recorder_viz/creader_wrapper.py
+recorder_viz/html_writer.py
+recorder_viz/memo.txt
+recorder_viz/reporter.py
+recorder_viz.egg-info/PKG-INFO
+recorder_viz.egg-info/SOURCES.txt
+recorder_viz.egg-info/dependency_links.txt
+recorder_viz.egg-info/top_level.txt
+tests/showoff.jpg
+tests/test.py
