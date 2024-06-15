@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: semantic-link-labs
+Version: 0.4.1
+Summary: Semantic Link Labs project
+Author: Microsoft Corporation
+License: MIT License
+Project-URL: Repository, https://github.com/microsoft/semantic-link-labs.git
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Framework :: Jupyter
+Requires-Python: <3.12,>=3.10
+License-File: LICENSE
+Requires-Dist: semantic-link-sempy >=0.7.5
+Requires-Dist: anytree
+Requires-Dist: powerbiclient
+Provides-Extra: test
+Requires-Dist: pytest >=8.2.1 ; extra == 'test'
+
