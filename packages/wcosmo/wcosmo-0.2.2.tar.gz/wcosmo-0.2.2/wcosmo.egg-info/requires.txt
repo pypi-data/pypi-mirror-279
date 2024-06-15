@@ -1,0 +1,7 @@
+numpy
+scipy
+
+[test]
+pytest-cov
+gwpopulation
+astropy
