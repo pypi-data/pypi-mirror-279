@@ -1,0 +1,2 @@
+[console_scripts]
+msort = msort.main:main
