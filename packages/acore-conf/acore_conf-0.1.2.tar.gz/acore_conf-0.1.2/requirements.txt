@@ -1,0 +1,3 @@
+# Core dependencies goes here
+commented-configparser>=1.0.0,<2.0.0
+atomicwrites>=1.0.0,<2.0.0
