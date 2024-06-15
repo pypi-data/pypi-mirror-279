@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "cait_sith_py"
+version = "0.2.6"
+description = "Cait Sith rust wrapper on python"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+maturin = "0.14.3"
+black = "^22.3"
+wemake-python-styleguide = "^0.16.0"
+mypy = "^0.982"
+pytest = "^6.2.5"
+Sphinx = "^4.3.2"
+sphinx-rtd-theme = "^1.0.0"
+bumpversion = "^0.6.0"
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+
+[project]
+name = "cait_sith_py"
+version = "0.2.6"
+description = "Cait Sith rust wrapper on python"
+license = {file = "LICENSE"} # relative to the package/ directory
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+[project.urls]
+repository = "https://github.com/here-wallet/cait-sith-py"
+
+[tool.maturin]
+python-source = "python"

@@ -1,0 +1,15 @@
+[package]
+name = "cait-sith-py"
+version = "0.2.6"
+edition = "2021"
+
+[lib]
+name = "cait_sith"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.21.1", features = ["macros", "extension-module", "abi3-py37"] }
+cait-sith = { path = "cait-sith", features = ["k256"] }
+serde = { version = "1.0.197", features = ["derive"] }
+k256 = { version = "0.13.3", features = ["serde"] }
+serde_json = "1.0.115"
