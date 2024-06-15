@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/Mongodb_JConnect/__init__.py
+src/Mongodb_JConnect/mongo_crud.py
+src/Mongodb_JConnect.egg-info/PKG-INFO
+src/Mongodb_JConnect.egg-info/SOURCES.txt
+src/Mongodb_JConnect.egg-info/dependency_links.txt
+src/Mongodb_JConnect.egg-info/requires.txt
+src/Mongodb_JConnect.egg-info/top_level.txt
