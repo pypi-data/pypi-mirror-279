@@ -1,0 +1,10 @@
+async_s3/__about__.py,sha256=Xybt2skBZamGMNlLuOX1IG-h4uIxqUDGAO8MIGWrJac,22
+async_s3/__init__.py,sha256=83a6T6N2GaYrKX3O5gVxAGNnTjBJqmm6CCTCYvrZMhw,267
+async_s3/group_by_prefix.py,sha256=FjK6Rw3YOD5lg61JsgDyVHw_M9lnzQALN5Usez4Sk54,2759
+async_s3/main.py,sha256=ThfeXacRFYZ9ZhmH2nkwvcfgxiS_16Kj9yJxfBG6dZw,6530
+async_s3/s3_bucket_objects.py,sha256=AVYbhUX_psPAnIMiV4JEwbTHDmmvppCYl91eaFA97B0,7121
+async_s3-2.1.0.dist-info/METADATA,sha256=kPrw5W91xER-6XkKEv9BYADqz7XtVoEDBIepyn1uNqA,3337
+async_s3-2.1.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+async_s3-2.1.0.dist-info/entry_points.txt,sha256=tuRd-rwoxRvGbks0xbge0RSEWavts1ZPogLzAxjN_E4,42
+async_s3-2.1.0.dist-info/licenses/LICENSE.txt,sha256=KPQFVkRWADgA25TBaJgyNklZzYxmn1lov_NiCeHFSyI,1092
+async_s3-2.1.0.dist-info/RECORD,,
