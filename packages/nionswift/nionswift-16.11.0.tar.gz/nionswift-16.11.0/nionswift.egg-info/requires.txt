@@ -1,0 +1,11 @@
+scipy
+numpy<2.0,>=1.26
+h5py
+pytz
+tzlocal
+imageio>=2.19.0
+pillow
+nionutils<5.0,>=4.11.0
+niondata<16.0,>=15.6.2
+nionui<8.0,>=7.1.0
+nionswift-io<16.0,>=15.2
