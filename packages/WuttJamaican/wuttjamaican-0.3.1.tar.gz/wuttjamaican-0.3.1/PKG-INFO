@@ -1,0 +1,44 @@
+Metadata-Version: 2.3
+Name: WuttJamaican
+Version: 0.3.1
+Summary: Base package for Wutta Framework
+Project-URL: Homepage, https://rattailproject.org/
+Project-URL: Repository, https://kallithea.rattailproject.org/rattail-project/wuttjamaican
+Project-URL: Changelog, https://kallithea.rattailproject.org/rattail-project/wuttjamaican/files/master/CHANGELOG.md
+Author-email: Lance Edgar <lance@edbob.org>
+License: GNU GPL v3+
+License-File: COPYING.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.6
+Requires-Dist: importlib-metadata; python_version < '3.10'
+Requires-Dist: python-configuration
+Provides-Extra: db
+Requires-Dist: sqlalchemy<2; extra == 'db'
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == 'docs'
+Requires-Dist: sphinxcontrib-programoutput; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest-cov; extra == 'tests'
+Requires-Dist: tox; extra == 'tests'
+Description-Content-Type: text/x-rst
+
+
+==============
+ WuttJamaican
+==============
+
+Base package for Wutta Framework
+
+See docs at https://rattailproject.org/docs/wuttjamaican/
