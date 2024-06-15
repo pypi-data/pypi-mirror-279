@@ -1,0 +1,12 @@
+iudex/__init__.py,sha256=RUnRAtGTBS6GPGMM48KgRZn0yyG21xPtyIK8Fh9vvyQ,213
+iudex/attributes.py,sha256=sQuZMYSOpXBPJpl27hxyAso-GjfU6BBznYiUCeQIjkw,2821
+iudex/config.py,sha256=oT1I3f4LXYBAF1cYe11-fGTSm25JAbDuEz93l_TaQYs,6155
+iudex/fastapi.py,sha256=BeSVT8BfjbktgOMX_Jh4g8KPhFExB_hpwcNHFYezaLc,2565
+iudex/instrumentation.py,sha256=ejGU4swukyuE4Ph2lJMGffNcOOtKHt8e-3axR6IkLHQ,2945
+iudex/supabase/__init__.py,sha256=dbDZiOuwLvgR9lk-S-6WSK-J_Dt47q9BbTueZZeDSMc,6641
+iudex/supabase/package.py,sha256=1CdZFoFTaSHNfBH1Mr8b6AKnnk-TLe5zUHdUksnDWx0,49
+iudex/supabase/utils.py,sha256=qh_eI7olTQ6mph-Iz3c0PPcgAUYV6LJiP38nB73rTxQ,3842
+iudex-0.7.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+iudex-0.7.2.dist-info/METADATA,sha256=FaJRFDZLgNxtF8zTFGgetq8XJmwY-mHFgOrDqsGxKs8,2835
+iudex-0.7.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+iudex-0.7.2.dist-info/RECORD,,
