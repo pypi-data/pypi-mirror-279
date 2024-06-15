@@ -1,0 +1,8 @@
+flytekitplugins_kftensorflow-1.12.3b0-py3.12-nspkg.pth,sha256=ya_zoT0ZM023a2lpUsRaqXsgDEknLucLLOWbbtFBPw4,512
+flytekitplugins/kftensorflow/__init__.py,sha256=eRrLpJH5mCiz52UbvKKoNxC71dLj5LDp27uOuY6GECM,301
+flytekitplugins/kftensorflow/task.py,sha256=9bXu4_61LUXW2ugzcDjPOo5yB1QizhIa39XE9jhhZBA,9314
+flytekitplugins_kftensorflow-1.12.3b0.dist-info/METADATA,sha256=f1IddUgxWHtkDte57gS9n4WOhsRhqxLi-c9MbcqqS5Y,871
+flytekitplugins_kftensorflow-1.12.3b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flytekitplugins_kftensorflow-1.12.3b0.dist-info/namespace_packages.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_kftensorflow-1.12.3b0.dist-info/top_level.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_kftensorflow-1.12.3b0.dist-info/RECORD,,
