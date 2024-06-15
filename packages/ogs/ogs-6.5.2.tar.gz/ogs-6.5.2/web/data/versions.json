@@ -1,0 +1,153 @@
+{
+  "minimum_version": {
+    "gcc": "11.3.0",
+    "clang": "13.0",
+    "apple_clang": "13.1.6",
+    "msvc": {
+      "year": "2019",
+      "number": "16",
+      "toolset": "142",
+      "compiler": "19.24"
+    },
+    "git": "2.14",
+    "cmake": "3.22",
+    "hugo": "0.122.0",
+    "boost": "1.73.0",
+    "eigen": "3.4.0",
+    "eigen-unsupported": "9000b3767770f6dd0f4cfb12f4e19c71921885a4",
+    "vtk": "9.3.0",
+    "petsc": "3.18.6",
+    "qt": "5.14.2",
+    "python": "3.9",
+    "snakemake": "8.2.4",
+    "hdf5": "1.10.7",
+    "libxml2": "2.9.12",
+    "tfel-rliv": "4.0",
+    "tfel-repo": "thelfer",
+    "lis": "1.7.37",
+    "gtest": "1.13.0",
+    "pybind11": "2.10.4",
+    "range-v3": "0.12.0",
+    "json": "3.10.5",
+    "json_sha": "b94997df68856753b72f0d7a3703b7d484d4745c567f3584ef97c96c25a5798e"
+  },
+  "tested_version": {
+    "ubuntu": "22.04",
+    "qt": "5.15.2",
+    "cmake": "3.22.3",
+    "hdf5": "1.14.3",
+    "zlib": "1.2.11",
+    "gtest": "1.13.0"
+  },
+  "ctest": {
+    "large_runtime": 60
+  },
+  "python": {
+    "jupyter_image": {
+      "conda_packages": [
+        "snakemake-minimal",
+        "pyvista==0.34.2",
+        "ipyvtklink",
+        "pythreejs"
+      ],
+      "pip_packages": [
+        "nbdime==3.1.1",
+        "h5py==3.6.0",
+        "jupyterlab-gitlab==3.0.0",
+        "gmsh==4.10.5",
+        "git+https://github.com/joergbuchwald/ogs6py@71f49a896381152e648801740833450022115981#egg=ogs6py",
+        "git+https://github.com/joergbuchwald/VTUinterface@05793c7be84fbcb7d9f8f740c3dc667089a61505#egg=VTUinterface",
+        "git+https://github.com/joergbuchwald/heatsource_thm@main#egg=heatsource-py",
+        "ogstools==0.0.3",
+        "ipykernel==6.9.1",
+        "jinja2==3.0.3",
+        "nbconvert==6.4.0",
+        "ipython_genutils==0.2.0",
+        "pillow==9.0.0",
+        "matplotlib==3.5.1",
+        "pandas==1.4.2",
+        "toml==0.10.2"
+      ]
+    }
+  },
+  "cpm": {
+    "package_file_id": 1517,
+    "package_file_sha256": "70dd7dc421092ca021bb2c992d919d1a1c91963bbf63cf3cc1fb7d7365f071ab"
+  },
+  "ext": {
+    "cache_hash": "5063f1593404ca5e61365e327a09cb3a1edcea1c"
+  },
+  "libraries": {
+    "vtk": {
+      "options": [
+        {
+          "condition": {
+            "cmake": "ON",
+            "ogscm": "True"
+          },
+          "cmake": [
+            "VTK_GROUP_ENABLE_Rendering=DONT_WANT",
+            "VTK_GROUP_ENABLE_StandAlone=DONT_WANT",
+            "BUILD_TESTING=OFF",
+            "VTK_BUILD_EXAMPLES=OFF",
+            "VTK_BUILD_TESTING=OFF",
+            "VTK_ENABLE_WRAPPING=OFF",
+            "VTK_USE_64BIT_IDS=ON",
+            "VTK_MODULE_ENABLE_VTK_IOXML=YES",
+            "VTK_MODULE_ENABLE_VTK_IOLegacy=YES"
+          ]
+        },
+        {
+          "condition": {
+            "cmake": "OGS_BUILD_UTILS",
+            "ogscm": "True"
+          },
+          "cmake": [
+            "VTK_MODULE_ENABLE_VTK_FiltersGeneral=YES",
+            "VTK_MODULE_ENABLE_VTK_FiltersParallel=YES"
+          ]
+        },
+        {
+          "condition": {
+            "cmake": "OGS_USE_MPI",
+            "ogscm": "toolchain.CC == \"mpicc\""
+          },
+          "cmake": [
+            "VTK_MODULE_ENABLE_VTK_IOParallelXML=YES",
+            "VTK_MODULE_ENABLE_VTK_ParallelMPI=YES",
+            "VTK_USE_MPI=ON"
+          ]
+        },
+        {
+          "condition": {
+            "cmake": "OGS_BUILD_GUI",
+            "ogscm": "local_args.gui"
+          },
+          "cmake": [
+            "VTK_MODULE_ENABLE_VTK_IOExport=YES",
+            "VTK_MODULE_ENABLE_VTK_ImagingCore=YES",
+            "VTK_MODULE_ENABLE_VTK_InteractionStyle=YES",
+            "VTK_MODULE_ENABLE_VTK_InteractionWidgets=YES",
+            "VTK_MODULE_ENABLE_VTK_GUISupportQt=YES",
+            "VTK_MODULE_ENABLE_VTK_RenderingOpenGL2=YES",
+            "VTK_MODULE_ENABLE_VTK_RenderingContextOpenGL2=YES",
+            "VTK_MODULE_ENABLE_VTK_FiltersTexture=YES",
+            "VTK_MODULE_ENABLE_VTK_RenderingAnnotation=YES",
+            "VTK_MODULE_ENABLE_VTK_RenderingCore=YES",
+            "VTK_MODULE_ENABLE_VTK_FiltersParallel=YES"
+          ]
+        },
+        {
+          "condition": {
+            "cmake": "OGS_BUILD_TESTING",
+            "ogscm": "local_args.ogs == \"off\" or \"OGS_BUILD_TESTING=OFF\" not in local_args.cmake_args.capitalize()"
+          },
+          "cmake": [
+            "VTK_MODULE_ENABLE_VTK_FiltersGeneral=YES",
+            "VTK_MODULE_ENABLE_VTK_FiltersSources=YES"
+          ]
+        }
+      ]
+    }
+  }
+}

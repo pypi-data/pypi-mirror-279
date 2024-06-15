@@ -1,0 +1,23 @@
+/**
+ * \file
+ * \brief  CMake information.
+ *
+ * \copyright
+ * Copyright (c) 2012-2024, OpenGeoSys Community (http://www.opengeosys.org)
+ *            Distributed under a Modified BSD License.
+ *              See accompanying file LICENSE.txt or
+ *              http://www.opengeosys.org/project/license
+ *
+ */
+
+#include "InfoLib/CMakeInfo.h"
+
+namespace CMakeInfoLib
+{
+
+namespace CMakeInfo
+{
+const std::string python_virtualenv_sitepackages("@Python_SITEARCH_NATIVE@");
+const std::string cmake_args("@CMAKE_ARGS_ESCAPED@");
+}  // namespace CMakeInfo
+}  // namespace CMakeInfoLib

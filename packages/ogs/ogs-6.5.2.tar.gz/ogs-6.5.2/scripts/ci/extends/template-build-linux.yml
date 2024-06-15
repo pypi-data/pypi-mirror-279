@@ -1,0 +1,114 @@
+.template-build-linux:
+  stage: build
+  retry:
+    max: 2
+    when: runner_system_failure
+
+  script:
+    - 'echo "For debugging run: docker run --rm -it -v $CI_BUILDS_DIR:/builds -w=$CI_PROJECT_DIR $CI_JOB_IMAGE"'
+    - build_dir_full=../build/${CMAKE_PRESET}
+    - log_file=$build_dir_full/make.txt
+    - rm -rf $build_dir_full
+    - mkdir -p $build_dir_full build
+    - if [[ "$OSTYPE" == "darwin"* ]] ; then readlink_cmd=greadlink; else readlink_cmd=readlink; fi
+    - ln -s `$readlink_cmd -f $build_dir_full` build/${CMAKE_PRESET}
+    - ([[ $BUILD_CTEST_LARGE_ON_MASTER && "${CI_COMMIT_BRANCH}" == "master" ]]) && export BUILD_CTEST_LARGE=true
+    - cmake --preset=$CMAKE_PRESET --log-level=VERBOSE -Wno-dev $CMAKE_ARGS
+    # Activate .venv via .envrc
+    - test -f $build_dir_full/.venv/bin/activate && source $build_dir_full/.envrc
+    - |
+      function maybe_run_with_xvfb()
+      {
+          if [[ "$OSTYPE" == "darwin"* ]]; then
+            "$@"
+          elif command -v xvfb-run &> /dev/null ; then
+            local ctest_status_file="$build_dir_full/ctest_status"
+            rm -f "$ctest_status_file"
+            # status file and sh -c to workaround xvfb-run problems:
+            # /usr/bin/xvfb-run: line 186: kill: (<PID>) - No such process"
+            xvfb-run -a \
+                sh -c 'statf="$1"; shift; "$@"; echo "$?" >"$statf"' \
+                -- "$ctest_status_file" "$@" \
+                || true
+            [ 0 = "`cat "$ctest_status_file"`" ]
+          else
+            "$@"
+          fi
+      }
+
+      if [[ -z "$TARGETS" ]]; then
+
+        if [ "$BUILD_PACKAGE" = false ]; then
+          build_package=""
+        else
+          build_package="--target package"
+        fi
+
+        $BUILD_CMD_PREFIX cmake --build --preset=$CMAKE_PRESET ${build_package} > >(tee $log_file)
+
+        if [ "$BUILD_TESTS" = true ]; then $BUILD_CMD_PREFIX cmake --build --preset=$CMAKE_PRESET --target tests ; fi
+
+        if [ "$BUILD_CTEST" = true ]; then
+          ctest_timeout=60
+          preset_postfix=""
+          if [[ "$CI_MERGE_REQUEST_LABELS" =~ .*ci_large.* ]]; then
+            export BUILD_CTEST_LARGE=true
+          fi
+          if [ "$BUILD_CTEST_LARGE" = true ]; then
+            ctest_timeout=90
+            preset_postfix="-large"
+          fi
+
+          if [[ "$OSTYPE" == "darwin"* ]]; then
+            alias date=gdate
+          fi
+
+          ctest_arguments=""
+          if [[ ! -z "$CTEST_ARGS" ]]; then
+            ctest_arguments="${CTEST_ARGS}"
+            ctest_timeout=90 # Assume large
+          else
+            ctest_arguments="--preset=${CMAKE_PRESET}${preset_postfix}"
+          fi
+
+          if [ "$BUILD_CTEST_LARGE" != true ]; then
+            ctest_arguments="${ctest_arguments} -LE large"
+          fi
+
+          if [[ "$CI_MERGE_REQUEST_LABELS" =~ .*web\ only.* ]]; then
+            ctest_arguments="${ctest_arguments} -R nb-"
+          fi
+
+          if [[ ! -z "$CTEST_TIMEOUT" ]]; then
+            ctest_timeout="$CTEST_TIMEOUT"
+          fi
+
+          ctest_group="Experimental"
+          if [ "${CI_COMMIT_BRANCH}" = "master" ]; then
+            ctest_group="master"
+          fi
+
+          if [[ "$CI_MERGE_REQUEST_LABELS" =~ .*unit_tests.* ]]; then
+            echo "Skipping ctests because of unit_tests-label."
+          else
+            echo "ctest arguments: ${ctest_arguments}"
+            maybe_run_with_xvfb ctest \
+                -M Experimental --group "${ctest_group}" "${regex_argument}" \
+                --test-dir "${build_dir_full}" -T Start -T Test \
+                ${ctest_arguments} \
+                --output-junit Tests/ctest.xml \
+                --stop-time "`date -d "today + ${ctest_timeout} minutes" +'%H:%M:%S'`" \
+                --no-tests=error
+            ctest --test-dir "${build_dir_full}" -T Submit || true
+          fi
+        fi
+
+      else
+
+        $BUILD_CMD_PREFIX cmake --build --preset=$CMAKE_PRESET --target ${TARGETS} > >(tee $log_file)
+
+      fi
+    - |
+      if [[ "$CHECK_WARNINGS" = true ]] ; then
+        if [[ $(cat $log_file | grep warning -i | grep -v 'was built for newer macOS version' | grep -v 'WARNING: no license files found' | grep -v 'WARNING: multiple license files found' | grep -v 'means the weak symbol cannot be overridden at runtime' | grep -v 'lto-wrapper: warning:') ]]; then printf 'There were compiler warnings:\n\n'; cat $log_file | grep warning -i | grep -v 'was built for newer macOS version' | grep -v 'WARNING: no license files found' | grep -v 'WARNING: multiple license files found' | grep -v 'means the weak symbol cannot be overridden at runtime' | grep -v 'lto-wrapper: warning:'; exit 1; fi
+      fi
