@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+{% load umd_lib_style %}
+<html>
+
+  <head>
+    <title>{{ title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+            integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'umd_lib_style/umd_lib_style.css' %}" />
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    <header>
+      {% environment_banner %}
+      {% include 'umd_lib_style/header.html' %}
+    </header>
+    <main>
+      <h1>{{ title }}</h1>
+      <ul class="messages">
+        {% for message in messages %}
+        <li class="message {{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% block main %}{% endblock %}
+    </main>
+    <footer>
+      {% include 'umd_lib_style/footer.html' %}
+    </footer>
+  </body>
+</html>

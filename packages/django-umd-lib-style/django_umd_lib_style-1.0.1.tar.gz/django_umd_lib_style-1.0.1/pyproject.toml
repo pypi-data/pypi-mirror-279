@@ -1,0 +1,22 @@
+[project]
+name = "django-umd-lib-style"
+description = "Django app that provides theming for UMD Libraries applications"
+version = "1.0.1"
+dependencies = [
+    "django>=4.2",
+]
+authors = [
+    { name="Peter Eichman", email="peichman@umd.edu" },
+    { name="Tim Kanke", email="tkanke@umd.edu" },
+]
+maintainers = [
+    { name='University of Maryland Libraries', email='lib-ssdr@umd.edu' },
+]
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3 :: Only",
+    "Framework :: Django",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: Apache Software License",
+]

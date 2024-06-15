@@ -1,0 +1,2 @@
+recursive-include src/umd_lib_style/static *
+recursive-include src/umd_lib_style/templates *
