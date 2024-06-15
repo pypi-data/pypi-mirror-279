@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+zer/__init__.py
+zer/zer.py
+zer.egg-info/PKG-INFO
+zer.egg-info/SOURCES.txt
+zer.egg-info/dependency_links.txt
+zer.egg-info/requires.txt
+zer.egg-info/top_level.txt

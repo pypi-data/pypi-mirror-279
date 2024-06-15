@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: zer
+Version: 0.0.5
+Summary: Zer is a Python module for code reduction and automation.
+Author: ZerProg studio
+License-File: LICENSE
+Requires-Dist: tqdm
