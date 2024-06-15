@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: rentavle-sdk
+Version: 0.1.2
+Summary: A simple SDK for the Rentavle service
+Home-page: https://github.com/rentavle/rentavle-sdk-python
+Author: Rentavle
+Author-email: supergravitycorp@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Rentavle SDK\n\nThis SDK provides tools to interact with Rentavle services.
+
+
+from rentavle_sdk import RentavleSDK
+
+# Using default configuration
+sdk = RentavleSDK()
+
+# Providing custom configuration
+custom_sdk = RentavleSDK(api_endpoint="https://custom-api.rentavle.com", chain_id="custom_chain_id", debug=True)
