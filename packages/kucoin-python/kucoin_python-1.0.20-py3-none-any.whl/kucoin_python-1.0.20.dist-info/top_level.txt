@@ -1,0 +1,9 @@
+kucoin
+kucoin/base_request
+kucoin/lending
+kucoin/margin
+kucoin/market
+kucoin/trade
+kucoin/user
+kucoin/websocket
+kucoin/ws_token
