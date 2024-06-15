@@ -1,0 +1,15 @@
+Metadata-Version: 2.3
+Name: fhirmodels
+Version: 0.1.3
+Summary: Python classes for FHIR resources
+Project-URL: Homepage, https://github.com/trostalski/fhirmodels
+Project-URL: Issues, https://github.com/trostalski/fhirmodels/issues
+Author-email: Till Rostalski <tillrostalski@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# fhirmodels
