@@ -1,0 +1,15 @@
+numpy
+matplotlib
+scipy
+pyautogui
+scikit-image
+guizero
+pytest
+PyWavelets
+
+[:python_version >= "3.11"]
+importlib-resources
+
+[test]
+pytest>=6.1.2
+pytest-runner
