@@ -1,0 +1,8 @@
+README.md
+setup.py
+shops/__init__.py
+shops/lorem_ipsum.py
+shops.egg-info/PKG-INFO
+shops.egg-info/SOURCES.txt
+shops.egg-info/dependency_links.txt
+shops.egg-info/top_level.txt
