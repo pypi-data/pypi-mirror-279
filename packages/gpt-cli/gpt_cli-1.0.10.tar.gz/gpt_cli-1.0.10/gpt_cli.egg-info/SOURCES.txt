@@ -1,0 +1,9 @@
+README.md
+setup.py
+bin/gpt3
+bin/gpt4
+gpt_cli.egg-info/PKG-INFO
+gpt_cli.egg-info/SOURCES.txt
+gpt_cli.egg-info/dependency_links.txt
+gpt_cli.egg-info/requires.txt
+gpt_cli.egg-info/top_level.txt
