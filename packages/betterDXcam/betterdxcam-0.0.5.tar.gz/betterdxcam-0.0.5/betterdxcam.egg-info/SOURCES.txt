@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+betterdxcam.egg-info/PKG-INFO
+betterdxcam.egg-info/SOURCES.txt
+betterdxcam.egg-info/dependency_links.txt
+betterdxcam.egg-info/requires.txt
+betterdxcam.egg-info/top_level.txt
