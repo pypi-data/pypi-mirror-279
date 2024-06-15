@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: UnrealCV
+Version: 1.1.0
+Summary: UnrealCV client for python. see http://unrealcv.github.io for more detail.
+Home-page: http://unrealcv.github.io
+Download-URL: http://unrealcv.github.io
+Author: Weichao Qiu, Fangwei Zhong, Hai Ci
+Author-email: qiuwch@gmail.com
+Keywords: computer vision,unreal engine,ue4,synthetic,simulator,robotics
+Requires-Python: >=3.7
