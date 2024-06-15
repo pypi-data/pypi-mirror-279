@@ -1,0 +1,8 @@
+flytekitplugins_wandb-1.12.3b0-py3.12-nspkg.pth,sha256=ya_zoT0ZM023a2lpUsRaqXsgDEknLucLLOWbbtFBPw4,512
+flytekitplugins/wandb/__init__.py,sha256=CA_eNVcnZ-soSX0LCDID4xvr1xGMHzNMrGZFxxQdcDY,59
+flytekitplugins/wandb/tracking.py,sha256=PftgUUWZaP0CNPdebk-KIYav5-7gzM_6qKe-Vk3JOXo,3916
+flytekitplugins_wandb-1.12.3b0.dist-info/METADATA,sha256=bsWvWuPHvfTQpH0PHdRwV-VKvDKsO9Z5JCUOiK1LDVQ,997
+flytekitplugins_wandb-1.12.3b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flytekitplugins_wandb-1.12.3b0.dist-info/namespace_packages.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_wandb-1.12.3b0.dist-info/top_level.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_wandb-1.12.3b0.dist-info/RECORD,,
