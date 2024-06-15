@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: ovos-config-assistant
+Version: 0.0.0a5
+Summary: ovos configuration manager
+Home-page: https://github.com/OpenVoiceOS/ovos-config-assistant
+Author: jarbasAI
+Author-email: jarbasai@mailfence.com
+License: Apache
+Platform: UNKNOWN
+Requires-Dist: ovos-utils
+Requires-Dist: pywebio
+Requires-Dist: cutecharts
+Requires-Dist: oauthlib ~=3.0
+Requires-Dist: ovos-backend-client
+Requires-Dist: flask
+Requires-Dist: ovos-plugin-manager
+
+UNKNOWN
+
+
