@@ -1,0 +1,16 @@
+pypas/__init__.py,sha256=sz6WoZPVtwX-iJ23dXOkUblnTt0zQuH2g5PJpd7EKzs,263
+pypas/main.py,sha256=Qdm9SU6h8QGS0wr4b8ID4IiUgnhKxrijG5-MVRshsxQ,3165
+pypas/settings.py,sha256=F52S1D8UvtYzWgISIUCyK98B_07IxVmuPFQRNKChbfQ,893
+pypas/lib/auth.py,sha256=RQYt2WrZUP1XtRapCedbWtO6kHyIDiA4ziMyoDU9Si0,945
+pypas/lib/config.py,sha256=NiXOd_frapx5pepbFMePlEdLwywytvuGXV0N3JieIUc,1043
+pypas/lib/console.py,sha256=dkRhUGa-nLoZ1L4Vv3_RJkEfGAHAcvqAhCVlCchgReo,2362
+pypas/lib/decorators.py,sha256=-QS_oIjt1s4qEsJL7rVYiWCzUDJ9Yo59ozTVKt7bYkE,836
+pypas/lib/exercise.py,sha256=V9ObyGnl-TOTi8HjpTwhy6AEL7ijVKtZ89d3RCVzUPk,7028
+pypas/lib/monads.py,sha256=VEYptSDD9wUTA2w82vWmc1MpDgv2_Zjsq4F84NXHxjM,218
+pypas/lib/network.py,sha256=VDI40V-zLTZHVEcjB7anUed5fxF3hXqEFjhe-FrIMP8,2765
+pypas/lib/sysutils.py,sha256=owVxdvZn3RyiaeO6Ll1CINFCaaURdLz8xNt6-lTc0R0,1279
+pypas_cli-0.0.21.dist-info/METADATA,sha256=Oc_LNdbbJmVZ4vsCY7mcmD8qbv0fxtFF_XqBQDPCP9c,2009
+pypas_cli-0.0.21.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pypas_cli-0.0.21.dist-info/entry_points.txt,sha256=5rZIpDjGELdcLUsSS5dCFAgeUB_8rn-L867m0-VfGig,41
+pypas_cli-0.0.21.dist-info/licenses/LICENSE,sha256=L8-0qeT6BwpkkYhv4Xw8xWCYvQ2yae-guwHurwHvmaY,1080
+pypas_cli-0.0.21.dist-info/RECORD,,
