@@ -1,0 +1,9 @@
+numpy>1.16.5
+scipy
+matplotlib
+ase>=3.19
+tqdm
+pathos
+packaging>=20.0
+pre-commit
+HamiltonIO>=0.1.4
