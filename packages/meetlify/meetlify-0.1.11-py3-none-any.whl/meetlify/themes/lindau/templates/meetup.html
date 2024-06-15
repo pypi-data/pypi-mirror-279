@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% import 'includes/macros.html' as macros %}
+
+{% block main_header %}
+<meta name="description" content="{{meetup.description}}" />
+<meta name="author" content="{{meetup.author}}" />
+<link href="{{meta.URL}}/{{meta.folders.meetups}}/{{meetup.slug}}/" rel="canonical" />
+<title>{{meetup.title}}</title>
+<meta content="{{meetup.title}}" property="og:title" />
+<meta content="{{meetup.description}}" property="og:description" />
+<meta content="{{meta.URL}}/{{meta.folders.meetups}}/{{meetup.slug}}/" property="og:url" />
+{% endblock main_header %}
+
+
+{% block main_content %}
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-8">
+                <article>
+                    <header class="mb-4">
+                        {{macros.title_bar(meta, meetup)}}
+                    </header>
+                    <section class="mb-5">
+                        {{ meetup.content }}
+                    </section>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <div class="py-2 sidebar">
+                    {{macros.meetup_organizer_card(meta, meetup)}}
+                    {{macros.meetup_map_card(meta, meetup)}}
+                    {{macros.meetup_meta_card(meta, meetup)}}
+                    {{macros.contact_us_card(meta)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main_content %}
