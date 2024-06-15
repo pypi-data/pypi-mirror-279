@@ -1,0 +1,4 @@
+symengine>=0.11.0
+pyRDDLGym>=2.0
+xaddpy>=0.2.8
+sympy>=1.12
