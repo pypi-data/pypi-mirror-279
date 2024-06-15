@@ -1,0 +1,3 @@
+include bluestacks5newinstances/requirements.txt
+include bluestacks5newinstances/thirdparty.json
+include bluestacks5newinstances/README.MD

@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bluestacks5newinstances/README.MD
+bluestacks5newinstances/__init__.py
+bluestacks5newinstances/requirements.txt
+bluestacks5newinstances/thirdparty.json
+bluestacks5newinstances.egg-info/PKG-INFO
+bluestacks5newinstances.egg-info/SOURCES.txt
+bluestacks5newinstances.egg-info/dependency_links.txt
+bluestacks5newinstances.egg-info/requires.txt
+bluestacks5newinstances.egg-info/top_level.txt
