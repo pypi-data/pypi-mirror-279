@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+chopin2/__init__.py
+chopin2/chopin2.py
+chopin2/functions.py
+chopin2.egg-info/PKG-INFO
+chopin2.egg-info/SOURCES.txt
+chopin2.egg-info/dependency_links.txt
+chopin2.egg-info/entry_points.txt
+chopin2.egg-info/not-zip-safe
+chopin2.egg-info/requires.txt
+chopin2.egg-info/top_level.txt

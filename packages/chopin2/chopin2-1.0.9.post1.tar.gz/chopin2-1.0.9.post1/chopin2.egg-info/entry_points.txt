@@ -1,0 +1,2 @@
+[console_scripts]
+chopin2 = chopin2.chopin2:chopin2
