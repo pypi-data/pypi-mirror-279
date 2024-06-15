@@ -1,0 +1,9 @@
+pytest
+pytest-mock
+
+PyPDF2
+pymupdf4llm
+
+python-pptx
+python-docx
+requests

@@ -1,0 +1,14 @@
+MANIFEST.in
+requirements.txt
+setup.py
+Parser4LLM/__init__.py
+Parser4LLM/parsers.py
+Parser4LLM/pdf_converter.py
+Parser4LLM/ppt_converter.py
+Parser4LLM/url_converter.py
+Parser4LLM/word_converter.py
+Parser4LLM.egg-info/PKG-INFO
+Parser4LLM.egg-info/SOURCES.txt
+Parser4LLM.egg-info/dependency_links.txt
+Parser4LLM.egg-info/requires.txt
+Parser4LLM.egg-info/top_level.txt

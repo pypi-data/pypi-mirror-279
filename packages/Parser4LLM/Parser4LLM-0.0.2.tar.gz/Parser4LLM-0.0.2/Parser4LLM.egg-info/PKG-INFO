@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: Parser4LLM
+Version: 0.0.2
+Summary: 🔓📂 Unleash the Potential of Your LLMs: Effortlessly Extract Insights from PDFs, Docx, PPTX and URL! 📈💡
+Home-page: https://github.com/
+Author: Satish Venkatakrishnan
+Author-email: satish@askjunior.ai
+Requires-Dist: pytest
+Requires-Dist: pytest-mock
+Requires-Dist: PyPDF2
+Requires-Dist: pymupdf4llm
+Requires-Dist: python-pptx
+Requires-Dist: python-docx
+Requires-Dist: requests
