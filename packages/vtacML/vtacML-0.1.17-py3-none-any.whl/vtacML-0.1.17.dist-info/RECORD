@@ -1,0 +1,14 @@
+vtacML/__init__.py,sha256=TIxG3Zb8EUMpZArgkV2tqWQeTae7dJicZo8BALVG3zI,98
+vtacML/evaluate_best_model.py,sha256=X6iazoG88aacxlAjgmN2owN61SsqJjU5WslnKh6Csyw,648
+vtacML/pipeline.py,sha256=YZYa-yxatTFL5CdxSWMhTVjAQ-sjW7Y9EPKJqzopi78,22978
+vtacML/preparation.py,sha256=sbGvljB52Dp12g6ikIICf9lg7HAw1Yu-7PZnrTuIpn4,3107
+vtacML/search_best_model.py,sha256=BP23zeHLelOpZXfH69TUUOoD3T0MkNn_j6Co4qRPKp8,138
+vtacML/utils.py,sha256=hx0Q2HEdpldWqwN1YFLYWNPrEVhmqhJXvIPbMiujNwM,266
+vtacML/config/config.yaml,sha256=VY8Q6Z_xSxytssFJo-6SpLAd33NMmBaUu62w_NuknZU,3416
+vtacML/data/combined_qpo_vt_all_cases_with_GRB_with_flags.parquet,sha256=IBEZkp3d8efpPWPlsqbSL4mFD8u3qPkbPX6OhK8oOow,22082335
+vtacML/output/models/0.978_svc_best_model.pkl,sha256=BQV_BXCJsQhXHzsDHB_qeNTckLsJNdgjE851RmCLz5A,14534538
+vtacML-0.1.17.dist-info/LICENSE,sha256=urQI2g7z4pEG4GlBMvNOIUPz7IsRwJfUkNL-9Pz_3yE,1496
+vtacML-0.1.17.dist-info/METADATA,sha256=yu38v1Uexn0buBBDmjPoG2hlUwQtcuJXaQxe1XVUV1U,8950
+vtacML-0.1.17.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+vtacML-0.1.17.dist-info/top_level.txt,sha256=GsPJRlpK-SNCkkAcZtA0OUmhVDpKcS7e48dnxtBAtBs,7
+vtacML-0.1.17.dist-info/RECORD,,
