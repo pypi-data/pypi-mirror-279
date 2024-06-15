@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: dbtr
+Version: 0.1.0
+Summary: An extension for the dbt CLI that allows deploying and running jobs remotely
+License: Apache2.0
+Author: Alexis VIALARET
+Author-email: alexis.vialaret@artefact.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8,<9)
+Requires-Dist: dbt-bigquery (>=1.8,<2.0)
+Requires-Dist: fastapi (>=0,<1)
+Requires-Dist: google-api-python-client (>=2,<3)
+Requires-Dist: google-cloud-compute (>=1,<2)
+Requires-Dist: google-cloud-iam (>=2,<3)
+Requires-Dist: google-cloud-resource-manager (>=1,<2)
+Requires-Dist: google-cloud-run (>=0,<1)
+Requires-Dist: google-cloud-storage (>=2,<3)
+Requires-Dist: humanize (>=4,<5)
+Requires-Dist: pytest (>=8,<9)
+Requires-Dist: pytest-xdist (>=3,<4)
+Requires-Dist: python-multipart (>=0,<1)
+Requires-Dist: skaff-telemetry (>=0,<1)
+Requires-Dist: snowflake-id (>=1,<2)
+Requires-Dist: uvicorn (>=0,<1)
+Description-Content-Type: text/markdown
+
+# dbtr
