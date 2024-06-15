@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "reddit_chats"
+version = "0.0.4"
+authors = [
+  { name="xwizard707", email="timurnurlygayanov@mail.ru" },
+  { name="koalascala", email="timurkhasanov.tk@gmail.com" }
+]
+description = "Reddit Chats SDK for chat bots"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "asyncio",
+    "requests",
+    "matrix-nio",
+    "latest_user_agents"
+]
+
+[project.urls]
+Homepage = "https://www.reddit.com/r/redditChatBots/"
+Issues = "https://www.reddit.com/r/redditChatBots/"
