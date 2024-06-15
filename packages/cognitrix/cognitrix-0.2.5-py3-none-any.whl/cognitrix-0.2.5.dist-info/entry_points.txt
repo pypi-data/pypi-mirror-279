@@ -1,0 +1,3 @@
+[console_scripts]
+cognitrix=cognitrix.cli:main
+
