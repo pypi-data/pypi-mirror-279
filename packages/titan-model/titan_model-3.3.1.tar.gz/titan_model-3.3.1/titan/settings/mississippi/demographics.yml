@@ -1,0 +1,64 @@
+demographics:
+  black:
+    ppl: 1.0
+    sex_type:
+      MSM:
+        ppl: 1.0
+        sex_role:
+          init:
+            versatile: 0.671
+            insertive: 0.169
+            receptive: 0.160
+        safe_sex:
+          Sex:
+            prob: 0.214
+        prep:
+          discontinue: 0.034
+          adherence: 0.860
+        drug_type:
+          None:
+            ppl: 1.0
+            hiv:
+              init: 0.591
+              dx:
+                init: 0.778
+                prob: 0.0342
+              aids:
+                init: 0.46
+            haart:
+              init: 0.690
+              enroll:
+                enroll_0:
+                  prob: 0.609
+                  start: 0
+                  stop: 1
+                enroll_1:
+                  prob: 0.074
+                  start: 1
+                  stop: 12
+                enroll_2:
+                  prob: 0.0
+                  start: 12
+                  stop: 9999
+              reinit:
+                prob: 0.01
+              adherence:
+                init: 0.500
+                prob: 0.500
+              discontinue: 0.023
+            exit:
+              death:
+                base: 6.2
+                hiv: 3.0
+                aids: 17.5
+                haart_adherent: 1.0
+            num_partners:
+              Sex:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value: 48
+                    value_type: int
+                  2:
+                    value: 0.931
+                    value_type: float

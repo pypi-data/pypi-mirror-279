@@ -1,0 +1,120 @@
+demographics:
+  white:
+    ppl: 1.0
+    age:
+      1:
+        prob: .221
+        min: 18
+        max: 29
+      2:
+        prob: .213
+        min: 30
+        max: 39
+      3:
+        prob: 0.234
+        min: 40
+        max: 49
+      4:
+        prob: .332
+        min: 50
+        max: 64
+    sex_type:
+      HM:
+        ppl: 0.495
+        sex_role:
+          init:
+            insertive: 1.0
+            versatile: 0.0
+        safe_sex:
+          Sex: &condom_use_HM
+            prob: 0.1
+          Inj: *condom_use_HM
+          SexInj: *condom_use_HM
+        injection:
+          unsafe_prob: 0.321
+          num_acts: 5
+        drug_type:
+          Inj: &inj_drug_type_vals
+            ppl: 0.0244
+            hiv:
+              init: 0.0
+              dx:
+                prob: 0.202
+                init: 1.0
+            haart: &haart_vals
+              init: 1.0
+              enroll:
+                enroll_0:
+                  prob: 0.679
+                  start: 0
+                  stop: 999
+              adherence:
+                init: 1.0
+                prob: 0.7
+              discontinue: 0.000
+            exit:
+              death:
+                base: 16.6
+                hiv: 1.5
+                haart_adherent: 1.0
+                aids: 10.4
+            num_partners:
+              Sex:
+                dist_type: poisson
+                vars:
+                  1:
+                    value: .958
+                    value_type: float
+              Inj:
+                dist_type: gamma
+                vars:
+                  1:
+                    value: 1.704
+                    value_type: float
+                  2:
+                    value: 2.755
+                    value_type: float
+              SexInj:
+                dist_type: poisson
+                vars:
+                  1:
+                    value: 0.784
+                    value_type: float
+          None: &base_drug_type_vals
+            ppl: 0.9756
+            hiv:
+              init: 0.0014
+              dx:
+                init: 1.0
+                prob: 0.202
+            exit:
+              death:
+                base: 5.69
+                hiv: 3.1
+                aids: 10.4
+                haart_adherent: 1.0
+            haart: *haart_vals
+            num_partners:
+              Sex:
+                dist_type: poisson
+                vars:
+                  1:
+                    value: 1.1
+                    value_type: float
+      HF:
+        ppl: 0.505
+        sex_role:
+          init:
+            receptive: 1.0
+            versatile: 0.0
+        safe_sex:
+          Sex: &condom_use_HF
+            prob: 0.2
+          Inj: *condom_use_HF
+          SexInj: *condom_use_HF
+        injection:
+          unsafe_prob: 0.321
+          num_acts: 5
+        drug_type:
+          Inj: *inj_drug_type_vals
+          None: *base_drug_type_vals

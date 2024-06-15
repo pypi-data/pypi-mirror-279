@@ -1,0 +1,235 @@
+demographics:
+  black:
+    ppl: 0.182
+    sex_type:
+      MSM:
+        ppl: 1.0
+        sex_role:
+          init:
+            versatile: 0.200
+            insertive: 0.480
+            receptive: 0.320
+        safe_sex:
+          Main:
+            prob: 0.275
+          Casual:
+            prob: 0.409
+        prep:
+          discontinue: 0.034  # calibration
+          adherence: 0.565
+          cap: 0.028
+          init: 0.252
+        drug_type:
+          None:
+            ppl: 1.0
+            hiv:
+              init: 0.355
+              dx:
+                init: 0.920
+                prob: 0.198
+              aids:
+                init: 0.500
+            haart:
+              init: 0.830
+              enroll:
+                enroll_0:
+                  start: 0
+                  stop: 2
+                  prob: 0.709
+                enroll_1:
+                  start: 2
+                  stop: 4
+                  prob: 0.212
+                enroll_2:
+                  start: 4
+                  stop: 13
+                  prob: 0.051
+                enroll_3:
+                  start: 13
+                  stop: 9999
+                  prob: 0.0
+              reinit:
+                prob: 0.035
+              adherence:
+                init: 0.489
+                prob: 0.489
+                discontinue: 0.0689
+              discontinue: 0.014
+            exit:
+              death:
+                base: 1.512
+            num_partners:
+              Main:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value_type: float
+                    value: 1.56
+                  2:
+                    value_type: float
+                    value: 0.59
+              Casual:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value_type: float
+                    value: 0.67
+                  2:
+                    value_type: float
+                    value: 0.06
+  latino:
+    ppl: 0.261
+    sex_type:
+      MSM:
+        ppl: 1.0
+        sex_role:  # calibration
+          init:
+            insertive: 0.220
+            receptive: 0.195
+            versatile: 0.585
+        safe_sex:
+          Main:
+            prob: 0.183
+          Casual:
+            prob: 0.341
+        prep:
+          discontinue: 0.025  # calibration
+          adherence: 0.719
+          cap: 0.026
+          init: 0.234
+        drug_type:
+          None:
+            ppl: 1.0
+            hiv:
+              init: 0.20
+              dx:
+                init: 0.920
+                prob: 0.055
+              aids:
+                init: 0.487
+            haart:
+              init: 0.860
+              enroll:
+                0:
+                  prob: 0.778
+                  start: 0
+                  stop: 1
+                1:
+                  prob: 0.193
+                  start: 1
+                  stop: 3
+                2:
+                  prob: 0.037
+                  start: 3
+                  stop: 12
+                3:
+                  start: 12
+                  stop: 9999
+                  prob: 0.0
+              reinit:
+                prob: 0.032
+              adherence:
+                init: 0.719
+                prob: 0.719
+                discontinue: 0.0115
+              discontinue: 0.0069  # calibration
+            exit:
+              death:
+                base: 0.792
+            num_partners:
+              Main:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value_type: float
+                    value: 1.37
+                  2:
+                    value_type: float
+                    value: 0.58
+              Casual:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value_type: float
+                    value: 0.46
+                  2:
+                    value_type: float
+                    value: 0.03
+  white:
+    ppl: 0.557
+    sex_type:
+      MSM:
+        ppl: 1.0
+        safe_sex:
+          Main:
+            prob: 0.126
+          Casual:
+            prob: 0.277
+        sex_role:
+          init:
+            insertive: 0.439
+            receptive: 0.286
+            versatile: 0.275
+        prep:
+          discontinue: 0.014
+          adherence: 0.738
+          cap: 0.031
+          init: 0.279
+        drug_type:
+          None:
+            ppl: 1.0
+            hiv:
+              init: 0.111
+              dx:
+                init: 0.920
+                prob: 0.155
+              aids:
+                init: 0.471
+            haart:
+              init: 0.860
+              enroll:
+                0:
+                  start: 0
+                  stop: 2
+                  prob: 0.742
+                1:
+                  start: 2
+                  stop: 4
+                  prob: 0.163
+                2:
+                  start: 4
+                  stop: 13
+                  prob: 0.029
+                3:
+                  start: 13
+                  stop: 9999
+                  prob: 0.0
+              reinit:
+                prob: 0.041
+              adherence:
+                init: 0.790
+                prob: 0.790
+                discontinue: 0.0745
+              discontinue: 0.00883
+            exit:
+              death:
+                base: 0.1
+            num_partners:
+              Main:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value_type: float
+                    value: 1.02
+                  2:
+                    value_type: float
+                    value: 0.48
+              Casual:
+                dist_type: negative_binomial
+                vars:
+                  1:
+                    value_type: float
+                    value: 0.57
+                  2:
+                    value_type: float
+                    value: 0.03

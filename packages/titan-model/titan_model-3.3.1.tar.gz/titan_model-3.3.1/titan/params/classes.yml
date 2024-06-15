@@ -1,0 +1,209 @@
+classes:
+  races:
+    type: definition
+    description: Races included in model
+    fields:
+      hispanic:
+        type: boolean
+    default:
+      white:
+        hispanic: false
+      black:
+        hispanic: false
+  sex_types:
+    description: "Which sex types to use in model"
+    type: definition
+    fields:
+      gender:
+        type: enum
+        values:
+          - M
+          - F
+          - O
+      cis_trans:
+        type: enum
+        values:
+          - cis
+          - trans
+      sleeps_with:
+        type: keys
+    default:
+      HM:
+        gender: M
+        cis_trans: cis
+        sleeps_with:
+          - HF
+          - MTF
+      HF:
+        gender: F
+        cis_trans: cis
+        sleeps_with:
+          - HM
+      MSM:
+        gender: M
+        cis_trans: cis
+        sleeps_with:
+          - MSM
+          - MTF
+      WSW:
+        gender: F
+        cis_trans: cis
+        sleeps_with:
+          - WSW
+          - MTF
+      MTF:
+        gender: F
+        cis_trans: trans
+        sleeps_with:
+          - WSW
+          - HM
+          - MSM
+  bond_types:
+    type: definition
+    description: Types of bonds relationships can have
+    fields:
+      acts_allowed:
+        type: array
+        values:
+          - sex
+          - injection
+          - pca
+    default:
+      Inj:
+        acts_allowed:
+          - injection
+      SexInj:
+        acts_allowed:
+          - injection
+          - sex
+      Sex:
+        acts_allowed:
+          - sex
+      Social:
+        acts_allowed:
+          - pca
+  drug_types:
+    default:
+      - Inj
+      - NonInj
+      - None
+    description: Types of drugs that an agent can use in the model
+    type: array
+    values:
+      - Inj
+      - NonInj
+      - None
+  distributions:
+    default:
+      - poisson
+      - gamma
+      - uniform
+      - beta
+      - pert
+      - set_value
+      - randint
+      - weibull_modified
+      - wald
+      - negative_binomial
+    description: "Which distributions are available in the model - more of a reference than a class"
+    type: array
+    values:
+      - poisson
+      - gamma
+      - uniform
+      - beta
+      - pert
+      - set_value
+      - randint
+      - wald
+      - weibull_modified
+      - negative_binomial
+  locations:
+    type: definition
+    description: Locations that exist within the model
+    fields:
+      ppl:
+        type: float
+        min: 0
+        max: 1.0
+      category:
+        type: any
+        default: ''
+        description: An arbitrary category that can be used to group locations for migration.
+    default:
+      world:
+        ppl: 1.0
+  exit:
+    type: definition
+    description: Model exit strategies
+    fields:
+      exit_type:
+        description: The type of exit mechanism to use
+        type: enum
+        values:
+          - age_out
+          - death
+          - drop_out
+          - none
+      ignore_incar:
+        description: Whether incarcerated agents should be ignored by this exit
+        type: bool
+      age:
+        description: Age at which agents leave model if `age_out` exit_type is used
+        type: int
+        min: 0
+        default: 0
+    default:
+      death:
+        exit_type: death
+        ignore_incar: true
+  enter:
+    type: definition
+    description: Model entrance strategies
+    fields:
+      enter_type:
+        description: Strategy for new agents to enter, from `new_agent`, `replace`, or `none`
+        type: enum
+        values:
+          - new_agent
+          - replace
+          - none
+      age_in:
+        description: Whether agents should start at a specific age
+        type: bool
+        default: false
+      age:
+        description: Age of agents at entrance, if age_in is true
+        type: int
+        min: 0
+        default: 16
+      prob:
+        description: probability the agent will be replaced
+        type: float
+        min: 0.
+        default: 1.0
+    default:
+      replace:
+        enter_type: replace
+  age_bins:
+    type: definition
+    description: Bin of ages into categories for use in assortative mixing by age. Will error if the agent's age is not in a bin.
+    fields:
+      min_age:
+        description: Lower bound (inclusive) of this "bin".
+        type: int
+        min: 0
+      max_age:
+        description: Upper bound (inclusive) of this "bin".
+        type: int
+        min: 0
+    default:
+      0:
+        min_age: 0
+        max_age: 24
+      1:
+        min_age: 25
+        max_age: 54
+      2:
+        min_age: 55
+        max_age: 9999
