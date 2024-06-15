@@ -1,0 +1,17 @@
+utiles-0.5.0.dist-info/METADATA,sha256=bGlCRvwNaDNzTKHoMnKO7VvSWkhay3dGVJ74tyYibDk,13536
+utiles-0.5.0.dist-info/WHEEL,sha256=f19mKQM7gePxhRSmnhDJCncxUbJS8IrlDfIxXKE45Qs,95
+utiles-0.5.0.dist-info/entry_points.txt,sha256=tf-eJqdiqcu0MuKd5qmA_Fr50iAsJSKCYUhftlkzUGM,177
+utiles/cli.py,sha256=d-DWfa3QGKupO9e-Y__0pUxdEfbu6GKEmouU1AtPvvs,471
+utiles/dev/testing.py,sha256=6wm8nWA09PSBxnJaANheU9Z9Upiy-4xSGSb8ZHsiYgo,2681
+utiles/dev/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utiles/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utiles/rio_plugin.py,sha256=zwxk-ypouVJjT28TWmAkcBAufXPoh3SvZ671B4Dy07A,134
+utiles/_click.py,sha256=jC0i_-3AMpogRSXUpGyxPhDOow-XuubFL245c9siprY,1217
+utiles/_legacy/cli.py,sha256=cT79gMeiXTDSu437xq3REc6e_ptNHgFd3mdt7uhUsuI,16629
+utiles/_legacy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utiles/_utiles.pyi,sha256=NRrTj-5-aoqZeShnjB4_if6XgzGRw2K3SSbdGGdl6gk,7912
+utiles/__about__.py,sha256=srTOgjwqM6yctkBkJvDpXhwAmSyVC7AwiPR0757XXKA,398
+utiles/__init__.py,sha256=Zse1oM2YFYbOr-QY8IJwkPDycOnIBompygCilg2-Wfg,3972
+utiles/__main__.py,sha256=mAmhn2PKio8khFv3bZ-zWBJt37IzA4eg5ef2LZ71XqI,973
+utiles/_utiles.cp312-win_amd64.pyd,sha256=GHlvl2u4YPxUmgbcDPk8zvGHKS0QLw1n39bN-X4BdJA,8568320
+utiles-0.5.0.dist-info/RECORD,,
