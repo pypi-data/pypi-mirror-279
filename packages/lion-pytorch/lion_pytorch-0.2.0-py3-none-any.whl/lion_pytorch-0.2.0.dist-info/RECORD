@@ -1,0 +1,9 @@
+lion_pytorch/__init__.py,sha256=10qKcx4WZEkjhQtzz_g3WsceYPGwZwy656mQIj7EAE4,43
+lion_pytorch/foreach.py,sha256=9928c-XwZSupSx5RuCYc31p8j_LhQ2GuyuhbxL27zck,2158
+lion_pytorch/lion_pytorch.py,sha256=3exL1waEhLWnp7ph0UVoPU_yC0gr0O12CZWDNs3sytU,2143
+lion_pytorch/triton.py,sha256=pAxbEcCJBxEY-slvJw2LGSzccGZMDYsYCycwzOeCUv8,2094
+lion_pytorch-0.2.0.dist-info/LICENSE,sha256=JCo3d2HvOFPGYvaXfnYX4-qjRyQvVElop5ZRITXMg-U,1066
+lion_pytorch-0.2.0.dist-info/METADATA,sha256=rGAsFZpzY8-KC3FcQhsPhNRu7B8G5Qx2LGl9HIlzaUE,618
+lion_pytorch-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lion_pytorch-0.2.0.dist-info/top_level.txt,sha256=TVA0RlPJSEOmPVITAL-ohRa3MC4dzRwthjclG3RnM3U,13
+lion_pytorch-0.2.0.dist-info/RECORD,,
