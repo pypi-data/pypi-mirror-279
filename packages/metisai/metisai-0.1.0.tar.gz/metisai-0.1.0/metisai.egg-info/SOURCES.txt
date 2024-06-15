@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+metisai/__init__.py
+metisai/metisbot.py
+metisai/metistypes.py
+metisai/metisuser.py
+metisai.egg-info/PKG-INFO
+metisai.egg-info/SOURCES.txt
+metisai.egg-info/dependency_links.txt
+metisai.egg-info/not-zip-safe
+metisai.egg-info/top_level.txt
+metisai/async_metis/__init__.py
+metisai/async_metis/asyncmetis.py
+metisai/async_metis/asyncmetisuser.py
+tests/test.py
+tests/test_async.py
