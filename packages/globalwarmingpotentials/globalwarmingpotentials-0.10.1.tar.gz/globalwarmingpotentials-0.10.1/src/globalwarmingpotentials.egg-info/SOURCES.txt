@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+versioneer.py
+src/globalwarmingpotentials/__init__.py
+src/globalwarmingpotentials/_version.py
+src/globalwarmingpotentials/globalwarmingpotentials.csv
+src/globalwarmingpotentials.egg-info/PKG-INFO
+src/globalwarmingpotentials.egg-info/SOURCES.txt
+src/globalwarmingpotentials.egg-info/dependency_links.txt
+src/globalwarmingpotentials.egg-info/top_level.txt
