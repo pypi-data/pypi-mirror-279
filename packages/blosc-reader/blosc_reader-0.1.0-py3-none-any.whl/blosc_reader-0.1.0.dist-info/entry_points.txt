@@ -1,0 +1,2 @@
+[console_scripts]
+blosc_reader = blosc_reader.blosc_reader:blosc_reader
