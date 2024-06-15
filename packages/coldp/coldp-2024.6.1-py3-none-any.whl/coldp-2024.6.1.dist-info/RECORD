@@ -1,0 +1,9 @@
+coldp/__init__.py,sha256=5KTWYARrRzg67KTuscAzf2Py1LRueYJ90NvQSpiu8_I,57
+coldp/coldp.py,sha256=Xmi2CkXdl2mhe9fz4x0FbY9BRJ0k5jJJQ420xXZd-U4,126357
+coldp/coldp_add.py,sha256=NzJHVmFJtLT5BhbZWTJmyzMtYcEH4BEBH8ZKMoj1TnY,6807
+coldp/coldp_distribution.py,sha256=Q84WxNZGipUNAZiua39Wk3Je2KG65ssuLHm886OW9z0,10909
+coldp/testit.py,sha256=ur-NBDCprCob8XaYyIEu90JxdBHSluYK9JoOOAyvrF0,855
+coldp-2024.6.1.dist-info/METADATA,sha256=5ASuFhh6grsj8ZaEpmsR5KCizOP7NA_lfQZ6N7n-8pc,4606
+coldp-2024.6.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+coldp-2024.6.1.dist-info/licenses/LICENSE,sha256=VLTrwez6TSaDzeeNzGwuRFQCCCusrM26fZSxw2ZfZIs,1093
+coldp-2024.6.1.dist-info/RECORD,,
