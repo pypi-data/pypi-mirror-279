@@ -1,0 +1,13 @@
+clause_analysis/__init__.py,sha256=98p1pUvsMbWnyoU-iRJbB0MEF2LzxjorXok4SPLZD-M,147
+clause_analysis/clause_analyzer.py,sha256=ttB1sZT8sSTvqIZmSFADXztzcQn8NfE0e4h4LvrG6Fc,4906
+clause_analysis/passive_tense_classifier.py,sha256=udB0uiAbThlxHYHhgeQe5-dzwJ3a_i-lXRWcKuKnzB0,3940
+clause_analysis/tense_analyzer.py,sha256=XjYIpElLqFhF7QFKCz1HXIfQN3pIRCQ9i73jv6AgkLc,13464
+tests/__init__.py,sha256=OrFRGt_fdSYjolLXUzjSX2CIn1cOAm6l47ENNAkwmgQ,83
+tests/test_clause_analyzer.py,sha256=l1TB_QSzHJuLx4lTU3S3qD2pHlcq-5ovZZNcHJ8i9xY,681
+tests/test_passive_tense_classifier.py,sha256=lR3X1wpYOva6BCh9sbacjA1BUKswyp68SAzyrrQf6d4,487
+tests/test_tense_analyzer.py,sha256=pfUVCCUphI8qa9KinT6bCfVZiUfI0QNOE1HsJh1HNOk,437
+clause_analysis-0.1.0.dist-info/METADATA,sha256=Mf-GvwXJra-NQJBr1qV5bNv9_FH20o1GdlfQLkhjOW8,694
+clause_analysis-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+clause_analysis-0.1.0.dist-info/entry_points.txt,sha256=DYy0o38l8OmztL9qVCtJpxTzgM_nzy-ifkU0cYjrqjk,199
+clause_analysis-0.1.0.dist-info/top_level.txt,sha256=CfsakgF52TWbnachkgDpr8DtQlmvRYSGaXgpb_1_7cM,22
+clause_analysis-0.1.0.dist-info/RECORD,,
