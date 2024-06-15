@@ -1,0 +1,2 @@
+[console_scripts]
+faunanet = faunanet.repl:run
