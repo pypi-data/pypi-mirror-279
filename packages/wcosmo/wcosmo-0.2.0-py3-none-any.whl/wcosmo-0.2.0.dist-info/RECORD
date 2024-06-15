@@ -1,0 +1,15 @@
+wcosmo/__init__.py,sha256=K2j3lDMYcsT_anl-2wfgcm3Ueoo0EP23q3Ujtv_3whE,22
+wcosmo/_version.py,sha256=H-qsvrxCpdhaQzyddR-yajEqI71hPxLa4KxzpP3uS1g,411
+wcosmo/taylor.py,sha256=-ryQftSL_bnPZlUQmpSpU1zQqTnezmOcyWsdp-_gpGY,5968
+wcosmo/utils.py,sha256=kXYMs_AWdD45PzQAyU-QbFaF21QAV1QowZEozQDuSSM,2788
+wcosmo/wcosmo.py,sha256=h6spDAJ4541XZSNxF7_V5UK22H9-lxfBS5Xovlz3Er0,13928
+wcosmo/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+wcosmo/test/conftest.py,sha256=ifdvFhmwFgSx-O1Uw1oYRPJ2sdtzUuOWH75VZ-FhcX0,526
+wcosmo/test/test_cosmo.py,sha256=bLRkuiL6L3OAqT_CJJbPf1iqI9zdrdmQV0pCNND1ksQ,1318
+wcosmo/test/test_utils.py,sha256=gNkpycGwsaibps3KpIsvX9cqKjNdL_9PX5gUOQy1qeQ,1062
+wcosmo-0.2.0.dist-info/LICENSE,sha256=k975Q2hX1P-z6sESJBrWn6usVaOhTPjKlMEr_Gplc2k,1068
+wcosmo-0.2.0.dist-info/METADATA,sha256=mUuTGlC9a6kk2dXB2ayI2pTnGbGYh_NOZqg1SVg9YmI,3177
+wcosmo-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+wcosmo-0.2.0.dist-info/entry_points.txt,sha256=7If4bV4FCFBZuxRgwvw54vepy9g-wcK3UFW1StivGlo,173
+wcosmo-0.2.0.dist-info/top_level.txt,sha256=X-GPFVt5VaWCGB7kymL7Vf9BMdBl6YpqNNar48YJJkc,7
+wcosmo-0.2.0.dist-info/RECORD,,
