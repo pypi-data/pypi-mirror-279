@@ -1,0 +1,16 @@
+trixellookupclient-0.0.0.dist-info/METADATA,sha256=1lBN4wPBl7mubToF5GH4WuOAu1igilxZl2y_aA0u5KA,6079
+trixellookupclient-0.0.0.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+trixellookupclient-0.0.0.dist-info/licenses/LICENSE,sha256=25k89XYJWV6SBtzMQm3lnb0_6_9Jtx--9IGNUX6DkAs,1075
+trixellookupclient/__init__.py,sha256=CwqNOC40z-VWaTSzxleSyNJwxErezwpo7PbkiLHnxc8,166
+trixellookupclient/api/__init__.py,sha256=87ApBzKyGb5zsgTMOkQXDqsLZCmaSFoJMwbGzCDQZMw,47
+trixellookupclient/api/default/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trixellookupclient/api/default/ping_ping_get.py,sha256=xi0VWjb-bcLPV0N7Rda4lOZJVz9SVy2er9B9-6_PkY8,3378
+trixellookupclient/api/default/version_version_get.py,sha256=BjqTZZKcUrfcTOBioPolXT6RxI-yz6Fw83DjITabIP8,3632
+trixellookupclient/client.py,sha256=uRvzE9SBVAnGemJOUFXn_9wPSpLEbHt0CpaxjzeWaGs,12417
+trixellookupclient/errors.py,sha256=trp-p5qn1_JLRxGZhdHtICaNPaCrcDCe4TgIihBravk,546
+trixellookupclient/models/__init__.py,sha256=9KGBGGrY4fq9QB6p-10_87-m6Zxk6ZJukvX51M9NfM8,155
+trixellookupclient/models/ping.py,sha256=_Ur2uYSCGvnjFeJ5rby32DdlXtNR9xkTJJVw5lJYywM,1670
+trixellookupclient/models/version.py,sha256=yWAxCwha815THNzh1XKuGJLoB1ogsPMzSp9fy8QkP5o,1556
+trixellookupclient/py.typed,sha256=8ZJUsxZiuOy1oJeVhsTWQhTG_6pTVHVXk5hJL79ebTk,25
+trixellookupclient/types.py,sha256=qCXPeAPkr87pxSCNy3Mr8FVNjxaFefifST7-KrMoQac,997
+trixellookupclient-0.0.0.dist-info/RECORD,,
