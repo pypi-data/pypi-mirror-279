@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: mattattack
+Version: 0.0.1
+Summary: Please, for the love of God, don't use this package
+Home-page: http://itappsec.com
+Author: itappsec
+Author-email: matt@itappsec.com
+Project-URL: Bug Tracker, http://itappsec.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Don't use this whatsoever
