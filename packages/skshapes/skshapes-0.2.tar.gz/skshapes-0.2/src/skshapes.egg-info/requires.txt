@@ -1,0 +1,17 @@
+torch
+torchdiffeq
+numpy
+pykeops
+geomloss
+jaxtyping
+beartype==0.17.2
+pyvista
+vedo
+fast-simplification
+fast-edges-extraction
+
+[all]
+skshapes[taichi]
+
+[taichi]
+taichi
