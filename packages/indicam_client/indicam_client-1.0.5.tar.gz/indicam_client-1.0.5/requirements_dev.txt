@@ -1,0 +1,13 @@
+-r requirements.txt
+aioresponses
+bump2version
+coverage
+flake8
+flit
+pytest
+setuptools
+Sphinx
+tox
+twine
+watchdog
+wheel
