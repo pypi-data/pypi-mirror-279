@@ -1,0 +1,1 @@
+import{dK as n,M as o}from"./index-lT0LPxUj.js";const u=n("network-graph",()=>{const e=o({graph:null});return{mount:r=>{var t;e.graph=r,e.graph.resizeObserver.observe((t=e.graph.selector)==null?void 0:t.node().parentNode),e.graph.init()},state:e,unmount:()=>{var r;(r=e.graph)==null||r.resizeObserver.disconnect(),e.graph=null}}});export{u};
