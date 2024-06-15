@@ -1,0 +1,3 @@
+[console_scripts]
+mmuxer = mmuxer.__main__:app
+
