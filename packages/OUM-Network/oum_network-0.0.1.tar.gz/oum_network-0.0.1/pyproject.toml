@@ -1,0 +1,24 @@
+[tool.setuptools]
+packages = ["oumnetwork"]
+
+[project]
+name = "OUM-Network"
+version = "0.0.1"
+authors = [
+  { name="OumDev", email="you@example.com" },
+]
+description = "OUM_Network is an implementation of Kademlia designed for decentralized AI."
+readme = "README.md"
+requires-python = ">=3.5"
+classifiers = [
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.5",
+  "Programming Language :: Python :: 3.6",
+  "Programming Language :: Python :: 3.7",
+]
+dependencies = [
+  "rpcudp >= 4.0.1",
+]
