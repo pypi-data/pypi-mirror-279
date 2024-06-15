@@ -1,0 +1,76 @@
+Metadata-Version: 2.3
+Name: coldp
+Version: 2024.6.1
+Summary: Python tools for working with taxonomic checklists organised as Catalogue of Life Data Package (COLDP) format
+Project-URL: Homepage, https://github.com/dhobern/py-coldp
+Project-URL: Issues, https://github.com/dhobern/py-coldp/issues
+Author-email: Donald Hobern <dhobern@gmail.com>
+License: MIT License
+        
+        Copyright (c) [2024] [Donald Hobern]
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Keywords: COLDP,Catalogue of Life,taxonomic checklist
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: pandas
+Provides-Extra: doc
+Requires-Dist: sphinx; extra == 'doc'
+Requires-Dist: sphinx-paramlinks; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest; extra == 'test'
+Description-Content-Type: text/markdown
+
+# py-coldp
+ Python tools for working with taxonomic checklists organised as Catalogue of Life Data Package (COLDP) format
+
+# Overview
+py-coldp is a Python package to facilitate creation, manipulation, editing and serialisation of taxonomic checklists in the [Catalogue of Life Data Package](https://github.com/CatalogueOfLife/coldp ) format.
+
+The package includes two classes:
+* **COLDP** - A COLDP package loaded as a set of Pandas dataframes
+* **NameBundle** - A helper class to simplify addition of taxon names with sets of associated synonyms to a COLDP instance
+
+# Class: COLDP
+The main **COLDP** class instantiates a COLDP package in memory as a set of Pandas dataframes. An instance may be initialised from the contents of a folder containing a set of COLDP-compliant CSV or tab-delimited data files or alternatively can be initialised as an empty instance in memory. The class includes many methods for inserting new data, editing existing records and querying the contents of the package. The instance can then be saved as a set of CSV files in a named folder .
+
+# Class: NameBundle
+
+The **NameBundle** class brings together a scientific name and its synonyms so that these can be added together and the COLDP package can automatically manage their relationships NameBundle objects are normally created using the COLDP.**start_name_bundle()** method. 
+
+At minimum a NameBundle is initialised with a dictionary holding a set of COLDP name record values. The scientific name represented by this dictionary should be the accepted name for a species or other taxon. Synonyms may then be added to the NameBundle. 
+
+Once all names are included, the NameBundle can be added to the COLDP object via the COLDP.**add_names()** method. This adds name, taxon and synonym records for the set of names supplied. COLDP options may expand the set of added synonyms to include variant formats or may trigger the addition of one or taxa that are implicit in the accepted name. 
+
+The COLDP object will automatically manage record identifiers and the basionymID for any name records that are combinations of another name in the set.
+
+# Installation
+```console
+pip install py-coldp
+```
+
+# Documentation
+[Browsable documentation for COLDP version: 2024.6.1](https://html-preview.github.io/?url=https://github.com/dhobern/py-coldp/blob/main/docs/build/html/index.html)
+
+[PDF documentation for COLDP version: 2024.6.1](https://github.com/dhobern/py-coldp/blob/main/docs/build/simplepdf/COLDP.pdf)
