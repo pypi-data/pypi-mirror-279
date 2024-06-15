@@ -1,0 +1,15 @@
+groqchat/README.md,sha256=Oxdub9NMiSS8l77aYXuAUnZrkLMujSddb1JUS4vWThY,1938
+groqchat/__init__.py,sha256=QnU7E1wAIcs6m7Z1cAipMS7Sr8iCUQgRvgsfM0mwdyM,5656
+groqchat/config.py,sha256=IkS1pLmU5jspx8LXTVjPh6craegXea_pf0QZef7DTaw,1271
+groqchat/main.py,sha256=V_4uv3uBUxufb1FSy4kGbNz0AlCdPSks0s-xG56lrpM,12996
+groqchat/requirements.txt,sha256=oZz8xJQNK2NxN9muaSuKW1Ec9RsO9BER30Yi_neh-1o,56
+groqchat/utils/promptValidator.py,sha256=JeUXsurqICpHjGAje9Ol40qO-6gWNQpCUL_PGXO0oJw,1548
+groqchat/utils/single_prompt.py,sha256=yKQDaq-UYSVp3P2BXvMAbIsTQ8V1afqqIuwVuyf_fD4,2757
+groqchat/utils/streaming_word_wrapper.py,sha256=dV4bBXVEHm9y6HY3ANlxe54JPJSgjaUk3cnK8_WXLjk,7998
+groqchat/utils/terminal_mode_dialogs.py,sha256=4MG_dV5KFyLPqNrr7In2ktWpKTQzdrez_A8IdULPu7U,4779
+groqchat/utils/tts_utils.py,sha256=SEu-srJwZ8HuI3DfRn1QYTWQmv0feCU2AGrATYeC6hM,4842
+groqchat-0.0.6.dist-info/METADATA,sha256=RnWzuaRmxA-g8caMfDFwZoHga2OM8z6tbq_MfRgnpcs,3184
+groqchat-0.0.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+groqchat-0.0.6.dist-info/entry_points.txt,sha256=WPVkWOaJtXPaVKmDC8VfsO5w_tpteXHks9Je3FxRNbk,46
+groqchat-0.0.6.dist-info/top_level.txt,sha256=0Fw1cwuFF7T0eSOvXoXcwZylPySQcmrOQbfbQpXqwX0,9
+groqchat-0.0.6.dist-info/RECORD,,
