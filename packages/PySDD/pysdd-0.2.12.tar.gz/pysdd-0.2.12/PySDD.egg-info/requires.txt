@@ -1,0 +1,9 @@
+cython>=3.0.0
+
+[all]
+cysignals
+numpy
+
+[dev]
+pytest
+cython>=3.0.0
