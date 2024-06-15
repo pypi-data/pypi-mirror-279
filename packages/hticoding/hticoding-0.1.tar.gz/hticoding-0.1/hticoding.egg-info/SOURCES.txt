@@ -1,0 +1,8 @@
+setup.py
+hticoding/__init__.py
+hticoding/hticoding.py
+hticoding.egg-info/PKG-INFO
+hticoding.egg-info/SOURCES.txt
+hticoding.egg-info/dependency_links.txt
+hticoding.egg-info/requires.txt
+hticoding.egg-info/top_level.txt
