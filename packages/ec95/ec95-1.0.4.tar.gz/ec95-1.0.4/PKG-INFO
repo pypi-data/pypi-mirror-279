@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ec95
+Version: 1.0.4
+Summary: xD
+Author: qdzzzxc
+Keywords: example python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
