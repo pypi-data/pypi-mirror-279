@@ -1,0 +1,21 @@
+{
+  "name": "velocem",
+  "version": "0.0.6",
+  "description": "Hyperspeed Python Web Framework",
+  "homepage": "https://github.com/nickelpro/velocem",
+  "maintainers": [
+    "Vito Gamberini <vito@gamberini.email>"
+  ],
+  "license": "MIT-0",
+  "dependencies": [
+    "llhttp",
+    "asio"
+  ],
+  "vcpkg-configuration": {
+    "default-registry": {
+      "kind": "git",
+      "baseline": "f7423ee180c4b7f40d43402c2feb3859161ef625",
+      "repository": "https://github.com/microsoft/vcpkg.git"
+    }
+  }
+}
