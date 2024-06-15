@@ -1,0 +1,6 @@
+py4j==0.10.9.1
+docopt
+concurrent_log_handler
+pydantic
+rdflib==7.0.0
+requests
