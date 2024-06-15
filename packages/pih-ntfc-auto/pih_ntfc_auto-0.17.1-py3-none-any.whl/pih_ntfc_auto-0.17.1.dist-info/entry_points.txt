@@ -1,0 +1,2 @@
+[console_scripts]
+pih-ntfc_auto = NotificationAutomationService.__main__:start
