@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: xRedUtils
+Version: 1.0.5.post1
+Summary: Simple, general purpose functions in one place!
+Author: xRedCrystalx
+Project-URL: Homepage, https://github.com/xRedCrystalx/RedUtils
+Project-URL: Issues, https://github.com/xRedCrystalx/RedUtils/issues
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.12
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+xRedUtils
+=========
+
+General useful python functions
+
+This is a simple library with many functions and modules that I normally use in my projects.
+
+Instalation
+-----------
+
+.. code-block:: sh
+
+    pip install xRedUtils
+
+Usage
+-----
+
+.. code-block:: python
+
+    import xRedUtils
+    xRedUtils.main_test()
+
+Output:
+
+.. code-block:: sh
+
+    All checks passed!
+
+Documentation
+-------------
+
+WIP - Still trying to figure this out, for now, every function has ``docstring``.
+
+License
+-------
+
+MIT License - `Here! <https://github.com/xRedCrystalx/xRedUtils/tree/main/LICENSE>`_
