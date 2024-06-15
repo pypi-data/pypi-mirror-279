@@ -1,0 +1,8 @@
+unconscious-0.0.12.dist-info/METADATA,sha256=hX94OFSyy0AFMDHLwKMz6kffOFu_TT1jYeCmR5NA7ns,387
+unconscious-0.0.12.dist-info/WHEEL,sha256=F8bhxxBhhDpxcS1oqLuS0KBGd0CVp5bir6DlxbG0gFU,131
+unconscious-0.0.12.dist-info/entry_points.txt,sha256=iSkTKNRakkKkkAJ7BKY0k-NAKxyA3L4g6NK7ynCx7eA,65
+unconscious/__init__.py,sha256=fXs67tHHbd_L-1julr2lAvQQBheeiaqQk_6v3rQoURc,1373
+unconscious/agent.py,sha256=g6_RUJqyS5fxL-kdvdKPxVL-quNZ3ksheTWFLzccusI,2639
+unconscious/client.py,sha256=bWCZ0b1qKS9f5hAhgQUjcTAYjJvq0NX3DK4SFtmIRNE,3851
+unconscious/_unconscious.cpython-310-aarch64-linux-gnu.so,sha256=5_EGvY1inILC2Gl4ZiDScXNFhUfrzmoUXsMFjnWg1jM,4378248
+unconscious-0.0.12.dist-info/RECORD,,
