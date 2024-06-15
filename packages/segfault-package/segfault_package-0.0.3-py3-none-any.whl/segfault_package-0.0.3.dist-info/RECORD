@@ -1,0 +1,8 @@
+libsegfault.dll,sha256=KYhSA26104RaZXg_1l6n_j_kFeU_ZlQslbRgpNXpaiw,70382
+libsegfault.so,sha256=D1Zk9BBX3eh2pWGiw1yBm6tNKqp1q-c0Uh_lFmIwgIo,70382
+segfault/__init__.py,sha256=660cljVoHRbKVV3ZtjLIjG5qXwHBv7dHMy8cq9T7gIQ,36
+segfault/segfault.py,sha256=TQS4a43phVEaNF0Nd8qfK1Gc3u7SraikanAewwgRfKo,584
+segfault_package-0.0.3.dist-info/METADATA,sha256=xhCnL_UVZwnQh6sSAMfLuG0F2-isXKrek7jw1TH866s,1917
+segfault_package-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+segfault_package-0.0.3.dist-info/top_level.txt,sha256=xmtuRMSUV7L_QjLAMXJIhRQmMsOhPP3dBKaordD9YJg,9
+segfault_package-0.0.3.dist-info/RECORD,,
