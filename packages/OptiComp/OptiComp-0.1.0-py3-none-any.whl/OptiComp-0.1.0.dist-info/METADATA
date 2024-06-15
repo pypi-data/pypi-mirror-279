@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: OptiComp
+Version: 0.1.0
+Summary: Library to easily compare optimizers on a custom or common objective.
+Home-page: https://github.com/OptiComp/OptiComp
+Author: SJWRD
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: tqdm
+
