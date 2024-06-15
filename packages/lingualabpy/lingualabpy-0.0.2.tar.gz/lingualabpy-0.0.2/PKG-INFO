@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: lingualabpy
+Version: 0.0.2
+Summary: Tools and utilities from the LINGUA laboratory
+Author-email: Christophe Bedetti <christophe.bedetti@umontreal.ca>
+Requires-Python: >=3.8.1
+Description-Content-Type: text/markdown
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: click
+Requires-Dist: pandas
+Requires-Dist: praat-parselmouth
+Requires-Dist: praat-textgrids
+Requires-Dist: pydub
+Requires-Dist: python-docx
+Requires-Dist: lingualabpy[tests, docs, lint, feature] ; extra == "dev"
+Requires-Dist: black ; extra == "lint"
+Requires-Dist: pytest ; extra == "tests"
+Requires-Dist: pytest-cov ; extra == "tests"
+Project-URL: Documentation, https://github.com/lingualab/lingualabpy
+Project-URL: Source, https://github.com/lingualab/lingualabpy
+Project-URL: Tracker, https://github.com/lingualab/lingualabpy/issues
+Provides-Extra: dev
+Provides-Extra: docs
+Provides-Extra: feature
+Provides-Extra: lint
+Provides-Extra: tests
+
+# lingualabpy
+
+Tools and utilities from the LINGUA laboratory
+
+These tools are used in the pipeline [speechmetryflow](https://github.com/lingualab/speechmetryflow)
