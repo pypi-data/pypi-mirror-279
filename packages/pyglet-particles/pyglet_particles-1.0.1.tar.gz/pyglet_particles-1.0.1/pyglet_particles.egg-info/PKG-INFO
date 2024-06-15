@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pyglet_particles
+Version: 1.0.1
+Author: Sombra Studio
+Project-URL: Homepage, https://github.com/sombra-studio/pyglet-particle-system
+Project-URL: Issues, https://github.com/sombra-studio/pyglet-particle-system/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pyglet
+
+# pyglet-particle-system
+
+Particle Effects for Python with Pyglet using a system with Physical Simulation
+and 2D Sprites
+
+![preview](pyglet-particles.gif)
+An example using the particles
+
+## Dependencies
+
+To use it you need:
+
+- Python v3.7 or above
+- pyglet
+- numpy
+
+
+## Usage
+
+Install the package by running: `pip install .` in this directory.
+
+You can see an example in the file **main.py**, and you can run it like this:
+
+`$ python main.py`
+
