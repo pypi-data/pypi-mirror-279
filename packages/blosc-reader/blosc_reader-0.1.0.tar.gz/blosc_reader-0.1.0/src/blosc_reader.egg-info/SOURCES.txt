@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+./LICENSE
+./README.md
+src/blosc_reader/__init__.py
+src/blosc_reader/blosc_reader.py
+src/blosc_reader.egg-info/PKG-INFO
+src/blosc_reader.egg-info/SOURCES.txt
+src/blosc_reader.egg-info/dependency_links.txt
+src/blosc_reader.egg-info/entry_points.txt
+src/blosc_reader.egg-info/requires.txt
+src/blosc_reader.egg-info/top_level.txt

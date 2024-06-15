@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: blosc_reader
+Version: 0.1.0
+Summary: A simple and dirty `blosc_reader` file reader and plotter.
+Home-page: https://github.com/syedalimohsinbukhari/blosc_reader
+Author: Syed Ali Mohsin Bukhari
+Author-email: syedali.b@outlook.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: blosc==1.11.1
+Requires-Dist: matplotlib==3.8.4
+Requires-Dist: setuptools==70.0.0
+
+# `blosc_reader`
+
+A simple and dirty `blosc_reader` file reader and plotter.
