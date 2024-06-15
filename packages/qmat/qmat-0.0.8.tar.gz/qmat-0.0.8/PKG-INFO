@@ -1,0 +1,100 @@
+Metadata-Version: 2.3
+Name: qmat
+Version: 0.0.8
+Summary: Generation of Q-coefficients for Spectral Deferred Corrections (and other time-integration methods ...)
+Project-URL: Homepage, https://github.com/Parallel-in-Time/qmat
+Project-URL: Documentation, https://qmat.readthedocs.io/
+Project-URL: Tracker, https://github.com/Parallel-in-Time/qmat/issues
+Maintainer-email: Thibaut Lunet <thibaut.lunet@tuhh.de>
+License: BSD 2-Clause License
+        
+        Copyright (c) 2024, Parallel-in-Time (PinT) Algorithms
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: test
+Requires-Dist: coverage[toml]; extra == 'test'
+Requires-Dist: flake8; extra == 'test'
+Requires-Dist: matplotlib; extra == 'test'
+Requires-Dist: notebook; extra == 'test'
+Requires-Dist: pytest; extra == 'test'
+Requires-Dist: pytest-notebook; extra == 'test'
+Requires-Dist: pytest-timeout; extra == 'test'
+Description-Content-Type: text/markdown
+
+# QMat Package
+
+[![CI pipeline for qmat](https://github.com/Parallel-in-Time/qmat/actions/workflows/ci_pipeline.yml/badge.svg)](https://github.com/Parallel-in-Time/qmat/actions/workflows/ci_pipeline.yml)
+[![codecov](https://codecov.io/gh/Parallel-in-Time/qmat/graph/badge.svg?token=MO0LDVH5NN)](https://codecov.io/gh/Parallel-in-Time/qmat)
+
+`qmat` is a python package to generate matrix coefficients related to Collocation methods, Spectral Deferred Corrections (SDC), 
+and more general multi-stages time-integration methods (like Runge-Kutta, etc ...).
+
+It allows to generate $Q$-coefficients for multi-stages methods (equivalent to Butcher tables) :
+
+![formula](https://qmat.readthedocs.io/en/latest/_static/formula.png)
+
+and many different **lower-triangular** approximation of the $Q$ matrix, named $Q_\Delta$,
+which are key elements for Spectral Deferred Correction (SDC), or more general Iterated Runge-Kutta Methods.
+
+
+
+## Installation
+
+🛠️ Still in construction, only installation from source is enable yet, see [current instructions ...](https://qmat.readthedocs.io/en/latest/installation.html)
+
+## Basic usage
+
+📜 _If you are already familiar with those concepts, you can use this package like this :_
+
+```python
+from qmat import genQCoeffs, genQDeltaCoeffs
+
+# Coefficients or specific collocation method
+nodes, weights, Q = genQCoeffs("Collocation", nNodes=4, nodeType="LEGENDRE", quadType="RADAU-RIGHT")
+
+# QDelta matrix from Implicit-Euler based SDC
+QDelta = genQDeltaCoeffs("IE", nodes=nodes)
+
+# Butcher table of the classical explicit RK4 method
+c, b, A = genQCoeffs("ERK4")
+```
+
+> 🔔 _If you are not familiar with SDC or related methods, and want to learn more about it, checkout the 
+> [latest documentation build](https://qmat.readthedocs.io/en/latest/) and 
+in particular the [**step by step tutorials**](https://qmat.readthedocs.io/en/latest/notebooks.html)_
+
+
+For any contribution, please checkout out (very cool) [Contribution Guidelines](https://qmat.readthedocs.io/en/latest/contributing.html)
+
