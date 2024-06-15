@@ -1,0 +1,163 @@
+Metadata-Version: 2.1
+Name: cognitrix
+Version: 0.2.5
+Summary: Package for creating AI Agents using llms
+Home-page: https://github.com/theonlyamos/cognitrix
+License: Apache2
+Keywords: cognitrix,ai,agents,ai agents,ai-agents,llms,autonomous agents
+Author: theonlyamos
+Author-email: theonlyamos@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiofiles (>=23.2.1,<24.0.0)
+Requires-Dist: aiohttp (>=3.9.3,<4.0.0)
+Requires-Dist: anthropic (>=0.17.0,<0.18.0)
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: clarifai (>=10.1.0,<11.0.0)
+Requires-Dist: cohere (>=5.5.6,<6.0.0)
+Requires-Dist: deepgram-sdk (==3.*)
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Requires-Dist: google-generativeai (>=0.4.0,<0.5.0)
+Requires-Dist: groq (>=0.4.1,<0.5.0)
+Requires-Dist: ollama (>=0.2.0,<0.3.0)
+Requires-Dist: openai (>=1.12.0,<2.0.0)
+Requires-Dist: pillow (>=10.2.0,<11.0.0)
+Requires-Dist: pyaudio (>=0.2.14,<0.3.0)
+Requires-Dist: pyautogui (>=0.9.54,<0.10.0)
+Requires-Dist: pydantic (>=2.6.2,<3.0.0)
+Requires-Dist: pydub (>=0.25.1,<0.26.0)
+Requires-Dist: python-dotenv (>=1.0.1,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: tavily-python (>=0.3.3,<0.4.0)
+Requires-Dist: together (>=0.2.11,<0.3.0)
+Requires-Dist: uuid (>=1.30,<2.0)
+Requires-Dist: uvicorn (>=0.30.1,<0.31.0)
+Requires-Dist: xmltodict (>=0.13.0,<0.14.0)
+Project-URL: Bug Tracker, https://github.com/theonlyamos/cognitrix/issues
+Project-URL: Repository, https://github.com/theonlyamos/cognitrix
+Description-Content-Type: text/markdown
+
+# Cognitrix
+
+Cognitrix is an open-source autonomous AI agents orchestrator built in Python. It allows you to create and manage AI agents with ease and integrates seamlessly with large language models (LLMs) from various providers. 
+
+## Features
+
+- **Agent Creation and Management:** Create, list, and load AI agents with customizable names, tasks, and configurations.
+- **LLM Integration:** Integrates with multiple LLM providers, including Anthropic (Claude), Cohere, Groq, Google, OpenAI, and Together.
+- **Modular Architecture:** Easily extensible, allowing the addition of new tools, agents, and LLM integrations.
+- **Conversational Interface:** Interact with AI agents through a command-line interface, providing queries and receiving responses.
+- **Tool Integration:** Agents can utilize a variety of tools, including calculators, web searches, file system browsers, and more.
+- **Autonomous Agent Mode:** Agents can operate autonomously, visually perceiving the screen, interacting with UI elements, and performing tasks.
+- **Multimodal Support:** Handles both text and image inputs/outputs, enabling multimodal interactions.
+
+## Architecture
+
+Cognitrix's architecture is designed to be highly modular and extensible:
+
+- **Agents:** The base `Agent` class and specialized classes like `AIAssistant` for creating and managing AI agents.
+- **LLMs:** A collection of classes for integrating with various LLM providers (Cohere, OpenAI, Claude, etc.).
+- **Tools:** A set of tools that agents can utilize. Each tool has a `category` attribute for grouping and management.
+- **Templates:** Customizable prompt templates guide the behavior and output formats of LLMs.
+
+More tools can be added by creating new classes that inherit from the `Tool` base class and specifying a unique `category`.
+
+## Installation
+
+```bash
+pip install cognitrix
+```
+
+Alternatively, you can install directly from GitHub:
+
+```bash
+pip install https://github.com/theonlyamos/cognitrix/archive/main.zip
+```
+
+## Usage
+
+To run Cognitrix with default settings:
+
+```bash
+cognitrix
+```
+
+To list supported LLM providers:
+
+```bash
+cognitrix --providers
+```
+
+To list created agents:
+
+```bash
+cognitrix agents
+```
+
+To list available tools:
+
+```bash
+cognitrix --tools
+```
+
+To run Cognitrix with a specific provider:
+
+```bash
+cognitrix --provider <provider_name>
+```
+
+To run Cognitrix with a specific agent:
+
+```bash
+cognitrix --agent <agent_name>
+```
+
+To run Cognitrix with a category of tools:
+
+```bash
+cognitrix --load-tools "web"
+```
+
+To run Cognitrix with categories of tools:
+
+```bash
+cognitrix --load-tools "web,general"
+```
+
+To create a new agent:
+
+```bash
+cognitrix agents --new
+```
+
+For more options and usage details, use the help command:
+
+```bash
+cognitrix --help
+```
+
+## Contributing
+
+Cognitrix is open source and contributions are welcome! Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute.
+
+## License
+
+This project is licensed under the MIT license. See [LICENSE.md](LICENSE.md) for more information.
+
+## Acknowledgments
+
+Cognitrix was created by [Amos Amissah](https://github.com/theonlyamos) and is inspired by projects like AutoGPT and GPT Engineer. Special thanks to the open-source community and AI companies providing LLM APIs.
