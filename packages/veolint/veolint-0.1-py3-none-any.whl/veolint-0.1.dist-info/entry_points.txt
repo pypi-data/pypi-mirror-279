@@ -1,0 +1,2 @@
+[flake8.extension]
+C999 = veolint.plugin:Veolint
