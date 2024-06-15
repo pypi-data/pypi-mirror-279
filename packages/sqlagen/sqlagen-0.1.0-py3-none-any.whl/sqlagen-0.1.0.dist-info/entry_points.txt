@@ -1,0 +1,14 @@
+[console_scripts]
+sqlagen=sqlagen.cli:cli_app
+
+[sqlagen.generators.model]
+dataclasses=sqlacodegen_v2.generators:DataclassGenerator
+declarative=sqlacodegen_v2.generators:DeclarativeGenerator
+declarative-dataclasses=sqlacodegen_v2.generators:DeclarativeDataclassGenerator
+sqlmodels=sqlacodegen_v2.generators:SQLModelGenerator
+tables=sqlacodegen_v2.generators:TablesGenerator
+
+[sqlagen.generators.schema]
+pydantic=sqlagen.generators.schema:PydanticSchemaGenerator
+typeddict=sqlagen.generators.schema:TypedDictSchemaGenerator
+
