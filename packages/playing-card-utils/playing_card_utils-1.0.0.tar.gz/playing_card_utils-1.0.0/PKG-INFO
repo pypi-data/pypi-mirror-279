@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: playing-card-utils
+Version: 1.0.0
+Summary: "The comprehensive Python library for all your playing card needs! Whether you’re a game developer, a hobbyist, or just someone who loves card games, pyCard is your go-to solution for creating and managing a wide variety of card games."
+License: Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)
+Author: bhadresh-dahanuwala
+Author-email: bhadresh.dahanuwala@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# py-playing-cards
