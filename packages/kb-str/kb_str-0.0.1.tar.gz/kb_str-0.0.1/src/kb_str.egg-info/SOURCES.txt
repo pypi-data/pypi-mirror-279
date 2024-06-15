@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/kb_str/__init__.py
+src/kb_str/kb_str.py
+src/kb_str.egg-info/PKG-INFO
+src/kb_str.egg-info/SOURCES.txt
+src/kb_str.egg-info/dependency_links.txt
+src/kb_str.egg-info/not-zip-safe
+src/kb_str.egg-info/requires.txt
+src/kb_str.egg-info/top_level.txt
