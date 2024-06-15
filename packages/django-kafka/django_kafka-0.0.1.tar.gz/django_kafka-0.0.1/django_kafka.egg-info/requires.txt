@@ -1,0 +1,5 @@
+django<6.0,>=4.0
+confluent-kafka==2.4.0
+avro==1.11.3
+fastavro==1.9.4
+requests==2.32.2
