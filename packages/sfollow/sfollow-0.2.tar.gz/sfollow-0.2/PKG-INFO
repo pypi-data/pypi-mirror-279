@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: sfollow
+Version: 0.2
+Summary: Follow the output of a Slurm batch job
+Author-email: European XFEL GmbH <da-support@xfel.eu>
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: BSD License
+Project-URL: Home, https://github.com/European-XFEL/sfollow
+
+``sfollow`` is a tool to follow the stdout/stderr of a Slurm job submitted
+with ``sbatch``.
+
+This is similar to the ``sattach`` command, but that only works with job
+*steps* started by ``srun``.
+
+Installation::
+
+    pip install sfollow
+
+Usage
+
+.. code-block:: shell
+
+    # Specify a job ID
+    sfollow 9251426
+
+    # Follow your most recently submitted job
+    sfollow
+
