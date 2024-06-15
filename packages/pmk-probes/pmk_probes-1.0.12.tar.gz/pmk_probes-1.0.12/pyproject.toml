@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pmk_probes"]
+
+[project]
+name = "pmk-probes"
+dynamic = ["version"]
+authors = [
+  { name="Felix Wenk", email="felix.wenk@pmk.de" },
+]
+description = "A Python package to control PMK's active oscilloscope probes."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "BSD-3-Clause"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyserial >= 3.5",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "pmk_probes/_version.py"
+
+[project.urls]
+Homepage = "http://www.pmk.de/"
+Documentation = "https://pmk-probes.readthedocs.io/en/latest/"
+Repository = "https://github.com/PMK-Probing-Solutions/pmk-probes"

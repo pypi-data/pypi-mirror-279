@@ -1,0 +1,5 @@
+Increase version number in pyproject.toml
+
+
+Build the package
+py -m build
