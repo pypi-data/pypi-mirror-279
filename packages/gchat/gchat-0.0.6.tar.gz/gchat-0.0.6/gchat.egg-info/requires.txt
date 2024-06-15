@@ -1,0 +1,4 @@
+groq
+prompt_toolkit
+sounddevice==0.4.7
+soundfile==0.12.1
