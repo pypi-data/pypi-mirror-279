@@ -1,0 +1,7 @@
+libsegfault.so,sha256=pelKnvYYqwsGotszjEl9H6ufjALsL5c3wwYG9dE7WWQ,36883
+segfault/__init__.py,sha256=660cljVoHRbKVV3ZtjLIjG5qXwHBv7dHMy8cq9T7gIQ,36
+segfault/segfault.py,sha256=Wu6PDH88fkxzO0Qkvm0tT-MDEm1U7u0lBXOIXh3VbA0,223
+segfault_package-0.0.1.dist-info/METADATA,sha256=BhkGTRTcLrMQ1k8NQeskTJTumMOZcUwrrMuh3gibens,1917
+segfault_package-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+segfault_package-0.0.1.dist-info/top_level.txt,sha256=xmtuRMSUV7L_QjLAMXJIhRQmMsOhPP3dBKaordD9YJg,9
+segfault_package-0.0.1.dist-info/RECORD,,
