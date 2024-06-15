@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+afc_imbalanced_learning/__init__.py
+afc_imbalanced_learning/afc.py
+afc_imbalanced_learning/conformal_transformation.py
+afc_imbalanced_learning/distance.py
+afc_imbalanced_learning/kernel.py
+afc_svm_imbalanced_learning.egg-info/PKG-INFO
+afc_svm_imbalanced_learning.egg-info/SOURCES.txt
+afc_svm_imbalanced_learning.egg-info/dependency_links.txt
+afc_svm_imbalanced_learning.egg-info/requires.txt
+afc_svm_imbalanced_learning.egg-info/top_level.txt

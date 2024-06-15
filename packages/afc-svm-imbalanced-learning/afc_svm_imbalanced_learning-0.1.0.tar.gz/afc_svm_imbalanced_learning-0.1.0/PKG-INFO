@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: afc_svm_imbalanced_learning
+Version: 0.1.0
+Summary: Simple implementation of the papar Adaptive Feature-Space Conformal Transformation for Imbalanced-Data Learning
+Home-page: https://github.com/KKQanT/afc-imbalanced-learning
+Author: Peerakarn
+Author-email: peerakarn.jit@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# afc-imbalanced-learning
+Simple implementation of Adaptive Feature-Space Conformal Transformationfor Imbalanced-Data Learning
