@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: py24talk
+Version: 0.0.6
+Summary: Библиотека для работы с форумом Talk 24Serv.
+Home-page: https://github.com/Taskov1ch/PyTalk24Serv
+License: MIT
+Author: Taskovich
+Author-email: qq.tynaev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (==3.9.5)
+Project-URL: Repository, https://github.com/Taskov1ch/PyTalk24Serv
+Description-Content-Type: text/markdown
+
+# PyTalk24Serv
+Я конечно понимаю что форум на платформе Discourse, но я всё же заточу проект именно под форум.
+

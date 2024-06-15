@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "py24talk"
+version = "0.0.6"
+description = "Библиотека для работы с форумом Talk 24Serv."
+authors = ["Taskovich <qq.tynaev@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Taskov1ch/PyTalk24Serv"
+repository = "https://github.com/Taskov1ch/PyTalk24Serv"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "3.9.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
