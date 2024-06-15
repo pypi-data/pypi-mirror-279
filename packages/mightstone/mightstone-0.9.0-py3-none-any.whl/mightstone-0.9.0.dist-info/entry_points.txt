@@ -1,0 +1,3 @@
+[console_scripts]
+mightstone=mightstone.cli:cli
+
