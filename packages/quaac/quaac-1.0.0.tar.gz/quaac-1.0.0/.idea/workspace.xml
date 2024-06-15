@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="84a09e7e-5cc8-463a-9906-03c6968b25f7" name="Changes" comment="refactor to improve docs and clarity" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jrkerns&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/jrkerns/quaac.git&quot;,
+    &quot;accountId&quot;: &quot;229a6dc5-0bac-4d07-8d10-657becd58ca4&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python311/Lib/encodings/cp1252.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/AppData/Local/Programs/Python/Python311/Lib/gzip.py" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2b9CE8X13rjKFta2e0G0Ad1ZKdx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "v1.0.0",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/jkern/PycharmProjects/quacs/quaac/common.py",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jkern\PycharmProjects\quacs" />
+      <recent name="C:\Users\jkern\PycharmProjects\quacs\docs" />
+      <recent name="C:\Users\jkern\PycharmProjects\quacs\.yaml-templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jkern\PycharmProjects\quacs\test_data" />
+      <recent name="C:\Users\jkern\PycharmProjects\quacs\docs" />
+      <recent name="C:\Users\jkern\PycharmProjects\quacs\.yaml-templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests in test_models.py">
+    <configuration name="playground" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="quaac" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/playground.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_models.TestAttachmentModel.test_to_file_no_name" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="quaac" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.TestAttachmentModel.test_to_file_no_name&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_models.TestDocumentModel.test_edite_file_validates_with_check_false" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="quaac" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.TestDocumentModel.test_edite_file_validates_with_check_false&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_models.TestDocumentModel.test_equipment_hashes_match" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="quaac" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_models.TestDocumentModel.test_equipment_hashes_match&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in test_models.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="quaac" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_models.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests in test_models.py" />
+        <item itemvalue="Python tests.Python tests for test_models.TestDocumentModel.test_equipment_hashes_match" />
+        <item itemvalue="Python.playground" />
+        <item itemvalue="Python tests.Python tests for test_models.TestAttachmentModel.test_to_file_no_name" />
+        <item itemvalue="Python tests.Python tests for test_models.TestDocumentModel.test_edite_file_validates_with_check_false" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="84a09e7e-5cc8-463a-9906-03c6968b25f7" name="Changes" comment="" />
+      <created>1705617792527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705617792527</updated>
+      <workItem from="1705617796449" duration="1742000" />
+      <workItem from="1705619742545" duration="12707000" />
+      <workItem from="1705932776112" duration="10534000" />
+      <workItem from="1706392326282" duration="10229000" />
+      <workItem from="1708360698217" duration="26363000" />
+      <workItem from="1708524568499" duration="535000" />
+      <workItem from="1709224188421" duration="18725000" />
+      <workItem from="1709309483333" duration="12106000" />
+      <workItem from="1709499010017" duration="563000" />
+      <workItem from="1709919751796" duration="5449000" />
+      <workItem from="1710512577502" duration="572000" />
+      <workItem from="1715557571697" duration="26000" />
+      <workItem from="1715976601079" duration="1174000" />
+      <workItem from="1716042854958" duration="661000" />
+      <workItem from="1716211115968" duration="1034000" />
+      <workItem from="1718375403737" duration="4340000" />
+    </task>
+    <task id="LOCAL-00001" summary="clean">
+      <option name="closed" value="true" />
+      <created>1708367561540</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708367561540</updated>
+    </task>
+    <task id="LOCAL-00002" summary="rename">
+      <option name="closed" value="true" />
+      <created>1708440056067</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708440056067</updated>
+    </task>
+    <task id="LOCAL-00003" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1708462953325</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708462953325</updated>
+    </task>
+    <task id="LOCAL-00004" summary="WIP">
+      <option name="closed" value="true" />
+      <created>1708462979279</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708462979279</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add tests, full refactor">
+      <option name="closed" value="true" />
+      <created>1709245048117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709245048117</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add RTD config">
+      <option name="closed" value="true" />
+      <created>1709245226783</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709245226783</updated>
+    </task>
+    <task id="LOCAL-00007" summary="req">
+      <option name="closed" value="true" />
+      <created>1709245321963</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709245321963</updated>
+    </task>
+    <task id="LOCAL-00008" summary="append path">
+      <option name="closed" value="true" />
+      <created>1709304853082</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709304853082</updated>
+    </task>
+    <task id="LOCAL-00009" summary="remove self">
+      <option name="closed" value="true" />
+      <created>1709309530820</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709309530820</updated>
+    </task>
+    <task id="LOCAL-00010" summary="missing requirement">
+      <option name="closed" value="true" />
+      <created>1709309629940</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709309629940</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add future call">
+      <option name="closed" value="true" />
+      <created>1709312785587</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709312785587</updated>
+    </task>
+    <task id="LOCAL-00012" summary="different python">
+      <option name="closed" value="true" />
+      <created>1709313176073</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709313176073</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fix requirements">
+      <option name="closed" value="true" />
+      <created>1709314087771</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709314087771</updated>
+    </task>
+    <task id="LOCAL-00014" summary="🤦">
+      <option name="closed" value="true" />
+      <created>1709314238471</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1709314238471</updated>
+    </task>
+    <task id="LOCAL-00015" summary="updates">
+      <option name="closed" value="true" />
+      <created>1710163730737</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710163730737</updated>
+    </task>
+    <task id="LOCAL-00016" summary="refactor to improve docs and clarity">
+      <option name="closed" value="true" />
+      <created>1718380421464</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718380421464</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clean" />
+    <MESSAGE value="rename" />
+    <MESSAGE value="WIP" />
+    <MESSAGE value="add tests, full refactor" />
+    <MESSAGE value="add RTD config" />
+    <MESSAGE value="req" />
+    <MESSAGE value="append path" />
+    <MESSAGE value="remove self" />
+    <MESSAGE value="missing requirement" />
+    <MESSAGE value="add future call" />
+    <MESSAGE value="different python" />
+    <MESSAGE value="fix requirements" />
+    <MESSAGE value="" />
+    <MESSAGE value="updates" />
+    <MESSAGE value="refactor to improve docs and clarity" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor to improve docs and clarity" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/playground.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/playground.py</url>
+          <line>99</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/playground.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/quaac/models.py</url>
+          <line>119</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/quacs$playground.coverage" NAME="playground Coverage Results" MODIFIED="1706394237580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/quaac$.coverage" NAME=" Coverage Results" MODIFIED="1718380395894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/quaac$playground.coverage" NAME="playground Coverage Results" MODIFIED="1715976775386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

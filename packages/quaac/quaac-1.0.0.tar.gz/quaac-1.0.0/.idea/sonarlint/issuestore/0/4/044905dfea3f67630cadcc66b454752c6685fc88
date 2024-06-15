@@ -1,0 +1,17 @@
+
+epython:S1192´"LDefine a constant instead of duplicating this literal 'Ion chamber' 4 times.(ÔÃòþ
+_python:S1192÷"GDefine a constant instead of duplicating this literal 'test 1' 3 times.(Ã×™q
+Cpython:S5806<"+Rename this variable; it shadows a builtin.(Ÿñ‘£
+Bpython:S1481R"%Remove the unused local variable "u".(ÆàÌ¡úÿÿÿÿ
+=python:S1481V"%Remove the unused local variable "u".(ÝðˆÜ
+=python:S1481Z"%Remove the unused local variable "u".(»ÒÇ½
+=python:S1481d"%Remove the unused local variable "e".(ÇØìÌ
+Bpython:S1481h"%Remove the unused local variable "e".(ÐÝ†˜ÿÿÿÿÿ
+Bpython:S1481r"%Remove the unused local variable "a".(Ÿç¥¤øÿÿÿÿ
+=python:S1481v"%Remove the unused local variable "a".(ÙÛ’©
+?python:S1481¨"&Remove the unused local variable "dp".(ÆøŽÍ
+?python:S1481¬"&Remove the unused local variable "dp".(­á¨©
+=python:S1481‚"%Remove the unused local variable "d".(¨ºÙg
+=python:S1481†"%Remove the unused local variable "d".(¼Žƒ(
+>python:S1481Ž"%Remove the unused local variable "d".(ùÞ°£
+?python:S1481à"&Remove the unused local variable "d2".(Þ¿ ö

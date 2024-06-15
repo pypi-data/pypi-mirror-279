@@ -1,0 +1,73 @@
+version: 1.0
+
+equipment:
+  - name: TrueBeam 1
+    type: Linac
+    model: TrueBeam
+    manufacturer: Varian
+    serial number: 12345
+    hash: 2349277898
+  - name: Ion chamber 223
+    type: Ion chamber
+    model: 23343
+    manufacturer: PTW
+    serial number: 12345
+    hash: 2659270573
+  - name: Electrometer 1
+    type: Electrometer
+    model: 400
+    manufacturer: PTW
+    serial number: 12345
+    hash: 4108315883
+
+users:
+  - hash: 374284055
+    first name: James
+    family name: Kerns
+    email: jkerns@radformation.com
+    id: jkerns
+
+files:
+  - hash: 3665905493
+    name: Screenshot ion chamber result
+    type: image/png
+    encoding: base64
+    compression: gzip
+    content: gmewip3bypNBvQyQCymjQ...
+  - hash: 1919210666
+    name: EPID image of setup
+    type: application/dicom
+    encoding: base64
+    content: 4sIAKxAsGUC/+y7dVBc0d...
+
+data points:
+  - hash: 374284055
+    name: Ion chamber measurement
+    performer: 374284055
+    perform datetime: 2024-01-22T13:36:47.262081
+    measurement value: 1.23
+    measurement type: number
+    measurement unit: mSv/h
+    reference value: 1.5
+    description: An example description
+    procedure: An example procedure
+    comments: Too high
+    primary equipment: 2349277898
+    ancillary equipment:
+      - 4108315883
+      - 2659270573
+    review status: reviewed
+    review datetime: 2024-01-22T13:36:47.262081
+    reviewer: 374284055
+    reviewer comments: Looks good
+    files:
+      - 3665905493
+      - 1919210666
+    parameters:
+      energy: 6 MV
+      field size: 10x10 cm
+      mu: 100
+      energy modifier: FFF
+      gantry angle: 0
+      collimator angle: 0
+      couch angle: 0

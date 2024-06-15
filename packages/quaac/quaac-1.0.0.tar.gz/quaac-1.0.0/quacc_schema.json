@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "number",
+      "pattern": "^\\d+(\\.\\d+)?$"
+    },
+    "data points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hash": { "type": "integer" },
+          "name": { "type": "string" },
+          "performer": { "type": "integer" },
+          "perform datetime": { "type": "string", "format": "date-time" },
+          "measurement value": { "type": "number" },
+          "measurement type": { "type": "string" },
+          "measurement unit": { "type": "string" },
+          "reference value": { "type": "number" },
+          "description": { "type": "string" },
+          "procedure": { "type": "string" },
+          "performer comments": { "type": "string" },
+          "primary equipment": { "type": "integer" },
+          "ancillary equipment": {
+            "type": "array",
+            "items": { "type": "integer" }
+          },
+          "review status": { "type": "string" },
+          "review datetime": { "type": "string", "format": "date-time" },
+          "reviewer": { "type": "integer" },
+          "reviewer comments": { "type": "string" },
+          "files": {
+            "type": "array",
+            "items": { "type": "integer" }
+          },
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "energy": { "type": "string" },
+              "field size": { "type": "string" },
+              "mu": { "type": "integer" },
+              "energy modifier": { "type": "string" },
+              "gantry angle": { "type": "integer" },
+              "collimator angle": { "type": "integer" },
+              "couch angle": { "type": "integer" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "required": ["hash", "name", "perform datetime", "primary equipment", "measurement value", "measurement type", "measurement unit"],
+        "additionalProperties": false
+      }
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "model": { "type": ["string", "number"] },
+          "manufacturer": { "type": "string" },
+          "serial number": { "type": ["string", "number"] },
+          "hash": { "type": "integer" }
+        },
+        "required": ["name", "type", "model", "manufacturer", "serial number", "hash"],
+        "additionalProperties": false
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hash": { "type": "integer" },
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "encoding": { "type": "string" },
+          "compression": { "type": "string" },
+          "content": { "type": "string" }
+        },
+        "required": ["hash", "name", "type", "encoding", "content"],
+        "additionalProperties": false
+      }
+    },
+    "users": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "hash": { "type": "integer" },
+          "first name": { "type": "string" },
+          "family name": { "type": "string" },
+          "email": { "type": "string" },
+          "id": { "type": "string" }
+        },
+        "required": ["hash", "first name", "family name", "email"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["version", "data points", "equipment", "files"],
+  "additionalProperties": false
+}

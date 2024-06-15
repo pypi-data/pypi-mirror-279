@@ -1,0 +1,39 @@
+version: '1'
+datapoints:
+- name: 6MV Output
+  perform datetime: '2024-02-20T14:49:25.864559'
+  measurement_value: 3
+  measurement_unit: cGy
+  reference_value: null
+  description: ''
+  procedure: ''
+  performer: 00a5823df7e34298664b8ee8a79e43b2
+  performer_comment: ''
+  primary_equipment: 5e766755c7692fd477a61f24e8c896ad
+  reviewer: 00a5823df7e34298664b8ee8a79e43b2
+  parameters:
+    field size: 10x10cm
+    ssd: 100cm
+  ancillary_equipment:
+  - ce820ce095b7937449ed3105d0261283
+  attachments: []
+  hash: e51d67d997abdc76a1d4ad9d64ddca4b
+hash: 95bb56c187bf256c678e1c32d5da5ffa
+equipment:
+- name: TrueBeam 1
+  type: Linac
+  serial_number: '12345'
+  manufacturer: Varian
+  model: TrueBeam
+  hash: 5e766755c7692fd477a61f24e8c896ad
+- name: CatPhan 504
+  type: Phantom
+  serial_number: A4321
+  manufacturer: Image Laboratory
+  model: '504'
+  hash: ce820ce095b7937449ed3105d0261283
+users:
+- name: John Doe
+  email: j@j.com
+  hash: 00a5823df7e34298664b8ee8a79e43b2
+attachments: []

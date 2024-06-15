@@ -1,0 +1,341 @@
+{
+    "$defs": {
+        "Attachment": {
+            "additionalProperties": true,
+            "description": "A file defined in a YAML spec file.",
+            "properties": {
+                "name": {
+                    "description": "The name of the file.",
+                    "examples": [
+                        "catphan.zip",
+                        "screenshot.png"
+                    ],
+                    "title": "Name",
+                    "type": "string"
+                },
+                "encoding": {
+                    "description": "The encoding of the file.",
+                    "examples": [
+                        "base64"
+                    ],
+                    "title": "Encoding",
+                    "type": "string"
+                },
+                "compression": {
+                    "description": "The compression of the file.",
+                    "examples": [
+                        "gzip"
+                    ],
+                    "title": "Compression",
+                    "type": "string"
+                },
+                "content": {
+                    "description": "The content of the file.",
+                    "examples": [
+                        "b'H4sIAAAAAAAAA...'"
+                    ],
+                    "format": "binary",
+                    "title": "Content",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "encoding",
+                "compression",
+                "content"
+            ],
+            "title": "Attachment",
+            "type": "object"
+        },
+        "DataPoint": {
+            "additionalProperties": true,
+            "description": "An equipment defined in a YAML spec file.",
+            "properties": {
+                "name": {
+                    "description": "The name of the datapoint.",
+                    "examples": [
+                        "Temperature",
+                        "6MV Output",
+                        "CBCT Spotlight Uniformity Center"
+                    ],
+                    "title": "Name",
+                    "type": "string"
+                },
+                "perform datetime": {
+                    "description": "The date and time the measurement was performed. Must be in ISO 8601 format.",
+                    "examples": [
+                        "2021-08-01T12:00:00"
+                    ],
+                    "format": "date-time",
+                    "title": "Perform Datetime",
+                    "type": "string"
+                },
+                "measurement_value": {
+                    "description": "The value of the measurement.",
+                    "examples": [
+                        1,
+                        1.0,
+                        "1",
+                        "1.0"
+                    ],
+                    "title": "Measurement Value"
+                },
+                "measurement_unit": {
+                    "description": "The unit of the measurement.",
+                    "examples": [
+                        "cGy",
+                        "Celsius",
+                        "mm",
+                        "nC",
+                        "cm"
+                    ],
+                    "title": "Measurement Unit",
+                    "type": "string"
+                },
+                "reference_value": {
+                    "anyOf": [
+                        {},
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "The reference value of the measurement.",
+                    "examples": [
+                        1,
+                        1.0,
+                        "1",
+                        "1.0"
+                    ],
+                    "title": "Reference Value"
+                },
+                "description": {
+                    "default": "",
+                    "description": "A description of the measurement. This can reference any specific equations or algorithms used.",
+                    "examples": [
+                        "Based on TG-51 eqn 8"
+                    ],
+                    "title": "Description",
+                    "type": "string"
+                },
+                "procedure": {
+                    "default": "",
+                    "description": "The instructions used to perform the measurement.",
+                    "examples": [
+                        "Use blocks A and D on the couch with 10x10cm field size. SSD=100 to top of block A"
+                    ],
+                    "title": "Procedure",
+                    "type": "string"
+                },
+                "performer": {
+                    "allOf": [
+                        {
+                            "$ref": "#/$defs/User"
+                        }
+                    ],
+                    "description": "The user who performed the measurement.",
+                    "examples": [
+                        "1"
+                    ],
+                    "title": "Performer",
+                    "type": "string"
+                },
+                "performer_comment": {
+                    "default": "",
+                    "description": "Any comments the performer has about the measurement.",
+                    "examples": [
+                        "The temperature was 22C"
+                    ],
+                    "title": "Performer Comment",
+                    "type": "string"
+                },
+                "primary_equipment": {
+                    "allOf": [
+                        {
+                            "$ref": "#/$defs/Equipment"
+                        }
+                    ],
+                    "description": "The equipment used to perform the measurement.",
+                    "examples": [
+                        "1"
+                    ],
+                    "title": "Primary Equipment",
+                    "type": "string"
+                },
+                "reviewer": {
+                    "anyOf": [
+                        {
+                            "$ref": "#/$defs/User"
+                        },
+                        {
+                            "type": "null"
+                        }
+                    ],
+                    "default": null,
+                    "description": "The user who reviewed the data point.",
+                    "examples": [
+                        "1"
+                    ],
+                    "title": "Reviewer",
+                    "type": "string"
+                },
+                "parameters": {
+                    "description": "Any parameters used to perform the measurement.",
+                    "examples": [
+                        {
+                            "field_size": "10x10cm",
+                            "ssd": "100cm"
+                        }
+                    ],
+                    "title": "Parameters",
+                    "type": "object"
+                },
+                "ancillary_equipment": {
+                    "description": "The internal IDs of any ancillary equipment used to perform the measurement.",
+                    "examples": [
+                        "1"
+                    ],
+                    "items": {
+                        "$ref": "#/$defs/Equipment"
+                    },
+                    "title": "Ancillary Equipment",
+                    "type": "string"
+                },
+                "attachments": {
+                    "description": "The files associated with the measurement.",
+                    "examples": [
+                        "1"
+                    ],
+                    "items": {
+                        "$ref": "#/$defs/Attachment"
+                    },
+                    "title": "Attachments",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "perform datetime",
+                "measurement_value",
+                "measurement_unit",
+                "performer",
+                "primary_equipment"
+            ],
+            "title": "DataPoint",
+            "type": "object"
+        },
+        "Equipment": {
+            "additionalProperties": true,
+            "description": "An equipment defined in a YAML spec file.",
+            "properties": {
+                "name": {
+                    "description": "The name of the equipment.",
+                    "examples": [
+                        "TrueBeam 1",
+                        "Basement 600"
+                    ],
+                    "title": "Name",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "The type of the equipment.",
+                    "examples": [
+                        "L",
+                        "CT scanner"
+                    ],
+                    "title": "Type",
+                    "type": "string"
+                },
+                "serial_number": {
+                    "description": "The serial number of the equipment.",
+                    "examples": [
+                        "12345",
+                        "H192311"
+                    ],
+                    "title": "Serial Number",
+                    "type": "string"
+                },
+                "manufacturer": {
+                    "description": "The manufacturer of the equipment.",
+                    "examples": [
+                        "Varian",
+                        "Siemens"
+                    ],
+                    "title": "Manufacturer",
+                    "type": "string"
+                },
+                "model": {
+                    "description": "The model of the equipment.",
+                    "examples": [
+                        "TrueBeam",
+                        "Artiste"
+                    ],
+                    "title": "Model",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "type",
+                "serial_number",
+                "manufacturer",
+                "model"
+            ],
+            "title": "Equipment",
+            "type": "object"
+        },
+        "User": {
+            "additionalProperties": true,
+            "description": "A user defined in a YAML spec file.",
+            "properties": {
+                "name": {
+                    "description": "The name of the user.",
+                    "examples": [
+                        "John Doe",
+                        "Jane Smith"
+                    ],
+                    "title": "Name",
+                    "type": "string"
+                },
+                "email": {
+                    "description": "The email of the user.",
+                    "examples": [
+                        "john@clinic.com",
+                        "jane@satellite.com"
+                    ],
+                    "title": "Email",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "email"
+            ],
+            "title": "User",
+            "type": "object"
+        }
+    },
+    "description": "A document defined in a YAML spec file.",
+    "properties": {
+        "version": {
+            "const": "1",
+            "description": "The version of the QuAAC document.",
+            "title": "Version"
+        },
+        "datapoints": {
+            "description": "The data points in the document.",
+            "items": {
+                "$ref": "#/$defs/DataPoint"
+            },
+            "title": "Data Points",
+            "type": "array"
+        }
+    },
+    "required": [
+        "version",
+        "datapoints"
+    ],
+    "title": "Document",
+    "type": "object"
+}

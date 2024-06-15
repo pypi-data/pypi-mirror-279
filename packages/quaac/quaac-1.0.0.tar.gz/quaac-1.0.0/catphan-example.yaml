@@ -1,0 +1,64 @@
+version: '1'
+
+datapoints:
+  - hash: 374284055
+    name: My test name
+    performer: asefwev3
+    perform datetime: 2024-01-22T13:36:47.262081
+    measurement value: 43.113
+    measurement type: number
+    measurement unit: HU
+    reference value: 40
+    description: The HU of the top uniformity ROI of the CatPhan CTP486 module
+    procedure: Acquire with the Pelvis Spotlight protocol
+    performer comments: normal scan
+    primary equipment: 2349277898
+    ancillary equipment:
+      - 90452529
+    review status: reviewed
+    review datetime: 2024-01-22T13:36:47.262081
+    reviewer: 374284055
+    reviewer comments: Looks good
+    files:
+      - 3665905493
+      - 1919210666
+    parameters:
+      energy: 120kVp
+      mAs: 30
+      protocol name: Pelvis Spotlight
+      phantom: CatPhan 604
+
+users:
+  - hash: awe4fa
+    name: James Kerns
+    email: j@j.com
+
+equipment:
+  - name: TrueBeam 1
+    type: Linac
+    model: TrueBeam
+    manufacturer: Varian
+    serial number: 12345
+    hash: 2349277898
+  - name: CatPhan 604 (TB1)
+    type: Phantom
+    model: 604
+    manufacturer: PTW
+    serial number: A3405
+    hash: 90452529
+
+files:
+  - hash: 3665905493
+    name: Screenshot of acquisition parameters
+    type: image/png
+    encoding: base64
+    compression: gzip
+    content: gmewip3bypNBvQyQCymjQ...
+  - hash: 1919210666
+    name: CBCT DICOM ZIP archive
+    type: application/dicom
+    encoding: base64
+    compression: gzip
+    content: 4sIAKxAsGUC/+y7dVBc0d...
+
+
