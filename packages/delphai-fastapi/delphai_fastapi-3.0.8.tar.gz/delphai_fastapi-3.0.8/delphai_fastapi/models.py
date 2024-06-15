@@ -1,0 +1,46 @@
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
+from pydantic.alias_generators import to_camel
+
+
+class CamelModel(BaseModel):
+    class Config:
+        alias_generator = to_camel
+        populate_by_name = True
+
+
+class HTTPExceptionModel(CamelModel):
+    detail: str
+
+
+class Label(CamelModel):
+    name: str = Field(description="Assigned label")
+    children: List["Label"] = Field(description="Sublabels")
+
+
+class Location(CamelModel):
+    country: Optional[str] = Field(
+        None, description="Company address (country)", examples=["Germany"]
+    )
+    city: Optional[str] = Field(
+        None, description="Company address (city)", examples=["Berlin"]
+    )
+    continent: Optional[str] = Field(
+        None, description="Company address (continent)", examples=["Europe"]
+    )
+    state: Optional[str] = Field(
+        None, description="Company address (state/land)", examples=["Berlin"]
+    )
+    latitude: Optional[float] = Field(None, examples=[52.5167])
+    longitude: Optional[float] = Field(None, examples=[13.3833])
+    zip_code: Optional[str] = Field(
+        None, description="Company address (ZIP code)", examples=["10999"]
+    )
+
+
+class Source(CamelModel):
+    name: str = Field(description="Name of the source")
+    credibility_score: float = Field(
+        description="Credibility score of source in percentage", examples=[0.60]
+    )
