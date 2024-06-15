@@ -1,0 +1,12 @@
+ecoinvent_migrate/__init__.py,sha256=SXUb7Bi0PurnCL-VSul-HgneohdOaynxHLwf63CH2EQ,230
+ecoinvent_migrate/data_io.py,sha256=jnOKBVrz0agOrQjS7Ul9YaQuzp7QgGMiizjrss_PVWI,3993
+ecoinvent_migrate/datapackage.py,sha256=vPcF91oUtsW6rxDF3oOJJuhVheGQOvojIifCBbFOVpM,2228
+ecoinvent_migrate/errors.py,sha256=bE8PBjVQPj7vtqKBkMJaRmoTjEnvf5CIzsY5cumLjvc,164
+ecoinvent_migrate/main.py,sha256=blGWR6kC6pUGrrWADhF0tZfapNQbSFUl8lVDDQCbwaY,7929
+ecoinvent_migrate/utils.py,sha256=0dDNbw1uPG8HE2_1dR8uOAvD7iqsQE8DacldhRmRKCQ,630
+ecoinvent_migrate/wrangling.py,sha256=KoDnn0X91PtK6At7u7LHT0vAPqUXO-OilVB_1QuXNdw,12712
+ecoinvent_migrate-0.2.0.dist-info/LICENSE,sha256=lm1ISrt8lgHTizeXaVvkzNJBmelbPEM0b8ZoIErWItU,1456
+ecoinvent_migrate-0.2.0.dist-info/METADATA,sha256=alw14QUNLqE0mPNSl_1DdZpe8skNIV3gFHBgWlDSp18,14257
+ecoinvent_migrate-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ecoinvent_migrate-0.2.0.dist-info/top_level.txt,sha256=PDzbeUNUx3VHNVU3T4cQknrgJLnhP1ESPkKovQ5El3I,18
+ecoinvent_migrate-0.2.0.dist-info/RECORD,,
