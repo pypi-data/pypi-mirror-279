@@ -1,0 +1,8 @@
+jinja2
+requests
+click
+pytest
+black
+isort
+build 
+twine
