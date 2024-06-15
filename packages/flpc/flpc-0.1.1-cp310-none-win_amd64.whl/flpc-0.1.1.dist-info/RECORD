@@ -1,0 +1,8 @@
+flpc-0.1.1.dist-info/METADATA,sha256=oxAHAiwjy0rvAJnAvhQMgCb8CFDfLu7wNvXoJHcPIBU,1253
+flpc-0.1.1.dist-info/WHEEL,sha256=LHPtDn9GsU_zwAyiX9e_TBqkI_hl9cDVdeDzCCtycGk,95
+flpc-0.1.1.dist-info/license_files/LICENSE,sha256=0N7TBqZv9L05bvoegpPGnuPQPwBf3Y6ojGPbc3w3Saw,1099
+flpc/__init__.py,sha256=6DYsamXycwoXJ6xSXLdXi_PYKjY_EzFC1fody1fiL6k,99
+flpc/__init__.pyi,sha256=5_SAtKk5JVhEKRiFuCW3tvc6n9CvjF4qxXSKx-8wwk0,2501
+flpc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flpc/flpc.cp310-win_amd64.pyd,sha256=sBUU77PTxV8ZNOfEU8q-Ib6HlS_wcVtXDWzKOMcANr4,1906688
+flpc-0.1.1.dist-info/RECORD,,
