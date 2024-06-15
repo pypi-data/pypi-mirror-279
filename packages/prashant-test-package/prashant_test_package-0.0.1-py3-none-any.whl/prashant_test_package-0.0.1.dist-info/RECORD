@@ -1,0 +1,11 @@
+msg91/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msg91/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+msg91/services/campaign_service.py,sha256=uApFSj_48AxH78UCITzAiSE0caC-UjE7vk14_PwzOEw,3826
+msg91/services/otp_service.py,sha256=lF0MCAdWinO0wKaL3T97ZIGzgXAVeZGfYwPCEu-3buU,319
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_campaign_service.py,sha256=om9Vh8fKUvD-uftcp32988caD5qbAYhrHxD-E2w3vFM,1426
+tests/test_otp_service.py,sha256=r3lmhRUBQXAk02sAVI7KJr0ZKY_wHubBVdjm8jz6bg0,541
+prashant_test_package-0.0.1.dist-info/METADATA,sha256=p0VOY4q4lzTbJUdfnA9GSsnc4eSSRS5rAK7Be80GUzo,445
+prashant_test_package-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+prashant_test_package-0.0.1.dist-info/top_level.txt,sha256=GoQrHR70eLMX3-5rVOOstinc9srN4Zrc3k9QLqUB-PM,12
+prashant_test_package-0.0.1.dist-info/RECORD,,
