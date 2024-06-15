@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: luma-creator
+Version: 0.0.3
+Summary: High quality video generation by https://lumalabs.ai/. Reverse engineered API.
+Home-page: https://github.com/yihong0618/LumaDreamCreator
+Author: danaigc, yihong0618
+Author-email: zouzou0208@gmail.com
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: requests
+Requires-Dist: fake-useragent
+
