@@ -1,0 +1,10 @@
+pr_lint/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pr_lint/formatter.py,sha256=7c_iuL5INCm3A-MSflrcHoLVUnW1xv2e2CkEOeN_MIc,1184
+pr_lint/linter.py,sha256=dzUctdsQkDXYF3ZufuaNWlDoBy9npxAKIQSWv_HAkOA,1257
+pr_lint/main.py,sha256=6jmA3N6OYgouXn1yMKznegfrlkLVz-TC7fV9oTiPqk0,731
+pr_lint/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pr_lint-0.1.dist-info/LICENSE,sha256=6c2bTCbRngL8slTejFfnQmXpEBNNm4RiuamXtKUyABA,1066
+pr_lint-0.1.dist-info/METADATA,sha256=8dzRVMEbnrkNxsPWTMChRz_UP2ItJiKJrW4Gm4-0F_U,435
+pr_lint-0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pr_lint-0.1.dist-info/entry_points.txt,sha256=aSnHMisqn2CCD-DgTiMnHCjfPDYcAP_Nb31pvdTubM0,44
+pr_lint-0.1.dist-info/RECORD,,
