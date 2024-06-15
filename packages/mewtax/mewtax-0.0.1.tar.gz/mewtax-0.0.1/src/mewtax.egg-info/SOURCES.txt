@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/mewtax/__init__.py
+src/mewtax/mewtax.py
+src/mewtax/py.typed
+src/mewtax.egg-info/PKG-INFO
+src/mewtax.egg-info/SOURCES.txt
+src/mewtax.egg-info/dependency_links.txt
+src/mewtax.egg-info/requires.txt
+src/mewtax.egg-info/top_level.txt
+tests/test_mewtax.py

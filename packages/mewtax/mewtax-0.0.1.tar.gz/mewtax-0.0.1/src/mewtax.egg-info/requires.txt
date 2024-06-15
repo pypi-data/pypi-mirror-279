@@ -1,0 +1,14 @@
+jax
+jaxlib
+
+[dev]
+bump-my-version
+darglint
+mypy
+pre-commit
+
+[tests]
+numpy
+parameterized
+pytest
+pytest-cov
