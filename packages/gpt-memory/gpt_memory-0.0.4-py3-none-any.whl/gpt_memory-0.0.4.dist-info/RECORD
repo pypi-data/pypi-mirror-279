@@ -1,0 +1,9 @@
+gpt_memory/__init__.py,sha256=mn8nRp8Zyej7_rLOiBqyrmrs99CnmI2ixcgTH3HG6D0,91
+gpt_memory/db.py,sha256=ag9y4RdMV-tJs1Z9w7TlCXOs-oAu78btX_mfyQW5KP8,6003
+gpt_memory/gpt.py,sha256=FK7XOummj7r6ymabyIQ0ocdlBiKpN47s4vB4cwddfV4,2245
+gpt_memory/memory.py,sha256=QTnVooTE9V7KW5tOUL4UvHG6Bnp2dTot9LdHX4IcY8s,16906
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gpt_memory-0.0.4.dist-info/METADATA,sha256=13gM8Y6ecD3wmILzZTPwvrbGth3RVfNkj08aOLNt3Hg,2273
+gpt_memory-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gpt_memory-0.0.4.dist-info/top_level.txt,sha256=VBvU3IBRxqsJBKzkHxBYFtoLvAeKoQ279TjNdWSuECE,11
+gpt_memory-0.0.4.dist-info/RECORD,,
