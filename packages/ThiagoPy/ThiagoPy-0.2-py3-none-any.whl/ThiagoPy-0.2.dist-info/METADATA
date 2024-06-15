@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ThiagoPy
+Version: 0.2
+Summary: Uma biblioteca Python que usa funções Julia
+Home-page: UNKNOWN
+Author: Jorge Vinicius Malosti da Silveira
+Author-email: jorge.malosti@outlook.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: julia
+
+# MyPackage
+
+ThiagoPy Ã© uma biblioteca Python que utiliza funÃ§Ãµes escritas em Julia para proporcionar desempenho superior.
+
+O intuito da biblioteca Ã© usar funÃ§Ãµes para o cÃ¡lculo de probabilidades e entropias associadas aos microestados de recorrÃªncia
+
+## InstalaÃ§Ã£o
+
+VocÃª pode instalar a biblioteca via `pip`:
+
+```sh
+pip install ThiagoPy
+
+
