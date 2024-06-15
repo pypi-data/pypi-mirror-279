@@ -1,0 +1,32 @@
+[project]
+name = "omniblack.notify"
+version = "0.0.2"
+requires-python='~=3.10'
+
+dependencies = [
+    "jeepney",
+]
+
+[[project.authors]]
+name = "Terry Patterson"
+email = "Terryp@wegrok.net"
+[project.license]
+id = "Apache-2.0"
+file = "LICENSE.txt"
+
+[project.urls]
+Homepage = "https://gitlab.com/terryp/terry/-/tree/next/lib/notify"
+Repository = "https://gitlab.com/terryp/terry.git"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["*"]
+
+[tool.setuptools.package-data]
+"*" = ["*"]
+
+[build-system]
+requires = [
+    "omniblack.setup",
+]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+package_config.yaml
+pyproject.toml
+src/omniblack/notify.py
+src/omniblack.notify.egg-info/PKG-INFO
+src/omniblack.notify.egg-info/SOURCES.txt
+src/omniblack.notify.egg-info/dependency_links.txt
+src/omniblack.notify.egg-info/omniblack_package.json
+src/omniblack.notify.egg-info/omniblack_package.yaml
+src/omniblack.notify.egg-info/requires.txt
+src/omniblack.notify.egg-info/top_level.txt
