@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: heflwr
+Version: 0.1.9
+Summary: 「HeFlwr」is a federated learning package for heterogeneous devices.
+Home-page: https://github.com/QVQZZZ/HeFlwr
+Author: Zhu Yaolin
+Author-email: zhuyaolinluck@qq.com
+License: MIT
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+Install
+--------
+
+::
+
+    pip install heflwr
+
+⚠!!ATTENTION!!⚠
+---------------
+Check the HeFlwr `Homepage <https://github.com/QVQZZZ/HeFlwr>`_ for the complete README.
+
