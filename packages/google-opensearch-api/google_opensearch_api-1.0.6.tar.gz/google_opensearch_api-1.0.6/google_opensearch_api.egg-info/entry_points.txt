@@ -1,0 +1,2 @@
+[console_scripts]
+google-opensearch-api = google_search_api.google_search_api:main
