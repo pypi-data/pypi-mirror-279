@@ -1,0 +1,53 @@
+[project]
+name = "mltrainer"
+version = "0.1.128"
+description = "toolkit for training pytorch models"
+authors = [
+    { name = "R.Grouls", email = "Raoul.Grouls@han.nl" },
+]
+requires-python = ">=3.10,<3.12"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python",
+    "Typing :: Typed",
+]
+dependencies = [
+    "gin-config>=0.5.0",
+    "numpy>=1.25.0",
+    "torch>=2.0.1",
+    "loguru>=0.7.0",
+    "ray[tune]>=2.5.1",
+    "tqdm>=4.65.0",
+    "pydantic>=1.10.9",
+    "torchvision>=0.15.2",
+    "torchtext>=0.15.2",
+    "torch-tb-profiler>=0.4.1",
+    "mlflow>=2.4.1",
+]
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+lint = [
+    "ruff>=0.0.275",
+    "black>=23.3.0",
+    "mypy>=1.4.1",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tools.urls]
+GitHub = "https://github.com/raoulg/mltrainer"
+
+[tool.mypy]
+ignore_missing_imports = true
+strict_optional = true
+warn_unreachable = true
+pretty = true
