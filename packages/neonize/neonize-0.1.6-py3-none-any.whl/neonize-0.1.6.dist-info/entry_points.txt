@@ -1,0 +1,5 @@
+[console_scripts]
+build=goneonize.build:build
+docsbuild=docs.build:build
+version=goneonize.build:set_version
+
