@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+owlipy/__init__.py
+owlipy.egg-info/PKG-INFO
+owlipy.egg-info/SOURCES.txt
+owlipy.egg-info/dependency_links.txt
+owlipy.egg-info/requires.txt
+owlipy.egg-info/top_level.txt
