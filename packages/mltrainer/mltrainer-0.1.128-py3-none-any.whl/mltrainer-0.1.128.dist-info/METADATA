@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: mltrainer
+Version: 0.1.128
+Summary: toolkit for training pytorch models
+Author-Email: "R.Grouls" <Raoul.Grouls@han.nl>
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Programming Language :: Python
+Classifier: Typing :: Typed
+Requires-Python: <3.12,>=3.10
+Requires-Dist: gin-config>=0.5.0
+Requires-Dist: numpy>=1.25.0
+Requires-Dist: torch>=2.0.1
+Requires-Dist: loguru>=0.7.0
+Requires-Dist: ray[tune]>=2.5.1
+Requires-Dist: tqdm>=4.65.0
+Requires-Dist: pydantic>=1.10.9
+Requires-Dist: torchvision>=0.15.2
+Requires-Dist: torchtext>=0.15.2
+Requires-Dist: torch-tb-profiler>=0.4.1
+Requires-Dist: mlflow>=2.4.1
+Requires-Dist: ruff>=0.0.275; extra == "lint"
+Requires-Dist: black>=23.3.0; extra == "lint"
+Requires-Dist: mypy>=1.4.1; extra == "lint"
+Provides-Extra: lint
+Description-Content-Type: text/markdown
+
+# ml-trainer
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![PyPi version](https://badgen.net/pypi/v/mltrainer/)](https://pypi.org/project/mltrainer/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+toolkit for training pytorch models
