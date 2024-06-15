@@ -1,0 +1,362 @@
+delta:
+    text: |-
+        # Для выбора кривой роста
+        plt.plot(np.array(y[1:]) - np.array(y[:-1]))
+        plt.ylim(-50, 50)
+        # постоянна => линейная
+        # линейна => полином 2 порядка
+
+        temp = np.array(y[1:]) - np.array(y[:-1])
+        plt.plot(temp[1:] - temp[:-1])
+        plt.ylim(-50, 50)
+        # постоянна => линейная
+        # линейна => полином 3 порядка
+        plt.plot((np.array(y[1:]) - np.array(y[:-1])) / np.array(y[1:]))
+        plt.ylim(-50, 50)
+        # постоянна => экспонента
+    keywords: [кривая, рост, временной, выбор]
+ARMA:
+    text: |-
+        adfuller(Y)# ряд не стационарный
+        from statsmodels.tsa.seasonal import seasonal_decompose
+        result = seasonal_decompose(Y, period=12)
+        Y_stac = result.resid.dropna()
+        plt.plot(result.resid)
+        adfuller(Y_stac) # ряд стал стационарным
+
+        fig = plt.figure(figsize=(12,8))
+        ax1 = fig.add_subplot(211)
+        fig = sm.graphics.tsa.plot_acf(Y_stac.diff().dropna().values.squeeze(), lags=25, ax=ax1)
+        ax2 = fig.add_subplot(212)
+        fig = sm.graphics.tsa.plot_pacf(Y_stac.diff().dropna(), lags=25, ax=ax2)
+
+        from statsmodels.tsa.arima.model import ARIMA
+
+        import warnings
+        warnings.filterwarnings("ignore")
+        best_model = None
+        best_params = [0, 0]
+        best_metrics = [1e9, 1e9]
+        for p in range(1, 5):
+            for q in range(1, 5):
+                model = ARIMA(Y_stac, order=(p, 0, q))
+                results = model.fit()
+                print(f'p={p}, q={q}, AIC={results.aic}, BIC={results.bic}')
+                if (results.aic + results.bic)/2 < sum(best_metrics)/2:
+                    best_metrics = results.aic, results.bic
+                    best_model = model
+                    best_params = [p, q]
+
+        print(f'\n\n\nBEST MODEL\n')
+        print(f'p={best_params[0]}, q={best_params[1]}, AIC={best_metrics[0]}, BIC={best_metrics[1]}')
+
+        model = ARIMA(Y_stac, order=(best_params[0], 0, best_params[1]))
+
+        results = model.fit()
+        Y_pred = results.predict(len(X), len(X)+10)
+
+        plt.figure(figsize=(15, 6))
+        plt.plot(Y_stac.index, Y_stac)
+        plt.plot(Y_pred.index, Y_pred, 'r')
+    keywords: [модель, арма]
+logit_probit:
+    text: |-
+        X0 = sm.add_constant(X)
+        log_reg0 = sm.Logit(Y, X0)
+        result = log_reg0.fit()
+        result.summary()
+
+        prob = sm.Probit(Y, X0)
+        result_prob = prob.fit()
+        result_prob.summary() 
+
+        Y_pred = result.predict(X0)
+        Y_pred[Y_pred > 0.5] = 1
+        Y_pred[Y_pred < 0.5] = 0
+        accuracy_score(Y, Y_pred)
+        f1_score(Y, Y_pred)
+    keywords: [логит, пробит, модель]
+
+tobit_keckit:
+    text: |-
+        install.packages('AER')
+
+        data <- read.csv("tobit.csv", header = TRUE, stringsAsFactors = TRUE, sep=';')
+
+        require(ggplot2)
+        f <- function(x, var, bw = 20) {
+        dnorm(x, mean = mean(var), sd(var)) * length(var)  * bw
+        }
+        p <- ggplot(data, aes(x = apt))
+        p + stat_bin(binwidth=10) + stat_function(fun = f, size = 1, args = list(var = data$apt))
+
+        train <- data[0:160, ]
+        test <- data[161:200, ]
+
+        library(AER)
+        model = tobit(apt ~ read + math +prog, data = train, right=800, left=200)
+
+        summary(model)
+
+        y_pred <- test['read'] * 2.54207 + test['math'] * 5.85932 + test['prog'] * 24.46143 + 152.52400
+
+        MSE <- sum((y_pred - test['apt'])**2)/40
+        MSE
+
+        R2 <- with(test, cor(y_pred, apt))
+        R2
+
+        plot <-plot(test$apt, col = "green", ylim = c(0, max(test$apt, y_pred$read)), xlab = "Наблюдения", ylab = "Значения")
+        points(y_pred, col = "black")
+        legend("topright", legend = c("Реальные значения", "Предсказанные значения"), col = c("green", "black"), pch = 1)
+
+        if (!require("sampleSelection")) {
+        install.packages("sampleSelection")
+        library("sampleSelection")
+        }
+
+        heckit <- heckit(data=data, selection = d ~ read + math + prog, outcome = apt ~ read + math +prog)
+        summary(heckit)
+
+        y_pred1 = 175.82327354 + 2.61170331*test['read'] + 5.25718171*test['math'] + 24.42492773 * test['prog']
+        MSE <- sum((y_pred1 - test['apt'])**2)/40
+        MSE
+
+        R2 <- with(test, cor(y_pred1, apt))
+        R2
+
+        plot <-plot(test$apt, col = "green", ylim = c(0, max(test$apt, y_pred1$read)), xlab = "Наблюдения", ylab = "Значения")
+        points(y_pred1, col = "black")
+        legend("topright", legend = c("Реальные значения", "Предсказанные значения"), col = c("green", "black"), pch = 1)
+
+        #Можно сделать вывод,
+        #что для нашего датасета лучше подойдет Tobit модель, так как она имеет более высокий R^2
+        #И значение MSE меньше, чем у heckit модели.
+        #Но так как разница в показателях минимальна, можно сказать, что спецификация модели heckit является очень схожей с моделью Tobit.
+        #Нужно делать дальнейшее исследование и строить новые модели.
+    keywords:
+foster_stuard:
+    text: |-
+        plt.plot(data['Date'], data['Close'])
+        plt.grid()
+        plt.scatter(data['Date'], data['Is Outlier'] * 300, color='r')# 300 - среднее значение наших иксов 
+        #
+
+        data4 = data.copy()
+        #
+
+        Kt = [1]
+        Lt = [1]
+        arr = data4.Close.values
+        for i in range(1, len(arr)):
+            if arr[i] >= max(arr[:i]):
+                Kt.append(1)
+            else:
+                Kt.append(0)
+                
+                
+            if arr[i] <= min(arr[:i]):
+                Lt.append(1)
+            else:
+                Lt.append(0)
+
+        #
+        data4['Kt'] = Kt
+        data4['Lt'] = Lt
+        #
+        sigma1 = (2*np.log(len(arr)) - 3.4253)**0.5
+        sigma2 = (2*np.log(len(arr)) - 0.8456)**0.5
+        #
+        mu = (1.693872*np.log(len(arr)) - 0.299015) / (1-0.035092 * np.log(len(arr)) + 0.002705*np.log(len(arr))**2)
+        #
+        t_s = np.abs(s - mu) / sigma1
+        t_d = np.abs(d - 0)/sigma2
+        t_s, t_d
+        #
+        t_kr = t.ppf(1-0.05/2, len(arr) - 2)
+        t_kr
+        #
+        t_s > t_kr # если тру, то делаем вывод о наличии тренда ряда
+        t_d > t_kr #  если тру, то делаем вывод о наличии тренда дисперсии
+    keywords:
+
+anomalii_student:
+    text: |-
+        data1 = data.copy()
+        ind = np.argmax(abs(data1['UNEMPL_Y_SH'] - data1['UNEMPL_Y_SH'].mean()))
+        y_m = data1.iloc[ind][1]
+        tau = abs(y_m - data1['UNEMPL_Y_SH'].mean()) / data1['UNEMPL_Y_SH'].std(ddof=0)
+        print(tau)
+
+        alpha = 0.05
+        n = len(data1)
+        tau_an = t.ppf(1 - alpha/2, n-2) * (n - 1)**0.5 / (n - 2 + t.ppf(1 - alpha/2, n-2)**2)**0.5
+        print(tau_an)
+
+        alpha = 0.001
+        n = len(data1)
+        tau_an = t.ppf(1 - alpha/2, n-2) * (n - 1)**0.5 / (n - 2 + t.ppf(1 - alpha/2, n-2)**2)**0.5
+        print(tau_an)
+        #Так как найденное значение находится между статистиками τ_0.05 и τ_0.001 зачение может быть не признанно аномалией, так как визуальный анализ говорит об адекватности данных.
+kriteriy_seriy_median:
+    text: |-
+        def func_me(x):
+            if x > Me:
+                return 1
+            elif x < Me:
+                return -1
+            else:
+                return 0
+
+        Y_t = data1['UNEMPL_Y_SH'].copy().sort_values()
+        Me = np.median(Y_t)
+        Y_t_signs = Y_t.apply(func_me).sort_index()
+        Y_t_signs
+
+        i = 0
+        current = 2
+        max_lenght = 0
+        count_serias = 0
+        current_cnt = 0
+        while i < len(Y_t_signs):
+            # print(Y_t_signs.iloc[i], current, max_lenght)
+            if Y_t_signs.iloc[i] == current:
+                current_cnt += 1
+            else:
+                current = Y_t_signs.iloc[i]
+                count_serias += 1
+                max_lenght = max(current_cnt, max_lenght)
+                current_cnt = 1
+            i += 1
+
+        print(max_lenght, count_serias)
+
+        max_lenght < 3.3 * (np.log(n) + 1) and count_serias > 0.5 * (n + 1 - 1.96*(n-1)**0.5)
+        #False => условие о случайности ряда не выполняется => можно говорить о наличии тренда
+    keywords:
+mkwhitedavidson:
+    text: |-
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(Y, X_with_c)
+        result = model.fit()
+        Y_pred = result.predict(X_with_c)
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(np.log(Y), X_with_c)
+        result = model.fit()
+        LNY_pred = result.predict(X_with_c)
+
+        X_with_c = sm.add_constant(np.array(list(zip(X, (Y_pred-np.e**LNY_pred)))))
+        model = sm.OLS(np.log(Y), X_with_c)
+        result = model.fit()
+        result.summary()
+
+        X_with_c = sm.add_constant(np.array(list(zip(X, (LNY_pred - np.log(Y_pred))))))
+        model = sm.OLS(Y, X_with_c)
+        result = model.fit()
+        result.summary()
+
+        #Если theta1 = 0 не отвергается, а theta2 = 0 отвергается, выбирается полулогар модель
+        #Если theta2 = 0 не отвергается, а theta1 = 0 отвергается, выбирается линейная модель
+    keywords:
+akaike:
+    text: |-
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(Y, X_with_c)
+        result = model.fit()
+        ESS = result.ssr
+        AIC = np.log(ESS/len(X)) + 2/len(X) + 1 + np.log(2*np.pi)
+        print(AIC)
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(np.log(Y), X_with_c)
+        result = model.fit()
+        ESS = result.ssr
+        AIC = np.log(ESS/len(X)) + 2/len(X) + 1 + np.log(2*np.pi)
+        print(AIC)
+        #чем меньше по модулю число, тем лучше
+    keywords:
+bokskoks:
+    text: |-
+        l = {}
+        for lam in range(1, 1001):
+            lambd = lam/1000
+            Y_ = Y/gmean(Y)
+            Y_bc = Y_**lambd / lambd
+            X_bc = X**lambd / lambd
+
+            X_with_c = sm.add_constant(X_bc)
+            model = sm.OLS(Y_bc, X_with_c)
+
+            result = model.fit()
+            l[result.ssr] = lambd
+            print(l[min(l.keys())])
+        #параметр λ→0, то функция принимает вид F=lny Выбираем полулогарифмическую модель
+    keywords:
+zarembki:
+    text: |-
+        Y_gmean = gmean(Y)
+        print(Y_gmean)
+        Y_ = Y / Y_gmean
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(Y_, X_with_c)
+        result = model.fit()
+        result.summary()
+
+        ESS1 = sum(result.resid**2)
+        print(ESS1)
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(np.log(Y_), X_with_c)
+        result = model.fit()
+        result.summary()
+
+        ESS2 = sum(result.resid**2)
+        print(ESS2)
+
+        Z = np.abs(len(X)/2 * np.log(ESS1/ESS2))
+        print(Z)
+        print(chi2(1).isf(0.05))
+    keywords: [зарембки]
+ber_makaler:
+    text: |-
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(Y, X_with_c)
+        result = model.fit()
+        Y_pred = result.predict(X_with_c)
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(np.log(Y), X_with_c)
+        result = model.fit()
+        LNY_pred = result.predict(X_with_c)
+        #
+
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(np.e**LNY_pred, X_with_c)
+        result = model.fit()
+        v1 = result.resid
+        #
+
+        X_with_c = sm.add_constant(X)
+        model = sm.OLS(np.log(Y_pred), X_with_c)
+        result = model.fit()
+        v2 = result.resid
+        #
+
+        X_with_c = sm.add_constant(np.array(list(zip(X, v1))))
+        model = sm.OLS(np.log(Y), X_with_c)
+        result = model.fit()
+        result.summary()
+        #
+
+        X_with_c = sm.add_constant(np.array(list(zip(X, v2))))
+        model = sm.OLS(Y, X_with_c)
+        result = model.fit()
+        result.summary()
+        #
+        #Если $\theta_1 = 0$ не отвергается, а $\theta_2 = 0$ отвергается выбирается полулогарифмическая модель.
+        #Если $\theta_2 = 0$ не отвергается, а $\theta_1 = 0$ отвергается, выбирается линейная модель.
+        #Возникает проблема если обе гипотезы отвергаются или не отвергаются.
+    keywords:
