@@ -1,0 +1,3 @@
+[console_scripts]
+ssh-agent-add-id = ssh_agent_add_id.cli:main
+
