@@ -1,0 +1,10 @@
+ondivi/__init__.py,sha256=hvsuSFSmxxyDepBvjE1OprpCArjcEjVNAK_t1Lihai8,1301
+ondivi/define_changed_lines.py,sha256=Dz9d0BJYF9fKhzufGC9nu36kfe7cGMJzu3Kiq35WsXU,3620
+ondivi/entry.py,sha256=P5KYrXOanUFyV4LeIgNhCcxFoHtxp9tkyprmUQyqyD4,4307
+ondivi/filter_out_violations.py,sha256=acJGpewLTAn4kx7JKyTqG8XRXdcHcC6riCAGzkDFucE,3070
+ondivi/types.py,sha256=I9NQdRAUV-F0cOexQ5vqlVzFypOtjvMrmb5A4nAu-2w,1459
+ondivi-0.4.1.dist-info/LICENSE,sha256=3m1q7xPvSenwwa7Z3Idg6ifD9Z17YDluOWF-PlUS1U8,1109
+ondivi-0.4.1.dist-info/METADATA,sha256=E8V8oIV3Fmt2Jfn2tFnyJBNIFFT2FYKW7NYSB5B0VYg,3664
+ondivi-0.4.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ondivi-0.4.1.dist-info/entry_points.txt,sha256=fPdpGwL-h1KDApw1RGHLXqaNOgCmmGYC2Wf99ga7Rig,44
+ondivi-0.4.1.dist-info/RECORD,,
