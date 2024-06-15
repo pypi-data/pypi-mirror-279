@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: gtoolkit_tiktokenize
+Version: 0.1.0
+Summary: Glamorous Toolkit tiktoken wrapper
+Author-email: feenk team <gt@feenk.com>
+Requires-Python: >=3.8,<4
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: tiktoken
+Requires-Dist: gtoolkit_bridge
+Project-URL: Home, https://gtoolkit.com
+
+# gtoolkit_tiktokenize
+# Glamorous Toolkit tiktoken wrapper
+
+This library provides a wrapper around [tiktoken](https://github.com/openai/tiktoken)
+for use in Glamorous Toolkit.
+
+## Quick start
+
+```
+import gtoolkit_tiktokenize as gt_tokenize
+gt_tokenize.tokenize('Hello World!')
+```
+
+# Info
+
+feenk team (gt@feenk.com)
+
+- https://gtoolkit.com
+- https://feenk.com
+- https://github.com/feenkcom/PythonBridge
+
