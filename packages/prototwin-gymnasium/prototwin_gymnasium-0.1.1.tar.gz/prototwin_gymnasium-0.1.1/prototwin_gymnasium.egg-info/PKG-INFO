@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: prototwin_gymnasium
+Version: 0.1.1
+Summary: The official base Gymnasium environment for ProtoTwin Connect.
+Home-page: https://prototwin.com
+Author: ProtoTwin
+License: MIT
+Keywords: Industrial Simulation,Physics,Machine Learning,Robotics,Gymnasium,Reinforcement Learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: gymnasium
+Requires-Dist: prototwin
+Requires-Dist: asyncio
+
+# ProtoTwin Gymnasium Environment
+
+This package provides a base environment for [Gymnasium](https://gymnasium.farama.org/index.html), to be used for reinforcement learning.
