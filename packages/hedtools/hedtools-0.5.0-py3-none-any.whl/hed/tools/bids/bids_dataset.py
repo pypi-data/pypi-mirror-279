@@ -1,0 +1,92 @@
+""" The contents of a BIDS dataset. """
+
+import os
+import json
+from hed.schema.hed_schema import HedSchema
+from hed.schema.hed_schema_io import load_schema_version
+from hed.schema.hed_schema_group import HedSchemaGroup
+from hed.tools.bids.bids_file_group import BidsFileGroup
+
+
+class BidsDataset:
+    """ A BIDS dataset representation primarily focused on HED evaluation.
+
+    Attributes:
+        root_path (str):  Real root path of the BIDS dataset.  
+        schema (HedSchema or HedSchemaGroup):  The schema used for evaluation.  
+        tabular_files (dict):  A dictionary of BidsTabularDictionary objects containing a given type.  
+
+    """
+
+    def __init__(self, root_path, schema=None, tabular_types=['events'],
+                 exclude_dirs=['sourcedata', 'derivatives', 'code', 'stimuli', 'phenotype']):
+        """ Constructor for a BIDS dataset.
+
+        Parameters:
+            root_path (str):  Root path of the BIDS dataset.
+            schema (HedSchema or HedSchemaGroup):  A schema that overrides the one specified in dataset.
+            tabular_types (list or None):  List of strings specifying types of tabular types to include.
+                If None or empty, then ['events'] is assumed.
+            exclude_dirs=['sourcedata', 'derivatives', 'code', 'phenotype']:
+
+        """
+        self.root_path = os.path.realpath(root_path)
+        with open(os.path.join(self.root_path, "dataset_description.json"), "r") as fp:
+            self.dataset_description = json.load(fp)
+        if schema:
+            self.schema = schema
+        else:
+            self.schema = load_schema_version(self.dataset_description.get("HEDVersion", None))
+
+        self.exclude_dirs = exclude_dirs
+        self.tabular_files = {}
+        if not tabular_types:
+            self.tabular_files["events"] = BidsFileGroup(root_path, suffix="events", obj_type="tabular",
+                                                         exclude_dirs=exclude_dirs)
+        else:
+            for suffix in tabular_types:
+                self.tabular_files[suffix] = BidsFileGroup(root_path, suffix=suffix, obj_type="tabular",
+                                                           exclude_dirs=exclude_dirs)
+
+    def get_tabular_group(self, obj_type="events"):
+        """ Return the specified tabular file group.
+
+        Parameters:
+            obj_type (str):  Suffix of the BidsFileGroup to be returned.
+
+        Returns:
+            BidsFileGroup or None:  The requested tabular group.
+
+        """
+        if obj_type in self.tabular_files:
+            return self.tabular_files[obj_type]
+        else:
+            return None
+
+    def validate(self, types=None, check_for_warnings=True):
+        """ Validate the specified file group types.
+
+        Parameters:
+            types (list):  A list of strings indicating the file group types to be validated.
+            check_for_warnings (bool):  If True, check for warnings.
+
+        Returns:
+            list:  List of issues encountered during validation. Each issue is a dictionary.
+
+        """
+
+        if not types:
+            types = list(self.tabular_files.keys())
+        issues = []
+        for tab_type in types:
+            files = self.tabular_files[tab_type]
+            issues += files.validate_sidecars(self.schema, check_for_warnings=check_for_warnings)
+            issues += files.validate_datafiles(self.schema, check_for_warnings=check_for_warnings)
+        return issues
+
+    def get_summary(self):
+        """ Return an abbreviated summary of the dataset. """
+        summary = {"dataset": self.dataset_description['Name'],
+                   "hed_schema_versions": self.schema.get_schema_versions(),
+                   "file_group_types": f"{str(list(self.tabular_files.keys()))}"}
+        return summary
