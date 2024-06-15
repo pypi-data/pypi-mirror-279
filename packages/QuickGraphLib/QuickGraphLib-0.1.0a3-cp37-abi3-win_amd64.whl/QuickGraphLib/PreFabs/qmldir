@@ -1,0 +1,8 @@
+module QuickGraphLib.PreFabs
+linktarget QuickGraphLibPreFabs
+optional plugin QuickGraphLibPreFabs
+classname QuickGraphLib_PreFabsPlugin
+typeinfo QuickGraphLibPreFabs.qmltypes
+prefer :/qt/qml/QuickGraphLib/PreFabs/
+XYAxes 1.0 XYAxes.qml
+
