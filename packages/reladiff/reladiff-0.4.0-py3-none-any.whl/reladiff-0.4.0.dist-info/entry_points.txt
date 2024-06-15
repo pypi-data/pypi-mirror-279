@@ -1,0 +1,3 @@
+[console_scripts]
+reladiff=reladiff.__main__:main
+
