@@ -1,0 +1,10 @@
+qreader.py,sha256=8GgYXCK8aULs0mBix1D6EJBEsvEFOosvGsllSNCeFks,21126
+documentation/benchmark/resizes.py,sha256=RkrjoNLETmeAq0Z12u_CQrWBqmQ3412pXLdi2R4z7nQ,3414
+documentation/benchmark/rotations.py,sha256=96CLhLD2rNtxbz8XVGIJcvSOCufbYYbYCooUPdyYTTE,6674
+venv/bin/activate_this.py,sha256=fvPzMbbVJWNOv7QziL9ekbJ118JbxvK4JxXtdylsMzI,1337
+venv/bin/read_zbar.py,sha256=bik_jtPfwvno0O38j0GVpVHFqAlhNi5LCBz6gJN-LdE,736
+qreader-3.14.dist-info/LICENSE,sha256=7ur-GB3ck2Gwo1lYchTRkkO_QHEYevHuef8gJrU0AF8,1068
+qreader-3.14.dist-info/METADATA,sha256=Ao3zD8SiovpZzaFFRyACadKNMV3Fg5k7cqS0h1d1xls,13455
+qreader-3.14.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+qreader-3.14.dist-info/top_level.txt,sha256=ffTBCS2KPxW1yu_2Nps_xwYAQfiA9J3f6VynnsMDZOU,35
+qreader-3.14.dist-info/RECORD,,
