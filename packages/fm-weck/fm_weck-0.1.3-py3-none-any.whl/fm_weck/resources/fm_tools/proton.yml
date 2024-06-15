@@ -1,0 +1,41 @@
+name: PROTON
+input_languages:
+  - C
+project_url: https://github.com/kumarmadhukar/term
+repository_url: https://github.com/kumarmadhukar/term
+spdx_license_identifier: MIT
+benchexec_toolinfo_module: "proton.py"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - r.metta
+
+maintainers:
+  - name: Ravindra Metta
+    institution: TCS
+    country: India
+    url: null
+
+versions:
+  - version: "svcomp24"
+    doi: 10.5281/zenodo.10185252
+    benchexec_toolinfo_options: ['--graphml-witness', 'witness.graphml']
+    required_ubuntu_packages:
+      - gcc
+      - libc6-dev-i386
+      - clang-14
+      - llvm-14
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Ravindra Metta
+      institution: TCS
+      country: India
+      url: null
+
+techniques:
+  - Bounded Model Checking
+
+frameworks_solvers: []

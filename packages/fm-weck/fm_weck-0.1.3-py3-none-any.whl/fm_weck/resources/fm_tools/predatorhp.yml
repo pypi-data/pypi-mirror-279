@@ -1,0 +1,51 @@
+name: PredatorHP
+input_languages:
+  - C
+project_url: https://www.fit.vutbr.cz/research/groups/verifit/tools/predatorhp/
+repository_url: https://github.com/versokova/predatorhp
+spdx_license_identifier: "GPL-3.0-or-later"
+benchexec_toolinfo_module: "https://gitlab.com/sosy-lab/software/benchexec/-/raw/main/benchexec/tools/predatorhp.py"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - versokova
+
+maintainers:
+  - name: Veronika Šoková
+    institution: Brno University of Technology
+    country: Czechia
+    url: https://www.fit.vut.cz/person/isokova/.en
+
+versions:
+  - version: "svcomp24"
+    doi: "10.5281/zenodo.10183805"
+    benchexec_toolinfo_options: ['--witness', 'witness.graphml']
+    required_ubuntu_packages:
+      - python2.7
+  - version: "svcomp23"
+    url: "https://gitlab.com/sosy-lab/sv-comp/archives-2023/-/raw/main/2023/predatorhp.zip"
+    benchexec_toolinfo_options: ['--witness', 'error-witness.graphml']
+    required_ubuntu_packages:
+      - expect
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Veronika Šoková
+      institution: Brno University of Technology
+      country: Czechia
+      url: https://www.fit.vut.cz/person/isokova/.en
+  - competition: "SV-COMP 2023"
+    track: "Verification"
+    tool_version: "svcomp23"
+    jury_member:
+      name: Hors Concours
+      institution: --
+      country: --
+      url: null
+
+techniques:
+  - Shape Analysis
+
+frameworks_solvers: []

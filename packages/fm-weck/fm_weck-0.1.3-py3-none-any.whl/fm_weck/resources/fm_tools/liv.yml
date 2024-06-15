@@ -1,0 +1,37 @@
+name: LIV
+input_languages:
+  - C
+project_url: https://gitlab.com/sosy-lab/software/liv
+repository_url: https://gitlab.com/sosy-lab/software/liv
+spdx_license_identifier: Apache-2.0
+benchexec_toolinfo_module: "benchexec.tools.liv"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - masp
+
+maintainers:
+  - name: Martin Spiessl
+    institution: LMU Munich
+    country: Germany
+    url: https://www.sosy-lab.org/people/spiessl/
+
+versions:
+  - version: "svcomp24"
+    doi: "10.5281/zenodo.10202756"
+    benchexec_toolinfo_options: ['--verifier', 'actors/cbmc.yml', '--verifierversion', 'default', '--cache-dir', 'lib/cvt_cache', '--no-cache-update', '--all-possible-invariant-locations', '--fuzzy-invariant-locations', '1', "--non-strict"]
+    required_ubuntu_packages: []
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Validation of Correctness Witnesses 1.0"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Martin Spiessl
+      institution: LMU Munich
+      country: Germany
+      url: https://www.sosy-lab.org/people/spiessl/
+
+techniques:
+  - "Task Translation"
+
+frameworks_solvers: []
