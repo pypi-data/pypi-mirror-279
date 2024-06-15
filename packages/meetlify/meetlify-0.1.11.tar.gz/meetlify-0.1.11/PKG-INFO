@@ -1,0 +1,141 @@
+Metadata-Version: 2.1
+Name: meetlify
+Version: 0.1.11
+Summary: Python Package to Generate Meetup Websites
+Home-page: https://github.com/pybodensee/meetlify
+Download-URL: https://github.com/pybodensee/meetlify/releases/v0.1.11.tar.gz
+Author: Faisal Shahzad
+Author-email: pybodensee@gmail.com
+License: MIT
+Keywords: meetups,static-site-generators,seo,python
+Classifier: Development Status :: 1 - Planning
+Classifier: Environment :: Console
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: System
+Classifier: Topic :: System :: Archiving
+Classifier: Topic :: System :: Archiving :: Backup
+Classifier: Topic :: System :: Archiving :: Mirroring
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: markdown
+Requires-Dist: Jinja2
+Requires-Dist: python-slugify
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: python-language-server[all]; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: setuptools; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: mkdocs; extra == "dev"
+Requires-Dist: mkdocs-gen-files; extra == "dev"
+Requires-Dist: mkdocstrings[python]; extra == "dev"
+Requires-Dist: pymdown-extensions; extra == "dev"
+Provides-Extra: all
+Requires-Dist: black; extra == "all"
+Requires-Dist: mkdocstrings[python]; extra == "all"
+Requires-Dist: python-language-server[all]; extra == "all"
+Requires-Dist: pytest; extra == "all"
+Requires-Dist: mkdocs-gen-files; extra == "all"
+Requires-Dist: setuptools; extra == "all"
+Requires-Dist: pytest-cov; extra == "all"
+Requires-Dist: pymdown-extensions; extra == "all"
+Requires-Dist: wheel; extra == "all"
+Requires-Dist: mkdocs; extra == "all"
+Requires-Dist: twine; extra == "all"
+
+# meetlify
+
+Python based Static Site Genrators for Meetups/Meetup Webites.
+
+[![license](https://img.shields.io/pypi/l/meetlify.svg?style=flat-square "Project License: MIT")](https://github.com/pybodensee/meetlify/blob/master/LICENSE)
+[![status](https://img.shields.io/pypi/status/meetlify.svg?style=flat-square "Project Development Status")](https://github.com/pybodensee/meetlify/milestone/1)
+[![pypi_version](https://img.shields.io/pypi/v/meetlify.svg?style=flat-square "Available on PyPi - the Python Package Index")](https://pypi.python.org/pypi/meetlify)
+[![supported_python_versions](https://img.shields.io/pypi/pyversions/meetlify.svg?style=flat-square "Supported Python Version")](https://pypi.python.org/pypi/meetlify)
+
+
+## How to Use?
+This package is available at ``pypi`` and you can install it with ``pip install meetlify`` command. It will also install required additional libraries/Python Packages automatically.
+
+### Using GitHub Template
+
+We have prepard [meetlify-template](https://github.com/pybodensee/meetlify-template) which is a sample template repository. Just use this template to create your own repository. 
+
+This approach is for buy and non techies who just want to host a simple meetup website. Make sure that GitHub actions are allowed to execute on your account. After successful clone, the website will automatically create/update gh_pages branch which you can link with any static hosting provider e.g. GitHub Page, Netlify, Cloudflare Pages, Vercel and others. However, this repo is optimized for hosting on Netlify.
+
+### Using Command Line Interface (CLI)
+
+Create an empty folder on your computer or move to a desired location where you want to create the Meetup Website. 
+
+1. Now execute ``meetlify init`` which will crate an empty configuration file (JSON) in the folder. Feel free to edit it as per your need. Content of the configuration file are self explanatory.  
+
+2. Now execute ``meetlify setup`` which will setup the all folders as per your configurations. 
+
+3. Now execute ``meetlify make`` which will generate full website in output folder.
+
+
+### Using Application Programming Interface (API)
+
+You can embed ``meetilify`` into your existing workflow easily. Here is a sample snippet.
+
+```python
+from pathlib import Path
+from meetlify.api import Meetlify
+from meetlify.utils import initialize
+
+destination_path = Path("/home/user/Desktop/sample_webiste/")
+
+# Now initialize configurationn file
+initialize(dest_=destination_path)
+
+# Modify newly created config.json file as per your need.
+mtlfy = Meetlify(dest_=destination_path)
+mtlfy.render_home()
+mtlfy.render_404_page()
+mtlfy.render_meetups()
+mtlfy.render_posts()
+mtlfy.render_pages()
+mtlfy.render_categories()
+mtlfy.render_redirects()
+mtlfy.render_sitemaps()
+mtlfy.render_robots_txt()
+mtlfy.copy_assests()
+
+```
+
+## How to Extend ?
+- Clone or download this repository to your computer.
+- Create a virtual environment using ``python -m .venv venv``
+- Navigate to the downloaded directory and then install all required dependencies using ``pip install -e .``
+- Now you can open ``api.py`` file and start editing it. Feel free to extend it or even submit a pull request if you have a useful feature. 
+
+## Contribute
+
+Pull Requests, Feature Suggestions, and collaborations are welcome.
+
+## About Us
+
+This work is a collaborative effort of [PyBodensee](https://pybodensee.com/), and [SerpWings](https://serpwings.com/).

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% import 'includes/macros.html' as macros %}
+
+{% block main_header %}
+<meta name="description" content="{{post.description}}" />
+<meta name="author" content="{{post.author}}" />
+<link href="{{meta.URL}}/{{meta.folders.posts}}/{{post.slug}}/" rel="canonical" />
+<title>{{post.title}}</title>
+<meta content="{{post.title}}" property="og:title" />
+<meta content="{{post.description}}" property="og:description" />
+<meta content="{{meta.URL}}/{{meta.folders.posts}}/{{post.slug}}/" property="og:url" />
+{% endblock main_header %}
+
+
+{% block main_content %}
+<!-- Page Content-->
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <div class="col-lg-8">
+                <!-- Post content-->
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        {{macros.title_bar(meta, post)}}
+                    </header>
+                    <section class="mb-5">
+                        {{ macros.banner_card(banner) }}
+                        {{ post.content }}
+                    </section>
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <div class="py-2 sidebar">
+                    {{macros.toc_card(post)}}
+                    {{macros.contact_us_card(meta)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main_content %}
