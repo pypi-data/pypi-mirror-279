@@ -1,0 +1,9 @@
+crawlpy/__init__.py,sha256=eacA1UMdH510kgav6-8jsPZaidI7nbtJko2AYPryxrE,77
+crawlpy/webscraper.py,sha256=jPc7w7doi4DdDo75FNJBakxFhFXrO29jKdflNylFxMA,6471
+crawlpy/youtubescraper.py,sha256=XRiGQ1BFuaAKOpY6IoK2TYcdRwqHeoN7czgNPlhyRqM,2661
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_scraper.py,sha256=qVN_MvXvREm601g4LZGZWW4emjFu7z1hbCSlPuCNrgk,967
+crawlpy-1.0.0.dist-info/METADATA,sha256=QiaByhY4_AyPepqwGObGzj93LL_F-SfZFCIsBw2q_rU,1059
+crawlpy-1.0.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+crawlpy-1.0.0.dist-info/top_level.txt,sha256=ZOE5Ru24HQy54kZr9wEKQuAEmNaFkUW9grCutfwWLWQ,14
+crawlpy-1.0.0.dist-info/RECORD,,
