@@ -1,0 +1,13 @@
+django_settings_env/__init__.py,sha256=2DAX5HcJfyrRfwdAD6f-4irsZoH5twi_jjCHc9_fQwQ,216
+django_settings_env/deferred.py,sha256=iK-gOurwjIjqxixPbR4_1I4oRja-mrC58Y_yNNcKzKQ,2323
+django_settings_env/env_django.py,sha256=VU8ETXEkhF5E8yzJLQ3dvzCn24E-CQou4IhfQHSl9Dw,9181
+django_settings_env/urls/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_settings_env/urls/cache.py,sha256=jVLCaExnWM3p28rgpqj0bSlH9nvPKkKGxCYG9Mwzfbs,3097
+django_settings_env/urls/database.py,sha256=ZnCGPrl-aU0IgcWHySbsf0juZ2zwB_9HVjeUGud71r4,2426
+django_settings_env/urls/email.py,sha256=Wnui5zmrOI3_AaJ2GMRXmIVaZu4Y8Ym87HV6MuWMJR8,1910
+django_settings_env/urls/search.py,sha256=vwXjPYBNmHVRO1nRMt0jv3xqJJfHrClh8xxPlmlKWu0,3665
+django_settings_env/urls/url.py,sha256=8DyjJw4dwjh-VIO-onvOcvOnoIMa4M3TfA7lm3fhvu4,5840
+django_settings_env-5.0.1.dist-info/LICENSE,sha256=jb9jADOsfiaiqthEiVs2gpT1bxPaPgbUls7Txg7NmXw,1086
+django_settings_env-5.0.1.dist-info/METADATA,sha256=CmLPNLPLfZCBmwP01YyVXll3F4HQcxYn1yC3gaN8wY8,14931
+django_settings_env-5.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+django_settings_env-5.0.1.dist-info/RECORD,,
