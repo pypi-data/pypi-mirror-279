@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: memoizelabs
+Version: 0.0.0
+Summary: Fork, Memoize Labs' API for training and using human-like models.
+Author-email: Julius Arolovitch <julius@memoizelabs.com>, Maxim Yagnyatinskiy <max@memoizelabs.com>, Robert Devenyi <rob@memoizelabs.com>, Eden Brunner <eden@memoizelabs.com>

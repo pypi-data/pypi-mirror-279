@@ -1,0 +1,10 @@
+[project]
+name = "memoizelabs"
+authors = [
+    {name = "Julius Arolovitch", email = "julius@memoizelabs.com"},
+    {name = "Maxim Yagnyatinskiy", email = "max@memoizelabs.com"},
+    {name = "Robert Devenyi", email = "rob@memoizelabs.com"},
+    {name = "Eden Brunner", email = "eden@memoizelabs.com"},
+]
+version = "0.0.0"
+description = "Fork, Memoize Labs' API for training and using human-like models."
