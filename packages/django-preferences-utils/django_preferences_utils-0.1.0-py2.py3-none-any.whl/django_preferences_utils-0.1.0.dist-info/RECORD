@@ -1,0 +1,14 @@
+preferences_utils/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+preferences_utils/admin.py,sha256=aPznmAemQKaIjT8hVKoauiEqDCol85gKZ0iUiLZmvZ0,1139
+preferences_utils/apps.py,sha256=-6I7KnM0uRbizhgbPUruZZRTo3y00JNcL8A7e6l1C8M,165
+preferences_utils/context_processors.py,sha256=eDufwbN5-TANaSIi1vIvAUwdNf8cVmKQ7RMpiqFj8Uk,391
+preferences_utils/models.py,sha256=3EtYumSdjqQ35DEWHAAmJYO4tjNJZmAB4pbohDeFfs0,1362
+preferences_utils/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+preferences_utils/templates/admin/preferences_utils/change_form.html,sha256=SgqfWzfyYFsOmiChp_MNbkMxRmczMS5Ogn6jXdykugs,829
+preferences_utils/templatetags/preferences_utils.py,sha256=aYl32uvJABY_o-zvNHUc6lqRASQzQ8M-6mHk-ZsCCag,134
+django_preferences_utils-0.1.0.dist-info/AUTHORS.rst,sha256=BLr_UcxNjL8Rxnb8-4YYgWXLSYrWT6dFwVrNevZrGps,150
+django_preferences_utils-0.1.0.dist-info/LICENSE,sha256=xVzjK5SKF_i6osJ2PlbUGdoqJ2yBGNJgDPbrE0WlL8k,1071
+django_preferences_utils-0.1.0.dist-info/METADATA,sha256=vlk9fuZs7STa_8fUHPoaHrbK_PcBzCLuOo-eWpBstUA,5746
+django_preferences_utils-0.1.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+django_preferences_utils-0.1.0.dist-info/top_level.txt,sha256=hd0Asi3iFrB4i3ijnbF4-WLDatVoJu7J8ELijeSR3-w,18
+django_preferences_utils-0.1.0.dist-info/RECORD,,
