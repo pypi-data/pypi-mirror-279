@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: vzg.jconv
+Version: 1.4.1
+Summary: Python library to create JSON Data
+Home-page: https://github.com/gbv/vzg.jconv
+Author: Marc-J. Tegethoff
+Author-email: tegethoff@gbv.de
+License: GNU Affero General Public License v3
+Project-URL: PyPI, https://pypi.python.org/pypi/vzg.jconv
+Project-URL: Source, https://github.com/gbv/vzg.jconv
+Project-URL: Tracker, https://github.com/gbv/vzg.jconv/issues
+Keywords: VZG Python JSON XML JAST
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: jsonschema
+Requires-Dist: lxml
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: zope.interface
+
+# VZG Schema Converter Library
+
+This library converts specific metadata files to [JSON VZG Schema](https://github.com/gbv/articleformat).
+
+## Metadata sources
+
+- [JATS](https://jats.nlm.nih.gov/archiving/)
+
+## Installation
+
+```console
+foo@bar:~$ python3 -m venv vzg.jconv
+foo@bar:~$ cd vzg.jconv
+foo@bar:~$ source bin/activate
+(vzg.jconv) foo@bar:~$ pip install --upgrade pip
+(vzg.jconv) foo@bar:~$ pip install vzg.jconv
+(vzg.jconv) foo@bar:~$ simple-conv -h
+```
