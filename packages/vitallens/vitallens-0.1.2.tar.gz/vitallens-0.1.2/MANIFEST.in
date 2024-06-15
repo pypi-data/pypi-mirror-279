@@ -1,0 +1,6 @@
+include README.md
+recursive-include vitallens/configs *
+recursive-include vitallens/methods *
+recursive-include vitallens/models *
+recursive-include tests *
+prune **/__pycache__
