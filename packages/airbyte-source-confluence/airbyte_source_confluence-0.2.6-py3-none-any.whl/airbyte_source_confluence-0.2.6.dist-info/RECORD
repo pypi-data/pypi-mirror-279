@@ -1,0 +1,8 @@
+source_confluence/__init__.py,sha256=RwnualiJui2souRtb0wwbS-otMgU9WHLCGgjC8VXBNk,132
+source_confluence/manifest.yaml,sha256=1SuXjG9UHIPQ3sWVXjFXdNhaXftVccpkvGbSZTldOKQ,29752
+source_confluence/run.py,sha256=T1Mibr8vnRVA_pBG6dCSZ8Xsbt7jZLLkwR_CLDBY-Zs,242
+source_confluence/source.py,sha256=oAf1hZf0ypADiJtr8nkaxwnfv5EaOeYLls4cMitHFmQ,479
+airbyte_source_confluence-0.2.6.dist-info/METADATA,sha256=TYZUDeEpnQ_2toWFKv3MmkKwyWwrSpQOrpSyslY9AMc,5294
+airbyte_source_confluence-0.2.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_confluence-0.2.6.dist-info/entry_points.txt,sha256=lYy-9iMrAjh8HDW3fiFXcy830d5lwxA_rWCJj-gAv58,63
+airbyte_source_confluence-0.2.6.dist-info/RECORD,,
