@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:py="http://genshi.edgewall.org/"
+	xmlns:xi="http://www.w3.org/2001/XInclude">
+
+<xi:include href="master.html" />
+
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" py:replace="''"/>
+	<meta py:for="name, content in meta.items()" name="${name}" content="${content}" />
+	<title py:content="title"></title>
+</head>
+
+<body>
+
+	<div class="home-background">
+
+		<header class="site-header" />
+
+		<div class="home-content">
+			<div class="center">
+				<div class="home-title">
+					${name}
+					<hr/>
+					<div class="home-subtitle">
+						...
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+
+	<py:for each="icon in icons">${icon.render()}</py:for>
+
+	</footer>
+
+	<!-- <a href="http://www.jaraco.com/croakysteel.py">unblessed-vol</a> -->
+
+</body>
+
+</html>
