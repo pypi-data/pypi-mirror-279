@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: my-breakout-package
+Version: 0.1
+Summary: A package for calculating breakout trading conditions.
+Home-page: https://github.com/yourusername/my_breakout_package
+Author: Kapil Mittal
+Author-email: kapil@breakoutinvesting.in

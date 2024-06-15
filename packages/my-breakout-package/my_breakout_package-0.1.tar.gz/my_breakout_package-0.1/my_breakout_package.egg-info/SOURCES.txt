@@ -1,0 +1,9 @@
+README.md
+setup.py
+my_breakout_package/__init__.py
+my_breakout_package/breakout.py
+my_breakout_package.egg-info/PKG-INFO
+my_breakout_package.egg-info/SOURCES.txt
+my_breakout_package.egg-info/dependency_links.txt
+my_breakout_package.egg-info/requires.txt
+my_breakout_package.egg-info/top_level.txt
