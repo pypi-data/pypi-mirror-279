@@ -1,0 +1,9 @@
+[hatch]
+build-locked = pdm_build_locked.hatchling
+
+[pdm]
+build-locked = pdm_build_locked.plugin:main
+
+[pdm.build.hook]
+build-locked = pdm_build_locked.backend:BuildLockedHook
+

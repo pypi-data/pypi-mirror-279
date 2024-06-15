@@ -1,0 +1,11 @@
+pdm_build_locked-0.2.3.dist-info/METADATA,sha256=xk6SAscfuyJRZhJQ38msZos6qvAQAPAZHqVbogyz_P8,2016
+pdm_build_locked-0.2.3.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+pdm_build_locked-0.2.3.dist-info/entry_points.txt,sha256=0xHSsB0HsaEY7Vln-oDe8my-CWxFlAmflS53zloIeIY,176
+pdm_build_locked-0.2.3.dist-info/licenses/LICENSE,sha256=5HsThw6HX3vBhEFoP82DNJaTZXRnJSX3dN6VX6Gfrgw,1064
+pdm_build_locked/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pdm_build_locked/_utils.py,sha256=-ABKdU-HOJXCnIqW-H3sPBjkbpHPGeoeTb3joOilC2c,4205
+pdm_build_locked/backend.py,sha256=6dp95heAUlFZ6US4jnB9vd33QBJLCZtNEEcaNGtU5R0,973
+pdm_build_locked/command.py,sha256=zKfSXWrIpMY_OW-Ld6_X0qpjvmqiSIt2BscymRxwzME,6948
+pdm_build_locked/hatchling.py,sha256=L3oJYgfo8BZSjO63BSQ-KRN9_pTbb3pnasW1Lf4U9Jc,532
+pdm_build_locked/plugin.py,sha256=b8ukPqdAWZHfbqNwSNxt6Ph3UQ-1HWka_7jLN-GgK58,306
+pdm_build_locked-0.2.3.dist-info/RECORD,,
