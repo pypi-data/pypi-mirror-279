@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: FamzzXMadBypass
+Version: 0.1.1
+Summary: A module to bypass Adlink
+Author: Famzz X Mad
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# FamzzXMadBypass
+
+A module to bypass Adlink.
+
+# Example using
+
+```py
+import FamzzXMadBypass as bypasser
+
+password = "Pasword"
+url_to_bypass = "https://linkvertise.com/580726/fluxus1"
+bypassed_link = bypasser.bypass(url_to_bypass, password)
+
+print(bypassed_link)
+```
+# Supported
+```py
+import FamzzXMadBypass as bypasser
+
+support_link = bypasser.supported()
+print(support_link)
+```
