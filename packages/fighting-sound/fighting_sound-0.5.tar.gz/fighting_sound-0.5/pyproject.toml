@@ -1,0 +1,21 @@
+[project]
+name = "fighting-sound"
+version = "0.5"
+authors = [
+  { name="yan" },
+]
+description = "A sound library for DareFightingICE with OpenAL backend"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  'numpy ~= 1.26.4',
+]
+
+[project.urls]
+Homepage = "https://github.com/yan-2/pyftg-sound"
+Issues = "https://github.com/yan-2/pyftg-sound/issues"
