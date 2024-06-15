@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ende
+Version: 0.1
+Summary: Encrypt Decrypt
+Requires-Python: >=3.9
+Requires-Dist: cryptography

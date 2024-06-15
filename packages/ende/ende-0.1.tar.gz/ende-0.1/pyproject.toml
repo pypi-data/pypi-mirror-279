@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ende"
+version = "0.1"
+description = "Encrypt Decrypt"
+requires-python = ">=3.9"
+dependencies = [
+    'cryptography',
+]
+
+[project.scripts]
+ende = 'ende:main'
