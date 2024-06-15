@@ -1,0 +1,8 @@
+include README.md
+include COPYING
+include colony.R
+recursive-include birds/migrations *.py
+recursive-include birds/templates *
+recursive-include birds/templatetags *.py
+recursive-include birds/tests *.py
+recursive-include birds/fixtures *
