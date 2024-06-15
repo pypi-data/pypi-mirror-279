@@ -1,0 +1,9 @@
+sirio/__init__.py,sha256=7jMHw0OC8ILBG35Koxz2UBaXhtat2986A7HXv9pUTrU,130
+sirio/business_object.py,sha256=ktOrX5kgMCYk4zsW6sqrpwDOtEG9PrE0JPedyR-S95s,3528
+sirio/event.py,sha256=VjEVgbE8L0FZMdSdI9_ZHlmbzuJgxsOtN0BiPk5sV8Y,1017
+tests/__init__.py,sha256=TBGxuzl8U42VUM35l8MTb6bdh1NolT3rF2A1Lt1UN0U,36
+tests/test_sirio.py,sha256=wcwpaRN_uedLMwzL3BeJmt3YoXynH7twJnZDVRdeFQM,398
+sirio-0.1.2.dist-info/METADATA,sha256=LRF4KmxIjNKNLy21mkaaCDLSoucRu32e-4A6B7RD75M,939
+sirio-0.1.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+sirio-0.1.2.dist-info/top_level.txt,sha256=wmzZ85_JaDEeYFDUnelQb7k9EIru8hGmDW2GSEhFHlc,12
+sirio-0.1.2.dist-info/RECORD,,
