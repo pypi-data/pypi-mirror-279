@@ -1,0 +1,16 @@
+SpeechRecognition
+gtts
+pygame
+sounddevice
+pyaudio
+selenium
+tensorflow==2.16.1
+flask-cors
+flask
+nltk
+joblib
+tflearn
+setuptools
+wheel
+twine
+dill
