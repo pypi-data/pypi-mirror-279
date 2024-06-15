@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+irdf/irdf.egg-info/PKG-INFO
+irdf/irdf.egg-info/SOURCES.txt
+irdf/irdf.egg-info/dependency_links.txt
+irdf/irdf.egg-info/requires.txt
+irdf/irdf.egg-info/top_level.txt
