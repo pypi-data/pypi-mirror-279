@@ -1,0 +1,14 @@
+ytb2audio
+audio2splitted
+python-dotenv
+python-telegram-bot
+pytube
+mutagen
+pillow
+utils4audio
+
+[dev]
+check-manifest
+
+[test]
+coverage
