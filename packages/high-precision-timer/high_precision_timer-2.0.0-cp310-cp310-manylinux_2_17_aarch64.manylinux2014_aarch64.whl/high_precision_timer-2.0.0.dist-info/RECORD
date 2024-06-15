@@ -1,0 +1,14 @@
+high_precision_timer/precision_timer_ext.cpython-310-aarch64-linux-gnu.so,sha256=vgPTNViSKIC6lxn5J4VJdkvPghKbuXgg1zWJ7-QXWJs,201600
+high_precision_timer/precision_timer/utilities.py,sha256=TsBeVksvIuVyM3rPlf0c_KC4kZn75rh_zshHNSCQlbE,8145
+high_precision_timer/precision_timer/timer_benchmark.pyi,sha256=_wfLKc8EIxjSYg9ZB5YpO_yD7FGU1rsCqb1IXEIYAfw,117
+high_precision_timer/precision_timer/utilities.pyi,sha256=Yp-V3dnUGR2GEZX7jwY1J03KOglVItLAXpY_TpMy55g,355
+high_precision_timer/precision_timer/timer_class.py,sha256=sav46aHmWAV09JZc4MLXUrBYMM3dVP0kuv9zwkGQZ5I,8808
+high_precision_timer/precision_timer/__init__.py,sha256=qMGw1F7stuzFXx68nUFdEwnRIRlaPyAgh0xO3liytO0,130
+high_precision_timer/precision_timer/__init__.pyi,sha256=8jtR0ITu1aov6VnxvmghCmBnclsrq__vo3_zE0MIDhM,216
+high_precision_timer/precision_timer/timer_benchmark.py,sha256=r-IQ9sEw4giIkL09dHfXrEB9lnjbM6YPMc_g0r5gKqo,10745
+high_precision_timer/precision_timer/timer_class.pyi,sha256=1SVcRYuFmDt3JLYih_lns_3s3NSsvyYYYS8R6hyH38g,721
+high_precision_timer-2.0.0.dist-info/METADATA,sha256=npVaUIyf4szffLFoTyirrsxX6_uZ5VdXZ_T-ghfkSIA,52311
+high_precision_timer-2.0.0.dist-info/WHEEL,sha256=ECgBHtkmS_dabYi_N6qg3d2UKzKfeqjzOPagO1ggApI,157
+high_precision_timer-2.0.0.dist-info/entry_points.txt,sha256=OBqnuCuoB3-rwheZSBRwfjyQewxWc0ywdmKQeg-LA9E,68
+high_precision_timer-2.0.0.dist-info/RECORD,,
+high_precision_timer-2.0.0.dist-info/licenses/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
