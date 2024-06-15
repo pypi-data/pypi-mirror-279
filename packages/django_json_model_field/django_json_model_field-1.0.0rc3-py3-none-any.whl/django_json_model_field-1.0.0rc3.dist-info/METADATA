@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: django_json_model_field
+Version: 1.0.0rc3
+Summary: Use a model class to provide a strict data structure for JSON fields
+Author: Daniel Schaffer
+Author-email: dschaffer@instawork.com
+Requires-Python: >=3.9,<3.10
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Django (>=3.2,<3.3)
