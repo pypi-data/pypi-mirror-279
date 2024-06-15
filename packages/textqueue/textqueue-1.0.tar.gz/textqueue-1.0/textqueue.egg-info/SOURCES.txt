@@ -1,0 +1,5 @@
+README.md
+pyproject.toml
+textqueue/__init__.py
+textqueue/main.py
+textqueue/py.typed
