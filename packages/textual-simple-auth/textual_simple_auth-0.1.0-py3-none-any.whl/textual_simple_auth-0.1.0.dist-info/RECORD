@@ -1,0 +1,10 @@
+textual_simple_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_simple_auth/auth.py,sha256=DB_Jid6NMfB7OvdpesZWKyEb4juXCh3rthV4c9uK-pY,5034
+textual_simple_auth/decorators.py,sha256=ckGekNqJP-zBiFN446AkRnPJ0_leuhqDStyGnobbYdY,1206
+textual_simple_auth/demo.py,sha256=ADLYr5boCfgxj_x6hTq0RvDk66e2vb11j4xX93q179Y,560
+textual_simple_auth/demo.tcss,sha256=ayz1kiBkNBiTQK-lHUKUJj8oc-ukrIS9sOR8KlRjtLc,203
+textual_simple_auth/login.py,sha256=i2b6Vc5O4offkLqOR-0omjWsVf9PP2SjIegB1q2ugJ4,1300
+textual_simple_auth/login.tcss,sha256=wgNK6aB28CbFxxPmTaia9lql63_ed7E_G0a4M1-jUHg,419
+textual_simple_auth-0.1.0.dist-info/METADATA,sha256=zWbGuTCP4xrDdGVthSyjHxYK1ZgUkKr1aTiLJFl58v0,951
+textual_simple_auth-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+textual_simple_auth-0.1.0.dist-info/RECORD,,
