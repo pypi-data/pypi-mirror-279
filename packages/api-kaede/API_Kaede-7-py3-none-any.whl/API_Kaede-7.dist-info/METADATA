@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: API-Kaede
+Version: 7
+Summary: A Python package to interact with Kaede API
+Author: Kento Hinode
+Author-email: cleaverdeath@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: patch-ng
+Requires-Dist: requests
+Requires-Dist: pillow
+Requires-Dist: paddlepaddle
+Requires-Dist: paddleocr
+Requires-Dist: yt-dlp
+Requires-Dist: lmdb
+
+Kaede API Client Is A Communication Standard Between The Kaede API And The User (EG: You) . This API Has Functions Such As OCR , Search Youtube & Etc (More Features Are Coming) . Using This API You Can Quickly Develop You Bot With Functions Like Music Searching & Playing Or Extracting  Text From A Image. Currently It Is Meant For Discord Bots But Once The Features Are Fully Completed I Will Make It For All Applications. If You Need Support Then I Will Be In The API Support Server In Discord At https://discord.gg/MmrB32XJY9
