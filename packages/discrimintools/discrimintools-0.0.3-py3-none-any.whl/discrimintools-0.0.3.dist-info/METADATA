@@ -1,0 +1,92 @@
+Metadata-Version: 2.1
+Name: discrimintools
+Version: 0.0.3
+Summary: Python package dedicated to Discriminant Analysis (DA) distributed under the MIT License
+Author: Duvérier DJIFACK ZEBAZE
+Author-email: duverierdjifack@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (>=1.26.4)
+Requires-Dist: pandas (>=2.2.2)
+Requires-Dist: scikit-learn (>=1.2.2)
+Requires-Dist: polars (>=0.19.2)
+Requires-Dist: plotnine (>=0.10.1)
+Requires-Dist: mapply (>=0.1.21)
+Requires-Dist: scientisttools (>=0.1.5)
+Requires-Dist: statsmodels (>=0.14.0)
+Requires-Dist: scipy (>=1.10.1)
+
+<center>
+    <img src="./figures/discrimintools.svg" alt="centered image" height="50%"/>
+</center>
+
+# discrimintools : Python library for Discriminant Analysis (DA)
+
+discrimintools is a python package dedicated to Discriminant Analysis (DA) distributed under the MIT License.
+
+## Overview
+
+Discriminant analysis is a classification problem, where two or more groups or clusters or populations are known _a priori_ and one or more new observations are classified into one of the known populations based on the measured characteristics.
+
+## Why use discrimintools?
+
+With this discrimintools package, you can perform :
+
+* Canonical Discriminant Analysis (CANDISC)
+* Linear Discriminant Analysis (LDA)
+* Principal Components Analysis - Discriminant Analysis (PCADA)
+* Discriminant Analysis on Qualitatives variables (DISQUAL)
+* Discriminant Analysis on Mixed Data (DISMIX)
+* Discriminant Correspondence Analysis (DISCA)
+* Stepwise Discriminant Analysis (STEPDISC)
+
+## Installation
+
+### Dependencies
+
+discrimintools requires 
+
+```python
+Python >= 3.10
+numpy >=1.26.4
+pandas >=2.2.2
+scikit-learn >=1.2.2
+polars >=0.19.2
+plotnine >=0.10.1
+mapply >=0.1.21
+scientisttools >=0.1.5
+statsmodels >=0.14.0
+scipy >=1.10.1
+```
+
+### User installation
+
+You can install discrimintools using pip :
+
+```python
+pip install discrimintools
+```
+
+## Documentation
+
+The docstring is written in english
+
+## References
+
+> [http://www.math.wpi.edu/saspdf/stat/chap25.pdf](http://www.math.wpi.edu/saspdf/stat/chap25.pdf)
+
+> [https://support.sas.com/documentation/cdl/en/statugdiscrim/61779/PDF/default/statugdiscrim.pdf](https://support.sas.com/documentation/cdl/en/statugdiscrim/61779/PDF/default/statugdiscrim.pdf)
+
+> [https://online.stat.psu.edu/stat505/lesson/10](https://online.stat.psu.edu/stat505/lesson/10)
+
+> [https://eric.univ-lyon2.fr/ricco/cours/slides/analyse_discriminante.pdf](https://eric.univ-lyon2.fr/ricco/cours/slides/analyse_discriminante.pdf)
+
+> [https://eric.univ-lyon2.fr/ricco/cours/cours/Pratique_Analyse_Discriminante_Lineaire.pdf](https://eric.univ-lyon2.fr/ricco/cours/cours/Pratique_Analyse_Discriminante_Lineaire.pdf)
+
+## Authors
+
+Duvérier DJIFACK ZEBAZE [duverierdjifack@gmail.com](mailto:duverierdjifack@gmail.com)
