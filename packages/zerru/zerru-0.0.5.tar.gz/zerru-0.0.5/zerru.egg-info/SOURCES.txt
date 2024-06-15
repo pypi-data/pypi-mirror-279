@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+zerru/__init__.py
+zerru/zerru.py
+zerru.egg-info/PKG-INFO
+zerru.egg-info/SOURCES.txt
+zerru.egg-info/dependency_links.txt
+zerru.egg-info/requires.txt
+zerru.egg-info/top_level.txt
