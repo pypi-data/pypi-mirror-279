@@ -1,0 +1,2 @@
+[console_scripts]
+google-search = google_search_api.cli:main
