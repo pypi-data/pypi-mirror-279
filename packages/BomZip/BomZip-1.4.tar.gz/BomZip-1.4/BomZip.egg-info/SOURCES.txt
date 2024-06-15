@@ -1,0 +1,7 @@
+setup.py
+BomZip/BomZip.py
+BomZip/__init__.py
+BomZip.egg-info/PKG-INFO
+BomZip.egg-info/SOURCES.txt
+BomZip.egg-info/dependency_links.txt
+BomZip.egg-info/top_level.txt
