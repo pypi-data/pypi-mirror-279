@@ -1,0 +1,22 @@
+app-common-python>=0.1.6
+cached_property
+chardet<4.0,>=2.0
+click>=7.1.2
+gql==3.0.0a6
+junitparser
+multidict
+ocviapy>=1.2.2
+python-dotenv
+PyYAML
+requests
+sh
+tabulate
+wait-for
+
+[:python_version < "3.8"]
+importlib-metadata>=0.12
+
+[test]
+mock
+pytest
+pytest-mock
