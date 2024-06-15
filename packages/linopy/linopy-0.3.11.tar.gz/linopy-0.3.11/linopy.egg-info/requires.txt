@@ -1,0 +1,52 @@
+numpy
+scipy
+bottleneck
+toolz
+numexpr
+xarray>=2023.9.0
+dask>=0.18.0
+polars
+tqdm
+deprecation
+
+[dev]
+pytest
+pytest-cov
+netcdf4
+pre-commit
+paramiko
+gurobipy
+highspy
+
+[docs]
+ipython
+numpydoc
+sphinx
+sphinx_rtd_theme
+sphinx_book_theme
+nbsphinx
+nbsphinx-link
+gurobipy
+ipykernel
+matplotlib
+
+[solvers]
+gurobipy
+mosek
+coptpy
+
+[solvers:platform_system != "Darwin"]
+pyscipopt
+
+[solvers:platform_system != "Darwin" and python_version < "3.11"]
+xpress
+
+[solvers:platform_system != "Darwin" and python_version < "3.12"]
+cplex
+
+[solvers:python_version < "3.12"]
+highspy>=1.5.0
+mindoptpy
+
+[solvers:python_version >= "3.12"]
+highspy>=1.7.1
