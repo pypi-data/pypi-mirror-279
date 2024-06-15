@@ -1,0 +1,2 @@
+[console_scripts]
+modelopt-wf-exec = modelopt.torch.task.utils.cli:main
