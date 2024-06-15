@@ -1,0 +1,23 @@
+# data process
+soundfile
+pillow
+matplotlib
+numpy
+
+# web server
+cos-python-sdk-v5
+fastapi>=0.110.1
+uvicorn>=0.14.0
+requests
+click
+
+
+# database
+ujson
+pyyaml
+swanboard==0.1.2b3
+
+
+# Information collection
+psutil
+pynvml
