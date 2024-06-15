@@ -1,0 +1,4 @@
+aws-sam-cli>=1.1.0
+
+[dev]
+flake8
