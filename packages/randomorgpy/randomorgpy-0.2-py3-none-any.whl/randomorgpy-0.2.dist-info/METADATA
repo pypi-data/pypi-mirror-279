@@ -1,0 +1,29 @@
+Metadata-Version: 2.3
+Name: randomorgpy
+Version: 0.2
+Summary: A small python wrapper for the random.org Basic API
+Project-URL: documentation, https://fhune.de/randomorgpy_documentation
+Project-URL: github, https://github.com/playlix42/randomorgpy
+Author-email: DouglasAdams_42 <felix.hune@gmx.de>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# randomorgpy
+## A simple python wrapper for the random.org API
+
+### Description
+This is a simple, small python wrapper for the random.org API.
+It implements the methods of the Base API.
+
+### Links
+* Look into the [Documentation](https://fhune.de/randomorgpy_documentation) for further information.
+* The package is also published on PyPI: [randomorgpy](https://pypi.org/project/randomorgpy).
+* The source code on GitHub: [GitHub](https://github.com/playlix42/randomorgpy).
+
+### License
+
+* _randomorgpy_ is [![lgpl-3.0](https://img.shields.io/badge/license-lgpl__3__0-blue.svg)](LICENSE)
