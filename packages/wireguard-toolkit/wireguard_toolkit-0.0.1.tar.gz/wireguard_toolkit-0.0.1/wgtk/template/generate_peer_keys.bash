@@ -1,0 +1,1 @@
+wg genkey | tee ${path}/private | wg pubkey > ${path}/public

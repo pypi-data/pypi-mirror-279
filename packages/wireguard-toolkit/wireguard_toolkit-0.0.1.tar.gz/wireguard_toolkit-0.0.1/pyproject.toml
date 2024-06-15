@@ -1,0 +1,55 @@
+[project]
+name = "wireguard-toolkit"
+requires-python = ">=3.12"
+
+license = {text = "MIT License"}
+
+keywords = [
+  "wireguard", "wg", "vpn", "configuration",
+]
+
+authors = [
+  {name = "Tanay Gupta"}
+]
+
+maintainers = [
+  {name = "Tanay Gupta"}
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+  "PyYAML>=6.0.1"
+]
+
+dynamic = ["version", "description"]
+
+
+[project.urls]
+Repository = "https://gitlab.com/0tanay/wireguard-toolkit"
+Issues = "https://gitlab.com/0tanay/wireguard-toolkit/-/issues"
+
+
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatchling"
+]
+
+
+[tool.hatch.build]
+sources = ["source"]
+packages = [
+  "source/wgtk",
+]
+
+
+[tool.hatch.version]
+path = "source/wgtk/__about__.py"
+
+
+[tool.hatch.description]
+path = "source/wgtk/__about__.py"

@@ -1,0 +1,1 @@
+wg genpsk > ${path}/preshared/${peer}
