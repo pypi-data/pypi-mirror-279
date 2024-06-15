@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+aidanccalculatorrbasic/__init__.py
+aidanccalculatorrbasic.egg-info/PKG-INFO
+aidanccalculatorrbasic.egg-info/SOURCES.txt
+aidanccalculatorrbasic.egg-info/dependency_links.txt
+aidanccalculatorrbasic.egg-info/top_level.txt
