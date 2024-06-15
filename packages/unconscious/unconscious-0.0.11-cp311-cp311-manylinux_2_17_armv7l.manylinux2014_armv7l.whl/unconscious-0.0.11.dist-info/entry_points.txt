@@ -1,0 +1,2 @@
+[console_scripts]
+unconscious=unconscious:typer_cli_app_function
