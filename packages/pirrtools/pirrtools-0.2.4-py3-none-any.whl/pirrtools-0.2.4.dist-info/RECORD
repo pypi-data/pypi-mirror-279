@@ -1,0 +1,13 @@
+pirrtools/__init__.py,sha256=4c2z5iIWWdYjizwjKhyYwQL6bby8NlQ2B-bx_Ed3bFI,4062
+pirrtools/list_chunks.py,sha256=TtTvu-o3HgcI-F-puTQNTH5KmImqYI575cU16uCZdMY,2241
+pirrtools/pandas.py,sha256=dwnV-_JzTP2PHZlc_uVt6wjAglpKqpDyCNfxFsye1d8,7765
+pirrtools/sequences.py,sha256=MuKhSLN1zciIL9PbPqKJaxlOb0ALDJ2tAM8ONKrEOUc,5384
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_list_chunks.py,sha256=JU6zjJWca6FevFfCznt5jL5dvrWadIFZ9D3xrlrum6c,4578
+tests/test_pandas.py,sha256=DMilxuJhIZOhDImFqc5gh-J8Ox9tlBaIEFFewuijVvs,6699
+tests/test_sequences.py,sha256=VXvh49y2OiUKItgwPOlgNOZSJdhNys9Qy0hinrELZP0,2512
+pirrtools-0.2.4.dist-info/LICENSE,sha256=X2KOc_eBHBU09PyUqVONzGa_eznkNDRw2uiFWuinG1I,1035
+pirrtools-0.2.4.dist-info/METADATA,sha256=9ceZXJh4-Xh8rauHcWxpcH9lbZnQQXk5MX1RUcliVm4,1886
+pirrtools-0.2.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pirrtools-0.2.4.dist-info/top_level.txt,sha256=5kJhRei_Qs91OcDvCnfKkTqZG_RzTNH2ggD83APza5A,16
+pirrtools-0.2.4.dist-info/RECORD,,
