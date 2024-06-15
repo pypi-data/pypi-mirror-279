@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "sfu-torch-lib"
+version = "0.0.45"
+description = "Libraries that support the development of machine learning models in PyTorch."
+authors = ["Anderson de Andrade <anderson_de_andrade@sfu.ca>"]
+exclude = ["tests/*"]
+
+[tool.poetry.dependencies]
+python = ">=3.8, <=3.13"
+boto3 = "^1"
+mlflow-skinny = "^2"
+numpy = "^1"
+pytorch-lightning = "^2"
+requests = "^2"
+s3fs = "^2024"
+torch = "^2"
+torchvision = "*"
+
+[tool.poetry.extras]
+extras = []
+
+[tool.poetry.dev-dependencies]
+defopt = "*"
+ruff = "*"
+basedpyright = "*"
+pytest = "*"
+neovim = "*"
+
+[tool.ruff]
+line-length = 120
+preview = true
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.pyright]
+typeCheckingMode = "basic"
+
+[tool.isort]
+line_length = 120
+multi_line_output = 9
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
