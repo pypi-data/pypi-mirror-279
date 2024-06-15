@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cugraph-equivariant-cu12
+Version: 24.6.1
+Summary: Fast GPU-based equivariant operations and convolutional layers.
+Author: NVIDIA Corporation
+License: Apache 2.0
+Project-URL: Homepage, https://github.com/rapidsai/cugraph
+Project-URL: Documentation, https://docs.rapids.ai/api/cugraph/stable/api_docs/cugraph-ops/
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pylibcugraphops-cu12 ==24.6.*
+Provides-Extra: test
+Requires-Dist: pandas ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-benchmark ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-xdist ; extra == 'test'
+Requires-Dist: scipy ; extra == 'test'
+
+# cugraph-equivariant
+
+## Description
+
+cugraph-equivariant library provides fast symmetry-preserving (equivariant) operations and convolutional layers, to accelerate the equivariant neural networks in drug discovery and other domains.
