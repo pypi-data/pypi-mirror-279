@@ -1,0 +1,11 @@
+dist
+venv
+.tmp
+.env
+__pycache__
+*.parquet
+results_data
+tpch_data
+bench*log*
+ibis_bench.log
+out.log

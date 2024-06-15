@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "ibis-bench"
+version = "0.1.0"
+authors = [{ name = "Cody", email = "cody@dkdc.dev" }]
+description = "benchmarking with Ibis"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    # data stuff
+    'duckdb==1.0.0',
+    'polars==0.20.31',
+    'datafusion==38.0.1',
+    'ibis-framework==9.1.0',
+    # other stuff
+    'typer',
+    'python-dotenv',
+    'psutil',
+    'gcsfs',
+    'plotly',
+    'streamlit',
+]
+
+[project.urls]
+"Homepage" = "https://github.com/lostmygithubaccount/ibis-bench"
+"Bug Tracker" = "https://github.com/lostmygithubaccount/ibis-bench/issues"
+
+[project.scripts]
+bench = "ibis_bench.cli:app"
+bench2 = "ibis_bench.cli2:app"
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
