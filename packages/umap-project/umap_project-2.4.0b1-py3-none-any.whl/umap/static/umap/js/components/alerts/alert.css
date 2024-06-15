@@ -1,0 +1,160 @@
+[role="dialog"] {
+    box-sizing: border-box;
+    min-height: 46px;
+    line-height: 46px;
+    padding: var(--box-padding);
+    position: absolute;
+    box-shadow: 0 1px 7px #999999;
+    background: var(--color-darkGray);
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.8em;
+    z-index: 1012;
+    border-radius: 2px;
+    margin-top: calc(var(--header-height) + var(--panel-gutter));
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: calc(100% - var(--panel-gutter) * 2);
+    width: max-content;
+}
+[role="dialog"] > div {
+    margin: 0 auto;
+    min-width: 60%;
+    background-size: 20px;
+    background-position: 0 15px;
+    padding-left: 28px;
+}
+[role="dialog"][data-level="info"] > div {
+    background-image: url('../../../img/alert-icon-info.svg');
+    background-repeat: no-repeat;
+}
+[role="dialog"][data-level="success"] > div {
+    background-image: url('../../../img/alert-icon-success.svg');
+    background-repeat: no-repeat;
+}
+[role="dialog"][data-level="error"] > div {
+    background-image: url('../../../img/alert-icon-error.svg');
+    background-repeat: no-repeat;
+}
+[role="dialog"][data-level="error"] {
+    background-color: var(--color-darkRed);
+}
+[role="dialog"] a {
+    text-decoration: underline;
+}
+[role="dialog"] label {
+    font-size: .8rem;
+    font-weight: normal;
+}
+[role="dialog"] a[target="_blank"] {
+    background: url('../../../img/icon-external-link.svg') no-repeat right center;
+    padding-right: 14px;
+    background-size: 12px;
+}
+h3[role="alert"] {
+    margin-bottom: 0;
+    margin-top: 1rem;
+    line-height: initial;
+}
+h3[role="alert"] + p {
+    margin-top: 0;
+}
+[role="group"] {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    border-radius: var(--border-radius);
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+[role="group"] input:not([type="checkbox"], [type="radio"]):not(:last-child),
+[role="group"] > :not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+[role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child),
+[role="group"] > :not(:first-child)  {
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 45%;
+}
+[role="group"] input[type="submit"] {
+    background: var(--color-darkGray);
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+    line-height: initial;
+}
+[role="group"] input:not([type="submit"]) {
+    background: var(--color-light);
+    color: var(--color-darkGray);
+    border: 1px solid var(--color-light);
+}
+[role="group"] input[type="button"] {
+    background: var(--color-darkGray);
+    color: var(--color-light);
+    border: none;
+    line-height: initial;
+}
+[role="group"] input[type="button"]:hover {
+    text-decoration: underline;
+    border: none;
+}
+@media only screen and (max-width:770px) {
+    [role="group"] {
+        display: flex;
+        flex-direction: column;
+    }
+    [role="group"] input:not([type="checkbox"], [type="radio"]):not(:last-child),
+    [role="group"] > :not(:last-child) {
+      border-radius: var(--border-radius);
+    }
+    [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child),
+    [role="group"] > :not(:first-child)  {
+      border-radius: var(--border-radius);
+    }
+
+    [role="group"] input:not([type="checkbox"], [type="radio"]):not(:first-child),
+    [role="group"] > :not(:first-child)  {
+        width: 100%;
+    }
+}
+#link-wrapper {
+    margin-bottom: 1rem;
+}
+[role="dialog"] #conflict-wrapper a[target="_blank"] {
+    background-position-y: 16px;
+}
+
+#conflict-wrapper form {
+    display: flex;
+    justify-content: space-around;
+}
+#conflict-wrapper form [type="submit"] {
+    width: initial;
+    background: inherit;
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+    font-weight: bold;
+}
+#conflict-wrapper form [type="submit"]:hover {
+    width: initial;
+    background: darkred;
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
+}
+@media only screen and (max-width:770px) {
+    #conflict-wrapper form {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+umap-alert-choice a {
+    color: var(--color-light);
+    text-decoration: underline;
+}
