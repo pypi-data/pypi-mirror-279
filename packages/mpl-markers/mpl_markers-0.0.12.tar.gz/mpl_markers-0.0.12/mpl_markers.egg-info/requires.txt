@@ -1,0 +1,11 @@
+matplotlib>=3.9.0
+numpy
+
+[dev]
+black
+flake8
+pytest
+bumpversion
+parameterized
+pyqt5
+ipykernel
