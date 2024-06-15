@@ -1,0 +1,6 @@
+requests
+boto3>=1.28.44
+database-mysql-local>=0.0.107
+logger-local>=0.0.135
+user-context-remote>=0.0.75
+python-sdk-remote>=0.0.93
