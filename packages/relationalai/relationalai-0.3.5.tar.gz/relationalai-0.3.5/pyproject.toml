@@ -1,0 +1,63 @@
+[project]
+name = 'relationalai'
+version = '0.3.5'
+description = 'RelationalAI Library and CLI'
+readme="docs/pypi/README.md"
+authors = [
+    { name="RelationalAI", email="support@relational.ai" },
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "snowflake-connector-python[secure-local-storage]",
+    "snowflake-snowpark-python",
+    "rai-sdk>=0.7.5",
+    "rich",
+    "nicegui",
+    "numpy",
+    "pandas",
+    "colorama",
+    "inquirerpy",
+    "click",
+    "gravis",
+    "bytecode",
+    "toml",
+    "tomlkit",
+    "requests",
+    "pyarrow",
+    "websockets",
+    "aiohttp",
+    "packaging"
+]
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "pytest-mock",
+    "pytest-snapshot",
+    "hypothesis",
+    "faker",
+    "argcomplete",
+    "watchdog",
+    "hupper",
+    "prompt_toolkit",
+    "build",
+    "ruff",
+    "pexpect",
+    "ddtrace",
+    "coverage",
+]
+
+[project.scripts]
+rai = "relationalai.tools.cli:cli"
+rai-dev = "relationalai.tools.dev:cli"
+gentest = "gentest.cli.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/relationalai", "src/gentest", "src/testutil"]

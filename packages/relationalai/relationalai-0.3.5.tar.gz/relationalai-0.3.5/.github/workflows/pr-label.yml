@@ -1,0 +1,39 @@
+name: Run labels
+run-name: Run label ${{ github.event.label.name }}
+
+on:
+  pull_request:
+    types: [labeled]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}-${{ github.event.label.name }}
+  cancel-in-progress: true
+
+jobs:
+  remove_label:
+    if: ${{ github.event.label.name == 'test-ring-1' || github.event.label.name == 'test-ring-2' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove label ${{ github.event.label.name }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Label is ${{ github.event.label.name }}, removing label..."
+          # Remove label
+          gh pr edit ${{ github.event.pull_request.number }} --remove-label ${{ github.event.label.name }}
+
+  test-ring-1:
+    if: ${{ github.event.label.name == 'test-ring-1' }}
+    uses: ./.github/workflows/test-ring-1.yml
+    with:
+      skip-ring: false
+      ref: ${{ github.event.pull_request.head.sha }}
+    secrets: inherit
+
+  test-ring-2:
+    if: ${{ github.event.label.name == 'test-ring-2' }}
+    uses: ./.github/workflows/test-ring-2.yml
+    with:
+      ref: ${{ github.event.pull_request.head.sha }}
+    secrets: inherit

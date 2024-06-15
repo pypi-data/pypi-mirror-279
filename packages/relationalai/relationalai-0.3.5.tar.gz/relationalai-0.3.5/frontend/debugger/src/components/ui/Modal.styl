@@ -1,0 +1,45 @@
+:root {
+  --modal-bg: var(--card-bg);
+  --modal-border: var(--card-border);
+  --modal-shadow: var(--card-shadow);
+  --modal-overlay-bg: var(--card-shadow);
+
+  --modal-anim-open-duration: var(--anim-duration-normal);
+  --modal-anim-close-duration: var(--anim-duration-slow);
+}
+
+.ui-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &, .ui-modal-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+  }
+
+  .ui-modal-overlay {
+    background: var(--modal-overlay-bg);
+  }
+
+  .ui-modal-content {
+    position: relative;
+    padding: 12px;
+    max-width: min(calc(100vw - 16px), 380px);
+
+    background: var(--modal-bg);
+    border-radius: 4px;
+    border: 1px solid var(--modal-border);
+    box-shadow: 1px 4px 11px var(--modal-shadow);
+    z-index: 40;
+  }
+
+  .ui-modal-header {
+    margin-bottom: 20px;
+  }
+
+  .ui-modal-title {
+    flex: 1;
+  }
+}

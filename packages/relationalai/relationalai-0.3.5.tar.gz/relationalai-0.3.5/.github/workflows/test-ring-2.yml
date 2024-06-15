@@ -1,0 +1,52 @@
+name: Test Ring 2
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        description: "Ref to run tests on"
+        default: ${{ github.sha }}
+    secrets:
+      RAI_CLIENT_ID:
+        required: true
+      RAI_CLIENT_SECRET:
+        required: true
+      SF_TEST_ACCOUNT_PASSWORD:
+        required: true
+      DD_API_KEY:
+        required: true
+      SF_REPORTING_PASSWORD:
+        required: true
+      SLACK_BOT_TOKEN:
+        required: true
+jobs:
+  benchmarks:
+    uses: ./.github/workflows/benchmarks.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python-version: '3.11'
+            cloud-provider: 'snowflake'
+    with:
+      ref: ${{ inputs.ref || github.sha }}
+      python-version: ${{ matrix.python-version }}
+      cloud-provider: ${{ matrix.cloud-provider }}
+    secrets: inherit
+
+  snowflake-integration-tests:
+    uses: ./.github/workflows/snowflake-integration.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python-version: '3.11'
+            cloud-provider: 'snowflake'
+    with:
+      ref: ${{ inputs.ref || github.sha }}
+      python-version: ${{ matrix.python-version }}
+      cloud-provider: ${{ matrix.cloud-provider }}
+    secrets: inherit

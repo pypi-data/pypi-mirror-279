@@ -1,0 +1,28 @@
+name: Merge Queue
+
+on:
+  merge_group:
+    types:
+      - checks_requested
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.merge_group.head_sha }}
+  cancel-in-progress: true
+
+jobs:
+  test-ring-0:
+    uses: ./.github/workflows/test-ring-0.yml
+    with:
+      ref: ${{ github.event.merge_group.head_sha }}
+    secrets: inherit
+
+
+  test-ring-1:
+    uses: ./.github/workflows/test-ring-1.yml
+    with:
+      ref: ${{ github.event.merge_group.head_sha }}
+      skip-ring: false
+    secrets: inherit

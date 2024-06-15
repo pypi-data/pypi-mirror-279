@@ -1,0 +1,97 @@
+name: Run Snowflake Integration Tests
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        type: string
+        required: false
+        description: "Ref to run snowflake integration tests on"
+      python-version:
+        type: choice
+        description: "Python version to run snowflake integration tests on"
+        required: true
+        options:
+          - '3.10'
+          - '3.11'
+          - '3.12'
+      cloud-provider:
+        type: choice
+        required: true
+        description: "Cloud provider to run snowflake integration tests on"
+        options:
+          - 'snowflake'
+          - 'azure'
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        description: "Ref to run snowflake integration tests on"
+      python-version:
+        type: string
+        required: true
+        description: "Python version to run snowflake integration tests on"
+      cloud-provider:
+        type: string
+        required: true
+        description: "Cloud provider to run snowflake integration tests on"
+    secrets:
+      RAI_CLIENT_ID:
+        required: true
+      RAI_CLIENT_SECRET:
+        required: true
+      SF_TEST_ACCOUNT_PASSWORD:
+        required: true
+      DD_API_KEY:
+        required: true
+      SF_REPORTING_PASSWORD:
+        required: true
+      SLACK_BOT_TOKEN:
+        required: true
+
+concurrency:
+  group: ${{ github.workflow }}-${{ (github.ref_name == 'main' || github.event_name == 'workflow_dispatch') && github.run_id || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  integration-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout repository
+        with:
+          ref: ${{ inputs.ref || github.sha }}
+      - uses: ./.github/actions/snowflake-integration
+        with:
+          python_version: ${{ inputs.python-version }}
+          rai_cloud_provider: ${{ inputs.cloud-provider }}
+          rai_client_id: ${{ secrets.RAI_CLIENT_ID }}
+          rai_client_secret: ${{ secrets.RAI_CLIENT_SECRET }}
+          sf_account: ndsoebe-rai_integration_aws_uswest_1_consumer
+          sf_warehouse: int_env_wh
+          sf_rai_app_name: rai_int_app
+          sf_compute_pool: int_env_benchmark_compute_xs
+          sf_username: team-prod-experience@relational.ai
+          sf_password: ${{ secrets.SF_TEST_ACCOUNT_PASSWORD }}
+          datadog_api_key: ${{ secrets.DD_API_KEY }}
+          sf_reporting_password: ${{ secrets.SF_REPORTING_PASSWORD }}
+          sf_use_exec_async_v2: ${{ vars.SF_USE_EXEC_ASYNC_V2}}
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: snowflake-integration-artifact-${{ inputs.python-version }}
+          path: coverage/lcov.info
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: snowflake-integration-coverage-report-${{ inputs.python-version }}
+          path: coverage/html-report
+      - name: Post to Slack
+        if: ${{ failure() }}
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          channel-id: C066T0HBSTW # team-prod-experience-oncall
+          slack-message: |
+            Snowflake integration tests failed: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

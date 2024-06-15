@@ -1,0 +1,82 @@
+:root
+  //----------------------------------------------------------------------------
+  // Color Palette
+  //----------------------------------------------------------------------------
+
+  /* Palette :: Primary */
+  --color-1-xdim:        #071D32
+  --color-1-dim:         #13497E
+  --color-1:             #3E74A9
+  --color-1-em:          #4E9CD7
+  --color-1-xem:         #99B5E3
+  --color-1-wash:        #1A1A44
+
+  /* Palette :: Secondary */
+  --color-2-xdim:        #173D36
+  --color-2-dim:         #3EA9A3
+  --color-2:             #5DFFD899
+  --color-2-em:          #5DFFD8
+
+  /* Palette :: Danger */
+  --color-danger-xdim:   #3F1E33
+  --color-danger-dim:    #402746
+  --color-danger:        #F9A18E
+  --color-danger-wash:   var(--color-danger-xdim)
+
+  /* Palette :: Warn */
+  --color-warn:          #F2D487
+  --color-warn-wash:     #FFD33744
+
+  /* Palette :: Misc. */
+  --color-water-em:      #02022D
+  --color-water-dim:     #000000
+
+  /* Palette :: Syntax Highlighting  */
+  --color-code:          #e6edf3
+  --color-code-1:        #8DB3F5
+  --color-code-2:        #5DCDFF
+
+  //----------------------------------------------------------------------------
+  // Design Tokens
+  //----------------------------------------------------------------------------
+
+  /* Tokens :: Text */
+  --title-text:           var(--color-1-em)
+  --body-text:            var(--color-1)
+  --info-text:            var(--color-1)
+
+  /* Tokens :: Status */
+  --status-default:       var(--color-1-em)
+  --status-default-bg:    var(--color-1-wash)
+  --status-active:        var(--color-2-em)
+  --status-active-bg:     var(--color-2-xdim)
+  --status-inactive:      var(--color-1)
+  --status-inactive-bg:   var(--color-1-wash)
+  --status-danger:        var(--color-danger)
+  --status-danger-bg:     var(--color-danger-wash)
+  --status-warn:          var(--color-warn)
+  --status-warn-bg:       var(--color-warn-wash)
+
+  /* Tokens :: Page */
+  --page-top:             var(--color-water-em)
+  --page-bot:             var(--color-water-dim)
+
+  /* Tokens :: Card */
+  --card-bg:              var(--color-1-wash)
+  --card-fg:              var(--color-1-xem)
+  --card-border:          unquote('hsl(from var(--bg, var(--card-bg)) h s calc(l * 1.33))')
+  --card-shadow:          #09001066
+  --card-danger-fg:       var(--color-danger)
+  --card-danger-bg:       var(--color-danger-wash)
+  --card-warn-fg:         var(--color-warn)
+  --card-warn-bg:         var(--color-warn-wash)
+
+  /* Tokens :: Input */
+  --input-bg:             var(--color-1-wash)
+  --input-border:         unquote('hsl(from var(--bg, var(--input-bg)) h s calc(l * 1.33))')
+  --input-outline:        unquote('hsl(from var(--bg, var(--input-bg)) h s calc(l * 1.66))')
+
+  /* Tokens :: Animation */
+  --anim-duration-quick:  0.1s
+  --anim-duration-normal: 0.25s
+  --anim-duration-slow:   0.4s

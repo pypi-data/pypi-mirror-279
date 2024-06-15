@@ -1,0 +1,23 @@
+name: Pull Request
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.head.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-ring-0:
+    uses: ./.github/workflows/test-ring-0.yml
+    with:
+      ref: ${{ github.event.pull_request.head.sha }}
+    secrets: inherit
+
+  test-ring-1:
+    uses: ./.github/workflows/test-ring-1.yml
+    with:
+      ref: ${{ github.event.pull_request.head.sha }}
+      skip-ring: false
+    secrets: inherit

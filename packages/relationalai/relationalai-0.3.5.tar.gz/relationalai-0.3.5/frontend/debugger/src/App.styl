@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:wght@100..900&display=swap');
+@require "./Theme.styl";
+
+//------------------------------------------------------------------------------
+// Basic UI
+//------------------------------------------------------------------------------
+
+header
+  display: flex
+  align-items: center
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+
+html, body
+  margin: 0
+  padding: 0
+  min-height: 100vh
+
+body
+  background: var(--bg)
+  color: var(--fg)
+
+
+//------------------------------------------------------------------------------
+// App
+//------------------------------------------------------------------------------
+
+body
+  padding-bottom: 60px
+  min-height: 100vh
+  box-sizing: border-box
+  overflow-y: scroll
+
+  background: linear-gradient(var(--page-top), var(--page-top) 60vh, var(--page-bot) 150vh), var(--page-bot)
+  background-repeat: no-repeat
+  background-attachment: local
+  color: var(--body-text)
+
+.app
+  min-height: 100vh
+  padding: 0 60px
+
+
+  & > header
+    padding-top: 40px
+    padding-bottom: 20px
+    & .hidden-controls
+      display: flex
+
+      opacity: 0
+      transition opacity 0.3s ease
+
+      ^[-1]:hover ^[-1..-1]
+        opacity: 1

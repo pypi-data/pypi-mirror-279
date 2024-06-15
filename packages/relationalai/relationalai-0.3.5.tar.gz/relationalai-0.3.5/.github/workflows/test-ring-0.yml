@@ -1,0 +1,68 @@
+name: Test Ring 0
+on:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        description: "ref to run tests on"
+        default: ${{ github.sha }}
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Create and activate virtual environment
+        run: |
+          python -m venv .venv
+      - name: Install dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/pip install ruff
+      - name: Run Ruff Check
+        run: .venv/bin/ruff check
+        id: ruff_check
+
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - python-version: '3.10'
+          - python-version: '3.11'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Create and activate virtual environment
+        run: |
+          python -m venv .venv
+        shell: bash
+      - name: Install dependencies
+        run: |
+          .venv/bin/python -m pip install --upgrade pip
+          .venv/bin/pip install .[dev]
+        shell: bash
+      - name: Run Tests
+        shell: bash
+        run: .venv/bin/pytest -s tests/unit
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: unit-tests-coverage-artifact-${{ matrix.python-version }}
+          path: coverage/lcov.info
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: unit-tests-coverage-report-${{ matrix.python-version }}
+          path: coverage/html-report

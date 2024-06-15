@@ -1,0 +1,9 @@
+compiler.use_multi_valued: true
+platform: snowflake
+account: plvoury-team_sales
+user: xyz@acme.inc
+password: ***
+role: RAI_USER
+warehouse: ACME_WH
+rai_app_name: RELATIONALAI
+engine: rai_engine

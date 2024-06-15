@@ -1,0 +1,57 @@
+@require "../util.styl";
+
+.system-status
+  position: sticky
+  top: -1px
+  display: flex
+  gap: 20px
+  padding: 20px 0;
+  z-index: 10;
+
+.system-status-tile
+  appearance: none
+  flex: 0 0 auto
+  padding: 25px
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+
+  border: none
+  border-radius: 20px
+  font-size: 20px
+  line-height: 1
+  transition: padding 0.2s ease, border-radius 0.2s ease;
+
+  .system-status.mini &
+    padding: 5px @padding
+    margin-bottom: 40px
+    border-radius: 10px
+
+  &.grow
+    flex: 1 1 auto
+
+  &.status-ok
+    background: var(--card-bg)
+    color: var(--card-fg)
+  &.status-error
+    background: var(--card-danger-bg)
+    color: var(--card-danger-fg)
+
+.transaction-dots
+  display: flex
+  flex-wrap: wrap
+  gap: 4px
+
+.transaction-dot
+  width: 12px
+  height: @width
+  border-radius: 4px
+  background: var(--status-default)
+
+  // &.status-created, &.status-pending
+  &.status-running
+    background: var(--status-active)
+  &.status-cancelling, &.status-aborted
+    background: var(--status-danger)
+  &.status-completed
+    background: var(--status-inactive)

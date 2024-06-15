@@ -1,0 +1,389 @@
+@require "../modernize.styl";
+@require "../util.styl";
+
+
+//------------------------------------------------------------------------------
+// Helpers
+//------------------------------------------------------------------------------
+
+// helper for creating bracketed strings such as [foo] for use in grid-templates.
+b()
+  unquote("[") + join(" ", arguments) + unquote("]")
+
+// Helper for passing grid rows/columns through elements to their children
+subgrid($row, $col=1\/-1, $subrows = false)
+  display: grid
+  grid-row: $row
+  grid-column: $col
+  grid-template-columns: subgrid
+  if $subrows
+    grid-template-rows: subgrid
+
+//------------------------------------------------------------------------------
+// Design Tokens
+//------------------------------------------------------------------------------
+
+:root
+    --event-list-shadow: var(--card-shadow)
+    --event-info-fg:     var(--color-1)
+    --event-fg:          var(--color-1-em)
+    --event-active-fg:   var(--color-2-em)
+    --event-duration:    var(--color-1-em)
+    --event-edge-top:    var(--color-1-dim)
+    --event-edge-bot:    var(--color-danger-dim)
+    // --event-node-top:    var(--)
+
+//------------------------------------------------------------------------------    
+// Event List
+//------------------------------------------------------------------------------
+
+.event-list
+  --open-duration: 0.4s
+
+  display: grid
+  // @NOTE: subgriding the entire universe leads to relayout perf sadness, so we fix the first two columns width
+  grid-template-columns:          \
+    b(before-start) 82px          \
+    b(before-end node-start) 48px \
+    b(node-end after-start) 1fr  \
+    b(after-end)
+  grid-auto-rows: auto
+
+  // groups render nested EventLists as .event-list.sub
+  &.sub
+    grid-column: 1/-1
+
+//------------------------------------------------------------------------------
+// Everything on the line is an .event-list-item
+//------------------------------------------------------------------------------
+.event-list-item
+  --item-height: 3
+  subgrid(span var(--item-height))
+  grid-template-rows: var(--node-height, auto) minmax(20px, auto) auto
+
+  //----------------------------------------------------------------------------
+  // Event Group
+  //----------------------------------------------------------------------------
+  & > header
+    display: contents;
+
+  & > .ui-collapsible-content
+    subgrid(var(--item-height))
+    visibility: visible
+    transition: grid-template-rows var(--open-duration) ease-in
+
+    & > .ui-collapsible-inner
+      --content-opacity: 1
+
+      subgrid(1)
+      padding-top: 16px
+      transition: padding-top var(--open-duration) ease
+
+      ^[-2][data-closed] > ^[-2..-1]
+        --content-opacity: 0
+        padding-top: 0
+        transition: padding-top calc(var(--open-duration) / 2) ease-out var(--open-duration)
+
+  &[data-closed] > .ui-collapsible-content
+    visibility: hidden
+    transition: \
+      grid-template-rows var(--open-duration) ease-in, \
+      visibility calc(var(--open-duration) * 2) step-end;
+
+  //----------------------------------------------------------------------------
+  // Event Segments
+  //----------------------------------------------------------------------------
+  & > header, &.leaf
+    .event-before
+      text-align: right
+      grid-column: before-start/before-end
+      grid-row: 1/span 2
+      margin-right: 16px;
+      margin-bottom: 20px;
+      transition: opacity var(--open-duration) ease-in
+      opacity: var(--content-opacity, 1)
+
+    .event-after
+      grid-column: after-start/after-end
+      grid-row: 1/span 2
+      justify-self: start
+      margin-left: 16px;
+      margin-bottom: 20px;
+      transition: opacity var(--open-duration) ease-in
+      opacity: var(--content-opacity, 1)
+
+    .event-detail
+      display: flex
+      gap: 0.35em
+
+    .event-time
+      color: var(--event-info-fg)
+
+    .event-duration
+      color: var(--event-fg)
+      transition: color 0.2s ease;
+      .running&
+        color: var(--event-active-fg)
+
+//----------------------------------------------------------------------------
+// Event Specific styles
+//----------------------------------------------------------------------------
+
+.event-list-item.program
+  .event-after
+    color: var(--title-text)
+
+.event-list-item.rule_batch
+  & > header .event-detail
+      color: var(--event-fg)
+      
+.event-list-item.block
+  & > header
+    .compilation
+      position: relative
+      & > header
+        position: absolute
+        bottom: 100%
+        left: 0
+        z-index: 1
+        opacity: 0
+        transition: opacity 0.2s ease
+
+        ^[-1]:hover > ^[-1..-1]
+          opacity: 1
+          
+      & > pre
+        margin: 0
+        padding: 0
+        background: none
+        border: none
+
+// duplicated for specificity :( not sure if it'd be better to do this, use !important, or refactor to use :where() all over...
+.event-list-item.error.error
+  .event-icon
+    .node
+      --fill: url(#node-error)
+  .event-detail
+    display: inline-block
+    padding: 8px 16px
+    margin-top: -8px
+    margin-bottom: 8px
+    background: var(--status-danger-bg)
+    border-radius: 5px
+    color: var(--status-danger)
+
+.event-list-item.warn.warn
+  .event-icon
+    .node
+      --fill: url(#node-warn)
+  .event-detail
+    display: inline-block
+    padding: 8px 16px
+    margin-top: -8px
+    margin-bottom: 8px
+    background: var(--status-warn-bg)
+    border-radius: 5px
+    color: var(--status-warn)
+
+.event-list-item.transaction
+  .event-detail
+    gap: 20px
+    label
+      color: var(--event-fg)
+    .subtle
+      color: var(--event-info-fg)
+    .ui-button
+      color: var(--event-fg)
+      opacity: 0
+      transition: opacity 0.2s ease
+
+  &:hover .ui-button
+    opacity: 1
+
+.event-list-item.install_batch
+    .event-after
+      color: var(--event-fg)
+    .event-detail
+      color: var(--event-info-fg)
+
+//------------------------------------------------------------------------------
+// Edge rendering (wires between nodes)
+//------------------------------------------------------------------------------
+
+.event-list-item
+  & > header:after, &.leaf:after, &has-important-events:after
+    display: block;
+    content: ""
+    grid-column: node-start/node-end
+    grid-row: 2
+    width: 2px
+    --height: 0px;
+    height: var(--height)
+
+    align-self: start
+    justify-self: center
+    background: linear-gradient(var(--event-edge-top), var(--event-edge-bot))
+    transition: height calc(var(--open-duration) / 2) ease
+
+  &.span[data-expanded] > header:after
+    // extend 16px over to account for padding in content, which is needed before content hides overflow
+    --height: calc(100% + 16px) !important
+
+  // Any node that isn't the last child of its top level group should still draw an edge to its next sibling
+  &:not([data-depth="0"]):not(:last-child)
+    &, & ^[0]
+      &.span > header:after,
+      &.leaf:after
+        --height: calc(100%)
+
+  &.span[data-closed] > header:after
+    // wait to close the edge until the child nodes have closed
+    transition: height calc(var(--open-duration) / 2) ease-out var(--open-duration)
+
+//------------------------------------------------------------------------------
+// Event Icon
+//------------------------------------------------------------------------------
+.event-list-item
+  & > header, &.leaf
+    .event-icon
+      grid-column: node-start/node-end
+      grid-row: 1
+      height: calc(var(--base-radius) * 2)
+      aspect-ratio: 1
+      overflow: visible
+      align-self: center
+      justify-self: center
+      --stroke-width: 4px
+
+      .node
+        --radius: calc(var(--base-radius));
+        fill: var(--fill)
+
+      ^[0][data-expanded] > ^[1..-1] .node
+        --radius: calc(var(--base-radius) - var(--stroke-width) / 2);
+        stroke: var(--fill)
+        stroke-width: var(--stroke-width)
+        fill: none
+
+      .node
+        cx: 0
+        cy: 0
+        r: var(--radius)
+        --fill: url("#node-default")
+        transition: fill 0.1s ease, stroke 0.1s ease
+        filter: drop-shadow(0 0 3px var(--event-list-shadow))
+        animation: event-node-float-in 0.2s ease
+
+      .in-progress
+        .reflection
+          cx: 0
+          cy: 0
+          r: calc(var(--base-radius) * 2.5)
+          transform-origin: 0 0
+
+          animation: event-node-fade-in 0.3s ease-in, event-node-spin 2s linear infinite
+          fill: url("#node-reflection")
+          fill-opacity: 1
+          mix-blend-mode: soft-light
+
+        .spinner
+          --stop-1: var(--status-active)
+          --stop-2: transparent
+          --stop-3: transparent
+
+          r: calc(var(--base-radius) + 5px)
+          stroke-linecap: round
+          transform-origin: 0 0
+          animation: event-node-fade-in 0.3s ease-in, event-node-spin 2s linear infinite
+          stroke-opacity: 1
+          z-index: 1
+
+      .multi circle
+        fill: url("#node-default")
+        animation: event-node-pop-out 0.25s ease
+
+        &:nth-child(1)
+          cx: calc(var(--base-radius) / -0.75)
+          cy: calc(var(--base-radius) / 2)
+          r: calc(var(--base-radius) / 1.5)
+          filter: brightness(0.85)
+
+        &:nth-child(2)
+          cx: calc(var(--base-radius) / 1)
+          cy: calc(var(--base-radius) / -1)
+          r: calc(var(--base-radius) / 1.75)
+          filter: brightness(0.75) blur(1px)
+
+        &:nth-child(3)
+          cx: calc(var(--base-radius) / 1.25)
+          cy: calc(var(--base-radius) / 1)
+          r: calc(var(--base-radius) / 1.75)
+          filter: brightness(0.7) blur(1px)
+
+//------------------------------------------------------------------------------
+// Event List SVG Defs
+//------------------------------------------------------------------------------
+#event-list-svg-defs
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+
+  #node-default
+    stop
+      &:nth-child(1)
+        stop-color: var(--color-1-dim)
+      &:nth-child(2)
+        stop-color: var(--color-1-xdim)
+
+  #node-error
+    stop
+      &:nth-child(1)
+        stop-color: var(--color-danger)
+      &:nth-child(2)
+        stop-color: var(--color-danger-dim)
+
+  #node-warn
+    stop
+      &:nth-child(1)
+        stop-color: var(--color-warn)
+      &:nth-child(2)
+        stop-color: var(--color-warn-dim)
+
+  #node-reflection
+    stop
+      stop-color: var(--status-active)
+      &:nth-child(1), &:nth-child(2)
+        stop-opacity: 0.6
+      &:nth-child(3)
+        stop-opacity: 0.3
+      &:nth-child(4)
+        stop-opacity: 0
+
+
+
+//------------------------------------------------------------------------------
+// Animations
+//------------------------------------------------------------------------------
+
+@keyframes event-node-spin
+  to
+    transform: rotate(-360deg)
+
+@keyframes event-node-fade-in
+  from
+    fill-opacity: 0
+    stroke-opacity: 0
+
+@keyframes event-node-pop-out
+  from
+    cx: 0
+    cy: 0
+
+@keyframes event-node-float-in
+  from
+    transform: scale(0)
+    fill-opacity: 0
+    stroke-opacity: 0
+  to
+    transform: scale(1)

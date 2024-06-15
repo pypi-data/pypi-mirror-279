@@ -1,0 +1,66 @@
+name: Run End To End Tests
+on:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        description: "Ref to run tests on"
+        default: ${{ github.sha }}
+      skip-tests:
+        description: "Set to skip all jobs in the ring."
+        required: true
+        type: boolean
+      python-version:
+        type: string
+        required: true
+        description: "Python version to run tests on"
+      cloud-provider:
+        type: string
+        required: true
+        description: "Cloud provider to run tests on"
+    secrets:
+      RAI_CLIENT_ID:
+        required: true
+      RAI_CLIENT_SECRET:
+        required: true
+      SF_TEST_ACCOUNT_PASSWORD:
+        required: true
+      DD_API_KEY:
+        required: true
+      SF_REPORTING_PASSWORD:
+        required: true
+jobs:
+  e2e:
+    if: ${{ !inputs.skip-tests }}
+    runs-on: ubuntu-latest
+    name: e2e
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: ./.github/actions/end-to-end
+        with:
+          python_version: ${{ inputs.python-version }}
+          rai_cloud_provider: ${{ inputs.cloud-provider }}
+          rai_client_id: ${{ secrets.RAI_CLIENT_ID }}
+          rai_client_secret: ${{ secrets.RAI_CLIENT_SECRET }}
+          sf_account: ndsoebe-rai_integration_aws_uswest_1_consumer
+          sf_warehouse: int_env_wh
+          sf_rai_app_name: rai_int_app
+          sf_compute_pool: int_env_benchmark_compute_xs
+          sf_username: team-prod-experience@relational.ai
+          sf_password: ${{ secrets.SF_TEST_ACCOUNT_PASSWORD }}
+          datadog_api_key: ${{ secrets.DD_API_KEY }}
+          sf_reporting_password: ${{ secrets.SF_REPORTING_PASSWORD }}
+          sf_use_exec_async_v2: ${{ vars.SF_USE_EXEC_ASYNC_V2}}
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-tests-coverage-artifact-${{ inputs.python-version }}
+          path: coverage/lcov.info
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: e2e-tests-coverage-report-${{ inputs.python-version }}
+          path: coverage/html-report

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "noEmit": true,
+    "isolatedModules": true,
+    "types": ["./src/types", "vite-plugin-solid-svg/types-component-solid", "vite/client", "./node_modules/@types", "vitest/globals"],
+    "baseUrl": ".",
+    "paths": {
+        "@src/*": ["./src/*"]
+    }
+  },
+
+    "include": ["src/**/*"]
+}

@@ -1,0 +1,165 @@
+name: run-end-to-end
+description: For given python version and cloud provider run end-to-end tests
+
+inputs:
+  # Python
+  python_version:
+    required: true
+    description: Python version to use
+  # RAI
+  rai_cloud_provider:
+    required: true
+    description: Cloud provider to use
+  rai_client_id:
+    required: false
+    description: RAI client id
+  rai_client_secret:
+    required: false
+    description: RAI client secret
+  # Snowflake
+  sf_account:
+    required: false
+    description: Snowflake account name   
+  sf_warehouse:
+    required: false
+    description: Snowflake warehouse name 
+  sf_rai_app_name:
+    required: false
+    description: Snowflake RAI application name 
+  sf_compute_pool:
+    required: false
+    description: Snowflake compute pool name  
+  sf_username:
+    required: false
+    description: Snowflake username
+  sf_password:
+    required: false
+    description: Snowflake password
+  # Datadog
+  datadog_api_key:
+    required: false
+    description: Datadog API key
+  # Benchmark reporting
+  sf_reporting_password:
+    description: password for benchmark reporting
+    required: false
+  # Feature flag to use exec_async_v2
+  sf_use_exec_async_v2:
+    description: Feature flag to use exec_async_v2
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ inputs.python_version }}
+    
+    - name: Create and activate virtual environment
+      run: |
+        python -m venv .venv
+      shell: bash
+
+    - name: Install dependencies
+      run: |
+        .venv/bin/python -m pip install --upgrade pip
+        .venv/bin/pip install .[dev]
+      shell: bash
+    
+    - name: Setup Engine Name
+      run: |
+        echo "ENGINE_NAME=pyrel_test_$(openssl rand -hex 5)" >> $GITHUB_ENV
+        echo "Setting up ENGINE_NAME..."
+      shell: bash
+
+    - name: Run Create Engine
+      run: |
+        echo "Using ENGINE_NAME: $ENGINE_NAME"
+        # keep size in sync with tests/end2end/config.py
+        .venv/bin/python -c "from tests.util import create_engine; create_engine('${{ env.ENGINE_NAME }}', size='XS')"
+
+      env: 
+        RAI_CLIENT_ID: ${{ inputs.rai_client_id }}
+        RAI_CLIENT_SECRET: ${{ inputs.rai_client_secret }}
+        RAI_CLOUD_PROVIDER: ${{ inputs.rai_cloud_provider }}
+        
+        SF_TEST_ACCOUNT_NAME: ${{ inputs.sf_account }}
+        SF_TEST_WAREHOUSE_NAME: ${{ inputs.sf_warehouse }}
+        SF_TEST_APP_NAME: ${{ inputs.sf_rai_app_name }}
+        SF_TEST_COMPUTE_POOL: ${{ inputs.sf_compute_pool }}
+        SF_TEST_ACCOUNT_USERNAME: ${{ inputs.sf_username }}
+        SF_TEST_ACCOUNT_PASSWORD: ${{ inputs.sf_password }}
+
+        SF_USE_EXEC_ASYNC_V2: ${{ inputs.sf_use_exec_async_v2 }}
+
+        # datadog CI monitoring
+        DD_SERVICE: pyrel-tests
+        DD_ENV: ci
+        DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+        DD_API_KEY: ${{ inputs.datadog_api_key }}
+
+      shell: bash
+    
+    - name: Run Test
+      run: |
+        .venv/bin/pytest -s \
+          tests/snowflake_integration \
+          --ddtrace \
+          --ddtrace-patch-all \
+          --cov=relationalai \
+          --cov-report lcov:coverage/lcov.info \
+          --cov-report html:coverage/html-report \
+          --cov-report term
+      env:
+        RAI_CLIENT_ID: ${{ inputs.rai_client_id }}
+        RAI_CLIENT_SECRET: ${{ inputs.rai_client_secret }}
+        RAI_CLOUD_PROVIDER: ${{ inputs.rai_cloud_provider }}
+        
+        SF_TEST_ACCOUNT_NAME: ${{ inputs.sf_account }}
+        SF_TEST_WAREHOUSE_NAME: ${{ inputs.sf_warehouse }}
+        SF_TEST_APP_NAME: ${{ inputs.sf_rai_app_name }}
+        SF_TEST_COMPUTE_POOL: ${{ inputs.sf_compute_pool }}
+        SF_TEST_ACCOUNT_USERNAME: ${{ inputs.sf_username }}
+        SF_TEST_ACCOUNT_PASSWORD: ${{ inputs.sf_password }}
+        
+        # TODO: use bucket instead of inserting directly to Snowflake
+        SF_REPORTING_USER: pyrel_ci
+        SF_REPORTING_PASSWORD: ${{ inputs.sf_reporting_password }}
+        SF_REPORTING_ACCOUNT: ndsoebe-rai_snowservices
+        SF_REPORTING_WAREHOUSE: DATA_ANALYTICS_WH
+        SF_REPORTING_DATABASE: PYREL_BENCHMARKING
+        SF_REPORTING_SCHEMA: public
+
+        ENGINE_NAME: ${{ env.ENGINE_NAME }}
+        ENABLE_TRACING_LOGGER: 'true'
+
+        # datadog CI monitoring
+        DD_SERVICE: pyrel-tests
+        DD_ENV: ci
+        DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+        DD_API_KEY: ${{ inputs.datadog_api_key }}
+      shell: bash
+    
+    - name: Run Delete Engine
+      if: always() && env.ENGINE_NAME != ''
+      run: |
+          .venv/bin/python -c "from tests.util import delete_engine; delete_engine('${{ env.ENGINE_NAME }}')"
+      env: 
+        RAI_CLIENT_ID: ${{ inputs.rai_client_id }}
+        RAI_CLIENT_SECRET: ${{ inputs.rai_client_secret }}
+        RAI_CLOUD_PROVIDER: ${{ inputs.rai_cloud_provider }}
+        
+        SF_TEST_ACCOUNT_NAME: ${{ inputs.sf_account }}
+        SF_TEST_WAREHOUSE_NAME: ${{ inputs.sf_warehouse }}
+        SF_TEST_APP_NAME: ${{ inputs.sf_rai_app_name }}
+        SF_TEST_COMPUTE_POOL: ${{ inputs.sf_compute_pool }}
+        SF_TEST_ACCOUNT_USERNAME: ${{ inputs.sf_username }}
+        SF_TEST_ACCOUNT_PASSWORD: ${{ inputs.sf_password }}
+
+        # datadog CI monitoring
+        DD_SERVICE: pyrel-tests
+        DD_ENV: ci
+        DD_CIVISIBILITY_AGENTLESS_ENABLED: true
+        DD_API_KEY: ${{ inputs.datadog_api_key }}
+      shell: bash

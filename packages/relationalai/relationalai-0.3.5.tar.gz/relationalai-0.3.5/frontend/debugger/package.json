@@ -1,0 +1,51 @@
+{
+  "name": "relationalai-debugger-ui",
+  "version": "0.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "test": "vitest"
+  },
+  "engines": {
+    "node": "22.1.0",
+    "npm": "10.7.0"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.2.25",
+    "@storybook/addon-essentials": "^8.0.4",
+    "@storybook/addon-interactions": "^8.0.4",
+    "@storybook/addon-links": "^8.0.4",
+    "@storybook/blocks": "^8.0.4",
+    "@storybook/preview-api": "^8.0.4",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/prismjs": "^1.26.3",
+    "jsdom": "^24.0.0",
+    "solid-devtools": "^0.29.2",
+    "storybook": "^8.0.4",
+    "storybook-solidjs": "^1.0.0-beta.2",
+    "storybook-solidjs-vite": "^1.0.0-beta.2",
+    "stylus": "^0.63.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11",
+    "vite-plugin-prismjs": "^0.0.11",
+    "vite-plugin-solid": "^2.8.2",
+    "vite-plugin-solid-svg": "^0.8.1"
+  },
+  "dependencies": {
+    "@kobalte/core": "^0.12.6",
+    "@solid-primitives/date": "^2.0.21",
+    "@solid-primitives/timer": "^1.3.9",
+    "@tabler/icons": "^3.1.0",
+    "gradient-path": "^2.3.0",
+    "prismjs": "^1.29.0",
+    "solid-js": "^1.8.11",
+    "vitest": "^1.6.0"
+  }
+}

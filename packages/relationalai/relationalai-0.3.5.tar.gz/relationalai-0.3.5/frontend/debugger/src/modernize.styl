@@ -1,0 +1,80 @@
+hsl$ = hsl;
+hsl() { return unquote('hsl(%s)' % arguments) }
+
+hsla$ = hsla;
+hsla() { return unquote('hsla(%s)' % arguments) }
+
+rgb$ = rgb;
+rgb() { return unquote('rgb(%s)' % arguments) }
+
+min$ = min;
+min() { return unquote('min(%s)' % arguments) }
+
+max$ = max;
+max() { return unquote('max(%s)' % arguments) }
+
+
+* {
+  box-sizing: border-box;
+}
+
+pseudo($pos = absolute) {
+  display: block;
+  content: "";
+  position: $pos;
+}
+
+// helpers for specifying grid templates
+
+subgrid-areas($type, $args)
+  $parts = ()
+
+  $names = keys($args)
+  $sizes = values($args)
+
+  // Loop through each argument
+  for $ix in 0..(length($names) - 1)
+    $name = $names[$ix]
+    $size = $sizes[$ix]
+    if $size == null
+      if typeof($name) == 'unit'
+        $size = $name
+        $name = null
+      else
+        $size = 1
+
+    warn("  - " + $name + ": " + $size)
+
+    if $name != null
+      $prev = pop($parts)
+      if $prev
+        push($parts, slice($prev, 0, -1) + $name + '-col-start]')
+      else
+        push($parts, '[' + $name + '-col-start]')
+      for $i in 1..($size - 1)
+        push($parts, '[]')
+      push($parts, '[' + $name + '-col-end]')
+    else
+      for $i in 1..$size
+        push($parts, '[]')
+
+  return unquote("subgrid " + join(" ", $parts))
+
+subgrid-columns($args...)
+  grid-template-columns: subgrid-areas(col, $args)
+
+subgrid-rows($args...)
+  grid-template-rows: subgrid-areas(row, $args)
+
+col($name)
+  grid-column: $name + '-col-start' + '/' + $name + '-col-end'
+
+row($name)
+  grid-row: $name + '-row-start' + '/' + $name + '-row-end'
+
+area($name)
+  col($name)
+  row($name)
+
+b($args...)
+  unquote("[") + join(" ", $args) + unquote("]")

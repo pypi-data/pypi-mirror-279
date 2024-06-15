@@ -1,0 +1,31 @@
+.ui-breadcrumbs {
+  & > ol {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .ui-breadcrumbs-item {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+
+    & > a {
+      display: flex;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+      line-height: 1;
+    }
+
+    &:last-of-type > .ui-breadcrumbs-item-sep {
+      display: none;
+    }
+  }
+
+  .ui-breadcrumbs-item-sep {
+    display: flex;
+  }
+}

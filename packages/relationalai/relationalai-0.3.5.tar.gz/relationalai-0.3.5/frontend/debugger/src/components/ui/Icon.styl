@@ -1,0 +1,19 @@
+.ui-icon {
+  &.tabler-icon {
+    width: var(--icon-size, var(--icon-width, 24px));
+    height: var(--icon-size, var(--icon-height, 24px));
+  }
+
+  &.tabler-icon.outline {
+    fill: none;
+    stroke: var(--icon-color, currentColor);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &.tabler-icon.filled {
+    fill: var(--icon-color, currentColor);
+    stroke: none;
+  }
+}

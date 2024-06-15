@@ -1,0 +1,141 @@
+:root {
+  --collapsible-open-duration: 0.3s
+}
+
+.ui-collapsible {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+
+  &.left {
+    flex-direction: row;
+    --collapsible-icon-angle: 90deg;
+  }
+  &.right {
+    flex-direction: row-reverse;
+    --collapsible-icon-angle: 270deg;
+  }
+  &.top {
+    flex-direction: column;
+    --collapsible-icon-angle: 180deg;
+  }
+  &.bottom {
+    flex-direction: column-reverse;
+    --collapsible-icon-angle: 0deg;
+  }
+
+  & > .ui-collapsible-content {
+    flex: 0 1 auto;
+    display: grid;
+    overflow: hidden;
+  }
+
+  &.top, &.bottom {
+    & > .ui-collapsible-content {
+      grid-template-rows: 0fr;
+      transition: grid-template-rows var(--collapsible-open-duration) ease;
+
+      ^[-1][data-expanded] > ^[-1..-1] {
+        grid-template-rows: 1fr;
+      }
+
+      &.bottom > .ui-collapsible-content {
+        align-items: end
+      }
+
+      & > .ui-collapsible-inner {
+        min-height: 0;
+      }
+    }
+  }
+
+  &.left, &.right {
+    & > .ui-collapsible-content {
+      grid-template-columns: 0fr;
+      transition: grid-template-columns var(--collapsible-open-duration) ease;
+
+      ^[-1][data-expanded] > ^[-1..-1] {
+        grid-template-columns: 1fr;
+      }
+
+      &.right > .ui-collapsible-content {
+        justify-items: end
+      }
+
+      & > .ui-collapsible-inner {
+        min-width: 0;
+      }
+    }
+  }
+
+
+  & > .ui-collapsible-trigger {
+    & .ui-collapsible-trigger-icon {
+      opacity: 0;
+      transition: opacity 0.2s ease-out 0.1s
+      path {
+        transition: transform var(--collapsible-open-duration) ease-out;
+        transform-origin: 12px 12px;
+        vector-effect: non-scaling-stroke;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:hover > .ui-collapsible-trigger > .ui-collapsible-trigger-icon {
+    opacity: 1;
+  }
+
+  &.left, &.right {
+    & > .ui-collapsible-trigger {
+      &[data-expanded] .ui-collapsible-trigger-icon path {
+        transform: scaleX(1) rotate(var(--collapsible-icon-angle, 0));
+      }
+
+      &[data-closed] .ui-collapsible-trigger-icon path {
+        transform: scaleX(-1) rotate(var(--collapsible-icon-angle, 0));
+      }
+    }
+  }
+
+  &.left {
+    & > .ui-collapsible-content {
+      align-items: flex-end;
+    }
+  }
+
+  &.right {}
+
+  &.top, &.bottom {
+    & > .ui-collapsible-trigger {
+      & .ui-collapsible-trigger-icon path {
+        transform: scaleY(1) rotate(var(--collapsible-icon-angle, 0));
+      }
+
+      &[data-closed] .ui-collapsible-trigger-icon path {
+        transform: scaleY(-1) rotate(var(--collapsible-icon-angle, 0));
+      }
+    }
+  }
+
+  &.top {
+    & > .ui-collapsible-content {
+      justify-content: flex-end;
+    }
+  }
+
+  &.bottom {}
+}
+
+@keyframes do-nothing {
+  from {
+    --foo: 0
+  }
+  to {
+    --foo: 1
+  }
+}
+

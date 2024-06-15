@@ -1,0 +1,64 @@
+@require "util.styl";
+
+:root {
+  --field-border: var(--input-border);
+  --field-bg: var(--input-bg, transparent);
+  --field-outline: var(--input-outline, #999);
+  --field-control-bg: transparent;
+}
+
+.ui-field {
+  .ui-field-input {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+
+    border-radius: 4px;
+
+    &:focus-within {
+      outline: 1px solid var(--field-outline);
+    }
+  }
+
+  .ui-field-value {
+    padding: 6px 8px;
+
+    appearance: none;
+    background: var(--field-bg);
+    border: 1px solid var(--field-border);
+    border-radius: 4px;
+    color: currentcolor;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .ui-field-controls {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    & > *:first-child {
+      border-top-radius: 4px;
+    }
+    & > *:last-child {
+      border-bottom-radius: 4px;
+    }
+  }
+
+  &.number {
+    .ui-field-input-increment, .ui-field-input-decrement {
+      flex: 1 1 0;
+      background: var(--field-control-bg);
+      padding: 0 1px;
+
+      background: transparent;
+    }
+  }
+}

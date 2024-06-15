@@ -1,0 +1,36 @@
+active_profile = "default"
+compiler.use_multi_valued = true
+compiler.dry_run = true
+
+[profile.foo]
+compiler.use_multi_valued = true
+compiler.dry_run = true
+platform = "snowflake"
+account = "plvoury-team_sales"
+user = "xyz@acme.inc"
+password = "***"
+role = "RAI_USER"
+warehouse = "ACME_WH"
+rai_app_name = "RELATIONALAI"
+engine = "rai_engine"
+
+[profile.default]
+platform = "snowflake"
+account = "plvoury-team_sales"
+user = "xyz@acme.inc"
+password = "***"
+role = "RAI_USER"
+warehouse = "ACME_WH"
+rai_app_name = "RELATIONALAI"
+engine = "rai_engine"
+
+[profile.alternate]
+platform = "azure"
+host = "azure.relationalai.com"
+port = 443
+region = "us-east"
+scheme = "https"
+client_credentials_url = "https://login.relationalai.com/oauth/token"
+client_id = "***"
+client_secret = "***"
+engine = "acme-engine"

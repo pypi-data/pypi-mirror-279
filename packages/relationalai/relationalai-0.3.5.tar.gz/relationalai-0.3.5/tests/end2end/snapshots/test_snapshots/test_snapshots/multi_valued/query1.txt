@@ -1,0 +1,12 @@
+    name  foos
+0    Bob   1.0
+1    Bob   2.0
+2    Bob   3.0
+3   Jane   NaN
+4    Joe   0.0
+5    Joe   1.0
+6    Joe   2.0
+7    Joe   3.0
+8    Joe   8.0
+9    Joe   9.0
+10   Joe  11.0

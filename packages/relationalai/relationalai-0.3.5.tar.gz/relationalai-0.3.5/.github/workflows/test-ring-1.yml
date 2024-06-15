@@ -1,0 +1,42 @@
+name: Test Ring 1
+on:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: false
+        description: "Ref SHA to run tests on"
+        default: ${{ github.sha }}
+      skip-ring:
+        description: "Set to skip all jobs in the ring."
+        required: true
+        type: boolean
+    secrets:
+      RAI_CLIENT_ID:
+        required: true
+      RAI_CLIENT_SECRET:
+        required: true
+      SF_TEST_ACCOUNT_PASSWORD:
+        required: true
+      DD_API_KEY:
+        required: true
+      SF_REPORTING_PASSWORD:
+        required: true
+jobs:
+  end-to-end-tests:
+    name: e2e ${{ matrix.cloud-provider }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python-version: '3.11'
+            cloud-provider: 'snowflake'
+          - python-version: '3.10'
+            cloud-provider: 'azure'
+    uses: ./.github/workflows/end-to-end.yml
+    with:
+      python-version: ${{ matrix.python-version }}
+      cloud-provider: ${{ matrix.cloud-provider }}
+      skip-tests: ${{ inputs.skip-ring }}
+      ref: ${{ inputs.ref }}
+    secrets: inherit

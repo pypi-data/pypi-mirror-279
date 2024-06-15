@@ -1,0 +1,33 @@
+base-color = #121212;
+text-color = #f0f0f0;
+lighten-amount = 10%;
+
+.drop-zone {
+  position: relative;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+
+  &.dragging, &.draggingOver {
+    background-color: lighten(base-color, lighten-amount);
+    outline: 2px dashed currentcolor;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: 'Drop files here...';
+    padding: 16px;
+    font-size: 14px;
+    color: text-color;
+  }
+}
