@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: classy_szfast
+Version: 0.0.9
+Summary: The accelerator of the class_sz code from https://github.com/CLASS-SZ
+Home-page: https://github.com/CLASS-SZ/classy_szfast
+Download-URL: https://github.com/CLASS-SZ/classy_szfast
+Author: Boris Bolliet, Ola Kusiak
+Author-email: bb667@cam.ac.uk, akk2175@columbia.edu
+Maintainer-email: Boris Bolliet <bb667@cam.ac.uk>
+Project-URL: Homepage, https://github.com/CLASS-SZ
+Project-URL: GitHub, https://github.com/CLASS-SZ
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.19.0
+Requires-Dist: Cython>=0.29.21
+Requires-Dist: tensorflow==2.13.0
+Requires-Dist: tensorflow-probability==0.21.0
+Requires-Dist: cosmopower
+Requires-Dist: mcfit
