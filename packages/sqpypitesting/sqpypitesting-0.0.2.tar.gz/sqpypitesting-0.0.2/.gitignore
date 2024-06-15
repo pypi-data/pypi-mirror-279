@@ -1,0 +1,4 @@
+#ignore the .spyproject and .idea directories (project files in Spyder and PyCharm)
+.spyproject
+.idea
+dist/

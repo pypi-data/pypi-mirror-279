@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.9.0",]
+build-backend = "hatchling.build"
+
+[project]
+name = "sqpypitesting"
+dynamic = [
+    "version",
+]
+description = "Testing package publication on pypi"
+readme = "README.rst"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+authors = [
+    { name = "Sébastien Quistrebert", email = "sebastien.quistrebert@ens-paris-saclay.fr" },
+]
+
+[tool.hatch.version]
+path = "src/sqpypitesting/resources/VERSION"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+]
