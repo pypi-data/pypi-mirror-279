@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: osrm-utils
+Version: 1.0.1
+Summary: OSRM Utils for Python
+Author-email: "Golden M, Inc." <software@goldenm.com>
+Maintainer-email: Kenny Mochizuki <kenny@goldenm.com>
+License: MIT License
+Project-URL: Repository, https://github.com/goldenm-software/osrm-utils
+Project-URL: Changelog, https://github.com/goldenm-software/osrm-utils/blob/main/CHANGELOG.md
+Keywords: osrm,osrm-utils,osrm-python,osrm-client,osrm-api
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# OSRM utils for Python
+
+Managed by Golden M, Inc.
+
+## Description
+A Python wrapper for the OSRM API, compatible with the OSRM API or a local OSRM server.
+
+## Work with us
+Golden M is a software/hardware development company what is working on
+a new, innovative and disruptive technologies.
+
+For more information, contact us at [sales@goldenm.com](mailto:sales@goldenm.com)
+
+## License
+This project is under MIT License, for more information, check out the `LICENCE`
