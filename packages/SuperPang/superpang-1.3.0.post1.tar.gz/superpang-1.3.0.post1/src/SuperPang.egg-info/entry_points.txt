@@ -1,0 +1,4 @@
+[console_scripts]
+SuperPang.py = superpang.scripts.SuperPang:cli
+homogenize.py = superpang.scripts.homogenize:cli
+test-SuperPang.py = superpang.scripts.test_SuperPang:main
