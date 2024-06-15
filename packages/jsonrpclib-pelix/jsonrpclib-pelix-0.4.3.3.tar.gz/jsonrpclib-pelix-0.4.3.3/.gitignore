@@ -1,0 +1,34 @@
+# Bytecoded form
+*.pyc
+__pycache__
+
+# Eclipse / PyCharm
+.settings
+.idea
+.project
+.pydevproject
+
+# VS Code
+.vscode
+.cache
+.mypy_cache
+
+# Tox
+.tox/
+.coverage
+htmlcov/
+
+# Nosetests
+.noseids
+nosetests.xml
+
+# Development environment
+venv*/
+
+# When installed in develop mode
+*.egg-info/
+
+# setup.py folders
+build/*
+dist/*
+*.egg-info/
