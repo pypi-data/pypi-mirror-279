@@ -1,0 +1,13 @@
+// SPDX-FileCopyrightText: Copyright (c) 2024 Refeyn Ltd and other QuickGraphLib contributors
+// SPDX-License-Identifier: MIT
+
+/*!
+    \title Contours
+    \ingroup quickgraphlibdemos
+    \brief A graph with contour lines and fills.
+    \example contours
+
+    \image examples/Contours.png
+
+    \quotefile examples/Contours.qml
+*/

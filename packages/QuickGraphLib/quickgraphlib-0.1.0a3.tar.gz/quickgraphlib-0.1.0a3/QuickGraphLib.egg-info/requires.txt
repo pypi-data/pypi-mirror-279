@@ -1,0 +1,11 @@
+PySide6
+contourpy
+
+[analyse]
+black
+pylint
+mypy
+pre-commit
+lxml
+pytest
+pytest-cov

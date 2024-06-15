@@ -1,0 +1,13 @@
+// SPDX-FileCopyrightText: Copyright (c) 2024 Refeyn Ltd and other QuickGraphLib contributors
+// SPDX-License-Identifier: MIT
+
+/*!
+    \title Basic histogram
+    \ingroup quickgraphlibdemos
+    \brief A simple histogram of a normal function.
+    \example basichistogram
+
+    \image examples/BasicHistogram.png
+
+    \quotefile examples/BasicHistogram.qml
+*/

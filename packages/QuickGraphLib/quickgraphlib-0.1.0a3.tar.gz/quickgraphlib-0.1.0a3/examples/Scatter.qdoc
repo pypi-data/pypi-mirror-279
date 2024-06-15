@@ -1,0 +1,13 @@
+// SPDX-FileCopyrightText: Copyright (c) 2024 Refeyn Ltd and other QuickGraphLib contributors
+// SPDX-License-Identifier: MIT
+
+/*!
+    \title Scatter graph
+    \ingroup quickgraphlibdemos
+    \brief A simple scatter graph with transparent markers.
+    \example scatter
+
+    \image examples/Scatter.png
+
+    \quotefile examples/Scatter.qml
+*/

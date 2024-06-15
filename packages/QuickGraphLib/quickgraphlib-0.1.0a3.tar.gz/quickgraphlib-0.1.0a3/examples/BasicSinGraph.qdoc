@@ -1,0 +1,13 @@
+// SPDX-FileCopyrightText: Copyright (c) 2024 Refeyn Ltd and other QuickGraphLib contributors
+// SPDX-License-Identifier: MIT
+
+/*!
+    \title Basic sin graph
+    \ingroup quickgraphlibdemos
+    \brief A simple graph of a sin function.
+    \example basicsingraph
+
+    \image examples/BasicSinGraph.png
+
+    \quotefile examples/BasicSinGraph.qml
+*/
