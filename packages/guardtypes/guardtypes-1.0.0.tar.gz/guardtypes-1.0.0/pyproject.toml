@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guardtypes"
+version = "1.0.0"
+description = "Enforces type annotations at runtime"
+readme = "README.md"
+authors = [{ name = "Brandon Volesky" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = []
+
+[tool.setuptools]
+packages = ["guardtypes"]
+
+[project.optional-dependencies]
+dev = [
+    "black==24.4.2",
+    "ruff==0.4.8",
+    "isort==5.13.2",
+    "pytest==8.2.2",
+    "mypy==1.10.0",
+    "twine==5.1.0"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.urls]
+Repository = "https://github.com/bvolesky/guardtypes"
