@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: queued-client-py
+Version: 0.1.3
+Summary: Python client for queued
+Author: Wilson Lin
+Author-email: code@wilsonl.in
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: msgpack (>=1.0.8,<2.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# queued-client-py
+
+Python client for [queued](https://github.com/wilsonzlin/queued).
+
