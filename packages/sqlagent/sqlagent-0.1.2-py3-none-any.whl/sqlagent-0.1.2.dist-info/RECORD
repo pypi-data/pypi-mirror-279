@@ -1,0 +1,11 @@
+sqlagent/__init__.py,sha256=LG-zblOfMP6hVPKsBg0_Vu7Np90aDwZoQtZkamDOsus,46
+sqlagent/agent.py,sha256=z5dL1fF07Pbp3BGz6CS3xo7C1PXD-igZvFtPzQWdS7E,4180
+sqlagent/components/get_table_context_str.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+sqlagent/components/sql_parser_component.py,sha256=rbnM0DQDjXDgoypsKtT_Ow8b-6aiJDrumuvryC1x0ss,849
+sqlagent/ingestions/extract_database_info.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sqlagent/ingestions/load_and_persist_object_index.py,sha256=Ubx3cjOwhTRljih-M3RkQ5RH13J20g7LU6nZTidmCi0,2382
+sqlagent-0.1.2.dist-info/LICENSE,sha256=3Tg8b472hrl_7dcn5WwBQ95FAnpp-JZhrph5Sa246w4,1061
+sqlagent-0.1.2.dist-info/METADATA,sha256=Iv_wTRG-NAi4kgzqnaXABs9poBRy6A9zdfSqS9zzgWA,3059
+sqlagent-0.1.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sqlagent-0.1.2.dist-info/entry_points.txt,sha256=14OdMF7oz2PeWJILQYe9mPGOpbpohdCuel4gSQT3sGg,47
+sqlagent-0.1.2.dist-info/RECORD,,
