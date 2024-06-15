@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "django-settings-env"
+version = "5.0.1"
+description = "12-factor.net settings handler for Django"
+authors = ["David Nugent <davidn@uniquode.io>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = ">=3.1"
+envex = ">=3.0"
+django-class-settings = { version = "^0.2", optional = true }
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.0"
+pytest-cov = "^5.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.4"
+pre-commit = "^3.3.3"
+
+[tool.poetry.extras]
+django-class-settings = ["django-class-settings"]
+hvac = ["hvac"]
+
+[tool.poetry.group.vault.dependencies]
+hvac = ">= 1.1.1"
+
+[tool.pytest.ini-options]
+minversion = "7.0"
+addopts = "-ra -q"
+pythonpath = [ "django_settings_env" ]
+testpaths = [ "tests" ]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
