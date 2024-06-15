@@ -1,0 +1,7 @@
+{% if name == '' %}
+{{ label }}
+{% elif request.resolver_match.view_name == name %}
+<strong><a href="{% url name %}">{{ label }}</a></strong>
+{% else %}
+<a class="footer" href="{% url name %}">{{ label }}</a>
+{% endif %}

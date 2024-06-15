@@ -1,0 +1,12 @@
+{% load static %}
+<div class="banner">
+  <a class="logo" href="https://www.lib.umd.edu/"><img src="{% static 'umd_lib_style/liblogo.png' %}" alt="UMD Libraries"/></a>
+  <a class="application-name" href="/">{{ application_name }}</a>
+  <nav>
+    <ul class="nav">
+      {% for name, label in navigation_links.items %}
+      <li>{% include 'umd_lib_style/nav_menu_item.html' %}</li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
