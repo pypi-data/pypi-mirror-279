@@ -1,0 +1,3 @@
+[console_scripts]
+compare=ocsf.compare.__main__:main
+
