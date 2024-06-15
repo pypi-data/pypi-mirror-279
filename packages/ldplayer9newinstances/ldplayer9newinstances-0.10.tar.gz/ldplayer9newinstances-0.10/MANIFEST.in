@@ -1,0 +1,3 @@
+include ldplayer9newinstances/requirements.txt
+include ldplayer9newinstances/thirdparty.json
+include ldplayer9newinstances/README.MD

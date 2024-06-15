@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ldplayer9newinstances/README.MD
+ldplayer9newinstances/__init__.py
+ldplayer9newinstances/requirements.txt
+ldplayer9newinstances/thirdparty.json
+ldplayer9newinstances.egg-info/PKG-INFO
+ldplayer9newinstances.egg-info/SOURCES.txt
+ldplayer9newinstances.egg-info/dependency_links.txt
+ldplayer9newinstances.egg-info/requires.txt
+ldplayer9newinstances.egg-info/top_level.txt
