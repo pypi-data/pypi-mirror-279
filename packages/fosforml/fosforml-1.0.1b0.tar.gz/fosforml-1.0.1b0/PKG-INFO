@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: fosforml
+Version: 1.0.1b0
+Summary: REST API client for Fosfor AI
+Home-page: https://gitlab.fosfor.com/fosfor-decision-cloud/intelligence/mosaic-ai-client.git
+Author: Rakesh Gadiparthi
+Author-email: rakesh.gadiparthi@fosfor.com
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: cloudpickle==3.0.0
+Requires-Dist: requests-toolbelt==1.0.0
+Requires-Dist: shutils==0.1.0
+Requires-Dist: PyYAML==6.0.1
+Requires-Dist: mosaic-utils
+Requires-Dist: urllib3==2.2.1
+Provides-Extra: vanilla
+Requires-Dist: mosaic-utils==1.0.1; extra == "vanilla"
+Provides-Extra: complete-with-utils
+Requires-Dist: mosaic-utils[complete]==1.0.1; extra == "complete-with-utils"
+Provides-Extra: complete
+Requires-Dist: mosaic-utils[complete]==1.0.1; extra == "complete"
+Provides-Extra: utils-flavours
+Requires-Dist: mosaic-utils[flavours]==1.0.1; extra == "utils-flavours"
+Provides-Extra: utils-common
+Requires-Dist: mosaic-utils[common]==1.0.1; extra == "utils-common"
+Provides-Extra: utils-metrics
+Requires-Dist: mosaic-utils[metrics]==1.0.1; extra == "utils-metrics"
+Provides-Extra: utils-k8
+Requires-Dist: mosaic-utils[k8]==1.0.1; extra == "utils-k8"
+Provides-Extra: common
+Requires-Dist: mosaic-utils[nb-template-serving]==1.0.1; extra == "common"
+Requires-Dist: importlib-resources==5.4.0; extra == "common"
+Requires-Dist: Pillow==8.4.0; extra == "common"
