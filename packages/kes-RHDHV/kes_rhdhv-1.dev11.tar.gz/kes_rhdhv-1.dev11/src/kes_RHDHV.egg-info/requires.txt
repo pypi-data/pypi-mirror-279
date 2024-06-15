@@ -1,0 +1,5 @@
+mypy>=0.910
+types-protobuf>=0.1.14
+grpcio
+protobuf<5,>=4.21.1
+grpc-stubs
