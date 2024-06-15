@@ -1,0 +1,8 @@
+LICENSE
+README
+pyproject.toml
+setup.py
+src/mattattack.egg-info/PKG-INFO
+src/mattattack.egg-info/SOURCES.txt
+src/mattattack.egg-info/dependency_links.txt
+src/mattattack.egg-info/top_level.txt
