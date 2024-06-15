@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: dinjectorr
+Version: 0.1.0
+Summary: A simple dependency injector for Python
+Home-page: https://github.com/dmtno/dinjector
+Author: DMYTRO IVANOV
+Author-email: dima.ivanov.py@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dinjector
+
+A simple dependency injector for Python.
+
+## Installation
+
+You can install the package using pip:
+
+```sh
+pip install dinjector
+
+Usage
+Here's an example of how to use dinjector:
+
+```python
+from dinjector.injector import Injector, inject
+
+class Service:
+    def __init__(self, config):
+        self.config = config
+
+class Config:
+    pass
+
+Injector.register(Service, config=Config())
+
+class Client:
+    @inject
+    def __init__(self, service: Service):
+        self.service = service
+
+client = Client()
+print(client.service)  # Instance of Service with injected Config
+```
