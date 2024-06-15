@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "MethSCAn"
+version = "1.0.1"
+description = "a command line tool for Single-Cell Analysis of Methylation data"
+authors = [
+    "Lukas PM Kremer <L-Kremer@web.de>",
+    "Martina Braun <martina.braun@stud.uni-heidelberg.de>",
+    "Leonie Küchenhoff <leonie.kuechenhoff@gmx.de>",
+    "Svetlana Ovchinnikova <s.ovchinnikova@bioquant.uni-heidelberg.de>",
+    "Simon Anders <simon.anders@bioquant.uni-heidelberg.de>",
+]
+maintainers = ["Lukas PM Kremer <L-Kremer@web.de>"]
+readme = "README.md"
+repository = "https://github.com/anders-biostat/MethSCAn"
+homepage = "https://github.com/anders-biostat/MethSCAn"
+keywords = ["biology", "bioinformatics", "single cell", "methylation", "single cell bisulfite sequencing"]
+license = "GPL-3.0-or-later"
+classifiers = [
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+click = ">=7.1.2,<8.1"
+numpy = ">=1.20.1,<2"
+scipy = ">=1.6.1,<2"
+pandas = ">=1.2.3,<2"
+statsmodels = ">=0.12.2,<1"
+click-help-colors = ">=0.9,<1"
+numba = ">=0.53.0,<1"
+colorama = ">=0.3.9,<1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2"
+pre-commit = "^2.17.0"
+ruff = "^0.4.5"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+methscan = "methscan.cli:cli"
+
+[tool.isort]
+profile = "black"
