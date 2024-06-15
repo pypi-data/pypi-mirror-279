@@ -1,0 +1,17 @@
+LICENSE
+pyproject.toml
+setup.cfg
+setup.py
+filemeta/__init__.py
+filemeta/exif.py
+filemeta/fsreaders.py
+filemeta/listreaders.py
+filemeta/mediainfo.py
+filemeta/mp3.py
+filemeta/utils.py
+filemeta.egg-info/PKG-INFO
+filemeta.egg-info/SOURCES.txt
+filemeta.egg-info/dependency_links.txt
+filemeta.egg-info/requires.txt
+filemeta.egg-info/top_level.txt
+filemeta.egg-info/zip-safe

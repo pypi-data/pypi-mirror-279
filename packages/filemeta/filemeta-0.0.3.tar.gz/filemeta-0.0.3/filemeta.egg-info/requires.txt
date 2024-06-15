@@ -1,0 +1,8 @@
+bitstruct
+fastcrc
+genutility[json]>=0.0.102
+importlib-resources
+piexif
+pymediainfo
+requests
+typing-extensions
