@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: wireguard-toolkit
+Version: 0.0.1
+Dynamic: Summary
+Project-URL: Repository, https://gitlab.com/0tanay/wireguard-toolkit
+Project-URL: Issues, https://gitlab.com/0tanay/wireguard-toolkit/-/issues
+Author: Tanay Gupta
+Maintainer: Tanay Gupta
+License: MIT License
+Keywords: configuration,vpn,wg,wireguard
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: pyyaml>=6.0.1
