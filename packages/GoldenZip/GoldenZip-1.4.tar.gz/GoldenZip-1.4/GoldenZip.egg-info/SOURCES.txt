@@ -1,0 +1,7 @@
+setup.py
+GoldenZip/GoldenZip.py
+GoldenZip/__init__.py
+GoldenZip.egg-info/PKG-INFO
+GoldenZip.egg-info/SOURCES.txt
+GoldenZip.egg-info/dependency_links.txt
+GoldenZip.egg-info/top_level.txt
