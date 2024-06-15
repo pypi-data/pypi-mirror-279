@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: shops
+Version: 0.0.1
+Summary: Provides data about shops in a given location, based on OpenStreetMap data.
+Home-page: https://codeberg.org/matkoniecz/shop_listing
+Author: Mateusz Konieczny
+Author-email: matkoniecz@tutanota.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+# Shops Package
+
+Provides data about shops in a given location, based on OpenStreetMap data.
+
+Remember about license, see [https://www.openstreetmap.org/copyright](https://www.openstreetmap.org/copyright)
+
+```
+import shops
+
+print(shops.lorem_ipsum.text())
+```
+
+# Installation
+
+`pip install shops`
+
+It is uploaded to [pypi.org](https://pypi.org/project/shops/)
+
+# Run tests
+
+```
+python3 -m unittest
+```
+
+

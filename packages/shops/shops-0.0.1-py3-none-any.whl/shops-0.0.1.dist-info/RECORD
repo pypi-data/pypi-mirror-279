@@ -1,0 +1,10 @@
+example_pkg_matkoniecz/__init__.py,sha256=D7eh9o3-VxZRxCX937FHYsrJe9XRsyn_4cqX3XSKCjc,73
+example_pkg_matkoniecz/lorem_ipsum.py,sha256=cR0JDTGU5IoTz8c5uC_ZiGVmm71RRH7T6AbDjeW_8lg,474
+shop/__init__.py,sha256=XDWuJ1Qw6xY0jSMlRfiKzEBOGbpvgvg4A-Hrwj0ZMc8,56
+shop/lorem_ipsum.py,sha256=cR0JDTGU5IoTz8c5uC_ZiGVmm71RRH7T6AbDjeW_8lg,474
+shops/__init__.py,sha256=XDWuJ1Qw6xY0jSMlRfiKzEBOGbpvgvg4A-Hrwj0ZMc8,56
+shops/lorem_ipsum.py,sha256=cR0JDTGU5IoTz8c5uC_ZiGVmm71RRH7T6AbDjeW_8lg,474
+shops-0.0.1.dist-info/METADATA,sha256=A2V9IltyAXt2Y1pexekt1Ki2FTI5WH3QW6aza4DypsA,734
+shops-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+shops-0.0.1.dist-info/top_level.txt,sha256=IzbrW4r_LGxwM9-5uPfzKN2_AqFUxhHtyWKTfo6bhTE,6
+shops-0.0.1.dist-info/RECORD,,
