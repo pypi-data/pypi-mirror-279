@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exiffusion"
+version = "0.0.2"
+authors = [
+  { name="Barry Li", email="barry@barryli.ca" },
+]
+description = "Overlay Exif metadata onto photos."
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pytest~=8.2",
+    "pydantic~=2.7",
+    "pillow~=10.3",
+    "pillow-heif~=0.16.0",
+    "geopy~=2.4",
+    "rich~=13.7",
+    "typer~=0.12",
+]
+
+[project.scripts]
+exiffusion = "exiffusion.cli:cli"
+
+[project.urls]
+Homepage = "https://github.com/JFBarryLi/ExifFusion"
+Issues = "https://github.com/JFBarryLi/ExifFusion/issues"
+
+[tool.setuptools.package-data]
+"exiffusion.asset" = ["*.otf"]
