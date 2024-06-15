@@ -1,0 +1,3 @@
+[console_scripts]
+check-symbols = check_symbols:main
+check_symbols = check_symbols:main
