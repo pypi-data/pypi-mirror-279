@@ -1,0 +1,4 @@
+pyperclip>=1.8.2
+joblib>=1.4.2
+scipy>=1.13.1
+threadpoolctl>=3.5.0
