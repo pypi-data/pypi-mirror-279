@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: hyperpony
+Version: 0.51.0
+Summary: Django library for building web applications with htmx
+Home-page: https://github.com/romanroe/hyperpony
+License: MIT
+Keywords: django,python
+Author: Roman Roelofsen
+Author-email: romanroe@gmail.com
+Requires-Python: >=3.10.0,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: django (>=4,<6)
+Requires-Dist: django-htmx (>=1.14.0,<2.0.0)
+Requires-Dist: lxml (>=5.1.0,<6.0.0)
+Requires-Dist: watchfiles (>=0.22.0,<0.23.0)
+Requires-Dist: wrapt (>=1.15.0,<2.0.0)
+Project-URL: Repository, https://github.com/romanroe/hyperpony
+Description-Content-Type: text/markdown
+
+# Hyperpony
+
+*Django library for building web applications with htmx*
+
+
+
