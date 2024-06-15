@@ -1,0 +1,16 @@
+python_hackrf/__init__.py,sha256=-qbFppbVW-7JnUUhNrn1AlkCNgMOZILQhvBiXrTUAtU,167
+python_hackrf/__main__.py,sha256=k8jGbwkfIhbTT-SnzAwNyTdjsDPGPaogUY6q_wjuZic,12231
+python_hackrf/pyhackrf_tools/__android.py,sha256=XtphG1IwH2zjvAzxlUG27Fx9AfUWjvQ8ZUqu-JCqxUA,2130
+python_hackrf/pyhackrf_tools/__init__.py,sha256=n12G8if4bfm3jWd0wGXKV9ErA2YPQyhPyMali_oXOl0,176
+python_hackrf/pyhackrf_tools/pyhackrf_info.py,sha256=UyI6mhGjpMjW8kKSRExpBVzLcdSKhxX74UkIm7JY0VM,3980
+python_hackrf/pyhackrf_tools/pyhackrf_operacake.py,sha256=utCcg8TS1l0RY5Q1rqKuDf7L0if4_iUaqonyTQruYfA,5164
+python_hackrf/pyhackrf_tools/pyhackrf_sweep.cpython-311-darwin.so,sha256=hU4dVUX3WyRWJERXMKLi_AS2KU7qyC5n9mUh1t8poJE,228088
+python_hackrf/pyhackrf_tools/pyhackrf_transfer.py,sha256=065bB1E_8LAX_-PX1aJRMDWbFLhzYf7h2E6If2x-G9M,2706
+python_hackrf/pylibhackrf/__init__.py,sha256=VQcYud4hfkVAMXygH1TXE3r_v-YmZvgpgC4dnONj0m0,36
+python_hackrf/pylibhackrf/pyhackrf.cpython-311-darwin.so,sha256=OtbgE6Rsbo1fokN5kerpgsrM8wZqcZncoK87gEVmdU4,356816
+python_hackrf-1.1.0.dist-info/LICENSE,sha256=JfuXqMx2P-p2LtvKNV6KFScpnmerYEYxKM3Oqyl9wLg,1070
+python_hackrf-1.1.0.dist-info/METADATA,sha256=5eDRqPa1mOeGQ9u7yeYP_Ag6AqrxJ1JFJzk4tIU78e4,5258
+python_hackrf-1.1.0.dist-info/WHEEL,sha256=BDgKu9_KNfDn85ptly0T56JpX4avXH07X_ZCqAJnQwY,110
+python_hackrf-1.1.0.dist-info/entry_points.txt,sha256=C7lCXy8hqgkw-SR07nUrVHdq9_hZl8L0GKc4ZIkRLns,62
+python_hackrf-1.1.0.dist-info/top_level.txt,sha256=__GG6S3dIoVwiFhGib9zIz9bcC4ypKcTrDy7bN_tA6E,14
+python_hackrf-1.1.0.dist-info/RECORD,,
