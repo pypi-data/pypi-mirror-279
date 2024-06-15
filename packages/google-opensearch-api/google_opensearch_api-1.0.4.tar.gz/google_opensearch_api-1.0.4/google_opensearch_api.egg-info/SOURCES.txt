@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+google_opensearch_api.egg-info/PKG-INFO
+google_opensearch_api.egg-info/SOURCES.txt
+google_opensearch_api.egg-info/dependency_links.txt
+google_opensearch_api.egg-info/entry_points.txt
+google_opensearch_api.egg-info/requires.txt
+google_opensearch_api.egg-info/top_level.txt
+google_search_api/__init__.py
+google_search_api/google_search_api.py
