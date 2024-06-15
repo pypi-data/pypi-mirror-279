@@ -1,0 +1,459 @@
+Metadata-Version: 2.1
+Name: alphaDIA
+Version: 1.7.0
+Summary: A novel proteomics search engine for DIA data based on end-to-end transfer learning.
+Author-email: Mann Labs <wallmann@biochem.mpg.de>
+License: Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright 2020 MannLabs
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: Paper preprint, https://www.biochem.mpg.de/mann
+Project-URL: Repository, https://github.com/MannLabs/alphadia
+Project-URL: Issues, https://github.com/MannLabs/alphadia/issues
+Project-URL: Mann Labs Homepage, https://www.biochem.mpg.de/mann
+Keywords: mass spectrometry,proteomics,search engine,DIA,data-independent acquisition,bioinformatics,AlphaPept,AlphaPept ecosystem
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.9.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numba
+Requires-Dist: argparse
+Requires-Dist: alpharaw >=0.3.1
+Requires-Dist: alphatims
+Requires-Dist: alphabase >=1.2.5
+Requires-Dist: peptdeep >=1.2.1
+Requires-Dist: progressbar
+Requires-Dist: neptune
+Requires-Dist: seaborn
+Requires-Dist: rocket-fft
+Requires-Dist: xxhash
+Requires-Dist: torchmetrics
+Requires-Dist: transformers <=4.40.2
+Requires-Dist: directlfq
+Requires-Dist: pythonnet
+Requires-Dist: zstandard
+Requires-Dist: scipy >=1.12.0
+Provides-Extra: development
+Requires-Dist: jupyter ; extra == 'development'
+Requires-Dist: jupyter-contrib-nbextensions ; extra == 'development'
+Requires-Dist: pyinstaller ; extra == 'development'
+Requires-Dist: twine ; extra == 'development'
+Requires-Dist: bumpversion ; extra == 'development'
+Requires-Dist: pipdeptree ; extra == 'development'
+Requires-Dist: ipykernel ; extra == 'development'
+Requires-Dist: psutil ; extra == 'development'
+Requires-Dist: pre-commit ==3.7.0 ; extra == 'development'
+Requires-Dist: coverage ; extra == 'development'
+Requires-Dist: coverage-badge ; extra == 'development'
+Requires-Dist: pytest ; extra == 'development'
+Requires-Dist: autodocsumm ; extra == 'development'
+Requires-Dist: sphinx-rtd-theme ; extra == 'development'
+Requires-Dist: nbsphinx ; extra == 'development'
+Requires-Dist: myst-parser ; extra == 'development'
+Requires-Dist: sphinx-design ; extra == 'development'
+Requires-Dist: furo ; extra == 'development'
+Requires-Dist: pywin32 ; (sys_platform == "win32") and extra == 'development'
+Provides-Extra: stable
+Requires-Dist: numba ==0.59.1 ; extra == 'stable'
+Requires-Dist: argparse ==1.4.0 ; extra == 'stable'
+Requires-Dist: alpharaw ==0.4.5 ; extra == 'stable'
+Requires-Dist: alphatims ==1.0.8 ; extra == 'stable'
+Requires-Dist: alphabase ==1.2.5 ; extra == 'stable'
+Requires-Dist: peptdeep ==1.2.1 ; extra == 'stable'
+Requires-Dist: progressbar ==2.5 ; extra == 'stable'
+Requires-Dist: neptune ==1.10.4 ; extra == 'stable'
+Requires-Dist: seaborn ==0.13.2 ; extra == 'stable'
+Requires-Dist: rocket-fft ==0.2.5 ; extra == 'stable'
+Requires-Dist: xxhash ==3.4.1 ; extra == 'stable'
+Requires-Dist: torchmetrics ==1.4.0.post0 ; extra == 'stable'
+Requires-Dist: transformers ==4.40.2 ; extra == 'stable'
+Requires-Dist: directlfq ==0.2.19 ; extra == 'stable'
+Requires-Dist: pythonnet ==3.0.3 ; extra == 'stable'
+Requires-Dist: zstandard ==0.22.0 ; extra == 'stable'
+Requires-Dist: scipy ==1.12.0 ; extra == 'stable'
+Provides-Extra: test
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: coverage-badge ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+
+![Release](https://img.shields.io/badge/release-v1.6.0-brightgreen)
+![License](https://img.shields.io/badge/License-Apache-brightgreen)
+![Tests](https://github.com/MannLabs/alphadia/workflows/Default%20installation%20and%20tests/badge.svg)
+![Docs](https://readthedocs.org/projects/alphadia/badge/?version=latest)
+![Deployment](https://github.com/MannLabs/alphadia/workflows/Publish%20on%20PyPi%20and%20release%20on%20GitHub/badge.svg)
+![Coverage](https://github.com/MannLabs/alphadia/blob/main/coverage.svg)
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="release/logos/alphadia.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">alphaDIA</h3>
+
+  <p align="center">
+    <a href="https://www.biorxiv.org/content/10.1101/2024.05.28.596182v1">Preprint</a>
+    ·
+    <a href="https://github.com/Mannlabs/alphadia/releases/latest">Download</a>
+    ·
+    <a href="https://github.com/MannLabs/alphadia/discussions">Discussion</a>
+    ·
+    <a href="https://alphadia.readthedocs.io/en/latest/">Documentation</a>
+  </p>
+</div>
+
+![preview](assets/preview.gif)
+
+## Features
+- Empirical library and fully predicted library search
+- Label free quantification
+- DIA multiplexing
+
+We support the following vendor and processing modes:
+
+| Platform              | Empirical lib | Predicted lib |
+| :---------------- | :------: | :----: |
+| Thermo .raw |   ✅   | ✅ |
+| Sciex .wiff |   ✅   | ✅ |
+| Bruker .d |  ✅   | ⚠️ |
+> ⚠️ **Predicted libraries with Bruker .d data**<br>Alltough search is possible, alphaDIA's feature-free search takes a long time with fully predicted libraries. We are still evaluating how to better support fully predicted libraries.
+
+## Manuscript
+**Please cite:**
+> **AlphaDIA enables End-to-End Transfer Learning for Feature-Free Proteomics**<br>
+> Georg Wallmann, Patricia Skowronek, Vincenth Brennsteiner, Mikhail Lebedev, Marvin Thielert, Sophia Steigerwald, Mohamed Kotb, Tim Heymann, Xie-Xuan Zhou, Magnus Schwörer, Maximilian T. Strauss, Constantin Ammar, Sander Willems, Wen-Feng Zeng, Matthias Mann<br>
+> [biorxiv.org](https://www.biorxiv.org/content/10.1101/2024.05.28.596182v1)
+
+alphaDIA is part of the alphaX ecosystem:
+- [alphaPept](https://github.com/MannLabs/alphapept)
+- [alphaTims](https://github.com/MannLabs/alphatims)
+- [alphaPeptDeep](https://github.com/MannLabs/alphapeptdeep)
+- [alphaRaw](https://github.com/MannLabs/alpharaw)
+- [alphaBase](https://github.com/MannLabs/alphabase)
+- [directLFQ](https://github.com/MannLabs/directlfq)
+- [alphaTims](https://github.com/MannLabs/alphatims)
+
+## Installation
+
+AlphaDIA can be installed on Windows, macOS and Linux. Please choose the preferred installation:
+
+* [**One-click GUI installation:**](#one-click-gui-installation) Choose this installation if you only want the GUI and/or keep things as simple as possible.
+
+* [**Pip installation**](#pip-installation)This version allows you to use alphaDIA in your python environment (provided e.g. by conda). You will only have access to the search engine backend and the command line but not the GUI.
+
+* [**Developer installation:**](docs/installation.md#developer-installation) This installation allows to modify alphaDIA's source code directly. Generally, the developer version of alphaDIA outperforms the precompiled versions which makes this the installation of choice for high-throughput experiments.
+
+* [**Docker installation:**](docs/installation.md#use-the-dockerized-version) Choose this for running alphaDIA in a Docker container, which is useful if you want to run it in a cloud environment.
+
+* [**Slurm installation:**](docs/installation.md#slurm-cluster-installation) Choose this for running alphaDIA on a research cluster with Slurm.
+
+### One-click GUI installation
+Currently available for **MacOS** and **Windows**.
+You can download the latest release of alphaDIA [here](https://github.com/Mannlabs/alphadia/releases/latest).
+
+* **Windows:** Download the latest `win-x64` build. Save it and double click it to install. If you receive a warning during installation click *Run anyway*.
+* **MacOS:** Download the latest `darwin-arm64` build. Please note that alphaDIA currently requires an ARM based M1/2/3 processor for the one-click installer. Save the installer and open the parent folder in Finder. Right-click and select *open*. If you receive a warning during installation click *Open*. If you want to use `.raw` files on Thermo instruments alphaRaw is required, which depends on Mono. A detailed guide to installing alphaRaw with mono can be found [here](https://github.com/MannLabs/alpharaw#installation).
+
+As of now, **Linux** users need follow the steps for the
+[developer installation](docs/installation.md#developer-installation) in order to use the GUI.
+
+### Pip installation
+If you want to use alphaDIA as a python library (e.g. for importing it into Jupyter notebooks) or only use the command-line interface,
+you can install alphaDIA via `pip`.
+
+#### 1. Prerequisites
+Please make sure you have a valid installation of conda or miniconda.
+We recommend setting up miniconda as described on their [website](https://docs.conda.io/projects/miniconda/en/latest/).
+
+If you want to use `.raw` files on Thermo instruments alphaRaw is required, which depends on Mono. A detailed guide to installing alphaRaw with mono can be found [here](https://github.com/MannLabs/alpharaw#installation).
+
+#### 2. Setting up the environment
+For any Python package, it is highly recommended to use a separate, as otherwise dependancy conflicts can occur with already existing packages. We generally recommend [miniconda](https://docs.anaconda.com/free/miniconda/).
+
+Finally, alphaDIA and all its dependencies can be installed by
+```bash
+pip install "alphadia[stable]"
+```
+We strongly recommend using the `stable` version, which has all dependencies fixed,
+for reasons of reproducibility and integrity.
+
+Alternatively, use
+`pip install alphadia`, which comes with less version constraints. This is not recommended, but may be useful to avoid
+version clashes if alphaDIA is imported as a library into a defined python requirement.
+Note however, that this "loose" version might be affected e.g. by breaking changes of third-party dependencies.
+
+Finally, run `alphadia -v` to check if the installation was successful;
+`alphadia -h` will give you a list of command-line options.
+
+---
+## Getting started
+
+This guide will show you how to perform your first search using the One-click GUI.
+### 1. Prerequisites
+Make sure you have installed the GUI using the one-click installer. To verify your installation, open alphaDIA and make sure that the `BundledExecutionEngine` is selected.
+
+<img src="assets/select_engine.gif" alt="Logo" width="400" height="auto">
+
+### 2. Test data
+
+For the first search we will be using a spectral library to search 60SPD bulk HeLa samples on the Orbitrap Astral. Download the test samples and save them: [HeLa library](https://datashare.biochem.mpg.de/s/Uw2yfNSbApfPpTk), [RAW files].(https://datashare.biochem.mpg.de/s/339jg5HtGrwLwDN)
+
+### 3. Search settings
+
+#### Input Files
+Import the library `.hdf` file and select the thre `.raw` files. You can select a human `.fasta` file for reannotation but it's generally not recommended for empirical spectral libraries.
+
+#### Method Settings
+Although alphaDIA is highly customizable, we will only specify a limited number of settings here. Go to the *Search* settings and make the following changes:
+* Number of candidates: 5
+* MS1 Tolerance 4ppm
+* MS2 Tolerance 7ppm
+
+#### Output files
+Select an output folder where the search progress and the final results should be saved.
+
+### 4. Run the search
+Click *Run Workflow* to start the search and see the progress.
+
+
+---
+## Troubleshooting
+
+In case of issues, check out the following:
+
+* [Issues](https://github.com/MannLabs/alphadia/issues): Try a few different search terms to find out if a similar problem has been encountered before
+* [Discussions](https://github.com/MannLabs/alphadia/discussions): Check if your problem or feature requests has been discussed before.
+
+---
+## Citations
+
+A manuscript has been submitted to bioRxiv.
+
+---
+## How to contribute
+
+If you like this software, you can give us a [star](https://github.com/MannLabs/alphadia/stargazers) to boost our visibility! All direct contributions are also welcome. Feel free to post a new [issue](https://github.com/MannLabs/alphadia/issues) or clone the repository and create a [pull request](https://github.com/MannLabs/alphadia/pulls) with a new branch. For an even more interactive participation, check out the [discussions](https://github.com/MannLabs/alphadia/discussions) and the [the Contributors License Agreement](misc/CLA.md).
+
+Further information on the development process can be found [here](docs/installation.md).
+
+---
+## Changelog
+
+See the [HISTORY.md](HISTORY.md) for a full overview of the changes made in each version.
+
+---
+## About
+
+An open-source Python package of the AlphaPept ecosystem from the [Mann Labs at the Max Planck Institute of Biochemistry](https://www.biochem.mpg.de/mann).
+
+---
+## License
+
+AlphaDIA was developed by the [Mann Labs at the Max Planck Institute of Biochemistry](https://www.biochem.mpg.de/mann) and is freely available with an [Apache License](LICENSE.txt). External Python packages (available in the [requirements](requirements) folder) have their own licenses, which can be consulted on their respective websites.
+
+---
