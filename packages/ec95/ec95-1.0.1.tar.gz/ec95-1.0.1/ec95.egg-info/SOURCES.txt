@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ec95/__init__.py
+ec95/search.py
+ec95.egg-info/PKG-INFO
+ec95.egg-info/SOURCES.txt
+ec95.egg-info/dependency_links.txt
+ec95.egg-info/requires.txt
+ec95.egg-info/top_level.txt
