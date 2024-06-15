@@ -1,0 +1,15 @@
+gchat/README.md,sha256=Oxdub9NMiSS8l77aYXuAUnZrkLMujSddb1JUS4vWThY,1938
+gchat/__init__.py,sha256=ZDsOqK7D5-pOaMpkEKRlV7WEFGDQFDGBc4BcRA3Ymmo,5505
+gchat/config.py,sha256=XpvdUz_yPN4ovDH9qkYue7QTGEpsE1kkyIShcRuypvQ,1236
+gchat/main.py,sha256=wP7E12NhTT4y0jYuz6sM-EWIZXkBuPtZ31auSljVdoA,13100
+gchat/requirements.txt,sha256=oZz8xJQNK2NxN9muaSuKW1Ec9RsO9BER30Yi_neh-1o,56
+gchat/utils/promptValidator.py,sha256=TU8rZv7Fk0c7hj6WvBbsnHbXkWrvNT2R8qsQxPRuavs,1545
+gchat/utils/single_prompt.py,sha256=5TFwaWRFJEyno81JFRx9XECtxBqvWT7Xa3T2XGaA5DQ,2751
+gchat/utils/streaming_word_wrapper.py,sha256=RP_YPLzUAcR8Af1-kOJ5xSNplgVEeE8q6EtM2nXIjw8,7992
+gchat/utils/terminal_mode_dialogs.py,sha256=lgdTdWFHZaZLYaxlz3HumN8H4SotDsH1QatwEIammEk,4776
+gchat/utils/tts_utils.py,sha256=L_jjGgp1tDaOe2_yhMlwdcJK37xtCEsRsvtkgGBKXeM,4839
+gchat-0.0.5.dist-info/METADATA,sha256=Fto5pCtUhd8AQwBR2L2DKLXDyLaOgzzJLbzt3jZi6Uk,3181
+gchat-0.0.5.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+gchat-0.0.5.dist-info/entry_points.txt,sha256=jb432nb72eQzEJB_h4gmbdg15J1zqSpZJyENvh7xl3g,43
+gchat-0.0.5.dist-info/top_level.txt,sha256=FTYOePpyOXvEwe1kOrvS9nV1c4XLB8Xq_QgQvf42bW8,6
+gchat-0.0.5.dist-info/RECORD,,
