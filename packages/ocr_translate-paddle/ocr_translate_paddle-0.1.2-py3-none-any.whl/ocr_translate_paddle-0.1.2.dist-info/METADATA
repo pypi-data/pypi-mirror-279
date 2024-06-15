@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: ocr_translate-paddle
+Version: 0.1.2
+Summary: Plugins to enable usage of PaddleOCR in ocr_translate
+Keywords: django,translation
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: django-ocr_translate>=0.5.0,<1.0
+Requires-Dist: numpy
+Requires-Dist: paddleocr==2.7.3
+Requires-Dist: paddlepaddle ; extra == "cpu"
+Requires-Dist: paddlepaddle-gpu ; extra == "gpu"
+Requires-Dist: pre-commit~=3.3.3 ; extra == "pre-commit"
+Requires-Dist: pylint~=2.17.4 ; extra == "pre-commit"
+Requires-Dist: pylint-pytest~=1.1.2 ; extra == "pre-commit"
+Requires-Dist: pylint-django~=2.5.3 ; extra == "pre-commit"
+Requires-Dist: flit ; extra == "release"
+Requires-Dist: pytest ; extra == "tests"
+Requires-Dist: pytest-cov ; extra == "tests"
+Requires-Dist: pytest-django~=4.5.2 ; extra == "tests"
+Project-URL: Source, https://github.com/Crivella/ocr_translate-paddle
+Provides-Extra: cpu
+Provides-Extra: gpu
+Provides-Extra: pre-commit
+Provides-Extra: release
+Provides-Extra: tests
+
+# Plugin ocr_translate_paddle
+
+This is a plugin for the [ocr_translate](https://github.com/Crivella/ocr_translate).
+Plugins to enable usage of [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) in ocr_translate
+
+## Usage
+
+- Install this by running `pip install ocr_translate-paddle`
+- Add `ocr_translate_paddle` to your `INSTALLED_APPS` in `settings.py`
+- Run the server with `AUTOCREATE_VALIDATED_MODELS` once
+
