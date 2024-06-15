@@ -1,0 +1,55 @@
+[project]
+name = "pyfetch_mimic"
+version = "2024.06.14"
+authors = [
+  {name="darrida", email="darrida.py@gmail.com"}
+]
+description = "This is a module that mimics pyodide.http.pyfetch to enable simpler development by using one set of http calls for both local and pyodide executions."
+readme = "README.md"
+dependencies = [
+  'shiny',
+  'httpx',
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+tests = [
+  'fastapi',
+  'pytest',
+  'pytest-asyncio',
+  'robotframework',
+  'robotframework-dependencylibrary',
+  'robotframework-pythonlibcore',
+  'robotframework-seleniumlibrary',
+  'robotframework-stacktrace',
+  'selenium',
+  'seleniumbase',
+  'coverage',
+  'shinylive'
+]
+
+[project.urls]
+Homepage = "https://github.com/darrida/py-shinylive-pyfetch-mimic"
+Issues = "https://github.com/darrida/py-shinylive-pyfetch-mimic/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 120
+extend-exclude = [".venv", "*.robot"]
+
+[tool.ruff.lint]
+extend-select = ["S", "I"]  # bandit (S), isort (I)
+
+[tool.ruff.lint.isort]
+extra-standard-library = []
+known-first-party = []
+known-third-party = []
+# relative-imports-order = "closest-to-furthest"
+# required-imports = ["from __future__ import annotations"]

@@ -1,0 +1,16 @@
+shiny
+httpx
+
+[tests]
+fastapi
+pytest
+pytest-asyncio
+robotframework
+robotframework-dependencylibrary
+robotframework-pythonlibcore
+robotframework-seleniumlibrary
+robotframework-stacktrace
+selenium
+seleniumbase
+coverage
+shinylive

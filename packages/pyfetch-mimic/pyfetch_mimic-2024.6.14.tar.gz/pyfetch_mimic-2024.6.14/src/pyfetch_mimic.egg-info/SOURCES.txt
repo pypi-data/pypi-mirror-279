@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyfetch_mimic.py
+src/pyfetch_mimic.egg-info/PKG-INFO
+src/pyfetch_mimic.egg-info/SOURCES.txt
+src/pyfetch_mimic.egg-info/dependency_links.txt
+src/pyfetch_mimic.egg-info/requires.txt
+src/pyfetch_mimic.egg-info/top_level.txt
+test/test_endpoints.py
