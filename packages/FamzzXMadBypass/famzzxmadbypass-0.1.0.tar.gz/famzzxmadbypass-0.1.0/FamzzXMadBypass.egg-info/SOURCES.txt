@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.py
+FamzzXMadBypass/FamzzXMadBypass.py
+FamzzXMadBypass/__init__.py
+FamzzXMadBypass.egg-info/PKG-INFO
+FamzzXMadBypass.egg-info/SOURCES.txt
+FamzzXMadBypass.egg-info/dependency_links.txt
+FamzzXMadBypass.egg-info/requires.txt
+FamzzXMadBypass.egg-info/top_level.txt
