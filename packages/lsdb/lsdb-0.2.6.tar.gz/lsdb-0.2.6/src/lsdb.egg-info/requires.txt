@@ -1,0 +1,16 @@
+dask[complete]
+hipscat>=0.3.5
+pyarrow
+deprecated
+scipy
+lsst-sphgeom
+
+[dev]
+asv==0.6.3
+jupyter
+mypy
+pre-commit
+pylint
+pytest
+pytest-cov
+pytest-mock
