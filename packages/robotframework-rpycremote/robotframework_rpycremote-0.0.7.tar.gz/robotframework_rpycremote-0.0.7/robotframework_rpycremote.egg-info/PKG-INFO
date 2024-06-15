@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: robotframework-rpycremote
+Version: 0.0.7
+Summary: Robot Framework Remote Library based on RPyC
+Author-email: René Lehfeld <54720674+rlehfeld@users.noreply.github.com>
+License: MIT
+Project-URL: Homepage, https://github.com/rlehfeld/robotframework-rpycremote
+Project-URL: Bug Reports, https://github.com/rlehfeld/robotframework-rpycremote/issues
+Project-URL: Source, https://github.com/rlehfeld/robotframework-rpycremote/
+Keywords: robotframework,robot-framework,rpyc
+Classifier: Programming Language :: Python :: 3
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: robotframework>=5.0.1
+Requires-Dist: rpyc>=6.0.0
+
+RPyC Robot Remote Library
+============================
+Generic Robot Framework Remote library based on RPyC
+
+Installation
+============
+Install the latest release via PyPi using pip:
+
+::
+
+    pip install robotframework-rpycremote
+
+Or add to your ``conda.yaml`` file:
+
+::
+
+    - pip:
+        - robotframework-rpycremote
+
+
+In oder to help with development you can directly install from GitHub via:
+
+::
+
+    pip install git+https://github.com/rlehfeld/robotframework-rpycremote.git
+
+Or add to your ``conda.yaml`` file:
+
+::
+
+    - pip:
+        - git+https://github.com/rlehfeld/robotframework-rpycremote.git
+
+
+Usage
+=====
