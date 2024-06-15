@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="madas"
+version="1.0.2"
+description = "The MAterials DAta Similarity framework."
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    {name="Martin Kuban et al."}
+]
+maintainers = [
+    {name="Martin Kuban", email="kuban@physik.hu-berlin.de"}
+]
+requires-python = ">= 3.10"
+dependencies = [
+    "numpy == 1.26",
+    "pandas == 2.2",
+    "ase >= 3.22",
+    "matplotlib >= 3.6",
+    "tqdm == 4.64",
+    "scikit-learn == 1.1",
+    "requests >= 2.26",
+    "bitarray == 2.4.1"
+]
+license = {file = "LICENSE"}
+classifiers=[
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux"
+]
+
+[project.urls]
+Documentation = "https://madas.readthedocs.io"
+Source = "https://github.com/kubanmar/madas"
+Issues = "https://github.com/kubanmar/madas/issues"
+
+[tool.setuptools.packages.find]
+where=[".", "dependencies/dos-fingerprints"]
+include=["madas*", "nomad_dos_fingerprints*"]
+exclude=["tests*", "timing", "*venv"]

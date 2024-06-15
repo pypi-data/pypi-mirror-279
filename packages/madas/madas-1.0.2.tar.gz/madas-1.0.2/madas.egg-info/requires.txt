@@ -1,0 +1,8 @@
+numpy==1.26
+pandas==2.2
+ase>=3.22
+matplotlib>=3.6
+tqdm==4.64
+scikit-learn==1.1
+requests>=2.26
+bitarray==2.4.1
