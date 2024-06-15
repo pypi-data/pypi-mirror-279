@@ -1,0 +1,37 @@
+[project]
+name = "caen_felib"
+authors = [
+	{ name="Giovanni Cerretani" },
+	{ name="Daniele Ninci" },
+]
+description = "Official Python wrapper for the CAEN FELib."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: Science/Research",
+	"License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+	"Natural Language :: English",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"Topic :: Scientific/Engineering :: Physics",
+	"Typing :: Typed",
+]
+dependencies = [
+	"numpy>=1.20",
+	"typing-extensions>=4.0.0",
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "caen_felib.__version__"}
+
+[project.urls]
+Homepage = "https://www.caen.it"
+Documentation = "https://www.caen.it/products/caen-felib-library/"
+Support = "https://www.caen.it/mycaen/support/"
