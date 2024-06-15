@@ -1,0 +1,3 @@
+include COPYING
+include src/b4/man/*.rst
+include src/b4/templates/*
