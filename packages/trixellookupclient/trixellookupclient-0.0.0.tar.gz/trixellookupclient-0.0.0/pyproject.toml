@@ -1,0 +1,41 @@
+[project]
+name = "trixellookupclient"
+version = "0.0.0"
+description = "A client module for accessing the Trixel Lookup Service (API)"
+readme = "README.md"
+requires-python = ">=3.8,<4.0"
+dependencies = [
+    "httpx>=0.20.0,<0.28.0",
+    "attrs>=21.3.0",
+    "python-dateutil>=2.8.0",
+]
+authors = [
+    { name = "Till", email = "till@fleisch.dev" },
+]
+
+[project.license]
+file = "LICENSE"
+
+[project.urls]
+Homepage = "https://github.com/TillFleisch/TrixelLookupService"
+Repository = "https://github.com/TillFleisch/TrixelLookupService.git"
+Issues = "https://github.com/TillFleisch/TrixelLookupService/issues"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "F",
+    "I",
+    "UP",
+]
