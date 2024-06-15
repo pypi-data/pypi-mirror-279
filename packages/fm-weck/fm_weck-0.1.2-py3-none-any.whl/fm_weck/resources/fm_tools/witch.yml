@@ -1,0 +1,38 @@
+name: Witch
+input_languages:
+  - C
+project_url: https://github.com/ayazip/witch-klee
+repository_url: https://github.com/ayazip/witch-klee
+spdx_license_identifier: "LGPL-3.0-or-later"
+benchexec_toolinfo_module: "symbiotic-witch.py"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - payazi
+
+maintainers:
+  - name: Paulína Ayaziová
+    institution: Masaryk University, Brno
+    country: Czechia
+    url: null
+
+versions:
+  - version: "svcomp24"
+    benchexec_toolinfo_options: ['--sv-comp']
+    required_ubuntu_packages:
+      - python3
+    doi: "10.5281/zenodo.10064512"
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Validation of Violation Witnesses 2.0"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Paulína Ayaziová
+      institution: Masaryk University, Brno
+      country: Czechia
+      url: null
+
+techniques:
+  - Symbolic Execution
+
+frameworks_solvers: []

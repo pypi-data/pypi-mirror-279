@@ -1,0 +1,56 @@
+name: GDart
+input_languages:
+  - Java
+project_url: https://github.com/tudo-aqua/gdart-svcomp
+repository_url: https://github.com/tudo-aqua/gdart-svcomp
+spdx_license_identifier: Apache-2.0 AND LGPL-2.0-only
+benchexec_toolinfo_module: "https://gitlab.com/sosy-lab/software/benchexec/-/raw/main/benchexec/tools/gdart.py"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - fhowar
+  - mmuesly
+
+maintainers:
+  - name: Falk Howar
+    institution: TU Dortmund
+    country: Germany
+    url: https://falkhowar.de
+
+versions:
+  - version: "svcomp24"
+    doi: "10.5281/zenodo.10059535"
+    benchexec_toolinfo_options: []
+    required_ubuntu_packages:
+      - openjdk-11-jre-headless
+  - version: "svcomp23"
+    url: "https://gitlab.com/sosy-lab/sv-comp/archives-2023/-/raw/main/2023/gdart.zip"
+    benchexec_toolinfo_options: []
+    required_ubuntu_packages:
+      - openjdk-11-jre-headless
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Falk Howar
+      institution: TU Dortmund
+      country: Germany
+      url: https://falkhowar.de
+  - competition: "SV-COMP 2023"
+    track: "Verification"
+    tool_version: "svcomp23"
+    jury_member:
+      name: Falk Howar
+      institution: TU Dortmund
+      country: Germany
+      url: https://falkhowar.de
+
+techniques:
+  - Symbolic Execution
+  - Bit-Precise Analysis
+  - Portfolio
+
+frameworks_solvers:
+  - CVC
+  - Z3

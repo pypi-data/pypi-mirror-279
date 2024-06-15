@@ -1,0 +1,51 @@
+name: CPV
+input_languages:
+  - C
+project_url: https://gitlab.com/sosy-lab/software/cpv
+repository_url: https://gitlab.com/sosy-lab/software/cpv
+spdx_license_identifier: Apache-2.0
+benchexec_toolinfo_module: benchexec.tools.cpv
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - Po-Chun-Chien
+  - nianzelee
+
+maintainers:
+  - name: Po-Chun Chien
+    institution: LMU Munich
+    country: Germany
+    url: https://www.sosy-lab.org/people/chien/
+  - name: Nian-Ze Lee
+    institution: LMU Munich
+    country: Germany
+    url: https://www.sosy-lab.org/people/lee/
+
+versions:
+  - version: "svcomp24"
+    doi: 10.5281/zenodo.10203472
+    benchexec_toolinfo_options: ["--svcomp", "--no-cache-update"]
+    required_ubuntu_packages:
+      - python3-lxml
+      - python3-bitstring
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Po-Chun Chien
+      institution: LMU Munich
+      country: Germany
+      url: https://www.sosy-lab.org/people/chien/
+
+techniques:
+  - Bounded Model Checking
+  - k-Induction
+  - Property-Directed Reachability
+  - Interpolation
+  - Logic Synthesis
+  - Task Translation
+  - Bit-Precise Analysis
+  - Portfolio
+
+frameworks_solvers: []
