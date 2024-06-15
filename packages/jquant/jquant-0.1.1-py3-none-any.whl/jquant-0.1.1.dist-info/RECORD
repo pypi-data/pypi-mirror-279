@@ -1,0 +1,10 @@
+jquant/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jquant/exchange.py,sha256=kbXYGOEWLRH3SQK4DWx35TCKxOHf6loP63Z8kcZwVQU,7817
+jquant/exchange_test.py,sha256=sZL9o_lCRvuAB_2pRTAsn5yq-gBTayqwi9HjZ3mMmTE,2469
+jquant/platform_pb2.py,sha256=EXRL7GR7IV1imulNbNrQyEgqe3FumCPNO6T5sch49J0,18383
+jquant/platform_pb2.pyi,sha256=nrQWmp5NsZLiH-1yGjn9tu-qWViSEm87rpEVXyPhBjA,24173
+jquant/platform_pb2_grpc.py,sha256=m0fUd5PmJp-Vzfi0HMOli2UU4651Ux8tCwnEKSBRQc0,26005
+jquant-0.1.1.dist-info/METADATA,sha256=1CbX_Ma0Xj3LhsXOcmZfBY_yR8sjetXZ43i-ugaI0K0,272
+jquant-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jquant-0.1.1.dist-info/top_level.txt,sha256=YQGEv_5q3Z-bORLb6esfNzctELA7tb0_jSUr9C4elQA,7
+jquant-0.1.1.dist-info/RECORD,,
