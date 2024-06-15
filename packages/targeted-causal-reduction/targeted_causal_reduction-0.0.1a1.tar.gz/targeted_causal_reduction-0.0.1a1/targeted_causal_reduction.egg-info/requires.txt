@@ -1,0 +1,11 @@
+h5py
+lightning
+matplotlib
+numpy
+scikit-learn
+scipy
+typed-argument-parser
+wandb
+
+[dev]
+pytest

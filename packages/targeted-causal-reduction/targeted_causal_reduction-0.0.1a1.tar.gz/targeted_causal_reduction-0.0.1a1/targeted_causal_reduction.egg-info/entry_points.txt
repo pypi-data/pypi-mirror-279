@@ -1,0 +1,2 @@
+[console_scripts]
+tcr = targeted_causal_reduction.__main__:main
