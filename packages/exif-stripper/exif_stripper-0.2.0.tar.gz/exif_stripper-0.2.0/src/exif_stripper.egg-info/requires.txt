@@ -1,0 +1,10 @@
+pillow>=10.3.0
+
+[:platform_system != "Windows"]
+xattr
+
+[dev]
+pre-commit
+pytest
+pytest-cov
+pytest-randomly
