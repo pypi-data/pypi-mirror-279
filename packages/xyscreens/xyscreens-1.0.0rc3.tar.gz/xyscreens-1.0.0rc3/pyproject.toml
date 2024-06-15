@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling>=1.24", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "xyscreens/_version.py"
+
+[tool.hatch.version]
+source = "vcs"
+
+[project]
+name = "xyscreens"
+dynamic = ["version"]
+license = {text = "Apache-2.0"}
+authors = [
+    { name="Rogier van Staveren", email="rogier@batoid.com" }
+]
+description = "Library to control XY Screens and See Max projector screens and lifts."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX",
+    "Operating System :: MacOS :: MacOS X",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Development Status :: 4 - Beta",
+    "Topic :: Home Automation"
+]
+dependencies = [
+    "pyserial>=3.5",
+    "pyserial-asyncio-fast>=0.12"
+]
+
+[project.urls]
+Homepage = "https://github.com/rrooggiieerr/xyscreens.py"
+Issues = "https://github.com/rrooggiieerr/xyscreens.py/issues"
+
+[tool.isort]
+# https://github.com/PyCQA/isort/wiki/isort-Settings
+profile = "black"
+skip = "xyscreens/_version.py"
+
+[tool.black]
+exclude = "xyscreens/_version.py"
+
+[tool.pylint]
+ignore = "_version.py"
+recursive = "y"
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "xyscreens"
+
+[[tool.mypy.overrides]]
+module = ["serial.*", "serial_asyncio_fast.*", "*._version"]
+ignore_missing_imports = true
