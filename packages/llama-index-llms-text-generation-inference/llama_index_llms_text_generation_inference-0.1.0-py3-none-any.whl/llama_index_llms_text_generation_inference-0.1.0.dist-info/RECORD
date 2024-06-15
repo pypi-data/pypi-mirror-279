@@ -1,0 +1,6 @@
+llama_index/llms/text_generation_inference/__init__.py,sha256=IOUVnEzG1c2cLQt5mARNCluHSw2WeYP-KDQ5QzHGDDk,132
+llama_index/llms/text_generation_inference/base.py,sha256=F7CmGpHcKe-PPP4pglk3zlXDQWJq6JzGTPbxBrVCk0U,15425
+llama_index/llms/text_generation_inference/utils.py,sha256=YWD1XKiC8CWSInsMS0vSqqM9lEgcCOSoou-QVQkvRvE,2082
+llama_index_llms_text_generation_inference-0.1.0.dist-info/METADATA,sha256=rlzo9H5pIGBmPV8D_tLmda3ww-TYQXgkkFwWKto44dA,1282
+llama_index_llms_text_generation_inference-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_llms_text_generation_inference-0.1.0.dist-info/RECORD,,
