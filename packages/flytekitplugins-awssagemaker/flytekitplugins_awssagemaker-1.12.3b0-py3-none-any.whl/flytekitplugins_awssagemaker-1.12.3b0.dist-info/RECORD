@@ -1,0 +1,14 @@
+flytekitplugins_awssagemaker-1.12.3b0-py3.12-nspkg.pth,sha256=ya_zoT0ZM023a2lpUsRaqXsgDEknLucLLOWbbtFBPw4,512
+flytekitplugins/awssagemaker_inference/__init__.py,sha256=Shu0TRzDku4anZ0ikbEarOnKUQ8SqTd9GVaQipZIUJo,1078
+flytekitplugins/awssagemaker_inference/agent.py,sha256=Rd4-wdX_3ejpFN4O44QQZay3oYzoUWJzhwYhyzoFXY4,3112
+flytekitplugins/awssagemaker_inference/boto3_agent.py,sha256=1J0J4ZFVWwQBdOnsYViYndKBLeidsyRFK2s4IXP8HUA,3019
+flytekitplugins/awssagemaker_inference/boto3_mixin.py,sha256=-TD3nP6dHaW03TjtUn1pd346OBFVyo9d41y6_CgJZBM,6915
+flytekitplugins/awssagemaker_inference/boto3_task.py,sha256=4G67NrXZaLr20uGjIH0x-Qq3Yo2-f0EWu3ewu68vBdU,1850
+flytekitplugins/awssagemaker_inference/task.py,sha256=FoYgd7lg5gPWsxvWOuWnAf5hHMUr9K1KERk5nerTpWw,7005
+flytekitplugins/awssagemaker_inference/workflow.py,sha256=oo3WGiEUFlTFvnpoUykih7D2mtIUYzpZ6zUtdSakH8o,6113
+flytekitplugins_awssagemaker-1.12.3b0.dist-info/METADATA,sha256=n5a3-QVidFZxaOSGp3HejaeiluurVJRa5ThUfEZbfYs,864
+flytekitplugins_awssagemaker-1.12.3b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flytekitplugins_awssagemaker-1.12.3b0.dist-info/entry_points.txt,sha256=uru2aQxS38-xkMkJ1h1HYtX_Mxt2GsHIpGJgQ97CoAQ,83
+flytekitplugins_awssagemaker-1.12.3b0.dist-info/namespace_packages.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_awssagemaker-1.12.3b0.dist-info/top_level.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_awssagemaker-1.12.3b0.dist-info/RECORD,,
