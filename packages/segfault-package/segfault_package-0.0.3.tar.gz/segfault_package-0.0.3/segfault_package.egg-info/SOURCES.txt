@@ -1,0 +1,10 @@
+README.md
+setup.py
+segfault/__init__.py
+segfault/segfault.py
+segfault/../libsegfault.dll
+segfault/../libsegfault.so
+segfault_package.egg-info/PKG-INFO
+segfault_package.egg-info/SOURCES.txt
+segfault_package.egg-info/dependency_links.txt
+segfault_package.egg-info/top_level.txt
