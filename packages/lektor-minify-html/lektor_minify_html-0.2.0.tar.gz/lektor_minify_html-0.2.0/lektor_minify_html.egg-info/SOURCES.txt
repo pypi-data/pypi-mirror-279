@@ -1,0 +1,11 @@
+LICENSE
+README.md
+lektor_minify_html.py
+pyproject.toml
+lektor_minify_html.egg-info/PKG-INFO
+lektor_minify_html.egg-info/SOURCES.txt
+lektor_minify_html.egg-info/dependency_links.txt
+lektor_minify_html.egg-info/entry_points.txt
+lektor_minify_html.egg-info/requires.txt
+lektor_minify_html.egg-info/top_level.txt
+tests/test_lektor_minify_html.py

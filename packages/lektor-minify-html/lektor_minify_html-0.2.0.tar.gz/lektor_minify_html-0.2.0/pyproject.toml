@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lektor-minify-html"
+version = "0.2.0"
+license = {file = "LICENSE"}
+authors = [{ name = "seralot"}]
+description = "Minify content using minify-html"
+readme = "README.md"
+dependencies = ["minify-html"]
+
+[project.urls]
+Repository = "https://github.com/seralot/lektor-minify-html/"
+Issues = "https://github.com/seralot/lektor-minify-html/issues"
+
+[project.entry-points.'lektor.plugins']
+minify-html = 'lektor_minify_html:MinifyHtmlPlugin'
