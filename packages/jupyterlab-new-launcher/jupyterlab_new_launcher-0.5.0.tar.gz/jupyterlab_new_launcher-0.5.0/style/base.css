@@ -1,0 +1,346 @@
+.jp-Launcher-CardGroup {
+  justify-content: center;
+}
+
+.jp-CollapsibleSection {
+  --jp-animation-depth: 10px;
+  --jp-animation-time: 150ms;
+  --jp-title-height: 24px;
+
+  padding: var(--jp-animation-depth);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.jp-Launcher-cwd > h3 {
+  font-size: var(--jp-ui-font-size1);
+  margin: 0;
+}
+
+.jp-NewLauncher-OtherItems {
+  display: flex;
+  gap: 4px;
+}
+
+.jp-NewLauncher-OtherItems .jp-LauncherCard-label {
+  display: none;
+}
+
+.jp-NewLauncher-OtherItems .jp-Launcher-TypeCard {
+  width: unset;
+  min-height: unset;
+  flex-direction: row;
+  margin: 0;
+  box-shadow: none;
+  border-color: var(--jp-border-color0);
+}
+
+.jp-NewLauncher-OtherItems .jp-LauncherCard-icon {
+  height: 24px;
+}
+
+.jp-NewLauncher-OtherItems .jp-Launcher-TypeCard > .jp-LauncherCard-icon svg {
+  width: 24px;
+  height: 16px;
+}
+
+.jp-NewLauncher-TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.jp-Launcher-searchBox input {
+  /* (no longer needed in lab 4.2+) */
+  box-shadow: none;
+}
+
+.jp-Launcher-searchBox input,
+.jp-Launcher-searchBox jp-search::part(root) {
+  border: var(--jp-border-width) solid var(--jp-border-color1);
+}
+
+.jp-Launcher-searchBox .jp-FilterBox {
+  width: 100%;
+}
+
+.jp-CollapsibleSection > summary {
+  cursor: pointer;
+  transition: margin var(--jp-animation-time) ease-out;
+  list-style: none;
+  display: inline-block; /* contain the clickable area */
+  padding-right: 12px; /* but extend it a little */
+  min-width: 185px;
+}
+
+.jp-CollapsibleSection > summary:hover {
+  background-color: var(--jp-layout-color2);
+}
+
+.jp-CollapsibleSection[open] > summary {
+  margin-bottom: var(--jp-animation-depth);
+}
+
+.jp-CollapsibleSection-CollapserIcon > svg {
+  transition: transform var(--jp-animation-time) ease-out;
+  width: var(--jp-title-height);
+  height: var(--jp-title-height);
+}
+
+.jp-CollapsibleSection[open] .jp-CollapsibleSection-CollapserIcon > svg {
+  transform: rotate(90deg);
+}
+
+.jp-CollapsibleSection-CollapserIconWrapper {
+  display: inline-block;
+}
+
+.jp-CollapsibleSection-CategoryIcon > svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 4px;
+  margin-right: 8px;
+}
+
+.jp-CollapsibleSection-Title {
+  display: inline-block;
+  line-height: var(--jp-title-height);
+  vertical-align: top;
+  margin: 0;
+  user-select: none;
+  font-weight: normal;
+}
+
+.jp-LauncherBody {
+  padding: 0 24px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.jp-NewLauncher-table {
+  --jp-icon-size: 16px;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.jp-NewLauncher-table .jp-sortable-table {
+  border: var(--jp-border-width) solid var(--jp-border-color2);
+  border-top: 0;
+}
+
+.jp-NewLauncher-table .jp-Launcher-kernelIcon {
+  width: var(--jp-icon-size);
+  height: var(--jp-icon-size);
+}
+
+.jp-NewLauncher-table .jp-LauncherCard-noKernelIcon {
+  font-size: var(--jp-icon-size);
+  line-height: var(--jp-icon-size);
+}
+
+.jp-NewLauncher-table .jp-LauncherCard-icon {
+  height: var(--jp-icon-size);
+  width: var(--jp-icon-size);
+  display: inline-block;
+}
+
+.jp-TableKernelItem {
+  line-height: var(--jp-icon-size);
+}
+
+.jp-TableKernelItem > .jp-LauncherCard-icon {
+  margin-right: 4px;
+  vertical-align: top;
+  height: var(--jp-icon-size);
+}
+
+.jp-TableKernelItem-label {
+  vertical-align: top;
+}
+
+.jp-NewLauncher-table th[data-id='icon'],
+.jp-NewLauncher-table th[data-id='star'] {
+  width: var(--jp-icon-size);
+}
+
+.jp-NewLauncher-table .jp-starIcon {
+  width: var(--jp-icon-size);
+  height: var(--jp-icon-size);
+}
+
+.jp-starIconButton:hover > .jp-starIcon {
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--jp-layout-color3);
+  background: var(--jp-layout-color1);
+}
+
+.jp-NewLauncher-table-scroller {
+  overflow: auto;
+  margin-top: 4px;
+}
+
+.jp-starIconButton {
+  --jp-transition-transform: rotate(72deg);
+
+  border: 0;
+  margin: 0;
+  padding: 0 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.jp-starIcon .jp-star-filled {
+  opacity: 0;
+}
+
+.jp-starIcon .jp-star-filled,
+.jp-starIcon .jp-star-border {
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transform-origin: center;
+}
+
+.jp-starIconButton.jp-mod-starred .jp-star-filled {
+  opacity: 1;
+  transform: var(--jp-transition-transform);
+}
+
+.jp-starIconButton.jp-mod-starred .jp-star-border {
+  opacity: 0;
+  transform: var(--jp-transition-transform);
+}
+
+.jp-KernelSelector-Dialog > .jp-Dialog-content {
+  max-height: 80%;
+  max-width: unset;
+}
+
+.jp-KernelSelector-Dialog > .jp-Dialog-content > .jp-Dialog-header {
+  display: none;
+}
+
+.jp-KernelSelector-SelectButton {
+  display: none;
+}
+
+.jp-KernelSelector-Dialog .jp-NewLauncher-table {
+  margin-bottom: 8px;
+}
+
+.jp-KernelSelector-Section {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+/* Styles for scenario where full row is clickable  */
+
+.jp-NewLauncher-table tr {
+  cursor: pointer;
+}
+
+.jp-Launcher-TypeCard {
+  user-select: none;
+}
+
+.jp-Launcher-TypeCard > .jp-LauncherCard-icon svg {
+  align-items: center;
+  display: flex;
+  height: 52px;
+  width: 52px;
+}
+
+.jp-NewLauncher-table .jp-sortable-table-tr > td {
+  white-space: nowrap;
+}
+
+.jp-sortable-table-tr > td.jp-mod-col-resized > .jp-ellipsis-wrapper {
+  white-space: nowrap;
+  position: absolute;
+  inset: 0;
+}
+
+.jp-sortable-table-tr
+  > td.jp-mod-col-resized
+  > .jp-ellipsis-wrapper
+  > .jp-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* TODO share values for padding and height from `.jp-sortable-table-tr > td` via variable; not top padding is a sum of bottom and top in plain td to align text. */
+  padding: 5px 12px 1px;
+}
+
+.jp-sortable-table-tr > td > .jp-starIconButton {
+  white-space: nowrap;
+}
+
+.jp-sortable-table-tr > th,
+.jp-sortable-table-tr > td {
+  padding: 3px 12px;
+}
+
+td > .jp-starIconButton {
+  position: relative;
+  top: 1px;
+}
+
+/* To contribute upstream  */
+
+.jp-sortable-table-resize-handle {
+  width: 4px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  cursor: ew-resize;
+}
+
+.jp-sortable-table-tr > th {
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 24px;
+  padding: 0;
+  -webkit-user-select: none;
+}
+
+.jp-sortable-table-resize-handle:hover {
+  background: var(--jp-layout-color3);
+}
+
+.jp-header-resizing > .jp-sortable-table-resize-handle {
+  background: var(--jp-brand-color1) !important;
+}
+
+body.jp-mod-resize-table * {
+  cursor: ew-resize;
+}
+
+body.jp-mod-resize-table .jp-sortable-table {
+  pointer-events: none;
+}
+
+/*
+This will likely be needed upstream when no ellipsis wrapping is used.
+.jp-sortable-table-tr > td > * {
+  white-space: normal;
+}
+*/
+
+.jp-sortable-table-th-wrapper > label {
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.jp-sortable-table-th-wrapper {
+  width: inherit;
+  box-sizing: border-box;
+  padding: 4px 12px 2px;
+
+  /* fill-available is only needed when heading does not collapse
+  /* min-width: -webkit-fill-available; */
+}
