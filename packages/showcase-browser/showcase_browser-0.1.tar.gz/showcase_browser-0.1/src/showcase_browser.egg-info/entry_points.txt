@@ -1,0 +1,2 @@
+[console_scripts]
+showcase = showcase_browser.main:run
