@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vera-explain
+Version: 0.1.0
+Author: Pavlin G. Poličar
+Author-email: pavlin.g.p@gmail.com
+License: BSD 3-Clause License
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: KDEpy
+Requires-Dist: contourpy
+Requires-Dist: shapely
+Requires-Dist: matplotlib
+Requires-Dist: glasbey
