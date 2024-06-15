@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+lion_pytorch/__init__.py
+lion_pytorch/foreach.py
+lion_pytorch/lion_pytorch.py
+lion_pytorch/triton.py
+lion_pytorch.egg-info/PKG-INFO
+lion_pytorch.egg-info/SOURCES.txt
+lion_pytorch.egg-info/dependency_links.txt
+lion_pytorch.egg-info/requires.txt
+lion_pytorch.egg-info/top_level.txt
