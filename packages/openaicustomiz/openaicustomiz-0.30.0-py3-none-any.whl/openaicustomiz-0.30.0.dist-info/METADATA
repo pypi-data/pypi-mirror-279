@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: openaicustomiz
+Version: 0.30.0
+Summary: Python client library for the OpenAI API
+Home-page: 
+Author: 
+Author-email: 
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.20
+Requires-Dist: tqdm
+Requires-Dist: aiohttp
+Requires-Dist: typing-extensions ; python_version < "3.8"
+Provides-Extra: datalib
+Requires-Dist: numpy ; extra == 'datalib'
+Requires-Dist: pandas >=1.2.3 ; extra == 'datalib'
+Requires-Dist: pandas-stubs >=1.1.0.11 ; extra == 'datalib'
+Requires-Dist: openpyxl >=3.0.7 ; extra == 'datalib'
+Provides-Extra: dev
+Requires-Dist: black ~=21.6b0 ; extra == 'dev'
+Requires-Dist: pytest ==6.* ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Provides-Extra: embeddings
+Requires-Dist: scikit-learn >=1.0.2 ; extra == 'embeddings'
+Requires-Dist: tenacity >=8.0.1 ; extra == 'embeddings'
+Requires-Dist: matplotlib ; extra == 'embeddings'
+Requires-Dist: plotly ; extra == 'embeddings'
+Requires-Dist: numpy ; extra == 'embeddings'
+Requires-Dist: scipy ; extra == 'embeddings'
+Requires-Dist: pandas >=1.2.3 ; extra == 'embeddings'
+Requires-Dist: pandas-stubs >=1.1.0.11 ; extra == 'embeddings'
+Requires-Dist: openpyxl >=3.0.7 ; extra == 'embeddings'
+Provides-Extra: wandb
+Requires-Dist: wandb ; extra == 'wandb'
+Requires-Dist: numpy ; extra == 'wandb'
+Requires-Dist: pandas >=1.2.3 ; extra == 'wandb'
+Requires-Dist: pandas-stubs >=1.1.0.11 ; extra == 'wandb'
+Requires-Dist: openpyxl >=3.0.7 ; extra == 'wandb'
+
+# OpenAI Python Library Customed
+
+The OpenAI Python library orginially made by openai and was customed to be used in https://zhouzhuzheng-chatgpt.streamlit.app/
+
+## Installation via pypi
+
+
+```sh
+pip install openaicustomiz
+```
