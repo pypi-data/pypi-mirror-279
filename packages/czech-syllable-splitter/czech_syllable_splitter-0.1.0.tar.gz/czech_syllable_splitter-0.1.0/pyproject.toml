@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "czech-syllable-splitter"
+version = "0.1.0"
+description = "Splitting Czech words into syllables"
+authors = ["Adam Benda <adam@adasek.cz>", "Klara Bendová <bendovak@centrum.cz>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/adasek/czech-syllable-splitter"
+keywords = ["syllables", "syllable", "czech", "czech-language", "language", "count", "counter", "natural-language-processing", "nlp"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pylint = "^3.2.3"
+mypy = "^1.10.0"
+
+[tool.pytest]
+testpaths = 'tests'
+
+[tool.pylint]
+max-line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
