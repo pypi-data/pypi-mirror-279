@@ -1,0 +1,4 @@
+[console_scripts]
+nucclust = phamclust.scripts.nucclust:main
+phamclust = phamclust.__main__:main
+phamclust-benchmark = phamclust.scripts.benchmark:main
