@@ -1,0 +1,11 @@
+anytree
+flask
+click
+pypandoc
+
+[dev]
+black
+pyre-check
+
+[pandoc]
+pypandoc-binary

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: scholar-search
+Version: 0.0.5
+Summary: a macro search bar
+Home-page: https://github.com/adammillerio/sch
+Download-URL: https://github.com/adammillerio/sch/archive/v0.0.5.tar.gz
+Author: Adam Miller
+Author-email: miller@adammiller.io
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+License-File: LICENSE
+Requires-Dist: anytree
+Requires-Dist: flask
+Requires-Dist: click
+Requires-Dist: pypandoc
+Provides-Extra: pandoc
+Requires-Dist: pypandoc-binary; extra == "pandoc"
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pyre-check; extra == "dev"

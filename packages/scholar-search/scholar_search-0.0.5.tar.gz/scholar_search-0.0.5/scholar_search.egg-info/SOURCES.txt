@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sch/__init__.py
+sch/cli.py
+sch/commands.py
+sch/errors.py
+sch/readme.py
+sch/server.py
+sch/utils.py
+scholar_search.egg-info/PKG-INFO
+scholar_search.egg-info/SOURCES.txt
+scholar_search.egg-info/dependency_links.txt
+scholar_search.egg-info/entry_points.txt
+scholar_search.egg-info/requires.txt
+scholar_search.egg-info/top_level.txt
