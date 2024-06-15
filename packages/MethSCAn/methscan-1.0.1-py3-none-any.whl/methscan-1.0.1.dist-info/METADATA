@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: MethSCAn
+Version: 1.0.1
+Summary: a command line tool for Single-Cell Analysis of Methylation data
+Home-page: https://github.com/anders-biostat/MethSCAn
+License: GPL-3.0-or-later
+Keywords: biology,bioinformatics,single cell,methylation,single cell bisulfite sequencing
+Author: Lukas PM Kremer
+Author-email: L-Kremer@web.de
+Maintainer: Lukas PM Kremer
+Maintainer-email: L-Kremer@web.de
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Dist: click (>=7.1.2,<8.1)
+Requires-Dist: click-help-colors (>=0.9,<1)
+Requires-Dist: colorama (>=0.3.9,<1)
+Requires-Dist: numba (>=0.53.0,<1)
+Requires-Dist: numpy (>=1.20.1,<2)
+Requires-Dist: pandas (>=1.2.3,<2)
+Requires-Dist: scipy (>=1.6.1,<2)
+Requires-Dist: statsmodels (>=0.12.2,<1)
+Project-URL: Repository, https://github.com/anders-biostat/MethSCAn
+Description-Content-Type: text/markdown
+
+[![Tests](https://img.shields.io/github/actions/workflow/status/anders-biostat/MethSCAn/install_lint_test.yml?branch=master)](https://github.com/anders-biostat/MethSCAn/actions/workflows/install_lint_test.yml)
+[![PyPI](https://img.shields.io/pypi/v/methscan?logo=PyPI)](https://pypi.org/project/MethSCAn)
+[![PyPIDownloads](https://pepy.tech/badge/scbs)](https://pepy.tech/project/methscan)
+[![Stars](https://img.shields.io/github/stars/LKremer/scbs?logo=GitHub&color=yellow)](https://github.com/anders-biostat/MethSCAn/stargazers)
+
+# MethSCAn
+a command line tool for **S**ingle-**C**ell **An**alysis of **Meth**ylation data
+
+## Instructions
+
+For **installation** instructions and a **usage** [tutorial](https://anders-biostat.github.io/MethSCAn/tutorial.html), see the [MethSCAn project page](https://anders-biostat.github.io/MethSCAn/).
