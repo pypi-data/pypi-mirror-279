@@ -1,0 +1,64 @@
+CalendarScreen {
+  & ListView.sidepane {
+    width: 28;
+    border: round $primary;
+
+    & ListItem {
+      padding: 1;
+    }
+
+    &.collapsed {
+      display: none;
+    }
+  }
+
+  & Vertical.calendar-container {
+    border: round $primary;
+  }
+
+  & .topbar {
+    align: center middle;
+    height: 3;
+
+    & Button.previous {
+      dock: left;
+    }
+
+    & Button.next {
+      dock: right;
+    }
+
+    & Label {
+      height: 100%;
+      content-align: center middle;
+      padding: 1;
+    }
+  }
+
+  & Grid {
+    width: 100%;
+    grid-size: 7 6;
+
+    & EventCalendarDay {
+      color: $text-muted;
+      height: 100%;
+      padding: 1;
+
+      &.current-month {
+        color: $text;
+        background: $primary 50%;
+      }
+
+      &.today {
+        color: $text;
+        background: $secondary 50%;
+      }
+
+      &.selected {
+        color: $secondary;
+        border: round $secondary;
+        padding: 0;
+      }
+    }
+  }
+}
