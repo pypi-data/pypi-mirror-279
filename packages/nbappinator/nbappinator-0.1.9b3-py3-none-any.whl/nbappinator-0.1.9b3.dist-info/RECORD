@@ -1,0 +1,13 @@
+nbappinator/__init__.py,sha256=w3b3Vxv0aiZ6oW0cQSAHF8e3wyORJumXwo9Rn72qaDg,346
+nbappinator/_version.py,sha256=rqQnaUklHuBUsZLvfvNw9OS8jGBaFoTN6W8ogNQRwNI,53
+nbappinator/aggridhelper.py,sha256=7mqv5kTh3EAOUrYsIXN3GluMbnFXmh47Nn5Ru2eg6uE,1079
+nbappinator/appinator.py,sha256=odX1VrJ7V_rEQi85NM6n_tttYT1RgKEBHzs4Kv4C1O8,23054
+nbappinator/browser_title.py,sha256=1aYp7X10l3v7lt1DD8hDEFwa429AhJd-zZNnb7UKdGw,746
+nbappinator/datagrid.py,sha256=p-dX5sRdfiqVpyEqeuFfZf_M__IYfx_G6D7Jr27KU3M,15437
+nbappinator/jinjamagic.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+nbappinator/plotly_charts.py,sha256=cTp4V4cFFmXPSafyTTxY-u8SDKwTlDsEW_pOUEiIXqs,1839
+nbappinator/treew.py,sha256=UYn392QsdWELYKfNFMiY7XMknQ6PLxjIrKF2YMg5rE8,1579
+nbappinator-0.1.9b3.dist-info/LICENSE.md,sha256=5yVtaH22Orpf3-dg42yjAmxcI5bJFRl_4h8fGJcdxoM,1479
+nbappinator-0.1.9b3.dist-info/METADATA,sha256=ScAK3SKiFbJDpZaVCR407mutu3bkpROsQciyE2sxcao,5512
+nbappinator-0.1.9b3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+nbappinator-0.1.9b3.dist-info/RECORD,,
