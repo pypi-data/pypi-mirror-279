@@ -1,0 +1,10 @@
+soifunc/__init__.py,sha256=v8JZy36JK4JWQDR0za1t4ul8PdBGY7WozbNR8YBEJz8,168
+soifunc/deband.py,sha256=XQuc2TLvvA-BDfM8AfMQOhuzQZ5AMLqJkNNNEy4HmCM,1170
+soifunc/deint.py,sha256=Ku-D5Jxo39kHn-gX2DmZ1yFFO9xx7mvDwUG7TKpKYl8,41793
+soifunc/denoise.py,sha256=oRP1vNu9GMjmAXCF4vom-Hg2i20MG9HZrOQcnsYd5uw,4712
+soifunc/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+soifunc/resize.py,sha256=7BOMqoVwB8JanEC_e3CwMlDJeKej_JpLVimEYPcdPQI,4371
+soifunc-0.7.0.dist-info/LICENSE,sha256=vgEDSMEV1J2nMiCgXE5_sjNtw2VT7_lP7rkAnrFKOWI,1068
+soifunc-0.7.0.dist-info/METADATA,sha256=jsq_86-i2bpeYEx-csPHWZS-YM9pHR_b6BCe74Ow_LM,3570
+soifunc-0.7.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+soifunc-0.7.0.dist-info/RECORD,,
