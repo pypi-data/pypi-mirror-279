@@ -1,0 +1,10 @@
+liftwing/__init__.py,sha256=XVwYMz0ozyAHz5AklIBgmZGA5KV9ZJYHi58OeXfLZ5Q,576
+liftwing/__main__.py,sha256=a7RrlNeSOPD28Na_fMb4I4BIwK5eC_LJ2HIh50aG7aA,167
+liftwing/models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+liftwing/models/liftwing_model.py,sha256=kFi_gKSOnNca4iiZRIoqfHWfYJXxC-QVhpl38uye7VQ,1556
+liftwing/models/revertrisk.py,sha256=7r91mv3miN_g6rIcQePBmyJZhjdo5PxknmjW1UR6ONw,1164
+liftwing/models/revscoring.py,sha256=7Vn17-VkjbwTDbW-iFOuaXQTyqUqhZHSsxyk8S_o3nw,4178
+liftwing-0.1.0.dist-info/METADATA,sha256=yA81ImK0jTgTprP-f8wb2wzsY_u_S4RrqKAX0sHKKQk,1530
+liftwing-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+liftwing-0.1.0.dist-info/top_level.txt,sha256=RFsGi3y0G4xqBnbg6kYPhlhygGltG8aP-lpYzsqEzGQ,9
+liftwing-0.1.0.dist-info/RECORD,,
