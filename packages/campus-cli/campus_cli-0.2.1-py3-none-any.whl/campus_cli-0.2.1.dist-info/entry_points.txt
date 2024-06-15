@@ -1,0 +1,3 @@
+[console_scripts]
+campus-cli=campus_cli.cli:cli
+
