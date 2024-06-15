@@ -1,0 +1,3 @@
+[console_scripts]
+tika=main:download_tika_data
+
