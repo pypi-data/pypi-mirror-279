@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: custom_development_standardisation
+Version: 1.1.2
+Summary: All functions that assist in standardising development approaches.
+Home-page: https://github.com/yourusername/your-repo
+Author: Marcus
+Author-email: marcusongkiansiong@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Development aspects being standardised
+function output: 
+```python
+    {
+        "status": ["success"/"error"],
+        "output": [Anything],
+        "the_type": [if status == "error" then "custom" or "others"]
+    }
+```
+
+1. Status
+    - success: Output is within my output expectation set.
+    - error: Output is not included within my output expectation set.
+2. the_type
+    - custom: subset of my output expectation, that represents errors.
+    - others: Output not within my output expectation set. 
