@@ -1,0 +1,2 @@
+[console_scripts]
+evalai = evalai.main:main
