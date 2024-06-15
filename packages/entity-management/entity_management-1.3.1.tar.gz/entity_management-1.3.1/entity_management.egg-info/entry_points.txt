@@ -1,0 +1,2 @@
+[console_scripts]
+entity-management = entity_management.cli.base:cli

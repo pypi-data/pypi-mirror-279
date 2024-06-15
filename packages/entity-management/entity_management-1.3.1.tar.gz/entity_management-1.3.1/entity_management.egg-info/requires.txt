@@ -1,0 +1,12 @@
+requests
+attrs
+python-dateutil
+sparqlwrapper
+rdflib
+pyjwt
+python-keycloak
+devtools[pygments]
+click
+
+[docs]
+sphinx-bluebrain-theme
