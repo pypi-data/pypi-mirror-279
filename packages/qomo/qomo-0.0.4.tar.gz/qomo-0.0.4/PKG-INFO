@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: qomo
+Version: 0.0.4
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Summary: A quantum computing toolkit for learning and visualization.
+Keywords: quantum,quantum-computing,visualization,simulation
+License: MIT
+Requires-Python: >=3.11
+Project-URL: Source Code, https://github.com/haoxins/qomo
