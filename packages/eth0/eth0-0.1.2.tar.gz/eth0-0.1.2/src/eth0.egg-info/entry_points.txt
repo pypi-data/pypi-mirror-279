@@ -1,0 +1,3 @@
+[console_scripts]
+eth0-address = eth0.address:main_cli
+eth0-sign = eth0.sign:main_cli
