@@ -1,0 +1,9 @@
+vhacdx.cpython-39-i386-linux-gnu.so,sha256=FfVskCFZCWxbNESJF3QaU2l7bC7w7Kvo2PQQf0El_eo,508257
+vhacdx.libs/libgcc_s-f3fb5a36.so.1,sha256=SrjjCCuY7RHj-T9JLrY9XFMgCCpYD9Qmezr4uoJGVEQ,168321
+vhacdx.libs/libstdc++-d2a021ba.so.6.0.32,sha256=1zr_iwGwEBe95gyKdgiw7C4Y1RR9ijV40j66rk4elzg,3537349
+vhacdx-0.0.8.dist-info/WHEEL,sha256=_olvCHUcRY1m7IImnFbCNtkNmOsg_32XkzWgat-SSCM,109
+vhacdx-0.0.8.dist-info/LICENSE,sha256=DO84E1YuzqlWMXAYpa1BuuqE5DF7xXkk_036L_XFF3U,2625
+vhacdx-0.0.8.dist-info/top_level.txt,sha256=kRJmlK_xeBU5kk3I_2hGUPfh7RAGxEUNSNHitrvCUSI,7
+vhacdx-0.0.8.dist-info/RECORD,,
+vhacdx-0.0.8.dist-info/METADATA,sha256=OuE1e_D7WSmH28QdxkfowaGhhOy7imzemdnMxZUNOnE,1062
+vhacdx/main.cpp,sha256=oaAQTxqAsM977zHPoeBytqoXBURKw4UVEGaDFN06kuk,5585
