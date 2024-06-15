@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: cm4abtf
+Version: 0.1
+Description-Content-Type: text/x-rst
+License-File: LICENSE.md
+Requires-Dist: setuptools>=60
+Requires-Dist: wheel
+Requires-Dist: cm4mlops
+Requires-Dist: giturlparse
+Requires-Dist: requests
+Requires-Dist: pyyaml
+
+CM scripts to run MLCommons Automotive benchmarks

@@ -1,0 +1,6 @@
+setuptools>=60
+wheel
+cm4mlops
+giturlparse
+requests
+pyyaml
