@@ -1,0 +1,11 @@
+cosmic_counsel/__init__.py,sha256=HjMljd4zX8qBtlzKjlUhNM0xxmO8cjEXmmhAN6JfndM,135
+cosmic_counsel/__main__.py,sha256=ugld7f2WkDVB4rcJA-g07AHbzh_Ts6Lpp-ygxpDORFA,8479
+cosmic_counsel/cosmic_utils.py,sha256=BS6nklAlyFqYQQgymnlVtJFhRtncWseDEn3OJjiKobk,5267
+cosmic_counsel/inverted_index.py,sha256=NCrgDMXa_XZBPW7Fop25yLAoDuJCyu0d7bdz6I9OMNk,994
+cosmic_counsel/data/chat_history.json,sha256=Rbqv5Ua4H4EaPn78ZQslVPRqilMwo9xb2MZD9UnN8aM,306
+cosmic_counsel/data/relevant_history.json,sha256=FR-rJ0R530bCYg64BLPkCRjUwusJk0j1fIi-1hXa-mQ,222
+cosmic_counsel-0.2.2.dist-info/METADATA,sha256=qCEF3djMymCeMvf9HRMTXuMlB_z7YZ5gZOIejeVx7GM,1256
+cosmic_counsel-0.2.2.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+cosmic_counsel-0.2.2.dist-info/entry_points.txt,sha256=bfzPBi2ANlCriUVk448Bfoxi6HXid5_K7-2vdDTWMMI,64
+cosmic_counsel-0.2.2.dist-info/top_level.txt,sha256=TeCB_M48Poe1Qy22jeKrQOE9Jnd8gV4uNIfI1PgES1Q,15
+cosmic_counsel-0.2.2.dist-info/RECORD,,
