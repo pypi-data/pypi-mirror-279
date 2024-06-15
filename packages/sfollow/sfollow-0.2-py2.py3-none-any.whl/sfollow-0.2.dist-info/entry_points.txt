@@ -1,0 +1,3 @@
+[console_scripts]
+sfollow=sfollow.sfollow:main
+
