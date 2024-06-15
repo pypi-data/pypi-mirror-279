@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: pymanhuagui
+Version: 1.0.0
+Summary: Manga Downloader for www.manhuagui.com
+Author-email: fournoas <admin@fournoas.com>
+Requires-Python: >=3.8
+Requires-Dist: beautifulsoup4>=4.12.3
+Requires-Dist: js2py>=0.74
+Requires-Dist: lxml>=5.2.2
+Requires-Dist: lzstring>=1.0.4
+Requires-Dist: requests>=2.32.3
+Description-Content-Type: text/markdown
+
+# pymanhuagui
+
+Describe your project here.
