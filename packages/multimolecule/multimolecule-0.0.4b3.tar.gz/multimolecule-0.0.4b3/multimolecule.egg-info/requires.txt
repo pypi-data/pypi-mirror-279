@@ -1,0 +1,5 @@
+accelerate
+chanfig>=0.0.99
+danling>=0.3.6
+torch
+transformers
