@@ -1,0 +1,3 @@
+[console_scripts]
+haptools=haptools.__main__:main
+
