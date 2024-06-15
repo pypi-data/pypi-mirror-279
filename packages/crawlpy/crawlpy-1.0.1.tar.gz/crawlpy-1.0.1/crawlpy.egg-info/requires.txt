@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+pytube
+deepgram-sdk
+httpx
+python-dotenv
