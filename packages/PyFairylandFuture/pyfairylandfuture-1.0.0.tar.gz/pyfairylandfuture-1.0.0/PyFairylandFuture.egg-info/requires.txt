@@ -1,0 +1,8 @@
+setuptools
+loguru
+python-dateutil
+requests
+pymysql
+pyyaml
+netifaces
+cryptography
