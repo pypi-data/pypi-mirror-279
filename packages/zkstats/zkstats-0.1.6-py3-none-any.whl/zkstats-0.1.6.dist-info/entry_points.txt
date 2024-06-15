@@ -1,0 +1,3 @@
+[console_scripts]
+zkstats-cli=zkstats.cli:main
+
