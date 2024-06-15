@@ -1,0 +1,17 @@
+pydantic-xml[lxml]>=2.6.0
+
+[dev]
+pylint
+ruff
+pre-commit
+
+[docs]
+sphinx
+sphinx_design
+furo
+sphinx-copybutton
+toml
+
+[test]
+pytest
+pytest-cov
