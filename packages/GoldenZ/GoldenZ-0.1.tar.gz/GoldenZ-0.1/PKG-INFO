@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: GoldenZ
+Version: 0.1
+Summary: A tool for zipping files with password protection and sending the password via Telegram
+Home-page: https://t.me/RrrrrF
+Author: Golden_X
+Author-email: Golden@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# GoldenZip
+
+GoldenZip is a Python library for zipping files with password protection and sending the password via Telegram.
+
+## Installation
+
+```sh
+pip install GoldenZip

@@ -1,0 +1,10 @@
+README.md
+setup.py
+GoldenZ/GoldenZ.py
+GoldenZ/__init__.py
+GoldenZ.egg-info/PKG-INFO
+GoldenZ.egg-info/SOURCES.txt
+GoldenZ.egg-info/dependency_links.txt
+GoldenZ.egg-info/entry_points.txt
+GoldenZ.egg-info/requires.txt
+GoldenZ.egg-info/top_level.txt

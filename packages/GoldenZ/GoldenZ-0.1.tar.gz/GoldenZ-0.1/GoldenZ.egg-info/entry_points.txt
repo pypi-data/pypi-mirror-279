@@ -1,0 +1,2 @@
+[console_scripts]
+goldenzip = goldenzip.core:golden_zip
