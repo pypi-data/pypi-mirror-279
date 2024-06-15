@@ -1,0 +1,13 @@
+python_bladerf/__init__.py,sha256=TIgwCBT_idwjbbjAQVEHLpLCqICs6XZ0EbrvZ9UdSKM,174
+python_bladerf/__main__.py,sha256=lkZMABlIxyMIRYCRQIjFbpqIMxsevLKhoXFR4w8fCqU,5317
+python_bladerf/pybladerf_tools/__init__.py,sha256=FS5eYr2U799nc1rPGIm8odnLBaEdIhbLeZR4qNdcZJs,85
+python_bladerf/pybladerf_tools/pybladerf_info.py,sha256=EjRnNNxliTOaQ3HP5NsAPmn5hsHALfTarp0gARGl1Lg,2825
+python_bladerf/pybladerf_tools/pybladerf_sweep.cpython-312-darwin.so,sha256=sMBLcEeznc_GscxJxjaeonRdueXwedBaOAvevAa04GY,493704
+python_bladerf/pylibbladerf/__init__.py,sha256=lCKp2Uup18LEQEHKfDwMeEY23wm3OiQ5Rj7g4SDslWU,37
+python_bladerf/pylibbladerf/pybladerf.cpython-312-darwin.so,sha256=m2YKv6gsA_38l0qP1NRtPnfLU5V22PVfapnnkPnCcUI,1133920
+python_bladerf-1.0.2.dist-info/LICENSE,sha256=4ymGdlFsVkppgZHntDEGdqYM-1pBGG-HHn2Fn09HKDk,1070
+python_bladerf-1.0.2.dist-info/METADATA,sha256=tdQ5LRMlX8Xy1hteGWDsSCZXvFJP5SMsnSlXv4Mw34Q,3761
+python_bladerf-1.0.2.dist-info/WHEEL,sha256=aK27B_a3TQKBFhN_ATCfuFR4pBRqHlzwr7HpZ6iA79M,115
+python_bladerf-1.0.2.dist-info/entry_points.txt,sha256=HKGF3yoC-LFkSra3ldQfCcCu31ACCW7KYJZJe60_eCQ,64
+python_bladerf-1.0.2.dist-info/top_level.txt,sha256=S7bAt_Hb25ZTSae5aFkXB9vcBn5VXQZWI1S8oBrDap0,15
+python_bladerf-1.0.2.dist-info/RECORD,,
