@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: veolint
+Version: 0.1
+Summary: A custom flake8 plugin to check for no empty line after class definition without docstring
+License-File: LICENSE
+Requires-Dist: flake8-plugin-utils

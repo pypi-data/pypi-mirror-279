@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+veolint/__init__.py
+veolint/plugin.py
+veolint.egg-info/PKG-INFO
+veolint.egg-info/SOURCES.txt
+veolint.egg-info/dependency_links.txt
+veolint.egg-info/entry_points.txt
+veolint.egg-info/requires.txt
+veolint.egg-info/top_level.txt
