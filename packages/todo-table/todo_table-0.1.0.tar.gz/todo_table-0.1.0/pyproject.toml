@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "todo-table"
+version = "0.1.0"
+description = ""
+authors = ["famazak <zakfama58@gmail.com>"]
+readme = "README.md"
+packages = [{include = "todo_table", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.7.1"
+prettytable = "^3.10.0"
+click = "^8.1.7"
+fire = "^0.6.0"
+
+[tool.poetry.scripts]
+todotable = "todo_table.cli:cli"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+pytest-mock = "^3.14.0"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+include = ["src/**", "tests/**"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+major_version_zero = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

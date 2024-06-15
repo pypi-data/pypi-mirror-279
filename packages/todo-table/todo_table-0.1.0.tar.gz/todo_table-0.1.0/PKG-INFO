@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: todo-table
+Version: 0.1.0
+Summary: 
+Author: famazak
+Author-email: zakfama58@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: fire (>=0.6.0,<0.7.0)
+Requires-Dist: prettytable (>=3.10.0,<4.0.0)
+Requires-Dist: pydantic (>=2.7.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# todo-table
+
+A dead-simple CLI for capturing basic to-dos built using [Fire](https://github.com/google/python-fire) and [PrettyTable](https://github.com/jazzband/prettytable)
+
+Disclaimer: this is something that I use personally, born out of my desire to experminent with some libraries I'm not too familiar with.  I will be adding a "roadmap" with some enhancements, but if others start using this I'd be happy to polish it up.
+
