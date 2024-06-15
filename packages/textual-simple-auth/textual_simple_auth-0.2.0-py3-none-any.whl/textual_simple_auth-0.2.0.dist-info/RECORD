@@ -1,0 +1,11 @@
+textual_simple_auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+textual_simple_auth/auth.py,sha256=DB_Jid6NMfB7OvdpesZWKyEb4juXCh3rthV4c9uK-pY,5034
+textual_simple_auth/decorators.py,sha256=ENSSEdsymucbYvYaErGuTI2mpDFMT00hxbVj81wFJZ0,1326
+textual_simple_auth/demo.py,sha256=ADLYr5boCfgxj_x6hTq0RvDk66e2vb11j4xX93q179Y,560
+textual_simple_auth/demo.tcss,sha256=ayz1kiBkNBiTQK-lHUKUJj8oc-ukrIS9sOR8KlRjtLc,203
+textual_simple_auth/login.py,sha256=WGMLidh23MQF-YP8TyOLltH0MtoOEMLJFk0DQwrYl8k,1301
+textual_simple_auth/login.tcss,sha256=wgNK6aB28CbFxxPmTaia9lql63_ed7E_G0a4M1-jUHg,419
+textual_simple_auth-0.2.0.dist-info/LICENSE,sha256=j0V4LKTBA9FSF09FQxZ3luYRQltl4U_nICTRbobeXYw,1070
+textual_simple_auth-0.2.0.dist-info/METADATA,sha256=tbD9GpfSRYjPkYBtCr0y66XxtNkkVJRtxWbP9oQV2cw,989
+textual_simple_auth-0.2.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+textual_simple_auth-0.2.0.dist-info/RECORD,,
