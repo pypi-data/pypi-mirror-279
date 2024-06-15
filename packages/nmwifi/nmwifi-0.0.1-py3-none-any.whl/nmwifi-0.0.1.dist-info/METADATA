@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: nmwifi
+Version: 0.0.1
+Summary: Python package providing an API to configure a Wi-Fi device through Network Manager using a fallback Access Point.
+Home-page: https://github.com/gruvw/nmwifi
+Keywords: network-manager,networking,wifi,AP
+Author: gruvw
+Author-email: gruvw.dev@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Project-URL: Documentation, https://github.com/gruvw/nmwifi
+Project-URL: Repository, https://github.com/gruvw/nmwifi
+Description-Content-Type: text/markdown
+
+# NMWiFi
+
+Python Package `nmwifi` providing an API to configure a Wi-Fi device through [Network Manager](https://networkmanager.dev/) using a fallback Access Point.
+
+**Note**: please take a look at the project's GitHub repository **<https://github.com/gruvw/nmwifi>**
+
+## Installation
+
+- Install by running: `pip install nmwifi`
+
