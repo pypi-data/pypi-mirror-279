@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: p-vs-np
+Version: 1.0.0
+Summary: A library for P vs NP problems.
+Home-page: https://github.com/yourusername/p_vs_np
+Author: Drew Simpson
+Author-email: dsimps3@icloud.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# P vs NP Library
+
+## Overview
+This library provides solutions to 330 problems related to the P vs NP problem. Each module represents a unique problem and offers functions to analyze and solve it.
+
+## Installation
+```bash
+pip install -r requirements.txt
+python setup.py install
+
+
