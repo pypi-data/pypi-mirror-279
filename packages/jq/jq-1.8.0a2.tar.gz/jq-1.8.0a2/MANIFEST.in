@@ -1,0 +1,5 @@
+include README.rst
+include LICENSE
+include deps/*.tar.gz
+recursive-include tests *.py
+include tox.ini
