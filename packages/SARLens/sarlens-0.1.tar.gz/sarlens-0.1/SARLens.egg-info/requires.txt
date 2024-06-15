@@ -1,0 +1,8 @@
+asf_search==7.1.2
+pandas
+rasterio
+matplotlib
+torch
+torchvision
+torchmetrics
+seaborn
