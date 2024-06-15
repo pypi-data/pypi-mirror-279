@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: os-toolkit
+Version: 0.1.2
+Summary: package build on top of os and add more convient functionality
+Author: Dear Norathee
+License: MIT
+Requires-Dist: pandas
+Requires-Dist: py-string-tool >=0.1.4
+Requires-Dist: python-wizard >=0.1.2
+
