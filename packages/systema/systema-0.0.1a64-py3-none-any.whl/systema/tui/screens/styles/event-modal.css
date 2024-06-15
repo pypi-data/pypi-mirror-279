@@ -1,0 +1,30 @@
+EventModal {
+  align: center middle;
+
+  & > Vertical {
+    width: 60;
+    height: auto;
+    border: round white 50%;
+
+    & > Label {
+      height: 3;
+      width: 100%;
+      content-align: center middle;
+    }
+
+    & > Input {
+      height: 3;
+      content-align: center middle;
+    }
+
+    & > Horizontal {
+      width: 100%;
+      height: auto;
+
+      & > Button {
+        height: 3;
+        width: 1fr;
+      }
+    }
+  }
+}

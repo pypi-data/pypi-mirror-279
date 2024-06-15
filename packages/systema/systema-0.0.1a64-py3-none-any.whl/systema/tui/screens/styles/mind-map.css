@@ -1,0 +1,29 @@
+MindMapScreen {
+  & ListView.sidepane {
+    width: 28;
+    border: round $primary;
+
+    &:focus {
+      border: round $secondary;
+    }
+
+    & ListItem {
+      padding: 1;
+    }
+
+    &.collapsed {
+      display: none;
+    }
+  }
+  & GraphViewer {
+    border: round $primary;
+
+    &.connect-mode {
+      border: round $secondary;
+    }
+
+    & Primitive.temp {
+      color: $text-muted;
+    }
+  }
+}
