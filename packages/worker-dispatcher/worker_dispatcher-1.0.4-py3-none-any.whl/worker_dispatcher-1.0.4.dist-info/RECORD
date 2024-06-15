@@ -1,0 +1,6 @@
+worker_dispatcher/__init__.py,sha256=iWuUstrD5SH_EQIcHfkrJ9CvBhEE8QcdAuUIoov48AY,32
+worker_dispatcher/worker_dispatcher.py,sha256=OOYTmKFjMAA76Ul-BrQzd95xz6aVs_mah1Kg7vhyfsI,37682
+worker_dispatcher-1.0.4.dist-info/METADATA,sha256=Pp2M4SudP9tRirAH13qcgOATuMdMdPGs-6og2D65FMU,11024
+worker_dispatcher-1.0.4.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+worker_dispatcher-1.0.4.dist-info/licenses/LICENSE,sha256=drURKIxA7s3UvJnkfXxaDwwmzA9gBNg2EVB4XM5GpPw,1066
+worker_dispatcher-1.0.4.dist-info/RECORD,,
