@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/aggimg.py
+src/aggimg.egg-info/PKG-INFO
+src/aggimg.egg-info/SOURCES.txt
+src/aggimg.egg-info/dependency_links.txt
+src/aggimg.egg-info/entry_points.txt
+src/aggimg.egg-info/requires.txt
+src/aggimg.egg-info/top_level.txt
