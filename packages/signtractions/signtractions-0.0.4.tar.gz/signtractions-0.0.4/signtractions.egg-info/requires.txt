@@ -1,0 +1,5 @@
+koji
+requests
+requests_kerberos
+pytractions
+gssapi
