@@ -1,0 +1,9 @@
+pyspark>=3.3.4
+
+[dev]
+pyspark-testframework[test]
+ruff==0.4.8
+
+[test]
+pre-commit==3.7.1
+pytest==8.2.2
