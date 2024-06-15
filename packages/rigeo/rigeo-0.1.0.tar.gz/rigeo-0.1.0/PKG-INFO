@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: rigeo
+Version: 0.1.0
+Summary: Rigid body geometry and inertial parameters.
+License: MIT
+Author: Adam Heins
+Author-email: mail@adamheins.com
+Requires-Python: >=3.8,<3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: cvxpy[mosek] (>=1.4.2,<2.0.0)
+Requires-Dist: docutils (==0.20.1)
+Requires-Dist: hpp-fcl (>=2.2.0)
+Requires-Dist: matplotlib (>=3.5.1,<4.0.0)
+Requires-Dist: numpy (>=1.23.0)
+Requires-Dist: pin (>=2.6.0)
+Requires-Dist: pyb-utils (>=2.2.1,<3.0.0)
+Requires-Dist: pybullet (>=3.2.1,<4.0.0)
+Requires-Dist: pycddlib (>=2.1.6,<3.0.0)
+Requires-Dist: scipy (>=1.10.0)
+Requires-Dist: seaborn (>=0.13.2,<0.14.0)
+Requires-Dist: spatialmath-python (>=1.1.10,<2.0.0)
+Requires-Dist: tqdm (>=4.66.4,<5.0.0)
+Requires-Dist: wrlparser (>=1.0,<2.0)
+Requires-Dist: xacrodoc (>=0.4.0,<0.5.0)
+Description-Content-Type: text/markdown
+
+# rigeo: rigid body geometry
+
+Rigeo is a prototyping library for rigid body geometry in Python: it combines
+three-dimensional geometry with the inertial properties of rigid bodies, with
+applications to robotic manipulation.
+
+## Density Realizable Inertial Parameters
+
+The main feature of this library is a set of necessary conditions for **density
+realizability** on various primitive shapes (included convex polyhedra,
+cylinders, and capsules). A set of inertial parameters is called density
+realizable on a given shape if they can be physically realized by some rigid
+body contained in that shape. These conditions can be included in constraints
+as semidefinite programs for inertial parameter identification for motion and
+force-torque data.
+
+## Other Features
+
+* Build rigid bodies out of flexible shape primitives: convex polyhedra,
+  ellipsoids, and cylinders.
+* Obtain the intersection of two convex polyhedra (via
+  [cdd](https://pycddlib.readthedocs.io)). This is particularly useful for
+  obtaining contact patches between polyhedral objects for manipulation; e.g.,
+  when [solving the waiter's problem](https://arxiv.org/abs/2305.17484)
+* Obtain the distance between primitive shapes using convex programming.
+* Compute maximum-volume inscribed and minimum-volume bounding ellipsoids for
+  sets of points.
+* Compute convex hulls for degenerate sets of points (i.e., points that live in
+  some lower-dimensional subspace than the ambient space).
+
+## Installation
+
+The library has been tested on Ubuntu 20.04 using Python 3.8; newer Python
+versions and OS versions may also work. Optimization problems use
+[cvxpy](https://www.cvxpy.org/); MOSEK is installed by default and is used as
+the solver for the tests.
+
+From pip:
+```
+pip install rigeo
+```
+
+From source (using [poetry](https://python-poetry.org)):
+```
+git clone https://github.com/utiasDSL/rigeo
+cd rigeo
+poetry shell
+poetry install
+# do stuff ...
+```
+
+From source (using pip):
+```
+git clone https://github.com/utiasDSL/rigeo
+cd rigeo
+python -m pip install .
+```
+
+## Development
+
+Tests are run using pytest:
+```
+cd tests
+python -m pytest .
+```
+
+## License
+
+MIT - see the LICENSE file.
+
