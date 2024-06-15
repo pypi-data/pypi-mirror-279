@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sparrow-patterns
+Version: 0.7.2
+Summary: A CLI for updating code patterns in Python projects
+Author: Sparrow Computing
+Author-email: ben@sparrow.dev
+License: MIT
+License-File: LICENSE
+Requires-Dist: fire
+Requires-Dist: jinja2
+Requires-Dist: python-slugify
+Provides-Extra: dev
+Requires-Dist: jupyter ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: types-python-slugify ; extra == 'dev'
+
