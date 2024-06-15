@@ -1,0 +1,16 @@
+README.md
+setup.py
+clause_analysis/__init__.py
+clause_analysis/clause_analyzer.py
+clause_analysis/passive_tense_classifier.py
+clause_analysis/tense_analyzer.py
+clause_analysis.egg-info/PKG-INFO
+clause_analysis.egg-info/SOURCES.txt
+clause_analysis.egg-info/dependency_links.txt
+clause_analysis.egg-info/entry_points.txt
+clause_analysis.egg-info/requires.txt
+clause_analysis.egg-info/top_level.txt
+tests/__init__.py
+tests/test_clause_analyzer.py
+tests/test_passive_tense_classifier.py
+tests/test_tense_analyzer.py
