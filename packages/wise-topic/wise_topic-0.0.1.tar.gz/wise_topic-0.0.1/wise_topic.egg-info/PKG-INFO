@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: wise-topic
+Version: 0.0.1
+Summary: LLM-only topic extraction and classification
+Home-page: https://github.com/transferwise/wise-topic
+Author: Wise
+Keywords: wise-topic
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: langchain
+Requires-Dist: langchain_core
+Requires-Dist: langchain_openai
+Requires-Dist: numpy
+Requires-Dist: scikit_learn
+Provides-Extra: test
+Requires-Dist: flake8; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+
+# wise-topic
+LLM-only topic extraction and classification
