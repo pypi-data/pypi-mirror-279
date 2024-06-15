@@ -1,0 +1,8 @@
+coslomdir.cpython-311-x86_64-linux-gnu.so,sha256=xSWyd7JCVYZU-M7GjZYHuUlOZ3RAG_9tgGjmaj2VdKQ,1840400
+coslomundir.cpython-311-x86_64-linux-gnu.so,sha256=3rd9pW1ai7yzmyI0Z21tXz8INmq7xokT8Q0InIq5JLo,1828528
+pyoslom-0.1.5.dist-info/WHEEL,sha256=7uIoyXgzBj-ZrdtoFsgpYMn6gnyMv0KOrzstC7oW_qQ,149
+pyoslom-0.1.5.dist-info/entry_points.txt,sha256=d-DgzOMENNfQ2VNMOztEgFpFxFffuOcwGl6KXc-ThuA,37
+pyoslom-0.1.5.dist-info/RECORD,,
+pyoslom-0.1.5.dist-info/METADATA,sha256=w6guGexItvPJrJkf4eBWGX3uaQFU1Y5fQCOVlAMKB_8,2813
+pyoslom/__init__.py,sha256=1GUTRS3EDbHuEn4fd_l53kYP15j88PDhGA1i1gqyxLk,58
+pyoslom/oslom_imp.py,sha256=kKkNo-MFyQpCR85tWOPOmL7RAbf3Mbcic81AtL6c-Wc,6677
