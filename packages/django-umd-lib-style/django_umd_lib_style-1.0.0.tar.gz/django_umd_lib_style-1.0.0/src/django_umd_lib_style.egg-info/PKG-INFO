@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: django-umd-lib-style
+Version: 1.0.0
+Author-email: Peter Eichman <peichman@umd.edu>, Tim Kanke <tkanke@umd.edu>
+Maintainer-email: University of Maryland Libraries <lib-ssdr@umd.edu>
+License-File: LICENSE.md
+Requires-Dist: django>=4.2

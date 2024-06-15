@@ -1,0 +1,10 @@
+{% load static %}
+<div>
+    <span class="version">{{ application_name }} version {{ application_version }}</span>
+
+    {% for name, label in footer_links.items %}
+    &middot; {% include 'umd_lib_style/nav_menu_item.html' %}
+    {% endfor %}
+
+    &middot; <a href="https://umd.edu/web-accessibility">Web Accessibility</a>
+</div>
