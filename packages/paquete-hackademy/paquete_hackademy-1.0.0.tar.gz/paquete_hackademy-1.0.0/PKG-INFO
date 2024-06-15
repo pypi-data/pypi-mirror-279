@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: paquete-hackademy
+Version: 1.0.0
+Summary: Código fuente para publicar en PYPI el ejemplo de un paquete de calculadoras varias
+Home-page: https://github.com/natayadev/paquete-hackademy
+Download-URL: https://github.com/natayadev/paquete-hackademy/tarball/1.0.0
+Author: Nataya Flores
+Requires-Dist: importlib-metadata; python_version == "3.12"

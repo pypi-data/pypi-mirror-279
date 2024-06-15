@@ -1,0 +1,10 @@
+setup.py
+calculadora/__init__.py
+calculadora/basica.py
+calculadora/cientifica.py
+calculadora/estadistica.py
+paquete_hackademy.egg-info/PKG-INFO
+paquete_hackademy.egg-info/SOURCES.txt
+paquete_hackademy.egg-info/dependency_links.txt
+paquete_hackademy.egg-info/requires.txt
+paquete_hackademy.egg-info/top_level.txt
