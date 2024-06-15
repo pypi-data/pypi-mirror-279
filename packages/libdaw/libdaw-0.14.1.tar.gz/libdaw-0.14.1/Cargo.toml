@@ -1,0 +1,16 @@
+[workspace]
+
+resolver = '2'
+
+members = ["libdaw", "python-libdaw"]
+
+[workspace.package]
+authors = ["Taylor C. Richberger"]
+repository = 'https://forge.axfive.net/Taylor/libdaw'
+license-file = 'LICENSE'
+readme = 'README.md'
+version = '0.14.1'
+
+[profile.dev]
+opt-level = 1
+
