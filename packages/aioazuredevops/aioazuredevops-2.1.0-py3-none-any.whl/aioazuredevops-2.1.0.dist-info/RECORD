@@ -1,0 +1,14 @@
+aioazuredevops/__init__.py,sha256=uESDsvlpr0vT_A4_f1I-ltpxTfN6Uw-mDVDvRoXHob0,30
+aioazuredevops/_version.py,sha256=BJhTndpeYvTyCN2J-zpj4oF2TNSG-yenlwWkAL6XFJs,280
+aioazuredevops/client.py,sha256=oQV4PsCSTCbUcw_7-r3QEdAQ3wDY-xZLgRccWY_AUTM,23096
+aioazuredevops/models/__init__.py,sha256=hzLlnFt-v3RbXzmmx94Muob2mcJrYXusC-LRMDrozGM,14
+aioazuredevops/models/builds.py,sha256=vYBLNwA3qwKzBuZFh9_1E2GtusK-wTs9gYm5drSCcqE,1209
+aioazuredevops/models/core.py,sha256=zthTbP9d_10O8wOEao_WO-AHeZyORhvFJ-lk-zQcupg,1325
+aioazuredevops/models/wiql.py,sha256=y3n8zvnqvzrVFwHs9ASerBm_QUnVqGO0KcpW7q16aag,656
+aioazuredevops/models/work_item.py,sha256=axe0k8ZPycRbh5nrgjIBemam1gu9A4dVkeBdfMLuaPo,1248
+aioazuredevops/models/work_item_types.py,sha256=UlcifY47kVM0l6ciIVZvkBgFzBxOS--RXALOFxaCrZw,1171
+aioazuredevops-2.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aioazuredevops-2.1.0.dist-info/METADATA,sha256=RWeOQLzqWQ8LioGpcCRoOGqMW-uA_He03oLPCHu09Lk,619
+aioazuredevops-2.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aioazuredevops-2.1.0.dist-info/top_level.txt,sha256=UmU-IUVVqlHHxpmW0tjnQSp1GN23TgzMu0TDpzuWYfU,15
+aioazuredevops-2.1.0.dist-info/RECORD,,
