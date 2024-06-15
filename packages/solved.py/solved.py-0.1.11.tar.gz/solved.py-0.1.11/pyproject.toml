@@ -1,0 +1,36 @@
+[project]
+name = "solved.py"
+version = "0.1.11"
+authors = [
+  { name="cywohoy", email="papertoy1127@gmail.com" },
+]
+
+description = "sovled.ac api wrapper for python"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+  "aiohttp>=3.9.5"
+]
+
+[tool.pyright]
+include = ["solvedac"]
+exclude = []
+
+defineConstant = { }
+stubPath = "solvedac/stubs"
+
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+pythonVersion = "3.10"
+pythonPlatform = "Windows"
+
+executionEnvironments = [
+  { root = "solvedac" }
+]
