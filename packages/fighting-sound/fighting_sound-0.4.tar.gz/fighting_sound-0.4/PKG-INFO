@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: fighting-sound
+Version: 0.4
+Summary: A sound library for DareFightingICE with OpenAL backend
+Author: yan
+Project-URL: Homepage, https://github.com/yan-2/pyftg-sound
+Project-URL: Issues, https://github.com/yan-2/pyftg-sound/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy~=1.26.4
+
+# pyftg-sound
+
+## Prerequisites
+
+__Install OpenAL Soft__
+
+- For Linux (Ubuntu, other distros should be similar)
+```
+sudo apt-add-repository universe
+sudo apt-get update
+sudo apt-get install libopenal-dev makehrtf openal-info
+```
+
+- For MacOS
+```
+brew install openal-soft
+echo 'export DYLD_LIBRARY_PATH="/opt/homebrew/opt/openal-soft/lib:$DYLD_LIBRARY_PATH"' >> ~/.zshrc
+```
