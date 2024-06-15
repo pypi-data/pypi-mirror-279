@@ -1,0 +1,16 @@
+peewee~=3.17
+Pillow==10.3.0
+python-gnupg==0.5.2
+shapely==2.0.3
+teklia-toolbox==0.1.5
+zstandard==0.22.0
+
+[docs]
+black==24.4.0
+mkdocs-material==9.5.17
+mkdocstrings-python==1.9.2
+
+[tests]
+pytest==8.1.1
+pytest-mock==3.14.0
+pytest-responses==0.5.1
