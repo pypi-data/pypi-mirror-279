@@ -1,0 +1,2 @@
+[console_scripts]
+abox_conv = data2rdf.cli.abox_conversion:terminal
