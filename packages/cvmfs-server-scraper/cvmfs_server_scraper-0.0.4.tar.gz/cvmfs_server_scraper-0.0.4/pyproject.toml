@@ -1,0 +1,194 @@
+[tool.poetry]
+name = "cvmfs-server-scraper"
+version = "0.0.4"
+description = "Scrape metadata from CVMFS Stratum servers."
+authors = ["Terje Kvernes <terje@kvernes.no>"]
+maintainers = ["Terje Kvernes <terje@kvernes.no>"]
+readme = "README.md"
+homepage = "https://github.com/eessi/cvmfs-server-scraper"
+license = "GPLv2"
+repository = "https://github.com/eessi/cvmfs-server-scraper"
+documentation = "https://github.com/eessi/cvmfs-server-scraper"
+keywords = ["cvmfs", "scrape", "eessi"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Internet :: WWW/HTTP",
+]
+
+packages = [{ include = "cvmfsscraper" }, { include = "scripts/*" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "*"
+structlog = "^24"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+coverage = { version = "*", extras = ["toml"] }
+black = "*"
+pytest = "*"
+pytest-xdist = "*"
+tox = "^4"
+
+[tool.poetry.group.prometheus.dependencies]
+prometheus_client = "*"
+
+[build-system]
+requires = ["poetry-core>=1.7.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+source = ["cvmfsscraper"]
+
+[tool.coverage.report]
+fail_under = 100
+show_missing = true
+
+[tool.lint.ruff]
+select = [
+    "A", # flake8-builtins
+    #    "ANN", # annotations
+    #    "ARG", # flake8-unused-arguments
+    "B",   # flake8-bugbear
+    "D",   # pydocstyle
+    "DJ",  # flake8-django
+    "E",   # error
+    "F",   # Pyflakes
+    "I",   # isort
+    "ISC", # flake8-implicit-str-concat
+    "INP", # flake8-no-pep420 (implicit namespace packages, you need __init__.py)
+    #    "PL", # pylint (all of the below)
+    "PLC", # pylint-convention
+    "PLE", # pylint-error
+    #    "PLR", # pylint-refactor
+    #    "PLW", # pylint-warning
+    "W", # warnings        
+]
+ignore = [
+    # D203 (1 blank line required before class docstring) is incompatible with
+    # D211 (No blank lines allowed before class docstring). We ignore D203.
+    "D203",
+    # D213 (Multi-line docstring summary should start at the second line) is incompatible with
+    # D212 (Multi-line docstring summary should start at the first line). We ignore D213.
+    "D213",
+    # ANN101 (Missing type annotation for `self` in method) is infered.
+    "ANN101",
+    # B905 zip() without an explicit strict= parameter set. strict=True causes the resulting iterator
+    # to raise a ValueError if the arguments are exhausted at differing lengths. Added in python 3.10
+    # and we support 3.8+.
+    "B905",
+
+    # Rules disabled due to using ruff as a formatter. Most of these rules
+    # will thus be enforced by the formatter.
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "W191",   # Indentation contains tabs
+    "E111",   # Indentation is not a multiple of four
+    "E114",   # Indentation is not a multiple of four (comment)
+    "E117",   # Over-indented
+    "D206",   # Docstring should be indented with spaces, not tabs
+    "D300",   # Use """triple double quotes""" (found '''-quotes)
+    "Q000",   # Remove bad quotes (inlined)
+    "Q001",   # Remove bad quotes (multiline)
+    "Q002",   # Remove bad quotes (docstring)
+    "Q003",   # Avoidable escape quote
+    "COM812", # Missing trailing comma in Python 3.6+
+    "COM819", # Prohibited trailing comma    
+    "ISC001", # Implicit string concatenation (single line)
+    "ISC002", # Implicit string concatenation (multiline)
+
+]
+
+
+# Allow autofix for all enabled rules (when `--fix`) is provided.
+fixable = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "I",
+    "N",
+    "Q",
+    "S",
+    "T",
+    "W",
+    "ANN",
+    "ARG",
+    "BLE",
+    "COM",
+    "DJ",
+    "DTZ",
+    "EM",
+    "ERA",
+    "EXE",
+    "FBT",
+    "ICN",
+    "INP",
+    "ISC",
+    "NPY",
+    "PD",
+    "PGH",
+    "PIE",
+    "PL",
+    "PT",
+    "PTH",
+    "PYI",
+    "RET",
+    "RSE",
+    "RUF",
+    "SIM",
+    "SLF",
+    "TCH",
+    "TID",
+    "TRY",
+    "UP",
+    "YTT",
+]
+unfixable = []
+
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "migrations",
+]
+per-file-ignores = {}
+
+line-length = 99
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# Assume Python 3.10.
+target-version = "py310"
+
+[tool.lint.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 10
