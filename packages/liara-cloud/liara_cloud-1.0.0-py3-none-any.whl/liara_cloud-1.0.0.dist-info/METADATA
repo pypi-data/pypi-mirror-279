@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: liara-cloud
+Version: 1.0.0
+Summary: Unofficial library for account management and services in Liara Cloud
+Home-page: https://github.com/irvanyamirali/liara
+Author: AmirAli Irvany
+Author-email: irvanyamirali@gmail.com
+Keywords: liara,liara-cloud,session
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: ~=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# Liara
+Unofficial library for account management and services in [Liara](https://liara.ir) Cloud
+
+
+# Install & Update
+```bash
+pip install -u liara-cloud
+```
+
+
+### Quik start
+```python
+from liara import Client
+
+client = Client(name='my_account')
+
+result = client.get_my_account()
+print(result)
+```
