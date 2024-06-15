@@ -1,0 +1,15 @@
+ibis_bench/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ibis_bench/cli.py,sha256=XmVe4dYegt_UdXptr55ld3HfxxEG235FyBt__RRc4EU,5709
+ibis_bench/cli2.py,sha256=ffxL1WMNqFWgJedTIMTZkmS3jUeUBWw-iXaCaqVdrTs,2540
+ibis_bench/queries/ibis.py,sha256=HEqKj6Kg9MVywuFWTxF8Bvq37UVrQUiUGzirNCK8vHs,20217
+ibis_bench/queries/polars.py,sha256=5Vn1UwteDOxhOmO4LKHOAExoxWT1khPF-nKCCMbaJQE,21906
+ibis_bench/queries/sql.py,sha256=yYbriS561cU9d8q5DDkZqPfWJoeO5kpvLK-jsYKwEA8,18287
+ibis_bench/utils/gen_data.py,sha256=9ak6PmRa3StDVJhjekom6FUpp4_btV6yri0vX5RqiC4,2775
+ibis_bench/utils/logging.py,sha256=DT6NuwGaL4Fp5FppG9EqolPLUw6H5jmMWuXQjdnERCo,808
+ibis_bench/utils/monitor.py,sha256=kNj4lQV-gwDeTSaMsiQGK9M-z5tZ3NVDfhVgRPYos0U,2107
+ibis_bench/utils/read_data.py,sha256=nXz772dAL64aH1if34xp40AkZKOeqFi04bmXivmsXkk,7249
+ibis_bench/utils/write_data.py,sha256=8Qz41-9kiJdb7Rf1-lZUZ-JvMUwlRGxyozq8DHY0z00,2277
+ibis_bench-0.1.0.dist-info/METADATA,sha256=xNjhcZRLcS1MqIP0grTPu1fLYRSBgFiybFiokyYRn9U,789
+ibis_bench-0.1.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+ibis_bench-0.1.0.dist-info/entry_points.txt,sha256=pCBloSEboPQX2Qp7esDD1CpLc6cohKW9-5Z3aG8GwgQ,74
+ibis_bench-0.1.0.dist-info/RECORD,,

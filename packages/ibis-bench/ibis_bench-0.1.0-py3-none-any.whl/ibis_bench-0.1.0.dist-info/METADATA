@@ -1,0 +1,26 @@
+Metadata-Version: 2.3
+Name: ibis-bench
+Version: 0.1.0
+Summary: benchmarking with Ibis
+Project-URL: Homepage, https://github.com/lostmygithubaccount/ibis-bench
+Project-URL: Bug Tracker, https://github.com/lostmygithubaccount/ibis-bench/issues
+Author-email: Cody <cody@dkdc.dev>
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: datafusion==38.0.1
+Requires-Dist: duckdb==1.0.0
+Requires-Dist: gcsfs
+Requires-Dist: ibis-framework==9.1.0
+Requires-Dist: plotly
+Requires-Dist: polars==0.20.31
+Requires-Dist: psutil
+Requires-Dist: python-dotenv
+Requires-Dist: streamlit
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# ibis-bench
+
+work in progress
