@@ -1,0 +1,9 @@
+include LICENSE
+include setup.py
+include media
+include README.rst
+include src/*
+include src/font/*
+
+
+exclude test/*
