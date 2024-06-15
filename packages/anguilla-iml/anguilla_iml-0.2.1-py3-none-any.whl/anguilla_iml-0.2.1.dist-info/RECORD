@@ -1,0 +1,15 @@
+anguilla/__init__.py,sha256=KGIOT8K-vpdLbjHa5E6ok19jGTWl9lZhDaGlFYFEHgA,10702
+anguilla/__main__.py,sha256=0NX_W15te_ZmpXGeYhzYAxtMlG1OYJzT6Nu2trpe_wU,420
+anguilla/__version__.py,sha256=uG4eMDWLWveFS-Bwg5WjvSOrrlCVdHHeN_wVsyqExYc,82
+anguilla/app/__init__.py,sha256=d4UVPOiqp_JQe4E3CzEu0f2FG072d5gboE2-kJvfYpc,34
+anguilla/app/server.py,sha256=aFmVrpryEft6YRfvi4MpuAfWgV92xjFPu9a14851TQs,7504
+anguilla/embed.py,sha256=j6f0Id2-gPCB5nCpOLtBn0yalOEsiDvyxbhxKXNTDJc,6783
+anguilla/interpolate.py,sha256=rle4ASOLOIZyrAiSuG1WBtFhcvsgW2blt1E_xm83Lzg,6575
+anguilla/nnsearch.py,sha256=Bugf8cvLWRSI1cWFBAsBcP1YIk81xCpAh1bg0P4_k28,16517
+anguilla/serialize.py,sha256=eDhth4DfZyU_7Y74gkBJSzwFosj0opVU7wv1xx11O6k,5511
+anguilla/types.py,sha256=FGfcr9oZH8w-0cfjcMBg2X3W-SfZSeQKGXHccagsTMU,1269
+anguilla_iml-0.2.1.dist-info/LICENSE,sha256=PBNz2Ep6EWEd7CQBUBlfCSWBdQFcteRDbpdV0oSeF0w,1084
+anguilla_iml-0.2.1.dist-info/METADATA,sha256=gMbxVensm8eJZlGq5Yc83-wIgNz_vSrxJz7wSf1YQF8,3936
+anguilla_iml-0.2.1.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+anguilla_iml-0.2.1.dist-info/entry_points.txt,sha256=FGsntVK1ZH2Bx0AlgIMF3WqnutKyAfQpBqRC0M6Q_qc,52
+anguilla_iml-0.2.1.dist-info/RECORD,,

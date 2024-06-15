@@ -1,0 +1,3 @@
+[console_scripts]
+anguilla=anguilla.__main__:_main
+
