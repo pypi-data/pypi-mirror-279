@@ -1,0 +1,11 @@
+rsgiadapter-0.0.6.dist-info/METADATA,sha256=bzp3zLR0fRbo_j8Zmu4uDwidonVu-SHsahqMBP5uKo8,4086
+rsgiadapter-0.0.6.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+rsgiadapter-0.0.6.dist-info/licenses/LICENSE,sha256=IHMc2NoTEi_xFSw6ISKUK3wDsWzkHUMYVV7D56y2Lsk,1495
+rsgiadapter/__init__.py,sha256=ltz_ZZS8gjLYAoIx7u2oUAtJ0TpMOu29n7R37bkPuS0,89
+rsgiadapter/asgi.py,sha256=B4M_Ui9pjQgJVrLkGJHiC7R79MS2uExfxM8bR8-XTgY,8688
+rsgiadapter/constant.py,sha256=WEuh5DLySTjljQolrqw-3Xhw9h9E9fXycLqO_Ylq5N0,617
+rsgiadapter/lifespan.py,sha256=zfTizLPu04Kz27CyCEd2EBbc84DXa5uTUbcWYb8Iu80,4855
+rsgiadapter/protocol.py,sha256=Oe5BOkAxLgqmcrYoYmrXUPpfgc3LnZUH3Cb0_VPvFL4,3284
+rsgiadapter/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rsgiadapter/response.py,sha256=e-GiFGQ1YYVRsRO_R14BVRSLm5Bv4bQWVC1vtgTGTJY,2881
+rsgiadapter-0.0.6.dist-info/RECORD,,
