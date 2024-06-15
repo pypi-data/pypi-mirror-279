@@ -1,0 +1,2 @@
+[console_scripts]
+pih-backup = BackupService.__main__:start
