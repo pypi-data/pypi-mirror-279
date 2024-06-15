@@ -1,0 +1,12 @@
+stompman/__init__.py,sha256=i3zN9HVV0s8G0-SeHRC2V8aMNytFeE8QuksyLl7HBgk,1448
+stompman/client.py,sha256=2Sx-qf_Qowt4jjXf0JpF4DcWPrWgmhjM2qIKPW9D5-Y,7988
+stompman/connection.py,sha256=sZVdTsGYwICJ49DdSK-4tUQzjyrcsbdaNAYp8UukCHM,4707
+stompman/errors.py,sha256=G7MYH8Sdzsgevyfrmgl5bxnFU157UTnN3P0Uvob1pTA,644
+stompman/frames.py,sha256=DYpazyLOs9sst3yeygFgiCYLky0ROXDWVFFuz8kLhEE,5035
+stompman/listening_events.py,sha256=TUkLJs0zekEjkI2y64jowJBuGbC0-UDtFI5pR2KN6nQ,2163
+stompman/protocol.py,sha256=vFrublOgC28m3HFbU_5Nnfr9IP3TSm-yVLqDPsvYtMc,4334
+stompman/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+stompman-0.6.4.dist-info/METADATA,sha256=8lT5Jbqd6t9v9YUdMCKgPEjxShynWX2SVKjmox5O2JE,6293
+stompman-0.6.4.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+stompman-0.6.4.dist-info/licenses/LICENSE,sha256=yRjHcVk5oiyAVD9dQFvWTrp-oIP1GlWoG5D4oKaZn1c,1091
+stompman-0.6.4.dist-info/RECORD,,
