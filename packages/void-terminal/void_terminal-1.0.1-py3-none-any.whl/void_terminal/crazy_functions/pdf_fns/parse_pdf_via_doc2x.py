@@ -1,0 +1,211 @@
+from void_terminal.toolbox import get_log_folder, gen_time_str, get_conf
+from void_terminal.toolbox import update_ui, promote_file_to_downloadzone
+from void_terminal.toolbox import promote_file_to_downloadzone, extract_archive
+from void_terminal.toolbox import generate_file_link, zip_folder
+from void_terminal.crazy_functions.crazy_utils import get_files_from_everything
+from void_terminal.shared_utils.colorful import *
+import os
+
+def refresh_key(doc2x_api_key):
+    import requests, json
+    url = "https://api.doc2x.noedgeai.com/api/token/refresh"
+    res = requests.post(
+        url,
+        headers={"Authorization": "Bearer " + doc2x_api_key}
+    )
+    res_json = []
+    if res.status_code == 200:
+        decoded = res.content.decode("utf-8")
+        res_json = json.loads(decoded)
+        doc2x_api_key = res_json['data']['token']
+    else:
+        raise RuntimeError(format("[ERROR] status code: %d, body: %s" % (res.status_code, res.text)))
+    return doc2x_api_key
+
+def ParsePDF_DOC2X_toLatex(pdf_file_path):
+    import requests, json, os
+    DOC2X_API_KEY = get_conf('DOC2X_API_KEY')
+    latex_dir = get_log_folder(plugin_name="pdf_ocr_latex")
+    doc2x_api_key = DOC2X_API_KEY
+    if doc2x_api_key.startswith('sk-'):
+        url = "https://api.doc2x.noedgeai.com/api/v1/pdf"
+    else:
+        doc2x_api_key = refresh_key(doc2x_api_key)
+        url = "https://api.doc2x.noedgeai.com/api/platform/pdf"
+
+    res = requests.post(
+        url,
+        files={"file": open(pdf_file_path, "rb")},
+        data={"ocr": "1"},
+        headers={"Authorization": "Bearer " + doc2x_api_key}
+    )
+    res_json = []
+    if res.status_code == 200:
+        decoded = res.content.decode("utf-8")
+        for z_decoded in decoded.split('\n'):
+            if len(z_decoded) == 0: continue
+            assert z_decoded.startswith("data: ")
+            z_decoded = z_decoded[len("data: "):]
+            decoded_json = json.loads(z_decoded)
+            res_json.append(decoded_json)
+    else:
+        raise RuntimeError(format("[ERROR] status code: %d, body: %s" % (res.status_code, res.text)))
+
+    uuid = res_json[0]['uuid']
+    to = "latex" # latex, md, docx
+    url = "https://api.doc2x.noedgeai.com/api/export"+"?request_id="+uuid+"&to="+to
+
+    res = requests.get(url, headers={"Authorization": "Bearer " + doc2x_api_key})
+    latex_zip_path = os.path.join(latex_dir, gen_time_str() + '.zip')
+    latex_unzip_path = os.path.join(latex_dir, gen_time_str())
+    if res.status_code == 200:
+        with open(latex_zip_path, "wb") as f: f.write(res.content)
+    else:
+        raise RuntimeError(format("[ERROR] status code: %d, body: %s" % (res.status_code, res.text)))
+
+    import zipfile
+    with zipfile.ZipFile(latex_zip_path, 'r') as zip_ref:
+        zip_ref.extractall(latex_unzip_path)
+
+
+    return latex_unzip_path
+
+
+
+
+def ParsePDF_DOC2X_singleFile(fp, project_folder, llm_kwargs, plugin_kwargs, chatbot, history, system_prompt, DOC2X_API_KEY, user_request):
+
+
+    def pdf2markdown(filepath):
+        import requests, json, os
+        markdown_dir = get_log_folder(plugin_name="pdf_ocr")
+        doc2x_api_key = DOC2X_API_KEY
+        if doc2x_api_key.startswith('sk-'):
+            url = "https://api.doc2x.noedgeai.com/api/v1/pdf"
+        else:
+            doc2x_api_key = refresh_key(doc2x_api_key)
+            url = "https://api.doc2x.noedgeai.com/api/platform/pdf"
+
+        chatbot.append((None, "Load PDF file，Send to DOC2X for parsing..."))
+        yield from update_ui(chatbot=chatbot, history=history) # Refresh the page
+
+        res = requests.post(
+            url,
+            files={"file": open(filepath, "rb")},
+            data={"ocr": "1"},
+            headers={"Authorization": "Bearer " + doc2x_api_key}
+        )
+        res_json = []
+        if res.status_code == 200:
+            decoded = res.content.decode("utf-8")
+            for z_decoded in decoded.split('\n'):
+                if len(z_decoded) == 0: continue
+                assert z_decoded.startswith("data: ")
+                z_decoded = z_decoded[len("data: "):]
+                decoded_json = json.loads(z_decoded)
+                res_json.append(decoded_json)
+        else:
+            raise RuntimeError(format("[ERROR] status code: %d, body: %s" % (res.status_code, res.text)))
+        uuid = res_json[0]['uuid']
+        to = "md" # latex, md, docx
+        url = "https://api.doc2x.noedgeai.com/api/export"+"?request_id="+uuid+"&to="+to
+
+        chatbot.append((None, f"Read and parse: {url} ..."))
+        yield from update_ui(chatbot=chatbot, history=history) # Refresh the page
+
+        res = requests.get(url, headers={"Authorization": "Bearer " + doc2x_api_key})
+        md_zip_path = os.path.join(markdown_dir, gen_time_str() + '.zip')
+        if res.status_code == 200:
+            with open(md_zip_path, "wb") as f: f.write(res.content)
+        else:
+            raise RuntimeError(format("[ERROR] status code: %d, body: %s" % (res.status_code, res.text)))
+        promote_file_to_downloadzone(md_zip_path, chatbot=chatbot)
+        chatbot.append((None, f"complete parsing {md_zip_path} ..."))
+        yield from update_ui(chatbot=chatbot, history=history) # Refresh the page
+        return md_zip_path
+
+    def deliver_to_markdown_plugin(md_zip_path, user_request):
+        from void_terminal.crazy_functions.Markdown_Translate import TranslateMarkdownFromEnglishToChinese
+        import shutil, re
+
+        time_tag = gen_time_str()
+        target_path_base = get_log_folder(chatbot.get_user())
+        file_origin_name = os.path.basename(md_zip_path)
+        this_file_path = os.path.join(target_path_base, file_origin_name)
+        os.makedirs(target_path_base, exist_ok=True)
+        shutil.copyfile(md_zip_path, this_file_path)
+        ex_folder = this_file_path + ".extract"
+        extract_archive(
+            file_path=this_file_path, dest_dir=ex_folder
+        )
+
+        # edit markdown files
+        success, file_manifest, project_folder = get_files_from_everything(ex_folder, type='.md')
+        for generated_fp in file_manifest:
+            # Correcting some formula issues
+            with open(generated_fp, 'r', encoding='utf8') as f:
+                content = f.read()
+            # Escape the backslash in the formula[ \]Replace with $$
+            content = content.replace(r'\[', r'$$').replace(r'\]', r'$$')
+            # Escape the backslash in the formula( \)Replace with $
+            content = content.replace(r'\(', r'$').replace(r'\)', r'$')
+            content = content.replace('```markdown', '\n').replace('```', '\n')
+            with open(generated_fp, 'w', encoding='utf8') as f:
+                f.write(content)
+            promote_file_to_downloadzone(generated_fp, chatbot=chatbot)
+            yield from update_ui(chatbot=chatbot, history=history) # Refresh the page
+
+            # Generate online preview HTML
+            file_name = 'Online preview translation（Original text）' + gen_time_str() + '.html'
+            preview_fp = os.path.join(ex_folder, file_name)
+            from void_terminal.shared_utils.advanced_markdown_format import markdown_convertion_for_file
+            with open(generated_fp, "r", encoding="utf-8") as f:
+                md = f.read()
+                # Using non-standard tables in Markdown，Need to add an emoji in front of the table，For formula rendering
+                md = re.sub(r'^<table>', r'😃<table>', md, flags=re.MULTILINE)
+            html = markdown_convertion_for_file(md)
+            with open(preview_fp, "w", encoding="utf-8") as f: f.write(html)
+            chatbot.append([None, f"Generate online preview：{generate_file_link([preview_fp])}"])
+            promote_file_to_downloadzone(preview_fp, chatbot=chatbot)
+
+
+
+        chatbot.append((None, f"Call Markdown plugin {ex_folder} ..."))
+        plugin_kwargs['markdown_expected_output_dir'] = ex_folder
+
+        translated_f_name = 'translated_markdown.md'
+        generated_fp = plugin_kwargs['markdown_expected_output_path'] = os.path.join(ex_folder, translated_f_name)
+        yield from update_ui(chatbot=chatbot, history=history) # Refresh the page
+        yield from TranslateMarkdownFromEnglishToChinese(ex_folder, llm_kwargs, plugin_kwargs, chatbot, history, system_prompt, user_request)
+        if os.path.exists(generated_fp):
+            # Correcting some formula issues
+            with open(generated_fp, 'r', encoding='utf8') as f: content = f.read()
+            content = content.replace('```markdown', '\n').replace('```', '\n')
+            # Using non-standard tables in Markdown，Need to add an emoji in front of the table，For formula rendering
+            content = re.sub(r'^<table>', r'😃<table>', content, flags=re.MULTILINE)
+            with open(generated_fp, 'w', encoding='utf8') as f: f.write(content)
+            # Generate online preview HTML
+            file_name = 'Online preview translation' + gen_time_str() + '.html'
+            preview_fp = os.path.join(ex_folder, file_name)
+            from void_terminal.shared_utils.advanced_markdown_format import markdown_convertion_for_file
+            with open(generated_fp, "r", encoding="utf-8") as f:
+                md = f.read()
+            html = markdown_convertion_for_file(md)
+            with open(preview_fp, "w", encoding="utf-8") as f: f.write(html)
+            promote_file_to_downloadzone(preview_fp, chatbot=chatbot)
+            # Generate a compressed package containing images
+            dest_folder = get_log_folder(chatbot.get_user())
+            zip_name = 'Translated document with images.zip'
+            zip_folder(source_folder=ex_folder, dest_folder=dest_folder, zip_name=zip_name)
+            zip_fp = os.path.join(dest_folder, zip_name)
+            promote_file_to_downloadzone(zip_fp, chatbot=chatbot)
+            yield from update_ui(chatbot=chatbot, history=history) # Refresh the page
+    md_zip_path = yield from pdf2markdown(fp)
+    yield from deliver_to_markdown_plugin(md_zip_path, user_request)
+
+def ParsePDF_basedDOC2X(file_manifest, *args):
+    for index, fp in enumerate(file_manifest):
+        yield from ParsePDF_DOC2X_singleFile(fp, *args)
+    return
+
+
