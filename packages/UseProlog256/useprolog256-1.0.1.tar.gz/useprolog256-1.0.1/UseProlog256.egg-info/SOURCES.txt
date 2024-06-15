@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+UseProlog256/__init__.py
+UseProlog256.egg-info/PKG-INFO
+UseProlog256.egg-info/SOURCES.txt
+UseProlog256.egg-info/dependency_links.txt
+UseProlog256.egg-info/requires.txt
+UseProlog256.egg-info/top_level.txt
