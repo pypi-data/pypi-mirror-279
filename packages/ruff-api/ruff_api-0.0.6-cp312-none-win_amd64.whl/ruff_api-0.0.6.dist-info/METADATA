@@ -1,0 +1,68 @@
+Metadata-Version: 2.3
+Name: ruff-api
+Version: 0.0.6
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: attribution ==1.7.1 ; extra == 'dev'
+Requires-Dist: flake8 ==7.0.0 ; extra == 'dev'
+Requires-Dist: maturin ==1.5.1 ; extra == 'dev'
+Requires-Dist: mypy ==1.10.0 ; extra == 'dev'
+Requires-Dist: pytest ==8.2.2 ; extra == 'dev'
+Requires-Dist: ufmt ==2.6.0 ; extra == 'dev'
+Requires-Dist: usort ==1.0.8.post1 ; extra == 'dev'
+Provides-Extra: dev
+License-File: LICENSE
+Summary: Experimental API for Ruff
+Author-email: Amethyst Reese <amethyst@n7.gg>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Home, https://github.com/amyreese/ruff-api
+
+# ruff-api
+
+Experimental Python API for Ruff
+
+[![version](https://img.shields.io/pypi/v/ruff-api.svg)](https://pypi.org/project/ruff-api)
+[![license](https://img.shields.io/pypi/l/ruff-api.svg)](https://github.com/amyreese/ruff-api/blob/main/LICENSE)
+
+
+NOTE: This is project is highly experimental and the API is likely to change.
+Pin your dependencies accordingly.
+
+
+Install
+-------
+
+```shell-session
+$ pip install ruff-api
+```
+
+
+Usage
+-----
+
+```py
+import ruff_api
+```
+
+Format the contents of a file in memory:
+
+```py
+code = ruff_api.format_string(filename, code)
+```
+
+Sort imports in memory:
+
+```py
+code = ruff_api.isort_string(filename, code)
+```
+
+
+License
+-------
+
+ruff-api is copyright Amethyst Reese, and licensed under the MIT license.
+
