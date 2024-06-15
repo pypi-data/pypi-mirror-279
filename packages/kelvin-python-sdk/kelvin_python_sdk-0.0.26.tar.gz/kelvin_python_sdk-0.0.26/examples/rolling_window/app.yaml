@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://apps.kelvininc.com/schemas/kelvin/4.11.0/app/app.json
+
+environment:
+  node_name: bignode
+  workload_name: bigworkload
+
+app:
+  kelvin:
+    logging_level: DEBUG
+    assets:
+      - name: asset1
+    language:
+      type: python
+      python:
+        entry_point: kelvin_python_sdk
+    inputs:
+      - name: number1
+        data_type: number
+      - name: number2
+        data_type: number
+      - name: number3
+        data_type: number
+      - name: number4
+        data_type: number
+      - name: number5
+        data_type: number
+
+    outputs: []
+
+    configuration: {}
+
+  type: kelvin
+info:
+  description: app with rolling window
+  name: rolling-app
+  title: rolling-app
+  version: 1.0.0
+spec_version: 4.13.0
+system:
+  environment_vars:
+  - name: KELVIN_GW_MODE
+    value: SOCKETS
