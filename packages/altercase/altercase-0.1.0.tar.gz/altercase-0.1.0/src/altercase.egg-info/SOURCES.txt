@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/altercase/__init__.py
+src/altercase.egg-info/PKG-INFO
+src/altercase.egg-info/SOURCES.txt
+src/altercase.egg-info/dependency_links.txt
+src/altercase.egg-info/entry_points.txt
+src/altercase.egg-info/requires.txt
+src/altercase.egg-info/top_level.txt

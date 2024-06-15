@@ -1,0 +1,2 @@
+[console_scripts]
+altercase = altercase:run
