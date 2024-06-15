@@ -1,0 +1,138 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}
+{{ config.SITE_NAME }} — Create Form
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <form id="dataForm" method="POST">
+
+        <fieldset class="form-check">
+            <h4>{{form_name | replace("_", " ") | title}}</h4>
+        </fieldset>
+
+
+        {% for field in form_html %}
+            {{ field | safe }}
+        {% endfor %}
+
+        <fieldset style="padding-top: 20px; padding-bottom: 15px;" class="form-check">
+            <button type="submit" class="btn btn-primary" id="createButton">Submit</button>
+        </fieldset>
+
+    </form>
+
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+$(document).ready(function() {
+
+    // Initialize Bootstrap tooltips
+    $('[data-bs-toggle="tooltip"]').tooltip();
+
+    // Form submission event
+    $('#dataForm').submit(function(event) {
+        event.preventDefault(); // Prevent the form from submitting via the browser
+
+        // Disable the submit button
+        $('#createButton').prop('disabled', true);
+
+        // Flag to track if the form is valid
+        let formIsValid = true;
+
+        // Iterate over each required checkbox group
+        $('.required-checkbox-group[data-required="true"]').each(function() {
+            const $group = $(this);
+            const isChecked = $group.find('input[type="checkbox"]:checked').length > 0;
+
+            if (!isChecked) {
+                formIsValid = false;
+
+                // Temporarily show the tooltip
+                $group.tooltip('dispose').tooltip({
+                    title: "Please select at least one option.",
+                    placement: 'right'
+                }).tooltip('show');
+
+                // Hide the tooltip after 2 seconds
+                setTimeout(function() { $group.tooltip('dispose'); }, 2000);
+            }
+        });
+
+        // Prevent form submission if validation fails
+        if (!formIsValid) {
+
+            // Re-enable the submit button
+            $('#createButton').prop('disabled', false);
+            event.preventDefault();
+            
+        } else {
+            var formData = {};
+            
+            // Process all except checkboxes
+            $('#dataForm').find('input:not(:checkbox), textarea, select').each(function() {
+                formData[this.name] = $(this).val();
+            });
+            
+            // Process checkboxes: group them by name and gather checked values into arrays
+            $('#dataForm').find('input:checkbox').each(function() {
+                if (!formData.hasOwnProperty(this.name)) {
+                    formData[this.name] = [];
+                }
+                if ($(this).is(':checked')) {
+                    formData[this.name].push($(this).val() || true); // Push 'true' if value is unspecified
+                }
+            });
+
+            $('#dataForm').find('input:radio').each(function() {
+                if ($(this).is(':checked')) {
+                    formData[this.name] = $(this).val();
+                }
+            });
+
+            var apiKey = "{{ request.user.api_key }}"; 
+            var formName = "{{ form_name }}";
+
+            // console.log(formData);
+
+            $.ajax({
+                url: `/api/form/create/${formName}`,
+                type: 'POST',
+                headers: {
+                    'X-API-KEY': apiKey,
+                },
+                data: JSON.stringify(formData),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function(response) {
+                    // Redirect to the read_one page with the form_name and document_id from the response
+                    setFlashMessage("Successfully created form submission", AlertCategories.SUCCESS);
+                    
+
+                    // We purposefully delay for a second before relocating to the new document
+                    // setTimeout(function() {
+                    //     window.location.href = `/ui/form/read_one/${formName}/${response.document_id}`;
+                    // }, 1000);
+                    window.location.href = `/ui/form/read_one/${formName}/${response.document_id}`;
+
+                },
+                error: function(xhr) {
+
+                    // Re-enable the submit button
+                    $('#createButton').prop('disabled', false);
+
+                    console.error('Form creation failed', xhr.responseText);
+                    flashMessage(xhr.responseText, 'warning');
+                }
+            });
+        }
+    });
+});
+</script>
+{% endblock %}

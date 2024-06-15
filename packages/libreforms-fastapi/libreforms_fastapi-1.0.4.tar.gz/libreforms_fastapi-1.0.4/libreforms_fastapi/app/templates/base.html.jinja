@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if config.FORCE_HTTPS %}
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ url_for('static', path='favicon.ico') }}">
+
+    <!-- Bootstrap 5 CSS -->
+    <link id="light-theme" href="{{ url_for('static', path='css/bootstrap-flatly-5.3.1.css') }}" rel="stylesheet">
+
+    <!-- Dark theme (initially disabled) -->
+    <link id="dark-theme" rel="stylesheet" href="{{ url_for('static', path='css/bootstrap-darkly-5.3.1.css') }}" disabled>
+
+    <!-- Stylesheet -->
+    <link href="{{ url_for('static', path='css/style.css') }}" rel="stylesheet">
+
+    {% block header %}{% endblock %}
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            {# <a class="navbar-brand" href="{{ url_for('ui_home') }}">{{ config['SITE_NAME'] }}<small> v.{{ version }}</small></a> #}
+            <a class="navbar-brand" href="{{ url_for('ui_home') }}">{{ config['SITE_NAME'] }}</a>
+
+            <!-- Navbar toggler button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+
+                    {% if request.user.is_authenticated %}
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Submit Forms</a>
+                        <div class="dropdown-menu">
+                            {% for form in available_forms %}
+                            <a class="dropdown-item" href="{{ url_for( 'ui_form_create', form_name=form ) }}">Submit {{ form | replace("_", " ") | title }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
+
+                    <div class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" id="AdminMenu"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            View Submissions
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="AdminMenu">
+                            <li><a class="dropdown-item" href="{{ url_for('ui_form_read_all') }}">View All</a></li>
+                            <!-- Users Menu -->
+                            {% if config["EXCEL_EXPORT_ENABLED"] %}
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Export
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        {% for form in available_forms %}
+                                        <li><button class="btn-link dropdown-item" onclick="exportExcel('{{ form }}', '{{ request.user.api_key }}')">{{ form | replace("_", " ") | title }}</button></li>
+                                        {% endfor %}                                    </ul>
+                                </div>
+                            </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{ url_for( 'ui_auth_profile' ) }}">Profile</a>
+                            <a class="dropdown-item" href="{{ url_for( 'ui_auth_change_password' ) }}">Change Password</a>
+                            {% if config.HELP_PAGE_ENABLED %}
+                            <a class="dropdown-item" href="{{ url_for( 'ui_auth_help' ) }}">Request Help</a>
+                            {% endif %}
+                            <a class="dropdown-item" href="{{ url_for( 'ui_auth_logout' ) }}">Logout</a>
+                        </div>
+                    </li>
+
+
+                    {% if request.user.site_admin %}
+
+                    <div class="nav-item dropdown">
+                        <button class="nav-link dropdown-toggle" type="button" id="AdminMenu"
+                                data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                            Admin
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="AdminMenu">
+                            <!-- Users Menu -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Users
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_create_user') }}">Add User</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_manage_users') }}">Manage Users</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- Groups Menu -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Groups
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_create_group') }}">Create Group</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_manage_groups') }}">Manage Groups</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- Relationships Menu -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Relationships
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_create_relationship_type') }}">Create Relationship Type</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_manage_relationship_types') }}">Manage Relationship Types</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_create_user_relationship') }}">Create User Relationship</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_manage_user_relationships') }}">Manage User Relationships</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!-- Documents Menu -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Documents
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_manage_documents') }}">Manage Documents</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Monitoring -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Monitoring
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_system_information') }}">System Information</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_log') }}">Transaction Log</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Settings -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Configuration
+                                    </a>
+                                    <ul class="dropdown-menu">
+
+                                        <li><a class="dropdown-item" href="{{ url_for( 'ui_admin_config_site' ) }}">Site Config</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_write_form_config') }}">Edit Form Config</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for( 'ui_admin_config_smtp' ) }}">SMTP Config</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for( 'ui_admin_config_relational_db' ) }}">Relational Database</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for( 'ui_admin_config_document_db' ) }}">Document Database</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for( 'ui_admin_form_config_lock' ) }}">Form Config Lock</a></li>
+                                        {# <li><a class="dropdown-item" href="{{ url_for( 'ui_admin_reload_application' ) }}">Reload Application</a></li> #}
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <!-- Configuration -->
+                            <li>
+                                <div class="btn-group dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Look & Feel
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_config_privacy') }}">Edit Privacy Policy</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_config_homepage_message') }}">Edit Homepage Message</a></li>
+                                        {% if config.DOCS_ENABLED %}
+                                        <li><a class="dropdown-item" href="{{ url_for('ui_admin_edit_docs') }}">Edit Docs</a></li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                    {% if config['DISABLE_FOOTER'] %}
+
+                    {% if config["DOCS_ENABLED"] %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('ui_docs') }}">Docs</a>
+                    </li>
+                    {% endif %}
+                    
+                    {% endif %}
+
+                    {% endif %}
+
+                    {% if config['SEARCH_BAR_ENABLED'] %}
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-sm-2" type="search" id="searchTerm" placeholder="Search">
+                        <button class="btn btn-secondary my-2 my-sm-0" onclick="searchQuery(this.value);" type="submit">Search</button>
+                    </form>
+                    {% endif %}
+
+                    {% else %}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('ui_auth_login') }}">Login</a>
+                    </li>
+
+                    {% if not config['DISABLE_NEW_USERS'] %}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('ui_auth_create') }}">Create User</a>
+                    </li>
+
+                    {% endif %}
+
+                    {% if config['DISABLE_FOOTER'] %}
+
+                    {% if config["DOCS_ENABLED"] %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('ui_docs') }}">Docs</a>
+                    </li>
+                    {% endif %}
+                    
+                    {% endif %}
+
+
+
+                    {% endif %}
+
+                </ul>
+
+                {% if config['DISABLE_FOOTER'] %}
+
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
+                    <li class="nav-item">
+
+                        <button title="Toggle theme" id="theme-toggle" class="theme-button" style="float: right;
+                        ">
+
+                            <!-- Moon SVG -->
+                            <svg class="icon" id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+
+                            <!-- Sun SVG -->
+                            <svg class="icon" style="display: none;" id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </button>
+                    </li>
+
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navbar -->
+
+    <!-- Start of Alert Notification Area -->
+    <div class="alerts-container"></div>
+    <!-- End of Alert Notification Area -->
+
+    <!-- Start of Main Content -->
+    <main class="container mt-5 content">
+    {% block content %}{% endblock %}
+    </main>
+    <!-- End of Main Content -->
+
+    {% if not config['DISABLE_FOOTER'] %}
+    <!-- Start of Footer Content -->
+    <footer class="bg-dark text-light" style="margin-top:20px;">
+        <div class="container py-1">
+            <div class="row">
+                <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center"> <!-- Possibly align-left -->
+                    <p class="mb-0 mb-md-0">
+                        &copy; {{ current_year }} Sig Janoska-Bedi
+
+                        <button title="Toggle theme" id="theme-toggle" class="theme-button">
+                            <!-- Moon SVG -->
+                            <svg class="icon" id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+
+                            <!-- Sun SVG -->
+                            <svg class="icon" style="display: none;" id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </button>
+
+                    </p>
+
+                    <div>
+                        <a href="{{config['SITE_SOURCE_URL']}}" class="text-light">Source</a> |
+
+                        <a class="text-light" data-bs-toggle="offcanvas" href="#offcanvasPrivacy" role="button" aria-controls="offcanvasPrivacy">
+                        Privacy
+                        </a>
+                        {# <a href="{{ url_for('ui_privacy') }}" class="text-light">Privacy</a> #}
+                        
+                        {% if config["DOCS_ENABLED"] %}
+                         | <a href="{{ url_for('ui_docs') }}" class="text-light">Docs</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer Content -->
+    {% endif %}
+
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasPrivacy" aria-labelledby="offcanvasPrivacyLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasPrivacyLabel">Privacy Policy</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Accept the privacy policy"></button>
+        </div>
+        <div class="offcanvas-body">
+
+            {{ render_markdown_content(config['PRIVACY_MESSAGE']) | safe }}
+
+            By continuing to use this site, you agree to abide by the terms of the privacy policy.
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS  -->
+    <script src="{{ url_for('static', path='js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Jquery -->
+    <script src="{{ url_for('static', path='js/jquery-3.7.1.min.js') }}"></script>
+
+    <!-- Application-specific JS -->
+    <script src="{{ url_for('static', path='js/custom.js') }}"></script>
+
+    <script>
+
+    // Not using Jquery for the file export 
+    function exportExcel(formName, apiKey) {
+        fetch(`/api/form/export_excel/${formName}`, {
+            headers: {
+                'X-API-KEY': apiKey,
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            // Retrieve the filename from the Content-Disposition header
+            const filename = response.headers.get('Content-Disposition').split('filename=')[1].replace(/\"/g, '');
+            return response.blob().then(blob => ({ blob, filename }));
+        })
+        .then(({ blob, filename }) => {
+            // Create a link and set the URL as the download link for the blob
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = filename || `${formName}.xlsx`;  // Use the API provided filename, fallback to formName if unavailable
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            flashMessage("Successfully exported form", AlertCategories.SUCCESS);
+        })
+        .catch(error => {
+            console.error('Failed to export form', error);
+            flashMessage(error.message, 'danger');
+        });
+    }
+
+
+
+        $(document).ready(function() {
+
+
+            {% if request.user.is_authenticated %}
+
+            if (localStorage.getItem('jwt_token')) {
+                $.ajax({
+                    url: '/api/auth/refresh',
+                    type: 'POST',
+                    success: function(response) {
+                        if(response.access_token) {
+                            localStorage.setItem('jwt_token', response.access_token);
+                            console.log("Successfully refreshed token.");
+                        } else {
+                            console.log("No new token received.");
+                        } 
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.log("Could not refresh session token:", textStatus, errorThrown);
+                    }
+
+
+                });
+            } else {
+                console.log("No JWT token found in localStorage.");
+            }
+
+            {% endif %}
+
+
+            // Execute any stashed messages
+            var flashMessages = getAndClearFlashMessages();
+            flashMessages.forEach(function(data) {
+                flashMessage(data.message, data.category);
+            });
+
+            $('#searchForm').submit(function(event) {
+                event.preventDefault(); // Prevent the form from submitting via the browser
+                searchTerm = document.getElementById("searchTerm");
+                location.href = `/ui/form/search?search_term=${encodeURIComponent(searchTerm.value)}`;
+            });
+        });
+
+        function setTheme(theme) {
+            let lightTheme = document.getElementById('light-theme');
+            let darkTheme = document.getElementById('dark-theme');
+            let moonIcon = document.getElementById('moon-icon');
+            let sunIcon = document.getElementById('sun-icon');
+
+            if (theme === 'dark') {
+                darkTheme.removeAttribute('disabled');
+                lightTheme.setAttribute('disabled', 'true');
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'block';
+                document.body.setAttribute('data-theme', 'dark'); 
+            } else {
+                lightTheme.removeAttribute('disabled');
+                darkTheme.setAttribute('disabled', 'true');
+                moonIcon.style.display = 'block';
+                sunIcon.style.display = 'none';
+                document.body.removeAttribute('data-theme'); 
+            }
+            
+        // Dispatch the theme change event
+        const themeChangeEvent = new CustomEvent('themeChanged', { detail: { theme: theme } });
+        document.dispatchEvent(themeChangeEvent);
+
+        }
+
+        // Check system preference if no user preference exists
+        function initializeTheme() {
+            let storedPreference = localStorage.getItem('theme');
+            let userPrefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
+            
+            if (storedPreference) {
+                setTheme(storedPreference);
+            } else if (userPrefersDark) {
+                setTheme('dark');
+            } else {
+                setTheme('light');
+            }
+        }
+
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            let lightTheme = document.getElementById('light-theme');
+            let darkTheme = document.getElementById('dark-theme');
+
+            if (darkTheme.disabled) {
+                setTheme('dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                setTheme('light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+
+        window.addEventListener('DOMContentLoaded', initializeTheme);
+
+    </script>
+
+
+    {% block scripts %}{% endblock %}
+
+
+</body>
+</html>
+

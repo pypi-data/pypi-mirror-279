@@ -1,0 +1,100 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}
+{{config.SITE_NAME}} — Login
+{% endblock %}
+
+{% block content %}
+<h4>Login</h4>
+<form method="POST" id="loginForm">
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <label for="username" class="form-check-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </fieldset>
+
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <label for="password" class="form-check-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+    </fieldset>
+
+
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <button type="submit" class="btn btn-primary" id="loginButton">Login</button>
+    </fieldset>
+
+
+    {% if not config['DISABLE_NEW_USERS'] %}
+    <fieldset style="padding-top: 10px;" class="form-check">
+        <p style="padding-top: 10px;">Don't have an account? Create one <a href="{{url_for('ui_auth_create')}}">here</a>. Forgotten your password? Reset it <a href="{{url_for('ui_auth_forgot_password')}}">here</a>.</p>
+    </fieldset>
+    {% endif %}
+
+</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+$(document).ready(function() {
+    // Initially disable the submit button
+    var $submitBtn = $('#loginButton').prop('disabled', true);
+
+    // Show the privacy policy off canvas
+    var privacyOffcanvas = new bootstrap.Offcanvas($('#offcanvasPrivacy'));
+    privacyOffcanvas.show();
+
+    // Function to check input fields and toggle the submit button's disabled property
+    function toggleLoginButton() {
+        var username = $('#username').val().trim();
+        var password = $('#password').val().trim();
+        $submitBtn.prop('disabled', !username || !password);
+    }
+
+    // Attach the toggle function to keyup and change events
+    $('#username, #password').on('keyup change', toggleLoginButton);
+
+    // Event listener for form submission
+    $('form').submit(function(event) {
+        event.preventDefault(); // Stop the form from submitting normally
+
+        const loginButton = document.getElementById('loginButton')
+        loginButton.disabled=true; 
+        loginButton.value='Loading...';
+
+        // Get the form data
+        var formData = {
+            username: $('#username').val().trim(),
+            password: $('#password').val().trim()
+        };
+
+        // Send the AJAX POST request to the API
+        $.ajax({
+            url: '/api/auth/login', // API endpoint for login
+            type: 'POST',
+            data: formData,
+            success: function(response) {
+                // Store the token or handle the response as needed
+                localStorage.setItem('jwt_token', response.access_token);
+
+                // Stash a flashed success message and redirect
+                setFlashMessage("Successfully logged in", AlertCategories.SUCCESS);
+                window.location.href = '/ui/home';
+
+            },
+            error: function(xhr) {
+                // Handle errors, e.g., show a message in the console log
+                console.error('Login failed', xhr.responseText);
+                flashMessage(xhr.responseText, AlertCategories.WARNING);
+                
+                // Here we restore the submit button
+                loginButton.disabled = false;
+                loginButton.value='Login';
+            }
+        });
+    });
+});
+
+</script>
+{% endblock %}
