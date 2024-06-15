@@ -1,0 +1,7 @@
+include LICENSE.txt
+include README.rst
+recursive-include matplotlib *
+recursive-include dateutil *
+recursive-include mpl_toolkits *
+recursive-include PIL *
+recursive-include fontTools *
