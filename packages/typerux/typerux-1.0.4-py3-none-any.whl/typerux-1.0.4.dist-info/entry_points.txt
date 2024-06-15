@@ -1,0 +1,2 @@
+[console_scripts]
+typerux = typerusx.typing_1:main
