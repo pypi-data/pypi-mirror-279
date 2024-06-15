@@ -1,0 +1,2 @@
+[console_scripts]
+mse = mse_cli.main:main
