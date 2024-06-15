@@ -1,0 +1,9 @@
+coherent/build/bootstrap.py,sha256=u6rvLByv_OabartQnSFQfkFWTjJR6QHXKIjOMLfHgKw,348
+coherent/build/backend.py,sha256=2ta_CzJ9IcVxXyyMJIaIxukRvPq0MqHxgE3Ye2B5Lm4,7457
+coherent/build/discovery.py,sha256=pj8aO3FBZ_aIhvLcqs2a59p2tHjRGBmiBQ4wV7w5rRA,7780
+coherent/build/__init__.py,sha256=-fKU31EpFB2Bb6yvY93GjS5O3VQFzqOUp17-GdLaaao,589
+coherent/build/system.toml,sha256=2Rj7zIVtQzLWZABo2SG6E80Shn_t9fiBWf6dApzu9Xo,78
+coherent/build/__main__.py,sha256=Us1hJwkyYQJA_UeX9NIbb9jKx3PJAWBD-4QvKwYbwiA,221
+coherent_build-0.16.0.dist-info/METADATA,sha256=7uzGs2lMFfIViD5J_DQK3OJBQ6vJinaJiRnXRQbrpJ8,1345
+coherent_build-0.16.0.dist-info/WHEEL,sha256=xwCvqR_tqJ3Ej9Wez_XdmRPdq9SWEwB8IV-d4ZOwyF0,86
+coherent_build-0.16.0.dist-info/RECORD,,
