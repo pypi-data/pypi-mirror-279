@@ -1,0 +1,10 @@
+flytekitplugins_snowflake-1.12.3b0-py3.12-nspkg.pth,sha256=ya_zoT0ZM023a2lpUsRaqXsgDEknLucLLOWbbtFBPw4,512
+flytekitplugins/snowflake/__init__.py,sha256=oh_3yZCSEmxhPJq_yor4c1j4j3-GkRlp5HTRsmGQ_Ck,330
+flytekitplugins/snowflake/agent.py,sha256=O9knPYr0vQkrH3G2m2xDM2C2rucBJU4IECYXoTVzRzw,4753
+flytekitplugins/snowflake/task.py,sha256=nzSmr-fJ98Jzt-yNl0-jgJdVNfHkgOXFOkTnwJlLRjk,3502
+flytekitplugins_snowflake-1.12.3b0.dist-info/METADATA,sha256=cSU9ZEgK62khsPn47d8IhvJ9IWCjSwLnN-hbVvbg5is,898
+flytekitplugins_snowflake-1.12.3b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flytekitplugins_snowflake-1.12.3b0.dist-info/entry_points.txt,sha256=oxrYiBD5QJcPlz357AsFWtQITVFdOA9Lb406iX4hzCA,57
+flytekitplugins_snowflake-1.12.3b0.dist-info/namespace_packages.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_snowflake-1.12.3b0.dist-info/top_level.txt,sha256=b2gTzXFHuV5afchaJ28HueRhYzj-8x5Ytr8n2twnAik,16
+flytekitplugins_snowflake-1.12.3b0.dist-info/RECORD,,
