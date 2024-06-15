@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: fluoriclogppka
+Version: 0.2.6
+Summary: Tool for pKa, logP prediction
+Home-page: https://github.com/blackthorn-ai/fluoricLogPpKa
+Download-URL: https://github.com/blackthorn-ai/fluoricLogPpKa/dist/fluoriclogppka-0.2.6.tar.gz
+Author: Blackthorn.ai
+License: MIT
+Keywords: pKa,logP,tool
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.11
+License-File: LICENSE.txt
+Requires-Dist: certifi==2024.2.2
+Requires-Dist: charset-normalizer==3.3.2
+Requires-Dist: future==1.0.0
+Requires-Dist: h2o==3.44.0.3
+Requires-Dist: idna==3.6
+Requires-Dist: mordred==1.2.0
+Requires-Dist: networkx==2.8.8
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: pillow==10.2.0
+Requires-Dist: pyarrow==15.0.0
+Requires-Dist: python-dateutil==2.8.2
+Requires-Dist: pytz==2024.1
+Requires-Dist: rdkit==2022.9.5
+Requires-Dist: requests==2.31.0
+Requires-Dist: six==1.16.0
+Requires-Dist: tabulate==0.9.0
+Requires-Dist: tzdata==2024.1
+Requires-Dist: urllib3==2.2.1
+Requires-Dist: torch>=2.0.0
+Requires-Dist: torchvision>=0.15.1
+Requires-Dist: dgl
+Requires-Dist: dgllife==0.3.2
