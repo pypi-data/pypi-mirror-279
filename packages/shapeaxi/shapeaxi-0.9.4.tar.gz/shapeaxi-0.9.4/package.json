@@ -1,0 +1,11 @@
+{
+    "name": "shapeshapeaxi-node",
+    "version": "1.0.0",
+    "description": "Shape Analysis Exploration and Interpretability",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "package-lock": "requirements.txt"
+        
+}
