@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_cli.py,sha256=ltHrOYF4r91gCUovNFlFkLLV3VO96MKikTJqEIWx-qw,1074
+youtube2mp3/__init__.py,sha256=m3M1gOWIngb3KxfeC9rpWgCbloP11PsIRLVHfTguWCo,55
+youtube2mp3/cli.py,sha256=COxy7g71dQ_saHYSl0r3UPM2-Kc5OOOKB5NznHZFQA0,3048
+youtube2mp3/options.py,sha256=I6QT-NMLgA5t4Ph73h10xvNdbCRyfBEux74tZ1Pgj1E,677
+youtube2mp3-2.0.5.dist-info/LICENSE.txt,sha256=gXf5dRMhNSbfLPYYTY_5hsZ1r7UU1OaKQEAQUhuIBkM,18092
+youtube2mp3-2.0.5.dist-info/METADATA,sha256=2BMCdujNKUtmzy9-U-XLGYC3V0YrvCiAXgYxC6fe-1Y,2819
+youtube2mp3-2.0.5.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+youtube2mp3-2.0.5.dist-info/entry_points.txt,sha256=UvrcSyYjqb1Ae85VR7OKVxGlD_c6xahgV-UpEE2pxXs,53
+youtube2mp3-2.0.5.dist-info/top_level.txt,sha256=gSIoBBk0r1vW6n3x9h2y24LLUAddYR5caow9A8964EU,18
+youtube2mp3-2.0.5.dist-info/RECORD,,
