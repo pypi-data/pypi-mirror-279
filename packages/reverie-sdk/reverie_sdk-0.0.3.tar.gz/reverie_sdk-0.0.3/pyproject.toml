@@ -1,0 +1,10 @@
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+    "pydub",
+    "stream2sentence",
+    "twine",
+    "websocket-client",
+]
+build-backend = "setuptools.build_meta"

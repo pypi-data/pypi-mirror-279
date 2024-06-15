@@ -1,0 +1,7 @@
+graft reverie_sdk
+include pyproject.toml
+include setup.py
+include readme.md
+include requirements.txt
+global-exclude *.py[cod]
+global-exclude .env
