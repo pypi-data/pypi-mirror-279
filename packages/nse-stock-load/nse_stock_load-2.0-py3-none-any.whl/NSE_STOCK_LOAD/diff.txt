@@ -1,0 +1,357 @@
+11d10
+< from email import encoders
+27c26
+<     def send_mail(self,mail_from=email_user,mail_to=email_user,path=mail_path,files=["NSE_New_Symbol.csv"],subject=send_subject,body=send_body,file_type='text',file_format='octet-stream'):
+---
+>     def send_mail(self,mail_from=email_user,mail_to=email_user,path=mail_path,files=["NSE_New_Symbol.csv"],subject=send_subject,body=send_body):
+31,32d29
+<         if 'str' in str(type(files)):
+<             files=[files]
+46c43
+<                         attachment=MIMEBase(file_type,file_format  )       # type of attachment
+---
+>                         attachment=MIMEBase('text','octet-stream')       # type of attachment
+49d45
+<                         #encoders.encode_base64(attachment)
+58c54
+---
+101c97
+---
+103c99
+---
+18c18
+\ No newline at end of file
+---
+\ No newline at end of file
+12,13d11
+< global dates,time_stamp,url_path,connect,current_year,current_month,current_day,last_month,start_year,start_month,mon,backup_root,reports_path,stop_loss_path,data_backup_path,metadata_path,backup_path,local_root,mail_path,index_path,local_path,index_final_path
+< 
+19,20c17
+< #engine=sqla.create_engine("oracle+cx_oracle://sys:root@localhost:1521/test?mode=SYSDBA&events=true",max_identifier_length=128)      # db connection
+< engine=sqla.create_engine('mysql+pymysql://root:admin@/mysql')
+---
+> engine=sqla.create_engine("oracle+cx_oracle://sys:root@localhost:1521/test?mode=SYSDBA&events=true",max_identifier_length=128)      # db connection
+23c20
+< query="SELECT date_format(date_add(LAST_DAY(stock_date),interval 1 DAY),'%%Y%%m%%d') STOCK_DATE FROM (SELECT MAX(STOCK_DATE) STOCK_DATE FROM NSE_DAILY_DATA)A"
+---
+> query="SELECT TO_CHAR(ADD_MONTHS(STOCK_DATE-TO_CHAR(STOCK_DATE,'DD')+1,1),'YYYYMMDD') STOCK_DATE,TO_CHAR(ADD_MONTHS(STOCK_DATE-TO_CHAR(STOCK_DATE,'DD')+1,1),'MON') STOCK_DATE FROM (SELECT MAX(STOCK_DATE) STOCK_DATE FROM NSE_DAILY_DATA)A"
+44c41
+<     mon           = datetime.strptime(str(data.iloc[0,0]),'%Y%m%d').strftime("%b").upper()                   # APR
+---
+>     mon           = data.iloc[0,1]                   # APR
+46c43
+<     mon           = datetime.today().strftime("%b").upper()
+---
+>     mon           = datetime.today().strftime("%b")
+49c46,47
+< backup_root="/mnt/data/nse/load/"
+---
+> backup_root="G:/MY STUFF/Dropbox/Code&ETL/Stock_Exchange/"
+> backup_path=backup_root+"Scheduled_Processedfile_Backup/"
+51d48
+< stop_loss_path=backup_root+"STOP_LOSS_Trigger/"
+53,54c50
+< metadata_path=backup_root+"Oracle_Table_Metadata/"
+< backup_path=backup_root+"Scheduled_Processedfile_Backup/"
+---
+> metadata_path=backup_root+"Oracle Table Metadata/"
+56,58c52
+< local_root="/mnt/data/nse/load/"
+< mail_path=local_root+"Mail/"
+< index_path=local_root+"nse_indices/"
+---
+> local_root="C:/Users/kiran/Downloads/NSE DATA/"
+60c54
+< index_final_path=local_root+"nse_indices/final/"
+\ No newline at end of file
+---
+> mail_path=local_root+"Mail/"
+16,17c16,17
+<     min_date=df['STOCK_DATE'].min().strftime("%Y-%m-%d")
+<     max_date=df['STOCK_DATE'].max().strftime("%Y-%m-%d")
+---
+>     min_date=df['STOCK_DATE'].min().strftime("%d-%b-%Y")
+>     max_date=df['STOCK_DATE'].max().strftime("%d-%b-%Y")
+47c47
+<     connect.execute("UPDATE nse_daily_data t1 INNER JOIN nse_index_daily_data as t2  on t2.index_date=t1.stock_date SET t1.Open_Index_Value=t2.Open_Index_Value, t1.Closing_Index_Value=t2.Closing_Index_Value where t2.Index_name='Nifty 50' and DATE_FORMAT(index_date,'%%y-%%m')=(select DATE_FORMAT(max(index_date),'%%y-%%m') from NSE_INDEX_DAILY_DATA) and T1.SERIES='EQ'")
+\ No newline at end of file
+---
+>     connect.execute("merge into nse_daily_data t1 using (select distinct index_date,Open_Index_Value,Closing_Index_Value from NSE_INDEX_DAILY_DATA where Index_name='Nifty 50' and to_char(index_date,'yyyy-mm')=(select to_char(max(index_date),'yyyy-mm') from NSE_INDEX_DAILY_DATA)) t2 on (t2.index_date=t1.stock_date) when matched then update set t1.Open_Index_Value=t2.Open_Index_Value, t1.Closing_Index_Value=t2.Closing_Index_Value WHERE T1.SERIES='EQ'")
+\ No newline at end of file
+12,14c12,14
+<     
+<     open_close_query="SELECT COMPANY_NAME,SYMBOL,SERIES,DATE_FORMAT(STOCK_DATE,'%%m-%%Y') STOCK_DATE,OPEN_PRICE,CLOSE_PRICE,SECTOR,STOCK_DATE as 'STOCK_DATE1' FROM NSE_DAILY_DATA WHERE DATE_FORMAT(STOCK_DATE,'YYYY-MM') = (SELECT DATE_FORMAT(MAX(STOCK_DATE),'YYYY-MM') FROM NSE_DAILY_DATA) AND SERIES='EQ' ORDER BY COMPANY_NAME,SERIES,STOCK_DATE1"
+<     high_low_query="SELECT COMPANY_NAME, SYMBOL, SERIES, DATE_FORMAT(STOCK_DATE,'%%m-%%Y') STOCK_DATE, HIGH_PRICE, LOW_PRICE, SECTOR, STOCK_DATE as 'STOCK_DATE1' FROM NSE_DAILY_DATA WHERE DATE_FORMAT(STOCK_DATE,'YYYY-MM') = (SELECT DATE_FORMAT(MAX(STOCK_DATE),'YYYY-MM') FROM NSE_DAILY_DATA) AND SERIES='EQ' ORDER BY COMPANY_NAME,SERIES,STOCK_DATE1"
+---
+> 
+>     open_close_query="SELECT COMPANY_NAME,SYMBOL,SERIES,TO_CHAR(STOCK_DATE,'MM-YYYY') STOCK_DATE,OPEN_PRICE,CLOSE_PRICE,SECTOR,STOCK_DATE as STOCK_DATE1 FROM NSE_DAILY_DATA WHERE TO_CHAR(STOCK_DATE,'YYYY-MM') = (SELECT TO_CHAR(MAX(STOCK_DATE),'YYYY-MM') FROM NSE_DAILY_DATA) AND SERIES='EQ' ORDER BY COMPANY_NAME,SERIES,STOCK_DATE1"
+>     high_low_query="SELECT COMPANY_NAME, SYMBOL, SERIES, TO_CHAR(STOCK_DATE,'MM-YYYY') STOCK_DATE, HIGH_PRICE, LOW_PRICE, SECTOR, STOCK_DATE as STOCK_DATE1 FROM NSE_DAILY_DATA WHERE TO_CHAR(STOCK_DATE,'YYYY-MM') = (SELECT TO_CHAR(MAX(STOCK_DATE),'YYYY-MM') FROM NSE_DAILY_DATA) AND SERIES='EQ' ORDER BY COMPANY_NAME,SERIES,STOCK_DATE1"
+18,21c18
+<     
+<     open_close_df.columns=open_close_df.columns.str.lower()
+<     high_low_df.columns=high_low_df.columns.str.lower()
+<     
+---
+> 
+42c39
+<     date=final_df['STOCK_DATE'].min().strftime("%Y-%m-%d")
+---
+>     date=final_df['STOCK_DATE'].min().strftime("%d-%b-%y")
+14c14,16
+< TablesQuery="SELECT concat('show create table ',TABLE_NAME,':',TABLE_NAME) tbl FROM information_schema.tables where CREATE_TIME like '%%2020-05-12%%' and TABLE_TYPE='BASE TABLE'"
+---
+> TablesQuery="select 'SELECT dbms_metadata.get_ddl('''||B.OBJECT_TYPE||''','''||A.TABLE_NAME||''') as query from dual'||':'||A.TABLE_NAME Query from dba_tables A,DBA_OBJECTS B  WHERE B.obJECT_NAME=A.TABLE_NAME AND A.OWNER='SYS' AND A.CLUSTER_NAME IS NULL AND B.OBJECT_TYPE IN ('TABLE') AND B.CREATED between '08-JUN-2018' and '08-DEC-2019' AND A.TABLE_NAME not like '%$%' UNION ALL select 'SELECT dbms_metadata.get_ddl('''||B.OBJECT_TYPE||''','''||B.OBJECT_NAME||''') from dual;' Query from DBA_OBJECTS B  WHERE   B.OWNER='SYS' AND B.OBJECT_TYPE IN ('VIEW') AND B.CREATED>'08-JUN-2018' AND OBJECT_NAME NOT LIKE '%$%'"
+> 
+> Tableselect="select 'select * from '||A.TABLE_NAME ||','||A.TABLE_NAME Query from dba_tables A,DBA_OBJECTS B  WHERE B.obJECT_NAME=A.TABLE_NAME AND A.OWNER='SYS' AND A.CLUSTER_NAME IS NULL AND B.OBJECT_TYPE IN ('TABLE') and a.TABLE_NAME not in ('MY_STOCK_DETAILS','BSE_STAGING_TBL','BSE_ACTIVESTOCK','BSE_INACTIVESTOCK','NSE_STAGING_TBL','NSE_SCD_CAPTURE','PORTFOLIO_MASTER','NSE_LIVEDATA','SALGRADE','EMP','DEPT','sys.nse_index_Details','nse_index_Details') AND B.CREATED BETWEEN '08-JUN-2018' and '08-DEC-2019' AND A.TABLE_NAME not like '%$%'"
+24c26,41
+<         df=pd.read_sql(i.split(":")[0],connect)
+---
+>         try:
+>             df=pd.read_sql(i.split(":")[0],connect)
+>             df['query']=df['query'].str.replace('"SYS".','')
+>             df['query']=df['query'].str.replace('"','')
+> 
+>             if cnt==1:
+>                 df.to_csv(metadata_path+"TablesMetadata.txt",header=False,index=None,quotechar=' ',line_terminator=';\n')
+>                 f=open(metadata_path+"tables_list.txt",'w')
+>                 f.write(i.split(":")[1])
+>                 f.close()
+>             else:
+>                 df.to_csv(metadata_path+"TablesMetadata.txt",header=False,index=None,mode='a',quotechar=' ',line_terminator=";\n")
+>                 f=open(metadata_path+"tables_list.txt",'a')
+>                 f.write("\n"+i.split(":")[1])
+>                 f.close()
+>             cnt+=1
+26,36c43,44
+<         if cnt==1:
+<             df.to_csv(metadata_path+"TablesMetadata.txt",header=False,index=None,quotechar=' ',line_terminator=';\n')
+<             f=open(metadata_path+"tables_list.txt",'w')
+<             f.write(i.split(":")[1])
+<             f.close()
+<         else:
+<             df.to_csv(metadata_path+"TablesMetadata.txt",header=False,index=None,mode='a',quotechar=' ',line_terminator=";\n")
+<             f=open(metadata_path+"tables_list.txt",'a')
+<             f.write("\n"+i.split(":")[1])
+<             f.close()
+<         cnt+=1
+---
+>         except:
+>             continue
+39,40c47,48
+<     os.chdir('/mnt/data/')
+<     root_dir=os.getcwd()+"/"
+---
+>     os.chdir('/')
+>     root_dir=os.getcwd()
+43,50c51,57
+<     
+<     with open(metadata_path+"tables_list.txt",'r') as doc:
+<         files=doc.read()
+<         files=list(files.split("\n"))
+<      
+<     for table in files:
+<         df=pd.read_sql("select * from "+table,connect)
+<         df.to_csv(root_dir+table+".txt",header=None,index=None,chunksize=100,)
+---
+> 
+>     data_backpup_df=pd.read_sql(Tableselect,connect)
+> 
+>     for i in data_backpup_df.iloc[:,0]:
+>         df=pd.read_sql(i.split(",")[0],connect)
+>         df.to_csv(root_dir+i.split(",")[1]+".txt",header=None,index=None,chunksize=100,)
+>         files.append(i.split(",")[1]+".txt")
+55,56c62,64
+<         zf.write(os.path.join(root_dir,file+".txt"))
+<         os.remove(root_dir+file+".txt")
+---
+>         zf.write(os.path.join(root_dir,file))
+>         os.remove(root_dir+file)
+> 
+15c15
+<         
+---
+> 
+24,25c24,25
+<         
+<         query="SELECT SYMBOL AS 'KEY', SYMBOL FROM STOCKCODE"
+---
+> 
+>         query="SELECT SYMBOL AS KEY, SYMBOL FROM STOCKCODE"
+30c30
+<         
+---
+> 
+16,26c16
+< 
+<         from nse_stock_load.variables import backup_root,backup_path,reports_path,data_backup_path,metadata_path,local_root,local_path,mail_path,index_path,index_final_path,stop_loss_path
+< 
+<         dir_list=[backup_root,backup_path,reports_path,data_backup_path,metadata_path,local_root,local_path,mail_path,index_path,index_final_path,stop_loss_path]
+<         for dir_name in dir_list:
+<             try:
+<                 os.mkdir(dir_name)
+<             except:
+<                 continue
+<         
+---
+32d21
+<                 
+51c40
+---
+67c56
+<         
+---
+>                 
+21,24c21
+<         
+<         nseactive_stock_df.columns=nseactive_stock_df.columns.str.lower()
+<         stockcode_df.columns=stockcode_df.columns.str.lower()
+<         
+---
+> 
+33,34c30
+<         merge_df['stock_date']=pd.to_datetime(merge_df['stock_date'])
+<         
+---
+> 
+42a39
+51c48
+<         
+---
+> 
+60c57
+<         
+---
+> 
+63,66c60
+<         
+<         active_stock_df.columns=active_stock_df.columns.str.lower()
+<         inactive_stock_df.columns=inactive_stock_df.columns.str.lower()
+<         
+---
+> 
+11a12
+> 
+17c18
+<         
+---
+> 
+34c35
+<         
+---
+> 
+36c37
+<         master_load_query="SELECT DISTINCT X.COMPANY_NAME, X.SYMBOL, X.SERIES, if(X.QUANTITY=0,'N','Y') as 'ACTIVE_STOCK_IND', X.DATE_OF_PURCHASE, X.FIRST_PURCHASE_DATE, X.LAST_PURCHASE_DATE, X.QUANTITY as 'QUANTITY_AVAILABLE', X.PRICE_OF_STOCK as 'PURCHASE_PRICE_OF_STOCK', X.CURRENT_PRICE as 'CURRENT_PRICE_OF_STOCK', X.PRICE_OF_STOCK*0.9 as 'STOP_LOSS_TRIGGER_AMT', (X.CURRENT_PRICE-X.PRICE_OF_STOCK) as 'CNG_SINCE_BOUGHT', X.MNTH_CHANGE as 'CNG_LAST_1_MONTHS', (X.CURRENT_PRICE-a.CLOSE_PRICE) as 'CNG_LAST_6_MONTHS', if((X.CURRENT_PRICE-X.PRICE_OF_STOCK)<=0,'GAIN','LOSS') as 'STATUS', a.STOCK_EXCHANGE, x.LOAD_DT_TIME LOAD_DT_TIME  FROM nse_activestock A INNER JOIN (SELECT A.COMPANY_NAME,A.SYMBOL,A.SERIES,A.DATE_OF_PURCHASE,B.FIRST_PURCHASE_DATE,a.PRICE_OF_STOCK,C.LAST_PURCHASE_DATE,D.QUANTITY,E.CURRENT_PRICE,F.MNTH_CHANGE,a.LOAD_DT_TIME FROM STOCK_DETAILS_SNAPSHOT a LEFT OUTER JOIN (SELECT COMPANY_NAME,SYMBOL,MIN(DATE_OF_PURCHASE) FIRST_PURCHASE_DATE FROM STOCK_DETAILS_SNAPSHOT GROUP BY COMPANY_NAME,SYMBOL)B ON A.COMPANY_NAME=B.COMPANY_NAME AND A.SYMBOL=B.SYMBOL LEFT OUTER JOIN (SELECT COMPANY_NAME,SYMBOL,MAX(DATE_OF_PURCHASE) LAST_PURCHASE_DATE FROM STOCK_DETAILS_SNAPSHOT GROUP BY COMPANY_NAME,SYMBOL)C ON A.COMPANY_NAME=C.COMPANY_NAME AND A.SYMBOL=C.SYMBOL LEFT OUTER JOIN (SELECT A.COMPANY_NAME,A.SYMBOL,(A.QUANTITY-NVL(B.SELL,0)) QUANTITY  FROM STOCK_DETAILS_SNAPSHOT  A LEFT OUTER JOIN (SELECT COMPANY_NAME,SYMBOL,QUANTITY SELL FROM STOCK_DETAILS_SNAPSHOT WHERE ORDER_TYPE='SELL') B ON A.COMPANY_NAME=B.COMPANY_NAME  AND A.SYMBOL=B.SYMBOL WHERE A.ORDER_TYPE='BUY' ) D  ON A.COMPANY_NAME=D.COMPANY_NAME AND A.SYMBOL=D.SYMBOL  LEFT OUTER JOIN  (SELECT COMPANY_NAME,SYMBOL,CLOSE_PRICE CURRENT_PRICE FROM NSE_ACTIVESTOCK WHERE (SYMBOL,STOCK_DATE) IN (SELECT SYMBOL,MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK GROUP BY SYMBOL)) E  ON A.COMPANY_NAME=E.COMPANY_NAME AND A.SYMBOL=E.SYMBOL LEFT OUTER JOIN (select A.COMPANY_NAME,B.SYMBOL,A.SERIES,(a.CLOSE_PRICE-B.CLOSE_PRICE) MNTH_CHANGE from NSE_ACTIVESTOCK a,NSE_ACTIVESTOCK b where a.COMPANY_NAME=b.COMPANY_NAME and a.SYMBOL=b.SYMBOL and a.SERIES=b.SERIES AND (A.SYMBOL,A.STOCK_DATE) IN (SELECT SYMBOL,MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK GROUP BY SYMBOL) AND (B.SYMBOL,B.STOCK_DATE) IN (SELECT SYMBOL,MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK WHERE (STOCK_DATE)<(SELECT DISTINCT MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK) GROUP BY SYMBOL) )F ON A.COMPANY_NAME=F.COMPANY_NAME AND A.SYMBOL=F.SYMBOL GROUP BY A.COMPANY_NAME,A.SYMBOL,A.SERIES,A.DATE_OF_PURCHASE,B.FIRST_PURCHASE_DATE,a.PRICE_OF_STOCK,C.LAST_PURCHASE_DATE,D.QUANTITY,E.CURRENT_PRICE,F.MNTH_CHANGE,a.LOAD_DT_TIME) X ON A.COMPANY_NAME=X.COMPANY_NAME AND A.SYMBOL=X.SYMBOL where (A.SYMBOL,A.STOCK_DATE) IN (SELECT SYMBOL,MIN(STOCK_DATE) FROM NSE_ACTIVESTOCK  GROUP BY SYMBOL)"
+---
+>         master_load_query="SELECT DISTINCT X.COMPANY_NAME, X.SYMBOL, X.SERIES, DECODE(X.QUANTITY,0,'N','Y') ACTIVE_STOCK_IND, X.DATE_OF_PURCHASE, X.FIRST_PURCHASE_DATE, X.LAST_PURCHASE_DATE, X.QUANTITY QUANTITY_AVAILABLE, X.PRICE_OF_STOCK PURCHASE_PRICE_OF_STOCK, X.CURRENT_PRICE CURRENT_PRICE_OF_STOCK, X.PRICE_OF_STOCK*0.9 STOP_LOSS_TRIGGER_AMT, (X.CURRENT_PRICE-X.PRICE_OF_STOCK) CNG_SINCE_BOUGHT, X.MNTH_CHANGE CNG_LAST_1_MONTHS, (X.CURRENT_PRICE-a.CLOSE_PRICE) CNG_LAST_6_MONTHS, decode(greatest((X.CURRENT_PRICE-X.PRICE_OF_STOCK),0), 0,'LOSS','GAIN') STATUS, a.STOCK_EXCHANGE, x.LOAD_DT_TIME LOAD_DT_TIME FROM nse_activestock A INNER JOIN (SELECT A.COMPANY_NAME,A.SYMBOL,A.SERIES,A.DATE_OF_PURCHASE,B.FIRST_PURCHASE_DATE,a.PRICE_OF_STOCK,C.LAST_PURCHASE_DATE,D.QUANTITY,E.CURRENT_PRICE,F.MNTH_CHANGE,a.LOAD_DT_TIME FROM STOCK_DETAILS_SNAPSHOT a LEFT OUTER JOIN (SELECT COMPANY_NAME,SYMBOL,MIN(DATE_OF_PURCHASE) FIRST_PURCHASE_DATE FROM STOCK_DETAILS_SNAPSHOT GROUP BY COMPANY_NAME,SYMBOL)B ON A.COMPANY_NAME=B.COMPANY_NAME AND A.SYMBOL=B.SYMBOL LEFT OUTER JOIN (SELECT COMPANY_NAME,SYMBOL,MAX(DATE_OF_PURCHASE) LAST_PURCHASE_DATE FROM STOCK_DETAILS_SNAPSHOT GROUP BY COMPANY_NAME,SYMBOL)C ON A.COMPANY_NAME=C.COMPANY_NAME AND A.SYMBOL=C.SYMBOL LEFT OUTER JOIN (SELECT A.COMPANY_NAME,A.SYMBOL,(A.QUANTITY-NVL(B.SELL,0)) QUANTITY  FROM STOCK_DETAILS_SNAPSHOT  A LEFT OUTER JOIN (SELECT COMPANY_NAME,SYMBOL,QUANTITY SELL FROM STOCK_DETAILS_SNAPSHOT WHERE ORDER_TYPE='SELL') B ON A.COMPANY_NAME=B.COMPANY_NAME  AND A.SYMBOL=B.SYMBOL WHERE A.ORDER_TYPE='BUY' ) D  ON A.COMPANY_NAME=D.COMPANY_NAME AND A.SYMBOL=D.SYMBOL  LEFT OUTER JOIN  (SELECT COMPANY_NAME,SYMBOL,CLOSE_PRICE CURRENT_PRICE FROM NSE_ACTIVESTOCK WHERE (SYMBOL,STOCK_DATE) IN (SELECT SYMBOL,MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK GROUP BY SYMBOL)) E  ON A.COMPANY_NAME=E.COMPANY_NAME AND A.SYMBOL=E.SYMBOL LEFT OUTER JOIN (select A.COMPANY_NAME,B.SYMBOL,A.SERIES,(a.CLOSE_PRICE-B.CLOSE_PRICE) MNTH_CHANGE from NSE_ACTIVESTOCK a,NSE_ACTIVESTOCK b where a.COMPANY_NAME=b.COMPANY_NAME and a.SYMBOL=b.SYMBOL and a.SERIES=b.SERIES AND (A.SYMBOL,A.STOCK_DATE) IN (SELECT SYMBOL,MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK GROUP BY SYMBOL) AND (B.SYMBOL,B.STOCK_DATE) IN (SELECT SYMBOL,MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK WHERE (STOCK_DATE)<(SELECT DISTINCT MAX(STOCK_DATE) FROM NSE_ACTIVESTOCK) GROUP BY SYMBOL) )F ON A.COMPANY_NAME=F.COMPANY_NAME AND A.SYMBOL=F.SYMBOL GROUP BY A.COMPANY_NAME,A.SYMBOL,A.SERIES,A.DATE_OF_PURCHASE,B.FIRST_PURCHASE_DATE,a.PRICE_OF_STOCK,C.LAST_PURCHASE_DATE,D.QUANTITY,E.CURRENT_PRICE,F.MNTH_CHANGE,a.LOAD_DT_TIME) X ON A.COMPANY_NAME=X.COMPANY_NAME AND A.SYMBOL=X.SYMBOL where (A.SYMBOL,A.STOCK_DATE) IN (SELECT SYMBOL,MIN(STOCK_DATE) FROM NSE_ACTIVESTOCK WHERE STOCK_DATE>=('01-'||to_char(add_months(SYSDATE,-6),'MON')||'-'||to_char(add_months(SYSDATE,-6),'YYYY')) GROUP BY SYMBOL)"
+47,48c48,49
+<         
+<         query="select COUNT(*) as 'CNT'  from STOCK_DETAILS_MASTER  where CURRENT_PRICE_OF_STOCK<=STOP_LOSS_TRIGGER_AMT and active_stock_ind='Y'"
+---
+> 
+>         query="select COUNT(*) CNT  from STOCK_DETAILS_MASTER  where CURRENT_PRICE_OF_STOCK<=STOP_LOSS_TRIGGER_AMT and active_stock_ind='Y'"
+15,16c15,16
+<     
+<     reload(sys.modules['nse_stock_load.variables'])
+---
+> 
+>     reload(sys.modules['nse_stock_load.variables'])    
+34,37d33
+<          
+<     purge_files.pruge()                             # Purging files at start
+<     
+38a35,36
+>     purge_files.pruge()                             # Purging files at start
+> 
+50c48
+---
+63c61
+---
+68c66
+---
+72c70
+---
+76c74
+---
+87c85
+---
+90,92c88,89
+<     
+---
+> 
+94,95c91
+<     
+---
+> 
+97,99c93
+<         
+---
+> 
+104,109c98
+<         
+<         reload(sys.modules['nse_stock_load.variables'])
+<         from nse_stock_load.variables import start_year,start_month,current_year,current_month,current_day
+<         
+<         
+---
+> 
+118a108
+> 
+120,121c110,114
+<             break
+\ No newline at end of file
+---
+>             break
+> 
+> # Create folder structures
+> # download relavent packages
+\ No newline at end of file
+6,8d5
+< from importlib import reload
+< import sys
+< 
+10c7
+<     
+---
+> 
+33c30
+<               
+---
+> 
+50c47
+<     
+---
+> 
+56c53
+---
+62c59
+<     
+---
+> 
+73,74c70,71
+<             min_date=df['index_date'].min().strftime("%Y-%m-%d")
+<             max_date=df['index_date'].max().strftime("%Y-%m-%d")
+---
+>             min_date=df['index_date'].min().strftime("%d-%b-%Y")
+>             max_date=df['index_date'].max().strftime("%d-%b-%Y")
+78c75
+---
+85c82
+<     
+---
+> 
+18c18
+<     
+---
+> 
+29,30c29,30
+<         self.mon=mon
+<         
+---
+>         self.mon=mon    
+> 
+60c60
+---
+64d63
+< 
+76c75
+---
