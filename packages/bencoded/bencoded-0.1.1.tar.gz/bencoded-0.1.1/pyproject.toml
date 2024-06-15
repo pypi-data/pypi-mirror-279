@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bencoded"
+packages = [{ include = "bencoding" }]
+version = "0.1.1"
+description = "Decode benocoded binary files."
+authors = ["Maxwell Muoto <maxmuoto@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+include = ["bencoding/py.typed"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typing-extensions = "^4.12.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+ruff = "^0.4.8"
+pyright = "^1.1.367"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
