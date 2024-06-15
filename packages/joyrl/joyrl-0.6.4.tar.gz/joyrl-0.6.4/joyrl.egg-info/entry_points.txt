@@ -1,0 +1,3 @@
+[console_scripts]
+joyrl = joyrl.scripts.scripts:main
+
