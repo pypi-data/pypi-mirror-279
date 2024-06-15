@@ -1,0 +1,24 @@
+[project]
+name = "memoizelabs"
+authors = [
+    {name = "Julius Arolovitch", email = "julius@memoizelabs.com"},
+    {name = "Maxim Yagnyatinskiy", email = "max@memoizelabs.com"},
+    {name = "Robert Devenyi", email = "rob@memoizelabs.com"},
+    {name = "Eden Brunner", email = "eden@memoizelabs.com"},
+]
+version = "0.0.1.1"  
+description = "Fork, Memoize Labs' API for training and using human-like models."
+readme = "README.md"
+dependencies = [
+    "requests>=2.25.1",
+    "pyaudio>=0.2.11"
+]
+
+[project.urls]
+homepage = "https://memoizelabs.com"
+repository = "https://github.com/memoizelabs/Fork"
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
