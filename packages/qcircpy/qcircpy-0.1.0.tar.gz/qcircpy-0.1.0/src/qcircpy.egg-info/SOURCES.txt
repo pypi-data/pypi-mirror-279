@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/qcircpy/__init__.py
+src/qcircpy/circuits.py
+src/qcircpy/debugging.py
+src/qcircpy/engine.py
+src/qcircpy/exceptions.py
+src/qcircpy/gates.py
+src/qcircpy/quantum.py
+src/qcircpy.egg-info/PKG-INFO
+src/qcircpy.egg-info/SOURCES.txt
+src/qcircpy.egg-info/dependency_links.txt
+src/qcircpy.egg-info/requires.txt
+src/qcircpy.egg-info/top_level.txt
