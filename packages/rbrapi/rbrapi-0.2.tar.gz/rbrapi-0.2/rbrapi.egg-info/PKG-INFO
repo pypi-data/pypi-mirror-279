@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: rbrapi
+Version: 0.2
+Summary: Unofficial Python Client for Rocket Bot Royale Game API
+Author-email: VWH <vwhe@proton.me>
+Project-URL: Homepage, https://github.com/Rocket-Bot-Royale/api
+Project-URL: Issues, https://github.com/Rocket-Bot-Royale/api/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# Install :
+
+```commandline
+pip install -U rbrapi
+```
+
+```python
+# soon
+```
