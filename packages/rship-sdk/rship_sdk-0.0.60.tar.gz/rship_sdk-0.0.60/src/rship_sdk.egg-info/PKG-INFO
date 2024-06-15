@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: rship-sdk
+Version: 0.0.60
+Summary: The Rship SDK in python
+Author-email: Max Fletcher <max@lucid.rocks>, Trevor Sargent <trev@lucid.rocks>
+Project-URL: Homepage, https://github.com/lucid-rocks/rocketship
+Project-URL: Issues, https://github.com/lucid-rocks/rocketship/issues
+Project-URL: Docs, https://docs.rship.io
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: myko
+
+# Rship-Python
