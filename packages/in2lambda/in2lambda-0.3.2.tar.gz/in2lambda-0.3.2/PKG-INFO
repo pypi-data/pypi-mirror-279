@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: in2lambda
+Version: 0.3.2
+Summary: Converts content ready for import into Lambda Feedback
+Home-page: https://lambda-feedback.github.io/in2lambda
+License: MIT
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Typing :: Typed
+Requires-Dist: beartype (>=0.17.2,<0.18.0)
+Requires-Dist: panflute (>=2.3.1,<3.0.0)
+Requires-Dist: rich-click (>=1.7.4,<2.0.0)
+Project-URL: Bug Tracker, https://github.com/lambda-feedback/in2lambda/issues
+Project-URL: Documentation, https://lambda-feedback.github.io/in2lambda
+Project-URL: Repository, https://github.com/lambda-feedback/in2lambda
+Description-Content-Type: text/markdown
+
+# in2lambda
+
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lambda-feedback/in2lambda/test.yml?style=flat-square&logo=github&label=tests)](https://github.com/lambda-feedback/in2lambda/actions/workflows/test.yml)
+[![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lambda-feedback/in2lambda/deploy-docs.yml?style=flat-square&logo=googledocs&logoColor=white&label=docs)](https://lambda-feedback.github.io/in2lambda/)
+
+in2lambda is a Python command line tool and library that automagically uploads questions to [Lambda Feedback](https://lambdafeedback.com/).
+
+Find out more in the [documentation](https://lambda-feedback.github.io/in2lambda/).
+
+```
+$ pip install in2lambda
+```
+

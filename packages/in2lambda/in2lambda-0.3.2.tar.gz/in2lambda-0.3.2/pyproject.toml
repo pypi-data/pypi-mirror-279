@@ -1,0 +1,61 @@
+[tool.poetry]
+name = "in2lambda"
+version = "0.3.2"
+description = "Converts content ready for import into Lambda Feedback"
+authors = []
+license = "MIT"
+readme = "README.md"
+include = ["in2lambda/py.typed"]
+classifiers = [
+  "Natural Language :: English",
+  "Operating System :: OS Independent",
+  'Typing :: Typed',
+  'Development Status :: 3 - Alpha',
+  'Programming Language :: Python :: 3 :: Only',
+]
+
+homepage = "https://lambda-feedback.github.io/in2lambda"
+repository = "https://github.com/lambda-feedback/in2lambda"
+documentation = "https://lambda-feedback.github.io/in2lambda"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/lambda-feedback/in2lambda/issues"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+panflute = "^2.3.1"
+rich-click = "^1.7.4"
+beartype = "^0.17.2"
+
+[tool.poetry.scripts]
+in2lambda = "in2lambda.main:cli"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+isort = "^5.13.2"
+pydocstyle = "^6.3.0"
+mypy = "^1.9.0"
+pytest = "^8.1.1"
+pytest-cov = "^4.1.0"
+pytest-sugar = "^1.0.0"
+pre-commit = "^3.6.2"
+
+[tool.poetry.group.docs.dependencies]
+furo = "^2024.1.29"
+myst-parser = "^2.0.0"
+sphinx = "^7.2.6"
+sphinx-copybutton = "^0.5.2"
+sphinx-design = "^0.5.0"
+sphinx-click = "^5.1.0"
+sphinxext-opengraph = "^0.9.1"
+sphinxcontrib-pdfembed = { git = "https://github.com/SuperKogito/sphinxcontrib-pdfembed.git" }
+sphinxcontrib-programoutput = "^0.17"
+sphinx-togglebutton = "^0.3.2"
+
+[tool.mypy]
+# panflute is missing type hints
+ignore_missing_imports = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
