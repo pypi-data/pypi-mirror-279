@@ -1,0 +1,7 @@
+[console_scripts]
+hed_create_ontology = hed.scripts.create_ontology:main
+hed_update_schemas = hed.scripts.convert_and_update_schema:main
+hed_validate_schemas = hed.scripts.validate_schemas:main
+run_remodel = hed.tools.remodeling.cli.run_remodel:main
+run_remodel_backup = hed.tools.remodeling.cli.run_remodel_backup:main
+run_remodel_restore = hed.tools.remodeling.cli.run_remodel_restore:main
