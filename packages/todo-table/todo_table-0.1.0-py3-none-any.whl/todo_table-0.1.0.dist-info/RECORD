@@ -1,0 +1,9 @@
+todo_table/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+todo_table/cli.py,sha256=X7Fo2Q713WJYME2lTzIcJldPu-2P66OYWQnOG7r9QLQ,2634
+todo_table/database.py,sha256=zWgLn5aKY4oNGaKihrdSP5den14ZmX7sx6KmPUPf3Do,1669
+todo_table/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+todo_table/todo.py,sha256=rdxiqb5dwOA2-GZpu1hWIEGEZCXzGgsOSwAhYaftBMQ,3005
+todo_table-0.1.0.dist-info/METADATA,sha256=jCHndMYhg1RHe6M3VBW0MxATbJt9nEk_CViJmPBegPE,925
+todo_table-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+todo_table-0.1.0.dist-info/entry_points.txt,sha256=X-OxUeIsZrA7K5MKB1Nsbv1Pkswl2C5fkUjyVjbSVs4,48
+todo_table-0.1.0.dist-info/RECORD,,

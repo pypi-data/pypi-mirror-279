@@ -1,0 +1,3 @@
+[console_scripts]
+todotable=todo_table.cli:cli
+
