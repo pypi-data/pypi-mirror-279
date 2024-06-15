@@ -1,0 +1,13 @@
+numpy
+pandas
+
+[dev]
+pytest
+pytest-cov
+build
+twine
+black
+pre-commit
+pylint
+sphinx
+ipython

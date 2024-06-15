@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: Str2D
+Version: 0.1.1
+Summary: Manipulate 2D strings in Python.
+Home-page: https://github.com/pirsquared/Str2D
+Author: Sean Smith
+Author-email: Sean Smith <pirsquared.pirr@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/pirsquared/Str2D
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+
+Str2D - String Squared
+======================
+
+Installation
+------------
+
+`pip install str2d`
+
+Documentation
+-------------
