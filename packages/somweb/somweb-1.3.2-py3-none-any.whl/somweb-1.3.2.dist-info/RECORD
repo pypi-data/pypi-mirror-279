@@ -1,0 +1,11 @@
+somweb/__init__.py,sha256=8C8D2M2_9eoj02FCJl1tCKX4keimjToauu52U0o-psc,110
+somweb/__version__.py,sha256=pAXWV1ct2mjRqxPzTS8znRzdM7CuiPz_6g3a3t2pxgc,84
+somweb/client.py,sha256=DAt10Qrah_JsXPPfo2riOHBlqNq7zwftLtGCkcrP6RY,24700
+somweb/const.py,sha256=ulKXyL1CHhHLk0fUAvZM6p4qYp_PXd7H18mTVrP-J6s,2259
+somweb/httpclient.py,sha256=1G-t6yzxZ3I0iGQFdJUXpYQYGAtfpTWPkyV_IlO0jmQ,4330
+somweb/models.py,sha256=vJ4sH-j5gXY1yfl4KaSUUFAZRmon6YQ2SEAJSmuPmDs,916
+somweb-1.3.2.dist-info/LICENSE,sha256=uz4I6R8ZvXUP8zBHub0u8QjoSiqqGmgmYf50obGW9H4,1091
+somweb-1.3.2.dist-info/METADATA,sha256=nM935CuKeTMpDmEfPVEr3xfkkDZop2qUEbpilxPbJgA,8224
+somweb-1.3.2.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+somweb-1.3.2.dist-info/top_level.txt,sha256=boTQ7t2oRndyA8VkXqvzpclG8VacWnnWGE3vC8Dr8qs,7
+somweb-1.3.2.dist-info/RECORD,,
