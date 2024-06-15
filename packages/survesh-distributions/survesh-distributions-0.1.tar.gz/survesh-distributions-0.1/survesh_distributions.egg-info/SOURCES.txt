@@ -1,0 +1,10 @@
+setup.py
+survesh-distributions/Binomialdistribution.py
+survesh-distributions/Gaussiandistribution.py
+survesh-distributions/Generaldistribution.py
+survesh-distributions/__init__.py
+survesh_distributions.egg-info/PKG-INFO
+survesh_distributions.egg-info/SOURCES.txt
+survesh_distributions.egg-info/dependency_links.txt
+survesh_distributions.egg-info/not-zip-safe
+survesh_distributions.egg-info/top_level.txt
