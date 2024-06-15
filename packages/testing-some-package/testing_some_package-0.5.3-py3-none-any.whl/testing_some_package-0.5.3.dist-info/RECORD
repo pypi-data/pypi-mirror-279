@@ -1,0 +1,6 @@
+testing_some_package/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+testing_some_package/test.py,sha256=n72laHs1WtgLU4H89PrH3HflBKOybXIe1DuhxGUttzI,52
+testing_some_package-0.5.3.dist-info/METADATA,sha256=aA0Jbl6iUJax6i_zcCYMLgQ46rKctUmjkVl2rOm9jLI,1178
+testing_some_package-0.5.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+testing_some_package-0.5.3.dist-info/entry_points.txt,sha256=vSCL_YGi-0EWrbn-pmHhGCEub3XayIZcwIFFI8mLHQM,75
+testing_some_package-0.5.3.dist-info/RECORD,,
