@@ -1,0 +1,120 @@
+#+author: Felix Dangel
+#+title: unfoldNd: N-dimensional unfold in PyTorch
+
+[[https://coveralls.io/repos/github/f-dangel/unfoldNd/badge.svg?branch=main]]
+[[https://img.shields.io/badge/python-3.8+-blue.svg]]
+
+This package uses a numerical trick to perform the operations of [[https://pytorch.org/docs/stable/nn.functional.html#torch.nn.functional.unfold][ ~torch.nn.functional.unfold~ ]] and [[https://pytorch.org/docs/stable/generated/torch.nn.Unfold.html][ ~torch.nn.Unfold~ ]], also known as ~im2col~. It extends them to higher-dimensional inputs that are currently not supported.
+
+From the [[https://pytorch.org/docs/stable/generated/torch.nn.Unfold.html][PyTorch docs]]:
+
+#+begin_quote
+Currently, only 4-D input tensors (batched image-like tensors) are supported.
+#+end_quote
+
+~unfoldNd~ implements the operation for 3d and 5d inputs and shows good [[id:489186e1-e003-47e6-87df-5266592ff278][performance]].
+
+---
+
+*News:*
+
+- [2022-11-09 Wed]: Support for input unfolding for transpose convolutions (~im2col~) with 3d/4d/5d inputs.
+
+- [2021-05-02 Sun]: ~unfoldNd~ now also generalizes the ~fold~ operation (~col2im~) to 3d/4d/5d inputs
+
+* Installation
+
+#+begin_src python
+  pip install --user unfoldNd
+#+end_src
+
+* Usage
+
+- [[file:examples/example_unfold.py][Simple example]]
+
+This package offers the following main functionality:
+
+- ~unfoldNd.unfoldNd~ :: Like [[https://pytorch.org/docs/stable/nn.functional.html#torch.nn.functional.unfold][ ~torch.nn.functional.unfold~ ]], but supports 3d, 4d, and 5d inputs.
+
+- ~unfoldNd.UnfoldNd~ :: Like [[https://pytorch.org/docs/stable/generated/torch.nn.Unfold.html][ ~torch.nn.Unfold~ ]], but supports 3d, 4d, and 5d inputs.
+
+** Additional functionality (exotic)
+
+Turned out the multi-dimensional generalization of [[https://pytorch.org/docs/stable/nn.functional.html#torch.nn.functional.unfold][ ~torch.nn.functional.unfold~ ]] can be used to generalize [[https://pytorch.org/docs/stable/nn.functional.html#torch.nn.functional.fold][ ~torch.nn.functional.fold~ ]],
+
+- [[file:examples/example_fold.py][Simple example]]
+
+exposed through
+
+- ~unfoldNd.foldNd~ :: Like [[https://pytorch.org/docs/stable/nn.functional.html#torch.nn.functional.fold][ ~torch.nn.functional.fold~ ]], but supports 3d, 4d, and 5d inputs.
+
+- ~unfoldNd.FoldNd~ :: Like [[https://pytorch.org/docs/stable/generated/torch.nn.Fold.html][ ~torch.nn.Fold~ ]], but supports 3d, 4d, and 5d inputs.
+
+Keep in mind that, while tested, this feature is not benchmarked. However, sane performance can be expected, as it relies on N-dimensional unfold (benchmarked) and [[https://pytorch.org/docs/stable/generated/torch.scatter_add.html?highlight=scatter_add#torch.scatter_add][ ~torch.scatter_add~ ]].
+
+---
+
+Like input unfolding for convolutions, one can apply the same concept to the input of a transpose convolution. There is no comparable functionality for this in PyTorch as it is very exotic.
+
+The following example explains input unfolding for transpose convolutions by demonstrating the connection to transpose convolution as matrix multiplication.
+
+- [[file:examples/example_unfold_transpose.py][Simple example]]
+
+This functionality is exposed through
+
+- ~unfoldNd.unfoldTransposeNd~ :: Like ~unfoldNd.unfoldNd~, but for unfolding inputs of transpose convolutions.
+
+- ~unfoldNd.UnfoldTransposeNd~ :: Like ~unfoldNd.UnfoldNd~, but for unfolding inputs of transpose convolutions.
+
+* Performance
+:PROPERTIES:
+:ID:       489186e1-e003-47e6-87df-5266592ff278
+:END:
+
+*TL;DR:* If you are willing to sacrifice a bit of RAM, you can get decent speedups with =unfoldNd= over =torch.nn.Unfold= in both the =forward= and =backward= operations.
+
+---
+
+There is a continuous benchmark comparing the forward pass (and forward-backward pass) run time and peak memory [[https://f-dangel.github.io/unfoldNd-benchmark/][here]]. The settings are:
+
+- "example" :: Configuration used in the [[file:examples/example.py][example]].
+
+- "allcnnc-conv{1,2,3,4,6,7,8}" :: Convolution layers from the All-CNNC on CIFAR-100 with batch size 256, borrowed from [[https://github.com/fsschneider/DeepOBS][DeepOBS]]. Layers 5 and 9 have been removed because they are identical to others in terms of input/output shapes and hyperparameters.
+
+  This is a reasonably large setting where one may want to compute the unfolded input, e.g. for the KFAC approximation.
+
+** Hardware details
+
+The machine running the benchmark has 32GB of RAM with components
+
+- =cpu=: Intel® Core™ i7-8700K CPU @ 3.70GHz × 12
+
+- =cuda=: GeForce RTX 2080 Ti (11GB)
+
+** Results
+
+- Forward pass: =unfoldNd= is faster than =torch.nn.Unfold= in all, except one, benchmarks. The latest commit run time is compared [[https://f-dangel.github.io/unfoldNd-benchmark/#benchmarks.Suite.time_forward?x-axis=problem&p-device='cuda'][here]] on GPU, and [[https://f-dangel.github.io/unfoldNd-benchmark/#benchmarks.Suite.time_forward?x-axis=problem&p-device='cpu'][here]] on CPU.
+
+- Forward-backward pass: =unfoldNd= is faster than =torch.nn.Unfold= in all benchmarks. The latest commit run time is compared [[https://f-dangel.github.io/unfoldNd-benchmark/#benchmarks.Suite.time_backward?x-axis=problem&p-device='cuda'][here]] on GPU, and [[https://f-dangel.github.io/unfoldNd-benchmark/#benchmarks.Suite.time_backward?x-axis=problem&p-device='cpu'][here]] on CPU.
+
+- Higher peak memory: The one-hot convolution approach used by =unfoldNd= consistently reaches higher peak memory (see [[https://f-dangel.github.io/unfoldNd-benchmark/#benchmarks.Suite.peakmem_forward?x-axis=problem][here]]). The difference to =torch.nn.Unfold= is higher than the one-hot kernel storage; probably the underlying convolution requires additional memory (not confirmed).
+
+* Background
+
+Convolutions can be expressed as matrix-matrix multiplication between two objects; a matrix-view of the kernel and the unfolded input. The latter results from stacking all elements of the input that overlap with the kernel in one convolution step into a matrix. This perspective is sometimes helpful because it allows treating convolutions similar to linear layers.
+
+** The trick
+
+Extracting the input elements that overlap with the kernel can be done by a one-hot kernel of the same dimension, and using group convolutions.
+
+** Applications
+
+This is an incomplete list where the unfolded input may be useful:
+
+- It has been used for developing second-order optimization methods in deep learning by approximating the Fisher with Kronecker factors. See [[https://arxiv.org/abs/1602.01407][A Kronecker-factored approximate Fisher matrix for convolution layers]].
+
+- I've used the similarity between linear and convolutional layers to implement some automatic differentiation operations for the latter in [[https://www.backpack.pt][BackPACK]].
+
+* Known issues
+
+Encountered a problem? Open an issue [[https://github.com/f-dangel/unfoldNd/issues][here]].
