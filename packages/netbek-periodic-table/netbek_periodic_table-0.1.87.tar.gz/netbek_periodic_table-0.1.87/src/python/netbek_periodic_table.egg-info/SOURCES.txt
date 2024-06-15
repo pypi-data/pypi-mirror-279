@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/python/netbek/__init__.py
+src/python/netbek/periodic_table/__init__.py
+src/python/netbek/periodic_table/macros/render_axis_cell.jinja2
+src/python/netbek/periodic_table/macros/render_blockholder_element_cell.jinja2
+src/python/netbek/periodic_table/macros/render_element_cell.jinja2
+src/python/netbek/periodic_table/macros/render_empty_cell.jinja2
+src/python/netbek/periodic_table/macros/render_legend.jinja2
+src/python/netbek/periodic_table/macros/render_table_18.jinja2
+src/python/netbek_periodic_table.egg-info/PKG-INFO
+src/python/netbek_periodic_table.egg-info/SOURCES.txt
+src/python/netbek_periodic_table.egg-info/dependency_links.txt
+src/python/netbek_periodic_table.egg-info/requires.txt
+src/python/netbek_periodic_table.egg-info/top_level.txt
