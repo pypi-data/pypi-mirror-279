@@ -1,0 +1,16 @@
+masking/__init__.py,sha256=4HlJXe8haEgGtKlJciKduZOXcnqa-7f-D98uDSutOW8,535
+masking/mask.py,sha256=Gf9OzUZv1wlX4NBD6eHYfo2NRrizCSw-_NSQeb-drDY,7759
+masking/perforation.py,sha256=aQWdg1nrpjScepvY4IHM6u-gO9sG7Ry915AgWOzqm6c,382
+masking/stencil.py,sha256=UeToclhfXIcEyPBoSToMQUN5s7MOZUkj41cJkmXNEtc,4549
+str2d/__init__.py,sha256=qLUVgM0NIbihlDMQnKqUFAQtPl5xPfX6tDwMRSYTQ1w,430
+str2d/str2d.py,sha256=P-obxRKtJ-Q6ecT0v0kpM3bJZ2No17YXyZRgowFVag8,36233
+str2d/utils.py,sha256=i4CiXa-6n8FRGB8Lhcdhv_ttD1OAkkHO2r4bcAoFO8M,2181
+tests_stencils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests_stencils/test_mask.py,sha256=xiRWI4u9A6_VqTlNR2Rl_aEESU22Dd0f3WNqK-gvYW8,20362
+tests_stencils/test_perforation.py,sha256=TivOtGfg7ZXq3NCwUQyHIeFQs1kepNT3ikunpIydjOM,1555
+tests_stencils/test_stencil.py,sha256=XauS1l-5lDrtS8suMvgx6t8-6uFctcFPhS2MiHCr_5c,4104
+Str2D-0.1.1.dist-info/LICENSE.txt,sha256=PJGaKjZ2R9Z-x5SGN1HE8bpUOgQGKvxxnNqMqfymXxA,1070
+Str2D-0.1.1.dist-info/METADATA,sha256=LgUCnD-k_iX19oltsqKwM4tQIQpfnmROt0JNr2hcg7U,1061
+Str2D-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Str2D-0.1.1.dist-info/top_level.txt,sha256=xtoW6t1AEsySK-Tfoe4XS7tAfQaPptaKSG5iQLBmufE,29
+Str2D-0.1.1.dist-info/RECORD,,
