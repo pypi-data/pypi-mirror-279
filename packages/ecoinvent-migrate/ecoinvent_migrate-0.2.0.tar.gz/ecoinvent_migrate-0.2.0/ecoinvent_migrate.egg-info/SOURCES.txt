@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+ecoinvent_migrate/__init__.py
+ecoinvent_migrate/data_io.py
+ecoinvent_migrate/datapackage.py
+ecoinvent_migrate/errors.py
+ecoinvent_migrate/main.py
+ecoinvent_migrate/utils.py
+ecoinvent_migrate/wrangling.py
+ecoinvent_migrate.egg-info/PKG-INFO
+ecoinvent_migrate.egg-info/SOURCES.txt
+ecoinvent_migrate.egg-info/dependency_links.txt
+ecoinvent_migrate.egg-info/requires.txt
+ecoinvent_migrate.egg-info/top_level.txt
+tests/test_wrangling.py
