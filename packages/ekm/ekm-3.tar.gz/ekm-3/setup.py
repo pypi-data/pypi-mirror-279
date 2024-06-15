@@ -1,0 +1,8 @@
+from setuptools import setup, find_packages
+
+setup(name='ekm',
+      version='3',
+      description='none',
+      packages=['ekm'],
+      author_email='antoha123_3@mail.ru',
+      zip_safe=False)
