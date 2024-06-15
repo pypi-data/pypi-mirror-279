@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: flightplotting
+Version: 0.2.6
+Summary: Tools for Plotting Flight Data in Plotly
+Author-email: Thomas David <thomasdavid0@gmail.com>
+License: GNU GPL v3
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Requires-Dist: pfc-geometry >=0.2.4
+Requires-Dist: flightdata >=0.2.6
+Requires-Dist: flightanalysis >=0.2.6
+
+# FlightPlotting
+
+
+This module contains utilities for plotting flight data using plotly
+
+
+```bash
+pip install flightplotting
+```
+
+```bash
+pip install -e .
+```
