@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+dlcalc/samples_per_sec_to_tokens_per_day.py
+dlcalc/summarize_checkpoint.py
+dlcalc/training_3d.py
+dlcalc.egg-info/PKG-INFO
+dlcalc.egg-info/SOURCES.txt
+dlcalc.egg-info/dependency_links.txt
+dlcalc.egg-info/entry_points.txt
+dlcalc.egg-info/requires.txt
+dlcalc.egg-info/top_level.txt
