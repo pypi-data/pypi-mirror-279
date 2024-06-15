@@ -1,0 +1,27 @@
+[workspace]
+members = ["rgrow", "py-rgrow"]
+default-members = ["rgrow"]
+resolver = "2"
+
+[workspace.dependencies]
+ndarray = {version = "^0.15", features = ["serde"]}
+rand = {version = "^0", features = ["small_rng"]}
+serde = {version = "^1.0.185", features=["derive"]}
+pyo3 = {version = "^0.21", features = ["extension-module", "multiple-pymethods"]}
+rayon = { version = "1" }
+numpy = "^0.21"
+enum_dispatch = "0.3"
+pyo3-polars = "^0.14"
+polars = {version = "^0.40", features = ["lazy"]}
+
+[workspace.package]
+version = "0.14.1"
+authors = ["Constantine Evans <const@costi.net>"]
+edition = "2021"
+repository = "https://github.com/cgevans/rgrow"
+license = "BSD-3-Clause"
+categories = ["science", "simulation"]
+
+[profile.release]
+# debug = true
+# lto = true
