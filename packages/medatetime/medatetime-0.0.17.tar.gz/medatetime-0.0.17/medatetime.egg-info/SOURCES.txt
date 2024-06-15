@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+version.txt
+./src/rfc3339.c
+medatetime/__init__.py
+medatetime/_pure.py
+medatetime.egg-info/PKG-INFO
+medatetime.egg-info/SOURCES.txt
+medatetime.egg-info/dependency_links.txt
+medatetime.egg-info/not-zip-safe
+medatetime.egg-info/top_level.txt
+scripts/bench_medatetime.py
+test/test_udatetime.py

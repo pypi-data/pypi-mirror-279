@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: medatetime
+Version: 0.0.17
+Summary: Fast RFC3339 compliant date-time library
+Home-page: https://github.com/timkpaine/medatetime
+Author: Tim Paine
+Author-email: t.paine154@gmail.com
+License: Apache 2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+
+# medatetime: Fast RFC3339 compliant date-time library
