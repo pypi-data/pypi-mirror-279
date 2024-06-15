@@ -1,0 +1,3 @@
+[console_scripts]
+computeragent = gpt_computer_agent.start:start
+
