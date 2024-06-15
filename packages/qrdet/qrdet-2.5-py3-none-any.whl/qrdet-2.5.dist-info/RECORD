@@ -1,0 +1,15 @@
+build/lib/qrdet/__init__.py,sha256=_ifmMu9kP4LI1Kyxb0xMamRb95_X1z3LrKIs-CxY-Hg,313
+build/lib/qrdet/_qrdet_helpers.py,sha256=zvVnr9-jSQ-vMVD3-82ySz2lFkyQtsL5hJjD_YxeG7o,15173
+build/lib/qrdet/output_qrdet_dict_keys.py,sha256=GzWeZ-mbFcvv8mX-Ry5HR2JjanMbe-0rjS-rbxUJXoI,468
+build/lib/qrdet/qrdet.py,sha256=5bLv1j0bg_7Nrb4IyAPn9yuesNFIdxBKqVRF1reH9GY,8561
+build/lib/venv/bin/activate_this.py,sha256=fvPzMbbVJWNOv7QziL9ekbJ118JbxvK4JxXtdylsMzI,1337
+qrdet/__init__.py,sha256=_ifmMu9kP4LI1Kyxb0xMamRb95_X1z3LrKIs-CxY-Hg,313
+qrdet/_qrdet_helpers.py,sha256=zvVnr9-jSQ-vMVD3-82ySz2lFkyQtsL5hJjD_YxeG7o,15173
+qrdet/output_qrdet_dict_keys.py,sha256=GzWeZ-mbFcvv8mX-Ry5HR2JjanMbe-0rjS-rbxUJXoI,468
+qrdet/qrdet.py,sha256=5bLv1j0bg_7Nrb4IyAPn9yuesNFIdxBKqVRF1reH9GY,8561
+venv/bin/activate_this.py,sha256=fvPzMbbVJWNOv7QziL9ekbJ118JbxvK4JxXtdylsMzI,1337
+qrdet-2.5.dist-info/LICENSE,sha256=7ur-GB3ck2Gwo1lYchTRkkO_QHEYevHuef8gJrU0AF8,1068
+qrdet-2.5.dist-info/METADATA,sha256=SQCGMolzScX63n_Qcw6XkhUcLzWj2L49yORSS-0sBxM,6699
+qrdet-2.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+qrdet-2.5.dist-info/top_level.txt,sha256=qynNjqM1qLnX_-DsEyrD0Vfc2uh43_kFdWZlI9faeYo,27
+qrdet-2.5.dist-info/RECORD,,
