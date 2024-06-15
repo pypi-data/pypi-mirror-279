@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: SARLens
+Version: 0.2
+Summary: SAR Focusing using AI
+Author: Roberto Del Prete
+Author-email: roberto.delprete@ext.esa.int
+Project-URL: Source, https://github.com/sirbastiano/AutoFocusNet
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Environment :: GPU :: NVIDIA CUDA :: 11.0
+Requires-Python: >=3.10, <4
+Description-Content-Type: text/markdown
+Requires-Dist: asf_search==7.1.2
+Requires-Dist: pandas
+Requires-Dist: rasterio
+Requires-Dist: matplotlib
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: torchmetrics
+Requires-Dist: seaborn
+
+A python package for SAR focusing and AI designed with torch and lightning. Sentinel-1 decoeder imported from Rich-Hall
