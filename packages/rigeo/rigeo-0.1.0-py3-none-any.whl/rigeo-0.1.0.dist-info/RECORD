@@ -1,0 +1,17 @@
+rigeo/__init__.py,sha256=8lTNAocwL2iRFptBiPIb7_QRJtEWtnbhz9IfGNtvRP8,787
+rigeo/closest.py,sha256=CPhad369yf7S7JQRT689Umrj2oCuTdoLuzL8VpFhhMs,1679
+rigeo/constraint.py,sha256=ddqIwyIOGovj7mSNdVQ6I8HS_FRA5F6fmVrqjwPY5RQ,3726
+rigeo/experiment.py,sha256=7qZChowxpFM0zgZAakZJdBDfCzKTcfu3QG_IjEtAY6s,9560
+rigeo/geodesic.py,sha256=eES83yIj_qR5-uY6X0bAdkQH0lcAo71cM9dotcqvYuY,813
+rigeo/identify.py,sha256=owKZRWEliS4XaDM0H15muFShOgVVHPn63bePmH2w9uY,6202
+rigeo/inertial.py,sha256=mXgF4k8vpwdwA5UpFMzW8DrcW7Qrh2A3x69E2LaeL2w,7123
+rigeo/multibody.py,sha256=wVYXfsREMzU1UYSZwXLAPpwj1UeHD81dfKqSwAEwV6A,12025
+rigeo/polydd.py,sha256=SHhtBfuctTChRTCFH7TPZCmCst10RCi_G09KN-DdRPw,8420
+rigeo/random.py,sha256=YTvuZ_9yIYkGKRisqccai0zKUNV8Ly1q7R_6Nx7L87Y,3595
+rigeo/rigidbody.py,sha256=s9VBYaS7rD9NEYL-PV9ArywT3y23tFmB0GKDratlAlA,6732
+rigeo/shape.py,sha256=sSlRKnGAgu3BEMUFDYxY-uKMMxigxl4JxCVE6kNh7iQ,57285
+rigeo/util.py,sha256=fHkgCGxtODAix0MtFwldyowaBbbtnIM-OBJSx5we-J0,3171
+rigeo-0.1.0.dist-info/LICENSE,sha256=Qwnxpwbhy5mV_Z5WTQ_uTzErX4jLJEy2A9kBNlBwo3k,1077
+rigeo-0.1.0.dist-info/METADATA,sha256=zahbrJ0OHa6y0dixvwN8tNUuSYzn_euktkRTwV5H8ns,3275
+rigeo-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+rigeo-0.1.0.dist-info/RECORD,,
