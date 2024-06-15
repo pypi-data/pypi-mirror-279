@@ -1,0 +1,3 @@
+include LICENSE README.md
+include rpm/*.spec
+include debian/* debian/source/*

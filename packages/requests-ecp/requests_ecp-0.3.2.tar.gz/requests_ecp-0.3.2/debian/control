@@ -1,0 +1,36 @@
+# -- requests-ecp source package ----------------------------------------------
+
+Source: requests-ecp
+Section: python
+Priority: optional
+Maintainer: Duncan Macleod <duncan.macleod@ligo.org>
+Standards-Version: 4.2.1
+X-Python3-Version: >= 3.6
+Homepage: https://git.ligo.org/computing/software/requests-ecp
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all (>= 3.6),
+ python3-lxml,
+ python3-pytest,
+ python3-requests,
+ python3-requests-gssapi (>= 1.2.2) | python3-requests-kerberos (>= 0.9.0),
+ python3-requests-mock,
+ python3-setuptools (>= 61.0.0),
+
+# -- python3-requests-ecp -----------------------------------------------------
+
+Package: python3-requests-ecp
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ python3-lxml,
+ python3-requests,
+ python3-requests-gssapi (>= 1.2.2) | python3-requests-kerberos (>= 0.9.0),
+Description: SAML/ECP authentication handler for Requests
+ requests-ecp adds optional SAML/ECP authentication support
+ for the python3-requests HTTP library.
+ .
+ This package provides the Python 3 module.
