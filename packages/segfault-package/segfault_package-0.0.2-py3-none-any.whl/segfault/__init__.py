@@ -1,0 +1,1 @@
+from .segfault import cause_segfault
