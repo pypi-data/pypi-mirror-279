@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: solved.py
+Version: 0.2.0
+Summary: sovled.ac api wrapper for python
+Home-page: https://github.com/papertoy1127/solved.py
+Author: cywohoy
+Author-email: cywohoy <papertoy1127@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
