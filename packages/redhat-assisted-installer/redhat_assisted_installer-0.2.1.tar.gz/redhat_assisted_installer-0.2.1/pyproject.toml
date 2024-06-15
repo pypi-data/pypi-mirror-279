@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "requests"]
+build-backend = "hatchling.build"
+
+[project]
+name = "redhat-assisted-installer"
+version = "0.2.1"
+authors = [
+  { name="Justin Batchelor", email="justinrossbatchelor@gmail.com" },
+]
+description = "Python module to implement the RedHat Assisted Installer API"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/JustinBatchelor/redhat-assisted-installer"
+Issues = "https://github.com/JustinBatchelor/redhat-assisted-installer/issues"
