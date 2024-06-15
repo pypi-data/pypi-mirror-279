@@ -1,0 +1,10 @@
+lensai_profiler_tf/__init__.py,sha256=EL1LY0mHkw6wDszImGokGdY6E61WfRA1Ml7Ja68op54,205
+lensai_profiler_tf/metrics.py,sha256=kpIZLLXVC3vDmSROtJg9JJY6dd4CjCrfhVkTvMcgIMU,1830
+lensai_profiler_tf/sketches.py,sha256=fJSrHGxJ88rFs2eB4ZbZSvNtrg7XbL77a7SZ9BG-qcs,3987
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_metrics.py,sha256=jmdOcxfiWeDsRvtFCQ9WfBqC71Wzt85uSDakRvhoL78,3732
+lensai_profiler_tf-0.1.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lensai_profiler_tf-0.1.0.dist-info/METADATA,sha256=4NpL8f4fAtj4h3mVe3Wy7dlHhmg316Txzu6UW8oYfs4,599
+lensai_profiler_tf-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lensai_profiler_tf-0.1.0.dist-info/top_level.txt,sha256=tHDTTgUfQ4uKJxBcgUURsOO7VscA_ty9vy2RHa4WOwg,25
+lensai_profiler_tf-0.1.0.dist-info/RECORD,,
