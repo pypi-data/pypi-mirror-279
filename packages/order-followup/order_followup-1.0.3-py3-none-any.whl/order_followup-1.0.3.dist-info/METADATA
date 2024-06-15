@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: order-followup
+Version: 1.0.3
+Summary: Exports a cvs file of email subscribers using the Shopify API
+Home-page: UNKNOWN
+Author: Russ Nastala
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: ~=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ShopifyAPI ==12.5.0
+Requires-Dist: pytz ==2024.1
+Requires-Dist: requests ==2.32.3
+
+## order_followup
+Exports a cvs file of email subscribers using the Shopify API
+
+## Usage
+Activate your virtual environment. Then run: python3 main.py
+
+## License
+MIT License. See LICENSE for details.
+
+
+
