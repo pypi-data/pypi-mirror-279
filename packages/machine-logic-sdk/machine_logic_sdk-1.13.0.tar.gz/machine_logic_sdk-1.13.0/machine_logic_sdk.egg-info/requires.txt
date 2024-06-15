@@ -1,0 +1,10 @@
+miros==4.2.1
+paho-mqtt==1.5.1
+types-requests==2.28.11
+requests==2.31.0
+typing_extensions==4.6.3
+parameterized
+numpy==1.24.2
+roslibpy==1.4.2
+scipy==1.11.1
+zope.interface==5.5.2
