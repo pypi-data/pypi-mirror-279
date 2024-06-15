@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+dbt-bigquery
+snowflake-id
+skaff-telemetry>=0.1,<1
+humanize
