@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/experiment_helpers/__init__.py
+src/experiment_helpers/aesthetic_reward.py
+src/experiment_helpers/better_vit_model.py
+src/experiment_helpers/elastic_face_iresnet.py
+src/experiment_helpers/measuring.py
+src/experiment_helpers/static_globals.py
+src/experiment_helpers/training.py
+src/experiment_helpers.egg-info/PKG-INFO
+src/experiment_helpers.egg-info/SOURCES.txt
+src/experiment_helpers.egg-info/dependency_links.txt
+src/experiment_helpers.egg-info/top_level.txt
+test/test_tables.py
+test/test_training.py
