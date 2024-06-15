@@ -1,0 +1,14 @@
+graphene>=3.1
+graphql-core>=3.1
+graphene-directives>=0.4.6
+
+[dev]
+black==23.12.1
+flake8==4.0.1
+mypy==0.961
+pytest==7.1.2
+pytest-cov
+
+[test]
+pytest==7.1.2
+pytest-cov
