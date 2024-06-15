@@ -1,0 +1,13 @@
+lightmotif/__init__.py,sha256=7foDRNUz3pCLkVkLPznRBoRDemNQizuHKU6G5vSCC58,301
+lightmotif/lib.pypy39-pp73-win_amd64.pyd,sha256=hcz5TVe7Hxd0UKoTEfPOHHSP3kZ89wBuOSYGjqdqNwE,419328
+lightmotif/tests/__init__.py,sha256=j0qn2txeNfGfI_p4LYEaaH0x1QSX5gAT3FRN1zaeNug,307
+lightmotif/tests/test_pipeline.py,sha256=qyYr32SnebrTZb9kkKCyENp8AJppsHRYch-ERijjjss,1488
+lightmotif/tests/test_pvalue.py,sha256=9MM-Cs43BTNdiND1gJajDmoN5zecwqWJmvdSVzpyxx4,797
+lightmotif/tests/test_sequence.py,sha256=7a496rLSVWhEJBEt8Tq-aHvo_00ABpVhbhFya0Zv4LQ,2196
+lightmotif/tests/unittest.rs,sha256=6CvNS-EbGYcq8qCTMzyfSc244YuMOT85GkJJ7-dk0Hg,1518
+lightmotif-0.7.1.dist-info/COPYING,sha256=j8FuqRxuy1o_9WHkVsA9gUfwOkwpbIsLXy37GLJRckw,1119
+lightmotif-0.7.1.dist-info/METADATA,sha256=2Hkss-HaCdjZCN_gtE1PxAbBob1Q4kUETrpKDQVmLXw,11408
+lightmotif-0.7.1.dist-info/WHEEL,sha256=0MDxp1g6SMi6x5fNLQYB_oq4z1ZIM2F5EzPGH_eSWIs,107
+lightmotif-0.7.1.dist-info/top_level.txt,sha256=v_ynh2gr_I4KdZc-5cw0kVx8wHnfySKdMKSl_Bm8Zpk,11
+lightmotif-0.7.1.dist-info/zip-safe,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+lightmotif-0.7.1.dist-info/RECORD,,
