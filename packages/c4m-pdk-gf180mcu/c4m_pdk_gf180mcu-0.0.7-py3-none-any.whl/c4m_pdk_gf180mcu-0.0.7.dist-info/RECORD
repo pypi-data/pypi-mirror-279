@@ -1,0 +1,13 @@
+c4m/pdk/gf180mcu/__init__.py,sha256=olWd0BRjHvkB6H6NsddDmHdOP3FtMmbDvbb4wLW78x4,1620
+c4m/pdk/gf180mcu/klayout.py,sha256=w8JFs1WTGXP0zNSewN2yBqDXh5xutapDuWxnicr_OlI,517
+c4m/pdk/gf180mcu/models/__init__.py,sha256=e7MrL96K_Esd9YMOnQHF9WqwKChsnmM5qxtBCp1jz5M,98
+c4m/pdk/gf180mcu/models/all.spice,sha256=b6PgtY1W4Yu828GSvMfOL2C2AGjY4vbOge0FnM9aYlg,281
+c4m/pdk/gf180mcu/models/design.ngspice,sha256=CRy1ML-FFgofB4ePuB94nKNn0BiZHIq0GlhM0ahcZpI,3173
+c4m/pdk/gf180mcu/models/sm141064.ngspice,sha256=giXOVfLU3ANFZci1S6KsfTBQwPQH40s9VVjYUNSQXn8,1304807
+c4m/pdk/gf180mcu/pdkmaster.py,sha256=MahSZ1ro1bX0_zNGNU7b7JMep610sXiKstha7SQ2MdU,8045
+c4m/pdk/gf180mcu/pyspice.py,sha256=6rFoZVIEdBW2NhboiEedgOwOeqckh99-IGaF2xhZMMM,1193
+c4m/pdk/gf180mcu/stdcell.py,sha256=kAWV7DiuwodrIYWEsjn7oka67rQRByJHHSDJOOxt2I0,2957
+c4m_pdk_gf180mcu-0.0.7.dist-info/METADATA,sha256=NhuuV4VrpdshzsF1QDj-k9x8Y3AUXwQhT-lj8VYqzz0,1455
+c4m_pdk_gf180mcu-0.0.7.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+c4m_pdk_gf180mcu-0.0.7.dist-info/licenses/LICENSE.md,sha256=ELbsQhI7P0Gz-NcIVjgFtpz3jDp5QMHKgIk0IkdbZhg,1044
+c4m_pdk_gf180mcu-0.0.7.dist-info/RECORD,,
