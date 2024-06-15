@@ -1,0 +1,9 @@
+{% if header.theme.custom is mapping %}
+    {% if "js" in header.theme.custom %}
+        {{ macro.custom_dict_js(header.theme.custom.js) }}
+    {% endif %}
+{% elif header.theme.custom is sequence and not header.theme.custom is string %}
+    {{ macro.custom_multiple_files_js(header.theme.custom) }}
+{% else %}
+    {{ macro.custom_single_file_js(header.theme.custom) }}
+{% endif %}
