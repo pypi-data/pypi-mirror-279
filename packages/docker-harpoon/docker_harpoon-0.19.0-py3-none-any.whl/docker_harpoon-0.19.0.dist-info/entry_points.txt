@@ -1,0 +1,2 @@
+[console_scripts]
+harpoon = harpoon.executor:main
