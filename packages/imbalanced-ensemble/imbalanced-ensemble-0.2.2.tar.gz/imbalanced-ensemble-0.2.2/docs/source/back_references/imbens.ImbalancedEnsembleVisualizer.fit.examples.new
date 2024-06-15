@@ -1,0 +1,34 @@
+
+
+Examples using ``imbens.ImbalancedEnsembleVisualizer.fit``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. start-sphx-glr-thumbnails
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbnails">
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="This example illustrates how to quickly visualize an  imbens.ensemble classifier with the imben...">
+
+.. only:: html
+
+  .. image:: /auto_examples/basic/images/thumb/sphx_glr_plot_basic_visualize_thumb.png
+    :alt: Visualize an ensemble classifier
+
+  :ref:`sphx_glr_auto_examples_basic_plot_basic_visualize.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Visualize an ensemble classifier</div>
+    </div>
+
+
+.. only:: not html
+
+ * :ref:`sphx_glr_auto_examples_basic_plot_basic_visualize.py`
