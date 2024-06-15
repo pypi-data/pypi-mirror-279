@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/vappman/PowerWindow.py
+src/vappman/__init__.py
+src/vappman/main.py
+src/vappman.egg-info/PKG-INFO
+src/vappman.egg-info/SOURCES.txt
+src/vappman.egg-info/dependency_links.txt
+src/vappman.egg-info/entry_points.txt
+src/vappman.egg-info/requires.txt
+src/vappman.egg-info/top_level.txt
