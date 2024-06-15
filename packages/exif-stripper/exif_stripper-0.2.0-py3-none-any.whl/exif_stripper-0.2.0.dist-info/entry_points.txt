@@ -1,0 +1,2 @@
+[console_scripts]
+strip-exif = exif_stripper.cli:main
