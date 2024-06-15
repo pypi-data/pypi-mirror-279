@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: personalNotion
+Version: 1.1.1
+Summary: All functions that assist in standardising development approaches.
+Home-page: https://github.com/yourusername/your-repo
+Author: Marcus
+Author-email: marcusongkiansiong@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: custom-development-standardisation >=1.1.2
+Requires-Dist: python-dotenv >=1.0.1
+Requires-Dist: Requests >=2.32.3
+
+The base URL to send all API requests is https://api.notion.com. 
+
+Both request and responses are encoded as JSON. 
+
+SECRET KEY: API access require creating an "internal integration app" in python, which would produce a secret key, by which you can use to access its API services. 
+     https://www.notion.so/my-integrations.
+
+
+
+JSON conventions
+    - "object": Type of top-level resource (e.g database, user)
+    - "id": Specific top level resource
+    - *Property names* -> This is in a_b format
+    - *Temporial values* -> date time in ISO 8601 string format
+    - Does not support empty strings (e.g. ""). Use null value instead. 
+
+
+Top-level resources are addressable by a UUIDv4 "id" property. You may omit dashes from the ID when making requests to the API, e.g. when copying the ID from a Notion URL.
+Property names are in snake_case (not camelCase or kebab-case).
+Temporal values (dates and datetimes) are encoded in ISO 8601 strings. Datetimes will include the time value (2020-08-12T02:12:33.231Z) while dates will include only the date (2020-08-12)
+The Notion API does not support empty strings. To unset a string value for properties like a url Property value object, for example, use an explicit null instead of "".
+
+
+Response database structure
+    
+
+'''
+    Request structure
+        
+    Response structure
+
+
+'''
+# Change log
+### [1.1.1] - 2024-06-11
+add:
+fixed:
+others:
+1. table: Comment out function execution at the bottom of the file, which was meant for testing
+### [1.1.1] - 2024-06-11
+add:
+1. Init: Added shortcut to table
+fixed:
+1. Table: Forgot to remove import statement to a package that does not exist (page)
+others:
+### [1.1.0] - 2024-06-11
+add:
+1. Table: plain table processing script.
+2. extract_core_table_data: table to turn raw indented data from notion server to an array of array of strings. 
+fixed:
+others:
+1. Incorporated generate_outcome_message function into page functions
+2. Incorporated generate_outcome_message function into database functions
+### [1.0.0] - 2024-06-08
+add:
+1. Database: Extract data from databases in notion
+2. Page: Extract data from page
+fixed:
+others:
+1. Notes: The description of the structure of the return value, because the structure of the return object has a lot of indentations and a lot of meta data. Purpose of notes is to make clear of where the core data is (e.g. text in a block). 
