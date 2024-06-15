@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+dinjector/__init__.py
+dinjector/injector.py
+dinjectorr.egg-info/PKG-INFO
+dinjectorr.egg-info/SOURCES.txt
+dinjectorr.egg-info/dependency_links.txt
+dinjectorr.egg-info/top_level.txt
