@@ -1,0 +1,7 @@
+socket_rpc/__init__.py,sha256=t9jFI5kINYfVUupUMvXCRoVrvoHAni10YYHuzePjbVw,105
+socket_rpc/standalone_client.py,sha256=w0aBhZaRRaL3i6Zr12jCfZJkJ_rkOfEf1Gt1SXISF6g,1683
+socket_rpc/standalone_server.py,sha256=yKtvH8ciM_1f10OicvQ2nRwD_-BHxh_E18qKclUfIhc,3807
+socket_rpc-0.4.4.dist-info/METADATA,sha256=8ZoKjs09FUtU4Ow2Cslpjq_o4fUm0JkOSvkwA6gLuHk,1881
+socket_rpc-0.4.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+socket_rpc-0.4.4.dist-info/top_level.txt,sha256=41yhX2uXqUeQ_Fbdba78_arqS2EUQJSioFJ2buSyPes,11
+socket_rpc-0.4.4.dist-info/RECORD,,
