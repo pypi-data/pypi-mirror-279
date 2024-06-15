@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: ctdk
+Version: 0.0.1.240615.0
+Summary: A development toolkit for Codetech.
+Home-page: https://www.python.org/
+Author: jimin
+Author-email: jimin@codetech.top
+License: GPL-3.0-or-later
+Keywords: codetech,ctlib,ctdk,ctlib-devkit
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+License-File: LICENSE
+
+UNKNOWN
+
