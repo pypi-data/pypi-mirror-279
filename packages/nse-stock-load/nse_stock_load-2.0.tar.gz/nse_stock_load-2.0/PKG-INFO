@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: nse_stock_load
+Version: 2.0
+Summary: Package of load end to end nse data into mysql Database, corrected to_char to DATE_FORMAT
+Author: kiran nanduri
+Author-email: kirannanduri@outlook.com
+License: kiran

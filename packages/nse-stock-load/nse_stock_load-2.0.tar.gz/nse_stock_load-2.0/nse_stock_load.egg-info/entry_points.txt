@@ -1,0 +1,2 @@
+[setuptools.installation]
+env_check_n_setup = nse_stock_load.env_setup:env_check_n_setup
