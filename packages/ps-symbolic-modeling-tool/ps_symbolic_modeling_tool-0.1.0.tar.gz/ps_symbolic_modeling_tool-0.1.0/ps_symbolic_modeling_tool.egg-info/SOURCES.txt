@@ -1,0 +1,16 @@
+COPYING
+COPYING.LESSER
+README.md
+setup.py
+ps_symbolic_modeling_tool/__init__.py
+ps_symbolic_modeling_tool/cli.py
+ps_symbolic_modeling_tool/converter.py
+ps_symbolic_modeling_tool/non_numba_func.py
+ps_symbolic_modeling_tool/sym_2_Jac.py
+ps_symbolic_modeling_tool/sym_2_func.py
+ps_symbolic_modeling_tool.egg-info/PKG-INFO
+ps_symbolic_modeling_tool.egg-info/SOURCES.txt
+ps_symbolic_modeling_tool.egg-info/dependency_links.txt
+ps_symbolic_modeling_tool.egg-info/entry_points.txt
+ps_symbolic_modeling_tool.egg-info/requires.txt
+ps_symbolic_modeling_tool.egg-info/top_level.txt
