@@ -1,0 +1,9 @@
+*.pyc
+.dmypy.json
+*~
+.ropeproject/
+*.egg-info/
+pip-wheel-metadata/
+build/
+dist/
+.tox/
