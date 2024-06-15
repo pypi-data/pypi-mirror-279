@@ -1,0 +1,15 @@
+AUTHORS.md
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+extrap_adaptive_modeler/__init__.py
+extrap_adaptive_modeler/data_generator.py
+extrap_adaptive_modeler/lazy_tensorflow.py
+extrap_adaptive_modeler/load_model.py
+extrap_adaptive_modeler/normalizedTerms_newPoints.h5
+extrap_adaptive_modeler.egg-info/PKG-INFO
+extrap_adaptive_modeler.egg-info/SOURCES.txt
+extrap_adaptive_modeler.egg-info/dependency_links.txt
+extrap_adaptive_modeler.egg-info/requires.txt
+extrap_adaptive_modeler.egg-info/top_level.txt
