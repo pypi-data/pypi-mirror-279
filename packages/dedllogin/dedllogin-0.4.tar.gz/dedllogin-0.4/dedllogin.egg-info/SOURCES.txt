@@ -1,0 +1,8 @@
+setup.py
+dedllogin/__init__.py
+dedllogin/dedl_login.py
+dedllogin.egg-info/PKG-INFO
+dedllogin.egg-info/SOURCES.txt
+dedllogin.egg-info/dependency_links.txt
+dedllogin.egg-info/requires.txt
+dedllogin.egg-info/top_level.txt
