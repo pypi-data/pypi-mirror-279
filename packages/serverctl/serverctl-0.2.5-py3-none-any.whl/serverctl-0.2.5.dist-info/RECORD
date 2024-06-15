@@ -1,0 +1,13 @@
+config.template.toml,sha256=c1gBP3oSBn-_B-QmH-czcYkFx8diJxqwA9BE7dhgY8A,176
+serverctl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serverctl/config.py,sha256=caTs1oY03cspovbpfYTtEzek7jzeQlzsOrXgPSIRoG8,1838
+serverctl/daemon.py,sha256=VfSpFzUlvqGIc763SNpf9ht7l7A81HiTc7k_z5f5ZhA,1670
+serverctl/main.py,sha256=bR85aMi8kq5gllAThxWp6WM8BDy_sziczbh61thaaXE,2294
+serverctl/server.py,sha256=AGhyaOnNa7_otf-ecE2tH8Jvoi6_812VXCzzx5s0-ek,6108
+serverctl/util.py,sha256=tdCSigQ8pTSPigGLjQ81LDQq-f0TvRZXwuHqM3G-5ug,3121
+serverctl.service,sha256=Oiu8DTw89xEoJDURO9e5Wd0_Bmuv6zTnLnIvVSIGMyo,175
+serverctl@.service,sha256=0XSdcowzH-B_gQGLg_JWWqjtUh9OfYLGShpY2KdP37E,227
+serverctl-0.2.5.dist-info/METADATA,sha256=6nv57xDL_g2I3Qo1vA5M2mBJMxb5nxbtAJa2XVTTK7Y,480
+serverctl-0.2.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+serverctl-0.2.5.dist-info/entry_points.txt,sha256=hkkP2PAySWcBqSewUIogo0h2zE01lmyRzF9tEOll-s4,49
+serverctl-0.2.5.dist-info/RECORD,,

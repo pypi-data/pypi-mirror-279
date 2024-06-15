@@ -1,0 +1,11 @@
+[Unit]
+After=network.target
+
+[Service]
+Type=simple
+Restart=on-failure
+WorkingDirectory=%h
+ExecStart=/bin/bash -l -c "serverctl daemon start"
+
+[Install]
+WantedBy=default.target
