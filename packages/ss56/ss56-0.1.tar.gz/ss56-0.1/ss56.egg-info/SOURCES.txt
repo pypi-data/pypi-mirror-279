@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.py
+ss56/__init__.py
+ss56/ss56.py
+ss56.egg-info/PKG-INFO
+ss56.egg-info/SOURCES.txt
+ss56.egg-info/dependency_links.txt
+ss56.egg-info/requires.txt
+ss56.egg-info/top_level.txt
