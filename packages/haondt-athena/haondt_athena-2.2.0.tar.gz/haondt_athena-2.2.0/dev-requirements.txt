@@ -1,0 +1,8 @@
+flask
+click
+pyyaml
+requests
+aiohttp
+pygments
+poetry
+watchdog
