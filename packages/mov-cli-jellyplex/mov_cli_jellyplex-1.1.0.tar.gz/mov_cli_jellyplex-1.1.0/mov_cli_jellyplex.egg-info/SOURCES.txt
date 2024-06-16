@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+mov_cli_jellyplex/__init__.py
+mov_cli_jellyplex.egg-info/PKG-INFO
+mov_cli_jellyplex.egg-info/SOURCES.txt
+mov_cli_jellyplex.egg-info/dependency_links.txt
+mov_cli_jellyplex.egg-info/requires.txt
+mov_cli_jellyplex.egg-info/top_level.txt
+mov_cli_jellyplex/jellyfin/scraper.py
+mov_cli_jellyplex/plex/scraper.py
