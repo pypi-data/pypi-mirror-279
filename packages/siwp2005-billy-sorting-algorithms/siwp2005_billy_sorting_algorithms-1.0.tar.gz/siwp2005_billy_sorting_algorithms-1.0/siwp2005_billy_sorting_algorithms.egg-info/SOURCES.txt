@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+siwp2005_billy_sorting_algorithms.egg-info/PKG-INFO
+siwp2005_billy_sorting_algorithms.egg-info/SOURCES.txt
+siwp2005_billy_sorting_algorithms.egg-info/dependency_links.txt
+siwp2005_billy_sorting_algorithms.egg-info/top_level.txt
+tests/__init__.py
+tests/test_bubble_sort.py
+tests/test_insertion_sort.py
+tests/test_quick_sort.py

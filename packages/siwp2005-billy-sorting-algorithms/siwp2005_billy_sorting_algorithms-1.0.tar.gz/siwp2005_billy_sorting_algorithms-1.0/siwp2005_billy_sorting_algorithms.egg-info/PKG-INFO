@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: siwp2005_billy_sorting_algorithms
+Version: 1.0
+Summary: A collection of sorting algorithms
+Home-page: https://github.com/mjayy77/Siwp-2005-billy-sort.git
+Author: Billy
+Author-email: billymj77@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+# siwp2005-billy-sort
+
+## Description
+*This package can be used to sort lists of numbers.*
+
+## Features
+*The package includes several common sorting algorithms, such as bubble sort, insertion sort, and quick sort.*
+
+## Installation
+
+To install the package, run the following command:
+
+.. code-block:: sh
+
+    pip install siwp2005_billy_sorting_algorithms
+
