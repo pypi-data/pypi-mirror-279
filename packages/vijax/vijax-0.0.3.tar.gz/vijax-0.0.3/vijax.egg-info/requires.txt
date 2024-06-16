@@ -1,0 +1,5 @@
+jax
+jaxlib
+numpyro
+tensorflow-probability
+inference-gym
