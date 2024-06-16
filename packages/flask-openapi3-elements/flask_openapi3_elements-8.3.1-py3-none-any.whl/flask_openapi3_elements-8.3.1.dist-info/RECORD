@@ -1,0 +1,11 @@
+flask_openapi3_elements/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_openapi3_elements/__version__.py,sha256=guaESwRzv2p6Tc32PynM6itKebTKvZpdQw8vP1Bm9Kg,23
+flask_openapi3_elements/plugins.py,sha256=tolC0-3u5irYlU_M5uVWagIurDBXOndzx3bHun5_ltM,1089
+flask_openapi3_elements/templates/__init__.py,sha256=BZaBuCHVO6p6U9e4B2ndzF2KLWoYEAGB9egHIrGChqE,938
+flask_openapi3_elements/templates/elements/css/styles.min.css,sha256=EZeE4j_8Obb6P9s9-T85H4JQ6K8UG3jfw7a-2GB5-Ts,296065
+flask_openapi3_elements/templates/elements/images/elements.svg,sha256=xguyrbdJ9y2e27hnSq4CmUj2s2R9p2UZO3hD5xsXQXc,3367
+flask_openapi3_elements/templates/elements/js/web-components.min.js,sha256=YdYrK4nri7Utft-M-lQpb3pKFg_FQPgbO7i2yezKPGQ,2063816
+flask_openapi3_elements-8.3.1.dist-info/METADATA,sha256=xtvg-hV5rjAGsyAn1eExyn2iv7bMhAmGgV-Vm3VMoXU,1011
+flask_openapi3_elements-8.3.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+flask_openapi3_elements-8.3.1.dist-info/entry_points.txt,sha256=e1j2FLw2hByC2m_yrDcmwyjFuUhWExGsbuLtFQAfxIU,83
+flask_openapi3_elements-8.3.1.dist-info/RECORD,,
