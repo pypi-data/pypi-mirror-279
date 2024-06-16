@@ -1,0 +1,12 @@
+numpy
+stacked-quantile
+paragraphs
+basic-colormath
+
+[dev]
+commitizen
+pre-commit
+pytest
+tox
+pillow
+matplotlib
