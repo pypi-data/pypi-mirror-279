@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: crimson-code-extractor
+Version: 0.1.0
+Summary: From source code, extract useful information.
+Author-email: Sisung Kim <sisung.kim1@gmail.com>
+Project-URL: Homepage, https://github.com/crimson206/code-extractor
+Project-URL: Bug Tracker, https://github.com/crimson206/code-extractor/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic
+Requires-Dist: crimson-data-class
+
+# crimson-base

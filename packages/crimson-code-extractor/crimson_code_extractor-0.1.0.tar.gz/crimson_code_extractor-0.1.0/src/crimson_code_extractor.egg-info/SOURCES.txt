@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/crimson/code_extractor/__init__.py
+src/crimson/code_extractor/_get_func_info.py
+src/crimson/code_extractor/func_info.py
+src/crimson_code_extractor.egg-info/PKG-INFO
+src/crimson_code_extractor.egg-info/SOURCES.txt
+src/crimson_code_extractor.egg-info/dependency_links.txt
+src/crimson_code_extractor.egg-info/requires.txt
+src/crimson_code_extractor.egg-info/top_level.txt
+test/test_func_info.py
