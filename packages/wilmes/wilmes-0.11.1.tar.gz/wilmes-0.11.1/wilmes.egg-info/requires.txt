@@ -1,0 +1,11 @@
+mechanicalsoup>=0.8
+python-dateutil>=2.0
+pytz
+
+[dev]
+mypy~=0.740.0
+flake8~=3.7
+flake8-isort~=2.7
+pep8-naming~=0.9.1
+ipython
+jedi

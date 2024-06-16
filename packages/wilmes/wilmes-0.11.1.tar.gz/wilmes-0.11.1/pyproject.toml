@@ -1,0 +1,47 @@
+[project]
+name = "wilmes"
+version = "0.11.1"
+description = "Message fetching library for a Finnish school site"
+readme = "README.rst"
+authors = [{name="Tuomas Suutari", email="tuomas@nepnep.net"}]
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Communications",
+    "Topic :: Software Development :: Libraries",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "mechanicalsoup>=0.8",
+    "python-dateutil>=2.0",
+    "pytz",
+]
+
+[project.optional-dependencies]
+dev = [
+    # types
+    "mypy~=0.740.0",
+
+    # style
+    "flake8~=3.7",
+    "flake8-isort~=2.7",
+    "pep8-naming~=0.9.1",
+
+    # util
+    "ipython",
+    "jedi",
+]
+
+[project.urls]
+Homepage = "https://github.com/suutari/wilmes"
+Repository = "https://github.com/suutari/wilmes"
+
+[project.scripts]
+wilmes = "wilmes.__main__:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
