@@ -1,0 +1,37 @@
+[project]
+name = "heapq-container"
+version = "0.1"
+description = "a Container datatype wrapper for the Python standard library heapq module"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "lonnen"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+# Enable pycodestyle (E), pyflakes (F), and bugbear (B) rules
+lint.select = ["E", "F", "B"]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+
+[project.urls]
+Homepage = "https://github.com/lonnen/heapq-container"
+Changelog = "https://github.com/lonnen/heapq-container/releases"
+Issues = "https://github.com/lonnen/heapq-container/issues"
+CI = "https://github.com/lonnen/heapq-container/actions"
+
+
+[project.optional-dependencies]
+test = ["pytest"]
