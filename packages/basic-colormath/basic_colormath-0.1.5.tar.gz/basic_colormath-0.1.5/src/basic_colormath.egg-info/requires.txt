@@ -1,0 +1,8 @@
+
+[dev]
+commitizen
+colormath
+numpy
+pre-commit
+pytest
+tox
