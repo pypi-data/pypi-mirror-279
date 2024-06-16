@@ -1,0 +1,220 @@
+Metadata-Version: 2.1
+Name: cwstorm
+Version: 0.2.4
+Summary: Core functionality for Conductor's client tools
+Home-page: https://github.com/ConductorTechnologies/cwstorm
+Author: conductor
+Author-email: info@conductortech.com
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Multimedia :: Graphics :: 3D Rendering
+Description-Content-Type: text/markdown
+Requires-Dist: Click
+Requires-Dist: pyyaml
+Requires-Dist: markdown <4.0.0,>=3.5.2
+
+# Storm
+
+Storm is a Python DSL to generate a graph of task dependencies.
+
+## Install
+
+For development, it's best to install in *editable* mode in a virtual environment. 
+
+
+```
+> git clone git@github.com/ConductorTechnologies/cwstorm.git
+> cd cwstorm
+
+# Create a virtual environment
+> python3 -m venv cwstorm.venv
+> . cwstorm.venv/bin/activate
+
+# Install in editable mode
+> pip install -e .
+
+# Optionally install the black formatter and some other dev tools
+> pip install -r requirements.txt
+```
+
+## Quick Start CLI
+
+### Serialize
+
+Use the `storm` CLI command to serialize one of the example jobs. The pretty option generates human readable JSON output. The filename will be the same as the example but with a `.json` extension, and will be placed in the folder you specify.
+
+```
+> storm serialize -x simple_qt -f pretty ~/Desktop/graphs/
+> cat ~/Desktop//graphs/simple_qt.json
+```
+
+### Validate
+
+Validate a JSON file with the `validate` subcommand.
+
+```
+> storm validate /path/to/my_graph.json
+```
+
+You'll see a report in a browser window.
+
+You can output the report to markdown if you prefer. Here's an example [validation report](./VALIDATION_EXAMPLE.md)
+
+In order to validate a graph, the `storm` command loads the JSON file into a dict, and then uses the DSL to reconstruct the graph. The code to reconstruct the graph from a dict is in `deserializer.py`. 
+
+You can bypass the validation and pass a dict directly to the deserializer to get a job.
+```
+from cwstorm.deserializer import deserialize
+
+with open(infile, "r", encoding="utf-8") as fh:
+    data = json.load(fh)
+  
+job = deserialize(data)
+
+print("name", job.name())
+print("comment", job.comment())
+print("num_tasks", job.count_descendents())
+```
+
+## Visualize
+
+You can visualize graphs in the desktop app: https://github.com/ConductorTechnologies/cioapp
+
+Once the app is running you can send a workflow through it's HTTP server which runs on port 3031. 
+
+```
+curl -X POST http://localhost:3031/graph -H "Content-Type: application/json" -d @/path/to/my_graph.json 
+```
+
+### Command-line interface
+
+The command-line interface has one subcommand, `serialize`. It creates the argument parser dynamically based on the available examples and serializers.
+
+```
+storm serialize --help
+```
+
+### Examples
+
+The `ass_comp_normal.py` example is a more complex script. It builds a graph of tasks that uploads assets, generates ass files, renders them, adds optical motion blur, makes a quicktime, and notifies people.
+
+## DSL Structure
+
+A graph consists of dag nodes with attributes. Look through the examples folder to familiarize yourself with the API. All classes derive from Node.
+
+### Node 
+The base class. Responsible for generating getters and setters for different attributes. The idea is to have a consistent language to build the DAG, add options to nodes, and to quickly see how the graph will look. See the ATTRS lists in Job, Task, Upload, and Cmd. The types of attributes that can be added to nodes are:
+  * int
+  * str
+  * dict
+  * Cmd
+  * list of int
+  * list of str
+  * list of Cmd
+  * list of dict
+
+Setters return self, which allows for chaining.
+
+Getters and setters are generated are as follows for Attribute name `atr` of Node `n`:
+
+`int`  
+
+* Setter: `n.atr(value) -> self`
+* Getter  `n.atr() -> int`
+
+
+`str`  
+
+* Setter: `n.atr(value) -> self`
+* Getter  `n.atr() -> str`
+
+
+`dict`  
+
+* Setter: `n.atr({"key": "VAL", ...}) -> self`
+* Updater  `n.update_atr({"key2": "VAL2", ...}) -> self`
+* Getter  `n.atr() -> dict`
+
+`Cmd`
+
+* Setter: `n.atr(Cmd(*args)) -> self`
+* Getter  `n.atr() -> Cmd`
+
+`list:int`
+
+* Setter: `n.atr(*args) -> self`
+* Extender  `n.push_atr(*args) -> self`
+* Getter  `n.atr() -> list of int`
+
+`list:str`
+
+* Setter: `n.atr(*args) -> self`
+* Extender  `n.push_atr(*args) -> self`
+* Getter  `n.atr() -> list of str`
+
+
+`list:Cmd`
+
+* Setter: `n.atr(Cmd(*args), Cmd(*args), ...) -> self`
+* Extender  `n.push_atr(Cmd(*args), Cmd(*args), ...) -> self`
+* Getter  `n.atr() -> list of Cmd`
+
+`list:dict`
+
+* Setter: `n.atr({"key": "VAL", ...}, {"key": "VAL", ...}, ...) -> self`
+* Extender  `n.push_atr({"key": "VAL", ...}, {"key": "VAL", ...}, ...) -> self`
+* Getter  `n.atr() -> list of dict`
+
+
+
+## For inherited nodes, see the [current schema](./SCHEMA.md)
+
+## Changelog
+
+## Version:0.2.4 -- 15 Jun 2024
+
+* Fixes a bug where nodes with non-unique names could be created.
+
+## Version:0.2.3 -- 02 Jun 2024
+
+* Adds a script to automatically update the Basecamp Releases thread for this tool.
+* Auto populate the version and schema version as a temporary measure until we managew to lock down a versioning scheme.
+* Fix a regression where a conditional relied on the presence of the position property, which was removed as an optimization.
+
+## Version:0.2.2 -- 30 May 2024
+
+* Adds bool type to ensure preemptible has a valid value in the workflow API
+* Regenerate schema and validation examples.
+* Change the int validation mechanism to be more consistent with other types
+
+## Version:0.2.1 -- 29 May 2024
+
+* Remove unnecessary submission attrs.
+* Adds required field to  the schema.
+* Regenerated validation example and schema html.
+
+## Version:0.2.0 -- 24 May 2024
+
+* Auto document validation and schema
+* Adds output_path, packages, and preemptible to Tasks
+* allow MD5s in the files dict for Uploads
+* Removes relative counts, since this should happen in the composer
+* CLI has a shortcut to output all examples to a folder
+* Remove unused serializers and commandline flag
+
+## Version:0.1.1 -- 23 Jan 2024
+
+* Schema tweaks
+* * Remove environment from job
+* * Remove cleanup from all nodes
+* * Add `upload` node type
+* * Add `lifecycle` property to tasks
+
+## Unreleased:
+
+* 0.0.1-beta.1
+  * Initial CICD setup
+
+
+
+--
