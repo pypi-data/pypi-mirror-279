@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: echo_alpha
+Version: 0.2.4.11
+Summary: ECHO AI client distributed as a python package
+Author: Niro
+Author-email: niro@echo.com
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: python-dotenv
