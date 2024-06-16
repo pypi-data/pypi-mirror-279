@@ -1,0 +1,10 @@
+candlestix/__init__.py,sha256=8FHjmB0GKaF7ZLj1pbGUuOe-0s_dR9gg90sZJR-4Zrk,4007
+candlestix/candle_loader.py,sha256=CPp3OX2pgRdFu7sQk4jTpT0u8oclZQzR3xCWIdQIO_k,6561
+candlestix/candleconf.py,sha256=SbVcs26UY6-mS36XkYdHIccZduU56rhZ3EzAnbMZJQw,2300
+candlestix/instrument.py,sha256=vkyCVbNW0sI9p5vvGeDotacIqWLKecxRUbNO4qE5Ekg,610
+candlestix/time.py,sha256=K_yTtFcaLsb3bcrj8Iv8zpsxWPOYGbq2IfSDGCC2pY4,2623
+candlestix/upstox.py,sha256=0-I5koXbWVejMHzeXFvfnaWhI8XT2gK839dAoWdY2Oc,6529
+candlestix-1.0.3.dist-info/METADATA,sha256=7-dj-lBzPhMMIjpUB4zpgzpnkwXXIoTSgNuIEP9p1tI,118
+candlestix-1.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+candlestix-1.0.3.dist-info/top_level.txt,sha256=9s8FD4LkKtnGIw-s1Hceqg9DLC9fbVfPOBkXveSmHa4,11
+candlestix-1.0.3.dist-info/RECORD,,

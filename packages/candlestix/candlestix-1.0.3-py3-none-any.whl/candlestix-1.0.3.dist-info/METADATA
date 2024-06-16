@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: candlestix
+Version: 1.0.3
+Requires-Dist: upstox-python-sdk >=2.4.0
+Requires-Dist: pandas
+
