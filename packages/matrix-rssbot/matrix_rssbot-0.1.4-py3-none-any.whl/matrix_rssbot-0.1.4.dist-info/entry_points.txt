@@ -1,0 +1,2 @@
+[console_scripts]
+rssbot = matrix_rssbot.__main__:main
