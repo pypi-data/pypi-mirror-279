@@ -1,0 +1,4 @@
+platformdirs
+requests
+sphinx-autoapi
+myst_nb
