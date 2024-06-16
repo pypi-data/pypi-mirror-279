@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cmind4system/__init__.py
+cmind4system.egg-info/PKG-INFO
+cmind4system.egg-info/SOURCES.txt
+cmind4system.egg-info/dependency_links.txt
+cmind4system.egg-info/not-zip-safe
+cmind4system.egg-info/requires.txt
+cmind4system.egg-info/top_level.txt
