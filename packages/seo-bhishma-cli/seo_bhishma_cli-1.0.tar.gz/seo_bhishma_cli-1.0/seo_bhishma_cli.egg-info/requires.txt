@@ -1,0 +1,11 @@
+click
+requests
+pandas
+tqdm
+beautifulsoup4
+art
+fake_useragent
+lxml
+scikit-learn
+openai
+pyyaml
