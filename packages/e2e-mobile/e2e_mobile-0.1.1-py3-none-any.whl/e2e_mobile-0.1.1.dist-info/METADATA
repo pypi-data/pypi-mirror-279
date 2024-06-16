@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: e2e-mobile
+Version: 0.1.1
+Summary: E2E Testing package for mobile apps
+Author-email: Thuyen Trinh <trinhngocthuyen@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/trinhngocthuyen/e2e-mobile
+Keywords: ci,cd,ci/cd,mobile,ios
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: retry
+Requires-Dist: Appium-Python-Client
+Requires-Dist: pytest
+Requires-Dist: pytest-xdist
+Requires-Dist: click
+Requires-Dist: seeeye >=0.0.5
+Provides-Extra: dev
+Requires-Dist: setuptools >=61.0.0 ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: autoflake ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: bumpver ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-html ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+
+End-to-end Testing Package for Mobile Apps
+==========================================
+
+.. _readthedocs: https://e2e-mobile.readthedocs.io
+.. _contributing guidelines: https://e2e-mobile.readthedocs.io/en/latest/contributing.html
+.. _FAQ: https://e2e-mobile.readthedocs.io/en/latest/faq.html#python-setup
+
+.. image:: https://img.shields.io/pypi/v/e2e-mobile.svg
+    :target: https://pypi.org/project/e2e-mobile
+
+.. image:: https://img.shields.io/pypi/l/e2e-mobile.svg
+    :target: https://github.com/trinhngocthuyen/e2e-mobile/blob/main/LICENSE
+
+``e2e-mobile`` is a Python package providing convenient setup for end-to-end testing in mobile apps. This package is the combined magic of Appium and Pytest. It helps us:
+
+- Write tests once, for both platforms (iOS & Android).
+- Write reusable & readable tests that can scale to support complex use cases.
+
+.. image:: _static/recording.gif
+
+What does a test with this framework look like?
+-----------------------------------------------
+
+.. code-block:: python
+
+    from e2e.tester import Tester
+
+    def test_tutorial(tester: Tester):
+        tester.ui.home.skip_tutorial()
+        tester.relaunch_app()
+        tester.ui.home.must_not_see_tutorial()
+
+    def test_settings(tester: Tester):
+        tester.ui.home.skip_tutorial()
+        tester.ui.home.go_to_settings()
+        tester.ui.settings.swipe('up')
+        tester.ui.settings.element('About the app').must_exist()
+        tester.ui.settings.swipe('down')
+        tester.ui.settings.close()
+
+`Get started with e2e-mobile now! <https://e2e-mobile.readthedocs.io/en/latest/getting_started/index.html>`_
+
+Installation
+------------
+
+``e2e-mobile`` is `available on PyPI (Python Package Index)
+<https://pypi.org/project/e2e-mobile>`_. You can install with with ``pip``:
+
+.. code-block:: console
+
+   $ pip install --upgrade e2e-mobile
+
+First time hearing ``pip``? Check this `FAQ`_.
+
+Usage
+-----
+
+Kindly check out the related docs on readthedocs_:
+
+- `Getting Started <https://e2e-mobile.readthedocs.io/en/latest/getting_started/index.html>`_
+
+Documentation
+-------------
+
+Kindly check out the related docs on readthedocs_:
+
+- `API Reference <https://e2e-mobile.readthedocs.io/en/latest/api/reference.html>`_
+
+Contributing
+------------
+
+Refer to the `contributing guidelines`_ for how to contribute to this project.
