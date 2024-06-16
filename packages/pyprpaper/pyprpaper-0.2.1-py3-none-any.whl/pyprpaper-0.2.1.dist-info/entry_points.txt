@@ -1,0 +1,2 @@
+[console_scripts]
+pyprpaper = pyprpaper.pyprpaper:main
