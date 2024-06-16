@@ -1,0 +1,2 @@
+[console_scripts]
+gchat = gchat.main:main
