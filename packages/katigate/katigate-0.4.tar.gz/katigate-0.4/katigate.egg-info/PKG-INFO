@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: katigate
+Version: 0.4
+Summary: A CLI tool to find horoscope in nepali
+Home-page: https://github.com/iam-bkpl/rasifal
+Author: Kapil Bhandari
+Author-email: iam.bkpl031@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: click
+
+# KatiGate
+
+KatiGate is a CLI tool to find today's date, convert English dates to Nepali dates, and display the Nepali calendar. It leverages the `nepali_datetime` library to provide accurate and easy-to-use date conversion and calendar functionalities.
+
+## Features
+
+- Display today's date in the Nepali calendar.
+- Convert English dates (AD) to Nepali dates (BS).
+- Display the Nepali calendar for a given date.
+
+## Installation
+
+You can install katiGate from PyPI using pip:
+
+```bash
+pip install katigate
+```
+
+## Usage
+
+After installation, you can use the `katigate` command in your terminal to interact with the tool. Below are the available commands:
+
+### Show Today's Date
+
+To display today's date in the Nepali calendar, simply run:
+
+```bash
+katigate today
+
+or katigate 
+
+# Asar 02 2081, Sunday
+```
+
+### Convert English Date to Nepali Date
+
+To convert an English date (AD) to a Nepali date (BS), use the `cnv` command:
+
+```bash
+katigate cnv --year 2023 --month 6 --day 16
+
+or 
+
+katigate cnv -y 2023 -m 6 -d 16
+
+or 
+
+katigate cnv
+Year in AD : 2023
+Month in AD : 6
+Day in AD : 16
+
+#Asar 01 2080 Friday
+```
+
+You will be prompted to enter the year, month, and day if you don't provide them as options.
+
+### Display Nepali Calendar
+
+To display the Nepali calendar for a specific date, use the `cal` command:
+
+```bash
+katigate cal --year 2023 --month 6 --day 16
+
+#or 
+
+katigate cal -y 2023 -m 6 -d 16
+
+katigate cal
+Year  [2081]:
+Month  [3]:
+Day  [2]:
+
+# output
+             Asar 2081
+ Sun  Mon  Tue  Wed  Thu  Fri  Sat
+                                 1
+   2    3    4    5    6    7    8
+   9   10   11   12   13   14   15
+  16   17   18   19   20   21   22
+  23   24   25   26   27   28   29
+  30   31
+```
+
+You will be prompted to enter the year, month, and day if you don't provide them as options.
+
+
+## Acknowledgments
+
+- Click
+- [nepali_datetime](https://pypi.org/project/nepali-datetime/)
