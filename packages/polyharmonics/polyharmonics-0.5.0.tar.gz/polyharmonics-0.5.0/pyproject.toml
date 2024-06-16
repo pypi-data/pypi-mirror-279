@@ -1,0 +1,147 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "polyharmonics"
+version = "0.5.0"
+description = "Ortogonal polynomials in the unit sphere"
+readme = "README.md"
+authors = [
+  "Iván Salido Cobo <isalidocobo@gmail.com>",
+]
+license = "BSD-3-Clause"
+repository = "https://github.com/ComicIvans/polyharmonics"
+homepage = "https://github.com/ComicIvans/polyharmonics"
+
+# Keywords description https://python-poetry.org/docs/pyproject/#keywords
+keywords = [
+  "python",
+  "polynomials",
+  "unit sphere",
+  "orthogonal polynomials",
+  "mathematics",
+  "math",
+  "legendre polynomials",
+  "associated legendre functions",
+  "spherical harmonics",
+]
+
+# Pypi classifiers: https://pypi.org/classifiers/
+classifiers = [
+  "Development Status :: 1 - Planning",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Scientific/Engineering :: Mathematics",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+]
+
+[tool.poetry.scripts]
+# Entry points for the package https://python-poetry.org/docs/pyproject/#scripts
+"polyharmonics" = "polyharmonics.__main__:app"
+
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+matplotlib = "^3.8.4"
+sympy = "^1.12"
+rich = "^13.7.1"
+typer = "^0.12.3"
+numpy = "^1.26.4"
+tabulate = "^0.9.0"
+pandas = "^2.2.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.2.1"
+pytest-html = "^4.1.1"
+pytest-cov = "^5.0.0"
+bandit = "^1.7.1"
+ruff = "^0.4.1"
+pre-commit = "^3.7.1"
+coverage = "^7.4.4"
+coverage-badge = "^1.1.0"
+
+
+
+[tool.ruff]
+# https://beta.ruff.rs/docs/settings/
+# https://docs.astral.sh/ruff/configuration/
+line-length = 92
+
+# https://beta.ruff.rs/docs/rules/
+lint.select = ["E", "W", "F", "I"]
+lint.extend-select = ["I"]
+lint.ignore = ["F401"]
+
+# Exclude a variety of commonly ignored directories.
+respect-gitignore = true
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+# https://docs.pytest.org/en/6.2.x/customize.html#pyproject-toml
+# Directories that are not visited by pytest collector:
+norecursedirs =["hooks", "*.egg", ".eggs", "dist", "build", "docs", ".tox", ".git", "__pycache__"]
+doctest_optionflags = ["NUMBER", "NORMALIZE_WHITESPACE", "IGNORE_EXCEPTION_DETAIL"]
+
+# Extra options:
+addopts = [
+  "--strict-markers",
+  "--tb=short",
+  "--doctest-modules",
+  "--doctest-continue-on-failure",
+]
+
+[tool.coverage.run]
+source = ["tests"]
+
+[coverage.paths]
+source = "polyharmonics"
+
+[coverage.run]
+branch = true
+
+[coverage.report]
+fail_under = 50
+show_missing = true
