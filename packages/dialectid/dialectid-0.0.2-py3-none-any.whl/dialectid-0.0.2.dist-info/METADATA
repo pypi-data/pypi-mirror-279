@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: dialectid
+Version: 0.0.2
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scikit-learn >=1.3.0
+Requires-Dist: microtc
+Requires-Dist: b4msa
+Requires-Dist: EvoMSA
+
