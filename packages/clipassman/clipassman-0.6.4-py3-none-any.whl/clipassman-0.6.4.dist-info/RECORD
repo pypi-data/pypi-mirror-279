@@ -1,0 +1,13 @@
+clipassman/__init__.py,sha256=j6UCw0SsW6P-2IamTqbBJKbODz6Uxq49eCGam_9cdIc,444
+clipassman/app_manager.py,sha256=nQZ4ndHJ2RG-ZiVc-iqJImJhondiIaPQGDWrMtCCxPM,8091
+clipassman/clipassman.py,sha256=ASHTM0wsxK2kXhzjVu4ykfQvKqtllzoBEHfJW1HOZBM,468
+clipassman/config.py,sha256=yvS5RMg1ge6mG0kXS_5_1I5JQANf-1ASu4rp6PdceFc,570
+clipassman/output_manager.py,sha256=o7pdQM_9LEf4qVjiorkORO3E49L58Pk4e7-rgZRuBc8,672
+clipassman/smart_pass_manager.py,sha256=JIYQtoOpsyxXHWligIXP6XFG5UjvkUIZO58bQl8hl00,3017
+clipassman/smart_password_factory.py,sha256=RTK5R42naL15bpUiqyZvaArEX0sNEx7E5z-UyaS0Yb8,871
+clipassman-0.6.4.dist-info/LICENSE,sha256=rwgJXlOeiLJfDhsHd3vYUtM_ECgiPBnrvYb8dFmjTgo,1499
+clipassman-0.6.4.dist-info/METADATA,sha256=9XzF4QempdpsXRp9B_7oU12aeOjeSiUVLpcwyo05RXU,5170
+clipassman-0.6.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+clipassman-0.6.4.dist-info/entry_points.txt,sha256=kt5Hu_NUR_3hWuIeVt9epOjVlOifzGV8t1icOim4En4,58
+clipassman-0.6.4.dist-info/top_level.txt,sha256=Qt2sQ0q7CQLH4Al3Oj5QBEZ6Pf_8csLikeLW6mkXnjs,11
+clipassman-0.6.4.dist-info/RECORD,,
