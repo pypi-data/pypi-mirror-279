@@ -1,0 +1,9 @@
+LICENSE.txt
+setup.cfg
+setup.py
+src/universal_test_platform.egg-info/PKG-INFO
+src/universal_test_platform.egg-info/SOURCES.txt
+src/universal_test_platform.egg-info/dependency_links.txt
+src/universal_test_platform.egg-info/entry_points.txt
+src/universal_test_platform.egg-info/requires.txt
+src/universal_test_platform.egg-info/top_level.txt
