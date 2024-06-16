@@ -1,0 +1,6 @@
+include *.txt
+include *.md
+include *.py
+include LICENSE
+recursive-include Audio2Vec *.py
+recursive-include tests *.py
