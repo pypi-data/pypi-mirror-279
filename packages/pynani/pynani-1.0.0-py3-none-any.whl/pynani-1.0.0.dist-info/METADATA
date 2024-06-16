@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: pynani
+Version: 1.0.0
+Summary: A package to wrap the Messenger API
+Author-email: Jorge Juarez <jorgeang33@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/jorge-jrzz/Pynani/tree/main
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests >=2.32.3
+
+# Pynani
+Opensource python wrapper to Messenger and Instagram API
