@@ -1,0 +1,10 @@
+pyrf24/__init__.py,sha256=Q2pjUGCWHlIwUdfcP-AGQCRJ4JFGUuDilcQrcFz1QHU,2249
+pyrf24/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyrf24/pyrf24.cpython-310-aarch64-linux-gnu.so,sha256=ZtoBk4SdKNzfC965itPcnDLLJRK98ntK8p69qN1UwRo,594256
+pyrf24/fake_ble.py,sha256=7KogxuoWDrEKv7AFdMl187VekafdpnCs8Gy_74viqN0,34917
+pyrf24/pyrf24.pyi,sha256=fyaJ5F__bv-C-oHkHzDEUOpOoNqis4ueqZdSNaAHAqg,16505
+pyrf24-0.4.0.dist-info/WHEEL,sha256=H0QERcJuEKoCcMIutioyRp9n3LaQjdVoB25CT5wQyPk,154
+pyrf24-0.4.0.dist-info/LICENSE,sha256=2ylvL381vKOhdO-w6zkrOxe9lLNBhRQpo9_0EbHC_HM,18046
+pyrf24-0.4.0.dist-info/top_level.txt,sha256=XOFamTqgFW2Sra5xb_7lnItfLU8LvD8G_GOwqAN8GDM,7
+pyrf24-0.4.0.dist-info/RECORD,,
+pyrf24-0.4.0.dist-info/METADATA,sha256=bmDrjH2ra5BiHYD-aX9tj3ajJbddhMkTOa5rg8bMyp8,13844
