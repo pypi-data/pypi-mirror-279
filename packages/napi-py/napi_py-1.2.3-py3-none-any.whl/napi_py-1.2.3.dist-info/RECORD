@@ -1,0 +1,13 @@
+napi/__init__.py,sha256=la-D6FAXr7ekiJv2fN1VhI1yuWS3QEDpZaxxkVBFyfA,29
+napi/api.py,sha256=RS21HcJFOYXYHif0SaXrvnDHmTZOuz6a7tNwlYC8rpo,710
+napi/encoding.py,sha256=dGnXKDeJG7r_ztBiI1zGnnUTArq-VjI5zNU3VGicCvY,1874
+napi/hash.py,sha256=2oHBsRKH5A2pKol9Hn9NnNnx7Vm6-uQz4iwg-8pkqfk,342
+napi/main.py,sha256=SCYbdHU9-UpC3RBEh_Lfg6qCXBk-wYU6i4Y8MC-wu_w,3289
+napi/napi.py,sha256=fvMq7qYeXUf9OsZ7M9az6_9S6o2rGLDXx5yRC6I0GnI,1373
+napi/read_7z.py,sha256=VWFbk2BrYfj7D1GYMuR6CDck4Rtzg07R95FLB_nG1ZY,406
+napi/store_subs.py,sha256=MeWAI2ODJI-ie4gsIPGBpoMprXjwaSHdL7syZySMQHI,348
+napi_py-1.2.3.dist-info/LICENSE.md,sha256=L8vFn9ZHT3RRpTtzuzhkgDTutx_NNhMzCw_9YpbZR4Q,35129
+napi_py-1.2.3.dist-info/METADATA,sha256=nGRkiI8s07JYWw2tTcmsenzxc4rQS3Lknh3mlG3WbaA,2388
+napi_py-1.2.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+napi_py-1.2.3.dist-info/entry_points.txt,sha256=4VaRsvAeqg94E4xOV5jqMitqiarzOP3n9S3zbSP1CfI,46
+napi_py-1.2.3.dist-info/RECORD,,
