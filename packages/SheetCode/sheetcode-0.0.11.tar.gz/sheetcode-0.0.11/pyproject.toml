@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "pandas", "openpyxl", "termcolor", "tabulate"]
+build-backend = "hatchling.build"
+
+[project]
+name = "SheetCode"
+version = "0.0.11"
+authors = [
+  { name="Thomas MARIN", email="thomas.marin@gmx.com" },
+]
+description = "Generate Excel test sheets procedurally and verify traceability against requirements."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/befr4ctal/SheetCode"
+Issues = "https://github.com/befr4ctal/SheetCode/issues"
