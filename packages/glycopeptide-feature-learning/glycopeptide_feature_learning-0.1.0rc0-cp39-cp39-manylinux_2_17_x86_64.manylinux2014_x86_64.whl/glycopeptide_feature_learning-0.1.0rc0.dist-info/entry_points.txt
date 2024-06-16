@@ -1,0 +1,2 @@
+[console_scripts]
+glycopeptide-feature-learning = glycopeptide_feature_learning.tool:cli
