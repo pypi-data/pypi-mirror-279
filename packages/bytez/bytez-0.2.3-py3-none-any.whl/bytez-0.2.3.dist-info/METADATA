@@ -1,0 +1,124 @@
+Metadata-Version: 2.1
+Name: bytez
+Version: 0.2.3
+Summary: Python API client for Bytez service
+Home-page: https://github.com/bytez-com/docs
+Author: Bytez
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.32.1)
+
+# API Documentation
+
+## Introduction
+
+Welcome to the Bytez API documentation! This API provides access to various machine learning models for serverless operation. Below, you will find examples demonstrating how to interact with the API using our Python client library.
+
+## Getting Your Key
+
+To use this API, you need an API key. Obtain your key by joining the [Bytez Discord](https://discord.gg/Zrd5UbMEBA). If you prefer not to use Discord, email us at team@bytez.com.
+
+## Boot Times and Billing
+
+### Cold Boot Times
+
+Expect the following boot times for models:
+
+- Smallest model: ~12 minutes.
+- Largest model: ~15 minutes.
+  We are working on reducing these boot times to under 5 minutes.
+
+### Billing
+
+Billing begins from the first 60 seconds of use, with subsequent usage rounded to the nearest minute. Charges are based on $0.0000166667 per GB-second on GPUs. The default expiration period for a model instance is 30 minutes.
+
+## Python Client Library Usage Examples
+
+### List Available Models
+
+Retrieve a list of all available models.
+
+```python
+from bytez_client import Bytez
+api_key = 'YOUR_API_KEY'
+client = Bytez(api_key)
+models = client.list_models()
+print(models)
+```
+
+### List Serverless Instances
+
+Get a list of your active serverless model instances.
+
+```python
+instances = client.list_instances()
+print(instances)
+```
+
+### Make a Model Serverless
+
+Submit a job to make a specific model serverless.
+
+```python
+model_id = 'openai-community/gpt2'
+job_status = client.process(model_id)
+print(job_status)
+```
+
+### Load a Model
+
+Load a model with specified serverless configuration options.
+
+```python
+options = {'concurrency': 1, 'timeout': 300}
+loaded_model = client.model(model_id)
+loaded_model.load(options)
+```
+
+### Check Model Status
+
+Retrieve the current status of a specific model.
+
+```python
+status = loaded_model.status()
+print(status)
+```
+
+### Run a Model
+
+Execute a model with the provided input and optional inference parameters.
+
+```python
+input_text = "Once upon a time there was a"
+output = loaded_model.run(input_text)
+print(output)
+```
+
+### Shutdown a Model
+
+Stop a model and shut down the serverless instance.
+
+```python
+shutdown_response = loaded_model.stop()
+print(shutdown_response)
+```
+
+## Authentication
+
+Always include your API key when initializing the client:
+
+```python
+client = Bytez(api_key='YOUR_API_KEY')
+```
+
+## Feedback
+
+We value your feedback to improve our documentation and services. If you have any suggestions, please join our [Discord](https://discord.gg/Zrd5UbMEBA) or contact us via email.
+
+
