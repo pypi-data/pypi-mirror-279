@@ -1,0 +1,11 @@
+permapy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+permapy/arweave_client.py,sha256=8aUv_nULNLaPap9sqOaaDRrHDs9moMa4c2jKR5T4i0c,2199
+permapy/async_client.py,sha256=ujl_quJlQarATo41pf7aCP-8jz3zXHUlLFrjawi_NTg,1997
+permapy/permaweb.py,sha256=t_VRl8xrUm9oXgFsqKtweBcvc3g8p9QZDip4ZxccqxM,2343
+permapy/transactions.py,sha256=EfL5dqP2EaIwkSr4O4a_YuZbf57TbSIrTcxmtjFke4o,1565
+permapy/utils.py,sha256=Sd1yalEUb5tauTOZKE4O6L4U9MTutxnFCSbD_lUo6M0,1664
+permapy/wallet.py,sha256=VgjXLF8npXtsUEs0mLyqs8RsJqPCi-k9tsZ3XJYVX38,1746
+permapy-0.1.0.dist-info/METADATA,sha256=BYclQPGiTopqM-rC-6PeedwB1IR7Hgb0TShLmfaNNkE,417
+permapy-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+permapy-0.1.0.dist-info/top_level.txt,sha256=RqD-s4lvdsg-CD0FBl17jcA8gjexlnmV1euof315eJk,8
+permapy-0.1.0.dist-info/RECORD,,
