@@ -1,0 +1,10 @@
+basic_colormath/__init__.py,sha256=OyhoxGvi4aOIzhrKPI-8Tqm-8jjl7rBcBnH6x3NZdGM,1000
+basic_colormath/conversion.py,sha256=x3VuIs7NmrmqmTicsXR2Ebrj7t5mnF69BwvCTINbv7g,5941
+basic_colormath/distance.py,sha256=qO6CuO7y5TLVJ8QYpeiF-A6qZDTCF-PEwSYLACrfGko,8119
+basic_colormath/mix.py,sha256=oEZjSXMIORgTltD0lsYQ1ux6iVLPCtgj9ZuaEoYWKpw,3830
+basic_colormath/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+basic_colormath/type_hints.py,sha256=-f7nRbaCIG2WlCmPXKQCBQdWFvno0rOuJstBmq9pqw8,699
+basic_colormath-0.1.5.dist-info/METADATA,sha256=Sv6X2FgzrLNrZwBHjoP14a_DZuJ785tjLkf55oTm8Mo,6359
+basic_colormath-0.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+basic_colormath-0.1.5.dist-info/top_level.txt,sha256=fSmmDbuKz_gUEpmhvzC6IutVNixVjtWiWRI16xtr63Y,16
+basic_colormath-0.1.5.dist-info/RECORD,,
