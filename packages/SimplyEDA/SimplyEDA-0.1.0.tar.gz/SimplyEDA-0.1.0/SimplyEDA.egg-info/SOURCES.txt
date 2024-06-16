@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+SimplyEDA.egg-info/PKG-INFO
+SimplyEDA.egg-info/SOURCES.txt
+SimplyEDA.egg-info/dependency_links.txt
+SimplyEDA.egg-info/requires.txt
+SimplyEDA.egg-info/top_level.txt
+tests/test_SimpleEDA.py
