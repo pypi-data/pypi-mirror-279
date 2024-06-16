@@ -1,0 +1,19 @@
+{% extends template_name|add:'/index.html' %}
+{% load static %}
+{% load markdownify %}
+
+{% block content %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->{% include template_name|add:'/breadcrumb.html' %}<!-- End Breadcrumbs Section -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          {{ object.content | markdownify }}
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+{% endblock content %}
