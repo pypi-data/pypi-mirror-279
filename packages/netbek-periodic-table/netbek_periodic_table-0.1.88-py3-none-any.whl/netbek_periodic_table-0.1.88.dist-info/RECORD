@@ -1,0 +1,13 @@
+netbek/__init__.py,sha256=q3JNmHn0CMPtEqkMR40lkjKQzuWUtT39xIFUYJ-MKIE,56
+netbek/periodic_table/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbek/periodic_table/templates/macros/render_axis_cell.jinja2,sha256=5jV689gilpyt1rAoVrsFxN7PsKr30BYJLslP8nq7dtE,147
+netbek/periodic_table/templates/macros/render_blockholder_element_cell.jinja2,sha256=29FvowgQKNyi-fveCiw3xIQtN-757ET9Cm3ad2o5OS8,287
+netbek/periodic_table/templates/macros/render_element_cell.jinja2,sha256=FWoonNQYsbvxZQRQ5KvTOKSRk5FMW8OXAxgIJ2-Enhg,1416
+netbek/periodic_table/templates/macros/render_empty_cell.jinja2,sha256=cWn8IZCjcCKeVXtinUvsWNJAjkTTCh3zxq2-nAJzpY4,135
+netbek/periodic_table/templates/macros/render_legend.jinja2,sha256=jtF5VuQHo4Eay6ytm1zvTY6ZiQmFImk6F31Vy4vxI_8,5910
+netbek/periodic_table/templates/macros/render_table_18.jinja2,sha256=WCSHaUbVoxvmOQp48aIxK-U5-j7YLLiTER0ZRygUgvo,3253
+netbek_periodic_table-0.1.88.dist-info/LICENSE,sha256=dql8h4yceoMhuzlcK0TT_i-NgTFNIZsgE47Q4t3dUYI,34520
+netbek_periodic_table-0.1.88.dist-info/METADATA,sha256=c01e1nQwWesC13f0FOeiYPjsmUPOXqdcqlGZx0Ru7eU,42076
+netbek_periodic_table-0.1.88.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+netbek_periodic_table-0.1.88.dist-info/top_level.txt,sha256=Glu6Fw763-0O8abYVREEJKB8FpLrOggp0K1aAUJlbac,7
+netbek_periodic_table-0.1.88.dist-info/RECORD,,
