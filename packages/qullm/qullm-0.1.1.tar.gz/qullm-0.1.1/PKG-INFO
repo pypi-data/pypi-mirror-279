@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: qullm
+Version: 0.1.1
+Summary: Simulation quantum neural network equation is used for large language
+Home-page: https://github.com/1nobodybutme1/qullm
+Author: C.C.K Leon
+Author-email: ckchau1@asu.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# QULLM: Quantum Neural Network for Large Language Models
+
+This package provides a simulation of quantum neural network equations for large language models.
+
+## Installation
+
+```bash
+pip install qutumllm
