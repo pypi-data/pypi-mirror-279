@@ -1,0 +1,2 @@
+[console_scripts]
+fractx = fractlang.__main__:main
