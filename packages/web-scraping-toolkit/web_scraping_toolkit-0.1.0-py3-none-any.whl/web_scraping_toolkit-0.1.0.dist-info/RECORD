@@ -1,0 +1,11 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_scraper.py,sha256=6gATyq3PE_IXSIDPzHYyQAyt7Iz5MvDJTYxM-U8gfH4,402
+web_scraping_toolkit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web_scraping_toolkit/parser.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web_scraping_toolkit/scraper.py,sha256=MSIPfUn7FEaO2znKuLe6t7TfgrtnDcV6XQc0-HwYCPI,586
+web_scraping_toolkit/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+web_scraping_toolkit-0.1.0.dist-info/METADATA,sha256=HP_xyFToigxmAQ3z1Fa8PavBdI87iMi8jUKRyAxaSPk,596
+web_scraping_toolkit-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+web_scraping_toolkit-0.1.0.dist-info/entry_points.txt,sha256=ExBQURXk1064Ow1taRVW_TgNt7w6la7QSdn6J4iTBa0,66
+web_scraping_toolkit-0.1.0.dist-info/top_level.txt,sha256=t3M_bzt2DhS2CthcBGxHOw-ToWGngvrcXqHptvJg3Fs,27
+web_scraping_toolkit-0.1.0.dist-info/RECORD,,
