@@ -1,0 +1,13 @@
+main.py,sha256=NqGGTBVXqIOOKJULoBHayDmx01R7oa3hmqAFiELWMOo,6135
+somweb/__init__.py,sha256=8C8D2M2_9eoj02FCJl1tCKX4keimjToauu52U0o-psc,110
+somweb/__version__.py,sha256=4Cen0P24SbImzrmFlnXsZqnDg6BDEAOWnKSWwNwvqZQ,88
+somweb/client.py,sha256=iO_ZB63mqdcBSK_g1YGnRFbUUroiSf19d7uIj24gPfM,24664
+somweb/const.py,sha256=ulKXyL1CHhHLk0fUAvZM6p4qYp_PXd7H18mTVrP-J6s,2259
+somweb/httpclient.py,sha256=zsNxnc8kGx46BoByE12m7-7tD-3frdQ13EKhjesOugk,4321
+somweb/models.py,sha256=tQ3AA_tIylg1C4YlVIoLL-a18c4ZXGt9-_xaZQBIdCE,928
+somweb-1.3.3b0.dist-info/LICENSE,sha256=uz4I6R8ZvXUP8zBHub0u8QjoSiqqGmgmYf50obGW9H4,1091
+somweb-1.3.3b0.dist-info/METADATA,sha256=bXp9UFL9qpNUIMXWtbniKJdC6Ty9XrytcmDbb4o9Mjg,8707
+somweb-1.3.3b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+somweb-1.3.3b0.dist-info/entry_points.txt,sha256=EoVO8iNMnm06A12uG-XMtDmFMFbTvwhvexGxysDWsok,37
+somweb-1.3.3b0.dist-info/top_level.txt,sha256=iMYdk44FDwVIwkdHOOJg2u97XoJnduJlpToldXEcizg,12
+somweb-1.3.3b0.dist-info/RECORD,,
