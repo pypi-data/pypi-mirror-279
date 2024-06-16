@@ -1,0 +1,11 @@
+django_allauth_vatsim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_vatsim/adapter.py,sha256=xWhaBxt07Zyb6xObhzrUy1z71u-HcSWCIsMBDY4T_VA,1796
+django_allauth_vatsim/apps.py,sha256=rOBS4hv7kCtpk3aETeYLifvyVcmUIoTZ3_C4fIceDYo,208
+django_allauth_vatsim/provider.py,sha256=8sPEqIA3nQHIUKs1OqBHtsPFKzzWViYo8s8gnaVU_Zo,1027
+django_allauth_vatsim/urls.py,sha256=yUBM0TZpmkW67a-qwmbBaq24ApJNX2X4ue4MtM3wOv4,163
+django_allauth_vatsim/views.py,sha256=E_FCwL7ljwgyPsUiCHN93aJivdW12RZNqJV6DJIFA8s,1006
+django_allauth_vatsim-0.0.2.dist-info/LICENSE,sha256=7HKGON_sq6HC865MoIQKHGwLrMnzV2x-5e552pmpvks,1481
+django_allauth_vatsim-0.0.2.dist-info/METADATA,sha256=18SY0kpdr4BFmHDDZXjboq3FSU2f3pRLdjRYC_2QdkE,6140
+django_allauth_vatsim-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_allauth_vatsim-0.0.2.dist-info/top_level.txt,sha256=upFzNclnJbxSczZ7kPniswpnQF20WIZtHf738O-c8Ig,22
+django_allauth_vatsim-0.0.2.dist-info/RECORD,,
