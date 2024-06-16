@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: universal-test-platform
+Version: 0.0.9
+License-File: LICENSE.txt
+Requires-Dist: Click
+Requires-Dist: pyyaml
