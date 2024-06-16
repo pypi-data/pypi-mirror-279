@@ -1,0 +1,19 @@
+# Python packages required for running femder package
+cloudpickle
+gmsh
+ipython
+kaleido
+matplotlib
+meshio
+mkl
+numba < 0.59
+numpy
+plotly >= 4.9
+psutil
+pyMKL2
+pymoo
+pytta
+scipy
+seaborn
+tmma
+tqdm
