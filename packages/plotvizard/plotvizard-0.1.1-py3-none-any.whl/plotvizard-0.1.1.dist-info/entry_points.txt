@@ -1,0 +1,2 @@
+[console_scripts]
+plotvizard = plotvizard:main
