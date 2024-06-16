@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: passing_network_centrality
+Version: 0.1.0
+Summary: A template Python module
+Home-page: https://github.com/niesfutbol/passing_network_centrality
+Author: NIES
+Author-email: nepo@nies.futbol
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: numpy
+
+<a href="https://www.nies.futbol/"><img
+src="https://github.com/nepito/world_cup_semis/blob/develop/img/logo.jpeg" align="right" width="256"
+/></a>
+
+# Passing Network Centrality
+
+## Step to use
+
