@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+config.toml.example
+pyproject.toml
+anitya_telegram/anitya_tg_gw.py
+anitya_telegram.egg-info/PKG-INFO
+anitya_telegram.egg-info/SOURCES.txt
+anitya_telegram.egg-info/dependency_links.txt
+anitya_telegram.egg-info/requires.txt
+anitya_telegram.egg-info/top_level.txt

@@ -1,0 +1,80 @@
+# fedora-messaging --conf config.toml consume --callback-file anitya_tg_gw.py:TelegramForwardConsumer
+
+amqp_url = "amqps://fedora:@rabbitmq.fedoraproject.org/%2Fpublic_pubsub"
+
+[tls]
+ca_cert = "conf/cacert.pem"
+keyfile = "conf/fedora-key.pem"
+certfile = "conf/fedora-cert.pem"
+
+[client_properties]
+app = "Anitya-Telegram Gateway"
+
+[exchanges."amq.topic"]
+type = "topic"
+durable = true
+auto_delete = false
+arguments = {}
+
+# [queues.00000000-0000-0000-0000-000000000000]
+# durable = false
+# auto_delete = true
+# exclusive = true
+# arguments = {}
+
+[[bindings]]
+# queue = "00000000-0000-0000-0000-000000000000"
+exchange = "amq.topic"
+routing_keys = ["org.release-monitoring.prod.anitya.project.version.update.v2"]
+
+[consumer_config]
+api_key = "123:KJH349pok"
+chat_ids = ["-123"]
+
+[[consumer_config.projects]]
+id = 6501 # linux~5.x
+versions = ["5.19"]
+
+[[consumer_config.projects]]
+id = 315000 # linux~6
+allow_nonstable = true
+
+[qos]
+prefetch_size = 0
+prefetch_count = 25
+
+[log_config]
+version = 1
+disable_existing_loggers = true
+
+[log_config.formatters.simple]
+format = "[%(levelname)s %(name)s] %(message)s"
+
+[log_config.handlers.console]
+class = "logging.StreamHandler"
+formatter = "simple"
+stream = "ext://sys.stdout"
+
+[log_config.loggers.fedora_messaging]
+level = "WARNING"
+propagate = false
+handlers = ["console"]
+
+[log_config.loggers.twisted]
+level = "WARNING"
+propagate = false
+handlers = ["console"]
+
+[log_config.loggers.pika]
+level = "WARNING"
+propagate = false
+handlers = ["console"]
+
+[log_config.loggers.TelegramForwardConsumer]
+level = "DEBUG"
+propagate = false
+handlers = ["console"]
+
+[log_config.root]
+level = "ERROR"
+handlers = ["console"]

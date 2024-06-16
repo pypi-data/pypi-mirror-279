@@ -1,0 +1,22 @@
+[project]
+name = "anitya-telegram"
+version = "0.0.5"
+description = "Telegram gateway for Anitya release monitoring system"
+readme = "README.md"
+authors = [
+  { name="mirko", email="mirko+anitya@smthd.com" },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: POSIX :: Linux",
+]
+requires-python = ">=3.8"
+dependencies = [
+  "fedora-messaging == 3.6.*",
+  "anitya-schema == 2.2.*",
+  "python-telegram-bot-raw == 21.3"
+]
+
+[project.urls]
+"Homepage" = "https://gitea.smthd.com/mirko/anitya-telegram"

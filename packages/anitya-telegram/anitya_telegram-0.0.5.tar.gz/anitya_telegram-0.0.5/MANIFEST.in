@@ -1,0 +1,2 @@
+include config.toml.example
+recursive-exclude anitya_telegram/tests *

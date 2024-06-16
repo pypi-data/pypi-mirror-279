@@ -1,0 +1,3 @@
+fedora-messaging==3.6.*
+anitya-schema==2.2.*
+python-telegram-bot-raw==21.3
