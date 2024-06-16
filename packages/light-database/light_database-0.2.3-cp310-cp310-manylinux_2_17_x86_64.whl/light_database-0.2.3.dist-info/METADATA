@@ -1,0 +1,358 @@
+Metadata-Version: 2.1
+Name: light-database
+Version: 0.2.3
+Summary: Easy way to handle database
+Author: Bigollo
+Description-Content-Type: text/markdown
+Requires-Dist: portalocker
+Requires-Dist: pyarrow
+Requires-Dist: pandas
+Requires-Dist: cryptography
+
+# light-database 数据库交互
+
+## 简介
+
+light-database 是一个用于轻量级数据库交互的 Python 包，提供一个易于使用的接口来执行查询和管理数据库。
+
+## 依赖性
+
+##### 基础依赖（安装light-database时将自动安装）：
+
+- pyarrow
+- pandas
+- portalocker
+- cryptography
+
+##### 操作具体数据库需要额外依赖（根据需求手动安装）：
+
+| 数据库     | 依赖            |
+| ---------- | --------------- |
+| MySQL      | mysqlclient     |
+| PostgreSQL | psycopg2-binary |
+| StarRocks  | mysqlclient     |
+| Hive       | impyla          |
+| HBase      | thrift、rich    |
+
+## 安装
+
+```shell
+# 通过 pip 安装：
+pip install light-database
+```
+
+## 初始化数据库连接
+
+1. #### 配置文件的写入
+
+```python
+from light_database.config import EnvConfig
+
+"""
+EnvConfig.write 方法用于配置数据库连接信息。
+参数：
+- section (str): 配置文件中存储连接信息的节的名称。
+- host (str): 数据库服务器的主机名或IP地址。
+- port (int): 数据库服务器的端口号。
+- database (str, optional): 数据库名称（仅适用于 MySQL，可能因数据库类型而有所不同）。
+- user (str): 数据库所使用的用户名。
+- password (str): 连接到数据库所使用的密码。
+- auth_mechanism (str, optional): 认证机制（仅适用于某些数据库，如 Hive）。
+- force (bool, optional): 当为True时将重新配置某个节的信息，默认为 False。
+
+说明：
+调用此方法可以配置数据库连接信息，并将其写入配置文件中。参数中的 `section` 参数用于指定在配置文件中存储连接信息的节的名称，通常用于区分不同的连接配置。其他参数用于指定具体的连接信息，例如主机名、端口号、用户名、密码等。如果配置文件中已经存在指定节的信息，将根据 `force` 参数的值来决定是否强制重写部分信息。
+
+注意：
+在调用此方法之前，请确保提供了正确的连接信息，并理解 `section` 参数的作用。不正确的配置信息可能会导致连接失败或其他意外行为。
+"""
+
+# 示例：
+# 配置名为 'mysql' 的数据库连接信息
+EnvConfig.write(section="mysql", host=host, port=port, database=database, user=user, password=password)
+
+# 配置名为 'hive' 的数据库连接信息，并指定认证机制为 'PLAIN'
+# EnvConfig.write(section="hive", host=host, port=port, user=user, password=password, auth_mechanism="PLAIN")
+
+# 配置名为 'hbase' 的数据库连接信息
+# EnvConfig.write(section="hbase", host=host, port=port)
+
+```
+
+2. #### 配置文件的读取
+
+```python
+from light_database.config import EnvConfig
+
+"""
+EnvConfig.read 方法用于读取配置的数据库信息。
+参数：
+- sections (str, list, optional): 配置文件中存储连接信息的节的名称。如果未传入指定节的名称，则返回全部的配置文件信息。
+
+返回值：
+- str: 返回查询的配置文件信息，以字符串形式表示。
+
+说明：
+调用此方法可以读取配置文件中存储的数据库连接信息。如果指定了节的名称，则只返回该节的信息；如果未指定节的名称，则返回全部的配置文件信息。返回的信息通常包含主机名、端口号、用户名、密码等连接信息。
+
+注意：
+在调用此方法之前，请确保配置文件存在且格式正确。如果配置文件不存在或格式错误，将可能导致读取失败或返回不正确的结果。
+"""
+
+# 示例：
+# 读取名为 'mysql' 的连接配置信息
+mysql_config = EnvConfig.read(sections=['mysql'])
+
+# 读取名为 'mysql' 及 'msyql2' 的连接配置信息
+mysql_config = EnvConfig.read(sections=['mysql', 'msyql2'])
+
+# 读取全部配置文件信息
+all_config = EnvConfig.read()
+
+```
+
+3. #### 配置文件的删除
+
+```python
+from light_database.config import EnvConfig
+
+"""
+EnvConfig.delete 方法用于从配置文件中删除指定的节。
+参数：
+- section (str): 配置文件中存储连接信息的节的名称。
+
+说明：
+调用此方法将从配置文件中删除指定的节，该节包含了数据库连接信息。这可以用于清除不再需要的连接配置。
+
+注意：
+在使用此方法之前，请确保了解其影响，并谨慎操作，因为删除节可能会导致相关连接信息的丢失。
+"""
+
+# 示例：
+EnvConfig.delete(section='mysql')
+
+```
+
+## 数据库操作
+
+1. #### 建立连接：
+
+```python
+from light_database import MysqlDB
+
+"""
+MysqlDB.new 方法用于建立一个新的数据库连接。
+参数：
+	- section (str): 配置文件中存储连接信息的节的名称。
+
+说明：
+调用此方法可以根据指定的节从配置文件中读取连接信息，并使用这些信息建立数据库连接。如果未指定节的名称，则将使用默认的连接方式来建立连接。默认的连接方式通常在配置文件中预先定义，例如 MySQL 的默认连接别名为 'mysql'，Hive 的默认连接别名为 'hive'，HBase 的默认连接别名为 'hbase' 。建立的连接将返回一个数据库连接对象，可以用于后续的数据库操作。
+
+注意：
+在调用此方法之前，请确保提供了正确的节名称，并了解配置文件中存储连接信息的格式和内容。未正确配置连接信息可能会导致连接失败或其他意外行为。
+"""
+
+# 示例1：使用配置文件中名为 'msyql' 的连接配置建立数据库连接
+mysql = MysqlDB.new('msyql')
+
+# 示例2：默认的连接方式，将使用默认的连接配置建立数据库连接
+mysql = MysqlDB
+
+```
+
+2. #### 查询语句
+
+```python
+from light_database import MysqlDB
+
+"""
+数据库查询语句
+条件语句遵循双下划线使用规范
+	__like: 模糊查询
+	__gt: 大于
+	__gte: 大于或等于
+	__lt: 小于
+	__lte: 小于或等于
+	__ne: 不等于
+	__in: 在列表中
+	__not_in: 不在列表中
+	__is:  两个对象是否相同
+	__is_not: 两个对象是否不相同
+	...
+"""
+
+# 示例1：执行带有筛选条件的数据库查询，并返回 DataFrame 类型的查询结果
+df1 = MysqlDB.filter(
+    table  # 要查询的数据表名
+).select(
+    column1,  # 要选择或筛选的列名
+    column2
+).where(
+    column3__in=[1, 2],  # column3 字段的值在列表 [1, 2] 中
+    column4=1
+).df()
+
+# 示例2：通过切片方式执行数据库查询，并返回 DataFrame 类型的查询结果（相当于执行 limit 1, 2）
+df2 = MysqlDB.filter(
+    table  # 要查询的数据表名
+).select(
+    column1,  # 要选择或筛选的列名
+    column2
+).where(
+    column3__lt=1,  # column3 字段的值小于 1
+    column4__ne=1
+).df[1:2]
+
+```
+
+3. #### 更新语句
+
+```python
+from light_database import MysqlDB
+
+"""
+数据库更新语句
+条件语句遵循双下划线使用规范
+	__like: 模糊查询
+	__gt: 大于
+	__gte: 大于或等于
+	__lt: 小于
+	__lte: 小于或等于
+	__ne: 不等于
+	__in: 在列表中
+	__not_in: 不在列表中
+	__is:  两个对象是否相同
+	__is_not: 两个对象是否不相同
+	...
+"""
+
+# 示例：执行带有修改和筛选条件的数据库更新操作
+MysqlDB.update(
+    table  # 要更新的数据表名
+).set(
+    column1=1,  # 要修改的列及对应的值
+    column2=2,
+).where(
+    id__gte=3,  # id 列的值大于等于 3
+    column4=4  # column4 列的值等于 4
+)
+
+```
+
+4. #### 删除语句
+
+```python
+from light_database import MysqlDB
+
+"""
+数据库删除语句详解：
+条件语句遵循双下划线使用规范
+	__like: 模糊查询
+	__gt: 大于
+	__gte: 大于或等于
+	__lt: 小于
+	__lte: 小于或等于
+	__ne: 不等于
+	__in: 在列表中
+	__not_in: 不在列表中
+	__is:  两个对象是否相同
+	__is_not: 两个对象是否不相同
+	...
+"""
+
+# 示例：执行带有筛选条件的数据库删除操作
+MysqlDB.delete(
+    table  # 要删除数据的数据表名
+).where(
+    id__gte=3,  # id 列的值大于等于 3
+    column4=4  # column4 列的值等于 4
+)
+
+```
+
+5. #### 原生 SQL 执行查询语句
+
+```python
+from light_database import MysqlDB
+
+"""
+使用 query 方法执行查询语句：
+参数：
+    - sql (str): 要执行的查询语句，支持 SQL 语法
+    - values (Iterable): 格式化的值，用于替换 SQL 语句中的占位符（可选）
+返回：
+    - DataFrame 对象，包含查询结果的数据
+"""
+
+# 示例：执行查询语句并返回 DataFrame 对象
+df = MysqlDB.query('SELECT column1, column2 FROM table WHERE column3 < 10')
+
+```
+
+6. #### 执行原生 SQL 操作
+
+```python
+from light_database import MysqlDB
+
+"""
+执行操作语句且不需要获取结果时使用 execute 方法：
+参数：
+    - sql (str): 要执行的操作语句，支持 SQL 语法
+    - values (Iterable): 格式化的值，用于替换 SQL 语句中的占位符（可选）
+返回：
+    - None
+
+注意：在执行操作语句时，请确保语句的安全性，避免 SQL 注入等安全风险。
+"""
+
+# 示例1：执行更新操作语句
+MysqlDB.execute('UPDATE table SET column1=10 WHERE column2 IN (1, 2, 3)')
+
+# 示例2：执行删除操作语句
+MysqlDB.execute('DELETE FROM table WHERE column IN (1, 2, 3)')
+
+# 示例3：执行插入操作语句
+MysqlDB.execute('INSERT INTO table(column1, column2, column3) VALUES(1, 2, 3)')
+
+```
+
+7. #### 快速查看数据库中的数据表
+
+```python
+from light_database import MysqlDB
+
+"""
+该方法用于检索当前数据库连接中的所有数据表。
+返回：
+    - DataFrame 对象，包含查询结果的数据
+"""
+
+# 示例
+all_tables = MysqlDB.tables()
+
+```
+
+8. #### 查询数据表的信息
+
+```python
+from light_database import MysqlDB
+
+"""
+该方法用于获取指定数据表的元数据信息，包括列名、数据类型、是否为主键等。
+参数：
+    - table (str): 查询的数据表名
+返回：
+    - DataFrame 对象，包含查询结果的数据
+"""
+
+# 示例
+metadata = MysqlDB.description(table_name)
+
+```
+
+## 功能
+
+- 支持多种数据库系统（如 MySQL、PostgreSQL、StarRocks、Hive、HBase）
+- 简洁的 API
+- 连接池管理
+- 自动转换查询结果
