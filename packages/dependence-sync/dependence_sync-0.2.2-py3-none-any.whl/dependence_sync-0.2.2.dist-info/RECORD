@@ -1,0 +1,13 @@
+dsm/__init__.py,sha256=9aY4ubh1Ws6EeGyUoJIBN3ypZAJZthJgxsi_QUVyS8I,184
+dsm/app.py,sha256=7wsqgE0dvz-sgYVGzMnomM96wPM0ByDO-Ez9sDNpQFU,1625
+dsm/deps.py,sha256=E_7DFad7mGF_Sf7SnnEc1IC7mqVBlVRJTsjzfmb3Qvk,514
+dsm/env.py,sha256=u7A-DRlhs7M0SpiD8deMCoWjAbteomXDWYLSiPXu0Ic,963
+dsm/fetcher.py,sha256=5o6HXm-YrunuNpMhwQalGZRtcqOrNpijLjbyM1EORzo,3466
+dsm/init_project.py,sha256=4bd_ABBUGRgv7x6u60T3GJf9UlIhpmE_GQcVa7gvXDM,583
+dsm/sync.py,sha256=syVsYrWkyqPsvkEYpkKs_wUZ6HoudORleEqWdEUoJd4,3870
+dependence_sync-0.2.2.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+dependence_sync-0.2.2.dist-info/METADATA,sha256=BDAk2_qwQVNrONIRxaLrhCme1ndjBxZ1yPqGgnHOYFs,1400
+dependence_sync-0.2.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dependence_sync-0.2.2.dist-info/entry_points.txt,sha256=ucasIPEla1qUS25X59-qAcdf_5mgUGhqNy5iHDeNrXE,37
+dependence_sync-0.2.2.dist-info/top_level.txt,sha256=SfAL4ik8N7KWeKqWTtX0XuMpdlGj_GIq1oXGoZ8rSNU,4
+dependence_sync-0.2.2.dist-info/RECORD,,
