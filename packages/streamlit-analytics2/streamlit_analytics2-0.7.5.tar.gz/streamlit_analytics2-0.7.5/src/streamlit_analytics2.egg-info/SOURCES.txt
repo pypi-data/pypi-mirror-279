@@ -1,0 +1,14 @@
+LICENSE
+pyproject.toml
+.github/README.md
+src/streamlit_analytics2/__init__.py
+src/streamlit_analytics2/display.py
+src/streamlit_analytics2/firestore.py
+src/streamlit_analytics2/main.py
+src/streamlit_analytics2/utils.py
+src/streamlit_analytics2.egg-info/PKG-INFO
+src/streamlit_analytics2.egg-info/SOURCES.txt
+src/streamlit_analytics2.egg-info/dependency_links.txt
+src/streamlit_analytics2.egg-info/requires.txt
+src/streamlit_analytics2.egg-info/top_level.txt
+tests/test_utils.py
