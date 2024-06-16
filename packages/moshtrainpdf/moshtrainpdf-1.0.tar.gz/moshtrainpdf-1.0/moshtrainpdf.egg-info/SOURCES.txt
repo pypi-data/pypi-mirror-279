@@ -1,0 +1,9 @@
+README.md
+setup.py
+moshtrainpdf.egg-info/PKG-INFO
+moshtrainpdf.egg-info/SOURCES.txt
+moshtrainpdf.egg-info/dependency_links.txt
+moshtrainpdf.egg-info/top_level.txt
+pro/__init__.py
+pro/pdf2image.py
+pro/pdf2text.py
