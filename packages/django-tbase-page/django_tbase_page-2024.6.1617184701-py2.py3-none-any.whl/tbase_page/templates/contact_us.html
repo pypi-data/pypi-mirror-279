@@ -1,0 +1,8 @@
+{% extends 'blog/blog_base.html' %}
+{% load solo_tags %}
+{% load martortags %}
+{% block title %}<title>CONTACT US</title>{% endblock %}
+{% block content %}
+{% get_solo 'tbase_page.BasePage' as BasePage %}
+{{BasePage.contact_us|safe_markdown}}
+{% endblock %}
