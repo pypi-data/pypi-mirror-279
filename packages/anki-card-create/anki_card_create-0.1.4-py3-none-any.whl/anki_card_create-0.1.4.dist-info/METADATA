@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: anki-card-create
+Version: 0.1.4
+Summary: 
+Author: PH Lin
+Author-email: phlin@example.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: googletrans (==4.0.0rc1)
+Requires-Dist: langdetect (>=1.0.9,<2.0.0)
+Requires-Dist: navertts (>=0.3.1,<0.4.0)
+Requires-Dist: pydantic (>=2.6.4,<3.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Project-URL: homepage, https://github.com/phlin0424/anki-card-create
+Project-URL: repository, https://github.com/phlin0424/anki-card-create
+Description-Content-Type: text/markdown
+
+# Create Korean Anki cards with audios
+
+Add anki cards with audios (korean vocabulary) simply with only one command: `kanki`.
+
+## Before Using `kanki`
+
+Open Anki, go to Tools -> Add-ons -> Get Add-ons... and enter the code `2055492159` to install AnkiConnect.
+
+
+## Package setup
+
+Set up the package using: 
+```
+pip install anki-card-create
+```
+
+## Usage
+
+1. Ensure that Anki has been running in the background. 
+
+2. Ensure that anki-connect has been installed. 
+
+3. Create a single anki card using: 
+```
+kanki -w 안녕하세요
+```
+
+4. Or, create multiple anki cards using: 
+```
+kanki -f <file-with-korean-vocabularies-listed>
+```
+
