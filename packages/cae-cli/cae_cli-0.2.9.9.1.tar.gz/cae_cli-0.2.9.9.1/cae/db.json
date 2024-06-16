@@ -1,0 +1,269 @@
+{
+    "functions": {
+        "new_project": {
+            "steps": [
+              {"new_layer": ["args[1]", "args[2]", "core", "", "<pk>args[1].args[2].core</pk>.use_cases"]},
+              {"new_layer": ["args[1]", "args[2]", "adaptadores", "-adapters", "<pk>args[1].args[2].adapters</pk>.use_cases"]},
+              {"new_layer": ["args[1]", "args[2]", "montadores", "-assemblers", "<pk>args[1].args[2].assemblers</pk>.use_cases"]}
+            ]
+        },
+      "new_project_ignore_ssl": {
+            "steps": [
+              {"new_layer_ignore_ssl": ["args[1]", "args[2]", "core", "", "<pk>args[1].args[2].core</pk>.use_cases"]},
+              {"new_layer_ignore_ssl": ["args[1]", "args[2]", "adaptadores", "-adapters", "<pk>args[1].args[2].adapters</pk>.use_cases"]},
+              {"new_layer_ignore_ssl": ["args[1]", "args[2]", "montadores", "-assemblers", "<pk>args[1].args[2].assemblers</pk>.use_cases"]}
+            ]
+        },
+      "clean": {
+        "steps": [
+          {"clear_layer": ["core"]},
+          {"clear_layer": ["adapters"]},
+          {"clear_layer": ["assemblers"]}
+        ]
+      },
+      "clean_ignore_ssl": {
+        "steps": [
+          {"clear_layer_ignore_ssl": ["core"]},
+          {"clear_layer_ignore_ssl": ["adapters"]},
+          {"clear_layer_ignore_ssl": ["assemblers"]}
+        ]
+      },
+      "install": {
+        "steps": [
+          {"install_layer": ["core"]},
+          {"install_layer": ["adapters"]},
+          {"install_layer": ["assemblers"]}
+        ]
+      },
+      "install_ignore_ssl": {
+        "steps": [
+          {"install_layer_ignore_ssl": ["core"]},
+          {"install_layer_ignore_ssl": ["adapters"]},
+          {"install_layer_ignore_ssl": ["assemblers"]}
+        ]
+      },
+      "clear_layer": {
+        "steps": [
+          {"change_folder_partial_match": ["args[0]"]},
+          {"clear_all": "None"},
+          {"return_root_path": "None"}
+        ]
+      },
+      "clear_layer_ignore_ssl": {
+        "steps": [
+          {"change_folder_partial_match": ["args[0]"]},
+          {"clear_ignore_ssl": "None"},
+          {"return_root_path": "None"}
+        ]
+      },
+      "install_layer": {
+        "steps": [
+          {"change_folder_partial_match": ["args[0]"]},
+          {"install_all_project": "None"},
+          {"return_root_path": "None"}
+        ]
+      },
+      "install_layer_ignore_ssl": {
+        "steps": [
+          {"change_folder_partial_match": ["args[0]"]},
+          {"install_all_project_ignore_ssl": "None"},
+          {"return_root_path": "None"}
+        ]
+      },
+        "clear_all": {
+
+          "steps": [
+            {"clear_all": "None"}
+          ]
+        },
+        "install_all": {
+
+          "steps": [
+            {"install_all_project": "None"}
+          ]
+        },
+        "c_i": {
+
+          "steps": [
+            {"clear_all": "None"},
+            {"install_all":  "None"}
+          ]
+        },
+        "new_fuc": {
+
+          "steps": [
+            {"walk_to_use_case_layer": ["core"]},
+            {"create_folder": ["<sc>args[1]</sc>"]},
+
+            {"create_file_based_in_template":  ["<sc>args[1]</sc>/", "<pc>args[1] use case</pc>.java", "use_case.txt",
+              ["args[1]"]]},
+
+            {"function_core_layer": ["","args[1]"]},
+            {"create_file_based_in_template":  ["implementations/",
+              "<pc>args[1] use case implementation</pc>.java",
+              "use_case_implementation.txt", ["args[1]"]]},
+
+            {"create_folder": ["io/inputs"]},
+            {"create_folder": ["io/outputs"]},
+            {"create_file_based_in_template":  ["io/inputs/",
+              "<pc>args[1] use case input</pc>.java",
+              "use_case_input.txt", ["args[1]"]]},
+
+            {"create_file_based_in_template":  ["io/outputs/",
+              "<pc>args[1] use case output</pc>.java",
+              "use_case_output.txt", ["args[1]"]]},
+            {"return_root_path": "None"},
+
+            {"function_adapters_layer": ["", "args[1]"]},
+            {"function_assembler_layer": ["", "args[1]"]}
+          ]
+        },
+        "new_cuc": {
+
+          "steps": [
+             {"walk_to_use_case_layer": ["core"]},
+            {"create_folder": ["<sc>args[1]</sc>"]},
+
+            {"create_file_based_in_template":  ["<sc>args[1]</sc>/", "<pc>args[1] use case</pc>.java", "use_case_cuc.txt",
+              ["args[1]"]]},
+
+            {"function_core_layer": ["","args[1]"]},
+            {"create_file_based_in_template":  ["implementations/",
+              "<pc>args[1] use case implementation</pc>.java",
+              "implementation_cuc.txt", ["args[1]"]]},
+            {"create_folder": ["io/inputs"]},
+
+             {"create_file_based_in_template":  ["io/inputs/",
+              "<pc>args[1] use case input</pc>.java",
+              "use_case_input.txt", ["args[1]"]]},
+
+            {"return_root_path": "None"},
+
+            {"function_adapters_layer": ["", "args[1]"]},
+            {"function_assembler_layer": ["", "args[1]"]}
+          ]
+        },
+      "new_ruc": {
+        "steps": [
+          {"walk_to_use_case_layer": ["core"]},
+          {"create_folder": ["<sc>args[1]</sc>"]},
+
+          {"create_file_based_in_template":  ["<sc>args[1]</sc>/", "<pc>args[1] use case</pc>.java", "use_case_ruc.txt",
+              ["args[1]"]]},
+          {"create_folder": ["<sc>args[1]</sc>/implementations"]},
+          {"create_folder": ["<sc>args[1]</sc>/implementations/ports"]},
+          {"create_file_based_in_template":  ["<sc>args[1]</sc>/implementations/",
+              "<pc>args[1] use case implementation</pc>.java",
+              "implementation_ruc.txt", ["args[1]"]]},
+          {"return_root_path": "None"},
+
+          {"function_adapters_layer": ["", "args[1]"]},
+          {"function_assembler_layer": ["", "args[1]"]}
+        ]
+      },
+        "new_suc": {
+          "steps": [
+            {"walk_to_use_case_layer": ["core"]},
+            {"create_folder": ["<sc>args[1]</sc>"]},
+
+            {"create_file_based_in_template":  ["<sc>args[1]</sc>/", "<pc>args[1] use case</pc>.java", "use_case_suc.txt",
+              ["args[1]"]]},
+            {"function_core_layer": ["","args[1]"]},
+            {"create_file_based_in_template":  ["implementations/",
+              "<pc>args[1] use case implementation</pc>.java",
+              "implementation_suc.txt", ["args[1]"]]},
+            {"create_folder": ["io/outputs"]},
+
+            {"create_file_based_in_template":  ["io/outputs/",
+              "<pc>args[1] use case output</pc>.java",
+              "use_case_output.txt", ["args[1]"]]},
+            {"return_root_path": "None"},
+
+            {"function_adapters_layer": ["", "args[1]"]},
+            {"function_assembler_layer": ["", "args[1]"]}
+          ]
+        },
+        "new_entity": {
+          "steps": [
+            {"walk_to_entity_layer": ["core"]},
+            {"create_folder": ["entities"]},
+            {"create_folder": ["/entities/factories"]},
+            {"create_folder": ["/entities/implementations"]},
+            {"create_file_based_in_template": ["/entities/","<pc>args[1]</pc>.java", "entity.txt",["args[1]"]]},
+            {"create_file_based_in_template": ["/entities/factories/","<pc>args[1]</pc>Factory.java", "entityFactory.txt",["args[1]"]]},
+            {"create_file_based_in_template": ["/entities/implementations/","<pc>args[1]</pc>Implementation.java", "entityImplementation.txt",["args[1]"]]},
+            {"return_root_path": "None"}
+          ]
+        },
+        "function_core_layer": {
+          "steps": [
+
+            {"change_folder_partial_match": ["<sc>args[1]</sc>"]},
+            {"core_basic_dir": "None"},
+            {"create_folder": ["implementations/mappers"]}
+
+          ]
+        },
+        "function_assembler_layer": {
+          "steps": [
+            {"walk_to_use_case_layer": ["assemblers"]},
+            {"create_folder": ["<sc>args[1]</sc>"]},
+            {"create_file_based_in_template":  ["<sc>args[1]</sc>/", "<pc>args[1] use case assembler</pc>.java", "assembler.txt", ["args[1]"]]},
+            {"return_root_path": "None"}
+          ]
+        },
+        "function_adapters_layer": {
+          "steps": [
+            {"walk_to_use_case_layer": ["adapters"]},
+            {"create_folder": ["<sc>args[1]</sc>"]},
+            {"return_root_path": "None"}
+          ]
+        },
+        "walk_to_entity_layer": {
+          "steps": [
+            {"change_folder_partial_match": ["args[0]", "target"]},
+            {"change_folder_partial_match": ["entities", "target"]},
+            {"go_up": "None"}
+          ]
+        },
+        "walk_to_use_case_layer": {
+          "steps": [
+            {"change_folder_partial_match": ["args[0]", "target"]},
+            {"change_folder_partial_match": ["use_cases", "target"]}
+          ]
+        },
+        "new_layer": {
+            "steps": [
+              {"create_project": ["args[0]", "args[1]args[3]", "1.0","args[4]"]},
+              {"create_file_based_in_template":  ["<kc>args[1]args[3]</kc>/","pom.xml", "pomargs[3].txt",
+                ["args[0]", "args[1]", "args[2]", "args[3]"]]},
+              {"return_root_path": "None"}
+            ]
+        },
+      "new_layer_ignore_ssl": {
+            "steps": [
+              {"create_project": ["args[0]", "args[1]args[3]", "1.0","args[4]", "true"]},
+              {"create_file_based_in_template":  ["<kc>args[1]args[3]</kc>/","pom.xml", "pomargs[3].txt",
+                ["args[0]", "args[1]", "args[2]", "args[3]"]]},
+              {"return_root_path": "None"}
+            ]
+        },
+        "core_basic_dir": {
+          "steps": [
+            {"create_folder": ["implementations"]},
+            {"create_folder": ["implementations/ports"]},
+            {"create_folder": ["io"]}
+          ]
+        },
+        "--version": {
+            "steps": [
+              {"--version":  "None"}
+            ]
+        },
+        "-v": {
+            "steps": [
+              {"--version":  "None"}
+            ]
+        }
+    }
+}
