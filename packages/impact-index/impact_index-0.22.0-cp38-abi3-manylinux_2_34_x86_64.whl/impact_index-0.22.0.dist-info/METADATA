@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: impact-index
+Version: 0.22.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE.txt
+Author: Benjamin Piwowarski <benjamin@piwowarski.fr>
+Author-email: Benjamin Piwowarski <benjamin@piwowarski.fr>
+License: GPL-2.0-or-later
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Experimaestro Information Retrieval (rust library)
+
+This package contains implementations in Rust of several key components of the Experimaestro IR library:
+
+- Sparse indexing: given a list of (term/impact) for each document, build/query an efficient structure
