@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+jiraflow/ExampleConfig.json
+jiraflow/WorkItem.py
+jiraflow/WorkItemService.py
+jiraflow/__init__.py
+jiraflow/main.py
+jiraflow.egg-info/PKG-INFO
+jiraflow.egg-info/SOURCES.txt
+jiraflow.egg-info/dependency_links.txt
+jiraflow.egg-info/entry_points.txt
+jiraflow.egg-info/requires.txt
+jiraflow.egg-info/top_level.txt
