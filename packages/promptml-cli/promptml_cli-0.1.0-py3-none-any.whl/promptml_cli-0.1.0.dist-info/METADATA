@@ -1,0 +1,133 @@
+Metadata-Version: 2.3
+Name: promptml-cli
+Version: 0.1.0
+Summary: A CLI tool to run PromptML scripts
+Project-URL: Documentation, https://github.com/narenaryan/promptml-cli/blob/main/README.md
+Project-URL: Issues, https://github.com/narenaryan/promptml-cli/issues
+Project-URL: Source, https://github.com/narenaryan/promptml-cli/
+Author-email: "Vidura Labs Inc." <contact@vidura.ai>, Naren Yellavula <naren.yellavula@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Keywords: artificial-intelligence,dsl,generative-ai,language,prompt-engineering,promptml,promptml-cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: google-generativeai==0.6.0
+Requires-Dist: openai==1.33.0
+Requires-Dist: promptml==0.6.1
+Requires-Dist: rich==13.7.1
+Description-Content-Type: text/markdown
+
+# promptml-cli
+A CLI application to run PromptML scripts against LLMs.
+
+## Installation
+```bash
+pip install --upgrade promptml-cli
+```
+
+## Usage
+```bash
+promptml-cli --help
+
+usage: promptml-cli [-h] -f FILE [-m MODEL] [-s {xml,json,yaml}] [-p {openai,google}]
+
+A Command Line Interface tool to run PromptML files with popular Generative AI models
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Path to the PromptML file
+  -m MODEL, --model MODEL
+                        Model to use for the completion
+  -s {xml,json,yaml}, --serializer {xml,json,yaml}
+                        Serializer to use for the completion. Default is `xml`
+  -p {openai,google}, --provider {openai,google}
+                        GenAI provider to use for the completion. Default is `openai`
+```
+
+1. Create a PromptML file `character.pml` with the following content:
+
+```promptml
+@prompt
+    @context
+        You are a millitary general in Roman army.
+    @end
+
+    @objective
+        Describe a regular day in your life.
+    @end
+
+    @category
+        Simulation
+    @end
+@end
+```
+
+2. Export OpenAI API key as an environment variable:
+
+```bash
+export OPEN_AI_API_KEY=your-openai-api-key
+```
+
+3. Run the PromptML file with the following command in terminal:
+
+```bash
+promptml-cli -f character.pml -m gpt-4o
+```
+
+You will see the respective output on terminal:
+
+```info
+Time taken: 11.466772079467773 seconds
+
+Ave, citizen. As a general in the grand Roman army, my day is marked by discipline, strategy, and leadership. Allow me to guide you through a typical day.
+
+                                                                                                 Early Morning
+
+The day begins at first light, or "prima lux." I rise from my cot in my tent, often before the first cockcrow. After a brief moment of personal reflection and perhaps a prayer to Mars for strength and wisdom, I don my armor and ensure my gladius is at my side.
+
+                                                                                            Inspection and Briefing
+
+By the time the sun rises, I am inspecting the camp. I check the guards and the readiness of my soldiers. This step is crucial; the efficiency of our legion relies on discipline and preparedness.
+
+Following inspection, I hold a briefing with my centurions and officers. Here, we discuss the logistics, our current position, the enemy's potential movements, and any orders from higher command. Communication is key, and clarity can mean the difference between victory and defeat.
+
+                                                                                              Training and Drills
+
+Next, we turn to the training of the soldiers. Even the most seasoned veterans need to keep their skills sharp. Under my watchful eye, the men engage in drills, practice formation maneuvers, and hone their combat techniques.
+
+                                                                                             Strategy and Planning
+
+When I am not overseeing training, I am often found at my command post, studying maps and strategizing. War is as much a battle of wits as it is of strength. Consulting with my trusted advisors, we develop tactics tailored to both our strengths and the enemy's weaknesses. Whether planning an ambush, fortifying a camp, or devising a full-scale attack, every detail must be considered.
+
+                                                                                                  Midday Meal
+
+By midday, we gather for a meal, a moment of brief respite. The food is simple, often consisting of bread, cheese, and some dried fruit or meat. Eating together fosters camaraderie and morale among the troops.
+
+                                                                                         Afternoon Patrols and Duties
+
+The afternoon may involve leading patrols, dealing with any disputes among soldiers, and attending to the myriad duties that come with command. This might include managing supplies, overseeing weapon and armor maintenance, and ensuring the welfare of all under my command.
+
+                                                                                        Evening Reports and Preparation
+
+As dusk approaches, I receive reports from scouts and patrols. It's vital to stay informed of any developments, be they enemy movements or changes in terrain. The evening is also a time for final preparations for any night operations or defenses against potential night raids.
+
+                                                                                             Reflection and Orders
+
+Before darkness fully envelops the camp, I visit the altars and make offerings to the gods, seeking their favor for the battles to come. Afterward, I return to my tent to write orders and correspondence. Letters to higher command, updates to the leadership in Rome, and even missives to my family.
+
+                                                                                                  Night Vigil
+
+Finally, I set the night watch and ensure the camp is secure. A Roman camp is a fortress in itself, with its defenses meticulously planned and executed. Only then can I retire, though sleep often eludes me. The weight of command is heavy, and my mind remains vigilant.
+
+Such is the life of a Roman general—filled with duty, honor, and the ever-present specter of war. For the glory of Rome and the Senate, we march ever onward.
+
+Vale, General Titus Cornelius
+```
