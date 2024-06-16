@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+FitBridge/__init__.py
+FitBridge/main.py
+FitBridge.egg-info/PKG-INFO
+FitBridge.egg-info/SOURCES.txt
+FitBridge.egg-info/dependency_links.txt
+FitBridge.egg-info/entry_points.txt
+FitBridge.egg-info/requires.txt
+FitBridge.egg-info/top_level.txt
