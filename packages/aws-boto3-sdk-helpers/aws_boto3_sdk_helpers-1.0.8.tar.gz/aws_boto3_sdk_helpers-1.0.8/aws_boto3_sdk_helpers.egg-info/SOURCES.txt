@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+aws_boto3_sdk_helpers.egg-info/PKG-INFO
+aws_boto3_sdk_helpers.egg-info/SOURCES.txt
+aws_boto3_sdk_helpers.egg-info/dependency_links.txt
+aws_boto3_sdk_helpers.egg-info/requires.txt
+aws_boto3_sdk_helpers.egg-info/top_level.txt
