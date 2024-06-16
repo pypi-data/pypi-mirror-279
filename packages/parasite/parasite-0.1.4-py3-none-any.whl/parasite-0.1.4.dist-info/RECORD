@@ -1,0 +1,17 @@
+parasite/__init__.py,sha256=KNihmAcIjCSXOuhNU-MCj_A9J9Eoh5G4f7GznCdq6R4,1464
+parasite/_const.py,sha256=O3eGBA7ZLqykObNXtBlVWSrJTLnUAuJbmVOOcDU_tTk,2591
+parasite/any.py,sha256=lokpucGDtFThiwnvRCMiMDX98QPo6NMGPJZASZkJG7E,2150
+parasite/array.py,sha256=1SgHQJ7uhRdhe-BAYnNnsnMhf6LeF_0Z1CaMRWEHzz4,5808
+parasite/boolean.py,sha256=udH_jWDpC91MwgfNf9PMZPB4CJWbWGMd-qYwh8rGWl4,5689
+parasite/errors.py,sha256=aOoeRO4YN0VtgG7fi3Hx9OdXEngdoMX9mzNdFAXQd0I,123
+parasite/never.py,sha256=DohrNyvgnDLnNmSjr2CeIdX4z0H6-QHKa_d9hkoJnw4,1067
+parasite/null.py,sha256=3Gw6OFGAmo2LRprTK_DlvgfNAd7UD4nft_3C2ITFABA,2057
+parasite/number.py,sha256=_FcJpn9JW2xaRscm_45ncbKLYCUKulYvZVrymiY4bjk,9474
+parasite/object.py,sha256=46bngF-zetDZZOaHWVb2gyNw1GsgZg5AbN5IFgntKdg,7819
+parasite/string.py,sha256=GebBxZVDtDTA8W4Nl-BZlrs4wCN39v-27Mhg-MeATvU,14602
+parasite/type.py,sha256=JtH8Lz6pqAl3PnRXg-q5l4uvKXpm2ahvV4TfYEzx5A0,3480
+parasite/variant.py,sha256=cJTrUoJ1UY7j5QqWYfenzJST1ot_Xy-JFmPb-9U35EE,4353
+parasite-0.1.4.dist-info/LICENSE,sha256=CAdqsxv8urgYJkp3AaiTXJLryUCxOVrt0nH_GtvGPPY,1104
+parasite-0.1.4.dist-info/METADATA,sha256=3gVsURYIFpfn9EF2qSMhQnQZuVXvdn6cX5igaLtjyVk,5704
+parasite-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+parasite-0.1.4.dist-info/RECORD,,
