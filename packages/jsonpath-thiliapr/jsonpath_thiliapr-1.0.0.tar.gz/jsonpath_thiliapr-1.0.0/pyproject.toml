@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jsonpath-thiliapr"
+version = "1.0.0"
+authors = [
+  { name="thiliapr" },
+]
+description = "A simple JSONPath parser."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/thiliapr/tkjsonpath"
+Issues = "https://github.com/thiliapr/tkjsonpath/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tkjsonpath"]
