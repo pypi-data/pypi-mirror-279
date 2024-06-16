@@ -1,0 +1,3 @@
+[console_scripts]
+flutter-smartstart = flutter_smartstart.cli:main
+fstart = flutter_smartstart.cli:main
