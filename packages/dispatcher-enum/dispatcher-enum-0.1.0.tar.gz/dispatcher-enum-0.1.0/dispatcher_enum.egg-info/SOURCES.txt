@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+dispatcher/__init__.py
+dispatcher/dispatcher.py
+dispatcher_enum.egg-info/PKG-INFO
+dispatcher_enum.egg-info/SOURCES.txt
+dispatcher_enum.egg-info/dependency_links.txt
+dispatcher_enum.egg-info/top_level.txt
