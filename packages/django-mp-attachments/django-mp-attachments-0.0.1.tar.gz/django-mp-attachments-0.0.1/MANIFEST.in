@@ -1,0 +1,7 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include attachments/locale *
+recursive-include attachments/static *
+recursive-include attachments/templates *
+prune *.pyc
