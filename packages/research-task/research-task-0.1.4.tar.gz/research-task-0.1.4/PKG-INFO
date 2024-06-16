@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: research-task
+Version: 0.1.4
+Summary: LLM Research tool
+Home-page: https://github.com/DanHUMassMed/llm_analyst.git
+Author: Dan Higgins
+Author-email: daniel.higgins@yahoo.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+Requires-Dist: colorama
+Requires-Dist: duckduckgo_search
+Requires-Dist: md2pdf
+Requires-Dist: playwright
+Requires-Dist: openai
+Requires-Dist: python-dotenv
+Requires-Dist: pyyaml
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: fastapi
+Requires-Dist: python-multipart
+Requires-Dist: markdown
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-google-genai
+Requires-Dist: langchain-groq
+Requires-Dist: langchain_community
+Requires-Dist: tavily-python
+Requires-Dist: arxiv
+Requires-Dist: PyMuPDF
+Requires-Dist: requests
+Requires-Dist: jinja2
+Requires-Dist: aiofiles
+Requires-Dist: newspaper3k
+Requires-Dist: SQLAlchemy
+Requires-Dist: mistune
+Requires-Dist: python-docx
+Requires-Dist: htmldocx
+Requires-Dist: lxml[html_clean]
+Requires-Dist: websockets
+Requires-Dist: unstructured
+Requires-Dist: pytest
+Requires-Dist: pytest-asyncio
+
+# llm_analyst
+LLM Analyst
