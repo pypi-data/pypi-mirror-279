@@ -1,0 +1,9 @@
+README.md
+setup.py
+zaigonhack/__init__.py
+zaigonhack/courses.py
+zaigonhack/utils.py
+zaigonhack.egg-info/PKG-INFO
+zaigonhack.egg-info/SOURCES.txt
+zaigonhack.egg-info/dependency_links.txt
+zaigonhack.egg-info/top_level.txt
