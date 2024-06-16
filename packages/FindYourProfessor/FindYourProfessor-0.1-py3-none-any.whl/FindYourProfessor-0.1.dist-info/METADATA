@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: FindYourProfessor
+Version: 0.1
+Summary: A python based web scraper tool to extract emails of professors matching with keywords representing professors field of interest. It takes in the faculty directory url of a university and the keywords as input and returns the name, email and webpage of the professors with matching research interest.
+Home-page: https://github.com/Swaran66/FindProff.
+Author: Swaranjit Roy
+Author-email: swaranjitroy08@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: requests
+Requires-Dist: beautifulsoup4
+
+# FindYourProfessor
+
+A python based web scraper tool to extract emails of professors matching with keywords representing professors field of interest. It takes in the faculty directory url of a university and the keywords as input and returns the name, email and webpage of the professors with matching research interest.
+
+## Inputs
+Provide the webpage URL from where you wish to find details about professors, along with the keywords.
+
+## Installation
+
+```bash
+pip install FindYourProfessor
+
