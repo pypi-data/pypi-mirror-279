@@ -1,0 +1,2 @@
+[console_scripts]
+pyside-app-core-compile-rcc = pyside_app_core.resource_generator.__main__:main
