@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: programminglython
+Version: 0.1.0
+Summary: Lython programming language built on top of CPython
+Home-page: https://github.com/guangrei/lython
+Author: Guangrei
+Author-email: myawn@pm.me
+License: MIT
+Platform: any
+Description-Content-Type: text/markdown
+
+example lython code
+
+```python
+def test(num)
+    for i in range(num) do
+        if i == 0 then
+            print("zero")
+        elif i % 2 == 1 then
+            print("odd")
+        else
+            print("even")
+        end # if else
+    end # for
+end # def
+
+test(10)
+```
+
+Note:
+
+- The indentation in the code above is just to make the code look pretty and has no effect on the parser.
+
+- you cant use `then`, `do`, `end` as name variable, function and class in lython.
+
+author: guangrei
