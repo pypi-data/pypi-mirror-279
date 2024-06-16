@@ -1,0 +1,16 @@
+blueness
+abcli
+boto3
+emoji
+geojson
+geopandas
+matplotlib
+opencv-python
+pymysql==0.10.1
+pyyaml
+pylint
+pytest
+python-dotenv[cli]
+stability-sdk
+tqdm
+torchvision
