@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: profile-reaction-local
+Version: 0.0.24
+Summary: PyPI Package for Circles Profile Reaction Local Python
+Home-page: https://github.com/circles-zone/profile-reaction-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: database-mysql-local>=0.0.199
+Requires-Dist: logger-local>=0.0.133
+
+This is a package for sharing common methods of profile reaction CRUD to profile_reaction database used in different repositories
