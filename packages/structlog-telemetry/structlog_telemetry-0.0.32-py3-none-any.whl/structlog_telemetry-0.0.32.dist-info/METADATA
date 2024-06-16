@@ -1,0 +1,48 @@
+Metadata-Version: 2.3
+Name: structlog_telemetry
+Version: 0.0.32
+Summary: A Structured Logger For Telemetry
+Project-URL: Homepage, https://github.com/cyber-francis/structlog_telemetry
+Project-URL: Issues, https://github.com/cyber-francis/structlog_telemetry/issues
+Author-email: Francis Obiagwu <cyber.francis@comcast.net>
+License-File: LICENSE
+Keywords: log,logging,observability,structlog,telemetry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Requires-Dist: structlog==24.2.0
+Description-Content-Type: text/markdown
+
+# StructLog-Telemetry
+Structlog-Telemetry is a very simple custom Python structured logger library.
+
+[![unittests](https://github.com/cyber-francis/structlog_telemetry/actions/workflows/pytest.yaml/badge.svg)](https://github.com/cyber-francis/structlog_telemetry/actions/workflows/pytest.yaml)[![release](https://github.com/cyber-francis/structlog_telemetry/actions/workflows/release.yaml/badge.svg)](https://github.com/cyber-francis/structlog_telemetry/actions/workflows/release.yaml)
+
+## Installation
+```bash
+python3 -m pip install structlog-telemetry
+```
+
+## Usage
+
+```python
+from structlog_telemetry.structlog_telemetry import StructLogTelemetry
+
+APP_NAME = "APP_X"
+APP_VERSION = "v0.0.1"
+logger = StructLogTelemetry(APP_NAME, APP_VERSION)
+
+
+logger.info({"KEY_NOT_FOUND": "SEARCHED_KEY"})
+logger.warning({"LATENCY": "30"})
+logger.error({"SERVER_TIMEOUT": {"SERVER": "test.com", "TIMED_OUT_AFTER": 10}})
+```
+<img src="https://raw.githubusercontent.com/cyber-francis/structlog_telemetry/main/docs/log.png">
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
