@@ -1,0 +1,165 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyside-app-core"
+description = "Framework for PySide6 Applications"
+readme = "README.md"
+authors = [
+    { name = "Leo Covarrubias", email = "leo@leocov.com" },
+]
+license-files = { paths = ["LICENSE"] }
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)",
+    "Development Status :: 2 - Pre-Alpha",
+    "Topic :: Desktop Environment",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Typing :: Typed",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = ["pyside", "pyside6", "frameless", "app", "style"]
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6==6.7.*",
+    "jinja2==3.*",
+]
+dynamic = ["version"]
+
+[project.urls]
+"Source" = "https://github.com/leocov-dev/pyside-app-core"
+"Issues" = "https://github.com/leocov-dev/pyside-app-core/issues"
+"Releases" = "https://github.com/leocov-dev/pyside-app-core/releases"
+
+[tool.hatch.version]
+path = "src/pyside_app_core/__init__.py"
+
+[project.scripts]
+pyside-app-core-compile-rcc = "pyside_app_core.resource_generator.__main__:main"
+
+# default ---------------------------------------------------------------
+[tool.hatch.envs.default]
+type = "virtual"
+path = ".venv"
+
+# testing ----------------------------------------
+[tool.hatch.envs.hatch-test]
+extra-dependencies = [
+    "pytest-qt",
+]
+
+[[tool.hatch.envs.hatch-test.matrix]]
+python = [ "3.12" ]
+
+
+# format/linting ---------------------------------------------------------------
+[tool.hatch.envs.hatch-static-analysis]
+dev-mode = true
+skip-install = false
+extra-dependencies = [
+    "pyside6==6.7.*",
+    "jinja2==3.*",
+    "mypy>=1.10",
+    "import-linter==2.*",
+]
+
+[tool.hatch.envs.hatch-static-analysis.env-vars]
+PYTHONPATH = "{root}/src:{env:PYTHONPATH:}"
+
+[tool.hatch.envs.hatch-static-analysis.scripts]
+format-check = [
+    'ruff format{env:HATCH_FMT_ARGS:} --check --diff {args:.}',
+]
+format-fix = [
+    'ruff format{env:HATCH_FMT_ARGS:} {args:.}'
+]
+lint-check = [
+    'mypy',
+    'ruff check{env:HATCH_FMT_ARGS:} {args:.}',
+    'lint-imports',
+]
+lint-fix = [
+    'mypy',
+    'ruff check{env:HATCH_FMT_ARGS:} --fix {args:.}',
+    'lint-imports',
+]
+
+# examples ---------------------------------------------------
+[tool.hatch.envs.examples]
+
+[tool.hatch.envs.examples.scripts]
+toolbar-app = "python -m examples.toolbar_app --generate-rcc"
+
+# ------------------------------
+# testing
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
+# ------------------------------
+# linting
+[tool.ruff.lint]
+extend-ignore = [
+    "EM101",
+    "EM102",
+    "TRY003",
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = [
+    "F401",
+    "TID252",
+]
+"tests/*" = [
+    "S101",
+    "INP001",
+    "FBT001",
+    "PT006", "PLR2004",
+    "SLF001",
+    "PT011",
+]
+"*/resource_generator/*" = [
+    "T201",
+    "S607",
+]
+
+[tool.mypy]
+mypy_path = "$MYPY_CONFIG_FILE_DIR/src"
+packages = ["pyside_app_core"]
+strict = true
+implicit_reexport = true
+
+# ------------------------------
+# import linter config and rules
+[tool.importlinter]
+root_packages = [
+    "pyside_app_core",
+]
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "Module Layering"
+type = "layers"
+layers = [
+    "qt",
+    "resource_generator",
+    "services",
+    "utils",
+    "errors",
+    "log",
+    "constants",
+    "types",
+]
+containers = ["pyside_app_core"]
+exhaustive = true
+
+
+[[tool.importlinter.contracts]]
+name = "Widget Layering"
+type = "layers"
+layers = [
+    "standard",
+    "widgets",
+]
+containers = ["pyside_app_core.qt"]
