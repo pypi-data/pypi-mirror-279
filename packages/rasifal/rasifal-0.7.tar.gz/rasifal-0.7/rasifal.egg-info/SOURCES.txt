@@ -1,0 +1,10 @@
+README.md
+setup.py
+rasifal/__init__.py
+rasifal/main.py
+rasifal.egg-info/PKG-INFO
+rasifal.egg-info/SOURCES.txt
+rasifal.egg-info/dependency_links.txt
+rasifal.egg-info/entry_points.txt
+rasifal.egg-info/requires.txt
+rasifal.egg-info/top_level.txt
