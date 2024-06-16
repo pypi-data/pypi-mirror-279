@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: blue_geo
+Version: 4.4.1
+Summary: 🌐 AI for precise geospatial data analysis and visualization.
+Home-page: https://github.com/kamangir/blue-geo
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: blueness
+Requires-Dist: abcli
+Requires-Dist: boto3
+Requires-Dist: geojson
+Requires-Dist: geopandas
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pymysql==0.10.1
+Requires-Dist: pyyaml
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: python-dotenv[cli]
+Requires-Dist: tqdm
+
+# 🌐 Blue-GEO
+
+🌐 `blue-geo` is wip 🔥
