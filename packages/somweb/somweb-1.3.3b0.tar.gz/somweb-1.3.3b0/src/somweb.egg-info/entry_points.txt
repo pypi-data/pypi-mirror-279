@@ -1,0 +1,2 @@
+[console_scripts]
+somweb = main:main
