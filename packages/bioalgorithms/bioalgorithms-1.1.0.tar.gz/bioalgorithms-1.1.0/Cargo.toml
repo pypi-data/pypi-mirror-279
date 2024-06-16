@@ -1,0 +1,18 @@
+[package]
+name = "bioalgorithms"
+version = "1.0.0"
+edition = "2021"
+authors = ["jero98772 <jero98772@protonmail.com>"]
+description = " A Python library built in Rust for bioinformatics tasks, offering over 30 functions including dynamic programming and optimized data structures for enhanced performance. "
+license = "GPLv3"
+homepage = "https://github.com/jero98772/bioalgorithms"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "bioalgorithms"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.19.0"
+rand = "0.8"
+
