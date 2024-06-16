@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: coherent.cli
+Version: 0.1.0
+Author-Email: "Jason R. Coombs" <jaraco@jaraco.com>
+Summary: Command-line interface for Coherent Software Development System
+Requires-Python: >= 3.8
+Requires-Dist: coherent.build
+Requires-Dist: coherent.test
+Requires-Dist: typer
+Project-URL: Homepage, https://github.com/coherent-oss/coherent.cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+
