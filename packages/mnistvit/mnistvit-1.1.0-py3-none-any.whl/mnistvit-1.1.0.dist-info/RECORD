@@ -1,0 +1,13 @@
+mnistvit/__init__.py,sha256=8Jj_mL8WiDXAnzzbAHkKmzm4IqWjq0WLMgHCJzNjUhw,187
+mnistvit/__main__.py,sha256=bnno0PKfDEA_E3T9Q4DIdqY8r5wczPZcThI-sPqP5e8,34
+mnistvit/model.py,sha256=Qnnz-QFjpntV4yCiuTBSowl_bSiWRYui5U2wsLiGuQs,7087
+mnistvit/predict.py,sha256=Lam-E0j574oXaJtnwJE3pcg7mvqRqQUxqiSoftgg-JM,7475
+mnistvit/preprocess.py,sha256=QqN4V3tjwI53bBdmj8vXRVpUY-Qc-GiIvF1WznS7ICA,4334
+mnistvit/train.py,sha256=EltmpECr2IzMpMEmnLKB4ardxbzHFwok91Nat3YxWkE,12834
+mnistvit/tune.py,sha256=ZcItt5S77phiLwO1OdQ1t0_eDfbkIxf409O-pm_b3ks,8280
+mnistvit/utils.py,sha256=mWL-3CXLK_MbzoMJwIE7Nyk0va98bHuLsEcU9MFoqJk,1600
+mnistvit-1.1.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mnistvit-1.1.0.dist-info/METADATA,sha256=4Ziti_Rbne4UTV2FGxh6E6IOOJvB4IKKc_Tt3RVuTg4,42898
+mnistvit-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mnistvit-1.1.0.dist-info/top_level.txt,sha256=zR3lcQbO-ALdold8itsPX00oswdhPgkcqB7sjh5v3nI,9
+mnistvit-1.1.0.dist-info/RECORD,,
