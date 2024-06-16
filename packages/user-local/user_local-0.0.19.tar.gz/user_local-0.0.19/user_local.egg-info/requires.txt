@@ -1,0 +1,5 @@
+database-mysql-local>=0.0.113
+logger-local>=0.0.46
+database-infrastructure-local>=0.0.9
+email-address-local
+location-local
