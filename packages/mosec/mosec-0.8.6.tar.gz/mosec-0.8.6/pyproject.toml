@@ -1,0 +1,96 @@
+# https://peps.python.org/pep-0621/
+[project]
+name = "mosec"
+description = "Model Serving made Efficient in the Cloud"
+readme = "README.md"
+authors = [
+    {name = "Keming", email = "kemingy94@gmail.com"},
+    {name = "Zichen", email = "lkevinzc@gmail.com"}
+]
+license = {text = "Apache-2.0"}
+keywords = ["machine learning", "deep learning", "model serving"]
+dynamic = ["version"]
+requires-python = ">=3.8"
+classifiers = [
+    "Environment :: GPU",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+homepage = "https://mosecorg.github.io/"
+documentation = "https://mosecorg.github.io/mosec/"
+repository = "https://github.com/mosecorg/mosec"
+changelog = "https://github.com/mosecorg/mosec/releases"
+
+[tool.cibuildwheel]
+build-frontend = "build"
+skip = ["cp36-*", "cp37-*", "*-musllinux_*", "pp*"]
+archs = ["auto64"]
+before-all = "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
+environment = { PRODUCTION_MODE="yes", PATH="$PATH:$HOME/.cargo/bin", PIP_NO_CLEAN="yes" }
+before-build = "git status" # help to debug what happened to the setuptools_scm (file changes)
+
+[project.optional-dependencies]
+
+[project.scripts]
+
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=7.0"]
+
+[tool.setuptools_scm]
+write_to = "mosec/_version.py"
+
+[tool.mypy]
+python_version = "3.8"
+warn_redundant_casts = true
+warn_unreachable = true
+pretty = true
+
+[[tool.mypy.overrides]]
+module = [
+    "torch.*",
+    "transformers",
+    "sentence_transformers",
+    "llmspec",
+    "openai",
+]
+ignore_missing_imports = true
+
+[tool.pyright]
+pythonPlatform = "Linux"
+pythonVersion = "3.8"
+include = ["mosec", "tests", "examples"]
+reportMissingImports = "warning"
+
+[tool.pytest.ini_options]
+markers = [
+    "shm: mark a test is related to shared memory",
+]
+
+[tool.ruff]
+target-version = "py38"
+[tool.ruff.lint]
+select = ["E", "F", "G", "B", "I", "SIM", "TID", "PL", "RUF", "D"]
+ignore = ["E501", "D203", "D213"]
+[tool.ruff.lint.isort]
+known-first-party = ["mosec"]
+[tool.ruff.lint.pylint]
+max-args = 10
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+"examples/*" = ["D"]
+[tool.ruff.lint.pydocstyle]
+convention = "google"
