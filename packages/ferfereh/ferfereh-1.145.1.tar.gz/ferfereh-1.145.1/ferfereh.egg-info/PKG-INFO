@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: ferfereh
+Version: 1.145.1
+Summary: 🌀 3d-printed graffiti.
+Home-page: https://github.com/kamangir/ferfereh
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: blueness
+Requires-Dist: abcli
+Requires-Dist: boto3
+Requires-Dist: geojson
+Requires-Dist: geopandas
+Requires-Dist: matplotlib
+Requires-Dist: opencv-python
+Requires-Dist: pymysql==0.10.1
+Requires-Dist: pyyaml
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: python-dotenv[cli]
+Requires-Dist: tqdm
+
+# 🌀 ferfereh
+
+🌀 `ferfereh` is a 3d-printed piece of graffiti with a cloud-generated [map](https://raw.githubusercontent.com/kamangir/ferfereh/main/coords.geojson).
+
+```bash
+pip install ferfereh
+```
+
+```bash
+ > ferfereh help
+ferfereh cleanup
+ . cleanup ferfereh.
+ferfereh exif get \
+	[-] \
+	<filename.jpg>
+ . get exif.
+ferfereh exif install
+ . install exif.
+ferfereh exif put \
+	[~backup,dryrun,lat=<lat>,lon=<lon>,validate] \
+	<filename.jpg>
+ . put exif.
+ferfereh publish coords \
+	[~downloads]
+ . publish ferfereh coords.
+ferfereh publish 3d-files
+ . publish ferfereh 3d-files.
+```
+
+| [![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen5.jpg)](#gen5) | [![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen6-c2.jpg)](#gen6) | [![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen6-s.jpg)](#gen6) | [![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen7-2.jpg)](#gen7) |
+| ------------------------------------ | --------------------------------------- | -------------------------------------- | -------------------------------------- |
+
+# brackets
+
+## gen5
+
+![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen5.png)
+
+- [gen5.stl](https://raw.githubusercontent.com/kamangir/ferfereh/main/3d/gen5.stl)
+
+## gen6
+
+![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen6.png)
+
+- [gen6-c4](https://raw.githubusercontent.com/kamangir/ferfereh/main/3d/gen6-c4.stl)
+- [gen6-d32](https://raw.githubusercontent.com/kamangir/ferfereh/main/3d/gen6-d32.stl)
+- [gen6-s4](https://raw.githubusercontent.com/kamangir/ferfereh/main/3d/gen6-s4.stl)
+
+## gen7
+
+![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/gen7.png)
+
+- [gen7-2](https://raw.githubusercontent.com/kamangir/ferfereh/main/3d/gen7-2.stl)
+
+# tools & materials
+
+| item                                                                      | image                                                           | examples                                                                           |
+| ------------------------------------------------------------------------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 2 mm solid brass rods                                                     | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/solid-brass-bars.jpeg)                  | https://www.amazon.ca/gp/product/B089LDXN22                                        |
+| aviation snips                                                            | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/aviation-snips.jpeg)                    |                                                                                    |
+| (multiple) bags to carry the brackets, tools, and other materials to site | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/bags.jpeg)                              |                                                                                    |
+| cutting nippers                                                           | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/cutting-nippers.jpeg)                   |                                                                                    |
+| mini pliers                                                               | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/mini-pliers.jpeg)                       |                                                                                    |
+| propeller fan                                                             | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/propellers.jpeg)                        | https://www.adafruit.com/product/3896, https://www.amazon.ca/gp/product/B091TBQ7CK |
+| double-sided, outdoor, water-resistant, mounting tape                     | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/mounting-tape.jpeg)                     |                                                                                    |
+| multi bit electronics screwdriver                                         | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/multi-bit-electronics-screwdriver.jpeg) |                                                                                    |
+| precision craft knife w/ spare blade                                      | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/precision-craft-knife.jpeg)             |                                                                                    |
+| small hammer                                                              | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/small-hammer.jpeg)                      |                                                                                    |
+| M3 Nylon Machine Screws                                                   | ![image](https://raw.githubusercontent.com/kamangir/ferfereh/main/images/tools/screws.jpg)                             | https://www.amazon.ca/gp/product/B012TACIBC                                        |
+
+---
+
+[![PyPI version](https://img.shields.io/pypi/v/ferfereh.svg)](https://pypi.org/project/ferfereh/)
