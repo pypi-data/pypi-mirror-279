@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ploomy
+Version: 0.1
+Summary: A Python SDK for bloomd server.
+Home-page: https://github.com/frankhart2018/bloomy
+Author: Siddhartha Dhar Choudhury
+Author-email: sdharchou@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ploomy
+
+- Python SDK for [bloomd](https://github.com/armon/bloomd) - bloom filter service. 
