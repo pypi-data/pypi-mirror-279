@@ -1,0 +1,3 @@
+[console_scripts]
+cachestore=cachestore.__main__:run
+
