@@ -1,0 +1,24 @@
+Metadata-Version: 2.3
+Name: demovae
+Version: 0.0.6
+Summary: A demographic-conditioned variational autoencoder for fMRI distribution sampling, removal of confounds, and multi-site harmonization. Works with FC, ALFF, or ReHO data.
+Project-URL: Homepage, https://github.com/aorliche/demo-vae/
+Project-URL: Issues, https://github.com/aorliche/demo-vae/issues
+Author-email: Anton Orlichenko <aorliche@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: torch
+Description-Content-Type: text/markdown
+
+Installable version of DemoVAE demographic-conditioned variational autoencoder for fMRI data.
+
+For use with pip.
+
+Perform fMRI distribution sampling, remove confounds, and harmonize multi-site data.
+
+Supports FC, ALFF, and ReHO data.

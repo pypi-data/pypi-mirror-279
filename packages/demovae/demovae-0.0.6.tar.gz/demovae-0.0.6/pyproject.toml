@@ -1,0 +1,23 @@
+[project]
+name = "demovae"
+version = "0.0.6"
+authors = [
+	{ name="Anton Orlichenko", email="aorliche@gmail.com" }
+]
+description = "A demographic-conditioned variational autoencoder for fMRI distribution sampling, removal of confounds, and multi-site harmonization. Works with FC, ALFF, or ReHO data."
+readme = "README.md"
+dependencies = [ "numpy", "torch", "scikit-learn" ]
+requires-python = ">=3.8"
+classifiers = [
+	"Programming Language :: Python :: 3",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/aorliche/demo-vae/"
+Issues = "https://github.com/aorliche/demo-vae/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
