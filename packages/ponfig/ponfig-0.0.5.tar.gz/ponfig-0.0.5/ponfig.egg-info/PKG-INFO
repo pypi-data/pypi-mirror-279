@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: ponfig
+Version: 0.0.5
+Summary: A simple configuration and environment management package.
+Home-page: https://github.com/yourusername/ponfig
+Author: zeturn
+Author-email: meaninglesstech@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Ponfig
+
+Ponfig is a simple Python package to read configuration values from the project root's `config` directory and env values from the project root's `env` directory.
+
+## Installation
+
+pip install ponfig
+
+
+## Basic Usage
+
+```python
+from ponfig import config
+
+value = get_config('app.example')
+print(value)  # Outputs the value of `example` key in `app.config`
+```
+
+## License
+This project is licensed under the MIT License.
