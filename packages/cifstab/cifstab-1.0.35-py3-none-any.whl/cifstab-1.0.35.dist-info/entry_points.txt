@@ -1,0 +1,4 @@
+[console_scripts]
+cifscloak = cifstab.cifstab:main
+cifstab = cifstab.cifstab:main
+
