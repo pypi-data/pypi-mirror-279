@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mortal
+Version: 1.13.1
+Summary: mortal工具集
+Author: MJ
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.10
+Requires-Dist: pycryptodome
+Requires-Dist: PyJWT
+Requires-Dist: rsa
+Requires-Dist: PyYAML
+Requires-Dist: ply
+Requires-Dist: colorlog
+Requires-Dist: sshtunnel
+Requires-Dist: minio
+Requires-Dist: onnxruntime
+Requires-Dist: opencv-python
+Requires-Dist: redis
+Requires-Dist: paramiko
+Requires-Dist: sqlalchemy
+Requires-Dist: pymysql
+Requires-Dist: pandas
+Requires-Dist: psycopg2
+Requires-Dist: pymssql
+Requires-Dist: cx-Oracle
+Requires-Dist: PyHive
+Requires-Dist: thrift
+Requires-Dist: pymongo
+Requires-Dist: moz-sql-parser
+Requires-Dist: Cython
+Requires-Dist: pyarrow
+Requires-Dist: GeoAlchemy2
+
