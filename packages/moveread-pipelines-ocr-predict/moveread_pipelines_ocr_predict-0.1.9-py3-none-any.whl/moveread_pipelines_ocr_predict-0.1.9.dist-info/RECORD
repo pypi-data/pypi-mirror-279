@@ -1,0 +1,9 @@
+moveread/pipelines/ocr_predict/__init__.py,sha256=q8Dq4TdHY5NXdquPjAEJRndNzJQWyBhwYDZd9BAGz3c,171
+moveread/pipelines/ocr_predict/__init__.pyi,sha256=_pWZM-tTHNtOK0bXMEw0NrUy0UoCHqwiyQS6ikZRsKk,140
+moveread/pipelines/ocr_predict/main.py,sha256=p2iz-yp1rz5Ost_GIxXprXZV1Qz_0ht4Jf_csXdNXUc,2484
+moveread/pipelines/ocr_predict/types.py,sha256=75Sguf7Xb4C1N2kbYfvQCNd8C5a3esBun-mmVXXSxR4,319
+moveread_pipelines_ocr_predict-0.1.9.dist-info/METADATA,sha256=XyvX_26w8A5y9uU9YX7jrlYKY0ba5BGHpgUzqeQeQDI,692
+moveread_pipelines_ocr_predict-0.1.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_pipelines_ocr_predict-0.1.9.dist-info/entry_points.txt,sha256=TUVlGbgnDbxGId48YrbfamZLtjps3Hr7LDgdIHhgGTs,89
+moveread_pipelines_ocr_predict-0.1.9.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_pipelines_ocr_predict-0.1.9.dist-info/RECORD,,
