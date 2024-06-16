@@ -1,0 +1,3 @@
+[console_scripts]
+utp = utp:cli
+
