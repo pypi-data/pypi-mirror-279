@@ -1,0 +1,12 @@
+doot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+doot/bot.py,sha256=P53cgzTV_Wtno2e9tDSgptqVKgcl2uHARLCKQaL53Hk,10411
+doot/callback.py,sha256=Yyxw7P994bus6CCdc43G8enYdArwZc8qgnXICkp_JaY,329
+doot/command_handler.py,sha256=39fV4bk2XP21z6D4MBTNqqk-5hxGSauf0K9v1Q0nGrM,728
+doot/exception.py,sha256=Ys10w9WqxYIyzn6QPbkxoX_ykgMf_fTUDIH7UsRAWyQ,232
+doot/message.py,sha256=ULzEXD2ZGWppUTbl0J8u5m3LKC7eQXbK6U5uU2OPu_Q,4183
+doot/message_handler.py,sha256=vA_HPP31iHUF-L4OmW4_oSPeXWegYhfJmN1zURYnpi0,702
+doot/response.py,sha256=iAFsgMb3nEJ_gRizDFG7xv-euzIbqRZYVpL6KfsnLX0,2527
+dooth-1.1.5.dist-info/METADATA,sha256=UXUoJcuikPJclc8EOYeHds5tGBEaoexpbxeDXvS9CLc,74
+dooth-1.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dooth-1.1.5.dist-info/top_level.txt,sha256=259wJJXfvmJdcDJ_Bs4a1f9A0kyxtMNUn1hzSoaHU94,5
+dooth-1.1.5.dist-info/RECORD,,
