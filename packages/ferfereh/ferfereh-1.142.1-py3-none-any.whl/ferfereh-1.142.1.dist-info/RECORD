@@ -1,0 +1,15 @@
+ferfereh/__init__.py,sha256=12k2CxDL_MrzH65AEdT9O7U-76Sr4l0nU_udFxopfIY,100
+ferfereh/__main__.py,sha256=ujxwJX1jNGJGC5i8x_KU88W_JvSMtoJ77NHX_jRXH7M,935
+ferfereh/coords.py,sha256=nUr7Me2UuoBAsXMTmB3HCZ5WlGzhrGiK-WpzYl1j5Ig,2768
+ferfereh/logger.py,sha256=WrHvbSWKWod4p3pm-iLpclVJu6-FHeURYU8vzzCCHlc,89
+ferfereh/urls.py,sha256=Bjdewssljt0LIefjixBem9JN0kkghPvmrIETj3GdXbY,17
+ferfereh/utils.py,sha256=C-KAlsFeixppBSdGpFGhIwkMGiJ9VtXrR3l673PU9gM,642
+ferfereh/.abcli/actions.sh,sha256=9qAq0pIfL749-LZW7zn_COH3P9QowqZD0RuGuGYDn6w,146
+ferfereh/.abcli/exif.sh,sha256=oAWU2QswaQdoShC8rsmnTdBWPLAmQsCPt024m0cnzh8,2354
+ferfereh/.abcli/ferfereh.sh,sha256=3QUamO3E650fxTABmMLBPRDWbk1K6PK6i8Uc5sXUTW8,564
+ferfereh/.abcli/publish.sh,sha256=7mxzIjEFydBBwOZI67YMqI_1P8iklxxQ_pWk2R8Y3sM,1832
+ferfereh/.abcli/tests/version.sh,sha256=FSBLVFr3q7AdANq557nZgeUMu_KRFRVa9lty87yKbDU,224
+ferfereh-1.142.1.dist-info/METADATA,sha256=BMvneANxYMigcOQ8BE_WyDJF2elJp0a5UeFDV4IomnA,6333
+ferfereh-1.142.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ferfereh-1.142.1.dist-info/top_level.txt,sha256=rVGp_MoPnWYt4wb9l-FEaJj6o_c2pMEitiSH-Yz9MTU,9
+ferfereh-1.142.1.dist-info/RECORD,,
