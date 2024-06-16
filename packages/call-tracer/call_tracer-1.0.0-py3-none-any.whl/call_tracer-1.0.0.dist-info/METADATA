@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: call-tracer
+Version: 1.0.0
+Summary: A library for tracing function calls with depth control and filtering.
+Home-page: https://github.com/FloweryK/call-tracer
+Author: FloweryK
+Author-email: flowerk94@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: colorama
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+
