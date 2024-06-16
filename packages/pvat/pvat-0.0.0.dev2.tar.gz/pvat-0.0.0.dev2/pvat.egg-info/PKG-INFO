@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pvat
+Version: 0.0.0.dev2
+Summary: Python implementations of variance reduction techniques for extensive-form games
+Home-page: https://github.com/uoftcprg/pvat
+Author: University of Toronto Computer Poker Student Research Group
+Author-email: uoftcprg@studentorg.utoronto.ca
+License: MIT
+Project-URL: Documentation, https://pvat.readthedocs.io/en/latest/
+Project-URL: Source, https://github.com/uoftcprg/pvat
+Project-URL: Tracker, https://github.com/uoftcprg/pvat/issues
+Keywords: aivat,artificial-intelligence,deep-learning,divat,game,game-development,game-theory,holdem-poker,imperfect-information-game,libratus,mivat,pluribus,poker,python,reinforcement-learning,texas-holdem
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.11
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy<2,>=1.26.4
+
+====
+PVAT
+====
+
+PVAT: Python Reduction in Variance Techniques is a Python framework for reducing the variance in the outcomes of extensive-form games.
