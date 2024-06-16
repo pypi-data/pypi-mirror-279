@@ -1,0 +1,12 @@
+include AUTHORS.rst
+include CONTRIBUTING.rst
+include HISTORY.rst
+include LICENSE
+include README.rst
+
+include sofar/sofa_conventions/VERSION
+recursive-include sofar/sofa_conventions/conventions *.csv
+recursive-include sofar/sofa_conventions/conventions *.json
+recursive-include sofar/sofa_conventions/conventions/deprecated *.csv
+recursive-include sofar/sofa_conventions/conventions/deprecated *.json
+recursive-include sofar/sofa_conventions/rules *.json
