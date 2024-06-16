@@ -1,0 +1,17 @@
+pyyaml
+numpy
+pandas
+flask
+openai
+dspy-ai
+langchain
+langchain-community
+langchain-google-community
+google-api-python-client
+duckduckgo-search
+bs4
+requests
+fastapi
+pydantic
+uvicorn
+aiofile
