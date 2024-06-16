@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: worker-automate-hub
+Version: 0.2.5b1
+Summary: Worker Automate HUB é uma aplicação para automatizar rotinas de RPA nos ambientes Argenta.
+Author: Joel Paim
+Requires-Python: >=3.12,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+
+# Worker Automate Hub
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/worker-automate-hub)
+
+## Installation
+
+Worker Automate Hub is available on PyPI. You can install it through `pip`:
+
+```bash
+    pip install worker-automate-hub
+```
+
+## Requirements and Tested Platforms
+
+- Python:
+  - 3.12 or higher
+- Windows (32bit/64bit/ARM64):
+  - Worker Automate Hub should work on Windows 7 or newer, but we only officially support Windows 8+.
+
+## TODO
+
