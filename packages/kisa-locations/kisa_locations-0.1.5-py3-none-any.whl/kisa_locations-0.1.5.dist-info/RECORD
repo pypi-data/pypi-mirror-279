@@ -1,0 +1,7 @@
+kisa_locations/__init__.py,sha256=MPv6k_PzeBRZhTko2dQ7vX_jz6yut4Uaw6RdkXwOFKA,34
+kisa_locations/uganda.py,sha256=T2GgE6zYfulvfjNhXxosnlM60BVWfn2hHmY9S0LubMg,3655
+kisa_locations/db/locations.ubos.sqlite3,sha256=0VUMESVtuOmRX8izgEApmrZHn_mcFUukg13zJrRY-Rw,7491584
+kisa_locations-0.1.5.dist-info/METADATA,sha256=RLIIL8Xs49FRbEzrrupdqUvR655cBlktYetjy3b4IJ8,389
+kisa_locations-0.1.5.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+kisa_locations-0.1.5.dist-info/top_level.txt,sha256=7M4wfK2OEfOmSK4PbUUisHjxKhnWHSDAnrQ3t2pW7Mg,15
+kisa_locations-0.1.5.dist-info/RECORD,,
