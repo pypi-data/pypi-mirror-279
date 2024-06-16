@@ -1,0 +1,16 @@
+myrrh/extensions/mregistry.py,sha256=ZGnaFAeFlqhP4BOoc8TUugG06PtEFqJgUCqxDuiVe7s,1235
+myrrh/exts/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+myrrh/exts/client.py,sha256=T4nQ2Ct8IvRNAKhJGrCxbIwwAFjurxOInYrDSTD1FPY,1892
+myrrh/exts/errors.py,sha256=YwOuHRvEAcmqResnucUiradEywMG6uVoVIY3RVuNZFw,689
+myrrh/exts/interfaces.py,sha256=otsgoFKEh8RcftDX5ejOkhpbXzZ7nWQGydbQTs3gG6Y,1209
+myrrh/exts/misc.py,sha256=KvSFq79EHrc0cUmMiKvoUHqhyQXomwsgFcnrUTL8oxA,3290
+myrrh/exts/protocol.py,sha256=xKML_xoo2RqgFsT6q_7w6n3XRm_71F9vvlYaP_jI3Vk,2395
+myrrh/exts/registry.py,sha256=tczMDh9twMH-TH0JKuzW76_G3x01LYmpWRXOEYu4M2Y,7005
+myrrh/tools/mexts.py,sha256=pc7uDvSQWzOTrFsXhcdH_06c2aXHIqEWpijUFQo0AWc,794
+myrrh_exts-0.2.1.dist-info/AUTHORS.md,sha256=nyRvgeZCIfzXlydXFRJRhF0PqFj-VYldcMmDJ5UoTcA,52
+myrrh_exts-0.2.1.dist-info/LICENSE,sha256=GzeCzK17hhQQDNow0_r0L8OfLpeTKQjFQwBQU7ZUymg,32473
+myrrh_exts-0.2.1.dist-info/METADATA,sha256=yFBAoSZ8AqtCF9cXT_SkV8l3LfTwMnqkD1jCvwbttPE,40733
+myrrh_exts-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+myrrh_exts-0.2.1.dist-info/entry_points.txt,sha256=O3xYwCvZE0La5IiA6Kam8_hixoN8DO2OxJh5g-T-ru4,174
+myrrh_exts-0.2.1.dist-info/top_level.txt,sha256=dpz6zgV_ueAMh9RwSYQR0w1D4x6vDuaF14JsRKXgQ3I,6
+myrrh_exts-0.2.1.dist-info/RECORD,,
