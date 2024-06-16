@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pipeteer
+Version: 0.1.2
+Summary: Pipeline orchestrations made easy
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/REPO.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: queue-api
+Requires-Dist: templang
+
+# Pipeteer
+
+> Pipeline orchestrations made easy
