@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: matching-statistics
+Version: 0.1.0
+Summary: Library for Matching Statistics using Suffix Tree
+Home-page: https://github.com/mihirkestur/matching-statistics
+Author: Mihir Kestur
+Author-email: mkestur@cs.stonybrook.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6

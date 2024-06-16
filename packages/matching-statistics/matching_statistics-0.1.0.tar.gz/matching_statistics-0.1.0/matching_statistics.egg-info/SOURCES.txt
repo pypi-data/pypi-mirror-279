@@ -1,0 +1,10 @@
+README.md
+setup.py
+matching_statistics/MatchingStatistics.py
+matching_statistics/__init__.py
+matching_statistics.egg-info/PKG-INFO
+matching_statistics.egg-info/SOURCES.txt
+matching_statistics.egg-info/dependency_links.txt
+matching_statistics.egg-info/top_level.txt
+tests/__init__.py
+tests/test_matching_statistics.py
