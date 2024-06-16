@@ -1,0 +1,3 @@
+[console_scripts]
+ork2json = rocketserializer.cli:ork2json
+ork2notebook = rocketserializer.cli:ork2notebook
