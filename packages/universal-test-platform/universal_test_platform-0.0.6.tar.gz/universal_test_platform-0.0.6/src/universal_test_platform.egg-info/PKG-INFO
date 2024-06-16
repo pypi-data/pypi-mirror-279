@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: universal-test-platform
+Version: 0.0.6
+Summary: Universal Test Platform
+Author: Hossein Mohammadi
+Author-email: hosseinm.developer@gmail.com
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: Click
+Requires-Dist: pyyaml
+Provides-Extra: testing
+Requires-Dist: pytest; extra == "testing"
+Requires-Dist: coverage; extra == "testing"
+
+## run
+
+- `$ conda activate utp `
+- `$ conda run -n utp python utp.py`
+- `$ pip install pyyaml click`
+
+## install locally
+
+- `$ pip install --editable .`
+
+## upload
+
+requirements
+
+- `$ pip install twine`
+- `$ chmod + ./upload.sh`
+
+upload
+
+- `$ ./upload.sh`

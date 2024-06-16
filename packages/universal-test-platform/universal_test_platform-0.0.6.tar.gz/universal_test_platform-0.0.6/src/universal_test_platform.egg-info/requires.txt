@@ -1,0 +1,6 @@
+Click
+pyyaml
+
+[testing]
+pytest
+coverage
