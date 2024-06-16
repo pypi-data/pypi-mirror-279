@@ -1,0 +1,100 @@
+Metadata-Version: 2.1
+Name: goshawk
+Version: 0.0.1.9
+Summary: A tool for managing SQL Models
+Home-page: https://github.com/ebrassell/goshawk
+Author: Eric Brassell
+Author-email: erb123@gmail.com
+Requires-Python: >=3.10,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: duckdb (==1.0)
+Requires-Dist: loguru (>=0.7.2,<0.8.0)
+Requires-Dist: pydantic-settings (>=2.2.1,<3.0.0)
+Requires-Dist: pyyaml (>=6.0.1,<7.0.0)
+Requires-Dist: snowflake-connector-python (>=3.10.0,<4.0.0)
+Requires-Dist: sqlglot (>=23.0.5,<24.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Requires-Dist: typer (>=0.9.0,<0.10.0)
+Requires-Dist: typing-extensions (>=4.10.0,<5.0.0)
+Project-URL: Documentation, https://ebrassell.github.io/goshawk/
+Project-URL: Repository, https://github.com/ebrassell/goshawk
+Description-Content-Type: text/markdown
+
+# goshawk
+
+[![Release](https://img.shields.io/github/v/release/ebrassell/goshawk)](https://img.shields.io/github/v/release/ebrassell/goshawk)
+[![Build status](https://img.shields.io/github/actions/workflow/status/ebrassell/goshawk/main.yml?branch=main)](https://github.com/ebrassell/goshawk/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/ebrassell/goshawk/branch/main/graph/badge.svg)](https://codecov.io/gh/ebrassell/goshawk)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/ebrassell/goshawk)](https://img.shields.io/github/commit-activity/m/ebrassell/goshawk)
+[![License](https://img.shields.io/github/license/ebrassell/goshawk)](https://img.shields.io/github/license/ebrassell/goshawk)
+
+SQL Model Management for Humans
+
+- **Github repository**: <https://github.com/ebrassell/goshawk/>
+- **Documentation** <https://ebrassell.github.io/goshawk/>
+
+## Getting started with Goshawk
+
+### Installation
+
+We recommend installing with [pipx](https://pipx.pypa.io/stable/)
+
+```bash
+pipx install gohawk
+```
+
+Or install with pip (you should always use a virtual environment)
+
+```bash
+pip install gohawk
+```
+
+Verify your installation
+
+```bash
+goshawk view-model-tree --schemas-only
+```
+
+This will display the DAG of the included sample schema
+
+Set MODELS_PATH env var to the folder containing your models.
+
+```bash
+`-- models <-set MODELS_PATH to the path to this folder
+     -- mydatabase
+         -- schema_1
+             -- model_1a.sql
+             -- model_1b.sql
+         -- schema_2
+             -- model_2a.sql
+             -- model_2b.sql
+
+export MODELS_PATH=models
+```
+
+### Create a dev environemnt
+
+```bash
+goshawk init-env [envname]
+```
+
+### Test your changes (using your dev environment)
+
+```bash
+goshawk deploy-models --test --db-env [envname]
+```
+
+### Deploy your changes to your dev environment
+
+```bash
+goshawk deploy-models --test --db-env [envname]
+```
+
+### Destroy your dev environemnt
+
+```bash
+goshawk destroy-env [envname]
+```
+
