@@ -1,0 +1,14 @@
+chunspell-2.0.4.dist-info/WHEEL,sha256=-j0-2NVSo0gFSrnGJfuTToCNj7NxlPWXeugKenW0lpI,154
+chunspell-2.0.4.dist-info/LICENSE,sha256=-89OZlPVpKzWiUWJQGGNgyTIuxZU3yT80F4OXuZuWN0,1166
+chunspell-2.0.4.dist-info/top_level.txt,sha256=EX-nZ4hghQhRMd2SlktQk_DyyfuQUJlJMFS3biTnVTk,9
+chunspell-2.0.4.dist-info/RECORD,,
+chunspell-2.0.4.dist-info/METADATA,sha256=Lxhbyvs3ix31ClN_PTq_xwrvhkX_DRrR0QO0Qc5KNXY,4768
+hunspell/__init__.py,sha256=oO2QEK5EbXlwrxc08t0GlcI7Wm2MHt94S_FmiUoCjeQ,174
+hunspell/hunspell.pyx,sha256=pnb4I68nRtARazOHXui4ZhNU-SQuTslfrWHrt_cJrus,9997
+hunspell/hunspell.cpython-312-aarch64-linux-gnu.so,sha256=4T6B4FLSLzeGmf4Z4adxJqRYSJVxCk58Q9x43J8J2TA,162440
+hunspell/libhunspell-1.7.so.0,sha256=gsOPAOjqqQX6dno9svZ8j4vE7Oo21_-Eqhkwp8E6UJg,1442824
+hunspell/hunspell.cpp,sha256=qjvu96lpLmWNN2jhf8z_Etek8JTSHbAdIiHU3qFXa0k,648300
+hunspell/hunspell.pxd,sha256=zO9zF1vSeNgmtYv2xV_rnNYgnQhQGm7IT3A7DSnVHgQ,3455
+hunspell/_version.py,sha256=YuAuFLBrpl-SUl_UsvW1U1NTjqnldfuD1xUmSLmtaRw,22
+hunspell/dictionaries/en_US.aff,sha256=__riWe7cYdcd5T009NV_-V41NT6MUR2P1YZEZz7a0XE,11352
+hunspell/dictionaries/en_US.dic,sha256=n0nH2DudJWnuAvOrnAEZNs_gI_X3yqkt7RvGd8shbew,866373
