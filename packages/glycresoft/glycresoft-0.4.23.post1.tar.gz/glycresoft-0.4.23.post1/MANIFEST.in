@@ -1,0 +1,9 @@
+include requirements.txt
+recursive-include src/glycresoft/models/data *.json
+recursive-include src/glycresoft/output *.templ
+recursive-include src/glycresoft/output *.js
+recursive-include src/glycresoft/output *.css
+recursive-include src/glycresoft/database/prebuilt/data *
+recursive-include src/glycresoft/_c *.pxd
+recursive-include src/glycresoft/_c *.pyx
+recursive-include src/glycresoft/_c *.c

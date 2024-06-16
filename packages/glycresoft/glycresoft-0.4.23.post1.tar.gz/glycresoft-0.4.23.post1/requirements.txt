@@ -1,0 +1,29 @@
+dill>=0.3.5.1
+six
+
+sqlalchemy < 1.4.0
+
+numpy>=1.22.0
+scipy
+matplotlib>=3.4.3
+scikit-learn
+
+pyteomics
+lxml
+
+click
+
+jinja2>=2.11.1
+
+rdflib
+requests
+SPARQLWrapper
+
+ms_deisotope >= 0.0.53
+glypy >= 1.0.6
+glycopeptidepy >= 0.0.26
+brain-isotopic-distribution >= 1.5.8
+ms_peak_picker >= 0.1.44
+python-idzip >= 0.3.2
+
+pyzstd
