@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+piqture/__init__.py
+piqture/version.txt
+piqture.egg-info/PKG-INFO
+piqture.egg-info/SOURCES.txt
+piqture.egg-info/dependency_links.txt
+piqture.egg-info/requires.txt
+piqture.egg-info/top_level.txt
+tests/__init__.py
+tests/conftest.py
