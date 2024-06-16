@@ -1,0 +1,9 @@
+weaver_ai_tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weaver_ai_tools/v1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+weaver_ai_tools/v1/config.py,sha256=cds5HxNDQ4JZcvJ4oRIqYKpOQlhpGvAHh4U7nKVv1_o,2999
+weaver_ai_tools/v1/conversation.py,sha256=-K9d1Xe4LJYxtOy9udF5KldjRlEl0NJ5A1q58x93Ktc,1357
+weaver_ai_tools/v1/functions.py,sha256=DAGXC0fkxeTpQ-Hc6CJyt4EghwDdw3dZqG77tIY9UL4,716
+weaver_ai_tools-0.0.24.dist-info/METADATA,sha256=UtHONsvdWbQVYFFpSERDQqnHpYFNsXZk-vbi20NO1lo,61
+weaver_ai_tools-0.0.24.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+weaver_ai_tools-0.0.24.dist-info/top_level.txt,sha256=A97vAHxmNqJK7UBC3KKMhjW7XIRUYRmpn2YX5X3TBcQ,16
+weaver_ai_tools-0.0.24.dist-info/RECORD,,
