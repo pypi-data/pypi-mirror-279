@@ -1,0 +1,35 @@
+Metadata-Version: 2.3
+Name: flpc
+Version: 0.1.3
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: A Rust-based regex crate wrapper for Python3 to get faster performance. 👾
+Maintainer-email: Adarsh Gourab Mahalik <gourabmahalikadarsh@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Homepage, https://github.com/itsmeadarsh2008/flpc
+Project-URL: Repository, https://github.com/itsmeadarsh2008/flpc.git
+Project-URL: Bug Tracker, https://github.com/itsmeadarsh2008/flpc/issues
+
+<div align="center">
+<img src="https://svgshare.com/i/17F2.svg" height="300">
+
+# flpc
+<img alt="Star" src="https://img.shields.io/badge/Please%20Give%20A%20Star%20%E2%AD%90-30323D">
+<img alt="PyPI - Implementation" src="https://img.shields.io/pypi/implementation/flpc?style=flat-square">
+<img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/itsmeadarsh2008/flpc?style=flat-square">
+<img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dd/flpc?style=flat-square">
+
+
+A Rust-based **[regex crate](https://crates.io/crates/regex) wrapper** for Python3 to get faster performance. 👾
+
+## DEAD-SIMPLE
+Just import `flpc` as `re` and use it as you like and the namings are same as the native `re` module. Only thing is that `match` function name of the `re` native library is replaced with `fmatch`
+
+### MIT Licensed
+
+</div>
+
