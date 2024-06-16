@@ -1,0 +1,2 @@
+[console_scripts]
+outrun = outrun.__main__:main
