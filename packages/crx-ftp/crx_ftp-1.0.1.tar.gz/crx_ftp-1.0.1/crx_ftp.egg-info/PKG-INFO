@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: crx-ftp
+Version: 1.0.1
+Summary: This library is designed for your own use.
+Home-page: https://discord.gg/EEp67FWQDP
+Author: CRX-DEV
+Author-email: cherniq66@gmail.com
+License: MIT License
+Requires-Dist: aioftp==0.22.3
+
+This library is designed for your own use.
