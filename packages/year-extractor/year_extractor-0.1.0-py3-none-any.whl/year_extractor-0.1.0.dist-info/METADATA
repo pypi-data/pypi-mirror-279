@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: year_extractor
+Version: 0.1.0
+Summary: A library to extract dates from text and convert them to years.
+Author: Maneesha Jayathissa
+Author-email: manishamalshani@gmail.com
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: spacy >=3.0
+Requires-Dist: dateparser
+
+pip install spacy dateparser
+python -m pip install spacy
+python -m spacy download en_core_web_lg
