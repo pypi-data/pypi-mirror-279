@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cm4mlperf/__init__.py
+cm4mlperf.egg-info/PKG-INFO
+cm4mlperf.egg-info/SOURCES.txt
+cm4mlperf.egg-info/dependency_links.txt
+cm4mlperf.egg-info/not-zip-safe
+cm4mlperf.egg-info/requires.txt
+cm4mlperf.egg-info/top_level.txt
