@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: googletrans-sw
+Version: 4.0.0
+Summary: Free Google Translate API for Python. Translates totally free of charge.
+Home-page: https://github.com/Skywind5487/googletrans
+Author: Skywind5487
+Author-email: skywind5487@gmail.com
+License: MIT
+Keywords: google translate translator
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: Freeware
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Topic :: Education
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: httpx >=0.22.0
+Requires-Dist: h2 <5,>=4
+
+# googletrans-py
+
+
+
+This is a fork of the [googletrans](https://github.com/karlreginaldo/googletrans/tree/main) 
+
+
+
+This is just redistribute for the origin. And public to pipi for easy to use.
+
+And add the commiit form [karlreginaldo](https://github.com/ShivangKakkar/googletrans/pull/5)
+
+
+
+## Installation
+
+
+
+### PyPI
+
+
+
+This project is available on [PyPI](https://pypi.org/project/googletrans-py) and can be installed using pip.
+
+
+
+```shell
+
+pip install googletrans-py
+
+```
+
+
+
+### Repository
+
+
+
+You can also install the project directly from this repository.
+
+
+
+```shell
+
+pip install git+https://github.com/StarkBotsIndustries/googletrans.git
+
+```
+
+
+
+## Credits
+
+
+
+Original Author - [Suhun Han](https://github.com/ssut)
+
+
+
+[Shivang Kakkar](https://github.com/ShivangKakkar)
+
+
+
+[karlreginaldo](https://github.com/karlreginaldo)
+
+
+
+Original Repository - [googletrans](https://github.com/ssut/py-googletrans)
+
