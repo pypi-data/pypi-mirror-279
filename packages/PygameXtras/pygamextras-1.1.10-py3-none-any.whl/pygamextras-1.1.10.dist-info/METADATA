@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: PygameXtras
+Version: 1.1.10
+Summary: Labels, Buttons and much more for pygame
+Home-page: https://github.com/marcelm9/PygameXtras.git
+License: MIT
+Author: marcelm9
+Author-email: marcel.menzel09@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pygame-ce (>=2.4.0,<3.0.0)
+Project-URL: Repository, https://github.com/marcelm9/PygameXtras.git
+Description-Content-Type: text/markdown
+
+# PygameXtras
+PygameXtras is a library designed to make programming with pygame easier. It supplies classes that aim at reducing the time and effort that go into everyday tasks like displaying text, creating buttons, managing entry forms, etc.
