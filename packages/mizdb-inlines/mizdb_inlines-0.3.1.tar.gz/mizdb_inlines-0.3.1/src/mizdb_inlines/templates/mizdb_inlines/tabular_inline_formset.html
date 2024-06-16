@@ -1,0 +1,6 @@
+<div class="row mb-1">
+    {% for name, field in formset.empty_form.fields.items %}
+        {% if not field.widget.is_hidden %}<div class="{% if name == 'DELETE' %}col-1 text-center{% else %}col{% endif %}"><span class="fw-bold">{{ field.label }}</span></div>{% endif %}
+    {% endfor %}
+</div>
+{{ rendered_formset }}
