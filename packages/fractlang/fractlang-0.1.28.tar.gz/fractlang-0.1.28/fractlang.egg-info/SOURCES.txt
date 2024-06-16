@@ -1,0 +1,9 @@
+setup.py
+fractlang/__init__.py
+fractlang/frxparser.py
+fractlang.egg-info/PKG-INFO
+fractlang.egg-info/SOURCES.txt
+fractlang.egg-info/dependency_links.txt
+fractlang.egg-info/entry_points.txt
+fractlang.egg-info/requires.txt
+fractlang.egg-info/top_level.txt
