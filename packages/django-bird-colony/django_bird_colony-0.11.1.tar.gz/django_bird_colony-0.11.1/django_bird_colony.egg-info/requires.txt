@@ -1,0 +1,4 @@
+djangorestframework<2.15
+djangorestframework-link-header-pagination
+django-filter
+django-fullurl
