@@ -1,0 +1,21 @@
+[project]
+name = "reconfillion"
+version = "1.0.1"
+authors = [
+    { name = "Jun Kawahara", email = "junkawahara@users.noreply.github.com"}
+]
+description = "Solving combinatorial reconfiguration problems."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["graph algorithm", "combinatorial reconfiguration", "graphillion"]
+
+dependencies = [
+    "graphillion>=1.7"
+]
+
+[project.urls]
+Homepage = "https://github.com/junkawahara/reconfillion"
+
+[tool.setuptools]
+packages = ["reconfillion"]
+py-modules = ["reconf"]

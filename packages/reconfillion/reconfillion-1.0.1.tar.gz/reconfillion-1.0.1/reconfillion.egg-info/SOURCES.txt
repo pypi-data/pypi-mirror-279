@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+reconfillion/__init__.py
+reconfillion/reconf.py
+reconfillion.egg-info/PKG-INFO
+reconfillion.egg-info/SOURCES.txt
+reconfillion.egg-info/dependency_links.txt
+reconfillion.egg-info/requires.txt
+reconfillion.egg-info/top_level.txt
