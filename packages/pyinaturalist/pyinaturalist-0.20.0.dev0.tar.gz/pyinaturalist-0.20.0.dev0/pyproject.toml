@@ -1,0 +1,162 @@
+[tool.poetry]
+name = "pyinaturalist"
+version = "0.20.0.dev0"
+description = "iNaturalist API client for python"
+authors = ["Jordan Cook"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/pyinat/pyinaturalist"
+repository = "https://github.com/pyinat/pyinaturalist"
+documentation = "https://pyinaturalist.readthedocs.io"
+keywords = [
+    "inaturalist",
+    "biodiversity",
+    "conservation",
+    "citizen-science",
+    "community-science",
+    "api",
+    "api-client",
+    "data-model",
+    "requests",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+include = [
+    { path = "*.md" },
+    { path = "*.yml" },
+    { path = "docs", format = "sdist" },
+    { path = "examples", format = "sdist" },
+    { path = "test", format = "sdist" }
+]
+packages = [
+    { include = "pyinaturalist" },
+    { include = "pyinat" },
+]
+
+[tool.poetry.dependencies]
+python                      = "^3.8"
+attrs                       = ">=21.2"
+keyring                     = ">=22.3"
+platformdirs                = ">=2.6"
+python-dateutil             = ">=2.0"
+python-forge                = ">=18.6"
+requests                    = ">=2.25"
+requests-cache              = ">=1.2"
+requests-ratelimiter        = ">=0.5.1"
+rich                        = ">=10.9"
+
+# Optional dependencies
+filelock                    = {optional=true, version=">2.0"}
+ujson                       = {optional=true, version=">5.0"}
+
+# Documentation dependencies needed for Readthedocs builds
+furo                        = {optional=true, version="^2023.7"}
+ipython                     = {optional=true, version="^8.12"}
+linkify-it-py               = {optional=true, version="^2.0"}
+matplotlib                  = {optional=true, version=">=3.7"}
+myst-parser                 = {optional=true, version=">=1.0"}
+nbsphinx                    = {optional=true, version="^0.9"}
+pillow                      = {optional=true, version=">=10.1"}
+sphinx                      = {optional=true, version="^6.2"}
+sphinx-automodapi           = {optional=true, version="^0.15"}
+sphinx-autodoc-typehints    = {optional=true, version="1.20"}
+sphinx-copybutton           = {optional=true, version=">=0.5"}
+sphinx-design               = {optional=true, version=">=0.5"}
+sphinxcontrib-apidoc        = {optional=true, version="^0.3"}
+sphinxext-opengraph         = {optional=true, version=">=0.9"}
+
+[tool.poetry.dev-dependencies]
+coverage                    = ">=7.2"
+nox                         = "^2023.4"
+nox-poetry                  = "^1.0.0"
+pre-commit                  = "^2.19"
+pretty-errors               = ">=1.2"
+pytest                      = "^7.0"
+pytest-asyncio              = ">=0.21"
+pytest-cov                  = ">=3.0"
+pytest-xdist                = ">=2.2"
+requests-mock               = "^1.8"
+sphinx-autobuild            = ">=2021.3"
+
+[tool.poetry.extras]
+all = ["filelock", "ujson"]
+docs = [
+    "furo",
+    "ipython",
+    "linkify-it-py",
+    "matplotlib",
+    "myst-parser",
+    "nbsphinx",
+    "pillow",
+    "sphinx",
+    "sphinx-automodapi",
+    "sphinx-autodoc-typehints",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "sphinxcontrib-apidoc",
+    "sphinxext-opengraph",
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+skip-string-normalization = true
+line-length = 100
+
+[tool.coverage.html]
+directory = 'test-reports'
+
+[tool.coverage.run]
+branch = true
+source = ['pyinaturalist', 'pyinat']
+omit = ['pyinaturalist/docs/model_docs.py']
+
+[tool.coverage.report]
+exclude_lines = [
+    'pragma: no cover',
+    'if TYPE_CHECKING:',
+]
+
+[tool.isort]
+profile = 'black'
+line_length = 100
+skip_gitignore = true
+known_first_party = ['test']
+
+[tool.mypy]
+ignore_missing_imports = true
+files = ['pyinaturalist']
+
+[tool.pytest.ini_options]
+markers = [
+    "enable_client_session: Enable all ClientSession features: caching, rate-limiting, etc.",
+]
+
+[tool.ruff]
+fix = true
+unsafe-fixes = true
+line-length = 100
+output-format = 'grouped'
+target-version = 'py37'
+exclude = ['examples/', 'test/sample_data/']
+
+[tool.ruff.format]
+quote-style = 'single'
+
+[tool.ruff.lint]
+select = ['B', 'C4', 'C90', 'E', 'F']
+
+[tool.ruff.lint.isort]
+known-first-party = ['test']
+
+# Wrap lines to 100 chars, but don't error on unwrappable lines until 120 chars
+[tool.ruff.lint.pycodestyle]
+max-line-length = 120
