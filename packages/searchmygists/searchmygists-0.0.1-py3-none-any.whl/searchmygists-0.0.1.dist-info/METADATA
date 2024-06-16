@@ -1,0 +1,63 @@
+Metadata-Version: 2.3
+Name: searchmygists
+Version: 0.0.1
+Project-URL: Documentation, https://github.com/Tobi DEGNON/searchmygists#readme
+Project-URL: Issues, https://github.com/Tobi DEGNON/searchmygists/issues
+Project-URL: Source, https://github.com/Tobi DEGNON/searchmygists
+Author-email: Tobi DEGNON <tobidegnon@proton.me>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: aiosql
+Requires-Dist: aiosqlite
+Requires-Dist: httpx
+Requires-Dist: jinja2-fragments
+Requires-Dist: litestar-vite
+Requires-Dist: litestar[standard]
+Requires-Dist: msgspec
+Requires-Dist: python-dotenv
+Requires-Dist: sqlite-utils
+Description-Content-Type: text/markdown
+
+# searchmygists
+
+[![PyPI - Version](https://img.shields.io/pypi/v/searchmygists.svg)](https://pypi.org/project/searchmygists)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/searchmygists.svg)](https://pypi.org/project/searchmygists)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install searchmygists
+```
+
+## Features
+
+- [ ] Download local copy of users gists and starred gists into an sqlite database
+- [ ] Add tags to gists
+- [ ] Give title to gist (via form)
+- [ ] Give title to a gist (auto via chatgpt)
+- [ ] Full text search on gist
+- [ ] Filter gists by tags, languages, date, user gists or starred gists
+- [ ] Single user mode via cli (local usage)
+- [ ] Extract the gists into folders
+
+## License
+
+`searchmygists` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
