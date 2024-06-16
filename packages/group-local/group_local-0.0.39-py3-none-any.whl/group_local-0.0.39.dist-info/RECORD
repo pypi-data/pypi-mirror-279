@@ -1,0 +1,9 @@
+group_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+group_local/group_category.py,sha256=xvEIDx3dQBdrQaQ9H-IPjKc8R2Uw9MyodeiOE5EED8A,429
+group_local/group_local_constants.py,sha256=d6Mn-7yKEQI6zRljz0mgHYncUP-MaMRYy0Ug09EBt7E,1026
+group_local/group_type.py,sha256=c9TL--SqewlkNjBWcmso3A6LYQOJa-jRQxPi6bUYBFc,541
+group_local/groups_local.py,sha256=0c5FZgKCyT8cw7DQNQALFyGbGtgeVdWEVRpVkilow0E,23093
+group_local-0.0.39.dist-info/METADATA,sha256=NOUBql4h-hZjEG7-DtMdt71yG2Agd1V6SOfpWU5u798,660
+group_local-0.0.39.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+group_local-0.0.39.dist-info/top_level.txt,sha256=HtxNcTgez_-L99YnJItny_yT3y9g697UiUh2MeEPxUU,12
+group_local-0.0.39.dist-info/RECORD,,
