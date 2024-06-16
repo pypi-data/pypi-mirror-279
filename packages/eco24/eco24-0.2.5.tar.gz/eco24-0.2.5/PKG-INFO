@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: eco24
+Version: 0.2.5
+Author: VS
+License: MIT
+Platform: any
+Requires-Dist: loguru
+Requires-Dist: pyperclip
+Requires-Dist: pyyaml

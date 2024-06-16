@@ -1,0 +1,16 @@
+MANIFEST.in
+requirements.txt
+setup.py
+eco24.egg-info/PKG-INFO
+eco24.egg-info/SOURCES.txt
+eco24.egg-info/dependency_links.txt
+eco24.egg-info/not-zip-safe
+eco24.egg-info/requires.txt
+eco24.egg-info/top_level.txt
+econom/Ecls.py
+econom/__init__.py
+econom/src/theory.yaml
+econom/src/theory1.yaml
+econom/src/theory2.yaml
+econom/src/theory3.yaml
+econom/src/theory4.yaml
