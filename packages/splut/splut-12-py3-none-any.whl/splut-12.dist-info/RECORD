@@ -1,0 +1,12 @@
+splut/__init__.py,sha256=fwnRDSIENH-E-fX2ynp1cd1pTAM03w691ZUdmWOQE34,19
+splut/bg.py,sha256=bmA63Ds1qfZ672EGvXfMVDr7IIEtosgBseQFRv2iqqg,3199
+splut/delay.py,sha256=pvX9O5tyNFuI8kMVJwxJEwiZtT3KQf0iA_h0cHiMM2A,1810
+splut/actor/__init__.py,sha256=H2DjIyCrNGDUmPIZbM8m1CKA937K9lJv46J1TWChKdA,639
+splut/actor/future.py,sha256=n1afJaluvdJGFN2veXrW-zkR4zBnJ2NxfBj6n1B7iR4,1616
+splut/actor/mailbox.py,sha256=4slPhWXoXU1PR7ubfDSXy8GHT3gT42Czb82_c3a6USE,1223
+splut/actor/message.py,sha256=hk_yvPXTd_ciJAGPujMgYlC26mTg_Lc80VVVo2kuvPg,1914
+splut-12.dist-info/METADATA,sha256=cF7bz3DllLr8TfFkCckxfFtZ9cb6MqTK6AwFA4a5Jxo,583
+splut-12.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+splut-12.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+splut-12.dist-info/top_level.txt,sha256=lbCes-9tUfVLtLfebllx917hDXzNYUX6E4C2tp2Crzc,6
+splut-12.dist-info/RECORD,,
