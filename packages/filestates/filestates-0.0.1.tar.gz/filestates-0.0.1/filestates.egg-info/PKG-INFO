@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: filestates
+Version: 0.0.1
+Summary: A tool for managing file states, with configuration files in YAML.
+Home-page: https://github.com/weeger/filestates
+Author: weeger
+Author-email: contact@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# filestates
+
+`filestates` is a Python package that allows you to manage the state of files and directories using YAML configuration files.
+
+## Features
+
+- **Apply and Modify Permissions and Ownership**: Manage file and directory permissions and ownership individually or recursively.
+- **Create, Modify, and Delete Directories**: Use patterns and regex to create, modify, and delete directories and subdirectories (e.g., ensure each `Entity/MyEntity.php` file has a corresponding `Repository/MyEntityRepository.php`).
+- **Create Files Using Templates and Placeholders**: Generate files from templates with dynamic placeholders.
+
+## Installation
+
+Install `filestates` with pip:
+
+pip install filestates
+
+## Usage
+
+### Configuration File Example
+
+```yaml
+# example.yaml
+files:
+  - path: /path/to/file
+    owner: user
+    group: group
+    mode: '0644'
+directories:
+  - path: /path/to/directory
+    recursive: true
+    mode: '0755'
+    create: true
+templates:
+  - path: /path/to/output/file
+    template: /path/to/template/file
+    placeholders:
+      placeholder1: value1
+      placeholder2: value2
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
