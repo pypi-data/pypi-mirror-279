@@ -1,0 +1,5 @@
+pytube==15.0.0
+moviepy==1.0.3
+openai-whisper==20231117
+pydub==0.25.1
+youtube-transcript-api==0.6.2

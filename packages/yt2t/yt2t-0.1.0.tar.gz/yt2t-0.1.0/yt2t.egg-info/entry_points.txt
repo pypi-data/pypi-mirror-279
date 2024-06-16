@@ -1,0 +1,2 @@
+[console_scripts]
+yt2t = yt2t.main:main

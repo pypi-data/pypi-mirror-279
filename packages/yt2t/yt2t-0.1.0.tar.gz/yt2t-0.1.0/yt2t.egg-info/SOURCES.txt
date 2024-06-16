@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+yt2t/__init__.py
+yt2t/main.py
+yt2t.egg-info/PKG-INFO
+yt2t.egg-info/SOURCES.txt
+yt2t.egg-info/dependency_links.txt
+yt2t.egg-info/entry_points.txt
+yt2t.egg-info/requires.txt
+yt2t.egg-info/top_level.txt
