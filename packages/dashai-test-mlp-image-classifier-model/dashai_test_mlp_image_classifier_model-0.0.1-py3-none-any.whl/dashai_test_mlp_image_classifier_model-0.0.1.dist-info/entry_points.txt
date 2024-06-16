@@ -1,0 +1,2 @@
+[dashai.plugins]
+tabularModel = dashai_mlp_image_classifier_model.mlp_image_classifier:MLPImageClassifier
