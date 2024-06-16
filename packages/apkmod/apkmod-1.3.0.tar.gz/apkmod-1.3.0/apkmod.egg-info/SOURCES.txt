@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+apkmod/__init__.py
+apkmod/android_manifest_util.py
+apkmod/frida_gadget_util.py
+apkmod/main.py
+apkmod/smali_injector_util.py
+apkmod.egg-info/PKG-INFO
+apkmod.egg-info/SOURCES.txt
+apkmod.egg-info/dependency_links.txt
+apkmod.egg-info/entry_points.txt
+apkmod.egg-info/requires.txt
+apkmod.egg-info/top_level.txt
