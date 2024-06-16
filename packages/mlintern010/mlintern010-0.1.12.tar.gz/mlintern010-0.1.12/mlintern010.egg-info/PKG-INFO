@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mlintern010
+Version: 0.1.12
+Summary: This is a package for data preprocessing
+Author: R Kiran Kumar Reddy
+Author-email: rkirankumarreddy599@gmail.com
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: termcolor
