@@ -1,0 +1,8 @@
+mov_cli_jellyplex/__init__.py,sha256=Pr8HyWYztYGtBWQUIJRmIJ-J9NCOq4amcCXP34lA-0Y,476
+mov_cli_jellyplex/jellyfin/scraper.py,sha256=UeQQubodw54ij5e9_ttcbC08Og-cnrlhrr-st_HQ-6g,6107
+mov_cli_jellyplex/plex/scraper.py,sha256=46TXoO0en-mmQdf21rr2OBPUH7v4EkMrPtR3Vcq5xaU,3408
+mov_cli_jellyplex-1.1.0.dist-info/LICENSE,sha256=Wp5-3_K2Rj37AYa3a3z-nDgv0c6unnWx2-yiu5IobPY,1063
+mov_cli_jellyplex-1.1.0.dist-info/METADATA,sha256=fv71HrXipdujOl9pum-XdJjuaWlP2Sddwnrg5qUffsg,3222
+mov_cli_jellyplex-1.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mov_cli_jellyplex-1.1.0.dist-info/top_level.txt,sha256=y4T5Ky4B5gf7hsBSEUtqQfDM7sdWSjTKepvAbwj22dE,18
+mov_cli_jellyplex-1.1.0.dist-info/RECORD,,
