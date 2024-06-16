@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: aisolutions
+Version: 0.1.5
+Summary: AI Solutions
+Home-page: https://github.com/dmtno/aisolutions
+Author: DMYTRO IVANOV
+Author-email: dima.ivanov.py@gmail.com
+License: MIT
+License-File: LICENSE
+Requires-Dist: openai
+Requires-Dist: requests
+Requires-Dist: dinjectorr
+
