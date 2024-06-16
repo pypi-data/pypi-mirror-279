@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: streamarch
+Version: 0.7.8
+Summary: 
+Author: Nate Smith
+Author-email: nate@cloudcrestgroup.com
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+** Logging
+
+Main app:
+
+from streamarch.logging import setup_logging
+setup_logging(filename)
+
+--
+
+import logging
+logger = logging.getLogger(logger_name)
+
+
+** Config
+
+
