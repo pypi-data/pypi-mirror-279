@@ -1,0 +1,8 @@
+matching_statistics/MatchingStatistics.py,sha256=nX0RWqOLNgPj-nHN84JFHD1XeY2AvOEWYgWIM3zyL4Q,5542
+matching_statistics/__init__.py,sha256=qn7k3R_tvRFFiLflBr_yAe-KOS9FeQGzdUI7rs3ATJo,84
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_matching_statistics.py,sha256=BmVo4XCzM7krCWnMMHf74WBMfDBi4Hu8-9gAAfMK0X8,3528
+matching_statistics-0.2.0.dist-info/METADATA,sha256=kls5tBUN86HLAajyxvp6g7YfjE_0I8wkU4ABghd1mz8,1206
+matching_statistics-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+matching_statistics-0.2.0.dist-info/top_level.txt,sha256=y9-duRfsClqYzhn0oPVtDYKxXtcTSYjXCf8Dv2EWK6s,26
+matching_statistics-0.2.0.dist-info/RECORD,,
