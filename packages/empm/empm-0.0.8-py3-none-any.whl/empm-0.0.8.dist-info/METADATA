@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: empm
+Version: 0.0.8
+Summary: embedded pack manage
+Author-email: paopaozhi <paopaozhi@hotmail.com>, hymn <hexinyi136@139.com>
+Project-URL: Homepage, https://github.com/paopaozhi/cepack
+Project-URL: Bug Tracker, https://github.com/paopaozhi/cepack/issues
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer
+Requires-Dist: toml
+Requires-Dist: requests
+Requires-Dist: fastapi
+
+# cepack
+
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/empm?logo=python)
+![PyPI - Version](https://img.shields.io/pypi/v/empm?logo=pypi)
+![Codecov](https://img.shields.io/codecov/c/github/paopaozhi/empm?logo=codecov)
+![PyPI - License](https://img.shields.io/pypi/l/empm?logo=apache)
+
+嵌入式包管理器
+
+## 支持命令
+
+|命令|描述|
+|---|---|
+|install|读取toml文件，安装库|
+|add|添加库|
+|remove|删除库|
+
+## 开发指南
+
+### 安装依赖
+
+```shell
+pip install -r requirements.txt
+pip install pipreqs
+```
+
+> 使用pipreqs生成依赖列表
+> 使用到了新的包需要使用`pipreqs . --force`重新生成依赖列表
+
+### 本地安装
+
+```shell
+pip install --editable .
+```
