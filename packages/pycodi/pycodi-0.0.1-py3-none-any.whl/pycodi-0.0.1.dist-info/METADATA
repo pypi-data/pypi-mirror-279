@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pycodi
+Version: 0.0.1
+Summary: Contextual Out-of-Distribution Integration
+Home-page: https://github.com/tarek-eissa/codi
+Author: Tarek Eissa
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+
+For information on this package and its usage, please refer to the GitHub project https://github.com/tarek-eissa/codi
+
+
