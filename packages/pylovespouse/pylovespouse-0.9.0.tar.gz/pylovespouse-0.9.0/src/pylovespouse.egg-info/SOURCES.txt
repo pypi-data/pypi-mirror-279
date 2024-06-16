@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/pylovespouse/lovespouse.py
+src/pylovespouse.egg-info/PKG-INFO
+src/pylovespouse.egg-info/SOURCES.txt
+src/pylovespouse.egg-info/dependency_links.txt
+src/pylovespouse.egg-info/top_level.txt
