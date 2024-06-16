@@ -1,0 +1,13 @@
+netbek/__init__.py,sha256=q3JNmHn0CMPtEqkMR40lkjKQzuWUtT39xIFUYJ-MKIE,56
+netbek/periodic_table/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netbek/periodic_table/templates/macros/nb_pt_axis_cell.jinja2,sha256=AGeKypjSaiEKwfXDqq5Ema_EIvC4Vki4iUw8L0scRoI,146
+netbek/periodic_table/templates/macros/nb_pt_blockholder_element_cell.jinja2,sha256=acizJ8WrO8pz-G42KIc8fEkoQxtLjXFMCDTNfHj-ouI,286
+netbek/periodic_table/templates/macros/nb_pt_element_cell.jinja2,sha256=nm1cKHyA5osee6oX8_loCdj2IvAcRpn8x4jbS1z5voI,1415
+netbek/periodic_table/templates/macros/nb_pt_empty_cell.jinja2,sha256=3OaRfr85N6E3DGdxMgWP9F_JsowbnxXOhXyf9Qa9uDo,134
+netbek/periodic_table/templates/macros/nb_pt_legend.jinja2,sha256=x4fTC5JEDPj2-56Lzq6DxKrLhNhkx5BOnaccM1-P0hY,5909
+netbek/periodic_table/templates/macros/nb_pt_table_18.jinja2,sha256=cEySA9qfV4RENMnqVnw9UDzkdjKI6a7RP2qTzhQV_C8,3227
+netbek_periodic_table-0.1.89.dist-info/LICENSE,sha256=dql8h4yceoMhuzlcK0TT_i-NgTFNIZsgE47Q4t3dUYI,34520
+netbek_periodic_table-0.1.89.dist-info/METADATA,sha256=N4N4Z7XIPz1NsuH0PbCs-MnRVrkDH49ZA3_ulFGMP1o,42076
+netbek_periodic_table-0.1.89.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+netbek_periodic_table-0.1.89.dist-info/top_level.txt,sha256=Glu6Fw763-0O8abYVREEJKB8FpLrOggp0K1aAUJlbac,7
+netbek_periodic_table-0.1.89.dist-info/RECORD,,
