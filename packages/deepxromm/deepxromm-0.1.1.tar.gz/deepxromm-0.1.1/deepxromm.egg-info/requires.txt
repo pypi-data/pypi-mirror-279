@@ -1,0 +1,6 @@
+blend_modes
+deeplabcut[tf]
+imagehash
+
+[cli]
+ipython

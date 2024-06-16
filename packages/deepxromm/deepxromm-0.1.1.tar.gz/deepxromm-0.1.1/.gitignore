@@ -1,0 +1,18 @@
+# Video
+*.avi
+*.mp4
+
+# Pointsfiles
+*.h5
+*.mat
+*.pickle
+
+# Logs
+*.tfevents*
+
+# PyCache
+*.pyc*
+
+# Source Dists
+dist/*
+deepxromm.egg-info/*
