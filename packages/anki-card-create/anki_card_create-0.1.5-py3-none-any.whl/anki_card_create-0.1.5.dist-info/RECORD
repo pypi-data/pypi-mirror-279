@@ -1,0 +1,10 @@
+src/__init__.py,sha256=d3hGO9c3jdaID9mHNaMDNYTKIYFk7Q_sz3n2uR_lAmI,220
+src/ankicard.py,sha256=EqdrQWUdH65vkkcAsxBDGVZuta1hxzSazQTMHOSJzNk,1575
+src/card_creator.py,sha256=LemRTKzdha8-1qhb6AZS4SwCN_Lk0kkiRSqK6mdJygY,6242
+src/main.py,sha256=EqdrQWUdH65vkkcAsxBDGVZuta1hxzSazQTMHOSJzNk,1575
+src/models.py,sha256=Bnt8ZQYkxxWRBHZfGfr31N2GoZwuHAuxJ5WN0cRemzQ,1768
+src/utils.py,sha256=Ivvz_JWnl7TwgW5tDcmuD0lz-Yafn5ckZpksoLTHEpQ,2267
+anki_card_create-0.1.5.dist-info/METADATA,sha256=OSw1lOMii8JZ3KcX0S9oNCgefiSUvQOTks_QZPCvBqk,1317
+anki_card_create-0.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+anki_card_create-0.1.5.dist-info/entry_points.txt,sha256=ffgGw4Gk1XAsffyekczp1FWjF5mXlxx5d7VN9gyx2cE,39
+anki_card_create-0.1.5.dist-info/RECORD,,
