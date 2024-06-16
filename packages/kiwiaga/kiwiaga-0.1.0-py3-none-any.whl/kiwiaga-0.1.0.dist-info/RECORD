@@ -1,0 +1,9 @@
+kiwiaga/__init__.py,sha256=_pXYgFlnVrV43mjvOfsi4t9sIyasNvAtxngxd69vs6I,123
+kiwiaga/cli.py,sha256=df17HasDmiObwocULcDOOsp2lQPYaWa-vP06-Irb-kQ,2730
+kiwiaga/config.py,sha256=nJU1FKXJ1vMPP6DbReEipDkTKltDE8CPhFck1NMtcRE,726
+kiwiaga/manga.py,sha256=_QMciXKuqaqApcZkEQpAsna1L25n6V0I6uLABzuuFjY,1473
+kiwiaga-0.1.0.dist-info/LICENSE,sha256=innA84W0Bg-HWwMIHpzDQZLZQ2dnwVqnqO12SOCbTKw,1063
+kiwiaga-0.1.0.dist-info/METADATA,sha256=n_7LblfUOe8If-kucwUV4X3ziyJX2cc9A8IL_hxNdP8,5260
+kiwiaga-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+kiwiaga-0.1.0.dist-info/entry_points.txt,sha256=J7BfYP9wEaf_GCHUhBU6sSWnsSI6d_rLt_9onEUptTc,43
+kiwiaga-0.1.0.dist-info/RECORD,,
