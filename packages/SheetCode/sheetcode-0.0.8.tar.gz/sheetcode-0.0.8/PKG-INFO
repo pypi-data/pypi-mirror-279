@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: SheetCode
+Version: 0.0.8
+Summary: Generate Excel test sheets procedurally and verify traceability against requirements.
+Project-URL: Homepage, https://github.com/befr4ctal/SheetCode
+Project-URL: Issues, https://github.com/befr4ctal/SheetCode/issues
+Author-email: Thomas MARIN <thomas.marin@gmx.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Sheet Code
+
+Generate Excel test sheets procedurally and verify traceability against requirements.
