@@ -1,0 +1,13 @@
+numpy>=1.18
+scipy
+matplotlib
+anndata
+statsmodels
+scanpy
+h5py
+palettable
+requests
+importlib-metadata
+
+[docs]
+sphinx_bootstrap_theme
