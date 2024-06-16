@@ -1,0 +1,130 @@
+# SQLITE.py
+
+`SQLITE.py` é uma classe Python para interagir com bancos de dados SQLite de forma simplificada. Esta classe fornece métodos para conectar a um banco de dados, criar tabelas, inserir dados e outras operações básicas.
+
+## Índice
+
+1. [Instalação](#instalação)
+2. [Uso](#uso)
+3. [Métodos](#métodos)
+    - [__init__](#__init__)
+    - [conectarBanco](#conectarbanco)
+    - [criarTabela](#criartabela)
+    - [inserirDados](#inserirdados)
+    - [editarDados] (#editardados)
+    - [adicionarColuna] (#adicionarcoluna)
+    - [apagarColuna] (#apagarcoluna)
+    - [apagarTabela] (#apagartabela)
+    - [verDados] (#verdados)
+    - [verDadosPlus] (#verdadosplus)
+    - [encryptPas] (#encryptpass)
+    
+
+## Instalação
+
+Não há requisitos especiais de instalação além do Python 3.6+.
+
+## Uso
+
+Primeiro, importe a classe `SQLITE` e crie uma instância fornecendo o nome do banco de dados:
+
+```python
+from SQLITE import SQLITE
+
+# Inicialize a classe com o nome do banco de dados
+db = SQLITE('meu_banco')
+```
+
+## Métodos
+
+### __init__(self, nomeBanco: str)
+Inicializa a classe com o nome do banco de dados.
+
+#### Parâmetros:
+nomeBanco (str): Nome do banco de dados a ser utilizado.
+
+#### Exemplo de uso:
+```python
+db = SQLITE('meu_banco')
+```
+
+### conectarBanco(self)
+Conecta ao banco de dados e cria a pasta database se não existir.
+
+#### Retorno:
+Um objeto de conexão e cursor do banco de dados.
+
+#### Exemplo de uso:
+```python
+database, cursor = db.conectarBanco()
+```
+
+### criarTabela(self, nomeTabela: str, Colunas: list, ColunasTipo: list)
+Cria uma tabela no banco de dados.
+
+#### Parâmetros:
+nomeTabela (str): Nome da tabela a ser criada.
+Colunas (list): Lista com os nomes das colunas.
+ColunasTipo (list): Lista com os tipos das colunas.
+
+#### Exemplo de uso:
+```python
+db.criarTabela(
+    nomeTabela='minha_tabela',
+    Colunas=['coluna1', 'coluna2'],
+    ColunasTipo=['TEXT', 'INTEGER']
+)
+```
+
+### inserirDados(self, nomeTabela: str, Colunas: list, Valores: list)
+Insere dados na tabela especificada.
+
+#### Parâmetros:
+nomeTabela (str): Nome da tabela onde os dados serão inseridos.
+Colunas (list): Lista com os nomes das colunas onde os dados serão inseridos.
+Valores (list): Lista com os valores a serem inseridos.
+
+#### Exemplo de uso:
+```python
+db.inserirDados(
+    nomeTabela='minha_tabela',
+    Colunas=['coluna1', 'coluna2'],
+    Valores=['valor1', 123]
+)
+```
+
+### consultarDados(self, nomeTabela: str, Colunas: list)
+Consulta dados da tabela especificada.
+
+#### Parâmetros:
+nomeTabela (str): Nome da tabela de onde os dados serão consultados.
+Colunas (list): Lista com os nomes das colunas a serem consultadas.
+
+#### Exemplo de uso:
+```python
+resultados = db.consultarDados(
+    nomeTabela='minha_tabela',
+    Colunas=['coluna1', 'coluna2']
+)
+```
+
+### deletarDados(self, nomeTabela: str, Condicao: str)
+Deleta dados da tabela especificada com base em uma condição.
+
+#### Parâmetros:
+nomeTabela (str): Nome da tabela de onde os dados serão deletados.
+Condicao (str): Condição para deletar os dados.
+
+#### Exemplo de uso:
+```python
+db.deletarDados(
+    nomeTabela='minha_tabela',
+    Condicao='coluna1 = "valor1"'
+)
+```
+
+## Contribuição
+Sinta-se à vontade para contribuir com melhorias e novas funcionalidades.
+
+## Licença
+Este projeto está licenciado sob a licença MIT.
