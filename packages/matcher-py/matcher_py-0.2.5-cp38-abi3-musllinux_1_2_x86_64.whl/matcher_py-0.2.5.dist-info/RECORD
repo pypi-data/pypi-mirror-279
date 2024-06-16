@@ -1,0 +1,9 @@
+matcher_py-0.2.5.dist-info/METADATA,sha256=XRMXkVeJr6G0Jl2eT9hP0PmvbG_6nZc0s0FnClKMt6w,9113
+matcher_py-0.2.5.dist-info/WHEEL,sha256=kJGRx--7h6qhTujWLm6wAlzWG7_ruZs4s-HTibUZ7og,105
+matcher_py.libs/libgcc_s-1e52349c.so.1,sha256=Ani0u_W_tB8ESsFePO4D2mn2lrgWLhyFdw6RETxBTYM,437537
+matcher_py/__init__.py,sha256=k55p4YINmKVjYn54N5zL0WdpCznh7N5KQhOXBxe006c,47
+matcher_py/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+matcher_py/extension_types.py,sha256=8W408KensTmLViG_Ht6AIPNOawQ9dt395qtmmocsUko,2937
+matcher_py/matcher_py.pyi,sha256=RxKO-N9dXJBChmnXYprhvyBcZmq5N56Ok9MqpOoW4Do,6027
+matcher_py/matcher_py.abi3.so,sha256=Cuv7v0u8AopFkEc_sw4Y1PTrdDY8n16gayXZY6Ps2nM,3369657
+matcher_py-0.2.5.dist-info/RECORD,,
