@@ -1,0 +1,6 @@
+tk
+sv_ttk
+shutil
+subprocess
+twine
+build
