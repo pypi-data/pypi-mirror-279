@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: codegyan
+Version: 0.1.0
+Summary: A Python library to interact with the Codegyan API
+Home-page: https://github.com/prathmeshyelne/codegyan-python
+Author: Prathmesh Yelne
+Author-email: prathmeshyelne@codegyan.in
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Codegyan Python Library
+
+A Python library to interact with the Codegyan API.
+
+## Installation
+
+```bash
+pip install codegyan
+```
+## Usage
+
+```python
+from codegyan import Codegyan
+
+client = Codegyan(api_key='your_api_key', client_id='your_client_id')
+
+# Compiler API
+result = client.compilerApiClient.compile(lang='python', code='print("Hello, World!")')
+print(result)
+```
+
+
+### Testing
+
+Create test files in the `tests` directory to ensure your library works as expected.
+
+#### `tests/test_compiler.py`
+
+```python
+import unittest
+from codegyan.compiler import CompilerApiClient
+
+class TestCompilerApiClient(unittest.TestCase):
+    def setUp(self):
+        self.client = CompilerApiClient(api_key='your_api_key', client_id='your_client_id')
+
+    def test_compile(self):
+        result = self.client.compile(lang='python', code='print("Hello, World!")')
+        self.assertIn('output', result)
+
+if __name__ == '__main__':
+    unittest.main()
