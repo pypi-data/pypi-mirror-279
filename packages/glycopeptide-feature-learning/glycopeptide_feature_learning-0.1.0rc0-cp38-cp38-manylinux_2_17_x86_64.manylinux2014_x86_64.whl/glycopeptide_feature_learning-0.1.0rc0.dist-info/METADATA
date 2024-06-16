@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: glycopeptide_feature_learning
+Version: 0.1.0rc0
+Summary: Glycopeptide fragmentation modeling tools
+Author: Joshua Klein
+Author-email: jaklein@bu.edu
+Project-URL: Source Code, https://github.com/mobiusklein/glycopeptide_feature_learning
+Project-URL: Issue Tracker, https://github.com/mobiusklein/glycopeptide_feature_learning/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ms-deisotope >=0.0.53
+Requires-Dist: glypy >=1.0.6
+Requires-Dist: glycopeptidepy >=0.0.26
+Requires-Dist: glycresoft >=0.4.23.post1
+
+# glycopeptide_feature_learning
+
+Tools for modeling how glycopeptides fragment during collisional dissociation for mass spectra.
+
+This project is part of [glycresoft](https://github.com/mobiusklein/glycresoft).
