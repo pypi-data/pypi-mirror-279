@@ -1,0 +1,12 @@
+tgit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tgit/changelog.py,sha256=wX6VJcurxcoq4mFLposu-fD0ghMQczOu5E21n0hk8jU,838
+tgit/cli.py,sha256=YvaY-KRxcIkkwds5cDFNN3Xvtv8nS01cllL15afNLQc,1099
+tgit/commit.py,sha256=5MTS93KfenPpJW2uv6wGpRFEl1AMWo044yevwE17Xvo,2192
+tgit/settings.py,sha256=IMht-NG5kZPgNmu2pIHdGJI9HwsXXgXF_BMfDbSW8oE,826
+tgit/utils.py,sha256=IbyuuMC2XWMOTEtCgl8wghRkFAMaymlwPMSCBVZpemk,2790
+tgit/version.py,sha256=m394mnWe6d7Y1IxTGi8pQ9FzonPDLhoJWloX_RsFxmo,15964
+tgit-0.3.0.dist-info/METADATA,sha256=OjkXOOXakWVHI1CPS_bBHwTphKbKv6jaI0sl02b6yow,798
+tgit-0.3.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tgit-0.3.0.dist-info/entry_points.txt,sha256=UwaOCWeT5G99tU5uaN2cshCbEE5BYsKbKtDVbUB32uo,60
+tgit-0.3.0.dist-info/top_level.txt,sha256=zahXTE_435RjcgiV-WyS56SqZddwc-yjFgQ_X4CO2nY,5
+tgit-0.3.0.dist-info/RECORD,,
