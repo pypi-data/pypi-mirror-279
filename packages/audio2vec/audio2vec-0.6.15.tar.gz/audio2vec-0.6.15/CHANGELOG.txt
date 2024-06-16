@@ -1,0 +1,23 @@
+# Audio2Vector Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+
+### Added
+- Initial release of Audio2Vector.
+- Audio processing functionality to convert audio files into a format suitable for data analysis and machine learning.
+- Vector conversion functionality to transform processed audio data into vector representations.
+- Compatibility with .wav audio file formats.
+
+## [0.1.0] - 2024-06-12
+
+### Added
+- Initial project setup.
+- Basic README and Contributing guidelines.
+
+## [0.0.1] - 2024-06-01
+
+### Added
+- Project initialization.
+
