@@ -1,0 +1,33 @@
+Metadata-Version: 2.3
+Name: omg.lol
+Version: 1.0
+Summary: A wrapper around the omg.lol API (https://api.omg.lol)
+Project-URL: Homepage, https://github.com/tildezero/omg-py
+Project-URL: Bug Tracker, https://github.com/tildezero/omg-py/issues
+Author-email: Suhas <suhas@omg.lol>
+License-File: LICENSE
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.7
+Requires-Dist: emoji
+Requires-Dist: httpx
+Requires-Dist: python-dateutil
+Description-Content-Type: text/markdown
+
+# omg-py
+#### an api wrapper for [the omg.lol api](https://api.omg.lol)
+
+## use
+```shell
+pip install git+https://github.com/tildezero/omg-py.git
+```
+
+```python
+from omg import Client
+client = Client(key="asdf", email="suhas@omg.lol")
+client.purl.retrieve("sus")
+```
+
+note: i think every api path is implemented, feel free to create an issue if i'm missing something though
