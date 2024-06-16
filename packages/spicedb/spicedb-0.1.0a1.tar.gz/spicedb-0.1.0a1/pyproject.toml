@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "spicedb"
+version = "0.1.0a1"
+description = "An unofficial SpiceDB client for Python."
+authors = ["Alexander Pushkov <ale@aedge.dev>"]
+readme = "README.md"
+packages = [{include = "spicedb"}]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: AsyncIO",
+]
+homepage = "https://spicedb-python.aedge.dev/"
+repository = "https://gitlab.com/aedge/spicedb-python"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+httpx = "^0.27.0"
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.25.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
