@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: sphinxext-presentations
+Version: 0.3.1
+Summary: Sphinx Extension that turns documentation into presentations.
+Home-page: https://github.com/wpilibsuite/sphinx-presentations
+Author: Vasista Vovveti
+Author-email: vasistavovveti@gmail.com
+Classifier: Environment :: Plugins
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Sphinx :: Extension
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python
+Classifier: Topic :: Documentation :: Sphinx
+Classifier: Topic :: Documentation
+Classifier: Topic :: Software Development :: Documentation
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Utilities
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sphinx >=2.0
+
+# sphinx-presentations
+
+sphinx-presentations is a Sphinx extension to convert documentation to Reveal.js presentations.
+
+## Installation
+
+`python -m pip install sphinxext-presentations`
+
+## Usage
+Add `sphinxext.presentations` to your extensions list in your `conf.py`
+
+```python
+extensions = [
+   "sphinxext.presentations",
+]
+```
+
+Presentations will launch when `?present` is appended to the url of a page. It is recommended to add a way for viewers to launch presentations without modifying the url (a button perhaps?).
+
+
+## Building js assets
+
+### Installing dependencies
+```
+npm install
+```
+### Building js
+```
+npx webpack
+```
