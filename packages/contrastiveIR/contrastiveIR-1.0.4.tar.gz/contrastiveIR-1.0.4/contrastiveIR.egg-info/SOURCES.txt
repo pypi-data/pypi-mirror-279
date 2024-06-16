@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+contrastiveIR/__init__.py
+contrastiveIR/cir.py
+contrastiveIR.egg-info/PKG-INFO
+contrastiveIR.egg-info/SOURCES.txt
+contrastiveIR.egg-info/dependency_links.txt
+contrastiveIR.egg-info/requires.txt
+contrastiveIR.egg-info/top_level.txt
