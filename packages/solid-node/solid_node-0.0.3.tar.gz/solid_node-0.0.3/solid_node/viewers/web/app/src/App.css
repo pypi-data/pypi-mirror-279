@@ -1,0 +1,27 @@
+/* App.css */
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top {
+    display: flex;
+    flex: 1;
+}
+
+.pane {
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.left, .right, .center {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.bottom {
+    width: 100%;
+}
