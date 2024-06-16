@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+setup.py
+finsec/__init__.py
+finsec/base.py
+finsec/filing.py
+finsec/version.py
+finsec.egg-info/PKG-INFO
+finsec.egg-info/SOURCES.txt
+finsec.egg-info/dependency_links.txt
+finsec.egg-info/requires.txt
+finsec.egg-info/top_level.txt
+tests/test_13f.py
