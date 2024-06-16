@@ -1,0 +1,2 @@
+[console_scripts]
+enova = enova.entry.cli:main
