@@ -1,0 +1,9 @@
+README.md
+setup.py
+ampari/__init__.py
+ampari/main.py
+ampari.egg-info/PKG-INFO
+ampari.egg-info/SOURCES.txt
+ampari.egg-info/dependency_links.txt
+ampari.egg-info/requires.txt
+ampari.egg-info/top_level.txt

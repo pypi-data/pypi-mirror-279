@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: ampari
+Version: 0.1
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: twine>=5.1.0; extra == "dev"
+
+# ampari
