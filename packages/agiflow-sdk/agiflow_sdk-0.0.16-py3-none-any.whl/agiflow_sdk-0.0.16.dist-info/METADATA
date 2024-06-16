@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: agiflow-sdk
+Version: 0.0.16
+Summary: Agiflow Software Development Kit (SDK) for Python
+Home-page: https://github.com/agiflowAI/agiflow
+License: Business Source License
+Author: Vuong Ngo
+Author-email: vuongngo.pd@gmail.com
+Requires-Python: >=3.9,<4
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: colorama (>=0.4.6,<0.5.0)
+Requires-Dist: deprecated (>=1.2.14,<2.0.0)
+Requires-Dist: opentelemetry-api (>=1.23.0,<2.0.0)
+Requires-Dist: opentelemetry-exporter-otlp-proto-http (>=1.20.0,<2.0.0)
+Requires-Dist: opentelemetry-instrumentation-requests (==0.44b0)
+Requires-Dist: opentelemetry-instrumentation-sqlalchemy (==0.44b0)
+Requires-Dist: opentelemetry-instrumentation-urllib3 (==0.44b0)
+Requires-Dist: opentelemetry-sdk (>=1.20.0,<2.0.0)
+Requires-Dist: posthog (>=3.0.2,<4.0.0)
+Requires-Dist: pydantic (>=2.5.3,<3.0.0)
+Requires-Dist: tenacity (>=8.2.3,<9.0.0)
+Requires-Dist: tiktoken (>=0.7.0,<0.8.0)
+Project-URL: Documentation, https://docs.agiflow.io/category/python
+Project-URL: Repository, https://github.com/agiflowAI/agiflow
+Description-Content-Type: text/markdown
+
+# Agiflow Python Sdk
+
+Agiflow’s Python SDK allows you to easily start monitoring and debugging your LLM execution. Tracing is done in a non-intrusive way, built on top of OpenTelemetry. You can choose to export the traces to Agiflow, or to your existing observability stack.
+
+Please visit [Agiflow Python Sdk documentation](https://docs.agiflow.io/libraries/python/getting-started) for details.
+
+## Getting started
+Get your API Key from https://app.agiflow.io and set environment variable AGIFLOW_API_KEY=<API_KEY>. Then, at the root of you application, start instrumentation with:
+
+``` python
+from agiflow import Agiflow
+
+
+Agiflow.init(
+  name="APP NAME"
+)
+```
+
+
