@@ -1,0 +1,7 @@
+xe_batch.cp311-win_amd64.exp,sha256=TCYiYMX6NcyCwdjL4g3QYyR-ndh9ezax3WS-2C30hNc,25340
+xe_batch.cp311-win_amd64.lib,sha256=dyvZhJ2-_tnO5pmQsEKNSuiXN48FhyoWoQh6Em-zsz8,43772
+xe_batch.cp311-win_amd64.pyd,sha256=j34ISW2UshMCt_yh3VPfB7GKxOvB86Xq2LTKooBLvz8,30641664
+bigdl_core_xe_batch_21-2.5.0b20240615.dist-info/METADATA,sha256=K6eDF6YhXaIK6AOgN6uyv2p53zcby6XglKklIUk_QAM,80
+bigdl_core_xe_batch_21-2.5.0b20240615.dist-info/WHEEL,sha256=nSybvzWlmdJnHiUQSY-d7V1ycwEVUTqXiTvr2eshg44,102
+bigdl_core_xe_batch_21-2.5.0b20240615.dist-info/top_level.txt,sha256=K0_Fp8XnjwClTBMLjN0zdE3EkCJ4m-1X9wxisRubhvk,9
+bigdl_core_xe_batch_21-2.5.0b20240615.dist-info/RECORD,,
