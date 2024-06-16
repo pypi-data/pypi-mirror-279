@@ -1,0 +1,17 @@
+LICENSE.txt
+setup.py
+src/universal_test_platform.egg-info/PKG-INFO
+src/universal_test_platform.egg-info/SOURCES.txt
+src/universal_test_platform.egg-info/dependency_links.txt
+src/universal_test_platform.egg-info/entry_points.txt
+src/universal_test_platform.egg-info/requires.txt
+src/universal_test_platform.egg-info/top_level.txt
+src/utp/__init__.py
+src/utp/__main__.py
+src/utp/checkAppium.py
+src/utp/checkNode.py
+src/utp/checkport.py
+src/utp/clearArtifact.py
+src/utp/getConfig.py
+src/utp/localHub.py
+src/utp/utp.py
