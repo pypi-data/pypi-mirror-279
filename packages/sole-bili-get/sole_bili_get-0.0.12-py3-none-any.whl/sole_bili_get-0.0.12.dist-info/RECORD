@@ -1,0 +1,12 @@
+sole_bili_get/__init__.py,sha256=26a0qEvjum2A-LbrqMiJQ3bULB2f_zb_C_EkLsp0QrA,77
+sole_bili_get/av2bv.py,sha256=aYlJXdjuWGYgGzaYv9CaxVGlKd9BK2hT5D-zt1F7sUU,1009
+sole_bili_get/bili_get.py,sha256=APbok2Nqr35xY4KWqVpWr6T2a2_ir4Xikkpgx0v1zL4,71074
+sole_bili_get/chrome_cookie.py,sha256=5t0Zl3lKYISLOhhlzz-Aj0bi1xUiE_86KleuGCZxEeQ,10013
+sole_bili_get/file_lock.py,sha256=axAPWEpNySWWUKDjcjnJsOuQH-bVcp0IkdIsspExJHU,1851
+sole_bili_get/utils.py,sha256=RUp-Cc_9zHaGd3WtdWDjIa3sBj0jSenEeHgLufbVaig,22687
+sole_bili_get-0.0.12.dist-info/LICENSE.txt,sha256=AWjPDqnhq-jFYSkFd0Vprm40zFy2q1X5xpj3oNcau2U,1072
+sole_bili_get-0.0.12.dist-info/METADATA,sha256=57Rtz_ZDReanPi_ukuxksnHOLMwNM-kmM04yebmk3AQ,8763
+sole_bili_get-0.0.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sole_bili_get-0.0.12.dist-info/entry_points.txt,sha256=ov1IqtLCypWMmWEAZ1FayLR7x-lhzmBXdds6w5JIbA4,48
+sole_bili_get-0.0.12.dist-info/top_level.txt,sha256=2AsVn7-vpeBOm9zv1b8SkIAcv_ritj32uwNF7IIy2tU,14
+sole_bili_get-0.0.12.dist-info/RECORD,,
