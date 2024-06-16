@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+torrechess/__init__.py
+torrechess/heuristic_engines.py
+torrechess/neural_engines.py
+torrechess/utils.py
+torrechess.egg-info/PKG-INFO
+torrechess.egg-info/SOURCES.txt
+torrechess.egg-info/dependency_links.txt
+torrechess.egg-info/top_level.txt
