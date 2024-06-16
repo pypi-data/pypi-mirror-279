@@ -1,0 +1,11 @@
+mtdl/__init__.py,sha256=78ukoHVdGbB5wVFBFQqpJC0mttn88Gl1N2c4Um2UlNU,49
+mtdl/cli.py,sha256=0qwb2tdPPmForEjvy942cSnkQmwTvLMiWJzoIgC0iQs,1498
+mtdl/downloader.py,sha256=xJvs_4qHNC-y49PscOJLFoln6_YpBd1flu6bG_G1rl0,4500
+mtdl/metadata.py,sha256=_p9C1RlN5C7KsrxHL1Hl7JQkZ7FtjqobxXVRiPHgDTQ,454
+mtdl/utils.py,sha256=No6uMqaY23O19jM5w_k88dVQqAYTeG4TxrQB0SFLp50,1059
+mtdl-5.6.dist-info/LICENSE-en,sha256=fCVUGmJDePQ_8a4QmQNk_H9QhviLlTdaqU4nCjNimAI,2096
+mtdl-5.6.dist-info/METADATA,sha256=oXAi6yPaBwc468u_YHwd-4e1b3MVZq_QHdjD0kXAzcE,3344
+mtdl-5.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mtdl-5.6.dist-info/entry_points.txt,sha256=EzhuRj5ufjcfN9iULMvMfcerkSFvFFU8IYZDgSmw9VU,39
+mtdl-5.6.dist-info/top_level.txt,sha256=G47o1s8WJqc5zakPkLJiprKAsyXM5zXaXoeIKjZmEf0,5
+mtdl-5.6.dist-info/RECORD,,
