@@ -1,0 +1,10 @@
+pyalicat/__init__.py,sha256=b_V-w6cx1vP3l10x5dwynpbaAgBys6zr19zNxBQ3LwQ,503
+pyalicat/codes.json,sha256=8uPWLuoyjTSZWAZeq_yOqktyDK4AwPIqeKuw6lrwCrc,15728
+pyalicat/comm.py,sha256=DcWRozEPbKi6ffgaRn_LB7KFlKLDK59VudyppWEcg3Y,8533
+pyalicat/daq.py,sha256=OunpCNCmDQKTqZh0py_B0Du2bZ3FgIlwS3QbSi2N0Js,18577
+pyalicat/device.py,sha256=N5L86hTmDnLysk13n11hCe-8_0NEbeBriQDrYDKwr4k,71945
+pyalicat/util.py,sha256=xpWmUygfnzB_PVdtDTpAVk_QmtuCD2KvW1Yu1XX9Hpk,3955
+pyalicat-0.0.10.dist-info/LICENSE,sha256=4253iusaL5T-Xp0UvF7bXdRL3JczShxw5Tm4go1rBs4,1071
+pyalicat-0.0.10.dist-info/METADATA,sha256=7qkWGifbDTjEyUGJJTs2JINVncv9Az6sLg64zzQ_eGc,7349
+pyalicat-0.0.10.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pyalicat-0.0.10.dist-info/RECORD,,
