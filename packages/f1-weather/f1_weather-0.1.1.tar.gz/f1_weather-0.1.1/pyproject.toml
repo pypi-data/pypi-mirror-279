@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "f1-weather"
+version = "0.1.1"
+description = "A weather app for Formula 1 enthusiasts"
+authors = ["Joe Borg <joe@josephb.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+icalendar = "^5.0.12"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.32.3"
+osmpythontools = "^0.3.5"
+openmeteo-requests = "^1.2.0"
+requests-cache = "^1.2.0"
+retry-requests = "^2.0.0"
+tabulate = "^0.9.0"
+click-default-group = "^1.2.4"
+click = "^8.1.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
