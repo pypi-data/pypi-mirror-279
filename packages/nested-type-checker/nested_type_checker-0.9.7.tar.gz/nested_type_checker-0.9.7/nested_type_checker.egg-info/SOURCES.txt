@@ -1,0 +1,8 @@
+README.md
+setup.py
+nested_type_checker/__init__.py
+nested_type_checker/is_object_of_type_module.py
+nested_type_checker.egg-info/PKG-INFO
+nested_type_checker.egg-info/SOURCES.txt
+nested_type_checker.egg-info/dependency_links.txt
+nested_type_checker.egg-info/top_level.txt
