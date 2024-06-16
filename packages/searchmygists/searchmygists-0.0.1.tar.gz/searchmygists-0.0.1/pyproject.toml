@@ -1,0 +1,93 @@
+[build-system]
+build-backend = "hatchling.build"
+
+requires = [
+  "hatchling",
+]
+
+[project]
+name = "searchmygists"
+description = ""
+readme = "README.md"
+keywords = [
+]
+license = "MIT"
+authors = [
+  { name = "Tobi DEGNON", email = "tobidegnon@proton.me" },
+]
+requires-python = ">=3.8"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dynamic = [
+  "version",
+]
+dependencies = [
+  "aiosql",
+  "aiosqlite",
+  "httpx",
+  "jinja2-fragments",
+  "litestar[standard]",
+  "litestar-vite",
+  "msgspec",
+  "python-dotenv",
+  "sqlite-utils",
+]
+
+urls.Documentation = "https://github.com/Tobi DEGNON/searchmygists#readme"
+urls.Issues = "https://github.com/Tobi DEGNON/searchmygists/issues"
+urls.Source = "https://github.com/Tobi DEGNON/searchmygists"
+
+[tool.hatch.version]
+path = "searchmygists/__about__.py"
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pyproject-fmt",
+  "reorder-python-imports",
+  "sqlfluff",
+]
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:searchmygists tests}"
+
+[tool.coverage.run]
+source_pkgs = [
+  "searchmygists",
+  "tests",
+]
+branch = true
+parallel = true
+omit = [
+  "searchmygists/__about__.py",
+]
+
+[tool.coverage.paths]
+searchmygists = [
+  "searchmygists",
+  "*/searchmygists/searchmygists",
+]
+tests = [
+  "tests",
+  "*/searchmygists/tests",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

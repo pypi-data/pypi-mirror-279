@@ -1,0 +1,17 @@
+{
+  "resources/main.ts": {
+    "file": "assets/main-BAPU4Yrt.js",
+    "name": "main",
+    "src": "resources/main.ts",
+    "isEntry": true,
+    "imports": [
+      "resources/styles.css"
+    ]
+  },
+  "resources/styles.css": {
+    "file": "assets/styles-l0sNRNKZ.js",
+    "name": "styles",
+    "src": "resources/styles.css",
+    "isEntry": true
+  }
+}

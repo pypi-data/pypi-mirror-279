@@ -1,0 +1,31 @@
+set dotenv-load := true
+
+# List all available commands
+_default:
+    @just --list
+
+@install:
+    hatch run python --version
+
+# ----------------------------------------------------------------------
+# Litestar
+# ----------------------------------------------------------------------
+
+# Run a litestar command
+@lt *ARGS:
+    cd searchmygists && hatch run litestar {{ ARGS }}
+
+# Run the django development server
+@server:
+    just lt run --reload
+
+# ----------------------------------------------------------------------
+# UTILS
+# ----------------------------------------------------------------------
+
+# Run all formatters
+@fmt:
+    just --fmt --unstable
+    hatch fmt --formatter
+    hatch run pyproject-fmt pyproject.toml
+    hatch run reorder-python-imports searchmygists/app.py
