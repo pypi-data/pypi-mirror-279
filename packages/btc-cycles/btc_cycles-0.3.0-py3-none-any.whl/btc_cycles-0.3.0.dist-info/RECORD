@@ -1,0 +1,17 @@
+btc_cycles/__init__.py,sha256=3ZovAhssaB4M5fkzwyiTS8iO5UACzoSrxYPGAmWAvW8,67
+btc_cycles/artist/__init__.py,sha256=d838DcPV_i5bArOqqb94XTQIEe9OrlNfm6N_dyZqfms,73
+btc_cycles/artist/artist.py,sha256=tFyzkuh5FScILj11qMtWl-5AIsBixgf84UZACJIzkY0,3403
+btc_cycles/artist/static.py,sha256=lTG4oO34wPW7qjWuZYNrvWeGBB2ESqGZUOoe2vlw7Vw,9006
+btc_cycles/artist/utils.py,sha256=CsWXYufT-EdVFLrb5TtUarakR635YK_D5mkcVpBSzJk,2617
+btc_cycles/core/__init__.py,sha256=yWjuoq6mGw73Kj1em_hX8zSnfjdKMVJJoxpCy2FuTto,72
+btc_cycles/core/bitcoin.py,sha256=_nYMydu_kCDzoZwZGaKudAabKbiqB-jzFp0_wMhN6EM,2972
+btc_cycles/core/halvings.json,sha256=arr2TM5S7eOJDvpAurIaIse2Qv9MQ1nkyqRycFwemdM,1924
+btc_cycles/core/halvings.py,sha256=bi3eROrMmE78ZOIOYkC_4XzDO93xklBag0CuhuddPEA,2252
+btc_cycles/core/prices.py,sha256=fNud7PcUfok2zZGJYq46wtE_e-DivU_vNzUISGttdqk,3604
+btc_cycles/core/sources/__init__.py,sha256=6PYd7ujkh9wG8BwlouFxO5QAqVMb76pMwlqzUZwzwew,71
+btc_cycles/core/sources/cmc.py,sha256=RPM_ccNZnnEON8xLLG6bXpyy_ojcE5QCgsu-IrRRjEE,1038
+btc_cycles/core/sources/source.py,sha256=Tw98Q72R__wMmfCH1FYvgPt_XsduTqbSBRyp5QgkeCM,2165
+btc_cycles-0.3.0.dist-info/LICENSE,sha256=oLJ_5XKHmtU_vR0z8HWdSw6zPffNFZd5PErJUdrHi-Y,1071
+btc_cycles-0.3.0.dist-info/METADATA,sha256=sR7pKjO5jPLXV3d0xpN0C_tjZF5eBYwZEFTKocsz0oQ,2285
+btc_cycles-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+btc_cycles-0.3.0.dist-info/RECORD,,

@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: btc-cycles
+Version: 0.3.0
+Summary: Track Bitcoin price over halving cycles
+License: MIT
+Author: giocaizzi
+Author-email: giocaizzi@gmail.com
+Requires-Python: >=3.8.1,<4.0.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: cryptocmd (>=0.6.4,<0.7.0)
+Requires-Dist: cryptocompare (>=0.7.6,<0.8.0)
+Requires-Dist: matplotlib (<3.8) ; python_version < "3.9"
+Requires-Dist: matplotlib (>=3.8,<4.0) ; python_version >= "3.9" and python_version < "4.0"
+Requires-Dist: pandas (<2.1) ; python_version < "3.9"
+Requires-Dist: pandas (>=2.1,<3.0) ; python_version >= "3.9" and python_version < "4.0"
+Description-Content-Type: text/markdown
+
+# btc-cycles
+
+[![Update chart](https://github.com/giocaizzi/btc-cycles/actions/workflows/run.yml/badge.svg)](https://github.com/giocaizzi/btc-cycles/actions/workflows/run.yml)
+
+---
+
+> ❗ This chart is updated everyday at 5 AM UTC.
+
+![Bitcoin](https://github.com/giocaizzi/btc-cycles/blob/main/bitcoin.png)
+
+---
+
+## Deprecation warning
+
+> ⚠️ Since v0.3, as _CoinmarketCap v1 API has been deprecated_, **all working sources require an API key** to fetch data. The legacy free *(but broken!)* source `coinmarketcap-free` is however still available, hoping for a workaround is found ([see here](https://github.com/guptarohit/cryptoCMD/issues/86)).
+
+## Usage
+
+- **Bitcoin price** data is fetched from a set of available sources, such as:
+
+  - [`coinmarketcap`](https://www.coinmarketcap.com), requires **paid** `api_key`.
+  - [`coincompare`](https://www.cryptocompare.com/), requires **free-tier** `api_key`.
+  - [`coinmarketcap-free`](https://www.coinmarketcap.com): free *(but broken!)* legacy source, available hoping for a workaround,  ([see here](https://github.com/guptarohit/cryptoCMD/issues/86))
+
+- **Cycles** are computed considering _past halving dates_ and the _expected future halving date_ fetched from [watchguru](https://watcher.guru/bitcoin-halving)
+
+## Documentation
+
+See this [notebook](https://github.com/giocaizzi/btc-cycles/bitcoin.ipynb).
+
