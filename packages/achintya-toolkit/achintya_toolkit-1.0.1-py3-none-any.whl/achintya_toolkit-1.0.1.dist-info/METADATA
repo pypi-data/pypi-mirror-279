@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: achintya-toolkit
+Version: 1.0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Achintya Varshneya
+Author-email: achintya.varshneya@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: opencv-python
+Requires-Dist: imghdr
+
+UNKNOWN
+
