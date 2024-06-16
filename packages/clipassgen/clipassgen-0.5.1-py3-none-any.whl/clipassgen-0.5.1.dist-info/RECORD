@@ -1,0 +1,11 @@
+clipassgen/__init__.py,sha256=sXIRUIBQuQXGqU8xp6H99gpuUipTeyIlbj_1KwvHPcI,489
+clipassgen/app.py,sha256=SnP3L72TP8zAyS6zOxqMNrq5SRqLshv359RF61oKLM4,1349
+clipassgen/commander.py,sha256=K0PGdnEY05PI4aELG0MviW8l7u3L3psVVWXVQW-FecE,3802
+clipassgen/config.py,sha256=AQbFQrbHxIIYwa5L9yUcP53hnyfMH0UwFU624b6GHCQ,961
+clipassgen/manager.py,sha256=sGLffcbglakzulmEST8pEz3Mou4_LhERkDCHhoAMGBg,750
+clipassgen-0.5.1.dist-info/LICENSE,sha256=rwgJXlOeiLJfDhsHd3vYUtM_ECgiPBnrvYb8dFmjTgo,1499
+clipassgen-0.5.1.dist-info/METADATA,sha256=2nMEKe0vJt026BIbg554xetM5HD_MHhrshhg8r5-G9U,5995
+clipassgen-0.5.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+clipassgen-0.5.1.dist-info/entry_points.txt,sha256=Yz_GaMslQONC3or2n6gskVSCH8aCEzgIw3R1_5kNoHg,50
+clipassgen-0.5.1.dist-info/top_level.txt,sha256=agoQZpJmkhtEayoprAKKtVBwEELlWGilx6DXD4vnUng,11
+clipassgen-0.5.1.dist-info/RECORD,,
