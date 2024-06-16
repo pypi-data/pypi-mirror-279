@@ -1,0 +1,6 @@
+torch
+torchvision
+
+[tune]
+ray[tune]
+optuna
