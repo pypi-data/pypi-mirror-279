@@ -1,0 +1,9 @@
+fastapi
+kopf
+kubernetes
+pydantic
+uvicorn
+
+[dev]
+build
+twine
