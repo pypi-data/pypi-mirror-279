@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+sphinxext/presentations/__init__.py
+sphinxext/presentations/static/css/reveal.css
+sphinxext/presentations/static/js/present.js
+sphinxext_presentations.egg-info/PKG-INFO
+sphinxext_presentations.egg-info/SOURCES.txt
+sphinxext_presentations.egg-info/dependency_links.txt
+sphinxext_presentations.egg-info/requires.txt
+sphinxext_presentations.egg-info/top_level.txt
