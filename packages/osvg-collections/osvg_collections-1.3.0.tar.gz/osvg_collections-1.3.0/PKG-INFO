@@ -1,0 +1,58 @@
+Metadata-Version: 2.3
+Name: osvg_collections
+Version: 1.3.0
+Summary: OSVG Collection provides standard SVG shapes based on osvg module
+Project-URL: Homepage, https://gitlab.com/ko.no/osvg_collections
+Project-URL: Bug Tracker, https://gitlab.com/ko.no/osvg_collections/-/issues
+Author-email: Korte Noack <korte@8lacht.de>
+License-File: LICENSE
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.10
+Requires-Dist: osvg>=1.3.0
+Requires-Dist: typing-extensions
+Description-Content-Type: text/markdown
+
+# Shape Collection for Object-oriented Scalable Vector Graphics (osvg)
+
+## Table of Content
+
+- [Installation](#installation)
+- [Major Goal](#major-goal)
+- [Collection Overview](#collection-overview)
+  - [it](#it---information-technology)
+    - [network](#network---network-elements)
+
+## Installation
+
+```code
+pip install osvg_collection
+```
+
+## Major Goal
+
+Provide collections of standard shapes to easily create SVG drawings based on osvg module.
+
+## Collection Overview
+
+### it - *Information Technology*
+
+#### network - *Network Elements*
+
+- cloud - *Cloud element*
+
+  ![Cloud Shapes](test/system/it/network/clouds.svg)
+- firewall - *Firewall element*
+
+  ![Firewall Shapes](test/system/it/network/firewalls.svg)
+- router - *Router element plus different 'colored' sub-classes*
+
+  ![Router Shapes](test/system/it/network/routers.svg)
+- switch - *Switch element plus different 'colored' sub-classes*
+
+  ![Switch Shapes](test/system/it/network/switches.svg)
