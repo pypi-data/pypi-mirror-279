@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "worker-automate-hub"
+version = "0.2.7-beta.1"
+description = "Worker Automate HUB é uma aplicação para automatizar rotinas de RPA nos ambientes Argenta."
+authors = ["Joel Paim"]
+readme = "README.md"
+packages = [{include = "worker_automate_hub"}]
+classifiers = [
+    "Topic :: Utilities",
+    "Environment :: Console",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.scripts]
+automate-hub = "worker_automate_hub.main:main"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+taskipy = "^1.12.2"
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
