@@ -1,0 +1,17 @@
+cspark/sdk/__init__.py,sha256=nWw01Ena5-18MdVuNvSGCKpZXManeTpOwz4mlYW_nn4,165
+cspark/sdk/_auth.py,sha256=sQoZGz_0RESUOlp_ldaBGB-d92KUbk7P4PBdARDRdx8,5571
+cspark/sdk/_client.py,sha256=RkGEb3ltO65bRCeYGU7NO25BoOqLypapf2ZutiOzm3k,1095
+cspark/sdk/_config.py,sha256=ld8kHy9JbRxb7wQJvWQUSEBesqBwIHEJv_rXX8jBMSo,5929
+cspark/sdk/_constants.py,sha256=N9PrKUYGiZURofViw8fSpiaYf83g30pOrIDgj7ppsYk,577
+cspark/sdk/_errors.py,sha256=k_SCKPhItj-AzN-swQxC1DFjJ98QqmoD0QAbNBQvFb0,6490
+cspark/sdk/_utils.py,sha256=GDCxe_NJI80pXGtaVW1EfUMgedbvunj4nIkc3tehUo8,1908
+cspark/sdk/_validators.py,sha256=8Iwf7iVX_vfpu4l8OJliL2djAENOEAz8JOdF0hmU1OY,2687
+cspark/sdk/_version.py,sha256=B27CkvgWS5vBybeQG7oq5DHlPh3IwZgwWaePmXw9PNo,377
+cspark/sdk/resources/__init__.py,sha256=yoyD_elFb-bxYVTmZNdxYoeLJ_02a2h1YboGxQCT-Pg,69
+cspark/sdk/resources/_base.py,sha256=J_9dGIDUWFcfQ4xh0uGcYU-oIm8CGtC8YRTTcO-2jqM,7525
+cspark/sdk/resources/_oauth2.py,sha256=rWo-FNYngztPkRlPOlvXM2F5lGlZovUkh8PBJWsQAhw,1357
+cspark/sdk/resources/_services.py,sha256=FNEN530YZOlWVT2-F7E7FdKqTkkYfmXTitGUUq5gRC4,3919
+cspark-0.1.0b3.dist-info/METADATA,sha256=KdZrm9Sdy48QB_8zwXRBTbMVMl5K1GBd5BhN57cuP0M,1786
+cspark-0.1.0b3.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+cspark-0.1.0b3.dist-info/licenses/LICENSE,sha256=xmayURcZqXmuMxECG5fg6OChYACUYCTnJiZw3uBhUUQ,9574
+cspark-0.1.0b3.dist-info/RECORD,,
