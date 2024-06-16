@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: parepy-toolbox
+Version: 0.1.4
+Summary: 
+Author: wmpjrufg
+Author-email: wanderlei_junior@ufcat.edu.br
+Requires-Python: >3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# PAREpy toolbox
+
+### **0.0.4**
+
+_feat_:  
+  
+_improvement_:  
+  
+_bug_:  
+- fix triangular time series
+  
+_config_:  
+
+### **0.0.3**
+
+_feat_:  
+  
+_improvement_:  
+- parallel process
+  
+_bug_:  
+  
+_config_:  
+  

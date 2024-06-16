@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "parepy-toolbox"
+version = "0.1.4"
+description = ""
+authors = ["wmpjrufg <wanderlei_junior@ufcat.edu.br>"]
+readme = "readme.md"
+
+[tool.poetry.dependencies]
+python = ">3.8"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
