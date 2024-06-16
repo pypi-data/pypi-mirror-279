@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "abctoolkit"
+version = "0.0.2"
+authors = [
+    { name="Alexis Wang", email="alexis_wang@mail.ccom.edu.cn" },
+    { name="Sander Wood", email="shangda@mail.ccom.edu.cn" },
+]
+description = "A Toolkit for dealing with ABC Notation scores in Music Information Retrieval."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    "jellyfish>=1.0.0",
+    "unidecode>=1.3.6",
+    "rapidfuzz>=3.9.1",
+    "tqdm>=4.66.1"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/abctoolkit"]
