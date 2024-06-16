@@ -1,0 +1,19 @@
+[project]
+name = "gttrl"
+description = "A cross-platform CLI launcher for Toontown Rewritten."
+requires-python = ">=3.8"
+authors = [{ name = "glomatico" }]
+dependencies = ["click", "requests", "tqdm"]
+readme = "README.md"
+dynamic = ["version"]
+
+[project.urls]
+homepage = "https://github.com/glomatico/gttrl"
+repository = "https://github.com/glomatico/gttrl"
+
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[project.scripts]
+gttrl = "gttrl.cli:main"
