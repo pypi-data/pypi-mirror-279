@@ -1,0 +1,13 @@
+numpy
+pandas
+networkx
+pyproj
+pyshp
+shapely
+GDAL
+fiona
+geopandas
+rasterio
+scikit-learn
+tqdm
+math
