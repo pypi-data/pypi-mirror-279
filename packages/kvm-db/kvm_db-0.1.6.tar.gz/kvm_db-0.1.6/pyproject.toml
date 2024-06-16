@@ -1,0 +1,77 @@
+[project]
+name = "kvm-db"
+version = "0.1.6"
+description = "Key-Value&Model Database"
+authors = [
+    { name = "Ja-sonYun", email = "killa30867@gmail.com" }
+]
+dependencies = [
+    "pydantic>=2.7.0",
+]
+readme = "README.md"
+requires-python = ">= 3.9"
+license = "MIT"
+keywords = ["database", "key-value", "model", "pydantic"]
+
+[project.urls]
+homepage = "https://github.com/Ja-sonYun/kvm-db"
+repository = "https://github.com/Ja-sonYun/kvm-db"
+
+[project.optional-dependencies]
+dynamodb = [
+    "boto3>=1.34.125",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ruff>=0.4.1",
+    "pytest>=8.1.1",
+    "mypy>=1.9.0",
+    "tox>=4.14.2",
+    "boto3-stubs[essential]>=1.34.125",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/kvm_db"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["kvm_db"]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+split-on-trailing-comma = true
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.ruff.lint]
+ignore = []
+select = [
+  "C9",
+  "E",
+  "F",
+  "W",
+  "I",
+]
+
+[tool.ruff]
+exclude = [".venv"]
+target-version = "py310"
+include = ["*.py"]
+line-length = 119
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = false
+warn_unused_configs = true
+strict = true
+
+[pytest]
+testpaths = ["tests"]
