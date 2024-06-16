@@ -1,0 +1,11 @@
+ctrf/BaseMetadataReport.py,sha256=Bd8KFU8GNV4Dcih7qd_YpuHBsipGSALfUFLuANnpFIo,942
+ctrf/CommonTestReportPlugin.py,sha256=7hc4YhrdzmEre2dNZF3AjFyw4WungdvLo_XmBxbYBe4,767
+ctrf/Report.py,sha256=uEt-TqWPeBNWU8CWB25WM40IyVOFdXaJF_3LWhEbADY,2662
+ctrf/TestObject.py,sha256=d44sqfRI5DNYZKEbOILvsuzHSfSq7IQVjyHprN0yOwc,3186
+ctrf/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ctrf/main.py,sha256=W6I88YRfETK4Doxv03Vt0RATIiLzgSHtus9KJhqj0QI,1466
+pytest_json_ctrf-0.3.1.dist-info/METADATA,sha256=XAlaG_XSm3fSvGbO9mFekGnYgi7EHEWGRSAmSkVV-0c,3258
+pytest_json_ctrf-0.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pytest_json_ctrf-0.3.1.dist-info/entry_points.txt,sha256=xPLsuaN9fuQQ2TLhhyl_8VAg9tmOr_-ewl2dQwQrPSQ,28
+pytest_json_ctrf-0.3.1.dist-info/top_level.txt,sha256=WBK4hkcbahNNGPg9pX1CtWwM-rsn7NYlozs1gWsjgmk,5
+pytest_json_ctrf-0.3.1.dist-info/RECORD,,
