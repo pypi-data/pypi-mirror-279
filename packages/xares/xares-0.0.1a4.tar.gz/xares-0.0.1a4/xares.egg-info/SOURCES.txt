@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/xares/__init__.py
+tests/__init__.py
+xares.egg-info/PKG-INFO
+xares.egg-info/SOURCES.txt
+xares.egg-info/dependency_links.txt
+xares.egg-info/top_level.txt

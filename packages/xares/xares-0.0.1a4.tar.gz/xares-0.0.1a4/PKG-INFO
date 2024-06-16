@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: xares
+Version: 0.0.1a4
+Summary: eXtensive Audio Representation and Evaluation Suite
+Author-email: Junbo Zhang <zhangjunbo1@xiaomi.com>, Heinrich Dinkel <dinkelheinrich@xiaomi.com>
+Project-URL: Repository, https://github.com/jimbozhang/xares.git
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# xares
+X-ARES：eXtensive Audio Representation and Evaluation Suite
