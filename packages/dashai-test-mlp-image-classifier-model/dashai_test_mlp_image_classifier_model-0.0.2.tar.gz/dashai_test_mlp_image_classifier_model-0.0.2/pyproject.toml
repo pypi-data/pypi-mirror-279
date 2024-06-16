@@ -1,0 +1,32 @@
+[project]
+name = "dashai_test_mlp_image_classifier_model"
+version = "0.0.2"
+
+dependencies = [
+    'torchvision == 0.14.0',
+]
+
+authors = [
+  { name="DashAI team" },
+  { email="dashaisoftware@gmail.com" },
+]
+
+keywords = [
+    "DashAI",
+    "Model",
+]
+
+description = "A simple MLP image classifier model for DashAI"
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.entry-points.'dashai.plugins']
+tabularModel = 'dashai_test_mlp_image_classifier_model.mlp_image_classifier:MLPImageClassifier'
+
+[project.urls]
+Homepage = "https://github.com/DashAISoftware/DashAI"
+Issues = "https://github.com/DashAISoftware/DashAI/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

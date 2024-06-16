@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: dashai_test_mlp_image_classifier_model
+Version: 0.0.2
+Summary: A simple MLP image classifier model for DashAI
+Project-URL: Homepage, https://github.com/DashAISoftware/DashAI
+Project-URL: Issues, https://github.com/DashAISoftware/DashAI/issues
+Author: DashAI team
+Author-email: dashaisoftware@gmail.com
+License-File: LICENSE
+Keywords: DashAI,Model
+Requires-Python: >=3.8
+Requires-Dist: torchvision==0.14.0
+Description-Content-Type: text/markdown
+
+# MLP Image Classifier
+
+This model aims to classify images using a Multi-Layer Perceptron (MLP) neural network. The model transform each image into a vector of pixels and then feed it to the MLP. The MLP is a feedforward neural network with one hidden layer. The hidden layer uses the ReLU activation function and the output layer uses the softmax activation function. The model is trained using the cross-entropy loss function and the Adam optimizer.
