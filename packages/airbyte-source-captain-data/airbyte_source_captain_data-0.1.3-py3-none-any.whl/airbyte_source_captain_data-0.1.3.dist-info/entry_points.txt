@@ -1,0 +1,3 @@
+[console_scripts]
+source-captain-data=source_captain_data.run:run
+

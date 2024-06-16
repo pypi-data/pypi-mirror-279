@@ -1,0 +1,8 @@
+source_captain_data/__init__.py,sha256=cBfZpf3oGFCs552XIcAVOHplCRY1gxCTXx8MiPAXyH8,134
+source_captain_data/manifest.yaml,sha256=GFBVvhWeO5NutIyr5Ne3Gb6kW6Nx5eKhqbJ4XQfRy9M,11365
+source_captain_data/run.py,sha256=kfDbETHg0TdWrE9iC96hDDBldkEyR3aRjLOE1DsrYA0,235
+source_captain_data/source.py,sha256=PmtS3fuURhdqjj3PTV8daTB9dyb7ciPYocDtLbS5SDk,480
+airbyte_source_captain_data-0.1.3.dist-info/METADATA,sha256=CJD6K0xHdWWfWXjBHKFE_2Tt21jtIYQpsXUiGOp6JBQ,5325
+airbyte_source_captain_data-0.1.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_captain_data-0.1.3.dist-info/entry_points.txt,sha256=GvbKF0vDvYdcbbqWU90J7k0mQKFhh9YTFoKE-PEJmMU,67
+airbyte_source_captain_data-0.1.3.dist-info/RECORD,,
