@@ -1,0 +1,10 @@
+salve_ipc/__init__.py,sha256=JcdFRXZHLOsAZBCwOQjxYVPuYxObw9Dn-f3537dHAz0,188
+salve_ipc/ipc.py,sha256=IglRM-_8nDwwUhF80Up6i74NfaEij_BFZ_N_AfWiOzo,7248
+salve_ipc/misc.py,sha256=fHYnBBk4g5G5XVFnUqQPSZRp5qG4bLt7HBluyXixQLI,1359
+salve_ipc/server.py,sha256=UXDUCNPWHIRqg82ql0bBtRvOQ6_ts8YIphbw0uZRDX4,5276
+salve_ipc/server_functions.py,sha256=NZEKbnxPqxja7aPs9KdDgCqXhrdy1Ws6NbeNLUnxhDQ,11587
+salve_ipc-0.5.0.dist-info/LICENSE,sha256=GhbfFkvCzeQ3apsupSZeRrvB7XdiusBKAfhJyPtMupc,1051
+salve_ipc-0.5.0.dist-info/METADATA,sha256=KSIEmBEnkrBKDUPTmgkzLPwMXaZzGddGdg6W5vC10l4,9400
+salve_ipc-0.5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+salve_ipc-0.5.0.dist-info/top_level.txt,sha256=Pc5v8phSyKsgWRg_tbhqjEjLJo5h193RpiiM6HqPthA,10
+salve_ipc-0.5.0.dist-info/RECORD,,
