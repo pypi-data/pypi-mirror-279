@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "dimwit"
+version = "0.2.29"
+description = "A package containing various functions and classes for fetching, transforming, and visualising data for personal metrics."
+authors = ["Daniel Soutar <danielsoutar144@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/danielsoutar/dimwit"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+matplotlib = "^3.8.3"
+scipy = "^1.12.0"
+shapely = "^2.0.3"
+seaborn = "^0.13.2"
+jupyter = "^1.0.0"
+ipykernel = "^6.29.4"
+pandas = "2.0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
