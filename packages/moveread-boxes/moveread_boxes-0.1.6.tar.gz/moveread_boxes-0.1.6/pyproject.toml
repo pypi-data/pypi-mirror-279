@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-boxes"
+version = "0.1.6"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Annotating and exporting boxes for Moveread"
+dependencies = [
+  "scoresheet-models", "numpy", "opencv-python", "robust-extraction",
+  "pydantic", "haskellian", "lazy-loader", "typing-extensions"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/python-core"
