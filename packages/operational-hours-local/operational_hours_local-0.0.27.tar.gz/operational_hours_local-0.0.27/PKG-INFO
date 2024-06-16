@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: operational-hours-local
+Version: 0.0.27
+Summary: PyPI Package for Circles operational-hours-local Local Python
+Home-page: https://github.com/circles-zone/operational-hours-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: database-mysql-local
+Requires-Dist: logger-local
+
+This is a package for sharing common functions of operational hours CRUD used in different repositories
