@@ -1,0 +1,7 @@
+LICENSE
+README.md
+pyproject.toml
+xares.egg-info/PKG-INFO
+xares.egg-info/SOURCES.txt
+xares.egg-info/dependency_links.txt
+xares.egg-info/top_level.txt
