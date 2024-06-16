@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: sql-helper-connector
+Version: 0.1.3
+Summary: clustroai_sql_helper
+Home-page: https://www.clustro.ai/
+Author: clustro ai
+Author-email: clustro@clustro.ai
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: PyMySQL ==1.1.0
+Requires-Dist: pg8000 ==1.30.5
+Requires-Dist: requests ==2.31.0
+Requires-Dist: python-engineio ==4.4.1
+Requires-Dist: python-socketio[client] ==5.8.0
+
+# Sql Helper Connector
+
+## Getting Started
+To get started with Sql Helper Connector, install the package from PyPI:
+
+```bash
+pip install sql-helper-connector
+
+sql_helper_connector \ 
+  --db-host=123 \
+  --db-name=123 \
+  --db-user=123 \
+  --db-password=123 \
+  --db-port=123 \
+  --connection-id=uuid \
+  --api_key=key
+```

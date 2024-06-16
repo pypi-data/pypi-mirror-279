@@ -1,0 +1,2 @@
+[console_scripts]
+sql_helper_connector = connector.sql_helper_connector:handle_connection
