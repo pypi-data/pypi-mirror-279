@@ -1,0 +1,17 @@
+LICENSE.txt
+MANIFEST.in
+readme.md
+setup.py
+src/checkAppium.py
+src/checkNode.py
+src/checkport.py
+src/clearArtifact.py
+src/getConfig.py
+src/localHub.py
+src/utp.py
+src/universal_test_platform.egg-info/PKG-INFO
+src/universal_test_platform.egg-info/SOURCES.txt
+src/universal_test_platform.egg-info/dependency_links.txt
+src/universal_test_platform.egg-info/entry_points.txt
+src/universal_test_platform.egg-info/requires.txt
+src/universal_test_platform.egg-info/top_level.txt

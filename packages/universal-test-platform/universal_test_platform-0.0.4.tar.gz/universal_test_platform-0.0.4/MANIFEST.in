@@ -1,0 +1,4 @@
+include readme.md
+graft src
+global-exclude __pycache__
+global-exclude *.pyc
