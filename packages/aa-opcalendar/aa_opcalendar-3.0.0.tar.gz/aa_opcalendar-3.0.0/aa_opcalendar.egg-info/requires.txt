@@ -1,0 +1,6 @@
+allianceauth<5.0.0,>=4
+feedparser
+ics>=0.7.2
+pytz
+django-ical
+requests-mock
