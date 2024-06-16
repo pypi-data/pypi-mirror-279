@@ -1,0 +1,2 @@
+[console_scripts]
+web_scraper = web_scraping_toolkit.scraper:main
