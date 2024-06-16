@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+budserve/__init__.py
+budserve.egg-info/PKG-INFO
+budserve.egg-info/SOURCES.txt
+budserve.egg-info/dependency_links.txt
+budserve.egg-info/requires.txt
+budserve.egg-info/top_level.txt
