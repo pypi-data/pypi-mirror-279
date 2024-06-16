@@ -1,0 +1,9 @@
+database-infrastructure-local>=0.0.20
+text-block-local>=0.0.9
+contact-group-local>=0.0.7
+action-items-local>=0.0.1
+logger-local>=0.0.135
+user-context-remote>=0.0.75
+database-mysql-local>=0.0.290
+profile-local>=0.0.61
+language-remote>=0.0.20
