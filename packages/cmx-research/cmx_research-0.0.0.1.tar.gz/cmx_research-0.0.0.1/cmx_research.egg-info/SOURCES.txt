@@ -1,0 +1,8 @@
+pyproject.toml
+cmx_research/__init__.py
+cmx_research.egg-info/PKG-INFO
+cmx_research.egg-info/SOURCES.txt
+cmx_research.egg-info/dependency_links.txt
+cmx_research.egg-info/not-zip-safe
+cmx_research.egg-info/requires.txt
+cmx_research.egg-info/top_level.txt
