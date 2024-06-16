@@ -1,0 +1,3 @@
+[console_scripts]
+drink=pydrink.drink:cli
+
