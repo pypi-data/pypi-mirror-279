@@ -1,0 +1,15 @@
+ecm_thinkclock/__init__.py,sha256=lXB7LWUuR36odlC8nGBQnwbGtXpirx0TBcYb4HU4gak,386
+ecm_thinkclock/cell_discharge_data.py,sha256=WvAPXly6GiVkqbfDlMyleueHfIe4mDvBNWlAJnwe6yg,3101
+ecm_thinkclock/cell_ecm.py,sha256=rT76LZLz460rM340Pg9K7MIjje8i31_GkP93wLew-8I,10157
+ecm_thinkclock/cell_hppc_data.py,sha256=Vqlw5yz4dk0eYBxDhZcLWJh5rb63Cb2AI7NLfiQ7xmE,4292
+ecm_thinkclock/cell_temperature_data.py,sha256=7o_-hOiPuLWoUI69jJ1dhUukSkuZJp9i_xyFH_Iangc,2614
+ecm_thinkclock/module_ecm.py,sha256=fE-B0yN_wLhsWwnkUzu-lQq9mstmhx2_69yPMXe5uBk,11031
+ecm_thinkclock/module_hppc_data.py,sha256=CelwtfCHh-k4EVMnSIVZs1khJv1OZjTwe8TXkgGhUHY,3547
+ecm_thinkclock/pack_us06_data.py,sha256=lk7hCkD3fblgkdidqZ9OKg4j5ifYLHSp0lJHp2W-oJQ,1541
+ecm_thinkclock/thermal_model.py,sha256=geiYU2lWXUSxnZg7y2_u-86VkfUGf-e1FecqLm2sNBw,5597
+ecm_thinkclock/utils.py,sha256=v8iYqZ0k_AvIIIq_dHLqmmVNuZPLRTek2Kx6W9v733Q,439
+ecm_thinkclock-20.3.dist-info/LICENSE,sha256=t03Jn6NDaQQ_INCDqZNF2fCS-XQ_jcR1-C0oD67wJA4,1067
+ecm_thinkclock-20.3.dist-info/METADATA,sha256=RAIAyASE20CWvAiSEj7KztDlJzm9RUkyHCfuGKTK6GY,3776
+ecm_thinkclock-20.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ecm_thinkclock-20.3.dist-info/top_level.txt,sha256=BRuAjK31B2CePoj0sDT11aMNHnQ7urpV5nE11wz0AyM,15
+ecm_thinkclock-20.3.dist-info/RECORD,,
