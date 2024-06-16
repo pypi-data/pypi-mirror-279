@@ -1,0 +1,79 @@
+Metadata-Version: 2.1
+Name: anitya-telegram
+Version: 0.0.5
+Summary: Telegram gateway for Anitya release monitoring system
+Author-email: mirko <mirko+anitya@smthd.com>
+Project-URL: Homepage, https://gitea.smthd.com/mirko/anitya-telegram
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fedora-messaging ==3.6.*
+Requires-Dist: anitya-schema ==2.2.*
+Requires-Dist: python-telegram-bot-raw ==21.3
+
+# anitya-telegram
+
+Telegram gateway for Anitya release monitoring system
+
+![Telegram notifications from Anitya](doc/example.png)
+
+# Getting started
+
+Before running application, install dependencies:
+```
+pip install -r requirements.txt
+```
+
+Then make `config.toml` configuration file from `config.toml.example`. Gateway sets up via `consumer_config` sections.
+
+Top level parameters are `api_key` and `chat_ids`:
+  * `api_key` is a Telegram's Bot API key, can be configured via `ANITYA_TG_BOT_KEY` environment variable;
+  * `chat_ids` is the chats identifiers which notifications send to.
+
+Projects section `consumer_config.projects` consists of:
+  * `id` is a project ID from [Anitya](https://release-monitoring.org);
+  * `versions` is a versions filter, which filters versions by start of string;
+  * `allow_nonstable` - set `true` if you want receive notifications about non-stable releases too.
+
+To run gateway execute the command below:
+```
+fedora-messaging --conf config.toml consume --callback-file anitya_tg_gw.py:TelegramForwardConsumer
+```
+Configuration file can be also set up via `FEDORA_MESSAGING_CONF` environment variable.
+
+# Docker
+
+You can use docker images also:
+```
+docker pull harbor.smthd.com/anitya-telegram/anitya-telegram:latest
+```
+
+# Development
+
+Create virtual environment:
+```
+python -m venv .venv
+```
+
+Venv activation / deactivation on Windows:
+```
+.venv\Scripts\Activate.ps1
+deactivate
+```
+
+To run tests execute the command below:
+```
+python -m unittest discover -v anitya_telegram\tests\
+```
+
+# Links
+
+* [Release monitoring](https://release-monitoring.org)
+* [Integrating with Anitya](https://release-monitoring.org/static/docs/integrating-with-anitya.html)
+* [Quick Start](https://fedora-messaging.readthedocs.io/en/latest/user-guide/quick-start.html)
+* [Consumers](https://fedora-messaging.readthedocs.io/en/latest/user-guide/consuming.html)
+* [Using the API](https://fedora-messaging.readthedocs.io/en/latest/tutorial/usage.html)
+* [fedora-messaging](https://fedora-messaging.readthedocs.io/en/latest/user-guide/cli/fedora-messaging.html)
+* [Datagrepper  - anitya.project.version.update.v2](https://apps.fedoraproject.org/datagrepper/v2/search?topic=org.release-monitoring.prod.anitya.project.version.update.v2)
