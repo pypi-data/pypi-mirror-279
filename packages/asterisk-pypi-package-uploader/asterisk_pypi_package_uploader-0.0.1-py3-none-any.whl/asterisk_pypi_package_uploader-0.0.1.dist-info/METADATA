@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: asterisk_pypi_package_uploader
+Version: 0.0.1
+Summary: A simple GUI for uploading pypi packages.
+Author: TheYellowAstronaut
+Author-email: malli.advait01@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Dist: tk
+Requires-Dist: sv-ttk
+Requires-Dist: os
+Requires-Dist: shutil
+Requires-Dist: subprocess
+Requires-Dist: twine
+Requires-Dist: build
+
