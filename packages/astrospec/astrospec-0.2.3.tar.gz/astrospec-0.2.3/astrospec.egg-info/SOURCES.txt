@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+astrospec/__init__.py
+astrospec/cli.py
+astrospec/light_correction.py
+astrospec/postproc.py
+astrospec/shape_correction.py
+astrospec/spectrum.py
+astrospec/utils.py
+astrospec/video_reader.py
+astrospec.egg-info/PKG-INFO
+astrospec.egg-info/SOURCES.txt
+astrospec.egg-info/dependency_links.txt
+astrospec.egg-info/entry_points.txt
+astrospec.egg-info/requires.txt
+astrospec.egg-info/top_level.txt
