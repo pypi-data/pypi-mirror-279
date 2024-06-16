@@ -1,0 +1,2 @@
+[console_scripts]
+frx = fractlang.fractlang.frxparser:main
