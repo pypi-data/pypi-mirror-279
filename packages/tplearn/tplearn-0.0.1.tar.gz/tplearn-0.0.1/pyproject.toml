@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tplearn"
+version = "0.0.1"
+dependencies = [
+    "numpy",
+]
+requires-python = ">=3.10"
+authors = [
+    { name = "iskzhi" },
+]
+description = "tropical-based calculation"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "twine",
+]
+
+[project.urls]
+Repository = "https://github.com/iskzhi/tplearn"

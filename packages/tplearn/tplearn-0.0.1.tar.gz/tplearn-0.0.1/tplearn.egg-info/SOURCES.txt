@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+tplearn/__init__.py
+tplearn/tplearn.py
+tplearn.egg-info/PKG-INFO
+tplearn.egg-info/SOURCES.txt
+tplearn.egg-info/dependency_links.txt
+tplearn.egg-info/requires.txt
+tplearn.egg-info/top_level.txt
