@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pydtm
+Version: 0.0.9
+Summary: A Python library for the IOM DTM API
+Author-email: David Gerard <david.gerard.23@ucl.ac.uk>
+Project-URL: Homepage, https://github.com/Human-Geomonitor/PyDTM
+Project-URL: Issues, https://github.com/Human-Geomonitor/PyDTM/issues
+Project-URL: Documentation, https://pydtm.readthedocs.io/en/latest/index.html
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# PyDTM
+
+A Python toolkit for [IOM's DTM API](https://dtm.iom.int/data-and-analysis/dtm-api) using the `requests` package.
+
+## Installation
+[PyDTM is avaliable on PyPi](https://pypi.org/project/pydtm/), you can import it into your python environment with:
+`pip install pydtm`.
+
+## Documentation
+``pydtm``'s documentation is available on [readthedocs.org](https://pydtm.readthedocs.io/en/latest/index.html).
+
+
+## Overview of the number of samples per countries at each administrative levels.
+
+![](samples_per_countries.png)
+
+
+## Contributions
+If you wish to contribute, please fork this repository and create a pull request with your improvements.
