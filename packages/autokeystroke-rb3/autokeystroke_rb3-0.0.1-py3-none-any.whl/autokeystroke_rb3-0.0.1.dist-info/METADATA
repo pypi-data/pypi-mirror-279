@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: autokeystroke_rb3
+Version: 0.0.1
+Summary: A python package for automatically processing and modeling keystroke log data
+Project-URL: Homepage, https://github.com/Ryan6407/AutoKeystroke
+Project-URL: Issues, https://github.com/Ryan6407/AutoKeystroke/issues
+Author-email: Ryan Barretto <ryanbarretto70@gmail.com>
+License-File: LICENCE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# AutoKeystroke
+
+#### Start off by importing the necessary packages you will need to process your data.
+
+```python
+from autokeystroke.modeling.trainer import KeystrokeTrainer
+from autokeystroke.utils.config import KeystrokeConfig
+```
+
+#### Make sure you have your data formatted in a csv file with columns id, event_id, and down_time
+
+```python
+data_pth = "your_data_path.csv"
+```
+
+#### Instantiate a KeystrokeConfig and KeystrokeTrainer and adjust the parameters of the config according to your preferences and specifications
+
+```python
+config = KeystrokeConfig()
+trainer = KeystrokeTrainer(data_pth, config)
+```
+
+#### Call the run method of the trainer instance and you will be able to find the trained models and results saved in the output directory
+
+```python
+trainer.run()
+```
