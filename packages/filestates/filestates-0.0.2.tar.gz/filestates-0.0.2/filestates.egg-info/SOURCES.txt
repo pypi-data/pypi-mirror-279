@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+filestates.egg-info/PKG-INFO
+filestates.egg-info/SOURCES.txt
+filestates.egg-info/dependency_links.txt
+filestates.egg-info/requires.txt
+filestates.egg-info/top_level.txt
