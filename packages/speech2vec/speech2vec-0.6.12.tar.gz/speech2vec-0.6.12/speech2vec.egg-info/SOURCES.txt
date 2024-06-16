@@ -1,0 +1,15 @@
+CHANGELOG.txt
+MANIFEST.in
+README.md
+read.py
+setup.py
+test.py
+Audio2Vec/__init__.py
+Audio2Vec/audio2vec.py
+audio2vec/__init__.py
+audio2vec/audio2vec.py
+speech2vec.egg-info/PKG-INFO
+speech2vec.egg-info/SOURCES.txt
+speech2vec.egg-info/dependency_links.txt
+speech2vec.egg-info/requires.txt
+speech2vec.egg-info/top_level.txt
