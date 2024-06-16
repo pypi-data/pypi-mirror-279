@@ -1,0 +1,6 @@
+estimagic
+nbval
+pre-commit
+pytest
+pytest-xdist
+ruff
