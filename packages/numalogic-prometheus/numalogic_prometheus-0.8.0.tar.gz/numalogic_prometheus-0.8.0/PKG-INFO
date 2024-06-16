@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: numalogic-prometheus
+Version: 0.8.0
+Summary: Numalogic Prometheus based tools
+Home-page: https://github.com/numaproj/numalogic-prometheus
+Author: Numalogic developers
+Maintainer: Avik Basu
+Maintainer-email: avikbasu93@gmail.com
+Requires-Python: >=3.9,<3.13
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: omegaconf (>=2.3.0,<3.0.0)
+Requires-Dist: orjson (>=3.8.4,<4.0.0)
+Requires-Dist: prometheus-client (>=0.18,<0.19)
+Requires-Dist: setuptools (>=70.0.0,<71.0.0)
+Project-URL: Repository, https://github.com/numaproj/numalogic-prometheus
