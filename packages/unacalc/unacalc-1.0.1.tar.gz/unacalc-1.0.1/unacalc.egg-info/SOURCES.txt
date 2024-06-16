@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+unacalc/__init__.py
+unacalc/main.py
+unacalc.egg-info/PKG-INFO
+unacalc.egg-info/SOURCES.txt
+unacalc.egg-info/dependency_links.txt
+unacalc.egg-info/entry_points.txt
+unacalc.egg-info/requires.txt
+unacalc.egg-info/top_level.txt
