@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+aisolutions/__init__.py
+aisolutions/open_ai_client.py
+aisolutions.egg-info/PKG-INFO
+aisolutions.egg-info/SOURCES.txt
+aisolutions.egg-info/dependency_links.txt
+aisolutions.egg-info/requires.txt
+aisolutions.egg-info/top_level.txt
+aisolutions/services/__init__.py
+aisolutions/services/get_image_description_by_url.py
