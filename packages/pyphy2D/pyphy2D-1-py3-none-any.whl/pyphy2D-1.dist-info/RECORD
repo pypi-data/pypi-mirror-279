@@ -1,0 +1,16 @@
+pyphy/__init__.py,sha256=8_XKfriDY7q0prt1CY012ziNAZzjs5kB82LQDhQw0mc,585
+pyphy/body.py,sha256=mYfMvqB2BowpfZTbx2qFTwfJOE9vtTFjC__XtuZ0tCs,7430
+pyphy/boundingbox.py,sha256=wrWILDVxsOD3GvEX46WMQXxs4RTEBRgyYi7nLyaHvh8,225
+pyphy/collision_manifold.py,sha256=Jgws_zLh29RCzfHlcJanqsrnwGWN7qtyeiiIhdXXPb8,452
+pyphy/collisions.py,sha256=swVpFPRefGzNL9VgOnUNsxbhqc7NFpdfwpFiSypKguw,10138
+pyphy/pygame_integration.py,sha256=x5kUJBwvjT4igv8kjCMX1i69N1Us7Ney3UfHC9IaYfo,1174
+pyphy/pyphymath.py,sha256=SXVcX7Zqlxn96TcWCrz_JtI4hwIVFh7wEO4fikO9IUI,1388
+pyphy/sample.py,sha256=R6pTgJRLMTAKPoriuoDJ5XVjo6W5Gcd4f1dGPY7yaic,1370
+pyphy/transform.py,sha256=QyPl20d_aJQXfHmwND5enjBnJIU6fp5_d3qqOIg4aDM,311
+pyphy/vector2.py,sha256=EFD4yB84tHcDh6QP1HXeEBu-kVdQdO0lIVvDVWUzogY,2874
+pyphy/world.py,sha256=cf0fqrw1iio-kQSR9NzJNDCyMWIcp7Em64FdrcnTcOw,9970
+pyphy2D-1.dist-info/LICENSE,sha256=lhTX2SH-sEKPG3Ed_wLl5v1vnd0NWeHvH1ZjZK3m-x4,1088
+pyphy2D-1.dist-info/METADATA,sha256=RzhvQF2ipVvOxgP-QMBUKcZDxToeETGvMz_EPBBYUFE,1567
+pyphy2D-1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyphy2D-1.dist-info/top_level.txt,sha256=RWnwtJbew8cdo0Wijz3Fkln9lf8ZOamBx6d0Uq46oxc,6
+pyphy2D-1.dist-info/RECORD,,
