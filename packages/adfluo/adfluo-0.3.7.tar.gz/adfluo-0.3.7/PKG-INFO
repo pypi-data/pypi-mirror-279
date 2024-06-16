@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: adfluo
+Version: 0.3.7
+Summary: Pipeline-oriented feature extraction for multimodal datasets
+Author-email: Hadrien Titeux <hadrien.titeux@ens.psl.eu>
+License: EUPL
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: rich
+Requires-Dist: tqdm
+Requires-Dist: dataclasses; python_version < "3.7"
+Requires-Dist: sortedcontainers>=2.3.0
+Requires-Dist: typing-extensions
+Provides-Extra: plots
+Requires-Dist: CairoSVG; extra == "plots"
+Requires-Dist: drawsvg>=2.3.0; extra == "plots"
+Requires-Dist: grandalf>=0.8; extra == "plots"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pandas; extra == "tests"
+Requires-Dist: CairoSVG; extra == "tests"
+Requires-Dist: drawsvg>=2.3.0; extra == "tests"
+Requires-Dist: grandalf>=0.8; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+
+# adfluo
+
+[![Tests](https://github.com/hadware/adfluo/actions/workflows/test.yml/badge.svg)](https://github.com/hadware/adfluo/actions/workflows/test.yml)
+[![Documentation](https://github.com/hadware/adfluo/actions/workflows/doc.yml/badge.svg)](https://github.com/hadware/adfluo/actions/workflows/doc.yml)
+
+*adfluo, adfluis, adfluere, adfluxi, adfluxum*
+
+1. to flow on/to/towards/by 
+2. to glide/drift quietly
+
+`adfluo` is a Python library for pipeline-oriented feature computation, mainly aimed at tricky 
+multimodal datasets that might require a wide range of different features to be computed from.
+
+Adfluo makes your feature extraction code:
+
+- **clean** : it encourages you to outline clearly the steps needed to compute
+  a feature as a pipeline of atomic steps
+- **data scientist-friendly**: ``adfluo``'s output has a predictable structure,
+  ensuring that once you've run the feature extraction, you'll be able to focus a 100%
+  on your data-science/statistics work.
+- **efficient** : if different features have computation steps in common, ``adfluo``
+  will do its best to compute only what is necessary, without any extra configuration.
+- **reusable**: By separating the input data from the feature computation logic,
+  you'll easily be able to reuse an existing extraction pipeline on another dataset, 
+  or use another extraction pipeline on the same dataset.
+- **sample-oriented**: ``adfluo`` organizes its processing around samples of data.
+  
+## Installation
+
+Adfluo is available on Pypi, and has no special dependencies, a simple
+
+```shell
+pip install adfluo
+```
+
+will do.
+
+## Example
+
+```python
+import random
+
+# Defining our dataset as a list of dicts
+my_dataset = [
+    {"numbers" : [random.randint(1, 20) for j in range(50)],
+     "idx": i}
+  for i in range(20)
+]
+
+# TODO: examples 
+#  - mean, std dev of numbers
+#  - "relative" mean using idx
+```
+
+## 
