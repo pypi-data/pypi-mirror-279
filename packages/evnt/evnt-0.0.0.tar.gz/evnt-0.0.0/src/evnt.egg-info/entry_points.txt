@@ -1,0 +1,2 @@
+[console_scripts]
+evnt = evnt.__main__:main
