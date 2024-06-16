@@ -1,0 +1,7 @@
+setup.py
+pycodi/CODI.py
+pycodi/__init__.py
+pycodi.egg-info/PKG-INFO
+pycodi.egg-info/SOURCES.txt
+pycodi.egg-info/dependency_links.txt
+pycodi.egg-info/top_level.txt
