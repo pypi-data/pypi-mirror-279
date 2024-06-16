@@ -1,0 +1,202 @@
+# Object-oriented Scalable Vector Graphics
+
+## Table of Content
+
+- [Installation](#installation)
+- [Major Goals](#major-goals)
+- [Principals](#principals)
+  - [Float, Float Math and Float Property](#float-float-math-and-float-property)
+  - [Position Objects](#position-objects)
+  - [SVG Element Objects](#svg-element-objects)
+  - [SVG Group Objects](#svg-group-objects)
+  - [Layers](#layers)
+  - [SVG Object](#svg-object)
+- [Basic Usage](#basic-usage)
+
+## Installation
+
+```code
+pip install osvg
+```
+
+## Major Goals
+
+- Provide a Python API to generate SVG XML code
+- Use objects to handle SVG elements
+- Implement relational positions and values
+
+## Principals
+
+### Float, Float Math and Float Property
+
+Within osvg Float classes achieve the goal of a loop-free referencing
+among element attributes. If the value of a element attribute changes
+the reference attribute also changes. This allows easy rearranging
+of elements within the drawing.
+To get the current float value instead of the object convert it to
+float `float(obj)` or `obj.__float__()`.
+
+Example:
+
+```python
+import osvg
+value = 10.1
+reference = osvg.Float(value)
+type(value)
+<class 'int'>
+type(reference)
+<class 'osvg.float.Float'>
+float(reference)
+10.1
+```
+
+![Basic Float Referencing](media/float/float_reference1.drawio.svg)
+
+Floats also implement basic support for python arithmetic operators
+`+, +=, -, -=, *, *=, **, **=, /, /=, //, //=, %, %=`.
+
+Extending upper example with arithmetics:
+
+```python
+sum1 = 5 + reference
+>>> type(sum1)
+<class 'osvg.float.Sum'>
+>>> float(sum1)
+15.1
+```
+
+![Basic Float Referencing](media/float/float_math1.drawio.svg)
+
+All element and position float attributes are defined as Float classes
+(using a FloatProperty class) and thus implement referencing
+by default.
+
+There area also more advanced mathematical Float classes. I.e:
+
+- Max
+- Min
+- Cos
+- Sin
+- ...
+
+within module `osvg.float_math`.
+
+### Position Objects
+
+A Position has two Float object attributes: x and y.
+X and y inherits the ability to reference to other Float objects
+including math.
+Position classes implement basic support for python arithmetic operators
+`+, +=, -, -=, *, *=, **, **=, /, /=, //, //=, %, %=`, which will
+apply the operator on A.x with B.x and A.y with B.y.
+In addition a position classes for adavanced operation in the two-dimensional
+space two-dimensal space.
+I.e PolarShiftedPosition represents a position which is shifted in direction
+of a given angle and by a given distance. Angle and distance are also Float
+object attributes and can be referenced to other element's Float attributes
+(or calculated by Float math objects).
+
+### SVG Element Objects
+
+Each SVG element has a coresponding Python class.
+Each object has attributes representing SVG element attributes and
+additional attributes to improve the handling of the objects/elements within
+your Python code. SVG element attributes which are floating numbers
+or strings with floating number within, are object attributes based on
+Float objects. Thus the attributes can be a reference to other element's
+attribute or can be calculated with Float math objects from other elements'
+attributes.
+A given position for a SVG area element object
+is always the center of the area. This differs to the top left
+corner idea of a i.e. rectangle in the SVG code. The rectangle object automatically
+handles the shift for the SVG XML code.
+
+### SVG Group Objects
+
+All SVG element object should be a 'child' to a SVG Group object or
+another SVG element object. If not, the element won't be included in
+the SVG XML code. A Group object can be a child to another Group object.
+The attributes 'rotation' and 'style' are inherited to child elements.
+Rotation of the child element is the sum of element's rotation and
+the inherited rotation. Style can be overwritten/changed be the child.
+Only the delta of the style to the inherited style will be within the
+SVG XML code for this element.
+
+### Layers
+
+By default SVG elements will be added to the SVG XML code in the
+order they are added as childs to a group. You can adjust this
+with the layer integer attribute of the SVG element object. A higher
+layer value will add the element earlier to SVG XML code - bringing
+it to the background of a drawing. A lower
+layer value will add the element later to SVG XML code - bringing
+it to the foreground of a drawing. Layer default value is 0. Negative
+values are allowed.
+
+### SVG Object
+
+The SVG object is Group object and the root for the drawing.
+The SVG object is the only SVG element object which can have
+a 'viewbox' to allow an easy usage of fixed float values for the
+attributes of the elements within the drawing and a easy scaling
+of the drawing.
+
+## Basic Usage
+
+The Python code:
+
+```python
+import osvg
+
+
+svg = osvg.SVG(
+    width=400,
+    height=300,
+    viewbox=osvg.ViewBox(width=800, height=600),
+    style=osvg.Style(stroke_width=3, stroke_color="ff0044")
+)
+circle_center = osvg.Position(x=100, y=100)
+rectangle_center = osvg.Position(x=400, y=200)
+foreground = -100
+osvg.Line(
+    parent=svg,
+    start=circle_center,
+    end=rectangle_center,
+    layer=foreground
+)
+circle = osvg.Circle(
+    parent=svg,
+    position=circle_center,
+    radius=80,
+    style=osvg.Style(fill_color="00ff00")
+)
+g1 = osvg.Group(parent=svg, style=osvg.Style(stroke_width=4))
+rectangle = osvg.Rectangle(
+    parent=g1,
+    position=rectangle_center,
+    width=400,
+    height=circle.radius
+)
+print(svg.xml_string)
+```
+
+Will print this XML code:
+
+```xml
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" style="stroke:#ff0044;stroke-width:3" width="400" height="300" viewBox="0 0 800 600">
+        <circle style="fill:#00ff00" cx="100" cy="100" r="80"/>
+        <g style="stroke-width:4">
+                <rect x="200" y="160" width="400" height="80"/>
+        </g>
+        <polyline points="100,100 400,200"/>
+</svg>
+
+```
+
+Which is this drawing:
+
+![Usage Example](usage_example.svg)
+
+You can find more code and the corresponding output under
+*test/system/*
