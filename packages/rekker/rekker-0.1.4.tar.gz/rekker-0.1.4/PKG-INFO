@@ -1,0 +1,48 @@
+Metadata-Version: 2.3
+Name: rekker
+Version: 0.1.4
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+License-File: LICENSE
+Summary: Attack library written for rust and python
+Keywords: tcp,attack
+Author: GlacierSG <iamglaciersg@gmail.com>
+Author-email: GlacierSG <iamglaciersg@gmail.com>
+License: MIT
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: Source Code, https://github.com/GlacierSG/rekker
+
+# Rekker
+
+Rekker is inspired by pwntools features for communicating with tcp sockets. 
+
+Rekker is still in development.
+
+## Example
+```python
+import rekker
+io = rekker.Tcp("localhost:1234")
+io.send(b"abc")
+io.sendline(b"abcd")
+io.sendlineafter(b"abc", b"cde")
+io.recv(123)
+io.recvn(123)
+io.recvline()
+io.recvuntil(b"abc")
+io.recvall()
+io.interactive()
+io.debug()
+io.close()
+```
+## Install
+### Rust
+```bash
+cargo add rekker
+```
+### Python
+```bash
+pip install rekker
+```
+
