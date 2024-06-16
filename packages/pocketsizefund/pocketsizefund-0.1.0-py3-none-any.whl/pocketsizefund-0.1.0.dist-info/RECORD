@@ -1,0 +1,17 @@
+pocketsizefund/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pocketsizefund/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pocketsizefund/config/config.py,sha256=Ti1PckIjLuKeOJB6CiwgQGbMRCq6XDggh7LNL2c_Q0c,1515
+pocketsizefund/data/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pocketsizefund/data/data.py,sha256=VM_m8XS3JUGoablGPSUgo2v4OxPebWMbmxe5hob0s88,11234
+pocketsizefund/data/test_data.py,sha256=B9jfEC4EjrZholPpGdgJ7z6pZ6NXsFsZQ2PKsneZtE0,15711
+pocketsizefund/model/__init__.py,sha256=pOC6cLox2Thg16YZrB2nDKc6KqFA8qIXOqzelNRJYbU,50
+pocketsizefund/model/model.py,sha256=Bpja3nckN8PXapgMCmIQjhV1IjhXFE3T79HVyc5SPOg,8127
+pocketsizefund/storage/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pocketsizefund/storage/storage.py,sha256=w4H1yO0hCMVyH6xY1fnffY-4Yy65Epbdv5wP0qaJPFE,7538
+pocketsizefund/storage/test_storage.py,sha256=ODVBKGV2Ccu6kkdIn_afA_to5GtI4zHYpGpbYcipjFY,4523
+pocketsizefund/trade/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pocketsizefund/trade/test_trade.py,sha256=UD80_W2gIMC5RA1rXNiL3XuyrV2plWXBzObuQelnlK8,26980
+pocketsizefund/trade/trade.py,sha256=02RXc2ismU7QZ_MGk2vDm3tk3nab8siGWi-Zsrl86H8,14684
+pocketsizefund-0.1.0.dist-info/METADATA,sha256=iWW-6qSGzz1ByzAud_iy9IdrLpyxvOA9IZ1C3ILESqg,1318
+pocketsizefund-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pocketsizefund-0.1.0.dist-info/RECORD,,
