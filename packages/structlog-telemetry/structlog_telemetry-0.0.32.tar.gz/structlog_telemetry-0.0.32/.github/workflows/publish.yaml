@@ -1,0 +1,52 @@
+# Build the package and publish it to PyPI after tests pass.
+name: Publish to PyPI
+on:
+  workflow_call:
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  tests:
+    uses: ./.github/workflows/pytest.yaml
+  publish:
+    name: publish
+    needs: [tests] # require tests to pass before deploy runs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - name: Build package
+        run: |
+          python -m pip install -U pip build
+          python -m build
+      - name: Publish
+        uses: pypa/gh-action-pypi-publish@v1.8.14
+        with:
+          # repository-url: https://test.pypi.org/legacy/
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+
+      - name: Test Install
+        run: |
+          python3 -m pip install --no-cache-dir structlog-telemetry
+      - name: Test Usage
+        run: |
+          python3 - <<EOF
+          from structlog_telemetry.structlog_telemetry import StructLogTelemetry
+
+          APP_NAME = "APP_X"
+          APP_VERSION = "v0.0.1"
+          logger = StructLogTelemetry(APP_NAME, APP_VERSION, True)
+
+
+          logger.info({"KEY_NOT_FOUND": "SEARCHED_KEY"})
+          logger.warning({"LATENCY": "30"})
+          logger.error({"SERVER_TIMEOUT": {"SERVER": "test.com", "TIMED_OUT_AFTER": 10}})
+          EOF
