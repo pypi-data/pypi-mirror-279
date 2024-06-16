@@ -1,0 +1,12 @@
+metalgpu/__init__.py,sha256=jNQsTZvFkvY5RKcYFBHRb9S7Q_6H-ZfFdAFVjQCWhnk,191
+metalgpu/__main__.py,sha256=0UOueC-LDPrRrZUMvgbozQSaiDqoKvh6qoZsXhXXECw,857
+metalgpu/buffer.py,sha256=za8o-s7vToN483vIleFmuJzQReEf5vEb0UekLBDwGTg,4282
+metalgpu/interface.py,sha256=u2wJqYrEnW0LQcwahMT5JaLlAXFtLD8C-Gd71Ncau5M,5471
+metalgpu/operators.py,sha256=ZG0vbCg4IxHz5nzN7K8E9BL-2de-wQVzW3MSoL4NC6g,2760
+metalgpu/shader.py,sha256=BMadcqNlwAZLTeeyAjfdyOlW2UuHinEWcqC6v26cAlw,3105
+metalgpu/utils.py,sha256=by8ib_nuGdTC0dGIJS0qa9e45yUo_4DbDFmCa7QhZhw,1947
+metalgpu-1.0.3.dist-info/LICENSE,sha256=UFUfPFJfHydiNw9ilLjxl9t9mmp2lW3vFEq1LRmae7o,1072
+metalgpu-1.0.3.dist-info/METADATA,sha256=Rqu8y9WLdh3YaLu8aplWtWBENekd4VxNXkzYIe-lhSY,3704
+metalgpu-1.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+metalgpu-1.0.3.dist-info/entry_points.txt,sha256=hwupAWbVblztHB4FCxXPJQZo05gaDHJjtGIRjrAFR0U,53
+metalgpu-1.0.3.dist-info/RECORD,,
