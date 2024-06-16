@@ -1,0 +1,9 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_bubble_sort.py,sha256=B4leNeAjS7s1Gh6SlB4GfiIpTeFDXvFddCOxLVJb3jk,360
+tests/test_insertion_sort.py,sha256=WHduNogiYyPchSxNXOCKCyCEkoV8SNzgpegL__0bLtc,381
+tests/test_quick_sort.py,sha256=5WrYRv5-un1VMnROjeiqszwJmAdziumynrCis5Cxz5g,353
+siwp2005_billy_sorting_algorithms-1.0.dist-info/LICENSE,sha256=5VezS2tLT09mdCj2ifxOh8X6c6EEpdTct_dxNL-uK4g,1098
+siwp2005_billy_sorting_algorithms-1.0.dist-info/METADATA,sha256=RPYNgn2Dc3Jmkjzvo20nuOK4Q0clZW-HZ43QTpdhmPo,835
+siwp2005_billy_sorting_algorithms-1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+siwp2005_billy_sorting_algorithms-1.0.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+siwp2005_billy_sorting_algorithms-1.0.dist-info/RECORD,,
