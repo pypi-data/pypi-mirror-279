@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "daas"
+version = "0.0.13"
+description = "A lightweight, distributed, relational network architecture for MPC."
+authors = ["coyzeng <coyzeng@gmail.com>"]
+maintainers = ["coyzeng <coyzeng@gmail.com>"]
+packages = [{ include = "mesh" }]
+license = "LICENSE"
+readme = "README.md"
+homepage = "https://github.com/jiumi/meio"
+repository = "https://github.com/jiumi/meio"
+documentation = "https://github.com/jiumi/meio"
+keywords = ["servicemesh", "rpc", "codec", "cluster", "registry"]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Natural Language :: English",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9"
+]
+[tool.poetry.dependencies]
+python = "^3.8"
+protobuf = "^4.25.3"
+grpcio = "^1.57.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^8.0.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+priority = "default"

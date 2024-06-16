@@ -1,0 +1,160 @@
+#
+# Copyright (c) 2000, 2099, ducesoft and/or its affiliates. All rights reserved.
+# DUCESOFT PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+#
+#
+import math
+from typing import Dict, Any, Callable, Coroutine
+
+import mesh.log as log
+import mesh.tool as tool
+from mesh.kinds import Principal
+from mesh.macro import spi
+from mesh.mpc import ServiceProxy, Mesh
+from mesh.prsim import Transport, Session, Metadata
+
+
+@spi("mesh")
+class MeshTransport(Transport):
+    """
+    Mesh transport is stateless transport depends on mesh server.
+    """
+
+    def __init__(self):
+        self.sessions: Dict[str, Session] = dict()
+
+    async def open(self, session_id: str, metadata: Dict[str, str]) -> Session:
+        skey = self.session_key(session_id, metadata)
+        session = self.sessions.get(skey, None)
+        if not session:
+            attachments = Mesh.context().get_attachments()
+            addr = Mesh.context().get_attribute(Mesh.REMOTE)
+            principal = Mesh.context().get_principals().peek()
+            session = MeshSession(session_id, metadata, attachments, addr, principal, lambda: self.finalize(skey))
+            if self.sessions.__len__() < 500:
+                self.sessions[skey] = session
+        return session
+
+    async def close(self, timeout: int):
+        for k, v in self.sessions.items():
+            try:
+                await v.release(timeout, "")
+            except BaseException as e:
+                log.error("", e)
+        self.sessions.clear()
+
+    async def roundtrip(self, payload: bytes, metadata: Dict[str, str]) -> bytes:
+        """ bid """
+        pass
+
+    def finalize(self, session_key: str):
+        if self.sessions.__contains__(session_key):
+            self.sessions.__delitem__(session_key)
+
+    @staticmethod
+    def session_key(session_id: str, metadata: Dict[str, str]) -> str:
+        target_node_id = Metadata.MESH_TARGET_NODE_ID.get(metadata)
+        target_inst_id = Metadata.MESH_TARGET_INST_ID.get(metadata)
+        return f"{session_id}.{target_node_id}.{target_inst_id}"
+
+
+@spi("mesh")
+class MeshSession(Session):
+
+    def __init__(self, session_id: str, metadata: Dict[str, str], attachments: Dict[str, str], address: str,
+                 principal: Principal, finalizer: Callable):
+        self.session_id = session_id
+        self.metadata = metadata
+        self.attachments = attachments
+        self.address = address
+        self.principal = principal
+        self.session = SplitSession(ServiceProxy.default_proxy(Session))
+        self.finalizer = finalizer
+
+    async def with_context(self, fn: Coroutine, remote: bool, timeout: int) -> Any:
+        return await Mesh.context_safe(self.context_safe(fn, remote, timeout))
+
+    async def context_safe(self, fn: Any, remote: bool, timeout: int) -> Any:
+        if self.attachments:
+            for k, v in self.attachments.items():
+                Mesh.context().get_attachments()[k] = v
+
+        if self.metadata:
+            for k, v in self.metadata.items():
+                Mesh.context().get_attachments()[k] = v
+
+        if tool.required(self.address):
+            Mesh.context().set_attribute(Mesh.REMOTE, self.address)
+
+        if timeout > 0:
+            Mesh.context().set_attribute(Mesh.TIMEOUT, timeout)
+
+        Metadata.MESH_SESSION_ID.set(Mesh.context().get_attachments(), self.session_id)
+
+        if not remote:
+            return await fn
+
+        target_node_id = Metadata.MESH_TARGET_NODE_ID.get(Mesh.context().get_attachments())
+        target_inst_id = Metadata.MESH_TARGET_INST_ID.get(Mesh.context().get_attachments())
+        if '' == target_node_id and '' == target_inst_id:
+            return await fn
+        try:
+            principal = Principal()
+            principal.node_id = target_node_id
+            principal.inst_id = target_inst_id
+            Mesh.context().get_principals().append(principal)
+            return await fn
+        finally:
+            Mesh.context().get_principals().pop()
+
+    async def peek(self, topic: str = "") -> bytes:
+        return await self.with_context(self.session.peek(topic), False, 0)
+
+    async def pop(self, timeout: int, topic: str = "") -> bytes:
+        return await self.with_context(self.session.pop(timeout, topic), False, timeout)
+
+    async def push(self, payload: bytes, metadata: Dict[str, str], topic: str = ""):
+        return await self.with_context(self.session.push(payload, metadata, topic), True, 0)
+
+    async def release(self, timeout: int, topic: str = ""):
+        self.finalizer()
+        return await self.with_context(self.session.release(timeout, topic), False, timeout)
+
+
+class SplitSession(Session):
+
+    def __init__(self, session: Session):
+        self.session = session
+
+    async def peek(self, topic: str = "") -> bytes:
+        buff = bytes()
+        packet_size_bytes = await self.session.peek(self.split_key(topic, 0))
+        packet_size = packet_size_bytes.decode()
+        if "" == packet_size:
+            return buff
+        for idx in range(int(packet_size)):
+            buff += await self.session.peek(self.split_key(topic, idx + 1))
+        return buff
+
+    async def pop(self, timeout: int, topic: str = "") -> bytes:
+        packet_size_bytes = await self.session.pop(timeout, self.split_key(topic, 0))
+        packet_size = int(packet_size_bytes.decode())
+        buff = bytes()
+        for idx in range(packet_size):
+            buff += await self.session.pop(timeout, self.split_key(topic, idx + 1))
+        return buff
+
+    async def push(self, payload: bytes, metadata: Dict[str, str], topic: str = ""):
+        packet_length = tool.get_packet_size()
+        packet_size = math.ceil(payload.__len__() / packet_length)
+        await self.session.push(f"{packet_size}".encode(), metadata, self.split_key(topic, 0))
+        for idx in range(packet_size):
+            buff = payload[packet_length * idx:min(packet_length * (idx + 1), payload.__len__())]
+            await self.session.push(buff, metadata, self.split_key(topic, idx + 1))
+
+    async def release(self, timeout: int, topic: str = ""):
+        return await self.session.release(timeout, topic)
+
+    @staticmethod
+    def split_key(topic: str, idx: int, ) -> str:
+        return f"{topic}-mesh-split-{idx}"
