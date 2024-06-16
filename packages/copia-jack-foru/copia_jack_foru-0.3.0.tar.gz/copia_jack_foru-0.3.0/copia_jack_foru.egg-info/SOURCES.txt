@@ -1,0 +1,9 @@
+README.md
+setup.py
+copia-jack-foru/__init__.py
+copia-jack-foru/courses.py
+copia-jack-foru/utils.py
+copia_jack_foru.egg-info/PKG-INFO
+copia_jack_foru.egg-info/SOURCES.txt
+copia_jack_foru.egg-info/dependency_links.txt
+copia_jack_foru.egg-info/top_level.txt
