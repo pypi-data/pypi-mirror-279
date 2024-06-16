@@ -1,0 +1,10 @@
+afc_imbalanced_learning/__init__.py,sha256=DiKx3KHhE7ZsyuZIXkciqzAZrVa3u5krlqYO6-wjhiU,82
+afc_imbalanced_learning/afc.py,sha256=4ZRPoobvstnrEWwh2_b6BbcaflRC9pe-BOWAhzxkiPA,3222
+afc_imbalanced_learning/conformal_transformation.py,sha256=lUYZVIIVrQ8t4pvtjnJvF3dl25WN5v62VQKAOyI3Hk4,1031
+afc_imbalanced_learning/distance.py,sha256=7Y0oGrJ5k7jvjOdSV5UQfP0CrkC19EQkMFlodQAplQ4,319
+afc_imbalanced_learning/kernel.py,sha256=j-Gf5vEAOmERkhfjk792I1-hrqMvBQfTTWew7AjFGRw,186
+afc_svm_imbalanced_learning-0.1.1.dist-info/LICENSE,sha256=sv4fwew04nyFtw23Sto4LKjASyAdQM0qIX1p_wh_8d8,1082
+afc_svm_imbalanced_learning-0.1.1.dist-info/METADATA,sha256=CSVDjPvnb8H7Qh68CjG0vzgdER7fT4YPLdY_XP09K_g,5268
+afc_svm_imbalanced_learning-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+afc_svm_imbalanced_learning-0.1.1.dist-info/top_level.txt,sha256=upRUCLUu7S4bOkZJKmwR0t3n3yeLR658jXNiy4gexfo,24
+afc_svm_imbalanced_learning-0.1.1.dist-info/RECORD,,
