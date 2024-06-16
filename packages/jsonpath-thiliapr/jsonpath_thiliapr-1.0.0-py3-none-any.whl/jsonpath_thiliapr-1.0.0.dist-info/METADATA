@@ -1,0 +1,57 @@
+Metadata-Version: 2.3
+Name: jsonpath-thiliapr
+Version: 1.0.0
+Summary: A simple JSONPath parser.
+Project-URL: Homepage, https://github.com/thiliapr/tkjsonpath
+Project-URL: Issues, https://github.com/thiliapr/tkjsonpath/issues
+Author: thiliapr
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+![GitHub top language](https://img.shields.io/github/languages/top/thiliapr/tkjsonpath)
+![GitHub License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)
+![GitHub repo size](https://img.shields.io/github/repo-size/thiliapr/tkjsonpath)
+![GitHub forks](https://img.shields.io/github/forks/thiliapr/tkjsonpath)
+![GitHub Repo stars](https://img.shields.io/github/stars/thiliapr/tkjsonpath)
+
+# TkJSONPath
+This is a simple JSONPath parser.
+- Version: 1.0
+- License: Distributed under GPL-3.0 or later.
+
+## Languages
+- [Simplified Chinese](README.zh-CN.md)
+- [English](README.md)
+
+## Usage
+- Below are examples demonstrating the usage of four basic functions:
+  ```python
+  import tkjsonpath
+  
+  src = {"docs": [{"how": "how?", "id": 1}, {"how": "emm", "id": 2}]}
+  
+  path_a = "$.docs"
+  path_b = "$[0].how"
+  
+  # path_ab -> "$.docs[0].how"
+  path_ab = tkjsonpath.concat_path(path_a, path_b)
+  
+  # how_1 -> "how?"
+  how_1 = tkjsonpath.get(src, path_ab)
+  
+  # dst -> src
+  dst = src.copy()
+  # dst["docs"][1]["id"] -> 4
+  tkjsonpath.assign(dst, "$.docs[1].id", 4)
+  ```
+  1. `src` is assigned a dictionary.
+  2. Concatenate `path_a` and `path_b`, assigning the result to `path_ab`.
+  3. Retrieve the value at the `path_ab` location in `src`, assigning it to `how_1`.
+  4. Create a copy of `src` and assign it to `dst`.
+  5. Assign the value `4` to the path `$.docs[1].id` in `dst`.
+
+For complete function usage, please refer to the [documentation](docs/index.md).
