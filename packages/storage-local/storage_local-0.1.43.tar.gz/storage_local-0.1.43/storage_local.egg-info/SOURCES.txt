@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+aws_s3_storage_local/src/AWSStorage.py
+aws_s3_storage_local/src/Storage.py
+aws_s3_storage_local/src/StorageConstants.py
+aws_s3_storage_local/src/StorageDB.py
+aws_s3_storage_local/src/StorageInterface.py
+aws_s3_storage_local/src/__init__.py
+storage_local.egg-info/PKG-INFO
+storage_local.egg-info/SOURCES.txt
+storage_local.egg-info/dependency_links.txt
+storage_local.egg-info/requires.txt
+storage_local.egg-info/top_level.txt
