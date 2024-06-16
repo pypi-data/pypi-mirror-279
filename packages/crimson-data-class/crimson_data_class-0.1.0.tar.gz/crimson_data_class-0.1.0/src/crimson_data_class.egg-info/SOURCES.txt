@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/crimson/data_class/__init__.py
+src/crimson/data_class/data_class_list.py
+src/crimson_data_class.egg-info/PKG-INFO
+src/crimson_data_class.egg-info/SOURCES.txt
+src/crimson_data_class.egg-info/dependency_links.txt
+src/crimson_data_class.egg-info/requires.txt
+src/crimson_data_class.egg-info/top_level.txt
+test/test_data_class_list.py
