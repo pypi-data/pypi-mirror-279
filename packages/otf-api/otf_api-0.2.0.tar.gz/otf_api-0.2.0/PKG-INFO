@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: otf-api
+Version: 0.2.0
+Summary: Python OrangeTheory Fitness API Client
+License: MIT
+Author: Jessica Smith
+Author-email: j.smith.git1@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: aiohttp (==3.9.5)
+Requires-Dist: loguru (==0.7.2)
+Requires-Dist: pycognito (==2024.5.1)
+Requires-Dist: pydantic (==2.7.3)
+Description-Content-Type: text/markdown
+
+Simple API client for interacting with the OrangeTheory APIs. This project is in now way affiliated with OrangeTheory Fitness.
+
