@@ -1,0 +1,3 @@
+include mumuplayer12newinstances/requirements.txt
+include mumuplayer12newinstances/thirdparty.json
+include mumuplayer12newinstances/README.MD

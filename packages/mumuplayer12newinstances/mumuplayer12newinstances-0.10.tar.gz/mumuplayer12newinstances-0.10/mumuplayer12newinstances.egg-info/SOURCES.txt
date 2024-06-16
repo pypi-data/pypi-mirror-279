@@ -1,0 +1,14 @@
+LICENSE.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+mumuplayer12newinstances/README.MD
+mumuplayer12newinstances/__init__.py
+mumuplayer12newinstances/requirements.txt
+mumuplayer12newinstances/thirdparty.json
+mumuplayer12newinstances.egg-info/PKG-INFO
+mumuplayer12newinstances.egg-info/SOURCES.txt
+mumuplayer12newinstances.egg-info/dependency_links.txt
+mumuplayer12newinstances.egg-info/requires.txt
+mumuplayer12newinstances.egg-info/top_level.txt
