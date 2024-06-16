@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: pynance-calc
+Version: 0.0.1
+Summary: Basic finance calculator tool
+Author: Jake Williamson
+Author-email: <brianjw88@gmail.com>
+Keywords: python
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: requests
