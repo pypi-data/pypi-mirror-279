@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apkpure"
+version = "1.0.1"
+authors = [{ name = "Anis Homsy", email = "anisfhomsi@gmail.com" }]
+description = "An API for interacting with the APK Pure website, allowing you to search for apps, retrieve app information, and download apps programmatically."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["beautifulsoup4>=4.12.3", "requests>=2.32.3", "tqdm>=4.66.4"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/anishomsy/apkpure"
+Issues = "https://github.com/anishomsy/apkpure/issues"
