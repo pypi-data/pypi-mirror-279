@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: blueness
+Version: 3.55.1
+Summary: 🌀 the blueness of ai.
+Home-page: https://github.com/kamangir/blueness
+Author: Arash Abadpour (Kamangir)
+Author-email: arash@kamangir.net
+License: Public Domain
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Unix Shell
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: pylint
+Requires-Dist: pytest
+Requires-Dist: tqdm
+
+# 🌀 blueness
+
+🌀 the blueness of ai enables [blue plugins](https://github.com/kamangir/blue-plugin).
+
+```bash
+pip install blueness
+```
+
+---
+
+[![PyPI version](https://img.shields.io/pypi/v/blueness.svg)](https://pypi.org/project/blueness/)
