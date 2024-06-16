@@ -1,0 +1,16 @@
+ZAminofix/__init__.py,sha256=DmbmJQNQCDsXVqWB-ELVIR2hKJFilLhm_UnKq8Oz_yM,1273
+ZAminofix/acm.py,sha256=jFy4FqyQBMWcdHsqwTedaEefXzYuRaVyRl9IdoxocV0,12887
+ZAminofix/client.py,sha256=RIAKgDqN-88vlDPeh8NtAx048gMLBtcVaau-eoxXTFE,94571
+ZAminofix/socket.py,sha256=nOfUxGz_VHVkw2ZpkYyJIqU0VtqtUJpPo1dN05K-fns,14262
+ZAminofix/sub_client.py,sha256=7VfdwD_uBCb9g80Yjeq6LbVt_g2-mtpPDyMgYaIYcPM,107949
+ZAminofix/lib/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+ZAminofix/lib/util/__init__.py,sha256=4OaIbfHyJ5a0cTRSSrG6VbfRGuEFI14Et0HU-iBRQV8,99
+ZAminofix/lib/util/exceptions.py,sha256=QbHYffVkh5v-2mJbTTH3s7Bh8mlWWEF77zSZp4sLpmE,31646
+ZAminofix/lib/util/headers.py,sha256=nEMk5gHsHAywnL5-Uh0YXWneS_GhlWJdOQDqF9RHAQ0,4088
+ZAminofix/lib/util/helpers.py,sha256=Py1Ez-gfgEOHPRy7cjVBsPkUejHNW-DVt37fikD21gk,1215
+ZAminofix/lib/util/objects.py,sha256=_bGuLjxXBBjWlwXlbzJ2q6yRqtX5hBP36Zg_YYR6v5A,198201
+ZAmino.fix-1.1.9.dist-info/LICENSE,sha256=6-qSDSPzGqVKdGuGAJa3iFoy-28YfE-BaWEiux4V6g8,1088
+ZAmino.fix-1.1.9.dist-info/METADATA,sha256=r5XrOaCn-tCdoGVG5HUr_eUFMpxQ6YynZH3Um_gYID0,622
+ZAmino.fix-1.1.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ZAmino.fix-1.1.9.dist-info/top_level.txt,sha256=ksl3WDy4Cx-WKeUKPW3kMZUF2Jk8X0jXIEdpW0v_UgA,10
+ZAmino.fix-1.1.9.dist-info/RECORD,,
