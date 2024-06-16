@@ -1,0 +1,31 @@
+/* Vertical align all text in datatables */
+table.dataTable tbody tr td {
+    vertical-align: middle;
+}
+/* Center action icons used in datatables */
+td:has(i.fi), td.dt-control {
+    text-align: center;
+}
+/* Change the color of the icons on hover */
+.icon-hover-change:hover {
+    color: var(--bs-primary-border-subtle);
+}
+/* Teams CSS */
+#teams_message_container pre {
+    background: var(--bs-secondary-bg);
+    border-radius: var(--bs-border-radius-sm);
+    padding-left:.25rem;
+}
+#teams_message_container td {
+    border-width: 1px;
+    border-color: var(--bs-secondary-border-subtle);
+    padding: .25rem;
+}
+#teams_message_container .card-body p {
+    margin-bottom: .25rem;
+}
+blockquote {
+    border-radius: var(--bs-border-radius-lg);
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color);
+    padding: .5rem;
+}
