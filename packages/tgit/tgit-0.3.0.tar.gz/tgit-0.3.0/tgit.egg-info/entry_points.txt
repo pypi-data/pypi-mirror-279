@@ -1,0 +1,3 @@
+[console_scripts]
+gitt = tgit.cli:main
+tgit = tgit.cli:main

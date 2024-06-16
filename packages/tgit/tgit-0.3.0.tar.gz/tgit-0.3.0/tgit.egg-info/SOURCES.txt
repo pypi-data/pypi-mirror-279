@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+tgit/__init__.py
+tgit/changelog.py
+tgit/cli.py
+tgit/commit.py
+tgit/settings.py
+tgit/utils.py
+tgit/version.py
+tgit.egg-info/PKG-INFO
+tgit.egg-info/SOURCES.txt
+tgit.egg-info/dependency_links.txt
+tgit.egg-info/entry_points.txt
+tgit.egg-info/requires.txt
+tgit.egg-info/top_level.txt
