@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cm_mlperf/__init__.py
+cm_mlperf.egg-info/PKG-INFO
+cm_mlperf.egg-info/SOURCES.txt
+cm_mlperf.egg-info/dependency_links.txt
+cm_mlperf.egg-info/not-zip-safe
+cm_mlperf.egg-info/requires.txt
+cm_mlperf.egg-info/top_level.txt
