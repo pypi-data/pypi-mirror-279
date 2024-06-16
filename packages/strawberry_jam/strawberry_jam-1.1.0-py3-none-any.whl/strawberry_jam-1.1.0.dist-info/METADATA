@@ -1,0 +1,128 @@
+Metadata-Version: 2.1
+Name: strawberry_jam
+Version: 1.1.0
+Summary: Codegen django command for strawberry-django for rapid schema boilerplate generation from given models
+Home-page: https://github.com/Elawphant/strawberry_jam
+License: MIT
+Keywords: graphql,django,strawberry-graphql-django,command
+Author: Gevorg Hakobyan
+Author-email: gevorg.hakobyan@elawphant.am
+Requires-Python: >=3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.8.1,<4.0.0)
+Requires-Dist: django (>=4.0.0,<5.0.0)
+Requires-Dist: pytest (>=8.2.1,<9.0.0)
+Requires-Dist: strawberry-graphql-django (>=0.44.1,<0.45.0)
+Requires-Dist: tqdm (>=4.50.0,<5.0.0)
+Project-URL: Repository, https://github.com/Elawphant/strawberry_jam
+Description-Content-Type: text/markdown
+
+# Strawberry Jam 🍓
+
+Codegen django command for strawberry-django for rapid schema boilerplate generation from given models
+
+## Installation
+
+```txt
+pip3 install strawberry_jam
+```
+
+or using uv
+
+```txt
+uv pip install strawberry_jam
+```
+
+Add `'strawberry_jam'` to your project's `settings.py`.
+
+```py
+INSTALLED_APPS = [
+    # ... other apps
+    'strawberry_jam',
+]
+```
+
+Configure strawberry django to handle GlobalIds automatically.
+
+```py
+STRAWBERRY_DJANGO = {
+    "MAP_AUTO_ID_AS_GLOBAL_ID": True
+}
+```
+
+## Usage
+
+```zsh
+python3 manage.py configure-schema <app_label.ModelName1> <app_label.ModelName2> <app_label.ModelNameN> -in <my_graphql_app_label> -fl <flavor_name>
+```
+
+### Arguments
+
+#### Required
+
+1. list of models in form of `app_label.ModelName`
+2. `--in-app`, `-in`: the `app_label` where the schema modules will be generated
+3. `--flavor`, `-fl`, `--workflow`, `-wfl`: the name of the workflow that will generate the necessary modules
+
+#### Optional
+
+1. `--package-name`, `-pn`: the name of the package, defaults to `gql`
+2. `--overwrite`, `-owt`: if true, will overwrite everything
+
+## Falvors/Workflows
+
+This addon comes with the following flavors:
+
+- `relay_queries`: generates relay style types(nodes), query, filter, order
+- `relay_mutations`: generates relay style create/partial-update input types, mutations
+- `query_set_managers`: A simple class with get_queryset, to help manage querysets in one place, normally not needed
+- `tests`: coming soon
+
+IMPORTANT!
+
+**Running a flavor with `overwrite` flag will replace the necessary modules made with other flavors to work with the currenty run flavor.**
+
+## Under the hood and things to know
+
+### StrawberryJamTemplate
+
+The addon has implemented a simple `StrawberryJamTemplate` class. The command looks for modules in the `chunks/flavor_name/templates/` and initializes the Template subclass of `StrawberryJamTemplate`, which generates the necessary modules in the schema.
+
+### Mutations
+
+The relay_mutations flavor comes with extra. Instead of exposing to-many relations as a field, it exposes them via `<field_name>_add` and `<field_name>_remove` fields of type `list[GlobalID]`, which let add remove fields by simply passing ids that need to be added or removed.
+
+## TODO
+
+- Add generation of test modules
+- Maybe add ability to run multiple flavors consecutively
+- The generated schema will not work, if the types for relations are not generated. So maybe skip the fields for models that are not supplied to the command.
+
+# MIT License
+
+Copyright (c) 2024 Gevorg Hakobyan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
