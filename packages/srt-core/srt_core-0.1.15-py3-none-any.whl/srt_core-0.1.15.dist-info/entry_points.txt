@@ -1,0 +1,3 @@
+[console_scripts]
+config-cli = srt_core.config.config:main
+logger-cli = srt_core.utils.logger:main
