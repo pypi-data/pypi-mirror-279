@@ -1,0 +1,12 @@
+wsgi_auth_middleware/__about__.py,sha256=tQpNec3eb_4elSLYDK8ZNvVMpbCyttkXWHBL2t1r-k4,127
+wsgi_auth_middleware/__init__.py,sha256=GdWP9YG9C3BglvbD9gQVdBmcpKFE_voxGwumLQg6muU,1138
+wsgi_auth_middleware/backends/__init__.py,sha256=IYR4ByAWNhLtWtLBEwyEO5ayIzuqPGPdcX7EMp3dovY,257
+wsgi_auth_middleware/backends/gssapi.py,sha256=As1JoK0xjj_2JtZ4ZIrqWRGhdXhUmvrZxaHneWHqBxI,1320
+wsgi_auth_middleware/backends/pam.py,sha256=WLLnoE6Z-0T78QoC2wXNLlgM8Mf5pI58AxEpHlAbMkk,264
+wsgi_auth_middleware/frontends/__init__.py,sha256=Qy52n3P1EA3pXetQwQ3wn7Jebl1WXv7MptkQALius_E,172
+wsgi_auth_middleware/frontends/basic.py,sha256=KR9j4LsrF1NwDvJyHZU4ag9iQd5CUFezrfhYvumFEVM,637
+wsgi_auth_middleware/frontends/negotiate.py,sha256=17aR5nB_8RaAB-DUeujAPW_6ut6y4jW0iLOL3x9dFxk,721
+wsgi_auth_middleware-0.1.0.dist-info/METADATA,sha256=cot6uadL9oLctpngnKadGXmpw_CHZ3CRdLFB_1qZqm0,4400
+wsgi_auth_middleware-0.1.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+wsgi_auth_middleware-0.1.0.dist-info/licenses/LICENSE.txt,sha256=bQABqR7OgcO7fLUtRbd8gxY1-1kGn6sUgZB6LcVSRK8,745
+wsgi_auth_middleware-0.1.0.dist-info/RECORD,,
