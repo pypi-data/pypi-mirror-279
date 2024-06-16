@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+Short_Py.egg-info/PKG-INFO
+Short_Py.egg-info/SOURCES.txt
+Short_Py.egg-info/dependency_links.txt
+Short_Py.egg-info/requires.txt
+Short_Py.egg-info/top_level.txt
+tests/__init__.py
+tests/test_simple.py
