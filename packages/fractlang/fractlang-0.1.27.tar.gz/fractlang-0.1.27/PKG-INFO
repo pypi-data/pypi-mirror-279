@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: fractlang
+Version: 0.1.27
+Summary: A custom programming syntax for Fractlang in python
+Home-page: https://github.com/yourusername/fractlang
+Author: ryznxx
+Author-email: 7ryznxx@gmail.com
+License: MIT
+Description-Content-Type: text/markdown
+Requires-Dist: watchdog
+Requires-Dist: colorama
+
+## oke mad
