@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "strawberry_jam"
+version = "1.1.0"
+description = "Codegen django command for strawberry-django for rapid schema boilerplate generation from given models"
+
+license = "MIT"
+
+authors = [
+    "Gevorg Hakobyan <gevorg.hakobyan@elawphant.am>"
+]
+
+repository = "https://github.com/Elawphant/strawberry_jam"
+homepage = "https://github.com/Elawphant/strawberry_jam"
+
+# README file(s) are used as the package description
+readme = ["README.md", "LICENSE"]
+
+# Keywords (translated to tags on the package index)
+keywords = ["graphql", "django", "strawberry-graphql-django", "command"]
+
+[tool.poetry.dependencies]
+# Compatible Python versions
+python = ">=3.8"
+# Standard dependency with semver constraints
+aiohttp = "^3.8.1"
+strawberry-graphql-django = "^0.44.1"
+django = "^4.0.0"
+tqdm = "^4.50.0"
+pytest = "^8.2.1"
