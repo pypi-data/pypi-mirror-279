@@ -1,0 +1,14 @@
+README.md
+setup.py
+permapy/__init__.py
+permapy/arweave_client.py
+permapy/async_client.py
+permapy/permaweb.py
+permapy/transactions.py
+permapy/utils.py
+permapy/wallet.py
+permapy.egg-info/PKG-INFO
+permapy.egg-info/SOURCES.txt
+permapy.egg-info/dependency_links.txt
+permapy.egg-info/requires.txt
+permapy.egg-info/top_level.txt
