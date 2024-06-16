@@ -1,0 +1,58 @@
+---
+image: python:3.11
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python -V # Print out python version for debugging
+  - pip install twine tox ruff pytest build
+
+linting:
+  stage: test
+  script:
+    - tox -e ruff,yamllint
+
+build_staging:
+  stage: deploy
+  script:
+    - python -m build
+  except:
+    - tags
+  artifacts:
+    paths:
+      - dist/
+
+deploy_production:
+  stage: deploy
+  variables:
+    TWINE_USERNAME: $PRODUCTION_USERNAME
+    TWINE_PASSWORD: $PRODUCTION_PASSWORD
+  script:
+    - python -m build
+    - twine upload dist/*
+  only:
+    - tags
+  artifacts:
+    paths:
+      - dist/
+
+python310:
+  stage: test
+  image: python:3.10
+  script: tox -e py310
+
+python311:
+  stage: test
+  image: python:3.11
+  script: tox -e py311
+
+python312:
+  stage: test
+  image: python:3.12
+  script: tox -e py312
