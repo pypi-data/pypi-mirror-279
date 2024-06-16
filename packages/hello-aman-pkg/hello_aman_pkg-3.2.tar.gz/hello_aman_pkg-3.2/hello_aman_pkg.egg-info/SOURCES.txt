@@ -1,0 +1,7 @@
+setup.py
+hello_aman/__init__.py
+hello_aman/hello_aman.py
+hello_aman_pkg.egg-info/PKG-INFO
+hello_aman_pkg.egg-info/SOURCES.txt
+hello_aman_pkg.egg-info/dependency_links.txt
+hello_aman_pkg.egg-info/top_level.txt
