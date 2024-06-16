@@ -1,0 +1,17 @@
+aioazuredevops/__init__.py,sha256=uESDsvlpr0vT_A4_f1I-ltpxTfN6Uw-mDVDvRoXHob0,30
+aioazuredevops/_version.py,sha256=6e0_uWLXogyKizcNnV6EQ0jj-aM4oYasJWipXutSLoo,280
+aioazuredevops/client.py,sha256=Y6daiu_a6bzOL5dpNGa9vedmJjaXR-zsUnKn-vxArsg,26457
+aioazuredevops/helper.py,sha256=2tKMDBYye5izUEs-3y7t-uc28Kl62F-BLxPFvaQikLs,3805
+aioazuredevops/models/__init__.py,sha256=VQTEN3zTitaY5w-36d2zYo49ObHcwWzj1IvcCIBgPQQ,186
+aioazuredevops/models/build.py,sha256=tQRDPqvTrinPSc7UIvPwX3gBY6GmDkhErCO_Z6nE1Go,1274
+aioazuredevops/models/core.py,sha256=zthTbP9d_10O8wOEao_WO-AHeZyORhvFJ-lk-zQcupg,1325
+aioazuredevops/models/iteration.py,sha256=RQis_IHs4qhytHg-YGBwo76vrA_8MkaciWpcJl1vvOo,682
+aioazuredevops/models/iteration_work_item.py,sha256=b3cl24rVH3F1_eLyCguUhmQk8KV4kjtcJ8Dybzv_aHs,479
+aioazuredevops/models/wiql.py,sha256=y3n8zvnqvzrVFwHs9ASerBm_QUnVqGO0KcpW7q16aag,656
+aioazuredevops/models/work_item.py,sha256=uRnk6AIIFnJZVfjd3gG7Peg1TdcZep9ohP9gOQW1adg,1320
+aioazuredevops/models/work_item_type.py,sha256=SCYRbvIlKPurDOe5gUqkfd3M2u3giuRg_TaqHrqJxq0,1131
+aioazuredevops-2.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aioazuredevops-2.2.0.dist-info/METADATA,sha256=9ee2O6QMYxqz4nYPln1z9UGXlA_D0GG4hODams860es,619
+aioazuredevops-2.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aioazuredevops-2.2.0.dist-info/top_level.txt,sha256=UmU-IUVVqlHHxpmW0tjnQSp1GN23TgzMu0TDpzuWYfU,15
+aioazuredevops-2.2.0.dist-info/RECORD,,
