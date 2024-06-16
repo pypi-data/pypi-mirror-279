@@ -1,0 +1,8 @@
+nonebot2
+nonebot-adapter-onebot
+nonebot_plugin_guild_patch
+pil_utils
+httpx
+pytz
+pillow
+ujson
