@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: storage-local
+Version: 0.1.43
+Summary: PyPI Package for Circles Storage functions
+Home-page: https://github.com/circles-zone/storage-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: boto3 >=1.28.44
+Requires-Dist: database-mysql-local >=0.0.107
+Requires-Dist: logger-local >=0.0.135
+Requires-Dist: user-context-remote >=0.0.75
+Requires-Dist: python-sdk-remote >=0.0.93
+
+This is a package for sharing common S3 functions used in different repositories
