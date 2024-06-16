@@ -1,0 +1,17 @@
+test_test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_test/test_tisc.py,sha256=38EHE7xs6s4FB2qsqojIQN3wsuMQRIbdp6wEyghjA-I,5751
+tisc/__init__.py,sha256=_LpvHLN9yDW2lYubqbAJa_Incz2EbPMOqT3Ua340Uic,72
+tisc/tisc.py,sha256=zyPMihMQzW-teTKyUZc8Y7C9DN1cTipIBFMn6U5DgOo,23189
+tisc/modules/BiLSTM.py,sha256=szfO8LXkRBRKlby9QVLQ6bFG4GYjtWcQyxeTUlE9e3I,1433
+tisc/modules/LSTM.py,sha256=AZSmBOMeLB5stcv9bdOwRW3bI7alCkUmdRXOb3HLZcY,1061
+tisc/modules/Transformer.py,sha256=QPXEjVz0-QRZJycezJyaIWDDCOFCvmtSAiZmXGW0y2U,3473
+tisc/modules/__init__.py,sha256=KCxzImuTy2B5nDpgu7IhAiPjJ1cenrXiUF7GWo-YT-Y,22
+tisc/modules/head/__init__.py,sha256=OGv4afbW6za5i8spxBTN2jsqnwqGEGCjgrC67whCpBk,55
+tisc/modules/head/head.py,sha256=9vdVYuEcm5ExLvqSgAsY0nCxoTDro6DNJuopXu81gac,919
+tisc/modules/utils/__init__.py,sha256=BeI3B9ygluMUuMCS6o_TN2-Q-wYo6_3hz8qPINwilWU,22
+tisc/modules/utils/builder.py,sha256=lGlEr_vNSjY5r_fJFYTBHJ1OH9xEd0Yf80ukH3cazI0,1905
+tisc-0.1.1.dist-info/LICENSE,sha256=jNI0bph4tRXvSrBeymp--_j4be_ubUAo8llg4aqDiJg,11538
+tisc-0.1.1.dist-info/METADATA,sha256=v0GcuWNi-u7mHGO-jv30ri_GRU65gm7hG6tsLIFdHqc,7384
+tisc-0.1.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+tisc-0.1.1.dist-info/top_level.txt,sha256=opaiVb1cgulaOJ_p91aWIbvAt8QY43lDn7h7InQSMqE,15
+tisc-0.1.1.dist-info/RECORD,,
