@@ -1,0 +1,3 @@
+[console_scripts]
+harp=harp.commandline:entrypoint
+
