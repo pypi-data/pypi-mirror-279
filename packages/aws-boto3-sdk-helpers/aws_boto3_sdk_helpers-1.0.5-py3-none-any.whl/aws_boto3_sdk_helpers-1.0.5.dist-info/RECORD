@@ -1,0 +1,17 @@
+buckets/__init__.py,sha256=qCc8K8t2xjfRe5cPziWrq7PjXUqqpKnQ3Z3oPs25cOA,36
+buckets/delete_bucket_functions.py,sha256=NyIxK4FKzImKW6lKXNJQ4NxMrBA5RWi_U6kkEhozyyc,2949
+buckets/get_bucket_functions.py,sha256=HVmo9qU1EZi-sn5cHsmfoKvE59T1jkyWaYC2jWsPVdo,1168
+buckets/list_bucket_functions.py,sha256=i9B0J4v4Y3dGvXcIJ_lgU_Hof-XiL9jJkhb2pQYK8jo,1671
+buckets/s3funcs.py,sha256=9B4YutghNnOySmlnseWdTILm3DpkRommuvm9ofUC5HA,1149
+buckets/test_s3funcs.py,sha256=sQ4bM7GqirWGyTMl1huWDPsGgh-hspnvu7vIQ92BlfU,651
+common/__init__.py,sha256=Ec3hRJs_Tu-z91v7fLaagXRm-erqIeSX4_y4GnMm1Lo,88
+common/args.py,sha256=4ta21EdJPWH3Gnm-mRQuYoWJGjKIzEk50CWanIRceEs,1970
+common/banners.py,sha256=GI9dLhh_4tl17S23akcdGVsVNR1wjNCTLec8ZuvFGJc,1070
+common/boto_client_declaration.py,sha256=igk9roSD0FVtQYjyEvEC3McH4Uc4ZAbj3-3GMMYP6m8,670
+common/exceptions.py,sha256=AiA-VTxqYWavag1fStPL3joV0kAjv0wgUrDRXsXTmXU,169
+common/logging_setup.py,sha256=0c8NVnZyqhhAU8szCjkxU12HxKrZuDc8RYiFN7QUkEM,374
+aws_boto3_sdk_helpers-1.0.5.dist-info/LICENSE,sha256=nQi0npUiffJthE20G7TphsEG8_Lr_XQd_N-KirnZsf4,1070
+aws_boto3_sdk_helpers-1.0.5.dist-info/METADATA,sha256=Ju-LdWJx-MV5EnoUcP2ItIOuo8c7OXU45_ErLXldqM8,2205
+aws_boto3_sdk_helpers-1.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aws_boto3_sdk_helpers-1.0.5.dist-info/top_level.txt,sha256=SWXyXVr4ekH8j1w15kecWU1ouifOrlwc1LbhtHMZsFM,15
+aws_boto3_sdk_helpers-1.0.5.dist-info/RECORD,,
