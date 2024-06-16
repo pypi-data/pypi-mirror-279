@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: bytez
+Version: 0.2.1
+Summary: Python API client for Bytez service
+Home-page: https://github.com/bytez-com/docs
+Author: Bytez
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.32.1)
+
+# Bytez Documentation
+
+### Community
+Follow us on X, where we share papers and models trending in the community.
+
+[![](https://img.shields.io/badge/Bytez-000000?style=for-the-badge&logo=x&=logoColor=white)](https://x.com/Bytez)
+
+We also hang out in Discord. Join us!
+
+[![](https://dcbadge.limes.pink/api/server/https://discord.gg/Zrd5UbMEBA)](https://discord.com/invite/Z723PfCFWf)
+
+
+### Reference
+* [Inference API Reference](./api.md)
+
+
