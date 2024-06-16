@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gender-local
+Version: 0.0.12
+Summary: PyPI Package for Circles gender-local Local/Remote Python
+Home-page: https://github.com/circles-zone/gender-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: database-mysql-local
+Requires-Dist: logger-local
+Requires-Dist: language-remote
+
+This is a package for sharing common CRUD operation of gender to the database
