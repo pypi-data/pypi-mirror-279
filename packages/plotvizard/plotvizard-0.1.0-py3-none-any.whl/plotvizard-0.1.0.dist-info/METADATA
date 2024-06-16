@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: plotvizard
+Version: 0.1.0
+Summary: A data visualization library with interractive functionalities
+Home-page: https://github.com/Chanaka-Prasanna/visualizer
+Author: Chanaka Prasanna
+Author-email: chanakapinfo@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: dash
+Requires-Dist: plotly
+
