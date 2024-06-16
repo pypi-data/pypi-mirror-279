@@ -1,0 +1,3 @@
+[console_scripts]
+niamoto=niamoto.cli.commands:cli
+
