@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+src/fractlang/__init__.py
+src/fractlang/__main__.py
+src/fractlang.egg-info/PKG-INFO
+src/fractlang.egg-info/SOURCES.txt
+src/fractlang.egg-info/dependency_links.txt
+src/fractlang.egg-info/entry_points.txt
+src/fractlang.egg-info/top_level.txt
