@@ -1,0 +1,31 @@
+[project]
+name = "asynctasklist"
+version = "0.1"
+description = "descript goes here"
+readme = "README.md"
+requires-python = ">=2.7"
+authors = [{name = "moojor224"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/moojor224/asynctasklist"
+Changelog = "https://github.com/moojor224/asynctasklist/releases"
+Issues = "https://github.com/moojor224/asynctasklist/issues"
+CI = "https://github.com/moojor224/asynctasklist/actions"
+
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.distutils.bdist_wheel]
+universal = true
