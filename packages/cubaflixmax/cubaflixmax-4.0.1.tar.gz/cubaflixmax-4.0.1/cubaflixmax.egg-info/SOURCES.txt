@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+cubaflixmax/__init__.py
+cubaflixmax/version.py
+cubaflixmax.egg-info/PKG-INFO
+cubaflixmax.egg-info/SOURCES.txt
+cubaflixmax.egg-info/dependency_links.txt
+cubaflixmax.egg-info/requires.txt
+cubaflixmax.egg-info/top_level.txt
+cubaflixmax.egg-info/zip-safe
