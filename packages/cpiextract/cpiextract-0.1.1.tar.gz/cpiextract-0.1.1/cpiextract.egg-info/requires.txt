@@ -1,0 +1,10 @@
+pandas
+numpy
+mysql-connector-python
+biomart>=0.9.1
+chembl_webresource_client>=0.10.8
+pubchempy==1.0.4
+tqdm
+
+[interactive]
+jupyter
