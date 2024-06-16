@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+django_allauth_vatsim/__init__.py
+django_allauth_vatsim/adapter.py
+django_allauth_vatsim/apps.py
+django_allauth_vatsim/provider.py
+django_allauth_vatsim/urls.py
+django_allauth_vatsim/views.py
+django_allauth_vatsim.egg-info/PKG-INFO
+django_allauth_vatsim.egg-info/SOURCES.txt
+django_allauth_vatsim.egg-info/dependency_links.txt
+django_allauth_vatsim.egg-info/requires.txt
+django_allauth_vatsim.egg-info/top_level.txt
+tests/test_settings.py
+tests/tests.py
