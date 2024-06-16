@@ -1,0 +1,25 @@
+start : views sounds? view_inicial? position? size?
+
+views : "Views:" view+
+view  : "- View animado" ID ":" images repiticoes timesprite -> view_animado
+        | "- View" ID ":" image                                -> view_simples
+
+sounds    : "Sons:" sound+
+sound     : "- Sound" ID ":" source
+
+images : "- Imagens:" "[" TEXTO ("," TEXTO)* "]"
+image  : "- Imagem:" TEXTO
+repiticoes: "- Repitições:" NUM
+timesprite: "- Time-Sprite:" NUM
+
+source: "- Fonte:" TEXTO
+
+view_inicial: "View inicial:" ID
+position: "Posição:" "(" NUM "," NUM ")"
+size: "Tamanho:" "[" NUM "," NUM "]"
+
+ID            : /[\w\-_]+/
+%import common.ESCAPED_STRING   -> TEXTO
+%import common.SIGNED_NUMBER    -> NUM
+%import common.WS
+%ignore WS

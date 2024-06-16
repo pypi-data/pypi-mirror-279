@@ -1,0 +1,6 @@
+[console_scripts]
+erengine=erpl:erengine
+erparse=erpl:erparse
+erpe=erpl:erpe
+erpl=erpl:erpl
+
