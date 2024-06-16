@@ -1,0 +1,3 @@
+requests>=2.31.0
+python-sdk-remote>=0.0.93
+url-remote>=0.0.28
