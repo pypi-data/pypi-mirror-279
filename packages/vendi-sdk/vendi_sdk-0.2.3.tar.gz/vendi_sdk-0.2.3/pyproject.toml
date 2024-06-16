@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "vendi-sdk"
+version = "0.2.3"
+description = "Vendi SDK"
+authors = ["Aviv.a <aviv@vendi-ai.com>"]
+packages = [
+    { include = "vendi_sdk", from = "src" },
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tenacity = "^8.2.3"
+requests = "^2.31.0"
+pydantic = "^2.5.2"
+pydantic-settings = "^2.1.0"
+pandas = "*"
+aiohttp = "^3.8.1"
+traceloop-sdk = "^0.21.4"
+sentry-sdk = "^2.2.0"
+
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
