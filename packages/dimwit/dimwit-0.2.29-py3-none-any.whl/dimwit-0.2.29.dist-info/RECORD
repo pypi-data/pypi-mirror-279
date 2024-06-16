@@ -1,0 +1,11 @@
+dimwit/__init__.py,sha256=BLoq9GRpbtQYUtLCPq1o4HoGQvuMjERTjFl9w1SHPns,167
+dimwit/air_pollution.py,sha256=lMWECzwleHM70Zz7icMxnWTtiO6aH_Llkn8bQX0vHb8,12235
+dimwit/airflow.py,sha256=FFc8qMAS8FifgIlj2OK06BYZfAQHgFgC1bH7cV1-nO0,8015
+dimwit/legacy.py,sha256=dshicgAwoxWGNOwfVFtq4LO9bOQcPziqE_QhvbKhl6Q,3175
+dimwit/main.py,sha256=ONQUyx0tiR7A3MZAaG--pWQC3gT2gzXsZx-XQ6IUf2w,14091
+dimwit/pomodoro.py,sha256=Ie7p82KuFUDHOhcXxFxgkimzxSWbZE1bLT1NOf8W-_w,5987
+dimwit/sleep.py,sha256=viYiMBaHAud1sNxw02Vn0ZSGwc4A4Qsr9leLmtOoF1Y,19300
+dimwit/weight.py,sha256=5LhkKZznRWtmDqynj_WU4xZefvsxtJsICixAzrFQ1Lo,2095
+dimwit-0.2.29.dist-info/METADATA,sha256=tT6qGRv7RpjV4S7UpRmJSp4W2doFllJzu7MvtHgoYP8,1136
+dimwit-0.2.29.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+dimwit-0.2.29.dist-info/RECORD,,
