@@ -1,0 +1,17 @@
+.gitignore
+.pre-commit-config.yaml
+Dockerfile
+LICENSE
+MANIFEST.in
+Makefile
+README.md
+docker-compose.yml
+pyproject.toml
+setup.py
+src/opal_fetcher_mysql/__init__.py
+src/opal_fetcher_mysql/provider.py
+src/opal_fetcher_mysql.egg-info/PKG-INFO
+src/opal_fetcher_mysql.egg-info/SOURCES.txt
+src/opal_fetcher_mysql.egg-info/dependency_links.txt
+src/opal_fetcher_mysql.egg-info/requires.txt
+src/opal_fetcher_mysql.egg-info/top_level.txt
