@@ -1,0 +1,10 @@
+LICENCE,sha256=ITOgPnNDMd5OU3fW9knUnsXD0bzFeuJeIJw0jl_14t8,1552
+openscm_units/__init__.py,sha256=MN0xplWtWzJFzblk7umJYNF381ssQqfmpeo6da16pZE,634
+openscm_units/_unit_registry.py,sha256=xffP32EhXyKKjxuh-HSMCHYwS_NSjpL2ltC3NtFrowE,16852
+openscm_units/data/__init__.py,sha256=S7DqyPMqL1OwzkJ69phWz2wweOK8C8g0uNFXq6J8fAk,135
+openscm_units/data/mixtures.py,sha256=U-2hzzwLuq6rdo8DPDbXbY3PrNxnBoR0ehIsKtV-x2A,14689
+openscm_units/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openscm_units-0.6.0.dist-info/LICENCE,sha256=ITOgPnNDMd5OU3fW9knUnsXD0bzFeuJeIJw0jl_14t8,1552
+openscm_units-0.6.0.dist-info/METADATA,sha256=YzO9QTZsVFa4ydHqrRHDa4vW2YQikqwHNy9GMiX8Swo,3911
+openscm_units-0.6.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+openscm_units-0.6.0.dist-info/RECORD,,
