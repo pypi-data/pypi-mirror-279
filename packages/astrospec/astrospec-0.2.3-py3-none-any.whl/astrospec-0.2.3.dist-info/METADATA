@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: astrospec
+Version: 0.2.3
+Summary: astronomy spectroheliograph data processing tools
+Home-page: https://github.com/liangchen-harold/astrospec
+Author: liangchen
+Author-email: lcpcsky@gmail.com
+License-File: LICENSE
+Requires-Dist: einops ~=0.8.0
+Requires-Dist: lsq-ellipse ~=2.2.1
+Requires-Dist: numpy ~=1.23.4
+Requires-Dist: opencv-python ~=4.6.0.66
+Requires-Dist: tqdm ~=4.63.0
+

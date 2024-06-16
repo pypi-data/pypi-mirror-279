@@ -1,0 +1,2 @@
+[console_scripts]
+ascli = astrospec.cli:main
