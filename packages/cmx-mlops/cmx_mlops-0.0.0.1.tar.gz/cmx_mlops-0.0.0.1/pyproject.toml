@@ -1,0 +1,79 @@
+#
+# Developed by cKnowledge.org and cTuning.org
+#
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "cmx-mlops"
+
+authors = [
+    {name = "Grigori Fursin", email = "gfursin@cknowledge.org"}
+]
+
+description = "CM automation recipes and workflows to run and reproduce MLPerf benchmarks"
+
+requires-python = ">=3.8"
+
+dependencies = [
+    "pyyaml",
+    "requests",
+    "setuptools",
+    "cmind"
+]
+
+keywords = [
+    "cmind",
+    "cmx_mlops",
+    "automation",
+    "portability",
+    "modularity",
+    "cknowledge",
+    "ctuning",
+    "mlcommons",
+    "mlperf",
+    "mlops"
+]
+
+license = {text = "Apache Software License (Apache 2.0)"}
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development",
+    "Topic :: System",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dynamic = ["readme", "version"]
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cmx_mlops", "cmx_mlops.*"]
+exclude = ["docs", "docs.*", "tests", "tests.*"]
+
+[tool.setuptools.package-data]
+cmx_mlops = [
+  "internal/**/*"
+]
+
+#[tool.setuptools.package-data]
+#"cmx_mlops.internal" = ["*.yaml", "*.json", "*.md"]
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md", content-type = "text/markdown"}
+version = {attr = "cmx_mlops.__version__"}

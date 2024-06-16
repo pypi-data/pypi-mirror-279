@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: cmx-mlops
+Version: 0.0.0.1
+Summary: CM automation recipes and workflows to run and reproduce MLPerf benchmarks
+Author-email: Grigori Fursin <gfursin@cknowledge.org>
+License: Apache Software License (Apache 2.0)
+Keywords: cmind,cmx_mlops,automation,portability,modularity,cknowledge,ctuning,mlcommons,mlperf,mlops
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: Topic :: Software Development
+Classifier: Topic :: System
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: setuptools
+Requires-Dist: cmind
+
+TBD
