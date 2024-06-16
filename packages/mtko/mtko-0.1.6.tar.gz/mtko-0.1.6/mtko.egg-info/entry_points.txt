@@ -1,0 +1,4 @@
+[console_scripts]
+mtko = mtko.main:main
+mtko-setkey = mtko.env_setup:setup_env
+

@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: mtko
+Version: 0.1.6
+Summary: A CLI tool for sending commands, error messages, tracebacks, and file contents directly to OpenAI GPT models without leaving your terminal.
+Home-page: https://github.com/palmtreeshinobi/mtko/
+Author: Van
+License: MIT
+Project-URL: Source Code, https://github.com/palmtreeshinobi/mtko/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# mtko
+
+## Installation
+
+1. Install the package:
+    ```sh
+    pip install mtko
+    ```
+
+    During the installation, you will be prompted to enter your OpenAI API key. The script will create or update a `.env` file with your API key. The `.env.example` file remains as a reference.
+
+2. Verify that the `.env` file has been created/updated with your API key:
+    ```sh
+    nano .env
+    ```
+
+## Usage
+
