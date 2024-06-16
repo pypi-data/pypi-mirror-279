@@ -1,0 +1,13 @@
+README.md
+setup.py
+plotvizard/__init__.py
+plotvizard/data_processing.py
+plotvizard/interactivity.py
+plotvizard/plotting.py
+plotvizard.egg-info/PKG-INFO
+plotvizard.egg-info/SOURCES.txt
+plotvizard.egg-info/dependency_links.txt
+plotvizard.egg-info/entry_points.txt
+plotvizard.egg-info/requires.txt
+plotvizard.egg-info/top_level.txt
+tests/test_library.py
