@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: bk-tree-modification
+Version: 0.1
+Summary: A simple BK-Tree implementation for finding similar words
+Home-page: UNKNOWN
+Author: Karen Arcoverde
+Author-email: arcoverdek@gmail.com
+License: UNKNOWN
+Description: # topicos-especiais-sd
+        ## CorreÃ§Ã£o OrtogrÃ¡fica AutomÃ¡tica de Palavras Baseada em DicionÃ¡rio
+        
+        Foi feito um estudo dos possÃ­veis algoritmos que poderiam ser implementados para este projeto. Por conseguinte, foi escolhido o melhor algoritmo para implementaÃ§Ã£o.
+        
+        ### DistÃ¢ncia de Levenshtein
+        
+        A **distÃ¢ncia de Levenshtein** Ã© a parte principal desse projeto, pois todos os algoritmos usados derivam-se dele. Ã‰ possÃ­vel perceber que ela foi utilizada em quase todos os algoritmos pesquisados. Ela mede o nÃºmero mÃ­nimo de ediÃ§Ãµes necessÃ¡rias para transformar uma string em outra. Estas ediÃ§Ãµes incluem inserÃ§Ãµes, deleÃ§Ãµes e substituiÃ§Ãµes de caracteres.
+        
+        ### BK-Tree
+        
+        A BK-Tree consiste em botar as palavras em uma Ã¡rvore com pesos (distÃ¢ncia de Levenshtein) e pecorrer a Ã¡rvore pegando todas as distÃ¢ncias menores ou iguais a distÃ¢ncia limite estipulada. 
+        
+        Para descobrir a distÃ¢ncia entre duas palavras, Ã© criada a matriz dp. A matriz dp[m][n] representa a distÃ¢ncia total (Levenshtein) entre duas strings(a e b). A matriz dp tem dimensÃµes (m+1)x(n+1), sendo m o comprimento da string a e n o comprimento da string b. Cada cÃ©lula dp[i][j] armazena a distÃ¢ncia de ediÃ§Ã£o mÃ­nima entre as substrings a[0:i] e b[0:j]. A matriz Ã© inicializada com dp[i][0] = i e dp[0][j] = j, indicando as transformaÃ§Ãµes para strings vazias. O preechimento da matriz comeÃ§a no dp[1][1] atÃ© dp[m][n], para cada cÃ©lula dp[i][j], os caracteres da string a[i-1] e b[j-1] sÃ£o comparados. Para o caso de serem iguais, dp[i-1][j-1] Ã© transferido diretamente para dp[i][j], o que significa que nÃ£o precisa ter nenhuma ediÃ§Ã£o. Se forem diferentes, a cÃ©lula Ã© preenchida com o mÃ­nimo entre as possÃ­veis operaÃ§Ãµes(inserÃ§Ã£o, deleÃ§Ã£o e substituiÃ§Ã£o).
+        
+        Depois para buscar palavras semelhantes na Ã¡rvore, Ã© verificado a distÃ¢ncia de ediÃ§Ã£o entre o nÃ³ root e a palavra, caso ela seja menor que a variÃ¡vel "TOL" (tolerÃ¢ncia), a palavra do root Ã© adicionada a lista de resultados. ApÃ³s essa verificaÃ§Ã£o, Ã© analisada os nÃ³s filhos de root investigando quais palavras tem as distÃ¢ncias dentro do intervalo [distÃ¢ncia - TOL, distÃ¢ncia + TOL] para adicionar na lista de resultados.
+        
+        Para adicionar a palavra na Ã¡rvore, temos algumas etapas:
+        1. Se o nÃ³ root estÃ¡ vazio, a palavra atual (curr) que estÃ¡ sendo lida Ã© colocada nesse nÃ³.
+        2. Se jÃ¡ existe a palavra no root, Ã© calculada a distÃ¢ncia entre o root e a palavra (curr) que precisamos adicionar.
+        3. Se nÃ£o possuir nÃ³ para essa distÃ¢ncia na Ã¡rvore no vetor next, cria-se um novo espaÃ§o para essa palavra (curr), atualizando o vetor next para apontar para ela e incrementando o contador ptr.
+        4. Se ja existir um nÃ³ para essa distÃ¢ncia, nÃ£o Ã© criado um novo espaÃ§o, adiciona a palavra (curr) nesse nÃ³ existente. 
+        
+        
+        
+        ### FuzzyWuzzy
+        
+        
+        ### FÃ³rmula de CÃ¡lculo da Similaridade
+        
+        A similaridade entre duas strings Ã© calculada usando a seguinte fÃ³rmula:
+        
+        ```plaintext
+        Similaridade = (1 - (DistÃ¢ncia de Levenshtein / Comprimento mÃ¡ximo das duas strings)) * 100
+        ```
+        Esta fÃ³rmula fornece um valor percentual que reflete quÃ£o semelhantes sÃ£o as duas strings baseado na distÃ¢ncia de Levenshtein, onde 100% representa uma correspondÃªncia perfeita e 0% indica nenhuma similaridade.
+        
+        ### ReferÃªncias
+        http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
+        https://www.youtube.com/watch?v=oIsPB2pqq_8 \
+        https://medium.com/datenworks/fuzzy-search-buscando-texto-por-aproxima%C3%A7%C3%A3o-6c7214e0ea01
+        
+Keywords: bktree edit distance similarity
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown

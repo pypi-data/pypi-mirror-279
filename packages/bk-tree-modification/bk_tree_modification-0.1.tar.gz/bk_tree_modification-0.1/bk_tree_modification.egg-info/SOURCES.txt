@@ -1,0 +1,8 @@
+README.md
+setup.py
+bk_tree/__init__.py
+bk_tree/bktree.py
+bk_tree_modification.egg-info/PKG-INFO
+bk_tree_modification.egg-info/SOURCES.txt
+bk_tree_modification.egg-info/dependency_links.txt
+bk_tree_modification.egg-info/top_level.txt
