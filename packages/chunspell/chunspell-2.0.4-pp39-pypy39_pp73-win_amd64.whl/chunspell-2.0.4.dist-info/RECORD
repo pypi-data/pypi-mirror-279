@@ -1,0 +1,13 @@
+hunspell/__init__.py,sha256=1vabQfjWGz041X6dgab1Q5RVMepg_WF-ngiBRFl3-3U,179
+hunspell/_version.py,sha256=_8O6Dkx4m-hgLjv1AEsF30CrGCHrALAypRzKN4OvSk0,23
+hunspell/hunspell.cpp,sha256=6ZVB80aR5CXGJAKblGx6D2Cz04FAL5RFeIIFOLbW_oU,664599
+hunspell/hunspell.pxd,sha256=38uUoXdN8ca7ZupgP85fGQNeOAdw1hdl6DO1lZIuTb0,3546
+hunspell/hunspell.pypy39-pp73-win_amd64.pyd,sha256=fENh2gNRFmIQqYVdNcqwLgjHjER9ddjPE_3fncEaY8E,539648
+hunspell/hunspell.pyx,sha256=OzU0Pbkk5Em4c49TVYONOtSPd5lyEX0O2JkZfUlggw8,10283
+hunspell/dictionaries/en_US.aff,sha256=vblheI9W4IyNswHDfI5z4q6Ccgm8D1qICf5aH23Yhao,11818
+hunspell/dictionaries/en_US.dic,sha256=pSq2aLgONoNJxfVQauRHo1f1aUpHojWyx8OurJfY8Ng,936566
+chunspell-2.0.4.dist-info/LICENSE,sha256=xCvFZEHhOJP2npGzofpuVpBBMrVEx8snIDOxZeUOrQk,1178
+chunspell-2.0.4.dist-info/METADATA,sha256=2t14ukdF1yr3ZTuKb2ALJ8BCXuu5pmzxWbhApNCE5Rg,4949
+chunspell-2.0.4.dist-info/WHEEL,sha256=0MDxp1g6SMi6x5fNLQYB_oq4z1ZIM2F5EzPGH_eSWIs,107
+chunspell-2.0.4.dist-info/top_level.txt,sha256=EX-nZ4hghQhRMd2SlktQk_DyyfuQUJlJMFS3biTnVTk,9
+chunspell-2.0.4.dist-info/RECORD,,
