@@ -1,0 +1,8 @@
+{% extends 'blog/blog_base.html' %}
+{% load solo_tags %}
+{% load martortags %}
+{% block title %}<title>PRIVACY POLICY</title>{% endblock %}
+{% block content %}
+{% get_solo 'tbase_page.BasePage' as BasePage %}
+{{BasePage.privacy_policy|safe_markdown}}
+{% endblock %}
