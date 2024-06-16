@@ -1,0 +1,11 @@
+basefunctions/__init__.py,sha256=oQE1ZSL7dYQT-KM00B3Qgm3W5LSf9L5FJw5vc05ECOw,2990
+basefunctions/database.py,sha256=Pu70NhZfH3P6egdX0BUqUYQ2EVI2clg3nUxSxJX1whM,5349
+basefunctions/filefunctions.py,sha256=lvtfu6A_fgwKNL6yhAB7JR9HTBgXiOgC9jpgn23_Hvw,14876
+basefunctions/observer.py,sha256=iV1TvIsr4PtRwCq8CoaXKftAPIFl-JflCtF_PQg5D9s,2559
+basefunctions/singleton.py,sha256=B1Ql4TPmYsyp0gsqBWggTEJBLEGefqOoYCUY4TrTbqU,1853
+basefunctions/threadpool.py,sha256=lt53akPpi5Q-C1VTcgwHJryxSG_VyYrkalrryFpvuxo,16670
+basefunctions/utils.py,sha256=b_ZvTRe10WsljNJKJvXOzJ8mQQ79tilp63chIH7E45Q,1671
+basefunctions-0.3.12.dist-info/METADATA,sha256=91L-86qP6MqErLiiPkEGatpVEduZI-lQMColLNiADe4,7231
+basefunctions-0.3.12.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+basefunctions-0.3.12.dist-info/top_level.txt,sha256=NVj1fe5ixe1-nCqPKnd3BJncMFdT_dPo8LJ9wh8NNjg,14
+basefunctions-0.3.12.dist-info/RECORD,,
