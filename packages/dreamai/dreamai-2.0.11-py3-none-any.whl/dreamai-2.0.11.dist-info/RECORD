@@ -1,0 +1,13 @@
+dreamai/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dreamai/ai.py,sha256=TtVSJQmTy1DOP6Soa8gMNBC-hPvXQuUumwBnQpucsF4,4451
+dreamai/chroma.py,sha256=hr-BpAD55Oo5PpmWjfFcw759eNO3LBd0sZ0fS2KGrO4,6127
+dreamai/g_apis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dreamai/g_apis/auth.py,sha256=2zV1oQVpHVQaRdAeiRJUb2Sh722ODg6gPkC3LiUO9C8,1602
+dreamai/g_apis/quiz.py,sha256=mhWOU3sWW6w9gmQfOEHaiLfHc22UQaAxKXD1G0zJG-Q,2902
+dreamai/g_apis/slides.py,sha256=MSArnXr9HKlrQDlP3l4-1wbsZpLt57Wc-5jVyWKVF7E,6645
+dreamai/pdf.py,sha256=gxmW-9XbU6YjRbo4UJ9VC1ob46L8hi2ar3wnM2T4wKM,1897
+dreamai/templates.py,sha256=O6kbnx2HxtTfe7Y2s6ZJxxK9ZZ9zY6Uc3NdeUPNpiQQ,1242
+dreamai/utils.py,sha256=U2wBeiJk0qeFdfmvMoM1TxTLHT5OISjzjCxktUc1ueY,12777
+dreamai-2.0.11.dist-info/METADATA,sha256=h5YuwmWww_R2QaiLYK9hUUefsVbP7N9D70y1vmpjdyM,2305
+dreamai-2.0.11.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+dreamai-2.0.11.dist-info/RECORD,,
