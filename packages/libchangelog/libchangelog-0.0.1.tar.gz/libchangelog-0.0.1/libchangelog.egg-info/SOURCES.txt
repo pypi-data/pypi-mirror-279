@@ -1,0 +1,7 @@
+README.md
+setup.py
+libchangelog/__init__.py
+libchangelog.egg-info/PKG-INFO
+libchangelog.egg-info/SOURCES.txt
+libchangelog.egg-info/dependency_links.txt
+libchangelog.egg-info/top_level.txt
