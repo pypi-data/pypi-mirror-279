@@ -1,0 +1,17 @@
+ecfxa/__init__.py,sha256=7lutjOkKWEbYKGUyJ4IRsTAzF65wGlmBK1OB_fYul4Y,77
+ecfxa/ecfs.py,sha256=oH7zjufpcbmF3l296MKilbHZHj4b-rGVrb-PzQuQCcs,193
+ecfxa/erosita.py,sha256=eHIUZy1_nW78kbJAsmlD56XOeZOLymvHnKdEVXZNMH0,5172
+ecfxa/singleton.py,sha256=Jw8TiWLaylNILTlymBDgI6nnzn7f5-LWxbotydwaQpQ,1525
+ecfxa/swift.py,sha256=daER47Ow9wvxAdiuJ4ArlLypFMqJzUqUKf_P7wcQOSk,6089
+ecfxa/xmm.py,sha256=-NVAv_fh_1ufh_jMfI2hCM5ya5dPBIbfRpnmujyENU0,8742
+ecfxa/data/erosita_abscorr_ecfs.json.gz,sha256=OX8C36AGn7kA_4oMMf9_T52kGCuL65XvCJFijSBgydQ,47769
+ecfxa/data/erosita_ecfs.json.gz,sha256=r6aRWnqYLBLHPVhy4RihemCBKeVM75IHH6PbpXBST58,46541
+ecfxa/data/swift_abscorr_ecfs.json.gz,sha256=rBVJNdv4S_-gxyUXssnJ27N8IVkWaZvF6aeerLADJvM,571125
+ecfxa/data/swift_ecfs.json.gz,sha256=D8e9NIt09pc6jx4a-HlTp2rI-S328TcmNp5cLfjzZD0,556836
+ecfxa/data/xmm_abscorr_ecfs.json.gz,sha256=zvawHSP2WNN4HyQ6mP-jDQmgX0L600JbzInrcShh83g,5046223
+ecfxa/data/xmm_ecfs.json.gz,sha256=7Sf9Uq4ZNhiIU2ZRl-1HpVXGPvs9Ko0tHSwi1-b5iGg,4969097
+ecfxa-1.0.dist-info/LICENSE,sha256=xk7z9cG5qFLy6l-p6ieQ1mjQV-MBgCvlFrvJ8v_EVpY,1681
+ecfxa-1.0.dist-info/METADATA,sha256=Fvd8z-NKopYPlX_PNGSrzOBp_2GEc2yIjJ5F-gbYMoA,2333
+ecfxa-1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ecfxa-1.0.dist-info/top_level.txt,sha256=xHnVxSuaVzX7IW5-b8DBji0PXaj0JTCKOs2gaCulBwA,6
+ecfxa-1.0.dist-info/RECORD,,
