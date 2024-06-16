@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: torrechess
+Version: 0.0.1
+Summary: Playing around with neural networks and funny chess engines
+Author-email: Riccardo Torreggiani <riccardo.torreggiani@gmail.com>
+Project-URL: Homepage, https://github.com/rktr1998/torrechess
+Project-URL: Issues, https://github.com/rktr1998/torrechess/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# torre-chess
+Playing around with neural networks for chess and blazing fast python loops
