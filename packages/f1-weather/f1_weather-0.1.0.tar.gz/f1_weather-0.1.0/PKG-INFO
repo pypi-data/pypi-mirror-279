@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: f1-weather
+Version: 0.1.0
+Summary: A weather app for Formula 1 enthusiasts
+Author: Joe Borg
+Author-email: joe@josephb.org
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: click-default-group (>=1.2.4,<2.0.0)
+Requires-Dist: icalendar (>=5.0.12,<6.0.0)
+Requires-Dist: openmeteo-requests (>=1.2.0,<2.0.0)
+Requires-Dist: osmpythontools (>=0.3.5,<0.4.0)
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: requests-cache (>=1.2.0,<2.0.0)
+Requires-Dist: retry-requests (>=2.0.0,<3.0.0)
+Requires-Dist: tabulate (>=0.9.0,<0.10.0)
+Description-Content-Type: text/markdown
+
+# Formula 1 Weather
+
