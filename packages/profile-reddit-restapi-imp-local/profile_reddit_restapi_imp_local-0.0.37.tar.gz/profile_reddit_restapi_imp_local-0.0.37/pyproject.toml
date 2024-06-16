@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.poetry]
+name = "profile-reddit-restapi-imp-local"
+version = "0.0.37" # https://pypi.org/project/profile-local-reddit-restapi-imp-python-package
+description = "profile-reddit-restapi-imp Python Package"
+readme = "README.md"
+authors = [
+    "Circlez.ai <info@circlez.ai>",
+]

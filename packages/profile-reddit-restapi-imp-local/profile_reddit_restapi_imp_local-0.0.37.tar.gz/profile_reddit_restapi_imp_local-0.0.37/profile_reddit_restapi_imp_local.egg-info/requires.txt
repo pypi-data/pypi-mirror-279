@@ -1,0 +1,12 @@
+praw>=7.4.0
+tqdm>=4.64.1
+requests
+data-source-local
+entity-type-local>=0.0.13
+importer-local>=0.0.43
+location-local
+logger-local>=0.0.93
+profile-local>=0.0.61
+group-remote>=0.0.105
+python-sdk-remote>=0.0.65
+user-context-remote>=0.0.54
