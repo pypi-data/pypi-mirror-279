@@ -1,0 +1,9 @@
+aisolutions/__init__.py,sha256=zz6jIUKofIkxUsGHOCIe1ex3iwnA6uREjLUDVTCNH1o,75
+aisolutions/open_ai_client.py,sha256=E41Fk0BpmRbFf4OHtFgflLoW03wOuSV4isOqZonbBDg,280
+aisolutions/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aisolutions/services/get_image_description_by_url.py,sha256=z9QQiXgZossMcFmLBVCau2JKfJA9NnDImO7JLF_r-Co,1377
+aisolutions-0.1.0.dist-info/LICENSE,sha256=KIimYsxRlLm4PdJ_G2X-gY_6S0UlqWHDHTy5Agmp638,1073
+aisolutions-0.1.0.dist-info/METADATA,sha256=T3IsUInyi0h1AOUR4vivh0KMJRbW0eBbl7g5-ZyxUdY,295
+aisolutions-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+aisolutions-0.1.0.dist-info/top_level.txt,sha256=j67TaalBeV9vIlN-8zfV4pWtv0-EdlYYKCPMt_Z9nFU,12
+aisolutions-0.1.0.dist-info/RECORD,,
