@@ -1,0 +1,12 @@
+flowpulse/AzureDevOpsWorkItemService.py,sha256=OcJguwXpRyuoQ-1lYO6yUXX0HLizn_GOt1x04nForVQ,2749
+flowpulse/ExampleConfig.json,sha256=cCJkEBZz085wngoEZ7Vw42Pe_w4fTrcA4u8IxTIDfB8,3077
+flowpulse/JiraWorkItemService.py,sha256=k_2t2OBgCVihQoosKeS7GXpmf4zw9l1Bg-gkzcWCc1I,1777
+flowpulse/WorkItem.py,sha256=PdmLUB1l38e4VryM101HXy8ouptb0NvF1XWB6g07snM,1582
+flowpulse/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flowpulse/main.py,sha256=me0yoRVP3jqhjuOb6YuTeKAvjCZefXzDZf7V_Y57C1M,11834
+flowpulse-0.9.0.dist-info/LICENSE,sha256=tqQaJs9dyQI9tFW77l6o05-MUT9yleKgTRsvXZtkOI0,1067
+flowpulse-0.9.0.dist-info/METADATA,sha256=FqsUiq2G2N0FyhGjadVQliO3movgZyCX0Ebs4NLMdMs,15069
+flowpulse-0.9.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+flowpulse-0.9.0.dist-info/entry_points.txt,sha256=dKwxdpupj97X78eL83CjtE7SIi4miRZ5URWZZwQz13M,50
+flowpulse-0.9.0.dist-info/top_level.txt,sha256=lIk6FS1ZuEdnfwN4eD-up11BxcGfzRpsNhIjWQgjWTc,10
+flowpulse-0.9.0.dist-info/RECORD,,
