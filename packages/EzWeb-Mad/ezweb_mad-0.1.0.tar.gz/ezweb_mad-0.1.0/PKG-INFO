@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: EzWeb-Mad
+Version: 0.1.0
+Summary: A module to make more ez to coding ur web
+Author: mad6453
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: Flask
+
+# EzWeb Module
+
+EzWeb is a collection of modules for handling web technologies:
+
+- EzCSS: A module for managing CSS.
+- EzHTML: A module for processing HTML.
+- EzJS: A module for working with JavaScript.
+
+Each module provides functionalities to simplify web development tasks.
+
+## Installation
+
+You can install EzWeb using pip:
+
+```
+pip install EzWeb
+```
+
+## Usage
+
+### EzCSS
+
+```python
+from EzWeb import EzCSS
+
+# Example usage
+css_parser = EzCSS()
+parsed_css = css_parser.parse('styles.css')
+```
+
+### EzHTML
+
+```python
+from EzWeb import EzHTML
+
+# Example usage
+html_converter = EzHTML()
+converted_html = html_converter.ezhtml_to_html('$div[Hello, World!]')
+```
+
+### EzJS
+
+```python
+from EzWeb import EzJS
+
+# Example usage
+js_minifier = EzJS()
+minified_js = js_minifier.minify('script.js')
+```
+```
+For detailed documentation, refer to the specific module documentation.
+```
