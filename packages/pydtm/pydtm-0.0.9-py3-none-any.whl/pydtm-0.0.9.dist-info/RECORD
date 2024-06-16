@@ -1,0 +1,13 @@
+pydtm/__init__.py,sha256=Vmv7xi7t4ryqFqKU7ZIRh8UJlSKM4UsltB6kSYKajyQ,439
+pydtm/api.py,sha256=0MnG3Ht0j0Y0Emr5By5CSGr5e_sxAq1290jmswOEhbs,11739
+pydtm/utils.py,sha256=dnPVJmgw9o_QpkMKIGpZUOSoIQsvcsNd6b1O87yUTrs,15400
+pydtm/__pycache__/__init__.cpython-39.pyc,sha256=nNhnGhp1DhVJlN2KGJ-HTqyt7Ygx9XNNQvFUMPRj7EQ,522
+pydtm/__pycache__/api.cpython-39.pyc,sha256=gbcVeg1nZzO7zPPqjrL1Zs6kCWiC-57gtcYEQlvJ1Kc,5712
+pydtm/__pycache__/utils.cpython-39.pyc,sha256=2vxif8u_hSB3QlwAtj-WVS9BVfn_fCTuzogKvr9-HtU,15558
+pydtm/data/README.md,sha256=9EPD7VSDgPngJTfjLRKZ-uqRCTwdEgf5u9RRYF7SMt4,217
+pydtm/data/countries_codes_and_coordinates.csv,sha256=H_GtkgNKSlkxOPy7dXDsUBXDwopEdvlQFaOdC_JXOCo,13113
+pydtm-0.0.9.dist-info/LICENSE,sha256=m6K79L4LBAfbLEteQXv9valmwlb2wA6shPK_FqA-b8U,1073
+pydtm-0.0.9.dist-info/METADATA,sha256=EH-NP9XXQCQukTpndK9sW3iwCU2qqp2iY-8601BSY5k,1309
+pydtm-0.0.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pydtm-0.0.9.dist-info/top_level.txt,sha256=xIf_6r7s7t3RMuiVzGsS65zXCVWBMfo_9wbMiZ5VMxY,6
+pydtm-0.0.9.dist-info/RECORD,,
