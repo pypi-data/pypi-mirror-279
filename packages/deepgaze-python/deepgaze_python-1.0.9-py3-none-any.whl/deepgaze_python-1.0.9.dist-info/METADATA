@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: deepgaze-python
+Version: 1.0.9
+Summary: DeepGaze Library
+Home-page: https://deep-gaze.com/sdk/python
+Author: DeepGaze
+Author-email: zhugc2016@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pygame
+Requires-Dist: websockets
+
