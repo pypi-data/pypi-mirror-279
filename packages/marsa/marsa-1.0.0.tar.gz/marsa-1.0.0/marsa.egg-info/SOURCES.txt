@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+marsa/__init__.py
+marsa/compute.py
+marsa/rsa.py
+marsa.egg-info/PKG-INFO
+marsa.egg-info/SOURCES.txt
+marsa.egg-info/dependency_links.txt
+marsa.egg-info/top_level.txt
+tests/test_compute.py
