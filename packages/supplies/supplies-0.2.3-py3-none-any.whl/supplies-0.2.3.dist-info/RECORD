@@ -1,0 +1,10 @@
+supplies/__init__.py,sha256=QxnttysKQa4Eg6Hn3wAX3q_IDU_zraPTeH1veE5YkNo,358
+supplies/reptiles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+supplies/reptiles/cookies.py,sha256=pcmbi7O7ry_n05L-AIJZFDwK39eK4S5P2trsCq7DxKc,1488
+supplies/reptiles/cookies.pyi,sha256=6l6dEx4oJg_57OI8803HfbpRhh6WvI1bDW-sMHH5h9I,99
+supplies/reptiles/useragents.py,sha256=D9himZDC96U94V0CDmbxYbiEbAQiXoSLKb7Vm8bZdQI,4717
+supplies-0.2.3.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+supplies-0.2.3.dist-info/METADATA,sha256=g_YczfOT_vFr7Hd6u5f3FkhcQ8WdZR8bChq-58bgc38,1107
+supplies-0.2.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+supplies-0.2.3.dist-info/top_level.txt,sha256=00kZ3ZLCdAos7-QFRuy4kRnyukjUbv7aMToF2WHp7O4,9
+supplies-0.2.3.dist-info/RECORD,,
