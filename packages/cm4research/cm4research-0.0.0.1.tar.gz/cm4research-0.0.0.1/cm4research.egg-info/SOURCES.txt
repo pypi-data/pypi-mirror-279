@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+cm4research/__init__.py
+cm4research.egg-info/PKG-INFO
+cm4research.egg-info/SOURCES.txt
+cm4research.egg-info/dependency_links.txt
+cm4research.egg-info/not-zip-safe
+cm4research.egg-info/requires.txt
+cm4research.egg-info/top_level.txt
