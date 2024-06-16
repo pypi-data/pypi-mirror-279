@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "ailens"
+version = "0.1.0"
+description = "A handy tool using genative AI to boost AI solution adoption by making it transparent to the end users."
+authors = ["An Truong <bian.tquang@gmail.com>"]
+readme = "README.md"
+packages = [{include = "ailens", from = "."}]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

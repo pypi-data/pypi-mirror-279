@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ailens
+Version: 0.1.0
+Summary: A handy tool using genative AI to boost AI solution adoption by making it transparent to the end users.
+Author: An Truong
+Author-email: bian.tquang@gmail.com
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# ailens
+A handy tool using genative AI to boost AI solution adoption by making it transparent to the end users.
+
