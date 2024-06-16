@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: intropy
+Version: 0.6.1
+Summary: Jump-start your python project
+License: MIT License
+        
+        Copyright (c) 2024 Richard Nordström
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cookiecutter
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: bump-my-version; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cookies; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Provides-Extra: style
+Requires-Dist: ruff; extra == "style"
+Provides-Extra: docs
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx-autobuild; extra == "docs"
+Requires-Dist: sphinx-rtd-theme; extra == "docs"
+
+# Intropy
+
+[![Version](https://img.shields.io/pypi/v/intropy?color=blue)](https://pypi.org/project/intropy/)
+[![Build Status](https://github.com/RicNord/intropy/actions/workflows/ci.yaml/badge.svg)](https://github.com/RicNord/intropy/actions)
+
+Powered by [Cookiecutter](https://github.com/cookiecutter/cookiecutter),
+intropy is a framework for jump-starting production-grade python projects. The
+python project will be generated and configured automatically with:
+
+- Build system
+- Test and code quality tooling
+- Documentation
+- Automation pipelines
+- etc...
+
+## Features
+
+- [Ruff](https://docs.astral.sh/ruff/) | Linter and formatter (Optionally
+  strict [Black](https://black.readthedocs.io/en/stable/) as code formatter)
+- [Pytest](https://docs.pytest.org/en/latest/) | Test framework
+- [Tox](https://tox.wiki/en/latest/) | Standardized testing and automation
+- [Coverage](https://coverage.readthedocs.io/en/latest/) | Code coverage
+- [Mypy](https://www.mypy-lang.org/) | Static type checker
+- Package and environment management
+  - Deployable applications: [Pipenv](https://pipenv.pypa.io/en/latest/) |
+    Version pinning and virtual environment setup
+  - Libraries: Pyproject explicit defined dependencies
+- [Pre-commit](https://pre-commit.com/) | pre-commit hooks
+- [Bump my version](https://callowayproject.github.io/bump-my-version/) | Bump
+  semantic version
+- [Sphinx](https://www.sphinx-doc.org/) | Documentation tool
+- [Logging](https://docs.python.org/3/library/logging.html) boilerplate
+- DevOps platform options
+  - Github
+    - Github workflows | CI and publishing to PyPi
+    - Github templates | Pull Requests and Issues
+  - Azure Devops
+    - Azure pipelines | CI
+- Makefile for convenience
+
+## Usage
+
+Install cookiecutter:
+
+```shell
+pip install cookiecutter
+```
+
+Create project:
+
+```shell
+cookiecutter https://github.com/RicNord/intropy
+```
+
+You will be prompted for some values. After that the project will be generated!
+
+### (Optional) Standalone CLI
+
+A wrapper around the `cookiecutter` CLI is also provided and can be installed
+with:
+
+```shell
+pip install intropy
+```
+
+For API reference see:
+
+```shell
+intropy --help
+```
