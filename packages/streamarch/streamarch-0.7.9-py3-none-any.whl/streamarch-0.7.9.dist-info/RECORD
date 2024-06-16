@@ -1,0 +1,13 @@
+streamarch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamarch/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+streamarch/loggers.py,sha256=XSVYXqEF09RxOPtvvLqhg17bxRaQ6zkjYG2yHTYinEI,5747
+streamarch/logging_configs/0-stdout.json,sha256=pq4yWiSRx7K4tlyaIBgsS81UtcdKy_fO44YlwaKsdzc,470
+streamarch/logging_configs/1-stderr-file.json,sha256=mJ9IomZpPNLdafB1r5T8Z6hOdhe5XtBo4wyzEN1YWz8,917
+streamarch/logging_configs/2-stderr-json-file.json,sha256=bkuOSbHUS_J3D2H_SxDsTTMdvSju1kGiB_ASbSSmH-U,1173
+streamarch/logging_configs/3-filtered-stdout-stderr.json,sha256=AGAPF6UoKf77cq-ZwNfNFK-21lkoHwcgs2E8b8hv-Pw,838
+streamarch/logging_configs/4-queued-json-stderr.json,sha256=qZgQ8B_NJqdOXDsdl6dTaSHVHw6MWOfr0HQNMO62boc,978
+streamarch/logging_configs/5-queued-stderr-json-file.json,sha256=84S9cOQZ66Ag9GC2SyV-kxzALcpWlSdcr8PdnFvuLxc,1196
+streamarch/logs.py,sha256=Ny8QNdDGVhjzOpRL1A3pqFeq5pzJpU1YBdFPXM1PZAU,617
+streamarch-0.7.9.dist-info/METADATA,sha256=hPgYhVfZZUtgwvUuTyq4Tn_lwLkJkqczVHGL8GQRSVo,758
+streamarch-0.7.9.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+streamarch-0.7.9.dist-info/RECORD,,
