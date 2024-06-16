@@ -1,0 +1,12 @@
+kv/rest/__init__.py,sha256=EqcgRvBGeiRN_HUXtJ0sSSQlCS5lSyuY9q5ySI6mGx8,158
+kv/rest/__init__.pyi,sha256=sYXBY3gpRJqDb0pjSEipKKa_o96J8ou3nh09jF1bhRI,178
+kv/rest/cli.py,sha256=HtTxl_3n7wPymDlW_SgWvZ1jM9hCAFhqy-S7bQureSY,703
+kv/rest/client.py,sha256=MJknEGcp4lPwhgXv33oO9bP2lqINiYUH4ALJdLrkjlw,2736
+kv/rest/clientgen_cli.py,sha256=D0F1p3yAFwSBzUcR0RIJCwBDbBERpy3SOgDxRdtJ8dA,430
+kv/rest/request.py,sha256=kUVlQ237gASf3WWD_eUCQ5UsrgLhyTyFvHM3vLRrhnk,978
+kv/rest/server.py,sha256=5z00a3li_M5NWyVAwEDROPJmHSjnOy-m3cRVA0sH4g4,2016
+kv_rest-0.1.11.dist-info/METADATA,sha256=scV_Cnhm9CFdOBN-vrshG8U5GY2r85G__asie4MF66k,1455
+kv_rest-0.1.11.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+kv_rest-0.1.11.dist-info/entry_points.txt,sha256=Njkf2mRXxVKftrXBchx83o7n_Mkpws4wAgmbxB-8Qvk,47
+kv_rest-0.1.11.dist-info/top_level.txt,sha256=z85M-ICBi-OoWrXz-dZX8xL06idJqievlWlmDg07U0M,3
+kv_rest-0.1.11.dist-info/RECORD,,
