@@ -1,0 +1,3 @@
+[console_scripts]
+groqy = groqy.__main__:main
+
