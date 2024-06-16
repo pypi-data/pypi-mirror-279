@@ -1,0 +1,8 @@
+pyproject.toml
+cmind4research/__init__.py
+cmind4research.egg-info/PKG-INFO
+cmind4research.egg-info/SOURCES.txt
+cmind4research.egg-info/dependency_links.txt
+cmind4research.egg-info/not-zip-safe
+cmind4research.egg-info/requires.txt
+cmind4research.egg-info/top_level.txt
