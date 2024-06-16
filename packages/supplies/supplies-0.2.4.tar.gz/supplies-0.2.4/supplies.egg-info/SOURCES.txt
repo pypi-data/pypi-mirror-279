@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+supplies/__init__.py
+supplies/execeptions.py
+supplies.egg-info/PKG-INFO
+supplies.egg-info/SOURCES.txt
+supplies.egg-info/dependency_links.txt
+supplies.egg-info/requires.txt
+supplies.egg-info/top_level.txt
+supplies/reptiles/__init__.py
+supplies/reptiles/cookies.py
+supplies/reptiles/cookies.pyi
+supplies/reptiles/test.py
+supplies/reptiles/useragents.py
+tests/test_cookies.py
+tests/test_useragents.py
