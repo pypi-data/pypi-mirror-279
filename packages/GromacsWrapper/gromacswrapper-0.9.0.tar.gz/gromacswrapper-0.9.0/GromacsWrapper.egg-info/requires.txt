@@ -1,0 +1,7 @@
+matplotlib
+numkit
+numpy>=1.0
+
+[testing]
+pytest
+pandas>=0.17
