@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+setup.py
+FindYourProfessor/__init__.py
+FindYourProfessor/scraper.py
+FindYourProfessor.egg-info/PKG-INFO
+FindYourProfessor.egg-info/SOURCES.txt
+FindYourProfessor.egg-info/dependency_links.txt
+FindYourProfessor.egg-info/entry_points.txt
+FindYourProfessor.egg-info/requires.txt
+FindYourProfessor.egg-info/top_level.txt
