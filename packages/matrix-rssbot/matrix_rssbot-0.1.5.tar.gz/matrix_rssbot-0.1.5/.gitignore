@@ -1,0 +1,7 @@
+config.ini
+.venv/
+*.pyc
+__pycache__/
+dist/
+pantalaimon.conf
+build/
