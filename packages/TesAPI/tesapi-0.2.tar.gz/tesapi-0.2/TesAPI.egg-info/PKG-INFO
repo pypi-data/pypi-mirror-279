@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: TesAPI
+Version: 0.2
+Summary: TesAPI Client, and etc.
+Author: Tes
+Author-email: antoshaspr@vk.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Requires-Dist: requests
