@@ -1,0 +1,8 @@
+pagecrawler/__init__.py,sha256=Xa1mJCMZxaLtoj_gADHEyq2ckpo0cR6rmxnm9Sx9YEk,90
+pagecrawler/headers.py,sha256=Voa6xaKr-zGDBTxuN9y1nGrgl4xLrISaI3HgOKhbeC8,978
+pagecrawler/view.py,sha256=EKFJUjHuDgG5XZKeAYSb5NMSsVlGvkvT3jYRfsS7ncY,2887
+pagecrawler/webscraping.py,sha256=5kNXDxAP2aVf9kbJGNgr7ZiIZDnu_epOemnVxqQ5HOs,3984
+pagecrawler-1.0.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+pagecrawler-1.0.0.dist-info/METADATA,sha256=IVMFWM8CFudG0yVdTFEwP6V54xD9kgmsr_EemsMv6B4,1649
+pagecrawler-1.0.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pagecrawler-1.0.0.dist-info/RECORD,,
