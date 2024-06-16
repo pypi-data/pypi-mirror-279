@@ -1,0 +1,80 @@
+[build-system]
+requires = ["flit_core >=3.8,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "attribution"
+readme = "README.rst"
+authors = [
+    {name="Amethyst Reese", email="amethyst@n7.gg"},
+]
+license = {file="LICENSE"}
+dynamic = ["version", "description"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "click >= 8.0",
+    "jinja2 >= 2.7",
+    "packaging >= 16.2",
+    "tomlkit >= 0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black==24.4.2",
+    "coverage==7.5.3",
+    "flake8==7.1.0",
+    "flake8-bugbear==24.4.26",
+    "flit==3.9.0",
+    "mypy==1.10.0",
+    "pessimist==0.9.3",
+    "rich==13.7.1",
+    "ufmt==2.6.0",
+    "usort==1.0.8.post1",
+    "wheel==0.43.0",
+]
+docs = [
+    "sphinx==7.3.7",
+    "sphinx-mdinclude==0.6.1",
+]
+
+[project.urls]
+Documentation = "https://attribution.omnilib.dev"
+Github = "https://github.com/omnilib/attribution"
+Changelog = "https://attribution.omnilib.dev/en/latest/changelog.html"
+
+[project.scripts]
+attribution = "attribution.main:main"
+
+[tool.flit.sdist]
+exclude = [
+    ".github/",
+]
+
+[tool.attribution]
+name = "attribution"
+package = "attribution"
+ignored_authors = ["dependabot[bot]", "pyup.io bot"]
+version_file = true
+signed_tags = true
+cargo_packages = ["fake_crate"]
+
+[tool.coverage.run]
+branch = true
+include = ["attribution/*"]
+omit = ["attribution/tests/*"]
+
+[tool.coverage.report]
+fail_under = 90
+precision = 1
+show_missing = true
+skip_covered = true
