@@ -1,0 +1,3 @@
+[console_scripts]
+source-gutendex=source_gutendex.run:run
+
