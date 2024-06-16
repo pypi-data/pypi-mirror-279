@@ -1,0 +1,8 @@
+{% extends 'blog/blog_base.html' %}
+{% load solo_tags %}
+{% load martortags %}
+{% block title %}<title>TERMS & CONDITIONS</title>{% endblock %}
+{% block content %}
+{% get_solo 'tbase_page.BasePage' as BasePage %}
+{{BasePage.terms_and_conditions|safe_markdown}}
+{% endblock %}
