@@ -1,0 +1,84 @@
+#
+# Developed by cKnowledge.org and cTuning.org
+#
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel"]
+
+[project]
+name = "cm-research"
+
+authors = [
+    {name = "Grigori Fursin", email = "gfursin@cknowledge.org"}
+]
+
+description = ""
+
+requires-python = ">=3.8"
+
+dependencies = [
+    "pyyaml",
+    "requests",
+    "setuptools",
+    "cmind"
+]
+
+keywords = [
+    "cmind",
+    "cm_research",
+    "cm4research",
+    "automation",
+    "portability",
+    "modularity",
+    "cknowledge",
+    "ctuning",
+    "mlcommons",
+    "mlperf",
+    "research"
+]
+
+license = {text = "Apache Software License (Apache 2.0)"}
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "Topic :: Software Development",
+    "Topic :: System",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dynamic = ["readme", "version"]
+
+[project.urls]
+Homepage = "https://github.com/ctuning/cm4research"
+Source = "https://github.com/ctuning/cm4research"
+
+[tool.setuptools]
+zip-safe = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cm_research", "cm_research.*"]
+exclude = ["docs", "docs.*", "tests", "tests.*"]
+
+[tool.setuptools.package-data]
+cm_research = [
+  "internal/**/*"
+]
+
+#[tool.setuptools.package-data]
+#"cm_research.internal" = ["*.yaml", "*.json", "*.md"]
+
+[tool.setuptools.dynamic]
+readme = {file = "README.md", content-type = "text/markdown"}
+version = {attr = "cm_research.__version__"}
