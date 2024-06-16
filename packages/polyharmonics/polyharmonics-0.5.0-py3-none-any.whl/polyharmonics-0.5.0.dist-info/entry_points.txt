@@ -1,0 +1,3 @@
+[console_scripts]
+polyharmonics=polyharmonics.__main__:app
+
