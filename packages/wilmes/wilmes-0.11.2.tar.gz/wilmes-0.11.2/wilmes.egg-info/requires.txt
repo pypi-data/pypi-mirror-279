@@ -1,0 +1,14 @@
+mechanicalsoup>=0.8
+python-dateutil>=2.0
+pytz
+
+[dev]
+mypy
+types-pytz
+types-requests
+types-python-dateutil
+flake8
+flake8-isort
+pep8-naming
+ipython
+jedi
