@@ -1,0 +1,9 @@
+src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+src/alpha_miner.py,sha256=C-PEfW9FRrz_C9djObRsHj9VK9UtCwNJFMlsgGVUoSg,8031
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_alpha_miner.py,sha256=lf3Z2-_IKTpR4DybyD9EecdoElNSCCL3KuLXTRphq74,1518
+alpha_miner-0.1.2.dist-info/LICENSE,sha256=XJuXKxTO_yoGKzaJNh5wVsq99eS7DRET9kQjeK2TbeM,1070
+alpha_miner-0.1.2.dist-info/METADATA,sha256=glGjKwsBkGg1CiqPTyj4YNWhsQqy_jLgP_B2QFbDYio,835
+alpha_miner-0.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+alpha_miner-0.1.2.dist-info/top_level.txt,sha256=KW3xgkz9NLMTcmmzgKvW8RFpCFkRIQ085qzq2diFf68,10
+alpha_miner-0.1.2.dist-info/RECORD,,

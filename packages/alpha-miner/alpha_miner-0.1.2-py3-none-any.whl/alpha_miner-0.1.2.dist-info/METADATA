@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: alpha-miner
+Version: 0.1.2
+Summary: The alpha-miner package implements the α-algorithm for process mining, transforming event logs into petri nets.
+Home-page: https://github.com/felix-reichel/alpha-miner
+Author: Felix Reichel
+Author-email: kontakt@felixreichel.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+The alpha-miner package implements the α-algorithm, a foundational method in process mining developed by van der Aalst, Weijters, and Măruşter. This algorithm analyzes event logs—collections of activity sequences—to infer causal relationships between activities. It also outputs a resulting petri net.
