@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: ezrules
+Version: 0.5.0
+Summary: 
+Author: Konstantin Sofeikov
+Author-email: sofeykov@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: bootstrap-flask
+Requires-Dist: email-validator
+Requires-Dist: flask (>=3.0.3,<4.0.0)
+Requires-Dist: flask-security-too[common]
+Requires-Dist: flask-wtf
+Requires-Dist: gunicorn
+Requires-Dist: psycopg2-binary
+Requires-Dist: pyparsing
+Requires-Dist: pytz
+Requires-Dist: pyyaml
+Requires-Dist: ruamel.yaml
+Requires-Dist: sphinx
+Requires-Dist: sqlalchemy
+Requires-Dist: sqlalchemy-utils
+Description-Content-Type: text/markdown
+
+# ezrules
+
+Welcome to an open-source transaction monitoring engine! This product is designed to simplify the definition and management of business rules while also offering a scalable infrastructure for rule execution and backtesting.
+
+Read the [quick start guide](https://github.com/sofeikov/ezrules/wiki/Quick-start) to get started.
