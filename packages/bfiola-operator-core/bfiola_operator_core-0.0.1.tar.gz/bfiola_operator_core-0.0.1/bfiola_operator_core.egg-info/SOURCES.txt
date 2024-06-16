@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+bfiola_operator_core.egg-info/PKG-INFO
+bfiola_operator_core.egg-info/SOURCES.txt
+bfiola_operator_core.egg-info/dependency_links.txt
+bfiola_operator_core.egg-info/requires.txt
+bfiola_operator_core.egg-info/top_level.txt
+operator_core/__init__.py

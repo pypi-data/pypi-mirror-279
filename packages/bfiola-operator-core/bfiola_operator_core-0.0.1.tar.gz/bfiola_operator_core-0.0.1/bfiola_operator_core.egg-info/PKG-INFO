@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: bfiola-operator-core
+Version: 0.0.1
+Requires-Dist: fastapi
+Requires-Dist: kopf
+Requires-Dist: kubernetes
+Requires-Dist: pydantic
+Requires-Dist: uvicorn
+Provides-Extra: dev
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
