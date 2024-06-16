@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Overcomplete
+Version: 0.0.1
+Summary: Personal toolbox for experimenting with Overcomplete Dictionnary Learning (or SAE)
+Author: Thomas Fel
+Author-email: thomas_fel@brown.edu
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: torch
+Requires-Dist: torchvision
+Requires-Dist: timm
+
+# Overcomplete
