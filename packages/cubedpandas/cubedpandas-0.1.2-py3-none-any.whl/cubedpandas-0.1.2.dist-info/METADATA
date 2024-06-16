@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: cubedpandas
+Version: 0.1.2
+Summary: CubedPandas: Multi-dimensional data analysis for Pandas dataframes.
+Home-page: https://github.com/Zeutschler/cubedpandas
+Author: Thomas Zeutschler
+Author-email: cubedpandas@gmail.com
+License: BSD 3-clause
+Project-URL: Homepage, https://github.com/Zeutschler/cubedpandas
+Project-URL: Documentation, https://github.com/Zeutschler/cubedpandas
+Project-URL: GitHub, https://github.com/Zeutschler/cubedpandas
+Keywords: pandas,analysis,database,olap,planning,reporting,forecasting,multidimensional,cube
+Platform: any
+Classifier: Topic :: Utilities
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.11
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: python-dateutil
+
+
+CubedPandas provides an easy, intuitive, fast and fun approach to perform multi-dimensional 
+numerical data analysis & processing on Pandas dataframes. CubedPandas wraps almost any
+dataframe into a multi-dimensional cube, which can be aggregated, sliced, diced, filtered, 
+updated and much more. 
+
+CubedPandas is inspired by OLAP cubes (online analytical processing), which are typically used
+for reporting, business intelligence, data warehousing and financial analysis purposes.
+ 
+Just give it a try...   
