@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+visibility_local.egg-info/PKG-INFO
+visibility_local.egg-info/SOURCES.txt
+visibility_local.egg-info/dependency_links.txt
+visibility_local.egg-info/top_level.txt
+visibility_local/src/__init__.py
+visibility_local/src/visibilities_local.py

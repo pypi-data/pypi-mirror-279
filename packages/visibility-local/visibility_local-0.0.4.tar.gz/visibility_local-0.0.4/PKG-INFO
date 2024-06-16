@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: visibility-local
+Version: 0.0.4
+Summary: PyPI Package for Circles visibility-local Python
+Home-page: https://github.com/circles-zone/visibility-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+PyPI Package for Circles visibility-local Python
