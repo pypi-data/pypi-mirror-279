@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stlib"
+version = "2.0.3"
+description = "Async library that provides features related to Steam client and compatible stuffs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "GPLv3"}
+keywords = ["steam", "valve"]
+authors = [{email = "dev@lara.monster"}, {name = "Lara Maia"}]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Topic :: Games/Entertainment",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Typing :: Typed"
+]
+
+dependencies = [
+  "aiohttp",
+  "beautifulsoup4",
+  "rsa"
+]
+
+[project.optional-dependencies]
+plugins = ["stlib-plugins"]
+
+[project.urls]
+homepage = "https://github.com/calendulish/stlib"
+documentation = "https://lara.monster/stlib"
+repository = "https://github.com"
+changelog = "https://github.com/calendulish/stlib/releases"
+
+[tool.setuptools]
+include-package-data = true
+zip-safe = false
+package-dir = {"" = "src"}
+packages = ["stlib"]
+
+[tool.pytest.ini_options]
+addopts = "--capture=no"
+console_output_style = "classic"
+asyncio_mode = "auto"
+enable_assertion_pass_hook = true
+filterwarnings = ["ignore::pytest.PytestCollectionWarning"]
