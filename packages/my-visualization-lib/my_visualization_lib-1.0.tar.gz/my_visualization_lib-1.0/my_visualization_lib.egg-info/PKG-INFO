@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: my_visualization_lib
+Version: 1.0
+Summary: A library for creating data visualizations
+Home-page: https://github.com/Julianunes/my_visualization_lib
+Author: Julia
+Author-email: juliacorreanunes97@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+# My Visualization Library
+
+This is a Python library for creating data visualizations.
