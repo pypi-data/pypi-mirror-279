@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: sslkeylog
+Version: 0.5.1
+Summary: Log SSL/TLS keys for decrypting SSL/TLS connections
+Home-page: https://github.com/segevfiner/sslkeylog
+Author: Segev Finer
+Author-email: segev208@gmail.com
+License: MIT
+Project-URL: Documentation, https://sslkeylog.readthedocs.io/
+Project-URL: Issue Tracker, https://github.com/segevfiner/sslkeylog/issues
+Keywords: ssl tls sslkeylogfile
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/x-rst
+Provides-Extra: dev
+License-File: LICENSE.txt
+
+sslkeylog
+=========
+
+.. image:: https://img.shields.io/pypi/v/sslkeylog.svg
+   :target: https://pypi.org/project/sslkeylog/
+   :alt: PyPI
+
+.. image:: https://readthedocs.org/projects/sslkeylog/badge/?version=latest
+   :target: https://sslkeylog.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://github.com/segevfiner/sslkeylog/actions/workflows/build-and-test.yml/badge.svg
+   :target: https://github.com/segevfiner/sslkeylog/actions/workflows/build-and-test.yml
+   :alt: Build & Test Status
+
+This is an implementation of the ``SSLKEYLOGFILE`` facility, available in Firefox and
+Chromium/Google Chrome, that is supported by Wireshark in order to decrypt SSL/TLS connections
+even when you don't have the private key, or when using key exchange methods that will prevent
+decryption even if you do (Such as Diffie-Hellman).
+
+This is for the standard library ``ssl`` module, it won't work for other ssl modules.
+
+**Note:**
+   Python 3.8+ includes built-in support for generating an SSL key log file via
+   ``ssl.SSLContext.keylog_filename``, and will also enable it when the ``SSLKEYLOGFILE``
+   environment variable is set when creating a context via ``ssl.create_default_context``.
+
+   This package uses the same callback the built-in implementation is using, which will likely cause
+   both implementations to trample each other, causing the other not to work, or other unintended
+   consequences. As such, you should probably not enable both at the same time.
+
+Quick Start
+-----------
+.. code-block:: python
+
+    import os
+    import sslkeylog
+
+    sslkeylog.set_keylog(os.environ.get('SSLKEYLOGFILE'))  # Or directly specify a path
+
+    # Do anything involving SSL (Using the built-in ssl module)
+
+Set the ``SSLKEYLOGFILE`` environment variable if you use it, and set "(Pre)-Master-Secret log
+filename" in Wireshark's SSL protocol preferences to the resulting file.
+
+Links
+-----
+* `NSS Key Log Format`_
+* `Wireshark - SSL`_
+
+.. _NSS Key Log Format: https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS/Key_Log_Format
+.. _Wireshark - SSL: https://wiki.wireshark.org/SSL
+
+License
+-------
+MIT License, except OpenSSL which is licensed under it's own license. See LICENSE.txt
+
+This product includes software developed by the OpenSSL Project
+for use in the OpenSSL Toolkit (http://www.openssl.org/)

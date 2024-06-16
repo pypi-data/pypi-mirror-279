@@ -1,0 +1,10 @@
+
+[dev]
+flake8
+pytest
+pytest-metadata
+mock
+six
+
+[dev:python_version >= "3.0"]
+sphinx==5.*
