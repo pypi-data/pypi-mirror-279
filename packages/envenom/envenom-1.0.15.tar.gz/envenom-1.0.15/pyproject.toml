@@ -1,0 +1,86 @@
+# `envenom` - an elegant application configurator for the more civilized age
+# Copyright (C) 2024-  Artur Ciesielski <artur.ciesielski@gmail.com>
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry]
+name = "envenom"
+description = "An elegant application configurator for the more civilized age"
+version = "1.0.15"
+license = "GPL-3.0-or-later"
+authors = ["Artur Ciesielski <artur.ciesielski@gmail.com>"]
+readme = "README.md"
+homepage = "https://arcanery.gitlab.io/python/envenom/"
+repository = "https://gitlab.com/arcanery/python/envenom"
+documentation = "https://arcanery.gitlab.io/python/envenom/"
+keywords = ["env", "environment", "config", "configuration"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+pytest-lazy-fixtures = "^1.0.5"
+coverage = "^7.4.3"
+pre-commit = "^3.6.2"
+
+
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.5.27"
+
+
+[tool.isort]
+profile = "black"
+
+
+[tool.flake8]
+max-line-length = 88
+
+
+[tool.coverage.run]
+branch = true
+include = ["src/*"]
+omit = ["src/*/examples/*"]
+
+[tool.coverage.report]
+exclude_also = [
+    # Don't complain about abstract methods, they aren't run:
+    "@(abc\\.)?abstractmethod",
+    # Don't complain if tests don't hit defensive assertion code:
+    "raise NotImplementedError",
+]
+
+
+[tool.pyright]
+exclude = ["src/*/examples/*"]
