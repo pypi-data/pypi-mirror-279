@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: ionize
+Version: 1.5.1
+Summary: A package for calculating electrolyte properties.
+Home-page: http://lewisamarshall.github.io/ionize/
+Author: Lewis A. Marshall
+Author-email: lewis.a.marshall@gmail.com
+License: LICENSE
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Chemistry
+Requires: numpy
+Requires: scipy
+Requires: biopython
+Requires: click
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: biopython
+Requires-Dist: click
+
+ionize
+======
+
+[![Docs Status](https://readthedocs.org/projects/ionize/badge/?version=latest)](https://ionize.readthedocs.org)
+
+**ionize** is a Python package for calculating the properties of ions and
+electrolytes. Originally designed with electrophoresis in mind,
+these calculations can help any time the pH or electrical properties of an
+aqueous solution impact system performance.
+
+The goal of **ionize** is to make full simulations of electrolyte properties
+easy, ubiquitous, and accurate. The **ionize** models consider the impact of pH,
+ionic strength, temperature, and the interactions between different ions.
+Considering all of these impacts makes ionize accurate over the widest
+available range of operating conditions. In addition, **ionize** includes
+warnings when experimental conditions are outside the range of model
+assumptions.
+
+Installation
+------------
+One-line install using [pip](https://pypi.python.org/pypi/pip):
+
+    pip install ionize
+
+Alternatively, if you're installing from source:
+- Clone the repository, and `cd` into the `ionize` directory.
+- Install the dependencies with `pip3 install -r requirements.txt`
+- Install `ionize` using `python3 setup.py install`
+
+Tutorial
+--------
+Want to use **ionize**? Read the [tutorial][tutorial].
+
+Examples
+--------
+Want to see some examples of **ionize** in action? Take a look at the
+[examples][examples].
+
+[peakmaster]: http://web.natur.cuni.cz/gas/ "Peakmaster"
+[Spresso]: http://stanfordspresso.blogspot.com/ "Spresso"
+[STEEP]: http://microfluidics.stanford.edu/download/ "STEEP"
+[tutorial]: ./tutorial.ipynb  "ionize Tutorial"
+[examples]: ./examples.ipynb  "ionize Examples"
