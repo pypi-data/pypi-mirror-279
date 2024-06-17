@@ -1,0 +1,5 @@
+[console_scripts]
+foreverbull = foreverbull.cli:cli
+
+[pytest11]
+foreverbull = foreverbull.testing
