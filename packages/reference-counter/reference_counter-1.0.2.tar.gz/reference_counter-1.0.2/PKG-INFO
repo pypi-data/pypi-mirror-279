@@ -1,0 +1,22 @@
+Metadata-Version: 2.3
+Name: reference-counter
+Version: 1.0.2
+Summary: Reference counter implementation in python
+Project-URL: GitHub, https://github.com/ayalash/reference_counter
+Author-email: Ayala Shachar <shachar.ayala@gmail.com>
+License: BSD 3-Clause License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Python: >=3.7
+Requires-Dist: logbook
+Provides-Extra: testing
+Requires-Dist: munch; extra == 'testing'
+Requires-Dist: pytest; extra == 'testing'
+Description-Content-Type: text/markdown
+
+Reference Counter
+=================
+Reference counter implementation in python
