@@ -1,0 +1,12 @@
+pyrealsense2==2.54.2.5684
+numpy<2.0
+gymnasium
+transforms3d
+urchin
+pynput
+opencv-python
+opencv-contrib-python
+open3d>=0.17.0
+Pillow
+scipy>=1.10.0
+sapien~=3.0.0.dev
