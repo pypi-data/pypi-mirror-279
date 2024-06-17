@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.cfg
+pispy/__init__.py
+pispy/__main__.py
+pispy/app.py
+pispy/py.typed
+pispy/data/__init__.py
+pispy/data/package.py
+pispy/widgets/__init__.py
+pispy/widgets/package_information.py
+pispy_client.egg-info/PKG-INFO
+pispy_client.egg-info/SOURCES.txt
+pispy_client.egg-info/dependency_links.txt
+pispy_client.egg-info/entry_points.txt
+pispy_client.egg-info/requires.txt
+pispy_client.egg-info/top_level.txt

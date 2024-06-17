@@ -1,0 +1,3 @@
+packaging
+textual>=0.68.0
+httpx
