@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: ui_excel
+Version: 1.0
+Requires-Dist: requests
+Requires-Dist: tkinter
+Requires-Dist: flask
