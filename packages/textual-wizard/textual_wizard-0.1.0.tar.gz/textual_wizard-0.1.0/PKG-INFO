@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: textual-wizard
+Version: 0.1.0
+Summary: Easily ask for input with a beautiful user interface, within the terminal.
+Author-email: Leopold Koprivnik <skwal@etik.com>
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: textual>=0.66.0
+Requires-Dist: rich>=13.7.1
+Project-URL: Home, https://github.com/SkwalExe/textual-wizard
+
+# textual-wizard
+Python library allowing you to ask for input using the -textual- terminal user interface
+
