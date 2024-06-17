@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "poetry-env-test"
+version = "0.1.0"
+description = "A package to manage and verify Python project environments using Poetry."
+authors = ["Carrow Morris-Wiltshire"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.scripts]
+check-project-setup = "poetry_env_test.check_project_setup:check_dependencies"
+clean-project-setup = "poetry_env_test.clean_project_setup:clean_project"
+backup-dependencies = "poetry_env_test.backup_dependencies:backup_dependencies"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
