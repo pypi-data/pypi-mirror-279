@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: BrownieCutter
+Version: 0.1.7
+Summary: Quick script to create new python project
+Home-page: https://github.com/thiswillbeyourgithub/BrownieCutter
+License: GPLv3
+Keywords: cookiecutter,pypi,install,package,python,minimal,minimalist,tool
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: fire>=0.6.0
+Requires-Dist: typeguard>=4.3.0
+
+
+# BrownieCutter
+* I just needed a quick script to lower the time cost of creating new FOSS tools. So just run this script, give the project name and class name and you'll get a proper template dir with some boiletplate code done for you.
+* Yes BrownieCutter was created by itself.
+* Inspired by [CookieCutter](https://cookiecutter.readthedocs.io/).
+
+# Getting started
+* ` python -m pip install -e .`
+* `python -m BrownieCutter --help`

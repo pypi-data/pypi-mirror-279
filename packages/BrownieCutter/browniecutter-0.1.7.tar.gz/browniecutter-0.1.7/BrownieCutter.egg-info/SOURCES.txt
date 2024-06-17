@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+setup.py
+BrownieCutter/BrownieCutter.py
+BrownieCutter/__init__.py
+BrownieCutter/__main__.py
+BrownieCutter.egg-info/PKG-INFO
+BrownieCutter.egg-info/SOURCES.txt
+BrownieCutter.egg-info/dependency_links.txt
+BrownieCutter.egg-info/entry_points.txt
+BrownieCutter.egg-info/requires.txt
+BrownieCutter.egg-info/top_level.txt
