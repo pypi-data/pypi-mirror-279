@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+wjpdf/__init__.py
+wjpdf/pdf2image.py
+wjpdf/pdf2text.py
+wjpdf.egg-info/PKG-INFO
+wjpdf.egg-info/SOURCES.txt
+wjpdf.egg-info/dependency_links.txt
+wjpdf.egg-info/top_level.txt
