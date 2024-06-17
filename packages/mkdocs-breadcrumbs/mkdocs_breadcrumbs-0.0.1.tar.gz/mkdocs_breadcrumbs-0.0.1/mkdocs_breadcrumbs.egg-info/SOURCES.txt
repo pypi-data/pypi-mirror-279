@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mkdocs_breadcrumbs/__init__.py
+mkdocs_breadcrumbs/plugin.py
+mkdocs_breadcrumbs.egg-info/PKG-INFO
+mkdocs_breadcrumbs.egg-info/SOURCES.txt
+mkdocs_breadcrumbs.egg-info/dependency_links.txt
+mkdocs_breadcrumbs.egg-info/entry_points.txt
+mkdocs_breadcrumbs.egg-info/requires.txt
+mkdocs_breadcrumbs.egg-info/top_level.txt
