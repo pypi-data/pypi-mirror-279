@@ -1,0 +1,13 @@
+scylla_api_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scylla_api_client/__main__.py,sha256=84_S8skgwpyChkXoftZHQ9Vnqq73-6ehXSx9f4CU-R8,61
+scylla_api_client/api.py,sha256=IQ3EQOAjKExvl26BPoEPz9rl-ktYJWxgwXWKz-o1eb4,15427
+scylla_api_client/cli.py,sha256=0wdJHnI9StiTnMeciuSLLO8Ie-g7F7oASQOFN1GfDIY,6649
+scylla_api_client/custom_argparser.py,sha256=_uQYUj75xYIf7eUwbYg_mmGA2aNsKuBBXH9wlupUHq8,4315
+scylla_api_client/rest/__init__.py,sha256=9lI6T_zkU_2d7OqowVqP69Bt0qxGVvcAQBz-JmvLVQQ,4226
+scylla_api_client/rest/scylla_rest_client.py,sha256=LjwZj-wCr27Sn7vUyyZcMThGxKNgE9Tb-Cky_3J829E,1420
+scylla_api_client-1.1.dist-info/LICENSE.AGPL,sha256=V8j_M8nAz8PvAOZQocyRDX7keai8UJ9skgmnwqETmdY,34520
+scylla_api_client-1.1.dist-info/METADATA,sha256=ES8zwmRUYK9MGqdzsfJ4Tya6FYrwPl7b8dc3Fz58TEc,3163
+scylla_api_client-1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scylla_api_client-1.1.dist-info/entry_points.txt,sha256=2EFkk4Hg0qnn_Zx6_y6bcO5sXhhRzMpkV07ySfuJGJ4,70
+scylla_api_client-1.1.dist-info/top_level.txt,sha256=B3KvtgAp5DVCxnsWnCsYVTlHdoNqf2OvTuMCyuhfWso,18
+scylla_api_client-1.1.dist-info/RECORD,,

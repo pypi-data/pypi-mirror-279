@@ -1,0 +1,2 @@
+[console_scripts]
+scylla-api-client = scylla_api_client.__main__:main
