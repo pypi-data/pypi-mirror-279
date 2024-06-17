@@ -1,0 +1,2 @@
+[mkdocs.plugins]
+breadcrumbs = mkdocs_breadcrumbs.plugin:BreadCrumbs
