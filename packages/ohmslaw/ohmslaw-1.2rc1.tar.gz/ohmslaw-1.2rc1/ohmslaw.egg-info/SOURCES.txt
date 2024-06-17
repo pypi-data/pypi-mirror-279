@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+ohmslaw/__init__.py
+ohmslaw/__main__.py
+ohmslaw/cli.py
+ohmslaw/version.py
+ohmslaw.egg-info/PKG-INFO
+ohmslaw.egg-info/SOURCES.txt
+ohmslaw.egg-info/dependency_links.txt
+ohmslaw.egg-info/entry_points.txt
+ohmslaw.egg-info/top_level.txt
