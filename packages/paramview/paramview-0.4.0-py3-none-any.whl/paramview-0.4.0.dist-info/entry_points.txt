@@ -1,0 +1,3 @@
+[console_scripts]
+paramview=paramview._cli:main
+
