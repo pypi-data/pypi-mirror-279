@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: thekey
+Version: 1.0.2
+Summary: Help You Find Any Text Queqly!|帮你快速查询文本！
+Home-page: UNKNOWN
+Author: Python学霸
+Author-email: python@xueba.com
+License: UNKNOWN
+Description: ## 介绍
+        `thekey` 是一个高效搜索工具，可以帮你搜索任何目录多个文件中文本内容.|`thekey` Can Help You Find Any Text In Any Folder!
+        
+        ## 安装
+        ``` bush
+        pip install thekey
+        ```
+        ## 使用
+        **1.命令方式** | **Bush**
+        ``` bush
+        findit [keyword] 
+        findit [keyword] [folder]
+        ```
+        **2.Pyhton使用** 
+        ``` python
+        import thekey
+        s1=wherepip.findit("get")
+        s2=wherepip.findit("get",r"C:\Users\Administrator\AppData\Roaming\Python\Python37\site-packages\requests")
+        print(s1)
+        print(s2)
+        ```
+        **喜欢关注python学霸微信公众号!**
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
