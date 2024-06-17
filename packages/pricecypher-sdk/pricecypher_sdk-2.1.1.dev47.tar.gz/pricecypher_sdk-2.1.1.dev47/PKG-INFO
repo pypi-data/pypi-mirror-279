@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: pricecypher-sdk
+Version: 2.1.1.dev47
+Summary: Python wrapper around the different PriceCypher APIs
+Home-page: https://github.com/marketredesign/pricecypher_python_sdk
+Author: Deloitte Consulting B.V.
+Project-URL: Bug Tracker, https://github.com/marketredesign/pricecypher_python_sdk/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python wrapper around the different PriceCypher APIs
