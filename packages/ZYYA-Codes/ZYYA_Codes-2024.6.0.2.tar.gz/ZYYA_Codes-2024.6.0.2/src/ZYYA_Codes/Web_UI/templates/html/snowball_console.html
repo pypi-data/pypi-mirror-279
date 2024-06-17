@@ -1,0 +1,120 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ macro.render_chart_dependencies(chart) }}
+    <title>工作台</title>
+</head>
+<body style="position: absolute; width: 99%; height: 99%">
+<!--产品总览标签 -->
+<div style="position: absolute; width: 100%; height: 100%">
+    <!-- 左侧链接 -->
+    <div style="float: left; width: 15%; height: 100%">
+        <font size="7">
+    <b>工作台</b>
+</font><br>
+        <div class="container">
+            <div class="primary_header">
+                <h2 class="title">
+                    产品管理
+                </h2>
+            </div>
+            <nav class="secondary_header" id="menu_1">
+                <h3 class="label">
+                    <ul>
+                        <li>
+                            <a href="/product_info"> 产品池总览</a>
+                        </li>
+                        <li>
+                            <a href="/add_product">产品池维护</a>
+                        </li>
+                    </ul>
+                </h3>
+
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="primary_header">
+                <h2 class="title">
+                    交易总览
+                </h2>
+            </div>
+            <nav class="secondary_header" id="menu_2">
+                <h3 class="label">
+                    <ul>
+                        <li>
+                            <a href="/trade_info"> 交易总览</a>
+                        </li>
+                        <li>
+                            <a href="/add_trade">交易记录维护</a>
+                        </li>
+                        <li>
+                            <a href="/add_structure">交易结构维护</a>
+                        </li>
+                    </ul>
+                </h3>
+
+            </nav>
+        </div>
+        <div class="container">
+            <div class="header-bar">
+            <h2 class="title">
+                    用户管理
+                </h2>
+            </div>
+            <nav class="secondary_header" id="menu_3">
+                <h3 class="label">
+                    <ul>
+                        <li>
+                            <a href="/all_users">用户综合信息</a>
+                        </li>
+                        <li>
+                            <a href="/add_user">增删用户</a>
+                        </li>
+                    </ul>
+                </h3>
+            </nav>
+        </div>
+
+
+        <div class="container">
+            <div class="header-bar">
+                <h2 class="title">
+                    友情链接
+                </h2>
+            </div>
+            <nav class="secondary_header" id="menu_4">
+                <h3 class="label">
+                    <ul>
+                        <li>
+                            <a href="https://tushare.pro/document/2?doc_id=211">
+                            国际指数代码
+                            </a>
+                        </li>
+                    </ul>
+                </h3>
+            </nav>
+        </div>
+        <a href="/logout"><button type="button">退出系统</button></a><br>
+
+    </div>
+
+    <!-- 右侧日历 -->
+    <div style="float: right; width: 85%; height: 100%" align="center">
+        <div style="height: 60%" align="center">
+            {{ macro.render_chart_content(chart) }}
+        </div>
+        <hr style="border: 1px gray dashed; opacity: 15%">
+        <div style="height: 40%" align="center">
+            <h2>近期场外期权敲入/敲出一览</h2>
+            {Table}
+        </div>
+    </div>
+</div>
+</body>
+<script src="js_code/functions.js"></script>
+</html>
