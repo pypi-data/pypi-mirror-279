@@ -1,0 +1,2 @@
+[console_scripts]
+hddfancontrol = hddfancontrol:cl_main
