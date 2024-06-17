@@ -1,0 +1,2 @@
+[psychopy.experiment.components]
+PelletDispenserComponent = psychopy_zaci.components.pellet_dispenser:PelletDispenserComponent
