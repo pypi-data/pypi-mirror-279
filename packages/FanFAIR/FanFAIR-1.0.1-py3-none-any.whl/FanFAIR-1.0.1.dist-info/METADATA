@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: FanFAIR
+Version: 1.0.1
+Summary: FanFAIR, semi-automatic assessment of datasets fairness
+Home-page: https://github.com/aresio/FanFAIR
+Author: Chiara Gallese, Marco S. Nobile
+Author-email: marco.nobile@unive.it
+License: LICENSE.txt
+Keywords: fuzzy logic,dataset analysis,dataset fairness
+Classifier: Programming Language :: Python :: 3.7
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: simpful
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+
