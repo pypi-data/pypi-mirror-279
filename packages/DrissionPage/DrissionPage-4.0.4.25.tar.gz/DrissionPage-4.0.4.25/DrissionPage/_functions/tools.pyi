@@ -1,0 +1,116 @@
+# -*- coding:utf-8 -*-
+"""
+@Author   : g1879
+@Contact  : g1879@qq.com
+@Copyright: (c) 2024 by g1879, Inc. All Rights Reserved.
+@License  : BSD 3-Clause.
+"""
+from os import popen
+from pathlib import Path
+from threading import Lock
+from typing import Union, Tuple, List, Optional
+
+from .._base.base import BaseParser
+from .._elements.chromium_element import ChromiumElement
+from .._pages.chromium_base import ChromiumBase
+
+
+class PortFinder(object):
+    used_port: dict = ...
+    lock: Lock = ...
+    tmp_dir: Path = ...
+
+    def __init__(self, path: Union[str, Path] = None): ...
+
+    @staticmethod
+    def get_port(scope: Tuple[int, int] = None) -> Tuple[int, str]: ...
+
+
+def port_is_using(ip: str, port: Union[str, int]) -> bool: ...
+
+
+def clean_folder(folder_path: Union[str, Path], ignore: Union[tuple, list] = None) -> None: ...
+
+
+def show_or_hide_browser(page: ChromiumBase, hide: bool = True) -> None: ...
+
+
+def get_browser_progress_id(progress: Union[popen, None], address: str) -> Union[str, None]: ...
+
+
+def get_hwnds_from_pid(pid: Union[str, int], title: str) -> list: ...
+
+
+def wait_until(function: callable, kwargs: dict = None, timeout: float = 10): ...
+
+
+def configs_to_here(file_name: Union[Path, str] = None) -> None: ...
+
+
+def raise_error(result: dict, ignore=None) -> None: ...
+
+
+def get_eles(locators: Union[List[str], tuple],
+             owner: BaseParser,
+             any_one: bool = False,
+             first_ele: bool = True,
+             timeout: float = 10) -> dict: ...
+
+
+class ElementsList(list):
+    page = ...
+
+    def displayed(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def hidden(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def checked(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def not_checked(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def selected(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def not_selected(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def enabled(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def disabled(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def clickable(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def not_clickable(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def have_rect(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def no_rect(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def have_text(self, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def style(self, name: str, value: str, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def property(self,
+                 name: str,
+                 value: str,
+                 get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def attr(self, name: str, value: str, get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def filter(self,
+               get_all: bool = False,
+               displayed: Optional[bool] = None,
+               checked: Optional[bool] = None,
+               selected: Optional[bool] = None,
+               enabled: Optional[bool] = None,
+               clickable: Optional[bool] = None,
+               have_rect: Optional[bool] = None,
+               have_text: Optional[bool] = None) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def _get_attr(self,
+                  name: str,
+                  value: str,
+                  method: str,
+                  get_all: bool = False) -> Union[List[ChromiumElement], ChromiumElement]: ...
+
+    def _any_state(self, name: str, is_not: bool = False, get_all: bool = False) -> List[ChromiumElement]: ...
+
+    def __next__(self) -> ChromiumElement: ...
