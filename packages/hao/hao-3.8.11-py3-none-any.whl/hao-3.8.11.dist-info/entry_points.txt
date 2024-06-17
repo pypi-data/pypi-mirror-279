@@ -1,0 +1,7 @@
+[console_scripts]
+h-run=hao.cli:run
+h-s3-init=hao.s3:init
+h-split=hao.files:split_cli
+h-vs=hao.vs:run
+hf-download=hao.hf:download
+
