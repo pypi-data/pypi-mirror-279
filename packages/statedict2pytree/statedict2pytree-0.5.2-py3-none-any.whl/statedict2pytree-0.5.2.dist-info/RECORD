@@ -1,0 +1,17 @@
+client/.gitignore,sha256=dUAd7J1wJVSaU9WD0Gp4c7_5yEz5lOdWLfsjubHf1z8,39
+client/package-lock.json,sha256=JCW5mq9bGNs29yGO1EIlcysDaEuTm2i_AJoyt-45yO8,158531
+client/package.json,sha256=Ad-MDEQeh7BPHWPYLd3u9sXk8YVuO_dXmpkxxU1Pglo,1044
+client/rollup.config.mjs,sha256=RAepJhL2V5Rf-BlJBZJxllVl0mxtr67GSVr9aU0JUnA,1073
+client/tailwind.config.js,sha256=TfN5eOoFOUPGBou6OoK54M14PtokgxWDJUsV4qkurS8,175
+client/tsconfig.json,sha256=cLHEFXx-Q55XqbF9QjQ4XScSEQ15n-vS5tsTcqY4UAY,158
+client/public/bundle.js,sha256=l4Vu_8_7v6k7XFisnI8jCFzyMeztr9jc3Z3lrrPDpk0,347197
+client/public/bundle.js.map,sha256=s9zOkP-34BWrQFunVbkouwTKVAfL8EyIUcfKgSicH8M,682783
+client/public/index.html,sha256=jUx-NPKkFN2EF2lj-8Ml49CEHxKJFWK9seszauI4GE0,335
+client/public/input.css,sha256=zBp60NAZ3bHTLQ7LWIugrCbOQdhiXdbDZjSLJfg6KOw,59
+client/public/output.css,sha256=3iiBiTGfqAeVKuRZRqgcixX3ztSnlp0zqHXkjSKtmVs,38664
+client/src/App.svelte,sha256=hHVoQ_C2xGMmd4d86ftZFeTlGmOcOW_wJ6abq0_qvWo,11170
+client/src/empty.ts,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+client/src/main.js,sha256=O_8UgVd1vJM8BcHO7U_6jkL76ZSA6oC7GLLcL9F3JLA,118
+statedict2pytree-0.5.2.dist-info/METADATA,sha256=YgE7bgWDMI6urA71bH-zWleR_mw6SJ5QPneUZVvHL2E,2242
+statedict2pytree-0.5.2.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+statedict2pytree-0.5.2.dist-info/RECORD,,
