@@ -1,0 +1,11 @@
+gamspy_gurobi/__init__.py,sha256=nGUcIy6GH228ag83CAfOLC-AbMo0FGoRho2Kri45ACA,426
+gamspy_gurobi/grbcclib64.dll,sha256=joFhqFklty4Qh01KFopJLQTBeF7sNzXh_hHiZPSWl40,624640
+gamspy_gurobi/grbgetkey.exe,sha256=fi4FQKPnf6Cr3KYpi61gdxvPVvwpKzAtCdob42Pytgc,18289826
+gamspy_gurobi/grbprobe.exe,sha256=iBHXQx2xPrqz25ENQ2eag6yHRuXoF04u1hHC9sRfyuE,18614056
+gamspy_gurobi/gurobi110.dll,sha256=r4v1abWTLdYy7ztt31VYDjCeKO-DFMNkv9GJ9eEPKL4,36627176
+gamspy_gurobi/optgurobi.def,sha256=OziP1HtHu_Ih950BknOSOkH32wZ7-dYfD2pTg_bKRPY,21311
+gamspy_gurobi/version.py,sha256=NjBx1YDvt7kHgdjpMuKsHX4sKq3hzEidJh02rtVYM48,22
+gamspy_gurobi-47.1.0.dist-info/METADATA,sha256=m07JCvT2RgO9HRWPOLRT-casIt8JWyszAv3-Keb-IJo,63
+gamspy_gurobi-47.1.0.dist-info/WHEEL,sha256=-H981hu6jK6YKd-c0qWpYxXA3UZMihQ3r30_4YPQguI,104
+gamspy_gurobi-47.1.0.dist-info/top_level.txt,sha256=3w4TYVPqS1HlETRlDgAPOeLV1j-gUeKE1iJ6ds47eQI,14
+gamspy_gurobi-47.1.0.dist-info/RECORD,,
