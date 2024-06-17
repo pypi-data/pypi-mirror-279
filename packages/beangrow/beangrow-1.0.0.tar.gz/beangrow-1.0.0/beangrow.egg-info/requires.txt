@@ -1,0 +1,7 @@
+beancount>=2.3.4
+python-dateutil>=2.6.0
+numpy
+scipy
+pandas
+protobuf
+matplotlib

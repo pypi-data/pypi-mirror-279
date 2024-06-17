@@ -1,0 +1,71 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'beangrow'
+version = '1.0.0'
+description = 'Returns calculations on portfolios in Beancount Resources'
+license = { file = 'COPYING' }
+readme = 'README.md'
+authors = [
+    { name = 'Martin Blais', email = 'blais@furius.ca' },
+]
+maintainers = [
+    { name = 'Martin Blais', email = 'blais@furius.ca' },
+]
+keywords = [
+    'accounting', 'ledger', 'beancount', 'returns', 'investments'
+]
+classifiers = [
+    'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+    'Programming Language :: Python :: 3 :: Only',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    'Programming Language :: Python :: 3.10',
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: SQL',
+    'Topic :: Office/Business :: Financial :: Accounting',
+]
+requires-python = '>= 3.8'
+dependencies = [
+    'beancount >= 2.3.4',
+    'python-dateutil >= 2.6.0',
+    'numpy',
+    'scipy',
+    'pandas',
+    'protobuf',
+    'matplotlib',
+]
+
+[project.scripts]
+beangrow-returns = 'beangrow.compute_returns:main'
+beangrow-prices = 'beangrow.download_prices:main'
+beangrow-prices-file = 'beangrow.download_prices_from_file:main'
+
+[project.urls]
+homepage = 'https://github.com/beancount/beangrow'
+issues = 'https://github.com/beancount/beangrow/issues'
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.report]
+exclude_also = [
+    'if typing.TYPE_CHECKING:',
+]
+
+[tool.ruff]
+line-length = 92
+target-version = 'py38'
+
+[tool.ruff.lint]
+select = ['E', 'F', 'W', 'UP', 'B', 'C4', 'PL', 'RUF']

@@ -1,0 +1,4 @@
+[console_scripts]
+beangrow-prices = beangrow.download_prices:main
+beangrow-prices-file = beangrow.download_prices_from_file:main
+beangrow-returns = beangrow.compute_returns:main
