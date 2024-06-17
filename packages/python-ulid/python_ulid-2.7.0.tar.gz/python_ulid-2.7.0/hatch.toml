@@ -1,0 +1,32 @@
+[envs.default]
+dependencies = [
+  "freezegun==1.4.*",
+  "pytest-cov==4.1.*",
+  "pytest==8.1.*",
+]
+features = [
+  "pydantic"
+]
+
+[envs.default.scripts]
+test = "pytest {args:.}"
+cov-test = "pytest --cov {args:ulid} --cov-report=term-missing --cov-report=xml"
+
+[envs.lint]
+dependencies = [
+  "ruff==0.3.*",
+  "mypy==1.9.*",
+  "doc8==1.1.*",
+]
+
+[envs.lint.scripts]
+typing = "mypy --install-types --non-interactive {args:ulid}"
+style = [
+  "ruff format --check --diff {args:.}",
+  "ruff check {args:.}",
+]
+fmt = [
+  "ruff format {args:.}",
+  "ruff check --fix {args:.}",
+]
+docs = "doc8 docs"
