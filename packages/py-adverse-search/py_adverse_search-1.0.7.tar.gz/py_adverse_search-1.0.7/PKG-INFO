@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: py_adverse_search
+Version: 1.0.7
+Summary: A Python library for adversarial search algorithms
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+License-File: LICENSE.txt
+
+A Python library dedicated to adversarial search algorithms, offering ready-to-use fundamental components and the ability to extend its features.

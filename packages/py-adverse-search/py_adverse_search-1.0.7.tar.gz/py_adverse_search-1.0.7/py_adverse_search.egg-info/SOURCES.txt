@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+setup.py
+algorithms/__init__.py
+algorithms/mcts_connect4.py
+algorithms/mcts_tictactoe.py
+algorithms/minimax_connect4.py
+algorithms/minimax_tictactoe.py
+algorithms/pruning_connect4.py
+algorithms/pruning_tictactoe.py
+games/__init__.py
+games/connect4.py
+games/tic_tac_toe.py
+py_adverse_search.egg-info/PKG-INFO
+py_adverse_search.egg-info/SOURCES.txt
+py_adverse_search.egg-info/dependency_links.txt
+py_adverse_search.egg-info/top_level.txt
