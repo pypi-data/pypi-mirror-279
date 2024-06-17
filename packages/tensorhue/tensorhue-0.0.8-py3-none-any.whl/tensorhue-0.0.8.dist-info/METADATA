@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: tensorhue
+Version: 0.0.8
+Summary: TensorHue lets you visualize tensors in your console.
+Author: epistoteles
+Author-email: <korbinian.koch@uni-hamburg.de>
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: rich
+Requires-Dist: matplotlib
+Provides-Extra: testing
+Requires-Dist: pre-commit ; extra == 'testing'
+Requires-Dist: pylint ; extra == 'testing'
+Requires-Dist: torch ; extra == 'testing'
+Requires-Dist: tox ; extra == 'testing'
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-cov ; extra == 'testing'
+Requires-Dist: mypy ; extra == 'testing'
+Requires-Dist: flake8 ; extra == 'testing'
+
+
+TensorHue is a Python library that allows you to visualize tensors right in your console, making understanding and debugging tensor contents easier.
+
+Learn more at: https://github.com/epistoteles/tensorhue
