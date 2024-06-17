@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: hard-connect
+Version: 0.2.3
+Summary: Connect hard device, socket or serial
+Author: kingduyin
+Author-email: kingduyin@gmail.com
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyserial ==3.5
+
+
+## 功能说明：
+封装串口和网口连接硬件
+1.实现统一的发送和接收接口
+2.使用工厂类生成统一的实例
+3.数据通过子线程放入到FIFO队列中
+
+## 文件说明
+- utils.py: 工具类, BaseConn和DequeWithMaxLen
+  - BaseConn 数据入队列和取数
+  - DequeWithMaxLen  实现队列
+- base_serial
+    - `BaseSerial` 实现连接和断开
+    - `SerialConn` 实现数据接收和发送
+- base_socket
+    - `BaseSocket` 实现连接和断开
+    - `SocketConn` 实现数据接收和发送
+- hard_conn
+    - `HardConnSock` 线程方式实现数据接收
+    - `HardConnSerial` 线程方式实现数据接收
+    - `hard_conn` 工厂方法生成实例  在使用中使用该方法就可以
+
+## V0.2.3
+add serial receive bytes
+
+## V0.2.2
+add socket receive length
+
+## V0.2.1
+add socket timout
+
+
+## V0.2.0
+add send_receive  Don't use sub thread receive data. main thread send command wait for server response
+socket add send bytes type. so users can continue to send data as needed.
+
+## V0.1.0
+socket & serial connect/disconnect/send/receive
+Use thread to receive separately， Send use main thread, receive use sub thread
