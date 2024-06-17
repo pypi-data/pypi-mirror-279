@@ -1,0 +1,2 @@
+[console_scripts]
+pymanhuagui = pymanhuagui:main
