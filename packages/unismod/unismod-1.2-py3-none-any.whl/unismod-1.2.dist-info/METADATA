@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: unismod
+Version: 1.2
+Author: Uni
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: statsmodels
+
