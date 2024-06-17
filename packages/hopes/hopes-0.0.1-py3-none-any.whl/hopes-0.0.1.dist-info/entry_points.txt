@@ -1,0 +1,4 @@
+[console_scripts]
+coverage=tests.discover:coverage
+tests=tests.discover:run
+
