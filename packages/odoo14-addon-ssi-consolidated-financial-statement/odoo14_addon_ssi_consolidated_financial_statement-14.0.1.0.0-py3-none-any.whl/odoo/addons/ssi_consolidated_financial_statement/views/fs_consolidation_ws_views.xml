@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2024 OpenSynergy Indonesia-->
+<!--Copyright 2024 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="fs_consolidation_ws_view_tree" model="ir.ui.view">
+    <field name="name">fs_consolidation_ws - Tree</field>
+    <field name="model">fs_consolidation_ws</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="field[@name='company_id']" position="after">
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="type_id" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="fs_consolidation_ws_view_search" model="ir.ui.view">
+    <field name="name">fs_consolidation_ws - Search</field>
+    <field name="model">fs_consolidation_ws</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="fs_consolidation_ws_view_form" model="ir.ui.view">
+    <field name="name">fs_consolidation_ws - Form</field>
+    <field name="model">fs_consolidation_ws</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="company_currency_id" invisible="1" />
+                <field name="type_id" />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="detail" string="Details">
+                    <field name="detail_ids">
+                        <tree>
+                            <field name="currency_id" invisible="1" />
+                            <field name="account_id" />
+                            <field name="parent_balance" />
+                            <field name="child_balance" />
+                            <field name="balance" />
+                            <field name="elimination_debit" />
+                            <field name="elimination_credit" />
+                            <field name="consolidated" />
+                        </tree>
+                        <form>
+                            <group name="transaction_form_1" colspan="4" col="2">
+                                <field name="currency_id" invisible="1" />
+                                <field name="account_id" />
+                                <field name="parent_balance" />
+                                <field name="child_balance" />
+                                <field name="balance" />
+                                <field name="elimination_debit" />
+                                <field name="elimination_credit" />
+                                <field name="consolidated" />
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="fs_consolidation_ws_action" model="ir.actions.act_window">
+    <field name="name">Financial Statement Consolidation Worksheets</field>
+    <field name="res_model">fs_consolidation_ws</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="fs_consolidation_ws_menu"
+        name="Worksheets"
+        parent="menu_fs_consolidation_ws_root"
+        groups="fs_consolidation_ws_viewer_group"
+        action="fs_consolidation_ws_action"
+        sequence="110"
+    />
+</odoo>

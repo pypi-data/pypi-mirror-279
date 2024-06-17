@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2024 OpenSynergy Indonesia-->
+<!--Copyright 2024 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="elimination_entry_view_tree" model="ir.ui.view">
+    <field name="name">elimination_entry - Tree</field>
+    <field name="model">elimination_entry</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="field[@name='company_id']" position="after">
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="type_id" />
+                <field name="ws_id" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="elimination_entry_view_search" model="ir.ui.view">
+    <field name="name">elimination_entry - Search</field>
+    <field name="model">elimination_entry</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="elimination_entry_view_form" model="ir.ui.view">
+    <field name="name">elimination_entry - Form</field>
+    <field name="model">elimination_entry</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="company_currency_id" invisible="1" />
+                <field name="ws_id" domain="[('state','=','open')]" />
+                <field name="type_id" invisible="1" />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="detail" string="Details">
+                    <field name="detail_ids">
+                        <tree>
+                            <field name="currency_id" invisible="1" />
+                            <field name="account_id" />
+                            <field name="name" />
+                            <field name="ref" />
+                            <field name="debit" />
+                            <field name="credit" />
+                        </tree>
+                        <form>
+                            <group name="transaction_form_1" colspan="4" col="2">
+                                <field name="currency_id" invisible="1" />
+                                <field name="account_id" />
+                                <field name="name" />
+                                <field name="ref" />
+                                <field name="debit" />
+                                <field name="credit" />
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="elimination_entry_action" model="ir.actions.act_window">
+    <field name="name">Elimination Entris</field>
+    <field name="res_model">elimination_entry</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="elimination_entry_menu"
+        name="Elimination Entries"
+        parent="menu_fs_consolidation_ws_root"
+        groups="elimination_entry_viewer_group"
+        action="elimination_entry_action"
+        sequence="130"
+    />
+</odoo>

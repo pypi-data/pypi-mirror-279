@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Copyright 2024 OpenSynergy Indonesia-->
+<!--Copyright 2024 PT. Simetri Sinergi Indonesia-->
+<!--License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).-->
+<odoo>
+<record id="subsidiary_trial_balance_view_tree" model="ir.ui.view">
+    <field name="name">subsidiary_trial_balance - Tree</field>
+    <field name="model">subsidiary_trial_balance</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_tree" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="field[@name='company_id']" position="after">
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="type_id" />
+                <field name="ws_id" />
+                <field name="partner_id" />
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="subsidiary_trial_balance_view_search" model="ir.ui.view">
+    <field name="name">subsidiary_trial_balance - Search</field>
+    <field name="model">subsidiary_trial_balance</field>
+    <field
+            name="inherit_id"
+            ref="ssi_transaction_mixin.mixin_transaction_view_search"
+        />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+        </data>
+    </field>
+</record>
+
+<record id="subsidiary_trial_balance_view_form" model="ir.ui.view">
+    <field name="name">subsidiary_trial_balance - Form</field>
+    <field name="model">subsidiary_trial_balance</field>
+    <field name="inherit_id" ref="ssi_transaction_mixin.mixin_transaction_view_form" />
+    <field name="mode">primary</field>
+    <field name="arch" type="xml">
+        <data>
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="company_currency_id" invisible="1" />
+                <field name="ws_id" domain="[('state','=','open')]" />
+                <field name="type_id" />
+
+                <field name="partner_id" />
+            </xpath>
+            <xpath expr="//group[@name='header_right']" position="inside">
+                <field name="date_start" />
+                <field name="date_end" />
+            </xpath>
+            <xpath expr="//page[1]" position="before">
+                <page name="detail" string="Details">
+                    <field name="detail_ids">
+                        <tree>
+                            <field name="currency_id" invisible="1" />
+                            <field name="account_id" />
+                            <field name="beginning_balance" />
+                            <field name="debit" />
+                            <field name="credit" />
+                            <field name="adjustment_debit" />
+                            <field name="adjustment_credit" />
+                            <field name="ending_balance" />
+                        </tree>
+                        <form>
+                            <group name="transaction_form_1" colspan="4" col="2">
+                                <field name="currency_id" invisible="1" />
+                                <field name="account_id" />
+                                <field name="beginning_balance" />
+                                <field name="debit" />
+                                <field name="credit" />
+                                <field name="adjustment_debit" />
+                                <field name="adjustment_credit" />
+                                <field name="ending_balance" />
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </data>
+    </field>
+</record>
+
+<record id="subsidiary_trial_balance_action" model="ir.actions.act_window">
+    <field name="name">Subsidiary Trial Balances</field>
+    <field name="res_model">subsidiary_trial_balance</field>
+    <field name="view_mode">tree,form</field>
+</record>
+
+
+<menuitem
+        id="subsidiary_trial_balance_menu"
+        name="Subsidiary Trial Balances"
+        parent="menu_fs_consolidation_ws_root"
+        groups="subsidiary_trial_balance_viewer_group"
+        action="subsidiary_trial_balance_action"
+        sequence="120"
+    />
+</odoo>
