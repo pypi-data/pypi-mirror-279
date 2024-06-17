@@ -1,0 +1,14 @@
+napari<0.5
+numpy
+magicgui
+qtpy
+scikit-image
+trackastra
+napari-ctc-io
+
+[testing]
+tox
+pytest
+pytest-cov
+pytest-qt
+pyqt5
