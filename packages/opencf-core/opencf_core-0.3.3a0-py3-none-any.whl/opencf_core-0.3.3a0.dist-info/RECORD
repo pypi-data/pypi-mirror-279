@@ -1,0 +1,15 @@
+opencf_core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opencf_core/base_converter.py,sha256=MRePwtB08ZZkOJFUBt7tMXSJngckISTvuF8DlZE9sdw,17273
+opencf_core/converter_app.py,sha256=eiMYAjJbvJ3w1RCkkNv-VCqkCjdrqPbCJsrKfiC_l0k,6871
+opencf_core/enum.py,sha256=gY5HAjlm0L7R8YECrWOjX6RUAj6FJ_qrGZEZzxgXyEY,2052
+opencf_core/exceptions.py,sha256=gUpY8TTrvaJltW1_bkOGgvC7CxJuZUxR65PuaT-U51U,1219
+opencf_core/file_handler.py,sha256=nkEcUBTWCVRZuRs2EVkqczjznK-OqAzwyggdurqsbHk,8701
+opencf_core/filetypes.py,sha256=Zta94L2bZrOaCXtMUfwqRhb0qt0d7KMzwSrPHFiZp14,26238
+opencf_core/io_handler.py,sha256=HFPB4i9MTqDn5bEip34-kLleyH4HF-aQal4Sscs_PWg,9201
+opencf_core/logging_config.py,sha256=xSpPSLf0OJbrpwcza54VHlF1DpNRR8tWAjnS4BnDfJk,3818
+opencf_core/mimes.py,sha256=Zc6R9JxWFX3lcxZKudJq6K2r6l5CeGK05d2sE0V5T7I,915
+opencf_core/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+opencf_core/utils.py,sha256=3G3GbM95hCsFWU5tZ96VJL8-SNQXvNgn9mJ22JbLvag,1461
+opencf_core-0.3.3a0.dist-info/METADATA,sha256=-invgcReocqz_b0rlqYsn0-QTQVVqtSqeOxWfbTDAhQ,8301
+opencf_core-0.3.3a0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+opencf_core-0.3.3a0.dist-info/RECORD,,
