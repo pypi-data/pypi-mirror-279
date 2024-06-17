@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+copspy/__init__.py
+copspy/api_urls.py
+copspy/apierror.py
+copspy/get_profile.py
+copspy/get_server_status.py
+u_copsapi.egg-info/PKG-INFO
+u_copsapi.egg-info/SOURCES.txt
+u_copsapi.egg-info/dependency_links.txt
+u_copsapi.egg-info/requires.txt
+u_copsapi.egg-info/top_level.txt
