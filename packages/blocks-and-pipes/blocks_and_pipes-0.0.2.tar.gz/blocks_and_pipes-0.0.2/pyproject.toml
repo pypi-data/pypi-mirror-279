@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "blocks_and_pipes"
+version = "0.0.2"
+authors = [
+  { name="Benjamin Schnitzler", email="regenbogenbauer@web.de" },
+]
+description = "Blocks and Pipes for Python"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/bschnitz/blocks_and_pipes"
+Issues = "https://github.com/bschnitz/blocks_and_pipes/issues"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "./tests/",
+]
+pythonpath = "./src/"
