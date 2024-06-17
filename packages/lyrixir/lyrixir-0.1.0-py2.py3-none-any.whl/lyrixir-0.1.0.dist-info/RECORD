@@ -1,0 +1,16 @@
+lyrixir/__init__.py,sha256=8D5a8oKgqd6WA1RUkiKCn4l_PVemtyuckxQut0vDHXM,20
+lyrixir/__main__.py,sha256=fr-CFAsvUaq-F1nICslExsfLggcTfrfCuU_MUBrHZdQ,58
+lyrixir/config.py,sha256=4-6UhV_ygCptU1CeY5evkqc7V0xthbCl2vnAmuWpjGs,1725
+lyrixir/fancy.py,sha256=n1jFjUnemyITFRlXsgC0mk1BdVy3ILifrId5Tcs-5WI,4200
+lyrixir/lyrixir.py,sha256=4oV7ljn770ojOjnp4a9Nkz32C8V8foYPgFYn7_fxhGc,2250
+lyrixir/lyrixir_add.py,sha256=uakMv-DRA2aBsJYKOX37K2srmmmw8zBbMgkWL0CbaqA,1337
+lyrixir/lyrixir_list.py,sha256=E-nc5twVXMX7hz0Zn57PRp7Uf4J5jjLz9CA4PFuZ-qE,1161
+lyrixir/lyrixir_remove.py,sha256=ltzNKcWC_zITI7k4_szaT_3MHvteZMklW5kN4yqtTR4,1294
+lyrixir/main.py,sha256=fw3v0IJC24C0SMg7Ppq8f590VRhe59QfYSvkd5PUO4Q,829
+lyrixir/paths.py,sha256=zRezM6UtGNzCvYh5HEV8I2mGZUT-MTqqoSBk8XFJij0,401
+lyrixir/songs.py,sha256=nArWy502-_lqUL1MH2crfzy-24KSyhO5EzlsSEw07Os,2500
+lyrixir-0.1.0.dist-info/METADATA,sha256=jTDWut4au6M-5EgqJStDcfWbjW0QDbNWyXOchUiwFlo,620
+lyrixir-0.1.0.dist-info/WHEEL,sha256=cDcbFFSNXOE-241I5PFuLkIYfR_FM7WTlPEi33njInY,105
+lyrixir-0.1.0.dist-info/entry_points.txt,sha256=ftwEm2VPSdFPD_kedjzj0CnsPd1mTtA96GuB_I-2FPQ,39
+lyrixir-0.1.0.dist-info/licenses/LICENSE,sha256=pj6naQvM46Q-jcxotUoBOCQcTqvNQLChFh5aqz1APO0,1064
+lyrixir-0.1.0.dist-info/RECORD,,
