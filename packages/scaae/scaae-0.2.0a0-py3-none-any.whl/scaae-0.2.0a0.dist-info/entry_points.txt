@@ -1,0 +1,3 @@
+[console_scripts]
+scaae=scaae.__main__:main
+
