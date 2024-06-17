@@ -1,0 +1,8 @@
+Pillow<9,>=8.0.1
+
+[doc]
+numpydoc>=1.1.0
+
+[test]
+pytest==8.2.2
+pytest-cov==5.0.0
