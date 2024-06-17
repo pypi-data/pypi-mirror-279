@@ -1,0 +1,2 @@
+[console_scripts]
+aspectratiox = aspectratiox.main:main
