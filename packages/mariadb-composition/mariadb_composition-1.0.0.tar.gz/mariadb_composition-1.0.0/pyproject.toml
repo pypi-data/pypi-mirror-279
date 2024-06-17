@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mariadb_composition"
+version = "1.0.0"
+authors = [
+  { name="Jarrod Lombardo", email="jarrodl@gmail.com" },
+]
+description = "SQL String Composition for MariaDB"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/jarrodlombardo/mariadb-composition"
+Issues = "https://github.com/jarrodlombardo/mariadb-composition/issues"
+
+[tool.coverage.run]
+branch = true
+
+[tool.coverage.html]
+skip_covered = true
+skip_empty = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+pythonpath = "src"
+testpaths = [
+    "tests",
+]
