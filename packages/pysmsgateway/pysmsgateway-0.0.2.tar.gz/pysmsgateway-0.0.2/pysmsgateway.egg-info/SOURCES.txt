@@ -1,0 +1,8 @@
+setup.py
+pySMSgateway/__init__.py
+pySMSgateway/pysmsgateway.py
+pysmsgateway.egg-info/PKG-INFO
+pysmsgateway.egg-info/SOURCES.txt
+pysmsgateway.egg-info/dependency_links.txt
+pysmsgateway.egg-info/requires.txt
+pysmsgateway.egg-info/top_level.txt
