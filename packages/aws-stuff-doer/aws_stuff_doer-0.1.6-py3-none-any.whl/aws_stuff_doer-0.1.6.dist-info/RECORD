@@ -1,0 +1,11 @@
+aws_stuff_doer/__init__.py,sha256=F7H91PdjIKozAh3b-MBczT_6FzUTPXvTChPNpd2A5cc,48
+aws_stuff_doer/cmd/__init__.py,sha256=YzGluK0UsHjAZZ07Z7lFkSb5oy26pD7KuXtx3ESAaMI,36
+aws_stuff_doer/cmd/config.py,sha256=q5JF4iCDrNAgpRIf1BlH9C5wnUHAyPw6XqZTaXPTIh0,3289
+aws_stuff_doer/cmd/get_version.py,sha256=qvY-zt99yqh9WDOonPQQT0ovVTpQkS5-jwT20LzAQtk,227
+aws_stuff_doer/cmd/login.py,sha256=BmqmqT5zXUyOkS6cMjE7klI8omw1Jo5IQkNh65QyIVA,7837
+aws_stuff_doer/main.py,sha256=dO_552kLz_aR3FFP1vhJm4_BeA2EQovFE-DiwIIheug,2429
+aws_stuff_doer-0.1.6.dist-info/LICENSE,sha256=ewsA_NvGoDYHiq2E0LwPriQKxnFEuGyREUnC2qN8n4U,1062
+aws_stuff_doer-0.1.6.dist-info/METADATA,sha256=ffnuupbCE9KAPUaQnu0oDUfA_zi6lRxvjBhcrDOQ5cA,2669
+aws_stuff_doer-0.1.6.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+aws_stuff_doer-0.1.6.dist-info/entry_points.txt,sha256=30eTLMBnUKUkP9DJwUqseEqZRBMaVolNt5hI0BYulqk,48
+aws_stuff_doer-0.1.6.dist-info/RECORD,,
