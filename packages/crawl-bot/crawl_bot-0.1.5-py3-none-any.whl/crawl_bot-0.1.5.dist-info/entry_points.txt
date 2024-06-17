@@ -1,0 +1,2 @@
+[console_scripts]
+run_spider = core.run_spider:main
