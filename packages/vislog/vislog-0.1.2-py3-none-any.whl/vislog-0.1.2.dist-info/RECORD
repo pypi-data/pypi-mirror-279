@@ -1,0 +1,15 @@
+vislog/__init__.py,sha256=0dFO8_HxS_IWT48WbodlLJ-ysc6-0xiEFf4bVAfA0tw,427
+vislog/_version.py,sha256=NZBjYYSoNR2nlTX59p8SDo-hU2DoR8U_jfmtW4alUf0,93
+vislog/impl.py,sha256=NVYAoTjTdbwqSyJAk5oe6LbPUY8dQLEO4nKLTstMfx8,24542
+vislog/paths.py,sha256=97S8BLeL_V7rmEA-I0RmMZCJ8p1lZseMiorow53W4C8,642
+vislog/docs/__init__.py,sha256=f-E2GGaAOnea7U51BKWcRtFHZ6p2iPnvGoXR6VvBtGg,43
+vislog/tests/__init__.py,sha256=2nfXkz9TigdtVWm0YAeP8qD83i0KvM74AWag9WJMw4Q,58
+vislog/tests/helper.py,sha256=p_oZhY0NE1HTQ50ftj1y4sJ6nVOLxQrPwseOlX0AD4s,447
+vislog/vendor/__init__.py,sha256=O9CT1B2F-cVB8elT0EoCJbgkcffjvlmqteqavs4giDg,25
+vislog/vendor/pytest_cov_helper.py,sha256=nR-I6d8j0P1JQy6dxIiZtG9Gz0DkfJFpk6EPCCpfnm8,3572
+vislog-0.1.2.dist-info/AUTHORS.rst,sha256=nHTveFzFQh1uHjbLOIj6LbooSLAAByNffYkdIMKP-Pc,670
+vislog-0.1.2.dist-info/LICENSE.txt,sha256=iqfKMS_1yV5SonIOaaxUSB_EQD5q6qkUv1DYSUv-FFU,1117
+vislog-0.1.2.dist-info/METADATA,sha256=Cpq3DxpEo-ybiu43egoPLQZ3etZY6hHiFucDfs-YGGM,6184
+vislog-0.1.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vislog-0.1.2.dist-info/top_level.txt,sha256=fKPsfDGuO7rSfWxJgzjPYT-b-Q7ujZBpDIBlj9U1aBo,7
+vislog-0.1.2.dist-info/RECORD,,
