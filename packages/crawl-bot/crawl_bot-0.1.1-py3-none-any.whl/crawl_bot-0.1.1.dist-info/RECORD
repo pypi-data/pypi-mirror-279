@@ -1,0 +1,12 @@
+crawl_bot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crawl_bot/items.py,sha256=KdWVyHC64mxCpa38zxgCIXlh8wehZFlQg3U2dsxub5w,277
+crawl_bot/middlewares.py,sha256=sooY2LpDr9l8lhK4ndq_3_Rp9fEUEM0s6YI6HJDty1Y,3867
+crawl_bot/pipelines.py,sha256=7zhu6nDJwUQa1k5sbtH0ar_O8EICz-o24APcC_afbdA,460
+crawl_bot/settings.py,sha256=xAbj9r_6O_3Ftu5-Il85tPQlbzxVF6i4OaGVnzMaHRQ,3427
+crawl_bot/spiders/__init__.py,sha256=5luAhXqjwdxrIVrXVEk2xYXlYtjT6B0BT6FvrjGs-zo,162
+crawl_bot/spiders/basic_spider.py,sha256=2F5RmO15sxXRoY08rSgK4TR2onoY82fi-4YXazh7CPU,3955
+crawl_bot-0.1.1.dist-info/METADATA,sha256=7AVGWGDMIuWSYUaMX8GCS6btI-dWWfKbFh-y1PnuQa4,3213
+crawl_bot-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+crawl_bot-0.1.1.dist-info/entry_points.txt,sha256=Gk0eFiqZm5qnLDlbz-IeRjVu3QXInsHQmDhKiV7G1YA,57
+crawl_bot-0.1.1.dist-info/top_level.txt,sha256=Ibl3CBDwCRQrwSdFiCjIP2FmpenYAAEeu9Mzx6zZIv8,10
+crawl_bot-0.1.1.dist-info/RECORD,,

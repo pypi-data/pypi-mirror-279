@@ -1,0 +1,2 @@
+[console_scripts]
+run_spider = crawl_bot.run_spider:main
