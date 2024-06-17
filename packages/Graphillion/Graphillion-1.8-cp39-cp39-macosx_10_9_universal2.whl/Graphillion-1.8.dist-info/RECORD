@@ -1,0 +1,12 @@
+_graphillion.cpython-39-darwin.so,sha256=TxSPCxYwKMXR-vHrKfutUO95GXdd_yAUhPIJATRsxRI,1908990
+graphillion/__init__.py,sha256=QQlI3uQ_m1rIx2gckRPBA19hf_6hKiiSAycgk13ppys,1577
+graphillion/graphset.py,sha256=XUtDsSUEvz2SBvdiXlplp27Xwlxt2jBLZNRgbxXzyOs,81458
+graphillion/release.py,sha256=gtaW9Wg1ixUQgozVoEVuzQLIWn7JQSbMGycz6J9aCYs,1453
+graphillion/setset.py,sha256=T2loKGx6NTDjbl8Xza89dY-bETIUfd6EyrLD5M9fNEg,10810
+graphillion/tutorial.py,sha256=g3U8J164piee9Z77AzVT-diIBmsSSc44jr1o40ajyMY,3088
+graphillion/vertex_setset.py,sha256=GF5zDgXEMVd0ZyEUjrqD07mvPH5xDFSnbpPWFGFqV38,67104
+Graphillion-1.8.dist-info/LICENSE.txt,sha256=cmkKcMIAVxaoX7sDIhqwnnkd2zusG4WSudebPupmi7k,1425
+Graphillion-1.8.dist-info/METADATA,sha256=Gj3bsB9STgUsctJA0NTh0ouW-XUYzQc739d8ZKYe2ZI,1567
+Graphillion-1.8.dist-info/WHEEL,sha256=Ber5qIqMO9Bgjzsdsa-quaSLD92qE_yQT1ahu4qEUHc,113
+Graphillion-1.8.dist-info/top_level.txt,sha256=OXAV5ZXVMxFn08oJuZerhb1nJ3LbiAyOHVMJAMHmL1Q,25
+Graphillion-1.8.dist-info/RECORD,,
