@@ -1,0 +1,10 @@
+everai_autoscaler/builtin/__init__.py,sha256=OCLSOo0VHLOpWQz1WYC-A_AjzQSaI-pMeUe3Jqlt5Dk,226
+everai_autoscaler/builtin/builtin_manager.py,sha256=4Y7eHO-3DY3lm_3yL5xYXzk0E1qj3QIUcma-HKauGI8,877
+everai_autoscaler/builtin/is_builtin.py,sha256=7ULSubBxan0DiFuCUqDfJfGHCeByYikjfpD75T84OvE,728
+everai_autoscaler/builtin/simple_autoscaler.py,sha256=7ZrlkUjEQCUfje9jFTm4O2dl3B1yD8aFoklJVVe4QDI,5491
+everai_autoscaler/builtin/singleton.py,sha256=IVyrqO3m3JOy95WkbgJ_owNJPY_eBrp38XgIKx4tVfE,239
+everai_builtin_autoscaler-0.1.23.dist-info/METADATA,sha256=9sIt2OOs61f24XbHRQYPB0HG10eF2cEIr_P4Rz9AQxg,1146
+everai_builtin_autoscaler-0.1.23.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+everai_builtin_autoscaler-0.1.23.dist-info/entry_points.txt,sha256=YFXByPNu4Q8Icq5tFj9aqIXAIxCD77xZVaA0EpkvUeQ,95
+everai_builtin_autoscaler-0.1.23.dist-info/top_level.txt,sha256=_BCEx0q_XtSW6uA9n0QW2SbhWS7JTsoeDrzvEOrl3pI,18
+everai_builtin_autoscaler-0.1.23.dist-info/RECORD,,
