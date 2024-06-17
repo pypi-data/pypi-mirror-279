@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: federatedsecure-simon
+Version: 0.6.4
+Summary: SImple Multiparty ComputatiON (SIMON) for Federated Secure Computing
+Home-page: https://github.com/federatedsecure
+Author: Ludwig-Maximilians-Universität München (LMU Munich)
+Author-email: federatedsecurecomputing@lrz.uni-muenchen.de
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Legal Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: federatedsecure-client
+Requires-Dist: federatedsecure-server
+Requires-Dist: numpy
+
+UNKNOWN
+
