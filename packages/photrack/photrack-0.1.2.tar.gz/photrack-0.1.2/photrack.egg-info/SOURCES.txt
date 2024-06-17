@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+requirements.txt
+photrack/__init__.py
+photrack/__main__.py
+photrack/main.py
+photrack/test.py
+photrack.egg-info/PKG-INFO
+photrack.egg-info/SOURCES.txt
+photrack.egg-info/dependency_links.txt
+photrack.egg-info/requires.txt
+photrack.egg-info/top_level.txt
