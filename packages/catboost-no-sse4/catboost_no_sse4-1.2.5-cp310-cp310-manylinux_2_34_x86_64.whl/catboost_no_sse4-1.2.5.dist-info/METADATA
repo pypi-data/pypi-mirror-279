@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: catboost-no-sse4
+Version: 1.2.5
+Summary: Catboost compiled without SS4.1 and SS4.2 (useful for legacy microprocessors)
+Home-page: https://catboost.ai
+Author: CatBoost Developers
+Author-email: Manoel Vilela <manoelnt0@gmail.com>
+License: MIT
+Project-URL: GitHub, https://github.com/catboost/catboost
+Project-URL: Bug Tracker, https://github.com/catboost/catboost/issues
+Project-URL: Documentation, https://catboost.ai/docs/
+Project-URL: Benchmarks, https://catboost.ai/#benchmark
+Keywords: catboost
+Platform: Linux
+Platform: Mac OSX
+Platform: Windows
+Platform: Unix
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools >=70.0.0
+Requires-Dist: wheel
+Requires-Dist: jupyterlab ==3.*,>=3.0.6
+Requires-Dist: conan ~=1.62
+Provides-Extra: widget
+Requires-Dist: traitlets ; extra == 'widget'
+Requires-Dist: ipython ; extra == 'widget'
+Requires-Dist: ipywidgets <9.0,>=7.0 ; extra == 'widget'
+
+CatBoost Python Package
+======================
+
+[![PyPI version](https://badge.fury.io/py/catboost.svg)](https://pypi.org/project/catboost)
+
+Installation
+------------
+For stable version, please install using pip:
+-  ``pip install catboost``
+
+For the latest version from GitHub:
+- [Build python package from source](https://catboost.ai/en/docs/installation/python-installation-method-build-from-source)
+
+
+Examples
+--------
+-  Refer to examples <https://catboost.ai/docs/concepts/python-usages-examples.html>
+
+
+Documentation
+-------------
+-  Refer to documentation <https://catboost.ai/docs/concepts/python-quickstart.html>
