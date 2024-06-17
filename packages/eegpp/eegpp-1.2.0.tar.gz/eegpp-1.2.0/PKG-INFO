@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: eegpp
+Version: 1.2.0
+Summary: EEG Phrase Predictor
+Author-email: AnhND <anh.nguyenduc@hust.edu.vn>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.3.0
+Requires-Dist: torchvision>=0.15.2
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: tqdm<5,>=4.66.2
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: scikit-learn<2,>=1.4.2
+Requires-Dist: scipy<2,>=1.13.0
+Requires-Dist: joblib<2,>=1.4.0
+
+# EEG Phrase Predictor
+
+## Setup
+- Requirements: python==3.9
+- Installing: 
+    ```
+        pip install eegpp
+    ```
+## Configuration
+YML_CONFIG_FILE (e.g. data_config_infer.yml) with the following contents
+
+```
+datasets:
+  time_step: 4000 #milliseconds
+  data_dir: "FULL_PATH_TO_THE_FOLDER_WITH_RAW_SIGNAL_FILES"
+  tmp_dir : "FULL_PATH_TO_THE_TMP_FOLDER"
+  out_dir: "FULL_PATH_TO_THE_OUTPUT_FOLDER"
+  seq_files: ["name_of_raw_file_1", "name_of_raw_file_2",...,"name_of_raw_file_n]
+  out_seperator: "\t"
+
+```
+
+Example:
+```
+datasets:
+  time_step: 4000 #milliseconds
+  data_dir: "/home/EEGData/EEG_test_files"
+  tmp_dir : "/home/EEGData/tmp"
+  out_dir: "/home/EEGData/EEG_test_files"
+  seq_files: ["raw_K3_EEG3_11h.txt", "raw_RS2_EEG1_23 hr.txt", "raw_S1_EEG1_23 hr.txt"]
+  out_seperator: "\t" for tab or "," for commas
+
+```
+
+## Running
+
+Command:
+
+```
+    python -m eegpp -p PATH_TO_THE_YML_CONFIG_FILE -e
+```
+e.g.
+
+```
+    python -m eegpp -p data_config_infer.yml -e
+```
