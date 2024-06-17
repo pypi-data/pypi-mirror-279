@@ -1,0 +1,9 @@
+pyobs_qhyccd/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyobs_qhyccd/libqhyccd.pxd,sha256=TpdlkpDFbGiv30dtRHYidhbSIygvpaFsV3cjCcC9gFg,4227
+pyobs_qhyccd/qhyccdcamera.py,sha256=X64QofLalWbNLcwOgJtgVKN3hPHCiZC4Gb0NtAmIPW0,9427
+pyobs_qhyccd/qhyccddriver.cpp,sha256=_qoam3l2mkveM9TkD2H8hJ3oCYCFdST9eO859J7X2Ck,802630
+pyobs_qhyccd/qhyccddriver.cpython-312-x86_64-linux-gnu.so,sha256=4PO-tClaF1QNhEJfjDED_H9fEtqII8GCVAzXvb3gsSA,902288
+pyobs_qhyccd/qhyccddriver.pyx,sha256=XoK-KaEZ7_FCyYK-d7tTnrKuvAKKrOCmCxaVKfGdnp8,8688
+pyobs_qhyccd-1.0.0.dist-info/METADATA,sha256=plWkpWATve2MZpWoGwTpEUKAptMb8DpdEWeAW8dlcQ0,617
+pyobs_qhyccd-1.0.0.dist-info/WHEEL,sha256=veSd8pcvIVldeIKqOQE-_2w7n4R0NV-Dmc64f9SZ-wo,110
+pyobs_qhyccd-1.0.0.dist-info/RECORD,,
