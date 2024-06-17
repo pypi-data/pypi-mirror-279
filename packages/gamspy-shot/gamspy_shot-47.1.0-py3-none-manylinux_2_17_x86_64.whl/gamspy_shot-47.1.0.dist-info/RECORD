@@ -1,0 +1,12 @@
+gamspy_shot/__init__.py,sha256=ujMrMTvWGRhEVONxSBNd3Wuct4O5SzozGTE6aiACNV8,416
+gamspy_shot/libgurobi.so,sha256=1ZCmUxeYGIF8cRvB93jekHEfJE5Q_-3oTfGP3LEng1U,46048216
+gamspy_shot/libgurobi.so.11.0.2,sha256=1ZCmUxeYGIF8cRvB93jekHEfJE5Q_-3oTfGP3LEng1U,46048216
+gamspy_shot/libiomp5.so,sha256=CFEkahKMn3dd3X_LBfSpLA9Ux3G8S9E4hDSKQJ9rjOk,2176304
+gamspy_shot/libipopt64.so,sha256=dTv2QA9vLCqbJrVTTrNyL1JCa4oN6TUlUUuv1CHq-1A,5613512
+gamspy_shot/libmkl_gams.so,sha256=EgYuSqEOJXchgOEQJ9wRvYaXDGzel5-ZbrILoMPiZYI,86269632
+gamspy_shot/libshtcclib64.so,sha256=sUK8p8EkLqcxdZTWOKJV3L9H8YsbwHtdxGpxXB6S8PY,36504312
+gamspy_shot/version.py,sha256=NjBx1YDvt7kHgdjpMuKsHX4sKq3hzEidJh02rtVYM48,22
+gamspy_shot-47.1.0.dist-info/METADATA,sha256=viW4rGKvRRQlVBIjZiXZhnl3qVGM7J6ffttRmUsg_pI,57
+gamspy_shot-47.1.0.dist-info/WHEEL,sha256=EyChNuwWclgJLf8btn5REviYd5IxRGn2tIXp4VelYwc,116
+gamspy_shot-47.1.0.dist-info/top_level.txt,sha256=gusCdxO7iASg7Gt5S2fDZID7IyLftCEceNg_cQGrwKA,12
+gamspy_shot-47.1.0.dist-info/RECORD,,
