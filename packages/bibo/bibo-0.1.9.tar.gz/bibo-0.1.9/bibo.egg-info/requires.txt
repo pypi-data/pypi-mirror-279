@@ -1,0 +1,16 @@
+click>=8
+click-plugins
+requests
+pylatexenc
+pyperclip
+
+[dev]
+black
+bumpversion
+coverage
+mypy
+pytest
+sphinx
+sphinx-click
+types-requests
+types-setuptools
