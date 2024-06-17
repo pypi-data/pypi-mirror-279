@@ -1,0 +1,14 @@
+[package]
+name = "uuid-utils"
+version = "0.8.0"
+edition = "2021"
+
+[lib]
+name = "uuid_utils"
+crate-type = ["cdylib"]
+
+[dependencies]
+mac_address = "1.1.6"
+pyo3 = { version = "0.21.2", features = ["extension-module", "generate-import-lib"] }
+rand = "0.8.5"
+uuid = { version = "1.8.0", features = ["v1", "v3", "v4", "v5", "v6", "v7", "v8", "fast-rng"]}
