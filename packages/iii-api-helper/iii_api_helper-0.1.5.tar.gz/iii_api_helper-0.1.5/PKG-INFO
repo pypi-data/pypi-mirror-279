@@ -1,0 +1,323 @@
+Metadata-Version: 2.3
+Name: iii-api-helper
+Version: 0.1.5
+Summary: III Common FastAPI base.
+Author: allen0099
+Classifier: Framework :: AsyncIO
+Classifier: Framework :: FastAPI
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Server
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Requires-Dist: arrow
+Requires-Dist: fastapi
+Requires-Dist: httpx
+Requires-Dist: orjson
+Requires-Dist: python-dotenv
+Requires-Dist: sentry-sdk
+Requires-Dist: uvicorn[standard]<=0.28.1,>=0.23.0
+Provides-Extra: database
+Requires-Dist: alembic>=1.10.0; extra == 'database'
+Requires-Dist: sqlalchemy; extra == 'database'
+Requires-Dist: sqlmodel; extra == 'database'
+Description-Content-Type: text/markdown
+
+<h1 align="center"><b>III API base</b></h1>
+
+<div align="center">
+<a href="https://pypi.org/project/iii-api-helper" target="_blank">
+  <img src="https://img.shields.io/pypi/v/iii-api-helper.svg?logo=pypi&logoColor=gold&label=PyPI" alt="PyPI - Version">
+</a>
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/iii-api-helper.svg?logo=python&label=Python&logoColor=gold">
+<br />
+<a href="https://pepy.tech/project/iii-api-helper" >
+  <img alt="Downloads" src="https://static.pepy.tech/badge/iii-api-helper"/>
+</a>
+<a href="https://pepy.tech/project/iii-api-helper" >
+  <img alt="Weekly downloads" src="https://static.pepy.tech/badge/iii-api-helper/week"/>
+</a>
+<a href="https://pepy.tech/project/iii-api-helper" >
+  <img alt="Monthly downloads" src="https://static.pepy.tech/badge/iii-api-helper/month"/>
+</a>
+<br />
+<a href="https://github.com/pypa/hatch">
+  <img alt="Hatch project" src="https://img.shields.io/badge/%F0%9F%A5%9A-Hatch-4051b5.svg">
+</a>
+<a href="https://github.com/astral-sh/ruff">
+  <img alt="linting - Ruff" src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json">
+</a>
+<p align="center">
+III FastAPI Common base
+<br />
+<a href="https://pypi.org/project/iii-api-helper/"><strong>Go to pypi now</strong></a>
+</p>
+</div>
+
+---
+
+## Usage
+
+### Config
+
+> The later config will override the previous one.
+
+This table shows the predefined environment variables.
+
+| Keyword    | Type    | Default     | Description                                                                        |
+|------------|---------|-------------|------------------------------------------------------------------------------------|
+| `DEBUG`    | boolean | false       | To set the logging as `DEBUG` state, you can pass `debug=True` to application too. |
+| `RELOAD`   | boolean | false       | To auto reload the FastAPI application, you can pass `reload=True` to `run` too.   |
+| `APP_NAME` | string  | Backend API | The application name use on FastAPI.                                               |
+
+```python
+from pathlib import Path
+
+from api_helper.config import load_config
+
+# Load config
+load_config(Path(__file__).parent / ".env")
+
+# Load default config in the directory (.env)
+load_config(Path(__file__).parent)
+```
+
+### FastAPI example
+
+> To config the FastAPI by env, read the [Config](#config) section.
+
+```python
+from pathlib import Path
+
+from api_helper import FastAPI, success_response
+
+app: FastAPI = FastAPI(base_folder=Path(__file__).parent)
+# Optional to setup sentry
+app.setup_sentry("sentry_dsn")
+
+
+@app.get("/")
+def home():
+    return success_response("Hello, World!")
+
+
+# Start the app and enjoy
+app.run("127.0.0.1", 5000)
+
+# Start the app with OpenAPI, for example
+app.run(show_swagger=True)
+```
+
+#### Use FastAPI with auto-reload
+
+To use the reload method, you need to pass `reload=True` and `app="main:app"` to the `run` method.  
+If you don't pass them, the reload will not work. See the sample code below.
+
+```python
+from pathlib import Path
+
+from api_helper import FastAPI
+
+# Must declared before running into main code block
+app: FastAPI = FastAPI(base_folder=Path(__file__).parent.parent)
+
+if __name__ == "__main__":
+    # Pass the app as a string to uvicorn.run to enable auto-reload
+    app.run(app="test:app", reload=True)
+```
+
+#### Custom Logger Format
+
+If you want to customize the Logger format, you can pass `log_builder` to the FastAPI object.  
+The following example shows how to customize the logger format.  
+See below sample for more information.
+
+```python
+from pathlib import Path
+
+from api_helper import FastAPI
+from api_helper.config import LoggerBuilder
+
+# To customize the logger format, you can pass the log_builder to FastAPI
+log_builder: LoggerBuilder = LoggerBuilder(Path(__file__).parent)
+log_builder.formatters = {}  # For example, we change the formatter to empty
+app: FastAPI = FastAPI(base_folder=Path(__file__).parent, log_builder=log_builder)
+
+# Or if you prefer the default, you can extend the default formatter
+# For example, you can change the root level to DEBUG with default formatter
+log_builder: LoggerBuilder = LoggerBuilder(Path(__file__).parent, config={"root": {"level": "DEBUG"}})
+app: FastAPI = FastAPI(base_folder=Path(__file__).parent, log_builder=log_builder)
+
+# Or pass as parameter start with the `logging_` keyword, it will be passed to the LoggerBuilder
+# It is the same as the previous example
+app: FastAPI = FastAPI(base_folder=Path(__file__).parent, logging_config={"root": {"level": "DEBUG"}})
+```
+
+#### Response
+
+> Expose the `SuccessModel` and `ErrorModel` to represent the response.
+
+sample:
+
+```python
+from api_helper.generic import SuccessModel
+from api_helper import success_response
+from fastapi import Response
+
+
+# Basic usage
+@route.get("/", response_model=SuccessModel)
+def get() -> Response:
+    return success_response("Hello, World!")
+
+
+# If you have custom data, you can pass it to the success_response
+@route.get("/", response_model=SuccessModel[list[User]])
+def get() -> Response:
+    return success_response(session.exec(select(User)).all())
+
+
+# If you use paginate
+@route.get("/items", response_model=SuccessModel[Pagination[User]])
+def list_items() -> Response:
+    return success_response(paginate(session=session, query=select(User)))
+```
+
+### Database
+
+#### Alembic
+
+> The `Alembic` class is an easy way to check Alembic status by code.  
+> You can use the `Alembic` class to check the Alembic status.
+
+properties:
+
+- `current`: The current revision. If not current, return empty string.
+- `head`: The head revision. If not head, return empty string.
+- `upgradeable`: If the current is not head, return True.
+- `scrip_direrctory`: The ScriptDirectory object, used by alembic.
+
+functions:
+
+- `get_config()`: Get the Alembic config object. You can pass it to alembic `env.py` file.
+- `upgrade()`: Upgrade to the revision, if not provided, it will upgrade to the head.
+
+#### SQLModel Pagination
+
+> To reduce the boilerplate code, you can use the `paginate` function to get the pagination object.
+
+parameters:
+
+- `session`: The session object from the database.
+- `query`: The query object from the database. It can use where, limit, offset, etc.
+- `page`: The page number, default is 1.
+- `per_page`: The number of items per page, default is 10.
+
+sample code:
+
+```python
+from api_helper.database import paginate
+from sqlmodel import SQLModel
+
+
+# For example, you have a SQLModel
+class User(SQLModel, table=True):
+    id: int
+    name: str
+
+
+# You can use the paginate function to get the pagination
+# The paginate function will return the pagination object
+pagination = paginate(session=session, query=select(User))
+
+# You will get something like this
+{
+    "items": [],
+    "pagination": {
+        "total": 0,
+        "page": 1,
+        "pages": 1,
+        "per_page": 10,
+        "prev": None,
+        "next": None,
+    }
+}
+```
+
+For fastAPI routes, you can also use common_query as a quick dependency.
+
+```python
+from api_helper import success_response
+from api_helper.database import common_query
+from api_helper.database import paginate
+from api_helper.types import PaginateQuery
+
+from fastapi import Depends
+from fastapi import Response
+
+@route.get("/sample")
+def list_items(
+    *,
+    session: Session = Depends(get_session),
+    # Here, we use common_query as a dependency, it provides the page and per_page query
+    page_query: PaginateQuery = Depends(common_query),
+) -> Response:
+    return success_response(
+        paginate(session=session, query=select(DiffItem), page=page_query.page, per_page=page_query.per_page)
+    )
+```
+
+## Changelogs
+
+### 0.1.4
+
+bugs:
+
+- Fix MRO error on `UUIDModel` and `TimestampModel`.
+
+Breaking changes:
+
+- Rename `database.model` to `database.mixin` and related class names.
+
+### 0.1.3
+
+feat:
+
+- Add `UUIDModel`, `TimestampModel` for sqlmodel more easier to use.
+
+### 0.1.2
+
+feat:
+
+- Add `common_query` function for common use query. It can use like normal Depends.
+
+### 0.1.1
+
+bugs:
+
+- `alembic` object won't get the sql_str property correctly.
+
+### 0.1.0
+
+Feats:
+
+- Add new `alembic` class for easier to get alembic status, see the [Alembic](#alembic) section for more information.
+- Add `paginate` function for those who use SQLmodel, see the [SQLModel](#sqlmodel-pagination) section for more
+  information.
+- Add `SuccessModel` and `ErrorModel` for easier to return the response, see the [Response](#response) section for more
+  information.
+- Add Singleton pattern to avoid multiple instances.
+
+Chore:
+
+- Move errors into module.
+- Update database requirements.
