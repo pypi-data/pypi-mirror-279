@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+encoder_decoder_lib/__init__.py
+encoder_decoder_lib/decoder.py
+encoder_decoder_lib/encoder.py
+encoder_decoder_lib/utils.py
+my_translation_package_deep_learning.egg-info/PKG-INFO
+my_translation_package_deep_learning.egg-info/SOURCES.txt
+my_translation_package_deep_learning.egg-info/dependency_links.txt
+my_translation_package_deep_learning.egg-info/requires.txt
+my_translation_package_deep_learning.egg-info/top_level.txt
