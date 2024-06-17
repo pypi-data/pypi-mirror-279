@@ -1,0 +1,14 @@
+torch
+filelock
+numpy<2.0.0
+boto3
+requests
+
+[extras]
+google-cloud-storage
+lightning-cloud==0.5.69
+pillow
+pyarrow
+torchvision
+tqdm
+viztracer
