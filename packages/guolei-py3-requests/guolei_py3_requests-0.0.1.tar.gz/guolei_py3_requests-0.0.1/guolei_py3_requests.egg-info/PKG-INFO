@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: guolei_py3_requests
+Version: 0.0.1
+Summary: a python3 requests library by guolei
+Home-page: https://github.com/guolei19850528/guolei_py3_requests
+Author: guolei
+Author-email: 174000902@qq.com
+License: MIT
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: addict
+Requires-Dist: retrying
+Requires-Dist: pydantic
+
+# guolei_py3_requests
+guolei_py3_requests
