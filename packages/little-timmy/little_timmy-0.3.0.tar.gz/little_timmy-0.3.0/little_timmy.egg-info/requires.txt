@@ -1,0 +1,7 @@
+ansible>=3.0.0
+
+[build]
+build
+
+[tests]
+pytest
