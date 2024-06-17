@@ -1,0 +1,2 @@
+[console_scripts]
+polars-upgrade = polars_upgrade._main:main
