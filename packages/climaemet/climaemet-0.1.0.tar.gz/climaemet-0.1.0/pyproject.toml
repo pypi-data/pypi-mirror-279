@@ -1,0 +1,19 @@
+
+[project]
+name = "climaemet"
+version = "0.1.0"
+authors = [
+  { name = "DcortesNexmachina", email = "dcortes@nexmachina.com" }
+]
+description = "Paquete para obtener datos climáticos desde AEMET"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/DcortesNexmachina/Climaemet"
+Issues = "https://github.com/DcortesNexmachina/Climaemet/issues"

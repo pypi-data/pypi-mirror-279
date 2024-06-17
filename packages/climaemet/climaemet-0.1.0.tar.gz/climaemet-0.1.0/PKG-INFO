@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: climaemet
+Version: 0.1.0
+Summary: Paquete para obtener datos climáticos desde AEMET
+Home-page: https://github.com/DcortesNexmachina/Climaemet
+Author: David
+Author-email: DcortesNexmachina <dcortes@nexmachina.com>
+Project-URL: Homepage, https://github.com/DcortesNexmachina/Climaemet
+Project-URL: Issues, https://github.com/DcortesNexmachina/Climaemet/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# ClimaPyPI
+Repositorio idéntico al de Clima, con la diferencia de que se organiza con la estructura de PyPI
