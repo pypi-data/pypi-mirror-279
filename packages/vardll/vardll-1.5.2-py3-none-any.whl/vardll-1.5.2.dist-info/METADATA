@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: vardll
+Version: 1.5.2
+Summary: A library used to read compiled files like .exe and DLL files (Really useful)
+Author: PyGaps CEO
+Author-email: soqratiakram33@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: license
+
+<-------------------------------------------------------------------------------->
+
+                VARDLL Does not work if it is in python's program folder!!
+                Please put VARDLL's Folder within your project for it to work!!
+
+<-------------------------------------------------------------------------------->
+
+How to use:
+
+This example shows how to use vardll 1.4.2:
+
+"from vardll import DLLvar, load_file"
+
+# Load the DLL file
+dll_path = 'varotp.dll'
+dll_variable = load_file(dll_path)
+
+# Access the variables from the DLL file
+print(dll_variable)
+
+Make sure you have the vardll in the directory, like this:
+
+test/
+|
+|__vardll
+|     |
+|     |__ __init__.py
+|     |__ dllvariable.py
+|     |__ license
+|     |__ readme.md
+|     |__ loader.py
+|
+|__main.py
+|__var0otp.dll
+
+Make sure in var0otp or any dll file you have your variable or the text you wanna input! Disclaimer:
+
+IF THE DLL FILE STAYS EMPTY IT MIGHT MESS UP THE LIBRARY'S CODE!!
+
+UPDATE: The file can any format, .exe or .png or .fc .lib or .dll, but it should not have real content, it should have content like the version of
+your app etc.. not like binary code in a .exe and you wanna see it..
+
+UPDATE 2: Make sure in your DLL file or .exe FILE or any other format it should have ==, example:
+var0otp.dll:
+
+version == 1.5.2
+api = io.yrapi.com
