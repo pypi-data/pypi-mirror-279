@@ -1,0 +1,6 @@
+PyYAML
+jsonschema
+typing-extensions
+importlib-resources
+packaging
+referencing
