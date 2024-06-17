@@ -1,0 +1,10 @@
+
+[:python_version < "3.9"]
+importlib_resources
+
+[dev]
+pytest
+pre-commit
+
+[test]
+pytest
