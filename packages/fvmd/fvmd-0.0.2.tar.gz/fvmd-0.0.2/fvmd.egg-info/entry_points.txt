@@ -1,0 +1,2 @@
+[console_scripts]
+fvmd = fvmd.fvmd:main
