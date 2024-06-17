@@ -1,0 +1,3 @@
+[console_scripts]
+manual-test-run=rlabs_mini_gitlab.manual_test_run:main
+
