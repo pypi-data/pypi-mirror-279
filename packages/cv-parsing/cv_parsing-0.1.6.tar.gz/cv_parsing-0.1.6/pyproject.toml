@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cv_parsing"
+version = "0.1.6"
+description = "NLP Application to parse RH Curriculum Vitae for the RH department"
+readme = "README.md"
+authors = [
+    {name = "Rúben Almeida", email = "ruben.almeida@innovpoint.com"}
+]
+
+requires-python = ">=3.10"
+
+dependencies = [
+    "pytest>=8.1.1",
+    "pypdf>=4.2.0",
+    "datasets>=2.19.0",
+    "huggingface_hub>=0.23.0",
+    "evaluate>=0.4.2",
+    "rouge-score>=0.1.2",
+    "openai>=1.25.1",
+    "environs>=11.0.0", 
+    "plotly>=5.22.0",
+    "json-repair>=0.18.0", 
+    "ollama>=0.2.0",
+    "clean-text[gpl]>=0.6.0",
+    "levenshtein>=0.25.1",    
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["cv_parsing", "cv_parsing.*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+"*" = ["*.jsonl"]
