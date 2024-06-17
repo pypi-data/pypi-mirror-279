@@ -1,0 +1,57 @@
+[project]
+name = "zopyx-fastapi-auth"
+description = "FastAPI authentication and authorization"
+version = "0.2.2.8"
+readme = "README.md"
+authors = [
+    { name = "Andreas Jung", email = "info@zopyx.com" }
+]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "fastapi",
+    "pydantic",
+    "pydantic-settings",
+    "uvicorn",
+    "markdown",
+    "starlette-session",
+    "loguru",
+    "bcrypt",
+    "jinja2",
+    "sqlmodel", 
+    "rich",
+    "python-multipart",
+    "typer",
+    "typeguard",
+]
+
+
+[project.optional-dependencies]
+dev = [
+    "tox",
+    "pytest",
+    "ruff",
+    "twine", 
+    "build",
+    "pytest-cov",
+]
+
+[project.urls]
+homepage = "https://github.com/zopyx/fastapi-auth"
+
+[tool.setuptools]
+packages = ["fastapi_auth"]
+
+[project.scripts]
+fastapi-auth-user-admin= "fastapi_auth.user_cmd:main"
+
+[tool.ruff.lint]
+#select = ["ALL"]
+ignore = ["ANN101", "PTH107", "PTH110" , "FA102", "FA100", "DTZ003", "ANN001", "ERA001", "FBT002", "E712"]
+
+
+[tool.ruff]
+line-length = 120
