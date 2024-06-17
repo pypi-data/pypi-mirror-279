@@ -1,0 +1,2 @@
+[console_scripts]
+moveread-finetune = moveread.finetuning.cli:main
