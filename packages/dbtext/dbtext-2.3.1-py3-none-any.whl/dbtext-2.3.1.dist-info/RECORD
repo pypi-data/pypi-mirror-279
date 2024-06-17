@@ -1,0 +1,16 @@
+dbtext/__init__.py,sha256=yTxcPhnI2LPd2Kv7YdP31JjCfrKr-XFB82YyzcMeYho,293
+dbtext/base_odbc.py,sha256=CatzfDOVkXo8CDy12AskbUQPJ6QpTWeV8QL91qjOzo4,32192
+dbtext/db_to_text.py,sha256=5yoTi17MuRPeAPTQSymP-vzLCLaZswjqUgqC_V0omhQ,675
+dbtext/increments.py,sha256=1yMS9kyAfMM4Ww2XXvx93oZXxyesobV4kEQ99opU7Yo,3355
+dbtext/jsonutils.py,sha256=iErByZDdn6PGPEr70R8b8-4C0cNqEN7mvZBn9snJBKA,659
+dbtext/mongodb.py,sha256=_s-SBy0j8JbKtnPzZcW1sY6J0X8KLeEYkeuBZQNbxzI,14832
+dbtext/mssql_server.py,sha256=rTQJxO3ZHrux6LFo2etsdnhyiKSF0Yue5VyEP4gKxJE,4039
+dbtext/mysql.py,sha256=Qrf6NCg2MvRaRFqVpiqAVbkJw81FXb8UinAI8fzd04k,2130
+dbtext/postgres.py,sha256=fb4UJE1knz_LkQL-ml91VNcBELVGmrhlmnloXmmar7Y,1800
+dbtext/sqlite3db.py,sha256=mcXutJYuaqgIW-UHzigClcYsvWq9hCSc8Drv3vpH4g8,1181
+dbtext/wait.py,sha256=rzCRdeMJjTqykANU7yK0ysQZzxToYpQuPV4tLujQ4uU,1021
+dbtext-2.3.1.dist-info/LICENSE,sha256=fTqV5eBpeAZO0_jit8j4Ref9ikBSlHJ8xwj5TLg7gFk,7817
+dbtext-2.3.1.dist-info/METADATA,sha256=L56uvdQDGK2rBiRnQafUmeyGE2kXe8bZGSaFEj14A_c,13133
+dbtext-2.3.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dbtext-2.3.1.dist-info/top_level.txt,sha256=tmpwNVVbAu0cCnJo-jtUk9tuvneDydPXjArKGK4IyaQ,7
+dbtext-2.3.1.dist-info/RECORD,,
