@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: nyogyi-pretty-xml
+Version: 0.1.1
+Summary: A script to pretty print large XML files
+Home-page: https://pypi.org/project/nyogyi-pretty-xml/
+Author: Thein Htike Nyo
+Author-email: theinhtitenyo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# nyogyi_pretty_xml
+
+A Python package to pretty print large XML files.
+
+## Installation
+
+You can install the package via pip:
+
+```sh
+pip install nyogyi_pretty_xml
+
+
+```
+
+## Usage
+```sh
+nyogyi-pretty-xml -i input.xml -o output.xml
+
+```
+
+
