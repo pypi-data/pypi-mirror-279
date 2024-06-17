@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pystochastica
+Version: 1.0.0
+Summary: An open source stochastic calculus library written in Python
+Home-page: https://github.com/KshkB/pystochastica/
+Author: Kowshik Bettadapura
+Author-email: k.bettad@gmail.com
+License: MIT
+License-File: LICENSE
