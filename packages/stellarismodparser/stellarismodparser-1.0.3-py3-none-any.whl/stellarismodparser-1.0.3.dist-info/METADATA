@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: stellarismodparser
+Version: 1.0.3
+Summary: Parse Stellaris's mod descriptor files.
+Project-URL: Homepage, https://www.coastalcommits.com/Seaswimmer/stellarismodparser
+Project-URL: Issues, https://www.coastalcommits.com/Seaswimmer/stellarismodparser/issues
+Author-email: SeaswimmerTheFsh <seaswimmerthefsh@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# StellarisModParser
+
+This package provides a simple parser for Stellaris's mod descriptor format.
+
+## Usage
+
+```python-repl
+>>> import stellarismodparser
+>>> path = "/home/seaswimmer/Projects/StellarisMods/No Menacing Ships.mod"
+>>> mod = stellarismodparser.parse(path)
+>>> mod.name
+'No Menacing Ships'
+>>> str(mod.supported_version)
+'Andromeda 3.12.4'
+>>> mod.tags
+['Balance', 'Gameplay']
+```
