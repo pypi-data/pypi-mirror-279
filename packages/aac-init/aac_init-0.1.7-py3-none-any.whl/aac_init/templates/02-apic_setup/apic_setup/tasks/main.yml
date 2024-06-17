@@ -1,0 +1,46 @@
+---
+
+# Copyright: (c) 2024, Rudy Lei <shlei@cisco.com>
+
+
+- name: APIC SETUP TASKS
+  block:
+    - name: DETERMINE TARGET APIC MAJOR VERSION
+      ansible.builtin.shell:
+        cmd: echo {{ fabric.global_policies.apic_image }} | awk -F '.' '{print $2}'
+      register: apic_version
+
+    - name: POWER-ON APIC
+      community.general.imc_rest:
+        hostname: "{{ item.cimc_address }}"
+        username: "{{ fabric.global_policies.apic_cimc_username }}"
+        password: "{{ fabric.global_policies.apic_cimc_password }}"
+        validate_certs: false
+        timeout: 500
+        content: |
+          <!-- CIMC hard reset -->
+          <configConfMo><inConfig>
+            <computeRackUnit dn="sys/rack-unit-1" adminPower="up" />
+          </inConfig></configConfMo>
+
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
+
+    - name: RENDER APIC SETUP SCRIPT
+      template:
+        src: apic_setup{{ apic_version.stdout }}.exp.jinja2
+        dest: apic_setup/files/apic_setup_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
+
+    - name: MAKE APIC SETUP SCRIPT EXECUTABLE
+      file:
+        path: apic_setup/files/apic_setup_{{ item.hostname }}.exp
+        mode: "+x"
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
+
+    - name: EXECUTE APIC SETUP SCRIPT
+      command: ./apic_setup/files/apic_setup_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.apic_nodes_connection }}"
