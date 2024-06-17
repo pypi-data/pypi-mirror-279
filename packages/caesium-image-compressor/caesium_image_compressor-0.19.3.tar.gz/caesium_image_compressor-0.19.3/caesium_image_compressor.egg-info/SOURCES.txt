@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+caesium/__init__.py
+caesium/compressor.py
+caesium/downloader.py
+caesium_image_compressor.egg-info/PKG-INFO
+caesium_image_compressor.egg-info/SOURCES.txt
+caesium_image_compressor.egg-info/dependency_links.txt
+caesium_image_compressor.egg-info/entry_points.txt
+caesium_image_compressor.egg-info/top_level.txt
