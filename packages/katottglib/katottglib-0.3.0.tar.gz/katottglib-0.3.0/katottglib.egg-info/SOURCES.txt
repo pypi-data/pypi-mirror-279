@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+katottglib/__init__.py
+katottglib/data.py
+katottglib/entity.py
+katottglib/katottg.py
+katottglib/kodifikator.xlsx
+katottglib/test.py
+katottglib.egg-info/PKG-INFO
+katottglib.egg-info/SOURCES.txt
+katottglib.egg-info/dependency_links.txt
+katottglib.egg-info/requires.txt
+katottglib.egg-info/top_level.txt
