@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include requirements.txt
+include bach_generator/py.typed
+include bach_generator/gui/media/icon.png
+recursive-exclude tests *
