@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+aspectratiox/__init__.py
+aspectratiox/main.py
+aspectratiox.egg-info/PKG-INFO
+aspectratiox.egg-info/SOURCES.txt
+aspectratiox.egg-info/dependency_links.txt
+aspectratiox.egg-info/entry_points.txt
+aspectratiox.egg-info/top_level.txt
