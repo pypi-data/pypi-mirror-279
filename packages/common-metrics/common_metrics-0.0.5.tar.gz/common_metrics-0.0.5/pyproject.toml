@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+
+[project]
+name = "common_metrics"
+version = "0.0.5"
+authors = [
+  { name="Sushrut Patwardhan", email="sushrutpatwardhan@gmail.com" },
+]
+description = "Package for commonly used metrics in bio-metrics."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "numpy",
+]
+
+
+[project.urls]
+Homepage = "https://github.com/Blazkowiz47/biometrics"
+Issues = "https://github.com/Blazkowiz47/biometrics/issues"
