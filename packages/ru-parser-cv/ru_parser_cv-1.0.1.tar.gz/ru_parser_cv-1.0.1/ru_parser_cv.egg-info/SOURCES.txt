@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+ru_parser_cv/__init__.py
+ru_parser_cv/parser_cv.py
+ru_parser_cv.egg-info/PKG-INFO
+ru_parser_cv.egg-info/SOURCES.txt
+ru_parser_cv.egg-info/dependency_links.txt
+ru_parser_cv.egg-info/requires.txt
+ru_parser_cv.egg-info/top_level.txt
