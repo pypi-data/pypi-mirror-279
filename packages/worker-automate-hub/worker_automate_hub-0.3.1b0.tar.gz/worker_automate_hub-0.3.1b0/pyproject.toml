@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "worker-automate-hub"
+version = "0.3.1b0"
+description = "Worker Automate HUB é uma aplicação para automatizar rotinas de RPA nos ambientes Argenta."
+authors = ["Joel Paim"]
+readme = "README.md"
+packages = [{include = "worker_automate_hub"}]
+classifiers = [
+    "Topic :: Utilities",
+    "Environment :: Console",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.scripts]
+worker = "worker_automate_hub.cli:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+typer = "^0.12.3"
+rich = "^13.7.1"
+pathlib3x = "^2.0.3"
+dynaconf = "^3.2.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-cov = "^4.0.0"
+blue = "^0.9.1"
+isort = "^5.12.0"
+taskipy = "^1.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff . && isort --check --diff ."
+pre_test = "task lint"
+test = "pytest -s -x --cov=abin_sim -vv"
+post_test = "coverage html"
