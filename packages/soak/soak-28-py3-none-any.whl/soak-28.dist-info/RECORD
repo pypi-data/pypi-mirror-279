@@ -1,0 +1,11 @@
+soak/__init__.py,sha256=KQPF5JemCZo3-YlOV88bZ3r5Ptt5lHrRK3T8B9kCmC0,138
+soak/context.py,sha256=opeX9J7prcEps5Pokdck4YBV0ukfHC74c0Qw4q9YKKk,1981
+soak/multifork.py,sha256=up-EM2UYNFzz0_l0d0gYlz7vdVTJmdsJZQTSOOdyLsY,3298
+soak/soak.py,sha256=3_j1ZUcojkNUtmGgKRgEs9RLrgHNvYLZtgprRpvWLGQ,3205
+soak/terminal.py,sha256=lQ3Cjslpv0mBmY41E0yXd2h9PXW4ohcSODpcfLahlMQ,2633
+soak/util.py,sha256=OhE90GxpxdTvwjQsmYcxJqW6WGnSaIwGQU9Gvq7hfZ8,1196
+soak-28.dist-info/METADATA,sha256=18kxlrTMs88_Uo83e6pXvttXuKgWcRTV2AeVZuGzXgw,1218
+soak-28.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+soak-28.dist-info/entry_points.txt,sha256=eKJvLDkqjSUZeXJJ14whCuZyWK4NG65q9ZHGXk2NP-U,41
+soak-28.dist-info/top_level.txt,sha256=eOYgnDrBe4vhKpNyAyUtKE14-vZ6b9I27Fkqe_hGdx4,5
+soak-28.dist-info/RECORD,,
