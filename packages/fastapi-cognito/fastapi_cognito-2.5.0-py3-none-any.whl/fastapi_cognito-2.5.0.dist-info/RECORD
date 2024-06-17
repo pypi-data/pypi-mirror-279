@@ -1,0 +1,14 @@
+fastapi_cognito/__init__.py,sha256=__ZWLDvr4UdMV_XB_MV35bD4y02CYDhetJEQCcr0RKg,176
+fastapi_cognito/cognito_jwt/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastapi_cognito/cognito_jwt/constants.py,sha256=j0GAw5fAAeeqC9mTAYbiXJDzI_v82d4PqATa5euPmY4,90
+fastapi_cognito/cognito_jwt/decode.py,sha256=G0a2rsr6YNyq1Ek9JKNI42lRV952SacDphPaNbZsVZ8,2684
+fastapi_cognito/cognito_jwt/exceptions.py,sha256=WGVb8eVVYHxQMX9aGKm-_jVKg9vsngTQSMPIYoeg1yg,47
+fastapi_cognito/cognito_jwt/utils.py,sha256=Yb1Ma9iuZxBo4OY5nDug2-zaZGeCsOJtMpm007iDdM4,2336
+fastapi_cognito/exceptions.py,sha256=k5OnsEfeu-Zrtj7NxOZ1A3eYjWUP4Pdeg1LYcVfeJqw,525
+fastapi_cognito/fastapi_cognito.py,sha256=lNdsnuYEoS5ymo2BH76WZ0xhX2wR7ZZHqAHNqE0um9I,9283
+fastapi_cognito/models.py,sha256=sGnnoDMyulVTgg8jjYDEzjbOiq4oK5tI0YS1MSITYPE,527
+fastapi_cognito/settings_parsers.py,sha256=PzE2L5Ag8siX75LSF6YQ4CvuqtADxsT6vkOSYy6QOlU,1527
+fastapi_cognito-2.5.0.dist-info/LICENSE.txt,sha256=NPNqzW1vxv0xgdt8XcD3fWXQ5MrVQpmu8uaUaAOatoc,1073
+fastapi_cognito-2.5.0.dist-info/METADATA,sha256=T-mSibuj86pGzX6pcO2INF_pESmB1yY8MF3K_QxFUnA,6712
+fastapi_cognito-2.5.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+fastapi_cognito-2.5.0.dist-info/RECORD,,
