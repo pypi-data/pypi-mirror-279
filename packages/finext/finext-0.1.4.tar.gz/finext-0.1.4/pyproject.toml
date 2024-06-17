@@ -1,0 +1,19 @@
+[project]
+name = "finext"
+version = "0.1.4"
+authors = [
+  { name="Hung-Ching-Lee", email="f128930847@gmail.com" },
+]
+description = "extension tools of finlab"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Hung-Ching-Lee/finlab_exten?tab=readme-ov-file"
+Issues = "https://github.com/pypa/sampleproject/issues"
+
