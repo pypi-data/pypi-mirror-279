@@ -1,0 +1,14 @@
+lingua-language-detector
+nltk
+emoji
+ftfy
+Unidecode
+beautifulsoup4
+transformers
+torch
+
+[dev]
+hypothesis
+faker
+flake8
+pytest
