@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: ebook-tree-parser
+Version: 0.1.0
+Summary: use ebooklib to parse a tree-like structure from ebooks from the TOC
+License: MIT
+Author: Jimmy Yao
+Author-email: jinghaoyao@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: EbookLib (>=0.18,<0.19)
+Requires-Dist: beautifulsoup4 (>=4.12.3,<5.0.0)
+Requires-Dist: tiktoken (>=0.7.0,<0.8.0)
+Description-Content-Type: text/markdown
+
+# ebook-tree-parser
+
+use ebooklib to parse a tree-like structure from ebooks from the TOC
+
+## Usage
+
+```python
+from ebooklib import epub
+from ebook_tree_parser.toctree import TocTree
+
+file = "../data/frankenstein.epub"
+book = epub.read_epub(file, options={'ignore_ncx': False})
+
+estimator = lambda string: len(string)*4
+tree = TocTree(book, token_estimator=estimator)
+
+print(tree)
+
+for node in tree3:
+    print("----")
+    print(f"{node.title}|{node.content_token_count}\n{node.content[:50]}")
+    print("----")
+```
+

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ebook-tree-parser"
+version = "0.1.0"
+description = "use ebooklib to parse a tree-like structure from ebooks from the TOC"
+authors = ["Jimmy Yao <jinghaoyao@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+EbookLib = "^0.18"
+tiktoken = {version = "^0.7.0", optional = true}
+beautifulsoup4 = "^4.12.3"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
