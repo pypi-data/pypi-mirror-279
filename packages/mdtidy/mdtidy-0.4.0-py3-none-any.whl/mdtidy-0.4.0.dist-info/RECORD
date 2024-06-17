@@ -1,0 +1,9 @@
+mdtidy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdtidy/cleaner.py,sha256=efAOVbi7bl3emxBcdjtd1ytJqIHYf02kjEbCinA0WCo,5657
+mdtidy/gemini_processor.py,sha256=QPpEDgFWYDXoyi8ZIQPC_VKwQf3FrO4e0zzIecXAI98,18730
+mdtidy/gpt_processor.py,sha256=-YbspDQ3d-zW-ndd-uS315kjGL_0WMiWS3vqxIShw8k,15660
+mdtidy-0.4.0.dist-info/LICENSE,sha256=CPezeUg6yS_O5nu6HizU0qUwtdeaXenJY5dDRbZpICE,1070
+mdtidy-0.4.0.dist-info/METADATA,sha256=MwH7SRHwG5S9rY5315rcLnprhAHSvwGmQ-QsME7_-0c,4461
+mdtidy-0.4.0.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mdtidy-0.4.0.dist-info/top_level.txt,sha256=cG5VAvFDmmRy6G7pDgR_-1kRRAz_kLldiNci_ONR3eQ,7
+mdtidy-0.4.0.dist-info/RECORD,,
