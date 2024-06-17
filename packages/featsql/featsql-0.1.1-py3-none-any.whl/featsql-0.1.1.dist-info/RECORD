@@ -1,0 +1,11 @@
+featsql/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+featsql/_modidx.py,sha256=iA0Y8X8JPrv6h8dBYtgNesDEHVx82LVQmpgp_PZtzEU,5707
+featsql/featmysql.py,sha256=qDck-HNbM3hasGVDAaDo0MxInCou7puketaUg3IJRGo,16151
+featsql/featsnow.py,sha256=8QVXUHgsUm05_VblUeC1BJsyJHWeDuOqRu4rB_ZjXj4,15235
+featsql/featsqlite.py,sha256=mNJgz2cdy-VOu79tfw2vXDXlcBC8mSr4LbYCORkdYYk,17959
+featsql-0.1.1.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+featsql-0.1.1.dist-info/METADATA,sha256=10lGNkp2uY6akpbyt3tozfnZvd_nKcqhhmJhAs03-us,90127
+featsql-0.1.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+featsql-0.1.1.dist-info/entry_points.txt,sha256=kvzJpdEd8wuHCLn5csl5OvE3tCP6vg5U_biozfW6qaI,57
+featsql-0.1.1.dist-info/top_level.txt,sha256=15bARbKz8B-WRBP0V8nNwqibDKUv3OQXq8GQ3vwAZdo,8
+featsql-0.1.1.dist-info/RECORD,,
