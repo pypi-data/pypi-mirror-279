@@ -1,0 +1,8 @@
+cvx/covariance/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cvx/covariance/combination.py,sha256=RktoaN_hltZl4w4eXy19mnsCK_IeV91kRhz2R7uAVpM,10434
+cvx/covariance/ewma.py,sha256=L31mbEpN-4PAmJPQVl872j1WIEu0y0d_SUXpXRf8pxk,8383
+cvx/covariance/regularization.py,sha256=-avXBA8SmYghqE69DAHJ2eCicu0PiTS9kYod2DHhQwE,3993
+cvxcovariance-0.1.5.dist-info/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cvxcovariance-0.1.5.dist-info/METADATA,sha256=TAH27Duezdh6zXWZnv3ziCRyv8WVCAb5BTNUjr2BYHg,8250
+cvxcovariance-0.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cvxcovariance-0.1.5.dist-info/RECORD,,
