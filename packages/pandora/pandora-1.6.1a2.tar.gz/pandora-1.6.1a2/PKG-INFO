@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: pandora
+Version: 1.6.1a2
+Summary: Pandora is a stereo matching framework that helps emulate state of the art algorithms
+Home-page: https://github.com/CNES/Pandora
+Author: CNES
+Author-email: myriam.cournet@cnes.fr
+License: Apache License 2.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: xarray>=0.13.0
+Requires-Dist: scipy
+Requires-Dist: rasterio
+Requires-Dist: json-checker
+Requires-Dist: numba>=0.55.2; python_version > "3.7"
+Requires-Dist: numba>=0.47.0; python_version < "3.8"
+Requires-Dist: transitions
+Requires-Dist: scikit-image>=0.19.0
+Requires-Dist: importlib-metadata; python_version < "3.10"
+Provides-Extra: dev
+Requires-Dist: sphinx; extra == "dev"
+Requires-Dist: sphinx_rtd_theme; extra == "dev"
+Requires-Dist: sphinx_autoapi; extra == "dev"
+Requires-Dist: sphinx_tabs; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pylint; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: types-setuptools; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Provides-Extra: sgm
+Requires-Dist: pandora_plugin_libsgm==1.5.1a2; extra == "sgm"
+Provides-Extra: mccnn
+Requires-Dist: pandora_plugin_mccnn==1.3.2a1; extra == "mccnn"
+Provides-Extra: docs
+Requires-Dist: sphinx; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx_autoapi; extra == "docs"
+Requires-Dist: sphinx_tabs; extra == "docs"
+Provides-Extra: notebook
+Requires-Dist: jupyter-dash; extra == "notebook"
+Requires-Dist: plotly; extra == "notebook"
+Requires-Dist: bokeh<3; extra == "notebook"
+Requires-Dist: matplotlib<=3.5.3; extra == "notebook"
+Requires-Dist: graphviz; extra == "notebook"
+Requires-Dist: notebook; extra == "notebook"
+Requires-Dist: ipykernel; extra == "notebook"
