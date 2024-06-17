@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FABLAB backend - {% block title %} {% endblock %}</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Include Font Awesome CSS -->
+    <link href="{{ url_for('static', filename='css/fontawesome.min.css') }}" rel="stylesheet">
+    <!-- Include Font Awesome Solid CSS -->
+    <link href="{{ url_for('static', filename='css/solid.css') }}" rel="stylesheet">
+    <!-- Include Font Awesome Solid CSS -->
+    <link href="{{ url_for('static', filename='css/brands.css') }}" rel="stylesheet">
+    <!-- other head elements -->
+    {% block extra_css %}{% endblock %}
+</head>
+{% extends 'base_body.html' %}

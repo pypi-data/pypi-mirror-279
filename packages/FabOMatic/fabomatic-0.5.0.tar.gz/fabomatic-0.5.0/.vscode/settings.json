@@ -1,0 +1,42 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "python.formatting.provider": "none",
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "pylint.args": [
+    "--max-line-length=120",
+    "--variable-naming-style=any",
+    "--class-naming-style=any",
+    "--method-naming-style=any"
+  ],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "Prod",
+      "database": "${workspaceFolder:rfid-backend}/database.sqldb"
+    },
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:rfid-backend}/tests/databases/database-0.0.18.db",
+      "name": "0.0.18"
+    },
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:rfid-backend-fl}/tests/databases/database-0.1.5.db",
+      "name": "0.1.5"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
