@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bnrxrate"
+version = "0.1.1"
+description = "A Python library for fetching and processing XML data from BNR (National Bank of Romania) website"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3"
+license = { text = "MIT License" }
+
+authors = [
+    { name = "Marian Bureata", email = "code@bureata.com" }
+]
+
+keywords = ["bnr", "exchange rates", "XML", "python", "bank"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+dependencies = [
+    "pytz"
+]
+
+[project.urls]
+homepage = "https://github.com/bureata/bnrxrate"
+repository = "https://github.com/bureata/bnrxrate"
+documentation = "https://github.com/bureata/bnrxrate#readme"
+
+[tool.setuptools.packages.find]
+where = ["."]
