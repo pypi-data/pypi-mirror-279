@@ -1,0 +1,3 @@
+recursive-include fluke\locale *
+recursive-include fluke\static *
+recursive-include fluke\templates *
