@@ -1,0 +1,14 @@
+# requirement for development, testing.
+
+wheel
+black
+build
+isort
+pytest
+pytest-cov
+setuptools_scm
+tox
+twine
+jsonschema
+
+-e .
