@@ -1,0 +1,8 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+etao_ds_pyautogen.egg-info/PKG-INFO
+etao_ds_pyautogen.egg-info/SOURCES.txt
+etao_ds_pyautogen.egg-info/dependency_links.txt
+etao_ds_pyautogen.egg-info/top_level.txt
