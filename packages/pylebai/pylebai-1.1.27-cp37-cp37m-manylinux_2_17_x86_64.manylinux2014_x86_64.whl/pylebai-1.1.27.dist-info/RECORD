@@ -1,0 +1,10 @@
+pylebai/__init__.py,sha256=Ic1q5iNlYFlxryUNn49tIjp1KtV-8DMqDsPQHB0fNtY,23
+pylebai/_zeroconf.so,sha256=9KEo1sMWk4hJRfwZBg_BLhBbq_xn1gZKdKxeEZHJR4A,318320
+pylebai/l_master.py,sha256=AZKSQtoI3fKiOiHO47OUS5GsyichRvQ-w05mSqolAFA,41595
+pylebai/_l_master.so,sha256=WSpIMRafm22hxaoBPDy9Ps3VJhU-BUfKAulyaCtkLL4,1061584
+pylebai/zeroconf.py,sha256=CdsLoE_Peo2CnjGnMGe9MdoW-rJpq5ZPqcRNrUcmqsM,11748
+pylebai/.libs/liblebai-cpp.so.1.1.27,sha256=juAslkooip3s9CCTOXNOEzOgFZ91yChbTNbUOH3bt_w,2433264
+pylebai-1.1.27.dist-info/WHEEL,sha256=XTrbe1v1RZIwaNy2ykqZ1b32V5o3CvHsSToseXBj9JY,150
+pylebai-1.1.27.dist-info/top_level.txt,sha256=eH7yQi0kNJLHJoK8LBb78JMYEVyaUvLleLs8GV6gqdI,8
+pylebai-1.1.27.dist-info/RECORD,,
+pylebai-1.1.27.dist-info/METADATA,sha256=LosBhs-xLOrCXdECiBg_VYl-DhqQn1TuYRihcaro91k,675
