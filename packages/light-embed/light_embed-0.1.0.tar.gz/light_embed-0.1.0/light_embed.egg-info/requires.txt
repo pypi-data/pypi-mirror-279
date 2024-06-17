@@ -1,0 +1,13 @@
+python-dotenv
+numpy
+onnxruntime
+psutil
+tokenizers
+
+[dev]
+pytest
+pytest-cov
+tox
+black
+pip-tools
+flake8
