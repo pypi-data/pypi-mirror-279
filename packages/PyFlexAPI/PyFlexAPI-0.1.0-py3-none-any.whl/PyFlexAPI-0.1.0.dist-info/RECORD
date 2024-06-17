@@ -1,0 +1,9 @@
+dynamodb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dynamodb/client.py,sha256=SRksoSQT_yru0luAg7HJF4jDrTJxye3yfz0D9I-1hww,4287
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dynamodb_client.py,sha256=Tifgkbm0Nq5tX9_DGK0F871N07lXLoiiFA2G-4pVIA8,2607
+PyFlexAPI-0.1.0.dist-info/LICENSE,sha256=C1FaxNwO7a1ZwJ93scRXiZ3sm7czl-jRsjBfn-QllNo,1102
+PyFlexAPI-0.1.0.dist-info/METADATA,sha256=6XembkNXdsvanjQ6O-dQJ6AnMKdti7CvLe9DlTEUVjM,1963
+PyFlexAPI-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+PyFlexAPI-0.1.0.dist-info/top_level.txt,sha256=Hd6HKkxMqrlQkHhoiZUuHRlwlKptXNpFibG7wObTM6o,15
+PyFlexAPI-0.1.0.dist-info/RECORD,,
