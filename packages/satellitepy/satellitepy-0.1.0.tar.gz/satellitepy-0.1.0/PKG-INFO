@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: satellitepy
+Version: 0.1.0
+Summary: fastapi util
+Author-Email: misilelaboratory <misileminecord@gmail.com>
+License: MisileLab License
+Requires-Python: >=3.12
+Requires-Dist: fastapi==0.111.0
+Description-Content-Type: text/markdown
+
+# satellite
+
+fastapi util
