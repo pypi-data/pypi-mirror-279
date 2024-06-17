@@ -1,0 +1,7 @@
+numpy
+pint
+pymsis
+setuptools
+
+[test]
+pytest
