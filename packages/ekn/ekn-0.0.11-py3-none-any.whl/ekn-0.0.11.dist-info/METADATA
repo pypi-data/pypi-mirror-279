@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: ekn
+Version: 0.0.11
+Summary: ekn
+Author: damirem
+Author-email: bd-spam@mail.ru
+Keywords: ekn
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests >=2.25.1
+
