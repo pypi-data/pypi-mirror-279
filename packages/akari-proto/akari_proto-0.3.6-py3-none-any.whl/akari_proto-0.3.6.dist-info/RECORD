@@ -1,0 +1,12 @@
+akari_proto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+akari_proto/joints_controller_pb2.py,sha256=nH_koxxE-AmFST7BozO5ub6o_-gjPXCotmVemsw9P-Q,10094
+akari_proto/joints_controller_pb2_grpc.py,sha256=z3XBN4sKP8wiyEit32bvtvMcIKneRD5UESltxJb4VnM,20455
+akari_proto/m5stack_pb2.py,sha256=OBYtpwbLqxoOVrSosRrPiaCLNXYcmPrS4yxerkFUQCg,8086
+akari_proto/m5stack_pb2_grpc.py,sha256=p87e4drjqPMz1UVkxVncB600PpQxIoNCpBkCJhD7mM4,13951
+akari_proto/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+akari_proto/grpc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+akari_proto/grpc/error.py,sha256=7wFf5qYRnS01oT3ljyiNBhyqwtDP7U43ASRwnkU8miM,3936
+akari_proto-0.3.6.dist-info/METADATA,sha256=LPzs1bcWRME0bh1Rhi7nC9aeNYL5X1M4y2N-Zc293yc,1156
+akari_proto-0.3.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+akari_proto-0.3.6.dist-info/top_level.txt,sha256=1kMLqVSoX2npMqYlNsIvzfOz1gJHBV3mu7sYKXLNOEg,12
+akari_proto-0.3.6.dist-info/RECORD,,
