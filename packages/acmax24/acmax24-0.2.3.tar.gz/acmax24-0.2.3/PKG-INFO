@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: acmax24
+Version: 0.2.3
+Summary: Python library for AVPro Edge AC-MAX-24 Audio Matrix
+License: Apache 2.0
+Author: James Mulcahy
+Author-email: james@manque.net
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: asyncio (>=3.4.3,<4.0.0)
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: websockets (>=12.0,<13.0)
+Description-Content-Type: text/markdown
+
+`acmax24` is a python library for managing the AVPro Edge AC-MAX-24 Audio Matrix.  This is a 24 input, 24 output audio matrix device, designed for whole home audio.
+
+This library was created to enable the the `hass-acmax24` Home Assistant integration, which makes the AX-MAX-24 Audio Matrix appear as a set of MediaPlayer entities in Home Assistant. 
+
+
+
