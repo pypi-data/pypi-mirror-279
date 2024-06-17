@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: gamspy_scip
+Version: 47.1.0
+Requires-Dist: gamspy-mosek
+Requires-Dist: gamspy-xpress
+
