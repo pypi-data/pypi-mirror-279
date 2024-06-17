@@ -1,0 +1,135 @@
+Metadata-Version: 2.1
+Name: chatInsights
+Version: 0.0.1a9
+Summary: whatsapp group chat analysis python package
+Home-page: https://github.com/ronylpatil/chatInsights
+Author: ronilpatil
+Author-email: ronylpatil@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/ronylpatil/chatInsights
+Project-URL: Bug Tracker, https://github.com/ronylpatil/chatInsights/issues
+Project-URL: Changelog, https://github.com/ronylpatil/chatInsights/releases
+Keywords: chat analysis,statistical analysis,eda
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Environment :: Console
+Classifier: Natural Language :: English
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: testing
+Requires-Dist: pytest >=8.2.2 ; extra == 'testing'
+Requires-Dist: mypy >=1.10.0 ; extra == 'testing'
+Requires-Dist: flake8 >=7.0.0 ; extra == 'testing'
+Requires-Dist: tox >=4.15.1 ; extra == 'testing'
+Requires-Dist: black >=24.4.2 ; extra == 'testing'
+
+
+.. image:: https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
+    :align: center
+    :height: 200
+    :alt: logo  
+
+
+.. image:: https://img.shields.io/pypi/v/chatInsights.svg
+    :target: https://pypi.org/project/chatInsights/
+
+.. image:: https://img.shields.io/pypi/pyversions/chatInsights.svg
+    :target: https://pypi.org/project/chatInsights/
+
+.. image:: https://github.com/ronylpatil/chatInsights/actions/workflows/ci_pipeline.yaml/badge.svg
+    :target: https://github.com/ronylpatil/chatInsights/actions?query=workflow%3Atest
+
+.. image:: https://github.com/ronylpatil/chatInsights/actions/workflows/cd_pipeline.yaml/badge.svg
+    :target: https://github.com/ronylpatil/chatInsights/actions?query=workflow%3Atest
+
+
+The ``chatInsights`` package make it easy to perform whatsApp group chat analysis using python.
+
+A simple code example:
+
+.. code-block:: python
+
+       # import chatInsights class
+       from chatInsights import ChatInsights
+       
+       # create obj of ChatInsights class
+       obj = ChatInsights(r'E:/chat.txt')
+       obj.active_users()
+       obj.active_year()
+       obj.active_month()
+       obj.active_day()
+       obj.word_cloud()
+
+
+
+.. list-table::
+    :widths: 33 33 33
+    :header-rows: 0
+
+    * - .. image:: doc/en/active_users.png
+          :width: 330px
+          :height: 190px
+      - .. image:: doc/en/active_year.png
+          :width: 330px
+          :height: 190px
+      - .. image:: doc/en/active_month.png
+          :width: 330px
+          :height: 190px
+    * - .. image:: doc/en/active_day.png
+          :width: 330px
+          :height: 190px
+      - .. image:: doc/en/wordcloud.png
+          :width: 330px
+          :height: 190px
+      - 
+
+
+
+
+Features
+--------
+- User activity stats
+- Weekly message stats
+- Monthly message stats
+- Yearly message stats
+- Word Cloud
+
+
+Documentation
+-------------
+
+Updated soon.
+
+
+Bugs/Requests
+-------------
+
+Please use the `GitHub issue tracker <https://github.com/ronylpatil/chatInsights/issues>`_ to submit bugs or request features.
+
+
+Changelog
+---------
+
+Consult the `Changelog <add changelog link here>`__ page for fixes and enhancements of each version.
+
+
+License
+-------
+
+Distributed under the terms of the `MIT`_ license.
+
+
+.. _`MIT`: https://github.com/ronylpatil/chatInsights/LICENSE
