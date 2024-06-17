@@ -1,0 +1,2 @@
+[console_scripts]
+packtxt = packtxt.cli:main

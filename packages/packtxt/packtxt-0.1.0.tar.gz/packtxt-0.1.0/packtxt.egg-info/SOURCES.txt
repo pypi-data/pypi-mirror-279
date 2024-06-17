@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+packtxt/__init__.py
+packtxt/cli.py
+packtxt/packtxt.py
+packtxt.egg-info/PKG-INFO
+packtxt.egg-info/SOURCES.txt
+packtxt.egg-info/dependency_links.txt
+packtxt.egg-info/entry_points.txt
+packtxt.egg-info/top_level.txt
