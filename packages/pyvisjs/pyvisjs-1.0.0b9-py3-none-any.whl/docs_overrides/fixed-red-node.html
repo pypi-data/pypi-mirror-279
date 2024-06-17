@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<style type="text/css">
+    #visjsnet {
+        width: 100%;
+        height: 500px;
+        border-bottom: 1px solid lightgray;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+   
+<div id="visjsnet"></div>
+
+<script type="text/javascript">
+const data = create_network();
+
+
+function create_network() {
+
+    // create an array with nodes
+    const ds_nodes = new vis.DataSet([{"id": "1", "label": "1", "shape": "dot"}, {"id": "2", "label": "2", "shape": "dot"}, {"id": "3", "label": "3", "shape": "dot"}, {"id": "4", "label": "4", "shape": "dot"}, {"id": "5", "label": "5", "shape": "dot"}, {"id": "6", "label": "6", "shape": "dot"}, {"id": "7", "label": "7", "shape": "dot"}, {"id": "8", "label": "8", "shape": "dot"}, {"id": "9", "label": "9", "shape": "dot"}, {"id": "10", "label": "10", "shape": "dot"}, {"color": "red", "fixed": true, "id": "11", "label": "fixed", "shape": "dot"}]);
+
+    // create an array with edges
+    const ds_edges = new vis.DataSet([{"from": "1", "to": "2"}, {"from": "1", "to": "3"}, {"from": "1", "to": "4"}, {"from": "1", "to": "5"}, {"from": "1", "to": "6"}, {"from": "1", "to": "7"}, {"from": "1", "to": "8"}, {"from": "1", "to": "9"}, {"from": "1", "to": "10"}, {"from": "1", "to": "11"}]);
+
+    // create a network
+    const container = document.getElementById('visjsnet');
+
+    // provide the data in the vis format
+    const data = {
+        nodes: ds_nodes,
+        edges: ds_edges
+    };
+
+    const options = {
+        "height": "500px", 
+        "width": "100%",
+        "interaction": {
+            "dragView": false, 
+            "zoomView": false,
+        }
+    };
+    
+    const pyvisjs = {};
+
+    return {
+        network: new vis.Network(container, data, options),
+        nodes: ds_nodes.get({ returnType: "Object" }),
+        edges: ds_edges.get({ returnType: "Object" }),
+        ds_nodes: ds_nodes,
+        pyvisjs: pyvisjs,
+    }
+}
+ 
+
+    </script>
+{{ super() }}
+{% endblock %}

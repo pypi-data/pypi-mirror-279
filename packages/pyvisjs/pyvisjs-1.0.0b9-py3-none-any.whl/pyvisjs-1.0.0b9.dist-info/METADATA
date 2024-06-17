@@ -1,0 +1,102 @@
+Metadata-Version: 2.1
+Name: pyvisjs
+Version: 1.0.0b9
+Summary: A Python wrapper for vis.js Network
+Author-email: Andrey Morozov <andrey@morozov.lv>
+License: MIT License
+        
+        Copyright (c) 2024 Andrey Morozov (andrey@morozov.lv)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://gitlab.com/22kittens/pyvisjs
+Project-URL: Repository, https://gitlab.com/22kittens/pyvisjs.git
+Project-URL: Issues, https://gitlab.com/22kittens/pyvisjs/-/issues
+Keywords: visjs,visNetwork,graph,network
+Classifier: Programming Language :: Python
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Jinja2
+Provides-Extra: all
+Requires-Dist: pyvisjs[test] ; extra == 'all'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+
+[![pipeline status](https://gitlab.com/22kittens/pyvisjs/badges/main/pipeline.svg)](https://gitlab.com/22kittens/pyvisjs/-/commits/main)
+[![PyPI - Version](https://img.shields.io/pypi/v/pyvisjs)](https://pypi.org/project/pyvisjs)
+[![Documentation](https://img.shields.io/badge/ref-Documentation-blue)](https://22kittens.gitlab.io/pyvisjs/)
+[![coverage](https://gitlab.com/22kittens/pyvisjs/badges/dev/coverage.svg?job=pytest_job)](https://gitlab.com/22kittens/pyvisjs/-/commits/main)
+
+
+# ![logo](https://gitlab.com/uploads/-/system/project/avatar/56819743/favicon-32x32.png) - pyvisjs
+Python wrapper for vis.js Network
+
+> :warning: **Beta version disclaimer** Please note that this package is in a **beta** version and backwards-incompatible changes might be introduced in future releases.
+
+
+pyvisjs is a Python package designed to provide seamless interaction with [vis.js](https://visjs.org) network visualizations, allowing users to manipulate and visualize network data using Python.
+
+## Usage workflow
+
+1. Create a network using python
+2. Apply standard vis.js options such as colors, shapes or physics
+3. Apply pyvisjs specific options such as node/edge filtering or highlighting
+4. Show or generate html file
+5. Enjoy network interactions in your browser
+
+## Installation
+
+You can install PyVisjs via pip:
+
+```bash
+pip install pyvisjs
+```
+
+## Usage example
+
+```python
+from pyvisjs import Network
+
+# Create a Network instance
+net = Network()
+
+# Add nodes and edges
+net.add_node(1)
+net.add_node(2)
+net.add_edge(1, 2)
+
+# Display the network
+net.show("example.html")
+```
+
+For more examples and detailed usage, please refer to the [documentation](https://22kittens.gitlab.io/pyvisjs).
+
+## Contributing
+
+Contributions are welcome! If you have suggestions, feature requests, or find any bugs, please open an issue or submit a pull request. Make sure to follow the [contribution guidelines](https://22kittens.gitlab.io/pyvisjs/CONTRIBUTING).
+
+## Acknowledgments
+
+This project is inspired by the [pyvis](https://github.com/WestHealth/pyvis) Python package and the [visNetwork](https://github.com/datastorm-open/visNetwork) R-language package.
+
+## License
+
+This project is licensed under the [MIT License](https://22kittens.gitlab.io/pyvisjs/LICENSE).
