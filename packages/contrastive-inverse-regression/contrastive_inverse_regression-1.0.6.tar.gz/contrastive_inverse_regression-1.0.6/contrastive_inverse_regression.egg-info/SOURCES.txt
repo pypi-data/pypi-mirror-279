@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+contrastive_inverse_regression/__init__.py
+contrastive_inverse_regression/cir.py
+contrastive_inverse_regression.egg-info/PKG-INFO
+contrastive_inverse_regression.egg-info/SOURCES.txt
+contrastive_inverse_regression.egg-info/dependency_links.txt
+contrastive_inverse_regression.egg-info/top_level.txt
