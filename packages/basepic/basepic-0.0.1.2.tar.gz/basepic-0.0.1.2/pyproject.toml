@@ -1,0 +1,9 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "basepic"
+version = "0.0.1.2"
+description = "超轻量级图片文件与base64的转换"
+authors = [{name = "Luo.yu_u-520", email = "luoyu_u@qq.com"}]
