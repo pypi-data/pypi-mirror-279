@@ -1,0 +1,9 @@
+promptml_cli/__about__.py,sha256=Lw301Q32YL_h-HOuaJLUyiD5bovdKRIkwhYRmCkrnSk,49
+promptml_cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+promptml_cli/client.py,sha256=Cjv2LYx-tI2Dfhw-OJm45InHTgCXcrN61DJA-J1MExw,1028
+promptml_cli/main.py,sha256=JPj7F77Fr2p5j3KJlxS8bWueFacV4v28lm-0C7GR3w4,5382
+promptml_cli-0.2.0.dist-info/METADATA,sha256=FsX2UdvlwrfGoObiA0u8YE_bAGs8IRVd1QeB4Y1ryzY,5157
+promptml_cli-0.2.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+promptml_cli-0.2.0.dist-info/entry_points.txt,sha256=Od7818r8VLMZ5bu4735EAf60CdYRB7yjp2gRY2ofu8c,55
+promptml_cli-0.2.0.dist-info/licenses/LICENSE,sha256=_IQQzYn4apibAxVlK4UpDYEvZ_aIabOFgcvKfR-dIdo,1073
+promptml_cli-0.2.0.dist-info/RECORD,,
