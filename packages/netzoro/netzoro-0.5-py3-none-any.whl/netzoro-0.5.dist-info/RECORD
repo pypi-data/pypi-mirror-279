@@ -1,0 +1,27 @@
+netzoro/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+netzoro/functions.py,sha256=TOhf29xhaJwsIpAHTcK1T5DMeivgrb-VsGmyuDlLnXU,886
+netzoro/files/10slidingwindowtcp (1).py,sha256=TsCdSBPP0Fh545x03X7j8PijO_Mc4ypUHvIUKZEoNGQ,1476
+netzoro/files/10snwclient (1).py,sha256=HKdYiR7DBd5JyXw8enVJE3_6hg163iRRjkXiFgM4SUM,1131
+netzoro/files/10snwserver (1).py,sha256=xSQnQXA7_JJjNNeI5pDNAGnHeRpuMgYn2X_gLZuzjtI,1372
+netzoro/files/11HTTP-Client (1).py,sha256=JYBSNpagw-E0NJIJvK6wzmujf-mrFz6ZPow3jlVaDXE,629
+netzoro/files/12rpc_client (1).py,sha256=fWvkCroFTwmY-5XGp--G1imjEo7iPauJQkJswLr-yNs,848
+netzoro/files/12rpc_server (1).py,sha256=G60EeLmFRPkTXR9yvmHGrf6MZ0ColM06n025HBIL7-c,660
+netzoro/files/13subnetting (1).py,sha256=Cn0I3I2gSQoocafEoj9YTRDJCJ8C6bhtm6LYQcGhfUM,937
+netzoro/files/7chat (1).py,sha256=70uarmFbx6drF-C4fXyKNCwjnQIAfafW27Sw4-lCPnQ,1966
+netzoro/files/7echoclient (1).py,sha256=HPJGYKpZwhqZz8dJH2JblqAKkUcI7HpSiU-7Ej8OTp4,645
+netzoro/files/7echoserver(1).py,sha256=FqG8sQ3bFdDlTe6vkHUZDR3llFMp9ooAnwB1xCfkNrc,714
+netzoro/files/7ftpclient (2).py,sha256=BENLiHOxvQiwezHtpy0PyGXX8N0y4_zRFVV0UfE8TXE,1277
+netzoro/files/7ftpserver (1).py,sha256=PhPcSxpBm-peoWJv192TWtZf1poF-LxpPlFI2BbHE08,1018
+netzoro/files/8chatudp (1).py,sha256=AHWUMhgiNCwQuCtRxn_WmuHPs15skQtNXil_vWhmS8Y,1130
+netzoro/files/8chatudpclient (1).py,sha256=5w271PTywffU4D7YbvnatycQCUn7FH3itx4ezCpQHq8,1028
+netzoro/files/8echoclientudp (1).py,sha256=ebBTR278ISqZHj0x8c81ewGUXM4t3muvaxrfPIPoMuU,515
+netzoro/files/8echoserverudp (1).py,sha256=AWzdMNYL6RFqWTE9KrSGjXE5rI5UgMNAXPrLNKBjWLA,378
+netzoro/files/8ftpserverudp (1).py,sha256=xtotiBTNtZDMVcYe9LVxG9WKIYLULfWCqwvqm0AmS4Y,364
+netzoro/files/9arpclient (1).py,sha256=rvwbq28Afk1oVqDUaPoM9_nJzdbi9xSNNROp892vaRg,839
+netzoro/files/9arpserver (1).py,sha256=ux-AdPdh6nDAFgE2054IQrZrponJ0QZLbowVBMOhjwo,679
+netzoro/files/9rarpclient (1).py,sha256=W3xEgYzP32KwxArMHl3zlLJOzhy9ViJc-vYrAp0HfHQ,935
+netzoro/files/9rarpserver (1).py,sha256=F-PAy4TTbNXkGdCzvwDCJEUInRs0dCIIg_LGeR70BII,796
+netzoro-0.5.dist-info/METADATA,sha256=U3Lcsc1yCqOWNF7XVCY4nh1052epdEV1-S-TaLtr3Ao,54
+netzoro-0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+netzoro-0.5.dist-info/top_level.txt,sha256=fiyG1lKIIkBqJtzv8DPhsrTzbcVIlCXeCe64rfijIZI,8
+netzoro-0.5.dist-info/RECORD,,
