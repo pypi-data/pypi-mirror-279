@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: location-profile-local
+Version: 0.0.53
+Summary: PyPI Package for Circles location-profile-local Local Python
+Home-page: https://github.com/circles-zone/location-profile-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: database-mysql-local >=0.0.180
+Requires-Dist: language-remote
+Requires-Dist: logger-local >=0.0.71
+Requires-Dist: python-sdk-remote
+
+This is a package for sharing common functions of operational hours CRUD to location_profile database used in different repositories
