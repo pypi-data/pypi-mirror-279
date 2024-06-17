@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: atlassible
+Version: 0.1.0
+Summary: python  package to (kind of ) encapsulate the Atlassian REST APIs
+Home-page: https://joeldodson.github.io/atlassible
+License: MIT
+Keywords: Atlassian,SDK,accessibility,a11y,web development
+Author: Joel Dodson
+Author-email: joeldodson@gmail.com
+Maintainer: BlindGumption
+Maintainer-email: blindgumption@gmail.com
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: aticli
+Requires-Dist: domible (>=0.1.5,<0.2.0) ; extra == "aticli"
+Requires-Dist: jsonloggeriso8601datetime (>=1.0.3,<2.0.0) ; extra == "aticli"
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0) ; extra == "aticli"
+Project-URL: Documentation, https://joeldodson.github.io/attlassible
+Project-URL: Repository, https://github.com/joeldodson/atlassible
+Description-Content-Type: text/markdown
+
+# atlassible 
+
+trying to make Atlassian services easier on blind people
+
+## Required  Environment variables 
+
+``` python 
+atl_user = os.getenv("ATLASSIAN_USER", "ATLASSIAN_USER is missing")
+atl_token = os.getenv("ATLASSIAN_API_TOKEN", "ATLASSIAN_API_TOKEN is missing")
+atl_base_url = os.getenv("ATLASSIAN_BASE_URL", "ATLASSIAN_BASE_URL is missing")
+atl_api_url = os.getenv("ATLASSIAN_API_URL", "ATLASSIAN_API_URL is missing")
+```
+
+
+
