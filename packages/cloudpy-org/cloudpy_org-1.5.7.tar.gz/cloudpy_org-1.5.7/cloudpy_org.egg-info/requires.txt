@@ -1,0 +1,11 @@
+pandas
+pandasql
+boto3
+awswrangler
+tqdm
+botocore
+numpy
+cryptography
+s3fs
+pillow
+flask

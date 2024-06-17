@@ -1,0 +1,15 @@
+README.md
+setup.py
+cloudpy_org/__init__.py
+cloudpy_org/aws.py
+cloudpy_org/client_usage.py
+cloudpy_org/docs.py
+cloudpy_org/imgedit.py
+cloudpy_org/tools.py
+cloudpy_org/web.py
+cloudpy_org/web_client_usage.py
+cloudpy_org.egg-info/PKG-INFO
+cloudpy_org.egg-info/SOURCES.txt
+cloudpy_org.egg-info/dependency_links.txt
+cloudpy_org.egg-info/requires.txt
+cloudpy_org.egg-info/top_level.txt
