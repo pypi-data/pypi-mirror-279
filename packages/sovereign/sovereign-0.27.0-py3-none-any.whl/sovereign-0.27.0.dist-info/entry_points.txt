@@ -1,0 +1,13 @@
+[console_scripts]
+sovereign=sovereign.server:main
+
+[sovereign.loaders]
+example=sovereign.testing.loaders:Multiply
+
+[sovereign.modifiers]
+sovereign_3rd_party_test=sovereign.testing.modifiers:Test
+
+[sovereign.sources]
+file=sovereign.sources.file:File
+inline=sovereign.sources.inline:Inline
+
