@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: overwatch_sayak
+Version: 1.0
+Summary: A set of easy-to-use utilities that will come in handy in a Computer Vision project
+Home-page: https://github.com/itz-sayak/overwatch_sayak
+License: MIT
+Keywords: machine-learning,deep-learning,vision,ML,DL,AI,Computer Vision,Slided Inference
+Author: Sayak Dutta
+Author-email: sayakdutta1002@gmail.com
+Maintainer: Sayak Dutta
+Maintainer-email: sayakdutta1002@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Provides-Extra: assets
+Provides-Extra: desktop
+Requires-Dist: defusedxml (>=0.7.1,<0.8.0)
+Requires-Dist: matplotlib (>=3.6.0)
+Requires-Dist: numpy (>=1.21.2)
+Requires-Dist: opencv-python (>=4.5.5.64) ; extra == "desktop"
+Requires-Dist: opencv-python-headless (>=4.5.5.64)
+Requires-Dist: pillow (>=9.4)
+Requires-Dist: pyyaml (>=5.3)
+Requires-Dist: requests (>=2.26.0,<=2.32.3) ; extra == "assets"
+Requires-Dist: scipy (==1.10.0) ; python_version < "3.9"
+Requires-Dist: scipy (>=1.10.0,<2.0.0) ; python_version >= "3.9"
+Requires-Dist: tqdm (>=4.62.3,<=4.66.4) ; extra == "assets"
+Project-URL: Documentation, https://github.com/itz-sayak/overwatch_sayak/blob/main/README.md
+Project-URL: Repository, https://github.com/itz-sayak/overwatch_sayak
+Description-Content-Type: text/markdown
+
+# Overwatch
+
