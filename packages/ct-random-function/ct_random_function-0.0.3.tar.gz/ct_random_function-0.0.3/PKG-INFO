@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: ct_random_function
+Version: 0.0.3
+Summary: This is my very first package from me
+Home-page: https://github.com/CuongTon
+Author: Cuong Ton
+Author-email: tonkiencuong@gmail.com
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=1.0.0
+
+name: The name of your package. This is how your package will appear on PyPI (the Python Package Index) and how users will install it with pip (pip install Your-Package-Name).
+
+version: The current version of your package. This should follow semantic versioning rules.
+
+url: The URL for the homepage of your package. Most often this will be the URL of your GitHub repository.
+
+author and author_email: Your name and contact email.
+
+description: A short description of what your package does.
+
+packages: This tells setuptools what packages to distribute. find_packages() is a handy function that will find all packages (directories containing an __init__.py file) automatically.
+
+install_requires: A list of other Python packages that your package depends on. Users installing your package will automatically install these dependencies.
+
+build a package
+python setup.py sdist bdist_wheel
+
+try locally
+pip install dist/CT_Hello_World-0.0.1-py3-none-any.whl --force-reinstall
+
+show all package
+pip list
