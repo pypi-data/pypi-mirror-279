@@ -1,0 +1,10 @@
+keyring
+boto3
+
+[devel]
+flake8
+black
+
+[testing]
+pytest>=6
+pytest-cov
