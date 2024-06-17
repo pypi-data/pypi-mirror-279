@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "py2ls"
+version = "0.1.4.4"
+description = "py(thon)2(too)ls"
+authors = ["Jianfeng <Jianfeng.Liu0413@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
