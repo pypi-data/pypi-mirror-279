@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: signtractions
+Version: 0.0.5
+Summary: quay-tractions
+Home-page: https://github.com/midnightercz/signtractions
+Author: Jindrich Luza
+Author-email: jluza@redhat.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: koji
+Requires-Dist: requests
+Requires-Dist: requests_kerberos
+Requires-Dist: pytractions
+Requires-Dist: gssapi
+
+pubtools-sign pytractions wrapper for signing containers and release snapshots in tractions.
