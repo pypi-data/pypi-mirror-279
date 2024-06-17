@@ -1,0 +1,10 @@
+setup.py
+figgs/__init__.py
+figgs/auth.py
+figgs/figgs.py
+figgs_ai.egg-info/PKG-INFO
+figgs_ai.egg-info/SOURCES.txt
+figgs_ai.egg-info/dependency_links.txt
+figgs_ai.egg-info/entry_points.txt
+figgs_ai.egg-info/requires.txt
+figgs_ai.egg-info/top_level.txt

@@ -1,0 +1,2 @@
+[console_scripts]
+figgs = figgs.figgs:main
