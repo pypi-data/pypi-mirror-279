@@ -1,0 +1,21 @@
+[project]
+name = "pysfpubsub"
+version = "0.0.1"
+authors = [
+  { name="Benton Snyder", email="benton@bensnyde.me" },
+]
+description = "Python gRPC client for the Salesforce PubSub API."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/bensnyde/pysfpubsub"
+Issues = "https://github.com/bensnyde/pysfpubsub/issues"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
