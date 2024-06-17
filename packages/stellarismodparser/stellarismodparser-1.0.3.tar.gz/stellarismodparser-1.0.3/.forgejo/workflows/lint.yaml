@@ -1,0 +1,24 @@
+﻿name: Lint
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+
+jobs:
+  Lint Code (Ruff & Pylint):
+    runs-on: docker
+    container: www.coastalcommits.com/seaswimmerthefsh/actionscontainers-seacogs:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: python3 -m venv .venv && ./.venv/bin/pip install -r ./requirements.txt
+
+      - name: Analysing code with Ruff
+        run: ./.venv/bin/ruff check $(git ls-files '*.py')
+        continue-on-error: true
+
+      - name: Analysing code with Pylint
+        run: ./.venv/bin/pylint --rcfile=.forgejo/workflows/config/.pylintrc $(git ls-files '*.py')
