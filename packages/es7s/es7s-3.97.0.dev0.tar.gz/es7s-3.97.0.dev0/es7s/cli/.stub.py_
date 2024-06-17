@@ -1,0 +1,31 @@
+# ------------------------------------------------------------------------------
+#  es7s/core
+#  (c) 2024 A. Shavykin <0.delameter@gmail.com>
+# ------------------------------------------------------------------------------
+from .._base_opts_params import CMDTYPE_BUILTIN, CMDTRAIT_X11
+from .._decorators import cli_command, cli_argument, cli_option, catch_and_log_and_exit
+
+
+@cli_command(
+    __file__,
+    type=CMDTYPE_BUILTIN,
+    traits=[CMDTRAIT_X11],
+    short_help="find all public defs and update imports in __init__.py",
+)
+@cli_argument(
+    "layout",
+    type=str,
+    required=False,
+    default="layout1",
+)
+@cli_option(
+    "-g",
+    "--groups",
+    is_flag=True,
+    help="Display group column.",
+)
+@catch_and_log_and_exit
+class invoker:
+    def __init__(self, **kwargs):
+        from es7s.cmd.socket_path import action
+        action(**kwargs)

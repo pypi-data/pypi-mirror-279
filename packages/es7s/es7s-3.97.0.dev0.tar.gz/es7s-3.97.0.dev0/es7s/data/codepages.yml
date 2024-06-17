@@ -1,0 +1,1032 @@
+# -----------------------------------------------------------------------------
+# relevant to: python 3.12
+# -----------------------------------------------------------------------------
+codepages:
+  - code: ascii
+    domain: default
+    aliases:
+      - '646'
+      - us-ascii
+    languages:
+      - English
+    size: 7
+    overrides: ~
+
+  - code: big5
+    aliases:
+      - big5-tw
+      - csbig5
+    languages:
+      - Traditional Chinese
+    size: 16
+    overrides: ~
+
+  - code: big5hkscs
+    aliases:
+      - big5-hkscs
+      - hkscs
+    languages:
+      - Traditional Chinese
+    size: 16
+    overrides: ~
+
+  - code: cp037
+    domain: ebcdic
+    aliases:
+      - IBM037
+      - IBM039
+    languages:
+      - English
+    size: 8
+    overrides: ~
+
+  - code: cp273
+    domain: ebcdic
+    aliases:
+      - '273'
+      - IBM273
+      - csIBM273
+    languages:
+      - German
+    size: 8
+    overrides: ~
+
+  - code: cp424
+    domain: ebcdic
+    aliases:
+      - EBCDIC-CP-HE
+      - IBM424
+    languages:
+      - Hebrew
+    size: 8
+    overrides: ~
+
+  - code: cp437
+    domain: dos
+    aliases:
+      - '437'
+      - IBM437
+    languages:
+      - English
+    size: 8
+    overrides: dos-generic
+
+  - code: cp500
+    domain: ebcdic
+    aliases:
+      - EBCDIC-CP-BE
+      - EBCDIC-CP-CH
+      - IBM500
+    languages:
+      - Western Europe
+    size: 8
+    overrides: ~
+
+  - code: cp720
+    domain: dos
+    languages:
+      - Arabic
+    size: 8
+    overrides: dos-generic
+
+  - code: cp737
+    domain: dos
+    languages:
+      - Greek
+    size: 8
+    overrides: dos-generic
+
+  - code: cp775
+    domain: dos
+    aliases:
+      - IBM775
+    languages:
+      - Baltic languages
+    size: 8
+    overrides: dos-generic
+
+  - code: cp850
+    domain: dos
+    aliases:
+      - '850'
+      - IBM850
+    languages:
+      - Western Europe
+    size: 8
+    overrides: dos-generic
+
+  - code: cp852
+    domain: dos
+    aliases:
+      - '852'
+      - IBM852
+    languages:
+      - Central and Eastern Europe
+    size: 8
+    overrides: dos-generic
+
+  - code: cp855
+    domain: dos
+    aliases:
+      - '855'
+      - IBM855
+    languages:
+      - Bulgarian
+      - Byelorussian
+      - Macedonian
+      - Russian
+      - Serbian
+    size: 8
+    overrides: dos-generic
+
+  - code: cp856
+    domain: dos
+    languages:
+      - Hebrew
+    size: 8
+    overrides: dos-generic
+
+  - code: cp857
+    domain: dos
+    aliases:
+      - '857'
+      - IBM857
+    languages:
+      - Turkish
+    size: 8
+    overrides: dos-generic
+
+  - code: cp858
+    domain: dos
+    aliases:
+      - '858'
+      - IBM858
+    languages:
+      - Western Europe
+    size: 8
+    overrides: dos-generic
+
+  - code: cp860
+    domain: dos
+    aliases:
+      - '860'
+      - IBM860
+    languages:
+      - Portuguese
+    size: 8
+    overrides: dos-generic
+
+  - code: cp861
+    domain: dos
+    aliases:
+      - '861'
+      - CP-IS
+      - IBM861
+    languages:
+      - Icelandic
+    size: 8
+    overrides: dos-generic
+
+  - code: cp862
+    domain: dos
+    aliases:
+      - '862'
+      - IBM862
+    languages:
+      - Hebrew
+    size: 8
+    overrides: dos-generic
+
+  - code: cp863
+    domain: dos
+    aliases:
+      - '863'
+      - IBM863
+    languages:
+      - Canadian
+    size: 8
+    overrides: dos-generic
+
+  - code: cp864
+    domain: dos
+    aliases:
+      - IBM864
+    languages:
+      - Arabic
+    size: 8
+    overrides: cp864
+
+  - code: cp865
+    domain: dos
+    aliases:
+      - '865'
+      - IBM865
+    languages:
+      - Danish
+      - Norwegian
+    size: 8
+    overrides: dos-generic
+
+  - code: cp866
+    domain: dos
+    aliases:
+      - '866'
+      - IBM866
+    languages:
+      - Russian
+    size: 8
+    overrides: dos-generic
+
+  - code: cp869
+    domain: dos
+    aliases:
+      - '869'
+      - CP-GR
+      - IBM869
+    languages:
+      - Greek
+    size: 8
+    overrides: dos-generic
+
+  - code: cp874
+    domain: dos
+    languages:
+      - Thai
+    size: 8
+    overrides: dos-generic
+
+  - code: cp875
+    domain: ebcdic
+    languages:
+      - Greek
+    size: 8
+    overrides: ~
+
+  - code: cp932
+    domain: windows
+    aliases:
+      - '932'
+      - ms932
+      - mskanji
+      - ms-kanji
+    languages:
+      - Japanese
+    size: 16
+    overrides: ~
+
+  - code: cp949
+    domain: windows
+    aliases:
+      - '949'
+      - ms949
+      - uhc
+    languages:
+      - Korean
+    size: 16
+
+  - code: cp950
+    domain: windows
+    aliases:
+      - '950'
+      - ms950
+    languages:
+      - Traditional Chinese
+    size: 16
+    overrides: ~
+
+  - code: cp1006
+    domain: ebcdic
+    languages:
+      - Urdu
+    size: 16
+    overrides: ~
+
+  - code: cp1026
+    domain: ebcdic
+    aliases:
+      - ibm1026
+    languages:
+      - Turkish
+    size: 16
+    overrides: ~
+
+  - code: cp1125
+    domain: dos
+    alias_vis: cp866u
+    aliases:
+      - '1125'
+      - ibm1125
+      - cp866u
+      - ruscii
+    languages:
+      - Ukrainian
+    size: 16
+    overrides: dos-generic
+
+  - code: cp1140
+    domain: dos
+    aliases:
+      - ibm1140
+    languages:
+      - Western Europe
+    size: 16
+    overrides: dos-generic
+
+  - code: cp1250
+    domain: windows
+    alias_vis: windows-1250
+    aliases:
+      - windows-1250
+    languages:
+      - Central and Eastern Europe
+    size: 16
+    overrides: ~
+
+  - code: cp1251
+    domain: windows
+    alias_vis: windows-1251
+    languages:
+      - Bulgarian
+      - Byelorussian
+      - Macedonian
+      - Russian
+      - Serbian
+    size: 16
+    overrides: ~
+
+  - code: cp1252
+    domain: windows
+    alias_vis: windows-1252
+    languages:
+      - Western Europe
+    size: 16
+    overrides: ~
+
+  - code: cp1253
+    domain: windows
+    alias_vis: windows-1253
+    languages:
+      - Greek
+    size: 16
+    overrides: ~
+
+  - code: cp1254
+    domain: windows
+    alias_vis: windows-1254
+    languages:
+      - Turkish
+    size: 16
+    overrides: ~
+
+  - code: cp1255
+    domain: windows
+    alias_vis: windows-1255
+    languages:
+      - Hebrew
+    size: 16
+    overrides: ~
+
+  - code: cp1256
+    domain: windows
+    alias_vis: windows-1256
+    languages:
+      - Arabic
+    size: 16
+    overrides: ~
+
+  - code: cp1257
+    domain: windows
+    alias_vis: windows-1257
+    languages:
+      - Baltic languages
+    size: 16
+    overrides: ~
+
+  - code: cp1258
+    domain: windows
+    alias_vis: windows-1258
+    languages:
+      - Vietnamese
+    size: 16
+    overrides: ~
+
+  - code: euc_jp
+    domain: iso646
+    aliases:
+      - eucjp
+      - ujis
+      - u-jis
+    languages:
+      - Japanese
+    size: 24
+    overrides: ~
+
+  - code: euc_jis_2004
+    domain: iso646
+    aliases:
+      - jisx0213
+      - eucjis2004
+    languages:
+      - Japanese
+    size: 24
+    overrides: ~
+
+  - code: euc_jisx0213
+    domain: iso646
+    aliases:
+      - eucjisx0213
+    languages:
+      - Japanese
+    size: 24
+    overrides: ~
+
+  - code: euc_kr
+    domain: iso646
+    alias_vis: ksx1001
+    aliases:
+      - euckr
+      - korean
+      - ksc5601
+      - ks_c-5601
+      - ks_c-5601-1987
+      - ks_x-1001
+    languages:
+      - Korean
+    size: 16
+    overrides: ~
+
+  - code: gb2312
+    domain: gb
+    aliases:
+      - chinese
+      - csiso58gb231280
+      - euc-cn
+      - euccn
+      - eucgb2312-cn
+      - gb2312-1980
+      - gb2312-80
+      - iso-ir-58
+    languages:
+      - Simplified Chinese
+    size: 16
+    overrides: ~
+
+  - code: gbk
+    domain: gb
+    aliases:
+      - '936'
+      - cp936
+      - ms936
+    languages:
+      - Unified Chinese
+    size: 32
+    overrides: ~
+
+  - code: gb18030
+    domain: gb
+    aliases:
+      - gb18030-2000
+    languages:
+      - Unified Chinese
+    size: 32
+    overrides: ~
+
+  - code: hz
+    domain: gb
+    aliases:
+      - hzgb
+      - hz-gb
+      - hz-gb-2312
+    languages:
+      - Simplified Chinese
+    size: 16
+    overrides: ~
+
+  - code: iso2022_jp
+    domain: iso2022
+    aliases:
+      - csiso2022jp
+      - iso2022jp
+      - iso-2022-jp
+    languages:
+      - Japanese
+    size: -1
+    overrides: ~
+
+  - code: iso2022_jp_1
+    domain: iso2022
+    aliases:
+      - iso2022jp-1
+      - iso-2022-jp-1
+    languages:
+      - Japanese
+    size: -1
+    overrides: ~
+
+  - code: iso2022_jp_2
+    domain: iso2022
+    aliases:
+      - iso2022jp-2
+      - iso-2022-jp-2
+    languages:
+      - Japanese
+      - Korean
+      - Simplified Chinese
+      - Western Europe
+      - Greek
+    size: -1
+    overrides: ~
+
+  - code: iso2022_jp_2004
+    domain: iso2022
+    aliases:
+      - iso2022jp-2004
+      - iso-2022-jp-2004
+    languages:
+      - Japanese
+    size: -1
+    overrides: ~
+
+  - code: iso2022_jp_3
+    domain: iso2022
+    aliases:
+      - iso2022jp-3
+      - iso-2022-jp-3
+    languages:
+      - Japanese
+    size: -1
+    overrides: ~
+
+  - code: iso2022_jp_ext
+    domain: iso2022
+    aliases:
+      - iso2022jp-ext
+      - iso-2022-jp-ext
+    languages:
+      - Japanese
+    size: -1
+    overrides: ~
+
+  - code: iso2022_kr
+    domain: iso2022
+    aliases:
+      - csiso2022kr
+      - iso2022kr
+      - iso-2022-kr
+    languages:
+      - Korean
+    size: -1
+    overrides: ~
+
+  - code: latin_1
+    domain: iso8859
+    alias_vis: iso-8859-1
+    aliases:
+      - iso8859-1
+      - '8859'
+      - cp819
+      - latin
+      - latin1
+      - L1
+    languages:
+      - Western Europe
+    size: 16
+    overrides: ~
+
+  - code: iso8859_2
+    domain: iso8859
+    aliases:
+      - iso-8859-2
+      - latin2
+      - L2
+    languages:
+      - Central and Eastern Europe
+    size: 16
+    overrides: ~
+
+  - code: iso8859_3
+    domain: iso8859
+    aliases:
+      - iso-8859-3
+      - latin3
+      - L3
+    languages:
+      - Esperanto
+      - Maltese
+    size: 16
+    overrides: ~
+
+  - code: iso8859_4
+    domain: iso8859
+    aliases:
+      - iso-8859-4
+      - latin4
+      - L4
+    languages:
+      - Baltic languages
+    size: 16
+    overrides: ~
+
+  - code: iso8859_5
+    domain: iso8859
+    aliases:
+      - iso-8859-5
+      - cyrillic
+    languages:
+      - Bulgarian
+      - Byelorussian
+      - Macedonian
+      - Russian
+      - Serbian
+    size: 16
+    overrides: ~
+
+  - code: iso8859_6
+    domain: iso8859
+    aliases:
+      - iso-8859-6
+      - arabic
+    languages:
+      - Arabic
+    size: 16
+    overrides: ~
+
+  - code: iso8859_7
+    domain: iso8859
+    aliases:
+      - iso-8859-7
+      - greek
+      - greek8
+    languages:
+      - Greek
+    size: 16
+    overrides: ~
+
+  - code: iso8859_8
+    domain: iso8859
+    aliases:
+      - iso-8859-8
+      - hebrew
+    languages:
+      - Hebrew
+    size: 16
+    overrides: ~
+
+  - code: iso8859_9
+    domain: iso8859
+    aliases:
+      - iso-8859-9
+      - latin5
+      - L5
+    languages:
+      - Turkish
+    size: 16
+    overrides: ~
+
+  - code: iso8859_10
+    domain: iso8859
+    aliases:
+      - iso-8859-10
+      - latin6
+      - L6
+    languages:
+      - Nordic languages
+    size: 16
+    overrides: ~
+
+  - code: iso8859_11
+    domain: iso8859
+    aliases:
+      - iso-8859-11
+      - thai
+    languages:
+      - Thai languages
+    size: 16
+    overrides: ~
+
+  - code: iso8859_13
+    domain: iso8859
+    aliases:
+      - iso-8859-13
+      - latin7
+      - L7
+    languages:
+      - Baltic languages
+    size: 16
+    overrides: ~
+
+  - code: iso8859_14
+    domain: iso8859
+    aliases:
+      - iso-8859-14
+      - latin8
+      - L8
+    languages:
+      - Celtic languages
+    size: 16
+    overrides: ~
+
+  - code: iso8859_15
+    domain: iso8859
+    aliases:
+      - iso-8859-15
+      - latin9
+      - L9
+    languages:
+      - Western Europe
+    size: 16
+    overrides: ~
+
+  - code: iso8859_16
+    domain: iso8859
+    aliases:
+      - iso-8859-16
+      - latin10
+      - L10
+    languages:
+      - South-Eastern Europe
+    size: 16
+    overrides: ~
+
+  - code: johab
+    alias_vis: cp1361
+    aliases:
+      - ms1361
+    languages:
+      - Korean
+    size: 16
+    overrides: ~
+
+  - code: koi8_r
+    domain: koi
+    languages:
+      - Russian
+    size: 16
+
+  - code: koi8_t
+    domain: koi
+    languages:
+      - Tajik
+    size: 16
+    overrides: ~
+
+  - code: koi8_u
+    domain: koi
+    languages:
+      - Ukrainian
+    size: 16
+    overrides: ~
+
+  - code: kz1048
+    aliases:
+      - kz_1048
+      - strk1048_2002
+      - rk1048
+    languages:
+      - Kazakh
+    size: 16
+    overrides: ~
+
+  - code: mac_cyrillic
+    domain: mac
+    aliases:
+      - maccyrillic
+    languages:
+      - Bulgarian
+      - Byelorussian
+      - Macedonian
+      - Russian
+      - Serbian
+    size: 16
+    overrides: ~
+
+  - code: mac_greek
+    domain: mac
+    aliases:
+      - macgreek
+    languages:
+      - Greek
+    size: 16
+    overrides: ~
+
+  - code: mac_iceland
+    domain: mac
+    aliases:
+      - maciceland
+    languages:
+      - Icelandic
+    size: 16
+    overrides: ~
+
+  - code: mac_latin2
+    domain: mac
+    aliases:
+      - maclatin2
+      - maccentraleurope
+      - mac_centeuro
+    languages:
+      - Central and Eastern Europe
+    size: 16
+    overrides: ~
+
+  - code: mac_roman
+    domain: mac
+    aliases:
+      - macroman
+      - macintosh
+    languages:
+      - Western Europe
+    size: 16
+    overrides: ~
+
+  - code: mac_turkish
+    domain: mac
+    aliases:
+      - macturkish
+    languages:
+      - Turkish
+    size: 16
+    overrides: ~
+
+  - code: ptcp154
+    aliases:
+      - csptcp154
+      - pt154
+      - cp154
+      - cyrillic-asian
+    languages:
+      - Kazakh
+    size: 16
+    overrides: ~
+
+  - code: shift_jis
+    domain: shift_jis
+    aliases:
+      - csshiftjis
+      - shiftjis
+      - sjis
+      - s_jis
+    languages:
+      - Japanese
+    size: 16
+    overrides: ~
+
+  - code: shift_jis_2004
+    domain: shift_jis
+    aliases:
+      - shiftjis2004
+      - sjis_2004
+      - sjis2004
+    languages:
+      - Japanese
+    size: 16
+    overrides: ~
+
+  - code: shift_jisx0213
+    domain: shift_jis
+    aliases:
+      - shiftjisx0213
+      - sjisx0213
+      - s_jisx0213
+    languages:
+      - Japanese
+    size: 16
+    overrides: ~
+
+  - code: utf_32
+    domain: unicode
+    aliases:
+      - U32
+      - utf32
+    size: 32
+    overrides: ~
+
+  - code: utf_32_be
+    domain: unicode
+    aliases:
+      - UTF-32BE
+    size: 32
+    overrides: ~
+
+  - code: utf_32_le
+    domain: unicode
+    aliases:
+      - UTF-32LE
+    size: 32
+    overrides: ~
+
+  - code: utf_16
+    domain: unicode
+    aliases:
+      - U16
+      - utf16
+    size: 16
+    overrides: ~
+
+  - code: utf_16_be
+    domain: unicode
+    aliases:
+      - UTF-16BE
+    size: 16
+    overrides: ~
+
+  - code: utf_16_le
+    domain: unicode
+    aliases:
+      - UTF-16LE
+    size: 16
+    overrides: ~
+
+  - code: utf_7
+    domain: unicode
+    aliases:
+      - U7
+      - unicode-1-1-utf-7
+    size: -1
+    overrides: ~
+
+  - code: utf_8
+    domain: unicode
+    aliases:
+      - U8
+      - UTF
+      - utf8
+      - cp65001
+    size: 40
+    overrides: ~
+
+  - code: utf_8_sig
+    domain: unicode
+    size: 40
+    overrides: ~
+
+# -----------------------------------------------------------------------------
+# origin: http://www.unicode.org/Public/MAPPINGS/VENDORS/MISC/IBMGRAPH.TXT
+# -----------------------------------------------------------------------------
+overrides:
+  dos-generic:
+    0x01: "\u263a"  # ☺
+    0x02: "\u263b"  # ☻
+    0x03: "\u2665"  # ♥
+    0x04: "\u2666"  # ♦
+    0x05: "\u2663"  # ♣
+    0x06: "\u2660"  # ♠
+    0x07: "\u2022"  # •
+    0x08: "\u25d8"  # ◘
+    0x09: "\u25cb"  # ○
+    0x0A: "\u25d9"  # ◙
+    0x0B: "\u2642"  # ♂
+    0x0C: "\u2640"  # ♀
+    0x0D: "\u266a"  # ♪
+    0x0E: "\u266b"  # ♫
+    0x0F: "\u263c"  # ☼
+    0x10: "\u25ba"  # ►
+    0x11: "\u25c4"  # ◄
+    0x12: "\u2195"  # ↕
+    0x13: "\u203c"  # ‼
+    0x14: "\u00b6"  # ¶
+    0x15: "\u00a7"  # §
+    0x16: "\u25ac"  # ▬
+    0x17: "\u21a8"  # ↨
+    0x18: "\u2191"  # ↑
+    0x19: "\u2193"  # ↓
+    0x1A: "\u2192"  # →
+    0x1B: "\u2190"  # ←
+    0x1C: "\u221f"  # ∟
+    0x1D: "\u2194"  # ↔
+    0x1E: "\u25b2"  # ▲
+    0x1F: "\u25bc"  # ▼
+
+  cp864:
+    0x01: "\u263a"  # ☺
+    0x02: "\u266a"  # ♪
+    0x03: "\u266b"  # ♫
+    0x04: "\u263c"  # ☼
+    0x05: "\u2550"  # ═
+    0x06: "\u2551"  # ║
+    0x07: "\u256c"  # ╬
+    0x08: "\u2563"  # ╣
+    0x09: "\u2566"  # ╦
+    0x0A: "\u2560"  # ╠
+    0x0B: "\u2569"  # ╩
+    0x0C: "\u2557"  # ╗
+    0x0D: "\u2554"  # ╔
+    0x0E: "\u255a"  # ╚
+    0x0F: "\u255d"  # ╝
+    0x10: "\u25ba"  # ►
+    0x11: "\u25c4"  # ◄
+    0x12: "\u2195"  # ↕
+    0x13: "\u203c"  # ‼
+    0x14: "\u00b6"  # ¶
+    0x15: "\u00a7"  # §
+    0x16: "\u25ac"  # ▬
+    0x17: "\u21a8"  # ↨
+    0x18: "\u2191"  # ↑
+    0x19: "\u2193"  # ↓
+    0x1A: "\u2192"  # →
+    0x1B: "\u2190"  # ←
+    0x1C: "\u221f"  # ∟
+    0x1D: "\u2194"  # ↔
+    0x1E: "\u25b2"  # ▲
+    0x1F: "\u25bc"  # ▼
+    0x7F: "\u2302"  # ⌂

@@ -1,0 +1,34 @@
+[[GMIC SUBROUTINES]]
+
+  COMMAND                                              #OI   OUTPUT IMAGE TYPES
+    gmic sample repeat 3 {  local   {  rotate  30 } }    1   R³
+    gmic sample repeat 3 {  local   {  rotate. 30 } }    1   same as previous
+    gmic sample repeat 3 {  local   { +rotate  30 } }    8   O R (R R²) (R R² R³)
+    gmic sample repeat 3 {  local   { +rotate. 30 } }    4   O R R² R³
+    gmic sample repeat 3 { +local   {  rotate  30 } }    8   (((O) R) R R²) R R² R² R³
+    gmic sample repeat 3 { +local   {  rotate. 30 } }    8   (((O) R) O R²) O R O R³
+    gmic sample repeat 3 { +local   { +rotate  30 } }   27   O (O R) ((O O R) R R R²) ((O O R O O R R R R²) R R R² R R R² R² R² R³)
+    gmic sample repeat 3 { +local   { +rotate. 30 } }   15   O (O R) ((O O R) R²) ((O O R O O R R²) R³)
+    gmic sample repeat 3 { +local.  { +rotate  30 } }    7   (((O) O R) R R²) R² R³
+    gmic sample repeat 3 { +local.  { +rotate. 30 } }    7   same as previous
+    gmic sample +local   { repeat 3 {  rotate  30 } }    2   O R³
+    gmic sample +local   { repeat 3 {  rotate. 30 } }    2   same as previous
+    gmic sample +local   { repeat 3 { +rotate  30 } }    9   O O R (R R²) (R R² R³)
+    gmic sample +local.  { repeat 3 { +rotate  30 } }    9   same as previous
+    gmic sample +local   { repeat 3 { +rotate. 30 } }    5   O O R R² R³
+    gmic sample +local.  { repeat 3 { +rotate. 30 } }    5   same as previous
+
+  _____
+  O = origin, R = rotated, R² = 2×rotated, R³ = 3×rotated
+
+
+\b(\d+)\b[94m\1[39m
+(\{\s+\blocal\b)(.+)(\})[90;2m\1[39;22m\2[90;2m\3[39;22m
+(.+)(\d+.+)(same as previous)[3m\1[90m\2[90m\3[23m
+(?<=\s)([{}])[34m\1[39m
+(\+)(?=\w)[1;31m\1[39;22m
+(\.)[1;32m\1[39;22m
+\b(O)\b[1;32m\1[39;22m
+\b(R)([²³])?\b[31m\1[33;1m\2[39;22m
+(_+)[38;5;244m\1\1\1\1[39m
+(?m)^\[\[(.+)\]\]$[38;5;231;1m\1[39;22m

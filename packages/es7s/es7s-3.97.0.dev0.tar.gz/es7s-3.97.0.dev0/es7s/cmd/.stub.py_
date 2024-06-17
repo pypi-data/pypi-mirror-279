@@ -1,0 +1,16 @@
+# ------------------------------------------------------------------------------
+#  es7s/core
+#  (c) 2024 A. Shavykin <0.delameter@gmail.com>
+# ------------------------------------------------------------------------------
+import pytermor as pt
+from ._base import _BaseAction
+from es7s.shared import get_stdout
+
+
+
+class action(_BaseAction):
+    def __init__(self, **kwargs):
+        self._run(**kwargs)
+
+    def _run(self, ...):
+        ...
