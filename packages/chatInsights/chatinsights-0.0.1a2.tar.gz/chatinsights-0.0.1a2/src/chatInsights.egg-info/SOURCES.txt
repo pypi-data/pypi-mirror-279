@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+setup.cfg
+setup.py
+src/chatInsights/__init__.py
+src/chatInsights/_custom_exceptions.py
+src/chatInsights/_logger.py
+src/chatInsights/main.py
+src/chatInsights/utils.py
+src/chatInsights.egg-info/PKG-INFO
+src/chatInsights.egg-info/SOURCES.txt
+src/chatInsights.egg-info/dependency_links.txt
+src/chatInsights.egg-info/requires.txt
+src/chatInsights.egg-info/top_level.txt
