@@ -1,0 +1,4 @@
+[console_scripts]
+clause_analyzer = clause_analysis.clause_analyzer:main
+passive_tense_classifier = clause_analysis.passive_tense_classifier:main
+tense_analyzer = clause_analysis.tense_analyzer:main
