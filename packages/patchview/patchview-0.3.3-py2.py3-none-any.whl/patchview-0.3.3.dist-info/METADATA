@@ -1,0 +1,114 @@
+Metadata-Version: 2.1
+Name: patchview
+Version: 0.3.3
+Summary: Patchview perform data analysis and visualization on whole-cell recording data, including firing pattern analysis, event analysis, synatpic connection detection, morphorlocial analysis and more.
+Home-page: https://github.com/zeitgeberH/patchview
+Author: Ming Hu
+Author-email: hi@gmail.com
+License: BSD-3-Clause
+Keywords: patchview
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: furo
+Requires-Dist: morphopy
+Requires-Dist: colorcet
+Requires-Dist: appdirs
+Requires-Dist: Pillow
+Requires-Dist: pynwb
+Requires-Dist: tqdm
+Requires-Dist: PySide2
+Requires-Dist: pyqt5
+Requires-Dist: pyqtwebengine
+Requires-Dist: pyqt5-sip
+Requires-Dist: pyqtgraph ==0.13.1
+Requires-Dist: PyOpenGL
+Requires-Dist: cython
+Requires-Dist: neo
+Requires-Dist: pylru ==1.2.1
+Requires-Dist: h5py
+Requires-Dist: joblib
+Requires-Dist: future >=0.18.3
+Requires-Dist: pyYAML
+Requires-Dist: python-dateutil
+Requires-Dist: seaborn
+Requires-Dist: pytz
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: pycairo
+Requires-Dist: scikit-image
+Requires-Dist: morphio
+Requires-Dist: scikit-learn
+Requires-Dist: numpy <1.24,>=1.22
+Requires-Dist: PyOpenGL-accelerate >=3.1.6 ; sys_platform == "win32"
+Provides-Extra: dev
+
+===============
+PatchView
+===============
+.. image:: https://img.shields.io/pypi/v/patchview.svg 
+        :target: https://pypi.python.org/pypi/patchview
+      
+.. image:: https://img.shields.io/badge/python-3.10%2B-blue
+        :target: https://www.python.org/downloads/release/python
+        :alt: Python3.8
+
+.. image:: https://readthedocs.org/projects/patchview/badge/?version=latest
+        :target: https://patchview.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
+.. image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+        :target: https://opensource.org/licenses/BSD-3-Clause
+        :alt: BSD-3-Clause    
+
+.. image:: https://joss.theoj.org/papers/10.21105/joss.04706/status.svg
+   :target: https://doi.org/10.21105/joss.04706
+.. image:: https://img.shields.io/pypi/dm/patchview?label=pypi%20downloads
+           
+
+.. image:: docs/resources/images/patchview_ads.png
+    :width: 800
+
+PatchView perform data analysis and visualization on multi channel whole-cell recording (multi-patch) data, including firing pattern analysis, event analysis,
+synaptic connection detection, morphological analysis and more.
+
+* Free software: BSD 3-Clause license
+* Documentation: https://patchview.readthedocs.io.
+
+
+Features
+--------
+PatchView integrates multiple open-source tools (see credit page) and wrap them using an intuitive graphic user interface (GUI).
+Thus users can perform most analysis quickly for the data collected in a typical patch-clamp experiment without installing Python and 
+these tools or writing any Python scripts.
+
+* Importing both Heka data and Axon Instruments data. Exporting to Python pickle file or NWB (Neurodata Without Borders) file format.
+* Visualizing single and multiple traces with zoom, pan operations.
+* Automatically sorting experiments data according to predefined labels.
+* Performing analysis on intrinsic membrane properties, action potential detection, firing pattern analysis.
+* Synaptic connection analysis.
+* Visualizing and quantification of neuron's morphological reconstruction from Neurolucida
+
+
+Citation
+---------
+If you find our work useful for your research, please cite:
+
+    Hu et al., (2022). PatchView: A Python Package for Patch-clamp Data Analysis and Visualization. Journal of Open Source Software, 7(78), 4706, https://doi.org/10.21105/joss.04706
