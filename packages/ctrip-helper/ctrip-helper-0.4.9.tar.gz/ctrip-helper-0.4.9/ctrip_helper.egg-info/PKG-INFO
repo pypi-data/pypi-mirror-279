@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: ctrip-helper
+Version: 0.4.9
+Summary: This is my ctrip help package
+Home-page: https://github.com/ckf10000/ctrip-helper
+Author: ckf10000
+Author-email: ckf10000@sina.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+License-File: LICENSE
+Requires-Dist: requests>=2.31.0
+Requires-Dist: selenium>=4.21.0
+Requires-Dist: pypinyin>=0.51.0
+
+This is my ctrip help package
