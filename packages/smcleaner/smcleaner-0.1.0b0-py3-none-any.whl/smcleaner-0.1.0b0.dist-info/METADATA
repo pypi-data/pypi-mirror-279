@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: smcleaner
+Version: 0.1.0b0
+Summary: A tool to remove inappropriate content from your social media accounts.
+License: MIT
+Author: Denis Kazakov
+Author-email: denis@kazakov.ru.net
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Dist: typer[all] (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# social-media-cleaner
+A tool to remove inappropriate content from your social media accounts.
+
+# Installation
+## With pipx (preferred)
+This is a preferred way because pipx isolates each python CLI application:
+```shell
+pipx install smcleaner
+```
+
+## With pip
+Ensure installing for a current user only to avoid system-level troubles:
+```shell
+pip install --user smcleaner
+```
+
+## Completion
+Add it with:
+```shell
+smcleaner --install-completion
+```
+

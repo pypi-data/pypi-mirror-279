@@ -1,0 +1,3 @@
+[console_scripts]
+smcleaner=smcleaner.main:app
+
