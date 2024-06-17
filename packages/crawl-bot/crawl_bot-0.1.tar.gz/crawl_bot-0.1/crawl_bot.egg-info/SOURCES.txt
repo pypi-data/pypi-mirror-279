@@ -1,0 +1,15 @@
+README.md
+setup.py
+crawl_bot/__init__.py
+crawl_bot/items.py
+crawl_bot/middlewares.py
+crawl_bot/pipelines.py
+crawl_bot/settings.py
+crawl_bot.egg-info/PKG-INFO
+crawl_bot.egg-info/SOURCES.txt
+crawl_bot.egg-info/dependency_links.txt
+crawl_bot.egg-info/entry_points.txt
+crawl_bot.egg-info/requires.txt
+crawl_bot.egg-info/top_level.txt
+crawl_bot/spiders/__init__.py
+crawl_bot/spiders/basic_spider.py
