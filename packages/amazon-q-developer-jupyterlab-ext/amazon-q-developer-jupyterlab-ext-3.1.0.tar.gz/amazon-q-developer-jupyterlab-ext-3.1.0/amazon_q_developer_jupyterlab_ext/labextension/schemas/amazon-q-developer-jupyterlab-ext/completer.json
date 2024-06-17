@@ -1,0 +1,51 @@
+{
+  "jupyter.lab.setting-icon": "codewhisperer:logo",
+  "jupyter.lab.setting-icon-label": "Amazon Q Developer",
+  "title": "Amazon Q Developer",
+  "description": "Settings for Amazon Q Developer.",
+  "properties": {
+    "shareCodeWhispererContentWithAWS": {
+      "type": "boolean",
+      "title": "Share content with Amazon Q Developer",
+      "description": "When checked, your content processed by Q Developer may be used for service improvement. Unchecking this box will cause AWS to delete any of your content used for that purpose. The information used to provide the Q Developer service to you will not be affected.",
+      "default": true
+    },
+    "suggestionsWithCodeReferences": {
+      "type": "boolean",
+      "title": "Enable suggestions with code references",
+      "description": "When checked, Amazon Q Developer will include suggestions with code references.",
+      "default": true
+    },
+    "codeWhispererTelemetry": {
+      "type": "boolean",
+      "title": "Share usage data with Amazon Q Developer",
+      "description": "Enable Amazon Q Developer to send usage data to AWS.",
+      "default": true
+    },
+    "codeWhispererLogLevel": {
+      "title": "Amazon Q Developer Log level",
+      "description": "Amazon Q Developer extension's console log level (changes reflected on page refresh)",
+      "default": "ERROR",
+      "enum": ["ERROR","WARN","INFO","DEBUG"]
+    }
+  },
+  "jupyter.lab.shortcuts": [
+    {
+      "command": "codewhisperer:invoke-inline",
+      "keys": ["Alt C"],
+      "selector": ".jp-Document"
+    },
+    {
+      "command": "codewhisperer:reject-inline",
+      "keys": ["Escape"],
+      "selector": ".jp-Document .jp-mod-inlinecompleter-active"
+    },
+    {
+      "command": "codewhisperer:accept-inline",
+      "keys": ["Tab"],
+      "selector": ".jp-Document .jp-Editor.jp-mod-inlinecompleter-active.jp-mod-inlinecompleter-active"
+    }
+],
+  "additionalProperties": false,
+  "type": "object"
+}
