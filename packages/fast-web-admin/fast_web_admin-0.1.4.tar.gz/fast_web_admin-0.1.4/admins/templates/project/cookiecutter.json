@@ -1,0 +1,4 @@
+{
+  "project_name": "{{cookiecutter.project_name}}",
+  "secret_key": "{{cookiecutter.secret_key}}"
+}

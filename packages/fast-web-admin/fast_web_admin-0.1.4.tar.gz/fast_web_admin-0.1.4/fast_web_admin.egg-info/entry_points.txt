@@ -1,0 +1,2 @@
+[console_scripts]
+fastapi-admin = admins.commands:main
