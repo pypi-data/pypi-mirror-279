@@ -1,0 +1,13 @@
+megakit/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+megakit/color_operations.py,sha256=lGalHmKy0fE4cnZSNXZIUJq5vFAGerip4wXMs8FNWZY,1088
+megakit/file_operations.py,sha256=36-j_x_OMjUlyT1hzP-LJ9UdaEVb-uaIUbK6PtlC4YE,5408
+megakit/image_operations.py,sha256=FcoTJ8hizSLPIoDbEJSK9U-f619x6FvwYCrJRHv0u5A,3597
+megakit/list_operations.py,sha256=nL4nL7srltW_qfRv4IdWgegvMh22FYXI6DoodUrRm88,1007
+megakit/random_data_operations.py,sha256=QnresWV7dIKd1jaqfVy0RtYCucFL5-ftA3g1J5F6WE4,1792
+megakit/string_operations.py,sha256=Yr04zDkoG5RKTzPqyvIQZ8TuvPEr2btTKG5qi5zUSgw,1696
+megakit/system_operations.py,sha256=600Rxno2fpaypcai86CQpQYlDOVsmQWjBmvLOyD2vfg,1067
+megakit/time_operations.py,sha256=_p4W8jigTGc1gb_84Z0okVxCQGoCUbI4MYyhs7R_2Qo,1960
+megakit-0.0.3.dist-info/METADATA,sha256=T62iP1hw1knl3yFV5bEygzPKfLHQBkofB-TWjOd-GRk,3638
+megakit-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+megakit-0.0.3.dist-info/top_level.txt,sha256=1jgRo3ltrUuG9XDOPGScuIYbcUx7vtoGvwXb6vgv8GM,8
+megakit-0.0.3.dist-info/RECORD,,
