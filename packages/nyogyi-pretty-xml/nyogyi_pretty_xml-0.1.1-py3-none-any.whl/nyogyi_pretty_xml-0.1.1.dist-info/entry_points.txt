@@ -1,0 +1,3 @@
+[console_scripts]
+nyogyi-pretty-xml = nyogyi_pretty_xml.nyogyi_pretty_xml:main
+
