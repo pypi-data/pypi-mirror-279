@@ -1,0 +1,10 @@
+librivox/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+librivox/entities.py,sha256=5lZNV_1GQ8t0VGZNE4N_FOvIqDfZc2RiVhR6wToAzfE,4382
+librivox/librivox.py,sha256=FDYXDoM_h_9NLJBE5ft-FSbux6jtSLTelvrlqtwev8Q,4745
+librivox/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+librivox/typing.py,sha256=BzoF9jofoTxFX3tLF0wufJJJOpIgSEF7LtEPlqoJivM,1038
+librivox-0.1.dist-info/METADATA,sha256=nwv1PI2C0xACgQVieMbacjBx5vzUEuttb6aWB3XBnkY,1522
+librivox-0.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+librivox-0.1.dist-info/licenses/LICENSES/AGPL-3.0-or-later.md,sha256=ADUqsZhl4juwq34PRTMiBqumpm11s_PMli_dZQjWPqQ,34260
+librivox-0.1.dist-info/licenses/LICENSES/CC0-1.0.txt,sha256=Nv_Z3AhdUpp-YOEnbXOuWgMLAgMT5sVAhZOmrirzlnM,6555
+librivox-0.1.dist-info/RECORD,,
