@@ -1,0 +1,37 @@
+[[GIT REVISION SELECTORS]]  #[ es7s/core | git revision selectors syntax ]
+
+<rev>
+    Include commits that are reachable from <rev> (i.e. its ancestors).
+
+^<rev>
+    Exclude commits that are reachable from <rev> (i.e. its ancestors).
+
+<rev1>..<rev2>
+    Include commits that are reachable from <rev2> but exclude those that are reachable from <rev1>.
+    When either <rev1> or <rev2> is omitted, it defaults to HEAD.
+
+<rev1>...<rev2>
+    Include commits that are reachable from either <rev1> or <rev2> but exclude those that are
+    reachable from both. When either <rev1> or <rev2> is omitted, it defaults to HEAD.
+
+<rev>^@  e.g. HEAD^@
+    A suffix ^ followed by an at sign is the same as listing all parents of <rev> (meaning, include
+    anything reachable from its parents, but not the commit itself).
+
+<rev>^!  e.g. HEAD^!
+    A suffix ^ followed by an exclamation mark is the same as giving commit <rev> and then all its
+    parents prefixed with ^ to exclude them and their ancestors.
+
+<rev>^-<n>  e.g. HEAD^-, HEAD^-2
+    Equivalent to <rev>^<n>..<rev>, with <n> = 1 if not given.
+ 
+
+\[\[(.+)\]\][38;5;231;1m\1[39;22m    
+(<)(rev\d?)(>)(,?)?[32m\1[92m\2[32m\3[90m\4[39m
+(<)(n)(>)(,?)?[34m\1[94m\2[34m\3[90m\4[39m
+\b(HEAD)\b[33m\1[39m
+(\^)(?:(?:(@)|(!)|(-)(\d*))?)(,?)?[35;1m\1[95;1m\2\3\4[22;34m\5[90m\6[39m
+(?<!\.)(\.{2})(?!\.)[33m\1[39m
+(\.{3})[93m\1[39m
+(e.g.)[90m\1[39m
+(\(i\.e\..+\)\.?)[90m\1[39m

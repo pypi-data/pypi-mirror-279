@@ -1,0 +1,31 @@
+# raw text files, processed by TemplateCommand
+# - sectsize: int|None
+# - gap: int|None
+# - rows_first: bool
+
+es7s.cli.exec_.print.charset_cyr:
+  help: "Some old cyrillic code page tables."
+  gap: 2
+  sectsize: 20
+
+es7s.cli.exec_.fan:
+  help: "&frequently &accessed &notes"
+
+es7s.cli.exec_.fan.py-decorators:
+  help: "decorator and wrappers examples"
+  #gap: 999   # single column  @FIXME
+
+es7s.cli.exec_.print.printscr:
+  help: "Ubuntu print screen modifiers."
+
+es7s.cli.exec_.print.shell-param-exp:
+  help: "Shell parameter expansion cheatsheet."
+
+#es7s.cli.print.unicode.extras:
+#  help: "WIP"
+
+es7s.cli.exec_.unicode.categories:
+  help: "Unicode codepoints general categories."
+
+es7s.cli.exec_.unicode.chars:
+  help: "Pragmatapro all chars."

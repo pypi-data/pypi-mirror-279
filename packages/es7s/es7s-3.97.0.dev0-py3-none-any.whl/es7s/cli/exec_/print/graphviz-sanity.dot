@@ -1,0 +1,72 @@
+digraph G {
+    label="graphviz layout (in)sanity check"
+    // size="19,10"
+    // ratio=expand  # =fill
+    nodesep=.5
+    margin=1
+    pad=1
+    bgcolor="#eaeaeaff";
+    fontname="Tex Gyre Schola"
+    fontsize=32
+    // outputorder=nodesfirst
+    
+    node[shape=circle style="filled" width=1 fixedsize=0
+         fillcolor="white" fontname="ElementaCyr-Bold" fontsize=64];
+    edge[penwidth=2 arrowsize=2]
+    
+    // layout=dot 
+    // ranksep=.5
+    // concentrate = true
+    // // compound = true
+    // pack = true
+    // packmode = array_lb
+    // splines = ortho
+    // // subgraph cluster_mf4k {
+    // //   newrank=1
+    // //   rank=same
+    // //   mf4k mf4k_tor
+    // // }
+    // // { edge[penwidth=1 arrowsize=2] node[width=2 height=2] { node[shape=triangle orientation=30] ə Ф Г A Θ Δ }
+    // //   subgraph cluster_g { label="OУ1" node[sortv=88]; { Г } -> { ə γ1 γ2 γ3 } -> {Δ Ф} }
+    // //   subgraph cluster_a { label="OУ2" node[sortv=10]; { A } -> { α1 Ф α2 α3 } -> { Г } } 
+    // //   subgraph cluster_t { label="Clustering example" node[sortv=98]; {ə Θ} -> { θ1 θ2 Г θ3 } -> { A } } 
+    // //   subgraph cluster_d { label="OУМАЙ" node[sortv=28]; { Δ } -> { δ1 δ2 δ3 А } -> { Θ } } 
+    // // }
+    
+    // layout=neato 
+    // scale = 4
+    // normalize = true
+    
+    // layout=fdp
+    // normalize = true
+    // K=7  
+    
+    // layout = sfdp
+    // scale = 4
+    // normalize = true
+    // K=1
+    
+    // layout = circo
+    // normalize = true
+    // scale = 3
+    
+    // layout = twopi
+    // ranksep = 5
+    
+    // layout = osage
+    // pack = 2
+    // packmode = array_c2
+    // node[width=4]
+    
+    // layout = patchwork
+    // node[fontsize=12];
+    
+        {  KOI[label="🪆\nKOI8-R"] }   -> {     CP8 ISO WIN1 WIN2 } [color=red];
+        {  CP8[label="💾"] }   -> { KOI     ISO WIN1 WIN2 } [color=blue];
+        {  ISO[label="🫑" ] }  -> { KOI CP8     WIN1 WIN2 } [color=green];
+        { WIN1[label="🏴‍☠"] } -> { KOI CP8 ISO      WIN2 } [color=black];
+        {  UTF[label="🍊"] }   -> { KOI CP8 ISO WIN1 WIN2 } [color=orange];
+        { UTF16[label="💮"] }  -> {     CP8               } [color=lightpink minlen=3];
+        { WIN2[label="🪟"] };
+
+}

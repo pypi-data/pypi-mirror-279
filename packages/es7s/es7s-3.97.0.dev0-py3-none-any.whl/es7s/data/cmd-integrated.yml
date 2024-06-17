@@ -1,0 +1,9 @@
+# shell scripts included into es7s/core
+# ----------------------------------------------------------------
+# if short_help is empty, autodiscovery class reads executable
+# file header and searches for line CONTAINING '# es7s/core | ...'
+# or '#[ es7s/core | ... ]'
+# ----------------------------------------------------------------
+
+# es7s.cli.exec_.print.pythons:
+#   short_help: ''

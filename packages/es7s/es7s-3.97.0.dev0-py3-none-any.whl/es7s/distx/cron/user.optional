@@ -1,0 +1,17 @@
+#-------------------------------------------------------------------------------
+# es7s/core cron[user.optional]
+# (c) 2023 A. Shavykin <0.delameter@gmail.com>
+#-------------------------------------------------------------------------------
+#  m h  dom mon dow   command
+
+# every 5:13 AM
+    13 5  * * *   /home/a.shavykin/bin/key-backup
+
+# every 5:17 AM
+    17 5  * * *   /home/a.shavykin/bin/nalog-backup
+
+# every midnight
+     0 0  * * *   pkill -f "es7s monitor"
+
+# every minute
+     * *  * * *   xmodmap /home/a.shavykin/.xmodmaprc

@@ -1,0 +1,70 @@
+[[VARIADIC FUNCTIONS]]
+ py| def vari_python(f: float=.505, *lens: int) -> bool:
+ py|   for l in (lens or [16]):
+ py|     print(f"%.{l}f" % f)
+ py|   return True
+ py| if __name__ == '__main__':
+ py|   vari_python()
+
+ go| func vari_golang(x float64, lens ...int) bool {
+ go|     if len(lens) < 1 { lens = append(lens, 16) }
+ go|     for _, l := range lens {
+ go|         fmt.Printf(fmt.Sprintf("%%.%df", l), x)
+ go|     }
+ go|     return true;
+ go| }
+ go| func main() {
+ go|     vari_golang(.505)
+ go| }
+   
+php| function vari_php(float $x=.505, int ...$lens): bool {
+php|   if (empty($lens)) { $lens = [16]; }
+php|   foreach ($lens as $l) {
+php|     printf("%.${l}f", $x);
+php|   }
+php|   return true;
+php| }
+php| vari_php();
+
+ sh| function vari_shell {
+ sh|   local x="${1:?}" && shift
+ sh|   for l in "${@:-16}" ; do
+ sh|     printf "%.${l}f\n" "$x"
+ sh|   done
+ sh| }
+ sh| vari_shell "$@"
+
+ js| function vari_js(x=.505, ...lens) {
+ js|   for (l of (lens || [16])) {
+ js|     console.log(`${x}`.substring(2+l, 0))
+ js|   }
+ js|   return true;
+ js| }
+ js| vari_js();
+
+  c| int vari_c(int arg1, ...)
+  c| {
+  c|    va_list ap;
+  c|    int i;
+  c|    va_start(ap, arg1);
+  c|    for (i = arg1; i >= 0; i = va_arg(ap, int))
+  c|        printf("%d\n", i);
+  c|    va_end(ap);
+  c|    return 0;
+  c| }
+  c| int main(void) {
+  c|     vari_c(1, 2, 8);
+  c|     return 0;
+  c| }
+
+
+
+((\w| ){2}\w)\|     ﻿\1┃[39m
+(\s|^)\[\[(.+?)\]\] [38;5;231;1m\2[39;22m    
+﻿( *py)        [38;2;53;114;165m\1
+﻿( *go)        [38;2;0;173;216m\1
+﻿( *php)       [38;2;79;93;149m\1
+﻿( *sh)        [38;2;137;224;81m\1
+﻿( *js)        [38;2;241;224;90m\1
+﻿( *c)         [38;2;127;127;127m\1
+﻿( *\w*)       \1

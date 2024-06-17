@@ -1,0 +1,13 @@
+#!/usr/bin/xdotool
+
+search --limit 1 --sync --class chrome
+windowraise %1
+
+click --window %1 3 sleep .2
+key --window %1 --delay .1 y 
+key --window %1 --delay .1 f
+
+search --onlyvisible --sync --class telegram
+windowraise %1
+
+key --window %1 ctrl+v

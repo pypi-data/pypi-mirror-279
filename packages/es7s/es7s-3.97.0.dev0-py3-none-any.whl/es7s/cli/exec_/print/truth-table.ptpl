@@ -1,0 +1,65 @@
+[[SENTENTIAL OPERATOR TRUTH TABLES]]
+
+  p | q | F⁰	NOR¹	↚²	¬p³	NIMPLY⁴	¬q⁵	XOR⁶	NAND⁷	AND⁸	XNOR⁹	q¹⁰	IMPLY¹¹	p¹²	←¹³	OR¹⁴	T¹⁵	 
+ -  +-  ----	--	---	-------	---	----	-----	----	-----	---	-------	---	---	---	---	 
+ [T]|[T]| [F]	[F]	[F]	[F]	[F]	[F]	[F]	[F]	[T]	[T]	[T]	[T]	[T]	[T]	[T]	[T]	 
+ [T]|[F]| [F]	[F]	[F]	[F]	[T]	[T]	[T]	[T]	[F]	[F]	[F]	[F]	[T]	[T]	[T]	[T]	 
+ [F]|[T]| [F]	[F]	[T]	[T]	[F]	[F]	[T]	[T]	[F]	[F]	[T]	[T]	[F]	[F]	[T]	[T]	 
+ [F]|[F]| [F]	[T]	[F]	[T]	[F]	[T]	[F]	[T]	[F]	[T]	[F]	[T]	[F]	[T]	[F]	[T]	 
+ -------+---	----	--	---	-------	---	----	-----	----	-----	---	-------	---	---	---	---	 
+  Com	| +	+	.	.	.	.	+	+	+	+	.	.	.	.	+	+	 
+  Assoc	| +	.	.	.	.	.	+	.	+	+	+	.	+	.	+	+	 
+  Adj	| F⁰	NOR¹	↛⁴	¬q⁵	NIMPLY²	¬p³	XOR⁶	NAND⁷	AND⁸	XNOR⁹	p¹²	IMPLY¹³	q¹⁰	→¹¹	OR¹⁴	T¹⁵	 
+  Neg	| T¹⁵	OR¹⁴	←¹³	p¹²	IMPLY¹¹	q¹⁰	XNOR⁹	AND⁸	NAND⁷	XOR⁶	¬q⁵	NIMPLY⁴	¬p³	↚²	NOR¹	F⁰	 
+  Dual	| T¹⁵	NAND⁷	→¹¹	¬p³	←¹³	¬q⁵	XNOR⁹	NOR¹	OR¹⁴	XOR⁶	q¹⁰	↚²	p¹²	↛⁴	AND⁸	F⁰	 
+  L id	| .	.	[F]	.	.	.	[F]	.	[T]	[T]	T,F	[T]	.	.	[F]	.	 
+  R id	| .	.	.	.	[F]	.	[F]	.	[T]	[T]	.	.	T,F	[T]	[F]	.	 
+
+ * [T] = true, [F] = false;
+ * The superscripts ⁰ to ¹⁵ is the number resulting from reading the four bools as 4-bit integer;
+ * The Com row indicates whether an operator, op, is commutative: P op Q = Q op P;
+ * The Assoc row indicates whether op is associative: (P op Q) op R = P op (Q op R);
+ * The Adj row shows op2 such that P op Q = Q op2 P;
+ * The Neg row shows op2 such that P op Q = ¬(P op2 Q);
+ * The Dual row shows the dual operation obtained by interchanging [T] with [F], and AND with OR;
+ * The L id row shows the operator's left identities if it has any values I such that I op Q = Q;
+ * The R id row shows the operator's right identities if it has any values I such that P op I = P.
+
+[[WITTGENSTEIN TABLE]]
+
+    Truthvalues			Operator		Operation name			Tractatus	 
+    --------	-	- -------	- -------------	- ---------	--	--	--	--	--- ---	 
+  ⁰ ([F][F][F][F])(p, q)	⊥	false		Contradiction			p and not p; and q and not q
+  ¹ ([F][F][F][T])(p, q)	NOR	p ↓ q		Logical NOR			neither p nor q
+  ² ([F][F][T][F])(p, q)	↚	p ↚ q		Converse nonimplication		q and not p
+  ³ ([F][F][T][T])(p, q)	¬p, ~p	¬p		Negation			not p
+  ⁴ ([F][T][F][F])(p, q)	↛	p ↛ q		Material nonimplication		p and not q
+  ⁵ ([F][T][F][T])(p, q)	¬q, ~q	¬q		Negation			not q
+  ⁶ ([F][T][T][F])(p, q)	XOR	p ⊕ q		Exclusive disjunction		p or q, but not both
+  ⁷ ([F][T][T][T])(p, q)	NAND	p ↑ q		Logical NAND			not both p and q
+  ⁸ ([T][F][F][F])(p, q)	AND	p ∧ q		Logical conjunction		p and q
+  ⁹ ([T][F][F][T])(p, q)	XNOR	p iff q		Logical biconditional		if p then q; and if q then p
+ ¹⁰ ([T][F][T][F])(p, q)	q	q		Projection function		q
+ ¹¹ ([T][F][T][T])(p, q)	p → q	if p then q	Material implication		if p then q
+ ¹² ([T][T][F][F])(p, q)	p	p		Projection function		p
+ ¹³ ([T][T][F][T])(p, q)	p ← q	if q then p	Converse implication		if q then p
+ ¹⁴ ([T][T][T][F])(p, q)	OR	p ∨ q		Logical disjunction		p or q
+ ¹⁵ ([T][T][T][T])(p, q)	⊤	true		Tautology			if p then p; and if q then q
+
+
+
+\[\[(.+)\]\][38;5;231;1m\1[39;22m    
+(Com|Assoc|Adj|Neg\b|Dual|L id|R id)[1;3;97m\1[22;23;39m
+\|\-\t|[9m\t[29m
+\-+(\t| +)[9m \t[29m
+T,F[32;48;5;22mT[39;49m,[31;48;5;52mF[39;49m
+(\[)?(F)(\]|(⁰))[31;48;5;52m \2\4[39;49m
+(\[)?(T)(\]|(¹⁵))[32;48;5;22m \2\4[39;49m
+([FT])\1 
+([^FT]+)\1 
+(?<=\s)(\+)(?=\s)[92m \1 [39m
+(?<=\s)(\.)(?=\s)[90m - [39m
+\b([pqPQI](?:\b|[⁰¹²³⁴⁵⁶⁷⁸⁹])|R(?! id))[34m\1[39m
+\b(op)\b[33m\1[39m
+\b(op2)\b[93m\1[39m
+([⁰¹²³⁴⁵⁶⁷⁸⁹]+)[93m\1[39m
