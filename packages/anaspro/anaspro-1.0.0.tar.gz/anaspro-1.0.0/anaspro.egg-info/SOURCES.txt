@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+anaspro/__init__.py
+anaspro/generator.py
+anaspro.egg-info/PKG-INFO
+anaspro.egg-info/SOURCES.txt
+anaspro.egg-info/dependency_links.txt
+anaspro.egg-info/requires.txt
+anaspro.egg-info/top_level.txt
+anaspro/data/countries.json

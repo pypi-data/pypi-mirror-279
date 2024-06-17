@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: anaspro
+Version: 1.0.0
+Summary: A library to generate random user data
+Home-page: https://github.com/xxxxx/anaspro
+Author: Anas Pro
+Author-email: anaspro@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# anaspro
+
+anaspro is a Python library for generating random user data. It uses Faker to generate usernames, passwords, emails, and phone numbers with country codes based on provided JSON data.
+
+## Installation
+
+You can install anaspro using pip:
+
+```bash
+pip install anaspro
+
