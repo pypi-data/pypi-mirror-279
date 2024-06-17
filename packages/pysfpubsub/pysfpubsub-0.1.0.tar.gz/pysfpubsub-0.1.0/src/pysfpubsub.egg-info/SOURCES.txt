@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/pysfpubsub/__init__.py
+src/pysfpubsub/pubsub.py
+src/pysfpubsub/pubsub_api_pb2.py
+src/pysfpubsub/pubsub_api_pb2_grpc.py
+src/pysfpubsub.egg-info/PKG-INFO
+src/pysfpubsub.egg-info/SOURCES.txt
+src/pysfpubsub.egg-info/dependency_links.txt
+src/pysfpubsub.egg-info/top_level.txt
