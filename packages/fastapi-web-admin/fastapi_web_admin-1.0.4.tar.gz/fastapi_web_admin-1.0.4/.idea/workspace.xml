@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0fc6e068-74eb-4237-bf29-0b891f214591" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/admins/templates/app/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admins/templates/project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/static/imgs/FastAPI.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MANIFEST.in" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.in" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/alembic/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/alembic/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/alembic/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2hxd1gqGxS8kL21xR5j7lNLwekh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/hlh/Desktop/worksp/fast-admin/fastapi-admin/admins/templates/project/{{cookiecutter.project_name}}/static/imgs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admins/templates/project/{{cookiecutter.project_name}}/static/imgs" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/fastapi-admin/templates/app" />
+      <recent name="$PROJECT_DIR$/fastapi-admin/templates/project" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admins" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="fastapi-admin" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0fc6e068-74eb-4237-bf29-0b891f214591" name="Changes" comment="" />
+      <created>1717328227329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717328227329</updated>
+      <workItem from="1717328228356" duration="35000" />
+      <workItem from="1718539450657" duration="5527000" />
+      <workItem from="1718545379234" duration="6169000" />
+      <workItem from="1718577176909" duration="1685000" />
+      <workItem from="1718579003364" duration="192000" />
+      <workItem from="1718579265487" duration="2277000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
