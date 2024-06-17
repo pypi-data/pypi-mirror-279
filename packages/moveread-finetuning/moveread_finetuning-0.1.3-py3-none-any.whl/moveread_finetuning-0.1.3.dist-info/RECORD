@@ -1,0 +1,14 @@
+moveread/finetuning/__init__.py,sha256=qZa6fr0XZhYqWeW4UB2q6bzprpqq9tUPRyXrB9qIOK8,176
+moveread/finetuning/__init__.pyi,sha256=K37jGUGzjNl19wgIUZC5tLiCrpUPWRXfAbPJpYDc95Q,111
+moveread/finetuning/cli.py,sha256=E09lRR0IBEBGOOFqDiCTG7yPf-HWPCemP49sa27muxI,970
+moveread/finetuning/data.py,sha256=KWoXzdQgG08396h6zBms2LiY8M3A0Ft_gRRA2YXpouM,576
+moveread/finetuning/hparams.py,sha256=BHQFIldnl4i6Ej6wk80BaIyuqqzWxATCdkZwCNYeAFU,118
+moveread/finetuning/loop.py,sha256=LkHKqSr8Kf7IGnQmzSRUGlWbi-CufCgBoIOxJDS6-oY,1850
+moveread/finetuning/main.py,sha256=YlAMBk9ibiXmIYQoZBu3b24tqyLlOTUxZQyhZKfzCJk,2054
+moveread/finetuning/model.py,sha256=0274LGk7-DGTQdrjlLEFJECAm0b9GdeztBx1GWpc1IU,423
+moveread/finetuning/steps.py,sha256=vki-k53qdfsz1bDm9Ipi-7ZfptrFdQwHDFi649_Iou0,1558
+moveread_finetuning-0.1.3.dist-info/METADATA,sha256=064fAf4iYl60nd73uaNYhpiHM2bsbb2dXeSPyKDqH2Y,629
+moveread_finetuning-0.1.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_finetuning-0.1.3.dist-info/entry_points.txt,sha256=3268ErP0V5RGY6acnrlQJmEKPj4sXXol_BvWjLNx_1k,67
+moveread_finetuning-0.1.3.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_finetuning-0.1.3.dist-info/RECORD,,
