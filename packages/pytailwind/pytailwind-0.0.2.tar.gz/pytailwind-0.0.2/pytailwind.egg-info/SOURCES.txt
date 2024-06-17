@@ -1,0 +1,7 @@
+LICENSE.txt
+setup.py
+pytailwind/__init__.py
+pytailwind.egg-info/PKG-INFO
+pytailwind.egg-info/SOURCES.txt
+pytailwind.egg-info/dependency_links.txt
+pytailwind.egg-info/top_level.txt
