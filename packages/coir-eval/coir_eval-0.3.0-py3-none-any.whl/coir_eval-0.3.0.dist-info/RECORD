@@ -1,0 +1,11 @@
+coir/__init__.py,sha256=ClubSg9EMUx5TJJdEVjJDmWxqpp016Crvq8Gz9-wc3g,83
+coir/data_loader.py,sha256=fkOD1kxjlHIbYy36MKvotOBhz31qIiabUIz2BhJRWyA,3249
+coir/evaluation.py,sha256=7t5doCYt0oJdHom9qavwPPglpPC-kyEwxl8VV2J8RmA,1447
+coir/models.py,sha256=XT_9_HrhWv5tNpbMHpR0RdyF1kZ6GCY6_6i0_Y05gxw,2509
+coir/utils.py,sha256=jpKljqHVbWmbJ5C7BECcYO46WbaAn5obEfoZmHWFAQo,198
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_evaluation.py,sha256=3sjrnwVSIZH1CnJokfpMqzSefWCuw2UhZoPoHovwxQU,969
+coir_eval-0.3.0.dist-info/METADATA,sha256=g5sY-VF2AY5h1j7295-788UHcM6Oa3UPU3ukDU33fCo,780
+coir_eval-0.3.0.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+coir_eval-0.3.0.dist-info/top_level.txt,sha256=zOZiCUJJLZXT1JAy44EM6-oow2iO-jBUkVsylkewtbs,5
+coir_eval-0.3.0.dist-info/RECORD,,
