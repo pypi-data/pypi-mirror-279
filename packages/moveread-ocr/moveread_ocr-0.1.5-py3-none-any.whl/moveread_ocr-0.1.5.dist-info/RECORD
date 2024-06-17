@@ -1,0 +1,13 @@
+moveread_ocr/__init__.py,sha256=hpAK6yuX3BnzSfl-EhxKHn7KqYM71m2nuxFogg0c_3s,156
+moveread_ocr/__init__.pyi,sha256=QzX2CrJtL9frAVssl_UOSF0qT_UbkTCYUVj0-S2StFw,642
+moveread_ocr/data.py,sha256=lVrmnNnN-ue95G0p33oWzvlwKC5nTM8XacJIQoJvOuo,1738
+moveread_ocr/model.py,sha256=bXQqRt9g36Q5tuLSYx5TmhSbb1J4tQGszLprIbsNotI,5123
+moveread_ocr/postprocess.py,sha256=8DPzrgl4ZwNdOS4XXUSxNrnanaANpEAlCqFTEn__mik,1537
+moveread_ocr/serving.py,sha256=4X9arQ_aDCgL62rWlCAtIzMMEj-VKpXZIsuVdeIdLtU,1810
+moveread_ocr/records/__init__.py,sha256=mtUdUNs46TlkIiPbGvjSS3HGOGEpVTg7JVBRBdOlvEs,73
+moveread_ocr/records/labels.py,sha256=k3va1FJHxewBLidsTk1oeBU_gwLAntERttZurP2hPhw,696
+moveread_ocr/records/schema.py,sha256=tHL_qcr34qFGWM-AuTWkOPg-etiiwc6j1AoVkZjJNuQ,102
+moveread_ocr-0.1.5.dist-info/METADATA,sha256=_iG4bMF6P3IGYpLo6lLkzyM2PrV96lyEs0uCZ_zjkPY,423
+moveread_ocr-0.1.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_ocr-0.1.5.dist-info/top_level.txt,sha256=EHDkbnuJFsB138U5dYBI0HoeJzgmBTZPTe9-fWCpgA8,13
+moveread_ocr-0.1.5.dist-info/RECORD,,
