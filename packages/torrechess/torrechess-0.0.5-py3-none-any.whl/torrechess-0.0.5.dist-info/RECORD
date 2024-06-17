@@ -1,0 +1,9 @@
+torrechess/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+torrechess/heuristic_engines.py,sha256=0-OMbEW_qar_3ttSaIXplR50VDYh8fl_TGwQLxpyXBc,3778
+torrechess/neural_engines.py,sha256=4giDvZp05mh1biMZPGHkJA_JSBniJMVfwVbOw2YmdtY,6507
+torrechess/utils.py,sha256=cUYwG-GfKrFBhAcLvSr_1WGw_gSX_u0qaNm93OcQt4M,42624
+torrechess-0.0.5.dist-info/LICENSE,sha256=CqnsbvgAi-3u9C3g2M7l1l71A7PW2EA52w0UqdCF5CU,1098
+torrechess-0.0.5.dist-info/METADATA,sha256=23vzKJgPK2evGdJKxygB_BYeH8lPQDkC0d0rCx6WTfw,660
+torrechess-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+torrechess-0.0.5.dist-info/top_level.txt,sha256=0mlsYUmFfJO8TbpjvaXoLfYd0pxl6jGd0hsgLJOHpGM,11
+torrechess-0.0.5.dist-info/RECORD,,
