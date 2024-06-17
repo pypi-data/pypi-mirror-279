@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+FanFAIR.egg-info/PKG-INFO
+FanFAIR.egg-info/SOURCES.txt
+FanFAIR.egg-info/dependency_links.txt
+FanFAIR.egg-info/requires.txt
+FanFAIR.egg-info/top_level.txt
+fanfair/__init__.py
+fanfair/fanfair.py
