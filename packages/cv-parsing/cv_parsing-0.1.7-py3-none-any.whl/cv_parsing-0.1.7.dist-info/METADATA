@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: cv_parsing
+Version: 0.1.7
+Summary: NLP Application to parse RH Curriculum Vitae for the RH department
+Author-email: Rúben Almeida <ruben.almeida@innovpoint.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pytest >=8.1.1
+Requires-Dist: pypdf >=4.2.0
+Requires-Dist: datasets >=2.19.0
+Requires-Dist: huggingface-hub >=0.23.0
+Requires-Dist: evaluate >=0.4.2
+Requires-Dist: rouge-score >=0.1.2
+Requires-Dist: openai >=1.25.1
+Requires-Dist: environs >=11.0.0
+Requires-Dist: plotly >=5.22.0
+Requires-Dist: json-repair >=0.18.0
+Requires-Dist: ollama >=0.2.0
+Requires-Dist: clean-text[gpl] >=0.6.0
+Requires-Dist: levenshtein >=0.25.1
+
