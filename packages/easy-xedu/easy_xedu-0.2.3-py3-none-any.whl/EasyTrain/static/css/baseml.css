@@ -1,0 +1,4 @@
+
+:root {
+    --background-url: url('{{ url_for('static', filename='assets/x-square.svg', _external=True) }}');
+}
