@@ -1,0 +1,5 @@
+[console_scripts]
+backup-dependencies=poetry_env_test.backup_dependencies:backup_dependencies
+check-project-setup=poetry_env_test.check_project_setup:check_dependencies
+clean-project-setup=poetry_env_test.clean_project_setup:clean_project
+
