@@ -1,0 +1,14 @@
+isagog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isagog/client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isagog/client/kg_client.py,sha256=L-ubO6F1mwa56rO6j74vYwGJ9PO8jxPZsx-0WYIqRgI,14523
+isagog/client/nlp_client.py,sha256=R58tG9pVuzNvXPX71OYgKB2bBUtD5oHOBqU9VoIzCoc,9111
+isagog/generator/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isagog/generator/sparql_generator.py,sha256=bSWpXO644hcZPa1fTI9NW1uqVryG9ZQrcwsh7B7S7RU,6997
+isagog/model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+isagog/model/kg_model.py,sha256=NgSFDLxC3jLyzymrcNtnLOTBu-QVS0jm8jzH3nQCnjk,26840
+isagog/model/kg_query.py,sha256=4xTxcxU1D9acyWO7rmXmNf6RGtETeK_PRutzD0ugKdk,29304
+isagog/model/nlp_model.py,sha256=h6kI1LS4ISJWPTJ34rIhfjNKFHACtsvlPu1u64shgQo,443
+isagog_ai-0.9.6.dist-info/LICENSE,sha256=3ioa59rjq7cRehjv6ruNgEOcnaYkKEtmEyHrZ7gdMHM,577
+isagog_ai-0.9.6.dist-info/METADATA,sha256=Gf8pNZCR9J3iuVMZofUGMr9U9tWGMNuJ-1AlV68lIOQ,750
+isagog_ai-0.9.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+isagog_ai-0.9.6.dist-info/RECORD,,
