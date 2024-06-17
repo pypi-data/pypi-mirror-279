@@ -1,0 +1,406 @@
+a {
+	color: var(--primary);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--primary-hover);
+	text-decoration: underline;
+}
+
+body {
+	color: var(--text);
+	background-color: #222;
+	margin: var(--spacing);
+	font-family: sans serif;
+}
+
+details *:nth-child(2) {
+	margin-top: 5px;
+}
+
+details summary {
+	cursor: pointer;
+}
+
+fieldset {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+fieldset > *:nth-child(2) {
+	margin-top: 0px !important;
+}
+
+form input[type="submit"] {
+	display: block;
+	margin: 0 auto;
+}
+
+legend {
+	background-color: var(--table-background);
+	padding: 5px;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p {
+	line-height: 1em;
+	margin: 0px;
+}
+
+p:not(:first-child) {
+	margin-top: 1em;
+}
+
+p:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+table {
+	border: 1px solid var(--primary);
+	border-radius: 5px;
+	border-spacing: 0px;
+	width: 100%;
+}
+
+table tbody tr:nth-child(even) td {
+	background-color: var(--section-background);
+}
+
+thead td:first-child {
+	border-top-left-radius: 3px;
+}
+
+thead td:last-child {
+	border-top-right-radius: 3px;
+}
+
+tbody tr:last-child td:first-child {
+	border-bottom-left-radius: 5px;
+}
+
+tbody tr:last-child td:last-child {
+	border-bottom-right-radius: 5px;
+}
+
+table td {
+	padding: 5px;
+}
+
+table thead td {
+	background-color: var(--primary);
+	color: var(--background);
+	text-align: center;
+}
+
+table tbody td {
+	background-color: var(--table-background);
+}
+
+textarea {
+	height: calc(5em);
+}
+
+#container {
+	width: 1024px;
+	margin: 0px auto;
+}
+
+#content .title {
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#content .title:not(:first-child) {
+	margin-top: 10px;
+}
+
+#header {
+	display: grid;
+	grid-template-columns: 50px auto 50px;
+	justify-items: center;
+	align-items: center;
+}
+
+#header > * {
+	font-size: 2em;
+}
+
+#header .title-container {
+	text-align: center;
+}
+
+#header .title {
+	font-weight: bold;
+	line-height: 0.75em;
+}
+
+#header .page {
+	font-size: 0.5em;
+}
+
+#menu {
+	padding: 0px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	height: 100%;
+	width: max-content;
+	z-index: 1;
+	font-size: 1.5em;
+	min-width: 300px;
+	overflow-x: auto;
+}
+
+#menu[visible="false"] {
+	visibility: hidden;
+}
+
+#menu > a {
+	margin: var(--spacing);
+	display: block;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#menu > a[active="true"]:not(:hover) {
+	background-color: var(--primary-hover);
+	border-color: transparent;
+}
+
+#menu .menu-head {
+	display: grid;
+	grid-template-columns: auto max-content;
+	margin: var(--spacing);
+}
+
+#menu .menu-head > * {
+	font-weight: bold;
+}
+
+#menu .menu-title {
+	color: var(--primary);
+}
+
+#menu-open {
+	color: var(--background);
+	background: var(--primary);
+	font-size: 38px;
+	line-height: 38px;
+	border: 1px solid var(--primary);
+	border-radius: 5px;
+}
+
+#menu-open:hover {
+	color: var(--primary);
+	background: var(--background);
+}
+
+#menu-open, #menu-close {
+	cursor: pointer;
+}
+
+#menu-open, #menu-close {
+	min-width: 35px;
+	text-align: center;
+}
+
+#notifications {
+	position: fixed;
+	top: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#notifications li {
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+	border-radius: 5px;
+	padding: 5px;;
+	margin-bottom: var(--spacing);
+	animation: show_toast 0.3s ease forwards;
+	display: grid;
+	grid-template-columns: auto max-content;
+	grid-gap: 5px;
+	align-items: center;
+}
+
+#notifications a {
+	font-size: 1.5em;
+	line-height: 1em;
+	text-decoration: none;
+}
+
+#notifications li.hide {
+	animation: hide_toast 0.3s ease forwards;
+}
+
+#footer {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+#footer .version {
+	text-align: right
+}
+
+#add-item {
+	display: grid;
+	grid-template-columns: max-content auto;
+	grid-gap: var(--spacing);
+	margin-top: var(--spacing);
+	margin-bottom: var(--spacing);
+	align-items: center;
+}
+
+.button {
+	background-color: var(--primary);
+	border: 1px solid var(--primary);
+	color: var(--background);
+	border-radius: 5px;
+}
+
+.button:hover {
+	background-color: var(--background);
+	color: var(--primary);
+	text-decoration: None;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: max-content auto;
+}
+
+.data-table td:first-child {
+	width: 100%;
+}
+
+.data-table .date {
+	width: max-content;
+	text-align: right;
+}
+
+.error, .message {
+	text-align: center;
+}
+
+.error{
+	color: var(--error-text) !important;
+	background-color: var(--error-background) !important;
+	border: 1px solid var(--error-border) !important;
+}
+
+.grid-2col {
+	display: grid;
+	grid-template-columns: max-content auto;
+	grid-gap: var(--spacing);
+	margin-bottom: var(--spacing);
+	align-items: center;
+	
+}
+
+.message {
+	color: var(--message-text) !important;
+	background-color: var(--message-background) !important;
+	border: 1px solid var(--message-border) !important;
+}
+
+.section {
+	background-color: var(--section-background);
+	padding: var(--spacing);
+	border: 1px solid var(--border);
+	border-radius: 5px;
+}
+
+.section:not(:first-child) {
+	margin-top: var(--spacing);
+}
+
+.section:not(:last-child) {
+	margin-bottom: var(--spacing);
+}
+
+
+/* config */
+#content.page-config input[type="checkbox"] {
+	justify-self: left;
+}
+
+
+@keyframes show_toast {
+	0% {
+		transform: translateX(100%);
+	}
+
+	40% {
+		transform: translateX(-5%);
+	}
+
+	80% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-10px);
+	}
+}
+
+
+@keyframes hide_toast {
+	0% {
+		transform: translateX(-10px);
+	}
+
+	40% {
+		transform: translateX(0%);
+	}
+
+	80% {
+		transform: translateX(-5%);
+	}
+
+	100% {
+		transform: translateX(calc(100% + 20px));
+	}
+}
+
+
+@media (max-width: 1026px) {
+	body {
+		margin: 0px;
+	}
+
+	#menu {
+		width: 100%;
+	}
+
+	#menu > a {
+		text-align: center;
+	}
+
+	#container {
+		width: unset;
+		margin: unset;
+	}
+
+	.container {
+		grid-template-columns: auto;
+	}
+
+	.content {
+		grid-template-columns: auto;
+	}
+
+	.section {
+		border-left-width: 0px;
+		border-right-width: 0px;
+		border-radius: 0px;
+	}
+}
