@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: drkv_ec2_utils
+Version: 1.2
+Summary: Python module to onboard the EC2 Utils Library
+Home-page: https://github.com/drkv-com/ec2-utils
+Download-URL: https://github.com/drkv-com/ec2-utils/archive/refs/tags/v0.1.0.tar.gz
+Author: drkv - Duesseldorf - Germany
+Author-email: m.kirchhof@drkv.com
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: boto3>=1.28.10
+Requires-Dist: pycryptodome>=3.20.0
