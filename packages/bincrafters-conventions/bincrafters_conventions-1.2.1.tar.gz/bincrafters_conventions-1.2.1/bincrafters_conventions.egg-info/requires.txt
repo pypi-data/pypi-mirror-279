@@ -1,0 +1,8 @@
+requests>=2.22.0
+GitPython>=3.0.4
+conan<2.0.0,>=1.53.0
+
+[test]
+pytest>=5.2.2
+pytest_cov>=2.8.1
+codecov>=2.1.10
