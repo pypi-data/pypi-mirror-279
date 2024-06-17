@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-helldivers
+Version: 1.0.4
+Summary: 为了超级地球！
+License: MIT
+Author: SherkeyXD
+Author-email: 253294679@qq.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: nonebot-plugin-send-anything-anywhere (>=0.6.0,<0.7.0)
+Requires-Dist: nonebot2 (>=2.1.0,<3.0.0)
+Requires-Dist: nonebot_plugin_htmlrender (>=0.3.0,<0.4.0)
+Description-Content-Type: text/markdown
+
+<div align="center">
+
+# nonebot-plugin-helldivers
+
+<img src="https://socialify.git.ci/SherkeyXD/nonebot-plugin-helldivers/image?font=Jost&logo=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fhelldivers_gamepedia%2Fimages%2F8%2F8d%2FSuper_earth.png&name=1&owner=1&pattern=Diagonal%20Stripes&theme=Dark" alt="nonebot-plugin-helldivers" width="640" height="320" />
+
+## For SuperEarth!
+
+</div>
+
+## 这是什么？
+
+[NoneBot2](https://github.com/nonebot/nonebot2) 侧的 Helldivers 2 插件
+
+目前的功能列表：
+
+- 简报：发送当前的最高指令，包括任务的具体内容
+
+## 安装插件
+
+在 Bot 目录下运行如下指令
+
+### 使用 nb-cli 安装（推荐）
+
+```shell
+nb plugin install nonebot-plugin-helldivers
+```
+
+### 使用包管理器安装
+
+```shell
+# pip
+pip install nonebot-plugin-helldivers
+# poetry
+poetry add nonebot-plugin-helldivers
+```
+
+然后检查 `pyproject.toml` 文件中 `[tool.nonebot]` 下的 `plugins` 是否包含 `nonebot_plugin_helldivers`，如果没有则手动添加
+
+## 配置插件
+
+本插件无需配置
+
+## TODO
+
+- [ ] 使用游戏内的指令风格绘制图片，以及进度条显示
+- [ ] 星系地图绘制，包括补给线以及各个星球战况
+- [ ] 各个星球的环境以及条件（等待 API 支持）
+
