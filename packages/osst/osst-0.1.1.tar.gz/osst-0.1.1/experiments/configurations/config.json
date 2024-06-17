@@ -1,0 +1,40 @@
+{
+    "balance": false,
+    "cancellation": true,
+    "look_ahead": true,
+    "similar_support": false,
+    "feature_exchange": false,
+    "continuous_feature_exchange": false,
+    "rule_list": false,
+    "k_cluster": false,
+    "bucketize": false,
+    "number_of_buckets": 0,
+    "diagnostics": true,
+    "verbose": true,
+  
+    "regularization": 0.01,
+    "uncertainty_tolerance": 0.0,
+    "upperbound": 0.0,
+    "depth_budget": 5,
+    "minimum_captured_points": 7,
+
+    "model_limit": 100,
+    "precision_limit": 0,
+    "stack_limit": 0,
+    "tile_limit": 0,
+    "time_limit": 0,
+    "worker_limit": 1,
+  
+    "costs": "",
+    "model": "",
+    "profile": "",
+    "timing": "",
+    "trace": "",
+    "tree": "",
+    "datatset_encoding": "",
+
+    "metric": "L2",
+    "weights": [],
+    "warm_LB": false,
+    "path_to_labels": ""
+  }
