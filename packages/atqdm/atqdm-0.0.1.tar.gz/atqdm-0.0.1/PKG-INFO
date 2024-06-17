@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: atqdm
+Version: 0.0.1
+Summary: Tqdm replacement for Comet / W&B reporting
+Author-email: Sergey Skrebnev <sergey.skrebnev@gmail.com>
+Project-URL: Homepage, https://github.com/skrbnv/atqdm
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+### Simple alternative to TQDM for Comet & W&B
+Replaces progressbar with sequential output
+
+To use, replace 
+`from tqdm import tqdm`
+with
+`from atqdm import tqdm`
+
+Supports two basic methods similar to tqdm:
+- set_descripion_str
+- set_postfix_str
+
+AS IS. I'm tired downloading 50Mb logs from Comet/W&B so I cooked this one.

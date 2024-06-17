@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+src/atqdm/__init__.py
+src/atqdm.egg-info/PKG-INFO
+src/atqdm.egg-info/SOURCES.txt
+src/atqdm.egg-info/dependency_links.txt
+src/atqdm.egg-info/top_level.txt
