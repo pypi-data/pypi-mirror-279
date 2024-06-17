@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: kbp2video
+Version: 0.1.9
+License-File: LICENSE
+Requires-Dist: PySide6-Essentials<6.7
+Requires-Dist: ffmpeg-python
+Requires-Dist: kbputils>=0.0.9
+Requires-Dist: lastversion
