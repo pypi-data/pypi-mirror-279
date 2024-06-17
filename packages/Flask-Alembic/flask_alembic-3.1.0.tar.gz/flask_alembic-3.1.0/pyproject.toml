@@ -1,0 +1,78 @@
+[project]
+name = "Flask-Alembic"
+version = "3.1.0"
+description = "Integrate Alembic with Flask."
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+authors = [{ name = "David Lord" }]
+maintainers = [{ name = "Pallets", email = "contact@palletsprojects.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Flask",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Typing :: Typed",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "alembic>=1.13",
+    "flask>=3.0",
+    "sqlalchemy>=2.0",
+]
+
+[project.urls]
+Donate = "https://palletsprojects.com/donate"
+Documentation = "https://flask-alembic.readthedocs.io"
+Changes = "https://flask-alembic.readthedocs.io/page/changes/"
+Source = "https://github.com/pallets-eco/flask-alembic/"
+Chat = "https://discord.gg/pallets"
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "flask_alembic"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+branch = true
+source = ["flask_alembic", "tests"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.mypy]
+python_version = "3.9"
+files = ["src/flask_alembic", "tests"]
+show_error_codes = true
+pretty = true
+strict = true
+
+[tool.pyright]
+pythonVersion = "3.9"
+include = ["src/flask_alembic", "tests"]
+typeCheckingMode = "basic"
+
+[tool.ruff]
+src = ["src"]
+fix = true
+show-fixes = true
+output-format = "full"
+
+[tool.ruff.lint]
+select = [
+    "B",  # flake8-bugbear
+    "E",  # pycodestyle error
+    "F",  # pyflakes
+    "I",  # isort
+    "UP",  # pyupgrade
+    "W",  # pycodestyle warning
+]
+
+[tool.ruff.lint.isort]
+force-single-line = true
+order-by-type = false
