@@ -1,0 +1,7 @@
+setup.py
+pypterodactyl/__init__.py
+pypterodactyl/app.py
+pypterodactyl.egg-info/PKG-INFO
+pypterodactyl.egg-info/SOURCES.txt
+pypterodactyl.egg-info/dependency_links.txt
+pypterodactyl.egg-info/top_level.txt
