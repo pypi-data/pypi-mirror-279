@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "podping-schemas"
+version = "1.0.1"
+description = ""
+authors = ["Alecks Gates <agates@mail.agates.io>"]
+license = "MIT"
+readme = "README.md"
+include = [
+    { path = "podping_schemas/**/*.capnp", format = "sdist" },
+    { path = "podping_schemas/**/*.json", format = ["sdist", "wheel"] },
+    { path = "podping_schemas/**/*.py", format = ["sdist", "wheel"] },
+    { path = "podping_schemas/**/*.so", format = "wheel" },
+]
+exclude = [
+    { path = "podping_schemas/**/*.pyx" },
+    { path = "podping_schemas/**/*.c" },
+]
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[tool.poetry.dependencies]
+python = "^3.9,<3.12"
+capnpy= "^0.10.0"
+python-jsonschema-objects = "^0.5.4"
+
+
+[tool.poetry.group.dev.dependencies]
+jinja2 = "^3.1.4"
+
+[build-system]
+requires = ["capnpy", "jinja2", "poetry-core", "setuptools"]
+build-backend = "poetry.core.masonry.api"
