@@ -1,0 +1,13 @@
+ndsplines/_bspl.cpython-312-darwin.so,sha256=l24Fg4XR4gm8SH9eM3CCQC9tnP2lTH2yYbEOWWVjlcY,205232
+ndsplines/version.py,sha256=Obn8RSVqES6EqFdUBRjylQLYizCdbibUbecyVBfT_LQ,414
+ndsplines/_bspl.c,sha256=5CWmy5JpIV-wTA5_Ir_ZpD1Qk-KqJpx_zpFyhr2Q5N8,1153293
+ndsplines/ndsplines.py,sha256=BF3DHZrFPuKjvsyNfRhuW__AH1CZ9mh4adkYhcqaANQ,31350
+ndsplines/_bspl.pyx,sha256=liY4HNFuNv5O-sS26VLjWlavWTULw1zfMNJfJD_GQtU,4619
+ndsplines/__init__.py,sha256=sw3L2GOUdaHp-vEnU4P1MMDmmP1rI2SFyGFowrZmZqo,1185
+ndsplines/_bspl.h,sha256=RxFFZ4NMlLk0Ywp0yXINmNAejjS9gTFL5tVVAPOINGA,1854
+ndsplines/_npy_bspl.py,sha256=yTp-KA6qYHWq-I-J17MCA5i8-i2HUBfQ_Eu6m334gec,5051
+ndsplines-0.2.0rc2.dist-info/RECORD,,
+ndsplines-0.2.0rc2.dist-info/LICENSE,sha256=j-m0LDh3slEDN21iNceoswE1XBCMEMdPc8DaJy1gHTk,3337
+ndsplines-0.2.0rc2.dist-info/WHEEL,sha256=KYtn_mzb_QwZSHwPlosUO3fDl70znfUFngLlrLVHeBY,111
+ndsplines-0.2.0rc2.dist-info/top_level.txt,sha256=hAAzrTtKFEqz7k-TQic_dqzoqNB-bmWi-oc_xkKdQUA,10
+ndsplines-0.2.0rc2.dist-info/METADATA,sha256=kr8fEA8P-DHZbpqUCPUwVtrNdmgmmrQ68bpGwAS9rCI,12849
