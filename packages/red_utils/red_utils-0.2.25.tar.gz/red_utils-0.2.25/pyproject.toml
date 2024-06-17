@@ -1,0 +1,211 @@
+[project]
+name = "red_utils"
+version = "0.2.25"
+description = "Collection of utility scripts/functions that I use frequently."
+authors = [
+    { name = "redjax", email = "none@none.com" },
+    { name = "redjax", email = "jackenyon@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.11"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Repository = "https://github.com/redjax/red-utils"
+Documentation = "https://red-utils.readthedocs.io/en/latest/"
+Download = "https://pypi.org/project/red_utils/"
+
+[project.optional-dependencies]
+standard = [
+    "diskcache>=5.6.3",
+    "loguru>=0.7.2",
+    "httpx>=0.26.0",
+    "pendulum>=3.0.0",
+    "rich>=13.7.0",
+    "msgpack>=1.0.7",
+    "sqlalchemy>=2.0.25",
+    "chardet>=5.2.0",
+    "hishel>=0.0.26",
+    "chardet>=5.2.0",
+    "hishel>=0.0.26",
+]
+all = [
+    "diskcache>=5.6.3",
+    "fastapi>=0.109.2",
+    "uvicorn>=0.27.1",
+    "loguru>=0.7.2",
+    "httpx>=0.26.0",
+    "msgpack>=1.0.7",
+    "pendulum>=3.0.0",
+    "sqlalchemy>=2.0.25",
+    "pandas>=2.1.4",
+    "fastparquet>=2024.2.0",
+    "pyarrow>=15.0.0",
+    "ipykernel>=6.29.2",
+    "hishel>=0.0.26",
+    "chardet>=5.2.0",
+    "hishel>=0.0.26",
+    "chardet>=5.2.0",
+    "rich>=13.7.1",
+]
+fastapi = [
+    "fastapi>=0.109.0",
+    "sqlalchemy>=2.0.25",
+    "loguru>=0.7.2",
+    "httpx>=0.26.0",
+    "msgpack>=1.0.7",
+    "uvicorn>=0.25.0",
+    "pendulum>=3.0.0",
+]
+http = [
+    "httpx>=0.26.0",
+    "diskcache>=5.6.3",
+    "loguru>=0.7.2",
+    "pendulum>=3.0.0",
+    "msgpack>=1.0.7",
+    "pendulum>=2.1.2",
+    "hishel>=0.0.26",
+    "chardet>=5.2.0",
+]
+data = [
+    "ipykernel>=6.28.0",
+    "pandas>=2.1.4",
+    "fastparquet>=2023.10.1",
+]
+dataframes = [
+    "pandas>=2.1.4",
+    "fastparquet>=2023.10.1",
+    "pyarrow>=15.0.0",
+]
+ci = [
+    "ruff>=0.1.13",
+    "black>=23.12.1",
+    "pytest>=7.4.4",
+    "nox>=2023.4.22",
+]
+docs = [
+    "pygments>=2.17.2",
+    "mkdocs>=1.5.3",
+    "mkdocs-material>=9.5.4",
+    "mkdocstrings[python]>=0.24.0",
+    "markdown-include>=0.8.1",
+    "mkdocs-gen-files>=0.5.0",
+    "mkdocs-autorefs>=0.5.0",
+    "mkdocs-section-index>=0.3.8",
+    "mkdocs-literate-nav>=0.6.1",
+]
+tests = [
+    "loguru>=0.7.2",
+    "httpx>=0.27.0",
+    "hishel>=0.0.26",
+    "chardet>=5.2.0",
+    "sqlalchemy>=2.0.30",
+    "pendulum>=3.0.0",
+    "pytest-xdist>=3.6.1",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff>=0.1.13",
+    "pytest>=7.4.4",
+    "black>=23.12.1",
+    "pre-commit>=3.6.0",
+    "pdm-bump>=0.7.3",
+    "nox>=2023.4.22",
+    "pytest-xdist>=3.5.0",
+    "vulture>=2.11",
+    "bandit[toml]>=1.7.8",
+    "detect-secrets>=1.5.0",
+    "radon>=6.0.1",
+    "xenon>=0.9.1",
+    "memray>=1.12.0",
+]
+
+[tool.pdm.scripts.tests]
+cmd = "nox -s tests"
+
+[tool.pdm.scripts.git-prune-tags]
+cmd = "git fetch --prune origin '+refs/tags/*:refs/tags/*'"
+
+[tool.pdm.scripts.sort-imports]
+shell = "pdm run ruff check --select I --fix ."
+
+[tool.pdm.scripts.lint]
+cmd = "nox -s lint"
+
+[tool.pdm.scripts.lint-ci]
+shell = "pdm run black . && RUFF_CONFIG=ruff.ci.toml pdm run ruff check . --fix"
+
+[tool.pdm.scripts.check]
+cmd = "black ."
+
+[tool.pdm.scripts.format]
+cmd = "ruff check . --fix"
+
+[tool.pdm.scripts.vulture-check]
+cmd = "vulture src/red_utils --min-confidence 100"
+
+[tool.pdm.scripts.bandit-check]
+cmd = "bandit -r src/red_utils"
+
+[tool.pdm.scripts.scan-secrets]
+cmd = "detect-secrets scan > .secrets.baseline"
+
+[tool.pdm.scripts.radon-complexity]
+cmd = "radon cc src/red_utils -s -a --total-average -nc -j -O radon_complexity_results.json"
+
+[tool.pdm.scripts.radon-raw]
+cmd = "radon raw src/red_utils -sjO radon_raw_results.json"
+
+[tool.pdm.scripts.radon-maintainability]
+cmd = "radon mi src/red_utils -n C -x F -s -j -O radon_maintainability_results.json"
+
+[tool.pdm.scripts.radon-halstead]
+cmd = "radon hal src red_utils -f -j -O radon_halstead_results.json"
+
+[tool.pdm.scripts.xenon-scan]
+cmd = "xenon -b B -m C -a C src/red_utils"
+
+[tool.pdm.scripts.export]
+shell = "pdm export --prod --no-default -o requirements.txt --without-hashes"
+
+[tool.pdm.scripts.export-dev]
+shell = "pdm export -d --no-default -o requirements.dev.txt --without-hashes"
+
+[tool.pdm.scripts.export-ci]
+shell = "pdm export -G ci --no-default -o requirements.ci.txt --without-hashes"
+
+[tool.pdm.scripts.export-docs]
+shell = "pdm export -G docs --no-default -o docs/requirements.txt --without-hashes"
+
+[tool.pdm.scripts.create-major-release]
+shell = "pdm bump major && pdm bump tag && pdm lock && pdm build && git push --tags"
+
+[tool.pdm.scripts.create-minor-release]
+shell = "pdm bump minor && pdm bump tag && pdm lock && pdm build && git push --tags"
+
+[tool.pdm.scripts.create-micro-release]
+shell = "pdm bump micro && pdm bump tag && pdm lock && pdm build && git push --tags"
+
+[tool.pdm.scripts.upload-pypi]
+shell = "pdm publish --repository pypi --verbose"
+
+[tool.pdm.scripts.upload-pypi-test]
+shell = "pdm publish --repository testpypi --verbose"
+
+[tool.pdm.scripts.mkdocs-build]
+cmd = "mkdocs build"
+
+[tool.pdm.scripts.mkdocs-serve]
+cmd = "mkdocs serve --dev-addr 0.0.0.0:8000"
+
+[tool.bandit]
+exclude_dirs = [
+    "tests",
+]
+skips = [
+    "B324",
+]
