@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: epanns-inference
+Version: 0.0.1
+Summary: epanns_inference: EPANNs audio tagging inference api
+Home-page: https://github.com/StefanoGiacomelli/epanns_inference
+Author: Arshdeep-Singh-Boparai, Stefano Giacomelli (Ph.D. student UnivAQ)
+Author-email: arshdeep.singh@surrey.ac.uk, stefano.giacomelli@graduate.univaq.it
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: torch
+Requires-Dist: torchlibrosa
+
+# epanns_inference
+Repository for E-PANN audio tagging w. Cnn14 0.5-pruned model
