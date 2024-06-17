@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "cvxcovariance"
+version = "v0.1.5"             # Don't touch, leave at 0.0.0
+description = "..."
+authors = ["Kasper Johansson", "Thomas Schmelzer"]
+readme = "README.md"
+repository = "https://github.com/cvxgrp/cov_pred_finance"
+packages = [{include = "cvx"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9.0"
+pandas = "*"
+cvxpy-base = "*"
+clarabel = "*"
+scipy = "*"
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+pre-commit = "*"
+
+[tool.poetry.group.dev.dependencies]
+arch = "*"
+tqdm = "*"
+scikit-learn = "*"
+loguru = "*"
+plotly = "*"
+cvxsimulator = "*"
+statsmodels = "*"
+
+[build-system]
+requires = ["poetry>=1.6.0"]
+build-backend = "poetry.masonry.api"
+
+[tool.ruff]
+select = ["E", "F", "I"]
+line-length = 125
+target-version = "py310"
+exclude = [
+    "*__init__.py",
+    "experiments"
+]
+namespace-packages = ["cvx/covariance"]
