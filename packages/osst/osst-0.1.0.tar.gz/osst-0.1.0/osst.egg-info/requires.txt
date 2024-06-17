@@ -1,0 +1,12 @@
+setuptools
+wheel
+attrs
+packaging>=20.9
+pandas
+scikit-learn
+sortedcontainers
+gmpy2
+matplotlib
+
+[:python_version > "3.0"]
+editables==0.2

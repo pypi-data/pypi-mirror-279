@@ -1,0 +1,158 @@
+#include "gosdt.hpp"
+
+#define _DEBUG true
+#define THROTTLE false
+
+float GOSDT::time = 0.0;
+unsigned int GOSDT::size = 0;
+unsigned int GOSDT::iterations = 0;
+unsigned int GOSDT::status = 0;
+
+float GOSDT::lower_bound;
+float GOSDT::upper_bound;
+float GOSDT::model_loss;
+
+GOSDT::GOSDT(void) {}
+
+GOSDT::~GOSDT(void) {
+    return;
+}
+
+void GOSDT::configure(std::istream & config_source) { Configuration::configure(config_source); }
+
+void GOSDT::fit(std::istream & data_source, std::string & result) {
+    std::unordered_set< Model > models;
+    fit(data_source, models);
+    json output = json::array();
+    for (auto iterator = models.begin(); iterator != models.end(); ++iterator) {
+        Model model = * iterator;
+        json object = json::object();
+        model.to_json(object);
+        output.push_back(object);
+    }
+    result = output.dump(2);
+}
+
+void GOSDT::fit(std::istream & data_source, std::unordered_set< Model > & models) {
+    if(Configuration::verbose) { std::cout << "Using configuration: " << Configuration::to_string(2) << std::endl; }
+
+    if(Configuration::verbose) { std::cout << "Initializing Optimization Framework" << std::endl; }
+    Optimizer optimizer;
+    optimizer.load(data_source);
+
+    GOSDT::time = 0.0;
+    GOSDT::size = 0;
+    GOSDT::iterations = 0;
+    GOSDT::status = 0;
+
+    std::vector< std::thread > workers;
+    std::vector< int > iterations(Configuration::worker_limit);
+
+    if(Configuration::verbose) { std::cout << "Starting Optimization" << std::endl; }
+    auto start = std::chrono::high_resolution_clock::now();
+
+    optimizer.initialize();
+    if (Configuration::worker_limit > 1) {
+        for (unsigned int i = 0; i < Configuration::worker_limit; ++i) {
+            workers.emplace_back(work, i, std::ref(optimizer), std::ref(iterations[i]));
+        }
+        for (auto iterator = workers.begin(); iterator != workers.end(); ++iterator) { (* iterator).join(); } // Wait for the thread pool to terminate
+    }else {
+        work(0, optimizer, iterations[0]);
+    }
+
+    auto stop = std::chrono::high_resolution_clock::now(); // Stop measuring training time
+    GOSDT::time = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start).count() / 1000.0;
+    if(Configuration::verbose) { std::cout << "Optimization Complete" << std::endl; }
+
+    for (auto iterator = iterations.begin(); iterator != iterations.end(); ++iterator) { GOSDT::iterations += * iterator; }    
+    GOSDT::size = optimizer.size();
+    float lowerbound, upperbound;
+    optimizer.objective_boundary(& lowerbound, & upperbound);
+    GOSDT::lower_bound = lowerbound;
+    GOSDT::upper_bound = upperbound;
+
+    if (Configuration::timing != "") {
+        std::ofstream timing_output(Configuration::timing, std::ios_base::app);
+        timing_output << GOSDT::time;
+        timing_output.flush();
+        timing_output.close();
+    }
+
+    if(Configuration::verbose) {
+        std::cout << "Training Duration: " << GOSDT::time << " seconds" << std::endl;
+        std::cout << "Number of Iterations: " << GOSDT::iterations << " iterations" << std::endl;
+        std::cout << "Size of Graph: " << GOSDT::size << " nodes" << std::endl;
+        std::cout << "Objective Boundary: [" << lowerbound << ", " << upperbound << "]" << std::endl;
+        std::cout << "Optimality Gap: " << optimizer.uncertainty() << std::endl;
+    }
+
+    try {
+        if (!optimizer.complete()) {
+            // there might be a timeout here...
+            if (GOSDT::time > (float)Configuration::time_limit || !State::queue.empty()) {
+                std::cout << "possible timeout: " << GOSDT::time << " " << Configuration::time_limit << " queue emtpy: "  << State::queue.empty() << std::endl;
+                GOSDT::status = 2;
+            } else {
+                std::cout << "possible non-convergence: [" << lowerbound << " .. " << upperbound << "]" << std::endl;
+                GOSDT::status = 1;
+            }
+
+            if (Configuration::diagnostics) {
+                std::cout << "Non-convergence Detected. Beginning Diagnosis" << std::endl;
+                optimizer.diagnose_non_convergence();
+                std::cout << "Diagnosis complete" << std::endl;
+            }
+        }
+
+        optimizer.models(models);
+
+        if (Configuration::model_limit > 0 && models.size() == 0) {
+            GOSDT::status = 1;
+            if (Configuration::diagnostics) {
+                std::cout << "False-convergence Detected. Beginning Diagnosis" << std::endl;
+                optimizer.diagnose_false_convergence();
+                std::cout << "Diagnosis complete" << std::endl;
+            }
+            throw IntegrityViolation("No model","No model found - either user-provided upper bound assumption was too strong, or there was a false convergence");
+        }
+
+        if (Configuration::verbose) {
+            std::cout << "Models Generated: " << models.size() << std::endl;
+            if (optimizer.uncertainty() == 0.0 && models.size() > 0) {
+                std::cout << "Loss: " << models.begin() -> loss() << std::endl;
+                std::cout << "Complexity: " << models.begin() -> complexity() << std::endl;
+            }
+        }
+        GOSDT::model_loss = models.begin() -> loss();
+        if (Configuration::model != "") {
+            json output = json::array();
+            for (auto iterator = models.begin(); iterator != models.end(); ++iterator) {
+                Model model = * iterator;
+                json object = json::object();
+                model.to_json(object);
+                output.push_back(object);
+            }
+            std::string result = output.dump(2);
+            if(Configuration::verbose) { std::cout << "Storing Models in: " << Configuration::model << std::endl; }
+            std::ofstream out(Configuration::model);
+            out << result;
+            out.close();
+        }
+    } catch (IntegrityViolation exception) {
+        GOSDT::status = 1;
+        std::cout << exception.to_string() << std::endl;
+    }
+}
+
+void GOSDT::work(int const id, Optimizer & optimizer, int & return_reference) {
+    unsigned int iterations = 0;
+    try {
+        while (optimizer.iterate(id)) { iterations += 1; }
+    } catch( IntegrityViolation exception ) {
+        GOSDT::status = 1;
+        std::cout << exception.to_string() << std::endl;
+        throw std::move(exception);
+    }
+    return_reference = iterations;
+}
