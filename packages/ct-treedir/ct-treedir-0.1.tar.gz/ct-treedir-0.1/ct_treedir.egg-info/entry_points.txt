@@ -1,0 +1,2 @@
+[console_scripts]
+ct-treedir = cttreedir:main
