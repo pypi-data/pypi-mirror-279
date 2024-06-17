@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: paramview
+Version: 0.4.0
+Summary: GUI for viewing the contents of a ParamDB database.
+Home-page: https://github.com/PainterQubits/paramview
+License: BSD-3-Clause
+Author: Alex Hadley
+Author-email: contact@alexhadley.net
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: eventlet (>=0.34.2,<0.35.0)
+Requires-Dist: flask (>=3.0.0,<4.0.0)
+Requires-Dist: flask-socketio (>=5.3.6,<6.0.0)
+Requires-Dist: paramdb (>=0.10.2,<0.11.0)
+Requires-Dist: watchdog (>=3.0.0,<4.0.0)
+Project-URL: Repository, https://github.com/PainterQubits/paramview
+Description-Content-Type: text/markdown
+
+# ParamView
+
+[![CI](https://github.com/PainterQubits/paramview/actions/workflows/ci.yml/badge.svg)](https://github.com/PainterQubits/paramview/actions/workflows/ci.yml)
+
+GUI for viewing the contents of a ParamDB database.
+
+## Installation
+
+Install the latest version of ParamView using pip:
+
+```
+pip install -U paramview --extra-index-url https://painterqubits.github.io/paramview/releases
+```
+
+## Usage
+
+To launch the ParamView GUI, run:
+
+```
+paramview <path to ParamDB database file>
+```
+
+For more options, run `paramview --help`.
+
