@@ -1,0 +1,15 @@
+repos:
+-   repo: local
+    hooks:
+      - id: check_code
+        name: check_code
+        entry: bash -c './scripts/check_code.sh'
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: run_tests
+        name: run_tests
+        entry: bash -c 'PYTHONPATH=`pwd` pytest'
+        language: system
+        types: [python]
+        pass_filenames: false

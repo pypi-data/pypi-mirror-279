@@ -1,0 +1,19 @@
+torch==2.3.0
+pydantic==2.7.1
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+pytorch-lightning[extra]==2.2.3
+# Development
+pre-commit==3.7.0
+black==24.4.2
+flake8==7.0.0
+isort==5.13.2
+mypy==1.10.0
+pytest==8.1.2
+torchtest==0.5
+sphinx==7.3.7
+sphinx_rtd_theme==2.0.0
+# Release
+twine==5.1.0
+build==1.2.1
