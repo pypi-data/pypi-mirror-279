@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+featsql/__init__.py
+featsql/_modidx.py
+featsql/featmysql.py
+featsql/featsnow.py
+featsql/featsqlite.py
+featsql.egg-info/PKG-INFO
+featsql.egg-info/SOURCES.txt
+featsql.egg-info/dependency_links.txt
+featsql.egg-info/entry_points.txt
+featsql.egg-info/not-zip-safe
+featsql.egg-info/requires.txt
+featsql.egg-info/top_level.txt

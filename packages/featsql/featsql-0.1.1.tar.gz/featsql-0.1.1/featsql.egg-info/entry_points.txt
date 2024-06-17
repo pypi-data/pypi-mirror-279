@@ -1,0 +1,6 @@
+[console_scripts]
+
+
+[nbdev]
+featsql = featsql._modidx:d
+
