@@ -1,0 +1,184 @@
+# WebCase HTML to PDF converter
+
+Message sender to different channels.
+
+## Installation
+
+```sh
+pip install wc-html2pdf
+```
+
+## Usage
+
+The core part of library is a `Converter`.
+
+- `Converter.from_content` - Method that will return path to generated pdf file from string content.
+- `Converter.from_file` - Method that deals the same but for either file object or file path.
+
+Just inherit from `wc_html2pdf.converters.Converter` and implement those 2 methods if you need a custom one.
+
+Builtins:
+
+### WeasyPrint converter
+
+Converter that uses [WeasyPrint](https://weasyprint.org/) library.
+
+```python
+from wc_html2pdf.converters.weasyprint import WeasyPrintConverter
+
+converter = WeasyPrintConverter()
+```
+
+It requires to `pip install weasyprint` package only. 
+
+In docker environment it might also be required to install:
+
+```bash
+apt-get install libpango-1.0-0 libpangoft2-1.0-0 -y --no-install-recommends
+```
+
+It's lightweight, it's relatively fast and supports most css features in basic implementation.
+
+Try to use it first, before turn your head to chromium.
+
+### Chromium converter
+
+It uses chromium browser in headless mode to generate pdf.
+
+```python
+from wc_html2pdf.converters.chromium import ChromiumConverter
+
+converter = ChromiumConverter(
+  # Optional. This is the default value:
+  bin_path='/usr/bin/chromium',
+  # Command line flags for a headless chrome execution.
+  # Pass None to use the default ones.
+  options=None,
+)
+```
+
+So either google chrome or chromium browser must be installed in your system/docker environment. Like so:
+
+Chromium:
+
+```bash
+apt-get install -y --no-install-recommends chromium
+```
+
+Google chrome:
+
+```bash
+apt-get install -y --no-install-recommends \
+  ca-certificates \
+  apt-transport-https \
+  wget \
+  gnupg \
+  && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+  && echo "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list \
+  && apt-get update \
+  && apt-get install -y --no-install-recommends \
+  google-chrome-stable
+```
+
+## Django
+
+There is a contrib module for usage with django framework. It provides a view to generate pdf from template and small template utilities to make that a bit easier.
+
+### Installation
+
+In `settings.py`:
+
+```python
+INSTALLED_APPS += [
+  'wc_html2pdf.contrib.django',
+]
+```
+
+### Usage
+
+Just add template mixin and your template will turn into pdf:
+
+```python
+from wc_html2pdf.contrib.django.views import HTML2PDFTemplateResponseMixin
+from wc_html2pdf.converters.chromium import ChromiumConverter
+from wc_html2pdf.contrib.django.url_getters import (
+  PathUrlGetter, AbsoluteUrlGetter,
+)
+
+
+class MyView:
+  pass
+
+
+class MyPDFView(HTML2PDFTemplateResponseMixin, MyView):
+  # Your html template.
+  template_name = 'my-doc.html'
+  # Resulting file name:
+  pdf_filename = 'my-doc.pdf'
+  # Converter can be set statically or by rewriting `get_pdf_converter` method.
+  pdf_converter = ChromiumConverter() # or any other converter.
+  # Whether response with inline pdf or as a auto-downloadable attachment
+  pdf_attachment = True
+  # This one is special. This is a class that will transform urls to static 
+  # resources or media objects tha way that fits your server/converter.
+  # `PathUrlGetter` is for cases when converter have access to local filesystem
+  # and all urls will be in form of `file:///absolute/path/to/file.css`.
+  pdf_url_getter = PathUrlGetter()
+
+  # And `AbsoluteUrlGetter` is for cases when static resources should be
+  # accessed by http;
+  # Those converters are very simple and you may write your own in couple of 
+  # minutes.
+  # Converter will be available in template context as `pdf_url_converter`.
+  # But there are utilities that will use it, so you don't have to.
+  def get_pdf_url_getter(self):
+    return AbsoluteUrlGetter(self.request.build_absolute_uri('/'))
+
+
+# For debugging purposes you may want to see the resulting html without 
+# turning it to pdf document, but with all changes that url_converter 
+# have done.
+# For that you may do the following:
+
+
+# Rewrite response to omit pdf generation step:
+class HTMLResponse(HTML2PDFTemplateResponseMixin.response_class):
+  @property
+  def rendered_content(self):
+    return self.source_content
+
+
+# And use that response 
+class MyPDFPreviewView(MyPDFView):
+  # So changing the response class in view will result in plain html rendering.
+  response_class = HTMLResponse
+  content_type = 'text/html; charset=utf-8'
+  pdf_filename = None
+  pdf_attachment = False
+  # Here you may redefine url getter, for example:
+  pdf_url_getter = AbsoluteUrlGetter('http://localhost')
+```
+
+#### Templates
+
+For a default django templates:
+
+```jinja
+{% load html2pdf %}
+
+<!-- Same as django's `static` tag. -->
+{% html2pdf_static 'static-path.css' %}
+
+<!-- For uploads/media you should also use a special tag.  -->
+{% html2pdf_media obj.upload.url %}
+```
+
+For "jinja" templates there is an extension: `wc_html2pdf.contrib.django.jinja.extensions.HTML2PDFUrlGetterExtension`. That will add 2 global functions with the same functionality:
+
+```jinja
+<!-- Static path transformer: -->
+{{ html2pdf_static('static-path.css') }}
+
+<!-- Uploads path transformer: -->
+{{ html2pdf_media(obj.upload.url) }}
+```
