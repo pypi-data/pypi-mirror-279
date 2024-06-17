@@ -1,0 +1,48 @@
+{
+    "tests": [
+        {
+            "input_record": {
+                "field1": "test"
+            },
+            "rules": {
+                "value": "field1"
+            },
+            "output_record": {
+                "value": "test"
+            }
+        },
+    {
+        "input_record": {
+            "field1": "test"
+        },
+        "rules": {
+            "value": "field1",
+            "fixed_value": {
+                "$fixed_value": "this is a fixed value"
+
+            }
+        },
+        "output_record": {
+            "value": "test",
+            "fixed_value": "this is a fixed value"
+        }
+    },
+    {
+        "input_record": {
+            "field1": "test"
+        },
+        "rules": {
+            "$convert1": {
+                "fieldname": "field1",
+                "actions": [{"fixed_value": "new value"}]
+
+            },
+            "value": "field1"
+        },
+        "output_record": {
+            "value": "new value"
+        }
+    }
+]
+
+}
