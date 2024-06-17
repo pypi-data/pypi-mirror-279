@@ -1,0 +1,15 @@
+algorithms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+algorithms/mcts_connect4.py,sha256=6G9tawE5-xl9gtUL0msW0VQspZsLBlTYNDOSyUVqibs,1455
+algorithms/mcts_tictactoe.py,sha256=1UL_H8Sun3_1E4JpeFtCvSLBcdU8YuAxnvDaEt25nRM,3029
+algorithms/minimax_connect4.py,sha256=LmpR6PM-SuKsPE_JaI4i0Jl6no9-R6ozMtAgzme8Eco,2501
+algorithms/minimax_tictactoe.py,sha256=HtKafZ4mldcEAJv_57z2V-G9pDHL4LvL6JaC-QQkjb4,1900
+algorithms/pruning_connect4.py,sha256=EyR9WTpFv90QkOWJG_IA75nOkxMF_sUpcmOKKSjHLjc,794
+algorithms/pruning_tictactoe.py,sha256=LtWQm996Lu_Dy47v6rS3eUiKyTViZwNWo_Bgo8NnQ_Y,2127
+games/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+games/connect4.py,sha256=t1WA1p1mvosAnKqboHvZmr4s75p1w6RSTGMIEJmUryk,4008
+games/tic_tac_toe.py,sha256=2O9nnT3A0VEfDmvdK6uz5AikvefSJ59HqFTFqhShyUU,6481
+py_adverse_search-1.0.7.dist-info/LICENSE.txt,sha256=3ApJeNe5xK1QwGm5G6eXGmRj7Lrm24TKK5wZc8CjUDo,1158
+py_adverse_search-1.0.7.dist-info/METADATA,sha256=eHWaFyh-5old-cNTHuyCLcUDWAiQIappJG8A-JPzUqI,466
+py_adverse_search-1.0.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+py_adverse_search-1.0.7.dist-info/top_level.txt,sha256=KdrZVsWwChguLMPETVUvjtf0mZIRfoqCVRHlVTOXosQ,17
+py_adverse_search-1.0.7.dist-info/RECORD,,
