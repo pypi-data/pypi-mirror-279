@@ -1,0 +1,86 @@
+# MegaKit
+
+MegaKit is a comprehensive utility library that provides a wide range of functions for various operations, including color conversions, file handling, image manipulations, list processing, random data generation, string manipulations, system interactions, and time operations. This toolkit is designed to simplify and streamline common programming tasks.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Color Operations](#color-operations)
+    - [File Operations](#file-operations)
+    - [Image Operations](#image-operations)
+    - [List Operations](#list-operations)
+    - [Random Data Operations](#random-data-operations)
+    - [String Operations](#string-operations)
+    - [System Operations](#system-operations)
+    - [Time Operations](#time-operations)
+
+## Installation
+
+You can install MegaKit using pip:
+
+```bash
+$ pip install megakit
+```
+
+## Usage
+
+### Color Operations
+
+- `hex_to_rgb(hex_code)`: Converts a hexadecimal color code to RGB format.
+- `rgb_to_hex(rgb)`: Converts an RGB color tuple to hexadecimal format.
+
+### File Operations
+
+- `read_lines(file_path)`: Reads and returns lines from a file.
+- `count_lines(file_path)`: Counts lines in a file.
+- `count_folders(folder_path)`: Counts folders in a directory.
+- `count_files(folder_path)`: Counts files in a directory.
+- `get_file_name(file_path)`: Returns file name with extension.
+- `get_file_extension(file_path)`: Returns file extension.
+- `get_file_location(file_path)`: Returns directory of the file.
+- `is_file(path)`: Checks if path points to a file.
+- `is_folder(path)`: Checks if path points to a folder.
+- `is_existing(path)`: Checks if path exists.
+- `list_directories(folder_path)`: Lists directories in a folder.
+- `list_files(folder_path)`: Lists files in a folder.
+- `is_empty(folder_path)`: Checks if folder is empty.
+- `delete_file(file_path)`: Deletes a file.
+- `delete_folder(folder_path)`: Deletes a folder and its contents.
+
+### Image Operations
+
+- `add_padding(image_path, padding_value, color)`: Adds padding to an image.
+- `round_corners(image_path, radius)`: Rounds corners of an image.
+- `turn_to_square(image_path, color)`: Converts image to a square shape.
+
+### List Operations
+
+- `has_duplicates(lst)`: Check if a list has duplicate elements.
+- `print_options(lst)`: Print options from a list with each option indexed.
+
+### Random Data Operations
+
+- `random_integer(n)`: Generates a random integer with `n` digits.
+- `random_string(n)`: Generates a random string with `n` uppercase letters.
+- `random_serial(n)`: Generates a random serial code with `n` alphanumeric characters.
+
+### String Operations
+
+- `get_first_characters(s, chars)`: Get the first `chars` characters of a string.
+- `get_last_characters(s, chars)`: Get the last `chars` characters of a string.
+- `reverse_string(s)`: Reverse a given string.
+- `number_of_words(title)`: Count the number of words in a string.
+
+### System Operations
+
+- `clear_terminal()`: Clears the terminal screen.
+- `close_finder_windows()`: Closes all Finder windows on macOS using AppleScript.
+
+### Time Operations
+
+- `get_date()`: Returns current date in MM/DD/YYYY format.
+- `get_month()`: Returns current month index (0-11) and name.
+- `get_year()`: Returns current year as an integer.
+- `estimate_reading_time(words_number)`: Estimates reading time in minutes based on the number of words.
+  add any necessary missing sections to make this a good readme

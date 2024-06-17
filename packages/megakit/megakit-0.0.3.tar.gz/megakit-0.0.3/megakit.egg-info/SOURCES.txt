@@ -1,0 +1,15 @@
+README.md
+setup.py
+megakit/__init__.py
+megakit/color_operations.py
+megakit/file_operations.py
+megakit/image_operations.py
+megakit/list_operations.py
+megakit/random_data_operations.py
+megakit/string_operations.py
+megakit/system_operations.py
+megakit/time_operations.py
+megakit.egg-info/PKG-INFO
+megakit.egg-info/SOURCES.txt
+megakit.egg-info/dependency_links.txt
+megakit.egg-info/top_level.txt
