@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+tgram/__init__.py
+tgram/decorators.py
+tgram/methods.py
+tgram/types.py
+tgram.egg-info/PKG-INFO
+tgram.egg-info/SOURCES.txt
+tgram.egg-info/dependency_links.txt
+tgram.egg-info/requires.txt
+tgram.egg-info/top_level.txt

@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tgram
+Version: 0.1
+Summary: tgram is python client based on Telegram BOT API
+Author-email: ZAID <2ei@zaid.pro>
+Project-URL: Homepage, https://github.com/2ei/tgram
+Project-URL: Issues, https://github.com/2ei/tgram/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: asyncio
+Requires-Dist: aiofiles
+
+## Soon.
