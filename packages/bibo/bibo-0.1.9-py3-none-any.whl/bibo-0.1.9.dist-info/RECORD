@@ -1,0 +1,17 @@
+bibo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bibo/bibo.py,sha256=c7uJjn5JyJ1DxC6s9Md4N77r5uZTDRnrM787GGcitrE,9675
+bibo/cite.py,sha256=tYT2Pf2hTFJLFCURrFdlOYGTs549nsnyj32mEJgi9d4,2796
+bibo/internals.py,sha256=H_Vr5iPNXZuBEu3DxIYmM8ZccQNjGbbMTCkEqvTLcBE,7651
+bibo/models.py,sha256=vdBEKSEuy0-WKhfNxqpRNEaZE5U-BJF-jPakw6trwyI,94
+bibo/query.py,sha256=KJqHhiNYNRmvdGpCgovsFIuiZuYSD1HdmsxV2gQtoRY,3915
+click_constraints/__init__.py,sha256=ny5IPxMug1V7NRy86FQ-Ut9zISWGMAJrV7v4lcKS-Z8,41
+click_constraints/click_constraints.py,sha256=CRWCvYj56w0vir-M9skLyppH7rSz9fWvcQWWd0bMwAY,925
+pybibs/__init__.py,sha256=mWLSHmWRlrp0LmlUWlEox_xcXuDxMKHwYCDDntZ4e2s,164
+pybibs/_internals.py,sha256=Qtjj1gJ1DO_7yWovupSpnIAn090LX6SVA6Qf7qMHD0o,2980
+pybibs/pybibs.py,sha256=MlL9GbWGvU9_zs8_fS3KNa8VJP9i_7u8Fta0doCoj_Q,1337
+bibo-0.1.9.dist-info/LICENSE,sha256=h35JnnRO0GgQmkCawWyPd_smhRipL59vWssMEoJoct4,1067
+bibo-0.1.9.dist-info/METADATA,sha256=aTxFjUL0q86ID6eWODdeyiuxtsHXFS058riClwW9bec,2564
+bibo-0.1.9.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bibo-0.1.9.dist-info/entry_points.txt,sha256=RfEALT7Fr3FDb_UpKITeWo4UyDHQuG_q4MNGTL4CW1I,39
+bibo-0.1.9.dist-info/top_level.txt,sha256=SoiZqTXdYzebrrrQMbuIKpfi2FurrfGm05fcAx9xyDI,30
+bibo-0.1.9.dist-info/RECORD,,

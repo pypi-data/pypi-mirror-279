@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: bibo
+Version: 0.1.9
+Summary: Command line reference manager with single source of truth: the .bib file. Inspired by beets
+Home-page: https://github.com/Nagasaki45/bibo
+Author: Tom Gurion
+Author-email: nagasaki45@gmail.com
+Keywords: bib latex reference interface
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Database :: Front-Ends
+Classifier: Topic :: Education
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Text Processing :: Markup :: LaTeX
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE
+Requires-Dist: click >=8
+Requires-Dist: click-plugins
+Requires-Dist: requests
+Requires-Dist: pylatexenc
+Requires-Dist: pyperclip
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bumpversion ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-click ; extra == 'dev'
+Requires-Dist: types-requests ; extra == 'dev'
+Requires-Dist: types-setuptools ; extra == 'dev'
+
+.. image:: https://raw.githubusercontent.com/Nagasaki45/bibo/master/logo/logo.svg
+    :alt: bibo logo
+
+Command line reference manager with a single source of truth: the ``.bib`` file. Inspired by `beets`_.
+
+.. image:: https://github.com/Nagasaki45/bibo/actions/workflows/ci_pipeline.yml/badge.svg
+  :target: https://github.com/Nagasaki45/bibo/actions/workflows/ci_pipeline.yml
+  :alt: CI status
+
+.. image:: https://codecov.io/gh/Nagasaki45/bibo/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/Nagasaki45/bibo
+
+.. image:: https://readthedocs.org/projects/bibo/badge/?version=latest
+  :target: https://bibo.readthedocs.io/en/latest/?badge=latest
+  :alt: Documentation Status
+
+.. image:: https://asciinema.org/a/313768.svg
+  :target: https://asciinema.org/a/313768
+
+.. _beets: https://github.com/beetbox/beets
+
+
+Links
+-----
+
+* Documentation: https://bibo.readthedocs.io/en/latest
+* Source code: https://github.com/Nagasaki45/bibo
+* PyPI releases: https://pypi.org/project/bibo
+* License: `MIT`_
+
+.. _MIT: https://github.com/Nagasaki45/bibo/blob/master/LICENSE
