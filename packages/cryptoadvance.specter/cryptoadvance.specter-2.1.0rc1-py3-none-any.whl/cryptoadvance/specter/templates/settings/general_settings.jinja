@@ -1,0 +1,266 @@
+{% extends "base.jinja" %}
+{% block main %}
+	<form action="?" method="POST" onsubmit="showPacman()">
+		<input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+		<h1 id="title" class="settings-title">Settings</h1>
+		{% from 'settings/components/settings_menu.jinja' import settings_menu %}
+		{{ settings_menu('general', current_user, ext_settingstabs) }}
+		<div>
+			<h3 class="mt-8">{{ _("General") }}</h3>
+			<div class="space-y-3">
+				{% include "includes/language/language_select.jinja" %}
+				<div class="floating-wrapper">
+					<select class="floating-input" name="autohide_sensitive_info_timeout" id="autohide_sensitive_info_timeout" onchange="updateAutoHideSensitiveInfoTimeout()">
+						<option value="NEVER" {% if specter.autohide_sensitive_info_timeout %}selected{% endif %}>{{ _("Never") }}</option>
+						<option value="10" {% if specter.autohide_sensitive_info_timeout == 10 %}selected{% endif %}>{{ _("After being idle for 10 minutes") }}</option>
+						<option value="20" {% if specter.autohide_sensitive_info_timeout == 20 %}selected{% endif %}>{{ _("After being idle for 20 minutes") }}</option>
+						<option value="40" {% if specter.autohide_sensitive_info_timeout == 40 %}selected{% endif %}>{{ _("After being idle for 40 minutes") }}</option>
+						<option value="CUSTOM" {% if specter.autohide_sensitive_info_timeout and specter.autohide_sensitive_info_timeout not in [10, 20, 40] %}selected{% endif %}>{{ _("Custom idle time (minutes)") }}</option>
+					</select>
+					<label class="floating-label" for="autohide_sensitive_info_timeout">{{ _("Auto-Hide Sensitive Info") }}</label>
+				</div>
+
+				<input type="number" min="1" name="custom_autohide_sensitive_info_timeout" id="custom_autohide_sensitive_info_timeout" class="hidden" placeholder='{{ _("minutes") }}' {% if specter.autohide_sensitive_info_timeout and specter.autohide_sensitive_info_timeout not in [10, 20, 40] %}value="{{ specter.autohide_sensitive_info_timeout }}"{% endif %} data-style="margin-top: 15px; margin-bottom: 30px;"/>
+
+				<div class="floating-wrapper">
+					<select class="floating-input peer" name="unit">
+						<option value="btc" {% if unit!="sat" %} selected="selected"{% endif %}>BTC</option>
+						<option value="sat" {% if unit=="sat" %} selected="selected"{% endif %}>sats</option>
+					</select>
+					<label class="floating-label" for="unit">{{ _("Bitcoin Unit") }} (BTC/sats)</label>
+				</div>
+
+				{% if specter.config.auth.method != "none" %}
+					<div class="floating-wrapper">
+						<select class="floating-input" name="autologout_timeout" id="autologout_timeout" onchange="updateAutoLogoutTimeout()">
+							<option value="NEVER" {% if not specter.autologout_timeout %}selected{% endif %}>{{ _("Never") }}</option>
+							<option value="1" {% if specter.autologout_timeout == 1 %}selected{% endif %}>{{ _("After being idle for 1 hour") }}</option>
+							<option value="4" {% if specter.autologout_timeout == 4 %}selected{% endif %}>{{ _("After being idle for 4 hours") }}</option>
+							<option value="24" {% if specter.autologout_timeout == 24 %}selected{% endif %}>{{ _("After being idle for 24 hours") }}</option>
+							<option value="CUSTOM" {% if specter.autologout_timeout and specter.autologout_timeout not in [1, 4, 24] %}selected{% endif %}>{{ _("Custom idle time (hours)") }}</option>
+						</select>
+						<label class="floating-label" for="autologout_timeout">{{ _("Auto-Logout User") }}</label>
+					</div>
+
+					<input type="number" min="1" name="custom_autologout_timeout" id="custom_autologout_timeout" class="hidden" placeholder='{{ _("hours") }}' {% if specter.autologout_timeout and specter.autologout_timeout not in [1, 4, 24] %}value="{{ specter.autologout_timeout }}"{% endif %} data-style="margin-top: 15px; margin-bottom: 30px;"/>
+				{% endif %}
+
+			</div>
+
+
+
+			<h3 class="mt-8">{{ _("Backup and Restore") }}</h3>
+			<p>
+				{{ _("This will back up your wallets and devices.") }}
+				{{ _("This backup doesn't include the private keys of any hot wallet or the BIP39 seed of your signing devices.") }}
+			</p>
+			<div class="flex space-x-3 mt-5">
+				<a href="{{ url_for('settings_endpoint.backup_file') }}" class="button mb-0" data-style="max-width: 500px">
+					{{ _("Backup Specter (Zip File)") }}
+					<tool-tip width="200px">
+							<span slot="paragraph">
+								{{ _("Backups are recommended but keep your backup files private, as sharing them will result in privacy leaks.") }}
+							</span>
+					</tool-tip>
+				</a>
+
+				<div class="">
+					<input type="file" id="file" class="hidden inputfile" webkitdirectory mozdirectory/>
+					<input type="hidden" id="restorewallets" name="restorewallets"/>
+					<input type="hidden" id="restoredevices" name="restoredevices"/>
+					<label for="file" class="button mb-0">
+						{{ _("Load Specter backup") }}
+						<tool-tip width="200px">
+								<span slot="paragraph">
+								{{ _("Please make sure to unzip the backup file first, then upload the extracted folder.") }}
+								{{ _("This will restore your wallets and devices.") }}
+								{{ _("Loading devices or wallets with names identical to existing ones may overwrite the existing ones.") }}		
+								</span>
+						</tool-tip>
+					</label>
+				</div>
+			</div>
+
+			<span id="filesloaded"></span>
+			<div class="row" data-style="margin-top: 5px;">
+				<button onsubmit="showPacman()" type="submit" class="btn hidden" name="action" value="restore" id="restore" data-style="margin-bottom: 5px;">{{ _("Load Specter backup") }}</button>
+			</div>
+
+			<h3 class="mt-8">{{ _("Data Sources") }} </h3>
+			<div class="flex flex-col space-y-3">
+				{% include "components/explorer_select.jinja" %}
+
+				<div class="floating-wrapper">
+						<select class="floating-input" name="fee_estimator" id="fee_estimator" onchange="updateFeeEstimator()">
+								<option value="mempool" {% if specter.fee_estimator=="mempool" %}selected{% endif %}>Mempool.space</option>
+								<option value="bitcoin_core" {% if specter.fee_estimator=="bitcoin_core" %}selected{% endif %}>Bitcoin Core</option>
+								<option value="custom" {% if specter.fee_estimator=="custom" %}selected{% endif %}>{{ _("Self Hosted Mempool.space") }}</option>
+						</select>
+						<label for="explorer" class="floating-label">Fee Estimation Source</label>
+				</div>
+
+				<input type="text" name="fee_estimator_custom_url" id="fee_estimator_custom_url" value="{{ fee_estimator_custom_url }}" class="hidden" placeholder="http://yourmempool.space/" data-style="margin-top: 15px;"/>			
+
+				<div class="flex p-4 mt-3 mb-4 bg-dark-600 rounded-lg" role="alert">
+					<svg class="flex-shrink-0 inline w-6 h-6 mr-3" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><!--Generated by IJSVG (https://github.com/iconjar/IJSVG)--><path d="M32.0022,55.9844l-1.04907e-06,-2.84217e-14c-13.2548,-5.79387e-07 -24,-10.7452 -24,-24c5.79387e-07,-13.2548 10.7452,-24 24,-24c13.2548,5.79387e-07 24,10.7452 24,24l2.13163e-14,-1.04907e-06c0,13.2548 -10.7452,24 -24,24Zm1.5,-32l3.82016e-08,-2.71086e-09c-1.79133,0.127116 -3.35165,-1.21031 -3.5,-3l6.50646e-08,-7.8524e-07c0.148296,-1.78972 1.70866,-3.12717 3.5,-3l-5.85322e-09,4.15529e-10c1.79134,-0.127171 3.3517,1.21028 3.5,3l-5.57104e-08,6.72365e-07c-0.148295,1.78976 -1.70872,3.12723 -3.5001,3Zm1.4206,6.7635l-2.7853,10.5093l-8.37179e-08,3.15667e-07c-0.270677,1.02062 0.262417,2.08281 1.2425,2.4757l-5.91015e-08,-2.36708e-08c0.379505,0.151996 0.628277,0.519688 0.6282,0.9285v0.323l8.52651e-14,4.05e-07c0,0.551933 -0.447167,0.999503 -0.9991,1h-2.9891l-4.04477e-08,1.96948e-10c-1.65938,0.00807986 -3.01111,-1.33056 -3.01919,-2.98993c-0.00127082,-0.260991 0.0314695,-0.521035 0.0973943,-0.773566l2.7852,-10.5094l2.79671e-08,-1.05468e-07c0.270652,-1.02067 -0.262537,-2.08289 -1.2427,-2.4757l-2.20542e-08,-8.83296e-09c-0.379505,-0.151996 -0.628276,-0.519688 -0.6282,-0.9285v-0.3229l-1.77636e-14,-9.40042e-08c-8.33514e-08,-0.552011 0.447289,-0.999614 0.9993,-1h2.9887l1.06497e-07,-5.28143e-10c1.65943,-0.00822943 3.01133,1.33033 3.01956,2.98976c0.00129458,0.261047 -0.0314356,0.52115 -0.0973639,0.773738Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+					<span class="sr-only">Info</span>
+					<div>
+						<span class="font-medium">Info: </span> 
+						{{ _("Specter does not use the block explorer to collect any data. This setting is only to allow opening transactions and addresses in a block explorer directly from Specter. All data Specter uses comes directly from your own connected full node.") }}
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<h3 class="mt-8">{{ _("Miscellaneous") }} </h3>
+				{% if current_user.is_admin %}
+					<div data-style="display: flex; flex-direction: column">
+						<div class="floating-wrapper">
+							<select class="floating-input peer" name="loglevel">
+								<option value="WARN" {% if loglevel=="WARN" %} selected="selected"{% endif %}>WARN</option>
+								<option value="INFO" {% if loglevel=="INFO" %} selected="selected"{% endif %}>INFO</option>
+								<option value="DEBUG" {% if loglevel=="DEBUG" %} selected="selected"{% endif %}>DEBUG</option>
+							</select>
+							<label class="floating-label" for="loglevel">{{ _("Logging Level") }}</label>
+							<tool-tip class="absolute right-10 top-2.5" width="200px">
+									<span slot="paragraph" class="break-all">
+										{{ _("The logging level determines the amount of output that is displayed in the terminal - if you run Specter from the terminal - and in the log file which can be found here:") }} {{ config.SPECTER_LOGFILE }}
+										{{ _("The debug option produces the most output, the warn option the least.") }}
+									</span>
+							</tool-tip>
+						</div>
+					</div>
+				{% endif %}
+
+				<div class="flex items-center mt-3 mb-2">
+				  <input type="checkbox" id="validatemerkleproof" name="validatemerkleproof" {% if validate_merkle_proofs %}checked{% endif %}>
+					<label for="validatemerkleproof" class="cursor-pointer">Validate Merkle Proofs</label>
+				</div>
+
+				{% include "includes/text-explainer.html" %}
+				<text-explainer>
+					<span slot="title" class="cursor-pointer">{{ _("What's this?") }} </span>
+					<div slot="content" class="mb-8">
+						{{ _("This option is intended for the usage of Specter Desktop with nodes that you don't fully trust (e.g. remote / cloud nodes).") }}
+						{{ _("If enabled, you will see block hashes in the transactions overview.") }}
+						{{ _("You can take those block hashes to double check whether they also exist in other locations (other nodes, block explorers, etc).") }}
+						{{ _("If so, you can be sure that the corresponding transaction was included in this block, since there is a relationship between the blockhash and the tx.") }}
+						{{ _("In a nutshell: It substitutes double checking a specific tx in a block explorer with checking a blockhash which increases privacy.") }}
+						{{ _("Cannot enable when using a pruned bitcoin node") }}
+					</div>
+				</text-explainer>
+
+				<text-explainer class="p-3">
+					<span slot="title" class="cursor-pointer">{{ _("Support Tools") }} </span>
+					<div slot="content" class="mt-3">
+						<a class="btn" href="{{url_for('spectrum_endpoint.wallets_get') }}">
+							Wallet Management
+						</a>
+					</div>
+				</text-explainer>
+
+				<div class="mt-8">
+					<button type="submit" class="button bg-accent text-white" name="action" value="save">{{ _("Save") }}</button>
+				</div>
+
+			</div>
+		</div>
+	</form>
+{% endblock %}
+
+
+{% block scripts %}
+	<script type="text/javascript">
+	function toggleHidden(elementId) {
+		let el = document.getElementById(elementId);
+		if (el.classList.contains("hidden")) {
+			el.classList.remove('hidden');
+		} else {
+			el.classList.add('hidden');
+		}
+	}
+	function updateFeeEstimator() {
+		if (document.getElementById('fee_estimator').value === "custom") {
+			document.getElementById('fee_estimator_custom_url').classList.remove('hidden');
+		} else {
+			document.getElementById('fee_estimator_custom_url').classList.add('hidden');
+		}
+	}
+	document.addEventListener("DOMContentLoaded", function(){
+		updateFeeEstimator();
+		var el = document.getElementById("file");
+
+		if (el != null) {
+			el.addEventListener("change", (e) => {
+				let wallets = []
+				let devices = []
+				files = e.currentTarget.files;
+				if (e.currentTarget.files.length == 1 && e.currentTarget.files[0].type == 'application/zip') {
+					showError(`{{ _("Cannot upload as ZIP file, please unzip the file and upload by selecting the extracted folder") }}`, 10000);
+					return;
+				}
+				console.log(files);
+				for(let i=0; i<files.length; i++){
+					if (files[i].type == 'application/json'){
+						let reader = new FileReader();
+						reader.onload = function(e) {
+							if (files[i].webkitRelativePath.indexOf('devices/') != -1) {
+								console.log(files[i].name);
+								try {
+									devices.push(JSON.parse(reader.result));
+								} catch {
+									showError(`Could not load Device ${files[i].name}: not valid json! This Device will be skipped for import which might affect corresponding Wallets.`)
+								}
+								document.getElementById('restoredevices').value = JSON.stringify(devices);
+								document.getElementById('filesloaded').innerHTML = `<br>Found ${devices.length} devices and ${wallets.length} wallets:`;
+								document.getElementById('restore').style.display = 'block';
+							} else if (files[i].webkitRelativePath.indexOf('wallets/') != -1) {
+								console.log(files[i].name);
+								try {
+									wallets.push(JSON.parse(reader.result));
+								} catch {
+									showError(`Could not load Wallet ${files[i].name}: not valid json! This wallet will be skipped for import.`)
+								}
+								document.getElementById('restorewallets').value = JSON.stringify(wallets);
+								document.getElementById('filesloaded').innerHTML = `<br>Found ${devices.length} devices and ${wallets.length} wallets:`;
+								document.getElementById('restore').style.display = 'block';
+							}
+						}
+						reader.readAsText(files[i]);
+					}
+				}
+			});
+		}
+	});
+
+	function updateAutoHideSensitiveInfoTimeout() {
+		console.log("autohide_sensitive_info_timeout");
+		if (document.getElementById('autohide_sensitive_info_timeout').value == "CUSTOM") {
+			document.getElementById('custom_autohide_sensitive_info_timeout').classList.remove('hidden');
+		} else {
+			document.getElementById('custom_autohide_sensitive_info_timeout').classList.add('hidden');
+		}
+	}
+	document.addEventListener("DOMContentLoaded", function(){
+		// Setup initial show/hide state
+		updateAutoHideSensitiveInfoTimeout();
+	});
+
+	{% if specter.config.auth.method != "none" %}
+		function updateAutoLogoutTimeout() {
+			if (document.getElementById('autologout_timeout') !== null && document.getElementById('autologout_timeout').value == "CUSTOM") {
+				document.getElementById('custom_autologout_timeout').classList.remove('hidden');
+			} else {
+				document.getElementById('custom_autologout_timeout').classList.add('hidden');
+			}
+		}
+		document.addEventListener("DOMContentLoaded", function(){
+			// Setup initial show/hide state
+			updateAutoLogoutTimeout();
+		});
+	{% endif %}
+
+	{% include "includes/language/language_js.jinja" %}
+
+	</script>
+{% endblock %}

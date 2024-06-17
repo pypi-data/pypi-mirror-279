@@ -1,0 +1,8 @@
+{% extends "devhelp/base.jinja" %}
+{% block main %}
+    <h1>Development Helper</h1>
+    {% from 'devhelp/components/devhelp_menu.jinja' import devhelp_menu with context %}
+    {{ devhelp_menu(tab) }}
+    {% block content %}
+    {% endblock %}
+{% endblock %}

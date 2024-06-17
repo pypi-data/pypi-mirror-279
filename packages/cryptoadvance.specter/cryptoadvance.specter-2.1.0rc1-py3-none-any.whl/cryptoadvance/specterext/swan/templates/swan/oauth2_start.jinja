@@ -1,0 +1,62 @@
+{% extends "swan/components/base.jinja" %}
+{% block main %}
+        <h1>{{ _("Enable Swan Integration") }}</h1>
+        <div id="instructions" class="flex p-4 mt-6 mb-4 bg-dark-600 rounded-lg">
+            <p class="text-white">
+                Linking of your account currently only works reliably if you are already signed into your Swan acccount. 
+                If you haven't already, login <a class="text-lg" href="{{ sign_in_url }}" target="_blank" title="Sign into Swan" alt="Swan sign in link">here</a>.
+            </p>
+        </div>
+        <a class="button bg-accent mt-8" id="step_one" onclick="pollSuccess(); window.open('{{ flow_url }}', '_blank');">
+            {{ _("Link your account") }}                   
+        </a>
+        <p class="hidden" id="step_two">
+            {{ _("Complete Swan link to proceed.")}}<br/>
+            {{ _("If linking is complete, click ") }} <a href=''> {{ _("here") }} </a>
+        </p>
+
+        <!-- Empty href will result in keeping on that page if the auth flow didn't succeeded yet -->
+        <!-- If suceeded, the polling call will redirect to the settings page -->
+        <a class="button hidden" id="step_three" onclick="location.href='';">
+            {{ _("Click here after linking") }}
+        </a>
+        
+        {# <div class="instructions" id="instructions">
+            {{ _("Click to sign into your Swan account and authorize Specter integration.") }}<br/>
+            {{ _("(will open in a new browser tab)") }} <br>
+        </div> #}
+{% endblock %}
+
+
+
+{% block scripts %}
+    <script>
+        function pollSuccess() {
+            console.log("pollSuccess started");
+            var step_one = document.getElementById("step_one");
+            var step_two = document.getElementById("step_two");
+            var instructions = document.getElementById("instructions");
+            step_one.classList.add("hidden");
+            instructions.classList.add("hidden");
+            step_two.classList.remove("hidden");
+
+            setInterval(function() {
+                console.log("polling");
+                var url = "{{ url_for(service.id +'_endpoint' + '.integration_check') }}";
+                fetch(url)
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        console.log(data);
+                        if (data.success) {
+                            var step_three = document.getElementById("step_three");
+                            step_two.classList.add("hidden");
+                            step_three.classList.remove("hidden");
+                            window.location.href = "{{ url_for(service.id +'_endpoint' + '.settings') }}"
+                        }
+                    });
+            }, 5000);
+        }
+    </script>
+{% endblock %}

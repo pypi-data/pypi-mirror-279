@@ -1,0 +1,72 @@
+<!-- 
+    A custom element for showing extra information.
+    It makes use of a collapsible design, where some 
+    descriptive data is hidden from the user, and can be 
+    accessed by clicking on the one-liner title present 
+    after 📚 icon.
+
+{#- Usage -
+
+    <text-explainer>
+        <span slot="title">One-Liner Text which is visible</span>
+        <div slot="content">
+            Content that is hidden by default
+        </div>
+    </text-explainer>
+
+#} 
+-->
+
+<template id="text-explainer">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{ url_for('static', filename='output.css') }}"
+    />
+
+    <div id="toggle-explainer" class="flex items-center select-none">
+        <div
+            class="text-sm cursor-pointer text-center align-middle leading-4 h-4 w-4 mr-2 inline-block"
+            id="drop-icon"
+        >
+            &#9654;
+        </div>
+        <slot class="text-base" name="title"></slot>
+    </div>
+
+    <div id="explainer-body" class="hidden ml-6">
+        <slot name="content"></slot>
+    </div>
+</template>
+
+<script type="text/javascript">
+    class TextExplainerElement extends HTMLElement {
+        constructor() {
+            super();
+            // Create a shadow root
+            let shadow = this.attachShadow({ mode: "open" });
+            let template = document.getElementById("text-explainer");
+            let clone = template.content.cloneNode(true);
+
+            this.toggleExplainer = clone.querySelector("#toggle-explainer");
+            this.explainerBody = clone.querySelector("#explainer-body");
+            this.dropIcon = clone.querySelector("#drop-icon");
+
+            shadow.appendChild(clone);
+        }
+
+        connectedCallback() {
+            this.toggleExplainer.onclick = () => {
+                if (this.explainerBody.classList.contains("hidden")) {
+                    this.explainerBody.classList.remove("hidden");
+                    this.dropIcon.innerHTML = "&#9660;";
+                } else {
+                    this.explainerBody.classList.add("hidden");
+                    this.dropIcon.innerHTML = "&#9654;";
+                }
+            };
+        }
+    }
+
+    customElements.define("text-explainer", TextExplainerElement);
+</script>

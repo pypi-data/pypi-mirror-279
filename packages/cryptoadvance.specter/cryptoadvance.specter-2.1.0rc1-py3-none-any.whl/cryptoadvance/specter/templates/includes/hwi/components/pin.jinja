@@ -1,0 +1,101 @@
+<div id="hwi_pin" class="hidden bg-dark-800 p-4 w-44">
+    <h2>{{ _("Enter PIN") }}</h2>
+    <div class="row">
+        <div id="hwi_pin_stars"></div>
+        <img id="hwi_pin_delete" src="{{ url_for('static', filename='img/clear-character.svg') }}" class="svg-white cursor-pointer">
+    </div>
+    <br>
+    <div id="hwi_pin_container" class="flex-center flex-column">
+    </div>
+</div>
+
+<script type="text/javascript">
+    async function enterPin(device, promptPin=true){
+        let result = null;
+        if (promptPin) {
+            showHWIProgress(`{{ _("Processing...") }}`, `{{ _("Keep your") }} ${capitalize(device.type)} {{ _("connected") }}.`);
+            try {
+                result = await hwi.promptPin(device);
+            } catch (error) {
+                handleHWIError(error);
+                return null;
+            }
+            console.log(result);
+            if(!overlayIsActive()){
+                // showNotification("HWI is ready again", 10000);
+                // no need to proceed at all
+                return null;
+            }
+            hidePageOverlay();
+        }
+
+        let el = document.getElementById("hwi_pin_container");
+        let stars = document.getElementById("hwi_pin_stars");
+        let deleteBtn = document.getElementById("hwi_pin_delete");
+        stars.innerHTML = "";
+        el.innerHTML = "";
+        let btns = [
+            [7,8,9],
+            [4,5,6],
+            [1,2,3]
+        ]
+        let pinReady = false;
+        let pin = "";
+        btns.forEach(btnrow =>{
+            let row = document.createElement('div');
+            btnrow.forEach(btnval => {
+                let btn = document.createElement('button');
+                btn.classList.add("bg-dark-600", "rounded", "m-1", "w-10", "h-10", "cursor-pointer", "hover:bg-dark-500");
+                btn.value = btnval;
+                btn.addEventListener('click', e=>{
+                    pin += btnval;
+                    stars.innerHTML += " ● ";
+                });
+                row.appendChild(btn);
+            });
+            el.appendChild(row);
+        });
+        el.appendChild(document.createElement('br'));
+        el.appendChild(document.createElement('br'));
+        let submit = document.createElement('button');
+        submit.classList.add("button", "text-base", "w-36");
+        submit.innerHTML = `{{ _("Submit") }}`;
+        submit.addEventListener('click', e=>{
+            pinReady = true;
+        });
+        el.appendChild(submit);
+        deleteBtn.addEventListener('click', e=>{
+            if (pin != "") {
+                pin = pin.substring(0, pin.length - 1);
+                stars.innerHTML = stars.innerHTML.substring(0, stars.innerHTML.length - 3);
+            }
+        });
+        // detect device
+        showPageOverlay("hwi_pin");
+        while(!pinReady){
+            await wait(100);
+            if(!overlayIsActive()){
+                console.log("cancelled");
+                return null;
+            }
+        }
+        hidePageOverlay();
+        // now we have PIN - send it
+        showHWIProgress(`{{ _("Processing...") }}`, `{{ _("Keep your") }} ${capitalize(device.type)} {{ _("connected") }}.`);
+        result = null;
+        try {
+            result = await hwi.sendPin(device, pin);
+        } catch (error) {
+            handleHWIError(error);
+            return null;
+        }
+        console.log(result);
+        if(!overlayIsActive()){
+            // showNotification("HWI is ready again", 10000);
+            // no need to proceed at all
+            return null;
+        }
+        hidePageOverlay();
+        return result;
+    }
+</script>

@@ -1,0 +1,15 @@
+{% from 'components/menu_item.jinja' import menu_item %}
+
+{# 
+    spectrum_menu - Tabs menu to navigate between the spectrum screens.
+    Parameters:
+    - active_menuitem: Current active tab. Options: 'general', 'settings', ...
+ #}
+{% macro spectrum_menu(active_menuitem) -%}
+	<nav class="text-center text-dark-200 border-b border-dark-600">
+		<ul class="flex flex-wrap -mb-px">
+			{{ menu_item(service.id, 'index', 'Main', active_menuitem) }}
+			{{ menu_item(service.id, 'wallets_get', 'Wallet Management', active_menuitem, isRight=true) }}
+		</ul>
+	</nav>
+{%- endmacro %}

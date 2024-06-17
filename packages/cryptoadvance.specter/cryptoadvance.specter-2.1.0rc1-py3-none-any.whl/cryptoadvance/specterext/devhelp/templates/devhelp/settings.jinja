@@ -1,0 +1,24 @@
+{% extends "devhelp/components/devhelp_tab.jinja" %}
+{% block title %}Settings{% endblock %}
+{% set tab = 'settings_get' %}
+{% block content %}
+    <div class="flex-col mt-4">
+        <form action="{{ url_for(service.get_blueprint_name() + '.settings_post') }}" method="POST" role="form">
+            <input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div>Show Menu Item:</div>
+            <select name="show_menu">
+                <option value="yes"   {% if show_menu == 'yes' %}selected{% endif %}>Yes</option>
+                <option value="no"    {% if show_menu == 'no'  %}selected{% endif %}>No</option>
+            </select>
+            <div class="mt-2">{{ _("Choose which wallet should be used:") }}</div>
+            <select name="used_wallet">
+                {% for wallet in wallets %}
+                    <option value="{{ wallet.alias }}" {% if associated_wallet == wallet %}selected{% endif %}>{{ wallet.name }}</option>
+                {% endfor %}
+            </select>
+            <div class="mt-2">
+                <button type="submit" class="btn">{{ _("Save") }}</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

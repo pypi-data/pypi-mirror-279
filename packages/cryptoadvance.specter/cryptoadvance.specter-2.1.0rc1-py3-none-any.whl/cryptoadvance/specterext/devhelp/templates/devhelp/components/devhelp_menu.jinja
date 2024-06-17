@@ -1,0 +1,16 @@
+{% from 'components/menu_item.jinja' import menu_item %}
+
+{# 
+    devhelp_menu - Tabs menu to navigate between the vaultoro screens.
+    Parameters:
+    - active_menuitem: Current active tab. Options: 'general', 'bitcoin_core', 'auth'.
+ #}
+{% macro devhelp_menu(active_menuitem) -%}
+	<nav class="text-center text-dark-200 border-b border-dark-600">
+		<ul class="flex flex-wrap -mb-px">
+			{{ menu_item(service.id, 'index', 'Main', active_menuitem, isLeft=true) }}
+			{{ menu_item(service.id, 'console', 'Console', active_menuitem ) }}
+			{{ menu_item(service.id, 'settings_get', 'Settings', active_menuitem, isRight=true) }}
+		</ul>
+	</nav>
+{%- endmacro %}

@@ -1,0 +1,16 @@
+<p>{{ _("For more information, take a look at our ") }} 
+    <a href="https://specter-desktop-docs.netlify.app/" target="_blank" title="Documentation" alt="Documentation link">documentation</a>
+    {{ _(" and ") }}
+    <a href="https://specter-desktop-docs.netlify.app/faq/" target="_blank" title="FAQs" alt="FAQs link">FAQs</a>
+    {{ _(". You can file") }}
+    <a href="https://github.com/cryptoadvance/specter-desktop/issues/new" target="_blank" title="GitHub" alt="GitHub link">issues on GitHub</a>
+    {{ _(" or ask in the Specter Community ") }}
+    <a href="https://t.me/spectersupport" target="_blank" title="Telegram" alt="Telegram link">Telegram Chat</a>.
+    {{ _(" Specter is supported and maintained by") }}
+    <a href="https://specter.solutions/" target="_blank" title="Telegram" alt="Telegram link">Specter Solutions</a>.
+</p>
+
+<span class="mt-8 block text-dark-300">
+    {{ _("Version: ") }}{{ specter.version.current }} &nbsp;&nbsp;&nbsp;
+    {{ _("UID: ") }}{{ specter.config_manager.data["uid"] }}
+</span>

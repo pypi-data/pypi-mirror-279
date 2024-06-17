@@ -1,0 +1,74 @@
+<div class="hidden bg-dark-800 pb-4" id="key_export_qr">
+    <div class="flex justify-between p-4 pb-0">
+        <h3 class="mb-0">{{ _("Export XPub") }}</h3>
+        <p class="m-0 cursor-pointer" onclick="hidePageOverlay()" class="cursor-pointer">Close</p>
+    </div>
+    <form class="flex-center flex-column">
+        <input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+        <div class="p-4">
+            <span id='key_qr_code'></span>
+            <br><pre id="key_text" class='key truncate' onclick="copyText(this.innerText, '{{ _("Copied full key") }}')">{{ key }}</pre>
+        </div>
+        <table>
+            <tr>
+            <td>
+                <label class="switch-label">{{ _("Show derivation path") }}:&nbsp;</label>
+            </td>
+            <td>
+                <label class="switch">
+                    <input type="checkbox" id="show_der_path" onchange="toggleKeyDisplay()">
+                    <span class="slider"></span>
+                </label>
+            </td>
+            </tr>
+            <tr>
+            <td>
+                <label class="switch-label">{{ _("Use SLIP-132") }}:&nbsp;</label>
+            </td>
+            <td>
+                <label class="switch">
+                    <input type="checkbox" id="use_slip_132" onchange="toggleKeyDisplay()">
+                    <span class="slider"></span>
+                </label>
+            </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+    let keys = [];
+    {% for key in device.keys %}
+        keys.push({
+            full_der_slip132: '{{ key }}',
+            full_der_no_slip132: '{{ key.to_string(slip132=False) }}',
+            no_der_slip132: '{{ key.original }}',
+            no_der_no_slip132: '{{ key.xpub }}'
+        });
+    {% endfor %}
+
+    function toggleKeyDisplay() {
+        let toggleDerPath = document.getElementById('show_der_path');
+        let toggleSlip132 = document.getElementById('use_slip_132');
+        let keyQr = document.getElementById('key_qr_code');
+        let keyText = document.getElementById('key_text');
+        let i = document.getElementById('key_selected').value;
+        if (toggleDerPath.checked) {
+            if (toggleSlip132.checked) {
+                keyQr.innerHTML = `<qr-code class='center' value="${keys[i].full_der_slip132}" width="${Math.min(window.innerWidth * 0.6, 400)}"></qr-code>`
+                keyText.innerText = keys[i].full_der_slip132;
+            } else {
+                keyQr.innerHTML = `<qr-code class='center' value="${keys[i].full_der_no_slip132}" width="${Math.min(window.innerWidth * 0.6, 400)}"></qr-code>`
+                keyText.innerText = keys[i].full_der_no_slip132;
+            }
+        } else {
+            if (toggleSlip132.checked) {
+                keyQr.innerHTML = `<qr-code class='center' value="${keys[i].no_der_slip132}" width="${Math.min(window.innerWidth * 0.6, 400)}"></qr-code>`
+                keyText.innerText = keys[i].no_der_slip132;
+            } else {
+                keyQr.innerHTML = `<qr-code class='center' value="${keys[i].no_der_no_slip132}" width="${Math.min(window.innerWidth * 0.6, 400)}"></qr-code>`
+                keyText.innerText = keys[i].no_der_no_slip132;
+            }
+        }
+    }
+</script>

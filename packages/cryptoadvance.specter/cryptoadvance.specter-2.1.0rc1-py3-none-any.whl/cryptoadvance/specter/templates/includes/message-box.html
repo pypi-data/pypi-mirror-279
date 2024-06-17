@@ -1,0 +1,100 @@
+<!--
+  Custom message box component.
+  You can use it as a normal html tag, for example:
+  <message-box type="error">error happened!!!</message-box>
+-->
+<template id="messagebox">
+  <style>
+    #error-text {
+      /* Additional styles for the slot to allow breaking long unbroken strings */
+      word-break: break-all; /* This is the key property for breaking long strings */
+      /* Other styles you might want to apply to #error-text */
+    }
+  </style>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='output.css') }}"
+  />
+
+  <div class="shadow-md rounded-xl px-4 py-3 mr-4 mb-3 bg-dark-500" id="main">
+    <slot class="text-white" id="error-text"
+      >Error: Something bad happened!</slot
+    >
+    <a class="ml-4 text-white cursor-pointer" id="cancel-icon">&#x2715;</a>
+  </div>
+</template>
+
+<script type="text/javascript">
+  class MessageBoxElement extends HTMLElement {
+    constructor() {
+      super();
+      // Create a shadow root
+      var shadow = this.attachShadow({ mode: "open" });
+      var style = document.getElementById("messagebox").content;
+      var clone = style.cloneNode(true);
+      this.main = clone.querySelector("#main");
+      this.text = clone.getElementById("error-text");
+      this.cancelIcon = clone.getElementById("cancel-icon");
+      clone.querySelector("a").addEventListener("click", (e) => {
+        this.close();
+      });
+
+      this.main.onclick = () => {
+        if (window.innerWidth < 690) {
+          this.close();
+        }
+      };
+      // Attach the created element to the shadow dom
+      shadow.appendChild(clone);
+    }
+    static get observedAttributes() {
+      return ["type", "timeout"];
+    }
+    close() {
+      this.main.style.opacity = 0;
+      this.main.style["animation-name"] = "disappear";
+      window.setTimeout(() => {
+        this.main.style.display = "none";
+      }, 200);
+    }
+    setType(type) {
+      if (type === "error") {
+        this.main.classList.remove("bg-dark-700");
+        this.text.classList.remove("text-white");
+        this.cancelIcon.classList.remove("text-white");
+        this.main.classList.add("bg-red-100");
+        this.text.classList.add("text-red-700");
+        this.cancelIcon.classList.add("text-red-700");
+      } else if (type == "warning") {
+        this.main.classList.remove("bg-dark-700");
+        this.text.classList.remove("text-white");
+        this.cancelIcon.classList.remove("text-white");
+        this.main.classList.add("bg-orange-100");
+        this.text.classList.add("text-orange-700");
+        this.cancelIcon.classList.add("text-orange-700");
+      }
+    }
+    connectedCallback() {
+      this.main.style.opacity = 0;
+      this.main.style["animation-name"] = "appear";
+      this.main.style.opacity = 1;
+    }
+    attributeChangedCallback(attrName, oldValue, newValue) {
+      var type = this.getAttribute("type");
+      var timeout = parseInt(this.getAttribute("timeout"));
+      if (type == "error") {
+        this.setType("error");
+      }
+      if (type == "warning") {
+        this.setType("warning");
+      }
+      if (timeout > 0) {
+        setTimeout(() => {
+          this.close();
+        }, timeout);
+      }
+    }
+  }
+  customElements.define("message-box", MessageBoxElement);
+</script>

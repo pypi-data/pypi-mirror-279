@@ -1,0 +1,17 @@
+<div style="display: none;"><!--<style>-->
+    .network-label {
+        display: flex;
+        align-items: center;
+    }
+</div><!--</style>-->
+<div class="network-label">
+    {% if key.xpub.startswith("xpub") %}
+        {% if "/1776h/" in key.derivation %}
+            <span>Liquid</span>
+        {% else %}
+            <span>Main</span>
+        {% endif %}
+    {% else %}
+        <span>Test</span>
+    {% endif %}
+</div>
