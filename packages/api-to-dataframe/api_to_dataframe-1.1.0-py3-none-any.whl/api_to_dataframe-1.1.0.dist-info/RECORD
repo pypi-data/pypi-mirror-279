@@ -1,0 +1,11 @@
+api_to_dataframe/__init__.py,sha256=2oG_LAzGyCCBi7bPfgZC0BVVn3rf3mXqfbBSwqp1epo,112
+api_to_dataframe/common/utils/retry_strategies.py,sha256=SbAUgjxdc8q2D57fRJqYHPq6JXZOJNzCzLwOf7Km2tI,152
+api_to_dataframe/config/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api_to_dataframe/controller/client_builder.py,sha256=-rbwK9V_2RFo3qKTDRtoFmBOEXyP7h6AkjQ8kPiVUv8,1728
+api_to_dataframe/models/get_data.py,sha256=Sj81buQ00hDdl3mhBd0MduGw-FmMf3JqRUt7zXAJtXI,1147
+api_to_dataframe/models/retainer.py,sha256=_Fb4009a8hRIiAMPH1FwC4aAEAUYwqRSsIMVfZoSHJU,635
+api_to_dataframe/views/dataframe_metrics.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+api_to_dataframe-1.1.0.dist-info/LICENSE,sha256=pKPw6WmgJ6VjPoJ0zbDSL1Y4E-yDB0I8ds12QuL1XLU,1089
+api_to_dataframe-1.1.0.dist-info/METADATA,sha256=xlQY_4vR8RMDO6Rhc8KdX32NjY5G4FaMS8hqKTNEEws,4760
+api_to_dataframe-1.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+api_to_dataframe-1.1.0.dist-info/RECORD,,
