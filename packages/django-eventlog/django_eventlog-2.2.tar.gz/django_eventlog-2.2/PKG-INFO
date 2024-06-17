@@ -1,0 +1,198 @@
+Metadata-Version: 2.1
+Name: django-eventlog
+Version: 2.2
+Summary: django-eventlog stores event messages in a Django model.
+Home-page: https://barttc.github.io/django-eventlog/
+License: MIT
+Keywords: django,logging,logger,events
+Author: Martin Mahner
+Author-email: martin@mahner.org
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: django (>=3.2)
+Project-URL: Bugtracker, https://github.com/bartTC/django-eventlog/issues
+Project-URL: Documentation, https://barttc.github.io/django-eventlog/
+Project-URL: Source, https://github.com/bartTC/django-eventlog
+Description-Content-Type: text/markdown
+
+[![](https://img.shields.io/pypi/v/django-eventlog.svg)](https://pypi.org/project/django-eventlog/)
+[![](https://github.com/bartTC/django-eventlog/actions/workflows/push.yml/badge.svg)](https://github.com/bartTC/django-eventlog/actions/workflows/push.yml)
+[![](https://codecov.io/github/bartTC/django-eventlog/graph/badge.svg?token=YLXXbCawUQ)](https://codecov.io/github/bartTC/django-eventlog)
+
+-----
+
+📖 **Full documentation: https://barttc.github.io/django-eventlog/**
+
+*Compatibility Matrix:*
+
+| Py/Dj     | 3.8 | 3.9 | 3.10 | 3.11 | 3.12 |
+| --------- | --- | --- | ---- | ---- | ---- |
+| 3.2 (LTS) |  ✓  |  ✓  |  ✓   |  ✓   |  ✓   |
+| 4.0       |  ✓  |  ✓  |  ✓   |  ✓   |  ✓   |
+| 4.1       |  ✓  |  ✓  |  ✓   |  ✓   |  ✓   |
+| 4.2 (LTS) |  ✓  |  ✓  |  ✓   |  ✓   |  ✓   |
+| 5.0       |  —  |  —  |  ✓   |  ✓   |  ✓   |
+
+# django-eventlog
+
+<img src="https://github.com/bartTC/django-eventlog/raw/main/docs/_static/logo.webp" alt="djang-eventlog Logo" width="300"/>
+
+django-eventlog is a very simple event logger you can use to track certain actions in 
+your code. Events are stored in a Django model and can be viewed in the Django Admin.
+
+Usage Example:
+
+```python
+from eventlog import EventGroup
+
+e = EventGroup()                       # Start a new Event Group
+e.info('About to send 1000 mails.',    # Trigger an Event
+       initiator='Mailer Daemon')
+try:
+    # ... sending 1000 mails
+    e.info('All emails sent!',         # Trigger an Event in the same group,
+           initiator='Mailer Daemon')  # so they are combined in the admin.
+except Exception:
+    e.error('There was an error sending the emails.',
+            initiator='Mailer Daemon')
+```
+
+You can reuse an event group by specifying a group name and attach optional data. Data 
+must be JSON serializable.
+
+```python
+from eventlog import EventGroup
+
+def purchase():
+    e = EventGroup(group_id=f"Order {self.order.pk}")
+    e.info("Sent order to Shopify", data={"items": [1, 2, 3]})
+
+def subscribe_newsletter():
+    e = EventGroup(group_id=f"Order {self.order.pk}")
+    e.info("User subscribed to newsletter on checkout", data={"email": "user@example.com"})
+```
+
+Events can be grouped in a "Event Group" and when hovering over one item in the admin, 
+all events of the same group are highlighted:
+
+![](https://github.com/bartTC/django-eventlog/raw/main/docs/_static/change_list.png)
+
+The details view of an event will list all other events of this group so you
+can track the progress:
+
+![](https://github.com/bartTC/django-eventlog/raw/main/docs/_static/change_form.png)
+
+While looking similar, it's not intended to be a replacement for your regular Python 
+`logging` facility, rather an addition to it.
+
+django-eventlog stores it's data in a regular database model, so each log entry will 
+trigger a SQL Insert. Therefore you should be careful using it in high performance 
+and/or high volume environments.
+
+# Changelog
+
+## 2.2 (2024-06-16)
+
+- Minor typo fixes
+- The 'group' db field now uses a DB index.
+
+## 2.1 (2024-03-20)
+
+- The format and value of the random group id can now be specified using the AppConfig.
+- Various improvements to make the Event model swappable via the AppConfig.
+- Switch development tooling from Pipenv to Poetry
+
+## 2.0 (2024-03-10)
+
+- Overall test and code refactor.
+- Documentation now done with MKDocs.
+- Timeline in Admin change form now supports delays of days and hours, instead of just minutes.
+- _Backwards incompatible:_ Removed undocumented `Event.objects.purge()` queryset method.
+- _Backwards incompatible:_ The list of event types defined in the app config is now
+  set via Python dataclasses rather than a dictionary. The migration is straightforward.
+
+  ```python
+  event_types = {
+      "info": {
+          "label": _("Info"),
+          "color": None,
+          "bgcolor": None,
+      },
+      "warning": {
+          "label": _("Warning"),
+          "color": None,
+          "bgcolor": None,
+      },
+      # ...
+  }
+  ```
+
+  The dictionary is now a `EventTypeList` of `EventType` dataclasses:
+
+  ```python
+  from django.utils.translation import gettext_lazy as _
+  from eventlog.datastructures import EventType, EventTypeList
+
+  # List of event types to be used in events. A list of `EventType` classes
+  event_types = EventTypeList(
+      EventType(name="info", label=_("Info")),
+      EventType(name="warning", label=_("Warning")),
+      EventType(name="error", label=_("Error"), color="red"),
+      EventType(name="critical", label=_("Critical"), color="white", bgcolor="red"),
+  )
+  ```
+
+  You will only need to do this change if you've earlier overridden the event_type property.
+
+## 1.5 (2024-03-08)
+
+- Event can have optional, JSON serializable data attached.
+- Fixed dark mode colors.
+- Various Admin UI improvements.
+
+## 1.4 (2024-03-05)
+
+- Event groups can now have arbitrary names instead of UUIDs.
+- Event comments is a textfield.
+- Fixed potential migration warnings around AutoFields.
+
+## 1.3 (2023-10-04)
+
+- Python 3.12 compatibility
+- Django 5.0 support
+- Type Annotations
+
+## 1.2 (2023-04-28)
+
+- Python 3.7 to 3.11 compatibility
+- Django 3.2 to 4.2 support
+
+## 1.1 (2018-05-11)
+
+- Added ability to manually set a group id to make an EventGroup object
+  reusable through threads.
+
+## 1.0 (2018-02-13)
+
+- Production ready 1.0 release.
+- The details Admin view now displays all events of the group with an
+  annotated delay, so you can see the progress of the group.
+
+## 0.9 (2018-02-13)
+
+- Initial release.
+- Django 1.8 to 2.0 compatibility.
+- Python 2.7 to 3.6 compatibility.
+
