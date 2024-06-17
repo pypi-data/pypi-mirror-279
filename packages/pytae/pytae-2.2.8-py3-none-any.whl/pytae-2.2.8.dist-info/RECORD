@@ -1,0 +1,14 @@
+pytae/__init__.py,sha256=oBdPLM2Ga72TADx_qSSJpzHFyCtvOj7n9NgfT-msbzM,97
+pytae/agg_df.py,sha256=0NcRksEyS10-lJ3a1mVrS-0XqFKDo3bckOr8do4jygw,2527
+pytae/get_data.py,sha256=OmR_96gIlYWo1d_0ShDqn-GKwE_qHZ2zBq8XFL-Xaxo,1682
+pytae/other_utilities.py,sha256=hopzfz-YbUY7yOIEA75jAWmswZ31MvsMyJO3TMtK7aI,1570
+pytae/shape.py,sha256=fbFs-rS8wtM4IChYiWeVkT_jsja81BDx0iIvm4BusT4,3126
+pytae/.ipynb_checkpoints/__init__-checkpoint.py,sha256=oBdPLM2Ga72TADx_qSSJpzHFyCtvOj7n9NgfT-msbzM,97
+pytae/.ipynb_checkpoints/agg_df-checkpoint.py,sha256=0NcRksEyS10-lJ3a1mVrS-0XqFKDo3bckOr8do4jygw,2527
+pytae/.ipynb_checkpoints/get_data-checkpoint.py,sha256=OmR_96gIlYWo1d_0ShDqn-GKwE_qHZ2zBq8XFL-Xaxo,1682
+pytae/.ipynb_checkpoints/other_utilities-checkpoint.py,sha256=hopzfz-YbUY7yOIEA75jAWmswZ31MvsMyJO3TMtK7aI,1570
+pytae/.ipynb_checkpoints/shape-checkpoint.py,sha256=fbFs-rS8wtM4IChYiWeVkT_jsja81BDx0iIvm4BusT4,3126
+pytae-2.2.8.dist-info/METADATA,sha256=H5XT-ITWoPaR2do8hHwrB3PrHGeMBL8uAdtXfZSc664,1159
+pytae-2.2.8.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pytae-2.2.8.dist-info/licenses/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+pytae-2.2.8.dist-info/RECORD,,
