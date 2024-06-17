@@ -1,0 +1,18 @@
+Metadata-Version: 2.3
+Name: tgtables
+Version: 0.0.1
+Summary: A package for creating tables in Telegram
+Project-URL: Homepage, https://github.com/chmilenko-d/tgtables
+Project-URL: Issues, https://github.com/chmilenko-d/tgtables/issues
+Author: chmilenko_d
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: pytelegrambotapi>=4.19.1
+Description-Content-Type: text/markdown
+
+# tgtables
+
+A package for creating tables in Telegram
