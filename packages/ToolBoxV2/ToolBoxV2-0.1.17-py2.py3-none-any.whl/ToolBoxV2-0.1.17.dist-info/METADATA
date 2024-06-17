@@ -1,0 +1,90 @@
+Metadata-Version: 2.1
+Name: ToolBoxV2
+Version: 0.1.17
+Summary: Command line interface for interactions with the ToolBox Network.
+Home-page: https://github.com/MarkinHaus/ToolBoxV2
+Author: Markin Hausmanns
+Author-email: Markinhausmanns@gmail.com
+License: Apache Software License 2.0
+Keywords: toolboxv2
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.rst
+Requires-Dist: aiohttp ==3.9.5
+Requires-Dist: cachetools ==5.3.3
+Requires-Dist: cryptography ==42.0.7
+Requires-Dist: dill ==0.3.8
+Requires-Dist: Faker ==25.0.1
+Requires-Dist: fastapi ==0.111.0
+Requires-Dist: mailjet-rest ==1.3.4
+Requires-Dist: packaging ==24.0
+Requires-Dist: Pillow ==10.3.0
+Requires-Dist: playwright ==1.43.0
+Requires-Dist: prompt-toolkit ==3.0.43
+Requires-Dist: psutil ==5.9.8
+Requires-Dist: pydantic ==2.7.3
+Requires-Dist: Pygments ==2.18.0
+Requires-Dist: PyJWT ==2.8.0
+Requires-Dist: pystray ==0.19.5
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: qrcode ==7.4.2
+Requires-Dist: radon ==6.0.1
+Requires-Dist: readchar ==4.0.6
+Requires-Dist: redis ==5.0.4
+Requires-Dist: reedsolo ==1.7.0
+Requires-Dist: Requests ==2.32.3
+Requires-Dist: rich ==13.7.1
+Requires-Dist: schedule ==1.2.1
+Requires-Dist: setuptools ==68.2.2
+Requires-Dist: starlette ==0.37.2
+Requires-Dist: tqdm ==4.66.4
+Requires-Dist: watchfiles ==0.22.0
+Requires-Dist: webauthn ==2.1.0
+Requires-Dist: yarl ==1.9.4
+Requires-Dist: IPython
+Requires-Dist: itsdangerous ==2.2.0
+
+## ReSimpleToolBox
+
+[![image](https://img.shields.io/pypi/v/ToolBoxV2.svg)](https://pypi.python.org/pypi/ToolBoxV2)
+[![image](https://img.shields.io/conda/vn/conda-forge/ToolBoxV2.svg)](https://anaconda.org/conda-forge/ToolBoxV2)
+
+[![image](https://pyup.io/repos/github/MarkinHaus/ToolBoxV2/shield.svg)](https://pyup.io/repos/github/MarkinHaus/ToolBoxV2)
+[![image](https://img.shields.io/badge/Donate-Buy%20me%20a%20coffee-yellowgreen.svg)](https://pyup.io/repos/github/MarkinHaus/ToolBoxV2)
+
+Application center *toolbox* for simple functions through to finished applications.
+
+## Goal
+The primary goal of the toolbox is to execute applications, integrate them, and make them system-independent.
+The underlying system, built on a monolithic modular architecture, combines the advantages of both approaches,
+enabling intuitive interaction with the digital world. It connects various components and provides utility functions accessible from anywhere.
+Automatic error corrections are performed within a defined framework if necessary to ensure successful execution.
+This platform promotes creative collaboration and eases access to digital resources.
+
+## Assembly
+- [INSTALLER](https://simplecore.app/web/core0/Installer.html)
+- `
+    pip install ToolBoxV2
+`
+- `
+    git clone git://github.com/MarkinHaus/ToolBoxV2
+`
+
+Lizenz
+
+~ Apache Software License 2.0 ~
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and
+the [giswqs/pypackage](https://github.com/giswqs/pypackage) project template.
