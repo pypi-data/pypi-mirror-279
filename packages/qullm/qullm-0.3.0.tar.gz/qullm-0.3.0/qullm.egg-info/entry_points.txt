@@ -1,0 +1,2 @@
+[console_scripts]
+llm_data_processor = llm_data_processor.__main__:main
