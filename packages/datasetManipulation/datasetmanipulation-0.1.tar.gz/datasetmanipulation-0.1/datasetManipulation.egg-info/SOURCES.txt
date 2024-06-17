@@ -1,0 +1,11 @@
+setup.py
+datasetManipulation.egg-info/PKG-INFO
+datasetManipulation.egg-info/SOURCES.txt
+datasetManipulation.egg-info/dependency_links.txt
+datasetManipulation.egg-info/entry_points.txt
+datasetManipulation.egg-info/requires.txt
+datasetManipulation.egg-info/top_level.txt
+src/__init__.py
+src/datasetUtils.py
+src/getAndMergeDatasets.py
+src/splitDataset.py
