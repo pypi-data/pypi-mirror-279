@@ -1,0 +1,12 @@
+minimal_molview/__init__.py,sha256=s-LZ4w9V-FB3UzZucflqfuensLuhbrWUUNU7RE86lVY,119
+minimal_molview/_version.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+minimal_molview/py.typed,sha256=o_skYYOgBqbwMt-5lUZDunyM7CcemHaJt2k9MsSACeY,61
+minimal_molview/render.py,sha256=B_lyrQpwP9Ol7rMc35THWt1XSfA10ia2c1m2Ei9FoXw,1159
+minimal_molview/tests/__init__.py,sha256=nRKPWsTbB025bJRfX6ZOZayBVXMs3HMdd_JXUPpjWnA,113
+minimal_molview/tests/test_minimal_molview.py,sha256=Yoa_Ig5Z_SJIr86Plda_GMnjdMduWEhNpPk7DBZEnwQ,335
+minimal_molview-0.1.1.dist-info/LICENSE,sha256=IWgfIl0EcWXFhESJrWzV2y4x92f_LubKm7yaEFoqgwA,1082
+minimal_molview-0.1.1.dist-info/METADATA,sha256=_lsaMYCe3Wln32InreYuK9BDJS2X9DI7Jl62gKXHXN0,1263
+minimal_molview-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+minimal_molview-0.1.1.dist-info/entry_points.txt,sha256=SPYzd70UCh6dj4bTQDKN8Rm3TXv-PHRdhRcyPbCzsbo,64
+minimal_molview-0.1.1.dist-info/top_level.txt,sha256=EgpppmIl-4kPUb6ogeGrh_0opfZ6ogF_Nq3zIxMLqPQ,16
+minimal_molview-0.1.1.dist-info/RECORD,,
