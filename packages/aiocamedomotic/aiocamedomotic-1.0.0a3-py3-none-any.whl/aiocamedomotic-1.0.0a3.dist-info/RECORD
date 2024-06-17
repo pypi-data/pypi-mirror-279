@@ -1,0 +1,13 @@
+aiocamedomotic/__init__.py,sha256=e9b3n8pBIj_1TntEixs2HTPd1WnKKsGtjDwCk6BSj2o,1809
+aiocamedomotic/auth.py,sha256=YwaXym2T9qs2hQdaehmje1Qw2yUCzMe5HX968eXNPM8,18482
+aiocamedomotic/came_domotic_api.py,sha256=JVEM61JN5hHafOYfb4Dq33NVJ1McNjJjn2F0SHgyLYs,7086
+aiocamedomotic/const.py,sha256=ZxIyIs7jL4atMEU9pS1fImdZpbw7XGA1fTk8_GTSf-c,1653
+aiocamedomotic/errors.py,sha256=QYKvNw412YsOgeN1D_Hcd0geZeg5cRVdDvHvO-dlWb8,1771
+aiocamedomotic/models/__init__.py,sha256=SUml3GJLunBoc9S2KGvQ8oHlcJxLyi38Ma2pS7Zv7dE,923
+aiocamedomotic/models/base.py,sha256=C6pzYV-ife5dYPHiw-K9dGlxRyM00mepG3c2ESdWo1A,3448
+aiocamedomotic/models/light.py,sha256=ydFlw6ZwmbhBQLnumY575v4HU96QdAayo4UCIHZCUIY,5099
+aiocamedomotic/models/update.py,sha256=eWH31MM_us1M6QkwgFHAg0gy4525seAToZe1MSjq2S0,1209
+aiocamedomotic-1.0.0a3.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aiocamedomotic-1.0.0a3.dist-info/METADATA,sha256=2dhS-N8-UbGhg9PqfTmlai7P8anLLlyKAGY1H4CvmX8,6499
+aiocamedomotic-1.0.0a3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+aiocamedomotic-1.0.0a3.dist-info/RECORD,,
