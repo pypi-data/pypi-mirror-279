@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spector"
+version = "1.5"
+description = "Sparse vectors."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE.txt"}
+authors = [{name = "Aric Coady", email = "aric.coady@gmail.com"}]
+keywords = ["sparse", "array", "vector", "matrix", "numpy", "scipy"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+dependencies = ["numpy"]
+
+[project.urls]
+Homepage = "https://github.com/coady/spector"
+Documentation = "https://coady.github.io/spector"
+Changelog = "https://github.com/coady/spector/blob/main/CHANGELOG.md"
+Issues = "https://github.com/coady/spector/issues"
+
+[tool.setuptools]
+packages = ["spector"]
+
+[tool.setuptools.package-data]
+spector = ["*.pyx"]
+
+[tool.ruff]
+line-length = 100
+extend-include = ["*.ipynb"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[[tool.mypy.overrides]]
+module = "spector.vector"
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["spector"]
+branch = true
+plugins = ["Cython.Coverage"]
