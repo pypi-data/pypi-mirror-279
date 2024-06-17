@@ -1,0 +1,7 @@
+safetensors_dataset/__init__.py,sha256=ATylHKEHHynYW_7E6UThIhDSWfwVBy6Qu7nxea5gOd4,78
+safetensors_dataset/safetensors.py,sha256=a0X_dOkS2G1JmhxPMlwX_0TPwtLoOAWcSfyTxr_NWQo,8699
+safetensors_dataset-0.0.2.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+safetensors_dataset-0.0.2.dist-info/METADATA,sha256=131nDDe4sDqdgzYMtZrhMP9L7aSRysmsmNzmnTw8qAQ,1331
+safetensors_dataset-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+safetensors_dataset-0.0.2.dist-info/top_level.txt,sha256=MR8Q-XqQWOy5GMXozSvyDRI03pkANlw-FTdhsf_nubs,20
+safetensors_dataset-0.0.2.dist-info/RECORD,,
