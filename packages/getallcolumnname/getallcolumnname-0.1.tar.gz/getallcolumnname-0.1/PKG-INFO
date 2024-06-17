@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: getallcolumnname
+Version: 0.1
+Summary: getallcolumns
+Author: srini
+Keywords: python,pyspark,catalog,schema
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/plain
+
+fetch_allcolumns
+================
+
+Installation
+------------
+
+You can install this package using pip:
+
+```sh
+pip install fetch_allcolumns
+
+Usage
+-----
+
+Here is an example of how to use the functions in this package:
+
+```python
+import fetch_allcolumns
+
+
+Version
+0.1
