@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: BrownieCutter
+Version: 0.1.4
+Summary: Quick script to create new python project
+Home-page: https://github.com/thiswillbeyourgithub/BrownieCutter
+License: GPLv3
+Keywords: cookiecutter,pypi,install,package,python,minimal,minimalist,tool
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+License-File: LICENSE.md
+Requires-Dist: fire >=0.6.0
+Requires-Dist: typeguard >=4.3.0
+
+Quick script to create new python project
