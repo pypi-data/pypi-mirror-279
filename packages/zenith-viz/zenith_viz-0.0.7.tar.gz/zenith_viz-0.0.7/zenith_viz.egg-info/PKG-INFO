@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: zenith_viz
+Version: 0.0.7
+Summary: 3D Accelerated Data Viz
+Home-page: https://github.com/mpfaffenberger/zenith-viz
+Author: Michael Pfaffenberger
+Author-email: mike.pfaffenberger@gmail.com
+License-File: LICENSE
