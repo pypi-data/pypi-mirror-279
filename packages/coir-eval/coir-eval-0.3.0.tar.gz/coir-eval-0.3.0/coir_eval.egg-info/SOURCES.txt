@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+coir/__init__.py
+coir/data_loader.py
+coir/evaluation.py
+coir/models.py
+coir/utils.py
+coir_eval.egg-info/PKG-INFO
+coir_eval.egg-info/SOURCES.txt
+coir_eval.egg-info/dependency_links.txt
+coir_eval.egg-info/requires.txt
+coir_eval.egg-info/top_level.txt
