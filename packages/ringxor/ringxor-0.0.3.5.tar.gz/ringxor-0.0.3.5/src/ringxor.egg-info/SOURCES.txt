@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+src/ringxor/__init__.py
+src/ringxor/ringxor.py
+src/ringxor.egg-info/PKG-INFO
+src/ringxor.egg-info/SOURCES.txt
+src/ringxor.egg-info/dependency_links.txt
+src/ringxor.egg-info/not-zip-safe
+src/ringxor.egg-info/requires.txt
+src/ringxor.egg-info/top_level.txt
+tests/test_ringxor.py
