@@ -1,0 +1,12 @@
+LICENSE.md
+README.md
+pyproject.toml
+requirements.txt
+setup.py
+nrt_string_utils/__init__.py
+nrt_string_utils/string_utils.py
+nrt_string_utils.egg-info/PKG-INFO
+nrt_string_utils.egg-info/SOURCES.txt
+nrt_string_utils.egg-info/dependency_links.txt
+nrt_string_utils.egg-info/top_level.txt
+tests/tests_suite.py

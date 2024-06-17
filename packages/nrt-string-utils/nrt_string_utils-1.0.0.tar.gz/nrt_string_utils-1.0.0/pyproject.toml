@@ -1,0 +1,40 @@
+[project]
+
+name='nrt-string-utils'
+version='1.0.0'
+authors=[
+{ name='Eyal Tuzon', email='eyal.tuzon.dev@gmail.com' }
+]
+description='String utilities in Python'
+keywords=[
+'python', 'python3', 'python-3',
+'utilities', 'utils', 'util',
+'tool', 'tools', 'nrt', 'nrt-utils',
+'string', 'string-utils', 'string-utilities', 'nrt-string-utils',
+'nrt-string-utilities',
+]
+readme='README.md'
+requires-python='>=3.8'
+classifiers=[
+'Programming Language :: Python :: 3',
+'Programming Language :: Python :: 3.8',
+'Programming Language :: Python :: 3.9',
+'Programming Language :: Python :: 3.10',
+'Programming Language :: Python :: 3.11',
+'Programming Language :: Python :: 3.12',
+'License :: OSI Approved :: MIT License',
+'Operating System :: OS Independent'
+]
+
+dynamic=['dependencies']
+
+[project.urls]
+
+'Homepage'='https://github.com/etuzon/python-nrt-string-utils'
+'Bug Tracker'='https://github.com/etuzon/python-nrt-string-utils/issues'
+'documentation'='https://github.com/etuzon/python-nrt-string-utils/wiki'
+
+[tool.setuptools]
+
+packages = ['nrt_string_utils']
+py-modules = []
