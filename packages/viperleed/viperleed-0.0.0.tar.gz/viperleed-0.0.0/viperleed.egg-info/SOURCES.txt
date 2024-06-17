@@ -1,0 +1,6 @@
+pyproject.toml
+viperleed/__init__.py
+viperleed.egg-info/PKG-INFO
+viperleed.egg-info/SOURCES.txt
+viperleed.egg-info/dependency_links.txt
+viperleed.egg-info/top_level.txt

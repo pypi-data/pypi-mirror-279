@@ -1,0 +1,7 @@
+[project]
+name = 'viperleed'
+version = '0.0.0'
+description = 'Coming soon'
+
+[project.urls]
+Homepage = 'https://viperleed.org'
