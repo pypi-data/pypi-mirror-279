@@ -1,0 +1,7 @@
+python-jose
+requests
+
+[test]
+python-jose
+requests
+pytest
