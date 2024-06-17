@@ -1,0 +1,14 @@
+pixi_diff_to_markdown/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pixi_diff_to_markdown/__main__.py,sha256=kaLuL3HvJLsinUXZDHbn3VlYddbQVUMAtf4zOxNjR_c,80
+pixi_diff_to_markdown/cli.py,sha256=Qm-HCp1U_fLLYDKHEL30ld1Dqgc-XJ9wOWBeJ3Pxgc8,2516
+pixi_diff_to_markdown/diff.py,sha256=ui_jMzQPTyWJUCxISYAQqh16FKcId1MtPVYkCItIGIo,6288
+pixi_diff_to_markdown/environments_to_string.py,sha256=kSDu7cZ6DSap52I0U_dWHF858o08SNwxmh_-t27Gdxs,6096
+pixi_diff_to_markdown/markdown.py,sha256=Wg3902RnJYEpcSrYhXiwbZutjTwafJEDiLz2gE200f8,287
+pixi_diff_to_markdown/models.py,sha256=CvoSW4dXVLG72xBsYKFwTUUGfRD42-rRoT_tPftKixg,8892
+pixi_diff_to_markdown/pydantic_settings_extension.py,sha256=h4CyoLt7elHyuah7vWnJbRxhDhy4GYIM2VCt2j8mJmg,925
+pixi_diff_to_markdown/settings.py,sha256=xt9cyj6f25b5s62BSSDurhUTZp9DE_1CHV_rOGfDOvI,1658
+pixi_diff_to_markdown-0.2.1.dist-info/METADATA,sha256=k2fgFXBKkVV2T1hE6DFi3_moQzCyw-Obk1DjYJGRSmA,5328
+pixi_diff_to_markdown-0.2.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pixi_diff_to_markdown-0.2.1.dist-info/entry_points.txt,sha256=UDLRWStxzZGoEFR4c2s3vXBqkBt7VQHISxHcB2mJNkQ,77
+pixi_diff_to_markdown-0.2.1.dist-info/licenses/LICENSE,sha256=07Ki9FyoVU_NZyjoBiXP09ZcwXy3ct2jiZhE-_VmHXE,1517
+pixi_diff_to_markdown-0.2.1.dist-info/RECORD,,
