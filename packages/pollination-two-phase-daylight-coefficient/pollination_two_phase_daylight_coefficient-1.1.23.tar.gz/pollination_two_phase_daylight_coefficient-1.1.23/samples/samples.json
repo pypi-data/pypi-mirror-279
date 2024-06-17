@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Sample",
+        "description": "Basic sample model.",
+        "inputs": {
+            "model": "sample_model_grid.hbjson",
+            "wea": "Boston-Logan Intl AP_0_8759.wea"
+        }
+    },
+    {
+        "name": "Sample with Aperture Groups",
+        "description": "Sample model with Aperture Groups.",
+        "inputs": {
+            "model": "sample_model_grid_aperture_groups.hbjson",
+            "wea": "Boston-Logan Intl AP_0_8759.wea"
+        }
+    }
+]
