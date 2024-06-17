@@ -1,0 +1,13 @@
+ndsplines-0.2.0rc2.dist-info/WHEEL,sha256=L0ABBnxO_xKRR_wTzM7WWWX8RRfdKRK-fZ5a3ZEhDqQ,148
+ndsplines-0.2.0rc2.dist-info/LICENSE,sha256=j-m0LDh3slEDN21iNceoswE1XBCMEMdPc8DaJy1gHTk,3337
+ndsplines-0.2.0rc2.dist-info/top_level.txt,sha256=hAAzrTtKFEqz7k-TQic_dqzoqNB-bmWi-oc_xkKdQUA,10
+ndsplines-0.2.0rc2.dist-info/RECORD,,
+ndsplines-0.2.0rc2.dist-info/METADATA,sha256=kr8fEA8P-DHZbpqUCPUwVtrNdmgmmrQ68bpGwAS9rCI,12849
+ndsplines/__init__.py,sha256=sw3L2GOUdaHp-vEnU4P1MMDmmP1rI2SFyGFowrZmZqo,1185
+ndsplines/_bspl.pyx,sha256=liY4HNFuNv5O-sS26VLjWlavWTULw1zfMNJfJD_GQtU,4619
+ndsplines/_bspl.c,sha256=QxjJXSzBxmld5MSFd6UXSEK8lw7J_eD20cJ3FASQavg,1118502
+ndsplines/_bspl.h,sha256=RxFFZ4NMlLk0Ywp0yXINmNAejjS9gTFL5tVVAPOINGA,1854
+ndsplines/_npy_bspl.py,sha256=yTp-KA6qYHWq-I-J17MCA5i8-i2HUBfQ_Eu6m334gec,5051
+ndsplines/version.py,sha256=Obn8RSVqES6EqFdUBRjylQLYizCdbibUbecyVBfT_LQ,414
+ndsplines/ndsplines.py,sha256=BF3DHZrFPuKjvsyNfRhuW__AH1CZ9mh4adkYhcqaANQ,31350
+ndsplines/_bspl.cpython-38-x86_64-linux-gnu.so,sha256=NgUqNl18lSn5DrPgV0CqJs3Vp-S_7jEHZtIOiNs1RWo,1478176
