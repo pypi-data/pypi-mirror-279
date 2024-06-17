@@ -1,0 +1,67 @@
+from enum import Enum
+from typing import List
+from typing import Optional
+
+from pydantic import field_validator
+
+from .message import Message
+
+
+class SortOrder(str, Enum):
+    ascending = "ascending"
+    descending = "descending"
+
+
+class SearchRequest(Message):
+    """SearchRequest object defined at https://datatracker.ietf.org/doc/html/rfc7644#section-3.4.3"""
+
+    schemas: List[str] = ["urn:ietf:params:scim:api:messages:2.0:SearchRequest"]
+
+    attributes: Optional[List[str]] = None
+    """A multi-valued list of strings indicating the names of resource
+    attributes to return in the response, overriding the set of attributes that
+    would be returned by default."""
+
+    excluded_attributes: Optional[List[str]] = None
+    """A multi-valued list of strings indicating the names of resource
+    attributes to be removed from the default set of attributes to return."""
+
+    filter: Optional[str] = None
+    """The filter string used to request a subset of resources."""
+
+    sort_by: Optional[str] = None
+    """A string indicating the attribute whose value SHALL be used to order the
+    returned responses."""
+
+    sort_order: Optional[SortOrder] = None
+    """A string indicating the order in which the "sortBy" parameter is
+    applied."""
+
+    start_index: Optional[int] = None
+    """An integer indicating the 1-based index of the first query result."""
+
+    @field_validator("start_index")
+    @classmethod
+    def start_index_floor(cls, value: int) -> int:
+        """According to :rfc:`RFC7644 §3.4.2 <7644#section-3.4.2.4>,
+        start_index values less than 0 are interpreted as 0.
+
+        A value less than 1 SHALL be interpreted as 1.
+        """
+
+        return max(0, value)
+
+    count: Optional[int] = None
+    """An integer indicating the desired maximum number of query results per
+    page."""
+
+    @field_validator("count")
+    @classmethod
+    def count_floor(cls, value: int) -> int:
+        """According to :rfc:`RFC7644 §3.4.2 <7644#section-3.4.2.4>, count
+        values less than 1 are interpreted as 1.
+
+        A value less than 1 SHALL be interpreted as 1.
+        """
+
+        return max(1, value)
