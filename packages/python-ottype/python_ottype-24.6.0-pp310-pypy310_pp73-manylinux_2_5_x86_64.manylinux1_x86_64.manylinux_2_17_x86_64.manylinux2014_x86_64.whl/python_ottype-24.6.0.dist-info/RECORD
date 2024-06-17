@@ -1,0 +1,11 @@
+ottype/__init__.py,sha256=69_W4XHkZDfkVs_JnmjGBhPuJDg0899m0-PKOrzumJE,1141
+ottype/core.py,sha256=kQYLJ7qKYB1kwbYBNxFijE0Nv89_V4bsAiqYeiU2Exw,17120
+ottype/core_boost.c,sha256=AURUFyTDBgGdsKQnbUsaji48BQMtqDoflMOTZO7d7n8,836668
+ottype/core_boost.pypy310-pp73-x86_64-linux-gnu.so,sha256=ezoHPwwype_UspZTh4xfXwHF08yLh0ogdn4QbcnS1fY,173832
+ottype/core_boost.pyx,sha256=TE07r511967HzPRo1Tprs3J28-EtluNApXVHFRi4iak,15990
+ottype/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_ottype-24.6.0.dist-info/LICENSE,sha256=Jv0xlFSPK69j2mHSwF6yDVAmdpagks5MKDA1un3uFys,1080
+python_ottype-24.6.0.dist-info/METADATA,sha256=URTcom8ngPPxv4K6HWglkHCaoC8xod_AozePfyuUtYM,5694
+python_ottype-24.6.0.dist-info/WHEEL,sha256=aH6OZYlsA034UTM0IElGoqugNQxnf7qynpwZiRwB_Vc,253
+python_ottype-24.6.0.dist-info/top_level.txt,sha256=Uqxj7mTZwvR5C5Q1mKAvmpxbLdqUkRXhZIgUsvEX9IA,7
+python_ottype-24.6.0.dist-info/RECORD,,
