@@ -1,0 +1,2 @@
+[console_scripts]
+minimal_molview = minimal_molview.render:main
