@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: corona-chilexpress
+Version: 1.0.3
+Summary: Django Chilexpress integration
+Home-page: https://gitlab.com/corona-projects/python-libraries/django-chilexpress/
+Author: Corona Development Team
+Author-email: rolguin@corona.cl
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# lib-example
+
+
