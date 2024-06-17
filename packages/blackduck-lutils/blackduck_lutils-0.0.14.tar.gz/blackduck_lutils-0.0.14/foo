@@ -1,0 +1,45 @@
+DESCRIBES	        Is to be
+DESCRIBED_BY	    Is to be
+CONTAINS	        Is to be
+CONTAINED_BY	    Is to be
+DEPENDS_ON	        Is to be
+DEPENDENCY_OF	    Is to be
+DEPENDENCY_MANIFEST_OF	Is t
+BUILD_DEPENDENCY_OF	Is to be
+DEV_DEPENDENCY_OF	Is to be
+OPTIONAL_DEPENDENCY_OF	Is t
+PROVIDED_DEPENDENCY_OF	Is t
+TEST_DEPENDENCY_OF	Is to be
+RUNTIME_DEPENDENCY_OF	Is t
+EXAMPLE_OF	Is to be used wh
+GENERATES	Is to be used wh
+GENERATED_FROM	Is to be use
+ANCESTOR_OF	Is to be used wh
+DESCENDANT_OF	Is to be use
+VARIANT_OF	Is to be used wh
+DISTRIBUTION_ARTIFACT	Is t
+PATCH_FOR	Is to be used wh
+PATCH_APPLIED	Is to be use
+COPY_OF	Is to be used when S
+FILE_ADDED	Is to be used wh
+FILE_DELETED	Is to be use
+FILE_MODIFIED	Is to be use
+EXPANDED_FROM_ARCHIVE	Is t
+DYNAMIC_LINK	Is to be use
+STATIC_LINK	Is to be used wh
+DATA_FILE_OF	Is to be use
+TEST_CASE_OF	Is to be use
+BUILD_TOOL_OF	Is to be use
+DEV_TOOL_OF	Is to be used wh
+TEST_OF	Is to be used when S
+TEST_TOOL_OF	Is to be use
+DOCUMENTATION_OF	Is to be
+OPTIONAL_COMPONENT_OF	Is t
+METAFILE_OF	Is to be used wh
+PACKAGE_OF	Is to be used wh
+AMENDS	Is to be used when (
+PREREQUISITE_FOR	Is to be
+HAS_PREREQUISITE	Is to be
+REQUIREMENT_DESCRIPTION_FOR	
+SPECIFICATION_FOR	Is to be
+OTHER	Is to be used for a 

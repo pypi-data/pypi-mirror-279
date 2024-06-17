@@ -1,0 +1,374 @@
+Metadata-Version: 2.3
+Name: blackduck-lutils
+Version: 0.0.14
+Summary: Collection of license related tools. License-tagging, License-conflicts
+Project-URL: Documentation, https://github.com/blackducksoftware/blackduck-lutils#README.md
+Project-URL: Issues, https://github.com/blackducksoftware/blackduck-lutils/issues
+Project-URL: Source, https://github.com/blackducksoftware/blackduck-lutils
+Author-email: Murat Kumykov <kumykov@synopsys.com>
+License-Expression: Apache-2.0
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: argparse
+Requires-Dist: blackduck
+Requires-Dist: openpyxl
+Description-Content-Type: text/markdown
+
+# Black Duck License Utilities
+
+This module delivers functionality for 
+* License Conflicts
+* License Tagging and Grouping
+
+## Requirements
+Module requires Python 3.8 or higher.
+The following modules are required:
+* argparse
+* blackduck
+* openpyxl
+
+## Installation
+
+Module is installed using pip command
+```
+pip3 install blackduck-lutils
+```
+
+## License Conflicts
+
+### Description
+This functionality will generate license conflict report by comparing license terms of the licenses associated with components on the Bill of Materials.
+Project version license will be taken into account and license conflicts for it will be calculated as well.
+
+### How it works
+License conflict computation process based on license terms associated with each license.
+License terms can be
+* Permitted
+* Required
+* Prohibited
+
+This script will calculate instances when a licenses associated with components included in the project require and prohibit the same terms respectively.
+E.g. One license requires Commercial Use and another one prohibits Commercial Use thus creating conflict
+
+The list of standard license terms defined by Black Duck is as following:
+| License Term | Responsibility | Description |
+| --- | --- | --- |
+|Anti DRM Provision            | FORBIDDEN      | You are not allowed to use this software in conjunction with Digital Rights Management technology or technological protection measures|
+|Commercial Use                | PERMITTED      | License permits software to be used commercially|
+|Commercial Use                | REQUIRED       | License requires software to be used for commercial purposes only|
+|Commercial Use                | FORBIDDEN      | License forbids or places restrictions on commercial use of the software|
+|Compensate Damages            | PERMITTED      | If software is part of a commercial product, you may defend and compensate project contributor from lawsuits & damages caused by your commercial offering, but are not required to do so|
+|Compensate Damages            | REQUIRED       | If software is part of a commercial product, you must defend and compensate project contributor from lawsuits & damages caused by your commercial offering|
+|Compensate Damages            | FORBIDDEN      | If software is part of a commercial product, license states you cannot defend and compensate project contributor from lawsuits & damages caused by your commercial offering|
+|Disclose Source               | REQUIRED       | Software source code must be made available if a distribution is made|
+|Disclose Source               | FORBIDDEN      | License forbids you from making the software source available if a distribution is made|
+|Disclose Source               | PERMITTED      | Software source code can be made available if a distribution is made, but you are not required to do so|
+|Distribute                    | REQUIRED       | If distributed, you are required to distribute unmodified software|
+|Distribute                    | PERMITTED      | This software may be distributed in original form or modified works|
+|Distribute                    | FORBIDDEN      | This software may not be distributed in original form or modified works|
+|Distribute Original           | REQUIRED       | Upon distribution, you will need to provide either the original software source code, a link to the original software or provide a written offer to receive the software|
+|Distribute Original           | PERMITTED      | Upon distribution, you are allowed to provide either the original software source code, a link to the original software or provide a written offer to receive the software|
+|Distribute Original           | FORBIDDEN      | Upon distribution, you are forbidden to provide either the original software source code, a link to the original software or provide a written offer to receive the software.   You may distribute binaries only|
+|Fees                          | FORBIDDEN      | You are not allowed to charge the recipient certain fees|
+|Fees                          | REQUIRED       | Recipient is expected to pay a fee|
+|Give Credit                   | FORBIDDEN      | License forbids you to acknowledge the original author of the software in distributions you make|
+|Give Credit                   | PERMITTED      | License allows you to acknowledge the original author of the software in distributions you make, but you are not required to do so|
+|Give Credit                   | REQUIRED       | License requires you to acknowledge the original author of the software in distributions you make|
+|Hold Liable                   | REQUIRED       | License requires you to issue a disclaimer of warranty on your code which prevents you or anyone using your code from holding the original owner and/or contributors liable for any damages due to the use of this software|
+|Hold Liable                   | FORBIDDEN      | A disclaimer of warranty prevents you from holding the original owner and/or contributors liable for any damages due to the use of this software|
+|Hold Liable                   | PERMITTED      | License does not contain a disclaimer of warranty which prevents you from holding the original owner and/or contributors liable for any damages due to the use of this software|
+|Include Copyright             | PERMITTED      | You may include copyright notices of the original owners and contributors for the work with the software you distribute|
+|Include Copyright             | REQUIRED       | You are required to include copyright notices of the original owners and contributors for the work with the software you distribute|
+|Include Copyright             | FORBIDDEN      | You are forbiddeen to include  copyright notices of the original owners and contributors for the work with the software you distribute|
+|Include Install Instructions  | PERMITTED      | If the software is distributed, you may include installation information and tools to modify and reinstall the software, but you are not required to do so|
+|Include Install Instructions  | REQUIRED       | If the software is distributed, you must include installation information and tools to modify and reinstall the software|
+|Include Install Instructions  | FORBIDDEN      | If the software is distributed, you are forbidden to include installation information and tools to modify and reinstall the software|
+|Include License               | PERMITTED      | You are permitted to include the software's full license text in any distributions you make, but not required to do so|
+|Include License               | FORBIDDEN      | You are forbidden to include the software's full license text in any distributions you make|
+|Include License               | REQUIRED       | You are required to include the software's full license text in any distributions you make|
+|Include Notice                | PERMITTED      | You are permitted to include a notice in product documentation with certain requirements as specified by the license, but not obligated to do so|
+|Include Notice                | FORBIDDEN      | You are forbidden to include a notice in product regarding the use of this component|
+|Include Notice                | REQUIRED       | You are required to include a notice in product documentation with certain requirements as specified by the license|
+|License Back                  | REQUIRED       | You are required to license any modifications back to the original licensor|
+|Modify                        | FORBIDDEN      | You are forbidden to modify the software and make derivative bodies of work|
+|Modify                        | PERMITTED      | You are allowed to modify the software and make derivative bodies of work|
+|Modify                        | REQUIRED       | You are required to grant the right to modify the software and make derivative bodies of work|
+|Patent Retaliation            | FORBIDDEN      | You are not allowed to file a patent suit against a specific person/organization or related to the work|
+|Place Additional Restrictions | FORBIDDEN      | You are not entitled to place additional restrictions|
+|Place Additional Restrictions | PERMITTED      | You intend to place additional restrictions|
+|Place Warranty                | PERMITTED      | You are allowed to place a warranty on the code or derivatives of the code, though you may need to limit the liability of the original software owners and contributors|
+|Place Warranty                | FORBIDDEN      | This license contains restrictions that forbid or severely limits your ability to place a warranty on the code or derivatives of the code|
+|Place Warranty                | REQUIRED       | You are required to place a warranty on the code or derivatives of the code, though you may need to limit the liability of the original software owners and contributors|
+|Private Use                   | REQUIRED       | This software requires that it only be used for private use/non-commercial purposes|
+|Private Use                   | PERMITTED      | You are allowed to use this software for private, non-commercial use without payment or royalty|
+|Private Use                   | FORBIDDEN      | You are forbidden to use this software for private, non-commercial use without payment or royalty|
+|Rename                        | REQUIRED       | If modified, you are required to rename the software to indicate it is not the original work|
+|Rename                        | PERMITTED      | If modified, you are allowed to rename the software|
+|Rename                        | FORBIDDEN      | If modified, you are forbidden to rename the software|
+|Reverse Engineer              | FORBIDDEN      | You are not allowed to reverse engineer the software|
+|Reverse Engineer              | REQUIRED       | You are required to grant the right to reverse engineer the software|
+|Right to Copy                 | FORBIDDEN      | You are not entitled to grant the right to copy the code|
+|Right to Copy                 | REQUIRED       | You are required to grant the right to copy the code|
+|State Changes                 | FORBIDDEN      | Any changes you make to the code must not be documented and distributed along with the code|
+|State Changes                 | REQUIRED       | Any changes you make to the code must be documented and distributed along with the code|
+|State Changes                 | PERMITTED      | Any changes you make to the code may be documented and distributed along with the code, but you are not required to do so|
+|Sub-License                   | REQUIRED       | You are required to provide the software or modifications to the software under a different license|
+|Sub-License                   | FORBIDDEN      | You may not provide this software or modifications under a different license|
+|Sub-License                   | PERMITTED      | You may provide the software or modifications to the software under a different license|
+|Use Patent Claims             | FORBIDDEN      | You are expressly forbidden to use the relevant patents held by the software contributors in your use of this code without a separate patent license|
+|Use Patent Claims             | REQUIRED       | License explicitly states you (or others who use this software) are required to purchase a Patent license to use this software|
+|Use Patent Claims             | PERMITTED      | You may use the relevant patents held by the software contributors in your use of this code|
+|Use Trademarks                | PERMITTED      | License explicitly states that it grants you rights to use the owners or contributors trademarks|
+|Use Trademarks                | REQUIRED       | License explicitly states that it requires you to use to use the owners or contributors trademarks|
+|Use Trademarks                | FORBIDDEN      | License explicitly states that it does not grant you any rights to use the owners or contributors trademarks|
+
+Custom license terms added to the system will be included in conflicts calculations.
+
+License conflict calculations will take into account relationships between components and automatically exclude the following categories from conflict calculations:
+
+* Development Tools
+* Merely Aggregated
+* Implementation of Standard
+* Unspecified
+
+Unknown licenses will be ignored and not included into conflict calculations.
+
+The process is designed to minimize API calls required to produce a report. This is achieved by putting license information into a local storage file and utilizing SBOM report as the data source for project information.
+
+License conflicts defines two main functions
+* download_license_data - used to download license data during bootstrapping process
+* generate_license_conflict_report - core functionality
+
+Module provides main() function to allow either direct execution or integrating into larger automation.
+
+### Bootstrapping
+Before using the script, license data would have to be downloaded from the system and stored in to a file. To perform that task using direct execution perform the following:
+
+```
+python3 -m blackduck_lutils.license_conflicts -u $BD_URL -t token_file -nv -ldd [-ld license_data.json]
+```
+
+This will download license data into 'license_data.json` file in the current directory. To place the file into different location use corresponding command line option.
+
+Same task can be accomplished with the following code:
+
+```
+from blackduck_lutils import license_conflicts
+
+license_conflicts.download_license_data(base_url=blackduck_url, 
+                                        token=token, 
+                                        no_verify=no_verify_flag, 
+                                        output_file = license_data_filename)
+```
+
+Note: This operation will execute about 3000 API calls and that is primarily the reason why we put this data into local storage. This way we don't have to put that much load onto the server when generating conflict reports.
+
+Note: This file would have to be regenerated if new licenses are added to the system.
+
+### Generating Conflict Report
+This utility cam be used in off-line and on-lne modes.
+
+#### On-line mode
+In on-line mode the following actions will take place:
+* Issue an API request to generate SBOM report.
+* Wait for report completion
+* Download the report 
+* Generate license conflicts data and write it into CSV file
+
+To generate License Conflict Report in on-line mode using direct execution perform the following:
+
+```
+python3 -m blackduck_lutils.license_conflicts -u $BD_URL -t token -nv -pn ProjectName -pv ProjectVersion \
+                                              [-ld license_data.json] [-o output_file]
+```
+Where $BD_URL is the URL of your Black Duck system and 'token' is a file containing API token.
+
+Same task can be accomplished with the following code:
+```
+from blackduck_lutils import license_conflicts
+
+license_conflicts.generate_license_conflict_report(base_url=blackduck_url, 
+                                                  token=token_file, 
+                                                  no_verify=no_verify_flag, 
+                                                  project_name=project_name, 
+                                                  project_version_name=project_version_name,
+                                                  license_data_file=license_data_file,
+                                                  csv_report_file=output_file)
+
+```
+
+#### Off-line mode
+In off-line mode a SBOM report in SPDX format would have to exist.
+The following actions will take place:
+* Load SBOM report from a file
+* Generate license conflict data and write it into a file
+
+To generate License Conflict Report in off-line mode using direct execution perform the following:
+
+```
+python3 -m blackduck_lutils.license_conflicts -u $BD_URL -t token -nv -sbom SBOM_FILE \
+                                              [-ld license_data.json] [-o output_file]
+```
+Where $BD_URL is the URL of your Black Duck system and 'token' is a file containing API token.
+
+Same task can be accomplished with the following code:
+
+```
+from blackduck_lutils import license_conflicts
+
+license_conflicts.generate_license_conflict_report(sbom=SBOM_FILE, 
+                                 license_data_file=license_data_file,
+                                 csv_report_file=output_file)
+
+```
+
+### Module Command Line specification
+
+```
+$ python3 -m blackduck_lutils.license_conflicts -h
+usage: license_conflicts [-h] -u BASE_URL -t TOKEN_FILE [-nv] [-ldd] [-pn PROJECT_NAME]
+                                 [-pv PROJECT_VERSION_NAME] [-sbom SBOM] [-ld LICENSE_DATA] [-o OUTPUT_FILE]
+
+options:
+  -h, --help            show this help message and exit
+  -u BASE_URL, --base-url BASE_URL
+                        Hub server URL e.g. https://your.blackduck.url
+  -t TOKEN_FILE, --token-file TOKEN_FILE
+                        File containing access token
+  -nv, --no-verify      Disable TLS certificate verification
+  -ldd, --license-data-download
+                        Download license data into a file specified with -ld/--license-data parameter
+  -pn PROJECT_NAME, --project-name PROJECT_NAME
+                        Project Name
+  -pv PROJECT_VERSION_NAME, --project-version-name PROJECT_VERSION_NAME
+                        Project Version Name
+  -sbom SBOM            SBOM File to process
+  -ld LICENSE_DATA, --license-data LICENSE_DATA
+                        Local license data storage
+  -o OUTPUT_FILE, --output-file OUTPUT_FILE
+                        CSV file name for license conflict report output
+$
+```
+
+### Results
+Conflict report will be written into CSV file with one line per license term conflict.
+The following fields will be present in the file:
+* Category
+* ComponentName
+* ComponentLicense
+* ConflictingComponentName
+* ConflictingComponentLicense
+* ConflictingLicenseTerm
+* TermValue
+* ConflictingTermValue
+* TermDescription
+* ConflictingTermDescription
+
+### TODO
+This utility is tested in off-line and online mode and has sufficient functionality for API performance testing.
+
+It is not fully tested against functional specification yet.
+
+
+### License
+This utility is licenses under Apache 2.0 License.
+
+
+## License Tagging and Grouping
+License tagging and grouping to allow easy insertion of arbitrary groups of licenses into policy definitions. 
+
+### Description
+When there is a need to add an arbitrary group of licenses into a Black Duck policy
+it requires adding them one by one through the UI. This tool allows to maintain an external data store with Tags ang Tag mappings to the licenses and will allow updating policy definitions with expanded list of licenses.
+
+### Usage
+Tool can be executed as a direct module execution with the following command line specification:
+
+```
+$ python3 -m blackduck_lutils.license_tagging -h
+usage: license_tagging [-h] -u BASE_URL -t TOKEN_FILE [-nv] [-lsf LICENSE_STORE_FILE] [-nlc]
+
+options:
+  -h, --help            show this help message and exit
+  -u BASE_URL, --base-url BASE_URL
+                        Hub server URL e.g. https://your.blackduck.url
+  -t TOKEN_FILE, --token-file TOKEN_FILE
+                        File containing access token
+  -nv, --no-verify      Disable TLS certificate verification
+  -lsf LICENSE_STORE_FILE, --license-store-file LICENSE_STORE_FILE
+                        Local license information storage
+  -nlc, --no-license-check
+                        Skip scanning trough all licenses
+
+### How it works
+The tool maintains local local data storage as an Excel file with default filename of 'LicenseStorage.xlsx'
+
+This file will contain two worksheets
+- Licenses
+- LicenseTags
+
+Licenses worksheet contains data on all licenses currently present in Black Duck instance. Columns contain data and are used as following:
+* Column A - License Name
+* Column B - License URL
+* Column C - License Family
+* Column D - License Family URL
+* Column E - SPDXID
+* Column F and above can contain tags
+
+LicenseTags worksheet contains License Tag Names in the Column A and corresponding URL in column B. 
+
+#### Common parameters
+In the example command line there would be references to common parameters:
+* $BD_URL - environment variable containing Black Duck instance URL
+* token. - a text file containing valid authentication token
+
+#### Bootstrapping
+Before using the tool, local storage would have to be initialized.
+That is accomplished by running the script.  If it can not find local license store, it will generate new file with complete internal structures and populate Licenses worksheet with data from Black Duck instance.
+
+```
+python3 -m blackduck_lutils.license_tagging -u $BD_URL -t token -nv
+```
+
+This will generate a file named LicenseStorage.xlsx in the current folder and populate Licenses worksheet with full complement of licenses from your Black Duck instance.
+
+It will also validate presence of 'TagPlaceholder' and create it as necessary.
+At this point there will be no tags defined yet.
+
+#### Defining tags
+User must open the local store excel file and add tags to Column A of LicenseTag worksheet, save the Excel file and run the script again.
+```
+python3 -m blackduck_lutils.license_tagging -u $BD_URL -t token -nv
+```
+This action will update the references in Black Duck and get the framework ready to be used.
+
+#### Tagging Licenses
+Using Excel as a tool, tag licenses on the License worksheet by putting tag name in the columns F and above. There is no limit on how many tags could be associated with a license. 
+
+#### Policy creation
+When creating a policy that would have to reference large number of licenses use TagName which will be visible and searchable in the UI.
+
+#### Expanding tags to full list of licenses
+Execute the script again and the Tags in the policy will be expanded to full list of licenses.
+```
+python3 -m blackduck_lutils.license_tagging -u $BD_URL -t token -nv
+```
+This action will iterate through the policies, find policy conditions that have tag name in them and replace them with corresponding list of licenses.
+
+### Example of use
+See example of use here
+
+### License
+This code is licensed under Apache 2.0 license.
+
+### Project status
+Active

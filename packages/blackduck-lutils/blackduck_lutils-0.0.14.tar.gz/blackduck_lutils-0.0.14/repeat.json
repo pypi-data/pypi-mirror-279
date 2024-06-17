@@ -1,0 +1,125 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "creationInfo": {
+    "created": "2024-06-16T18:11:53Z",
+    "creators": [
+      "Organization: COMPANY NAME",
+      "Tool: Black Duck Hub-2024.4.1"
+    ],
+    "licenseListVersion": "3.20"
+  },
+  "name": "Test1-LATEST",
+  "dataLicense": "CC0-1.0",
+  "hasExtractedLicensingInfos": [
+    {
+      "licenseId": "LicenseRef-2797ffd5-88c0-442d-9531-a7aeca73988a",
+      "extractedText": "NONE",
+      "name": "[template] Basic Proprietary Commercial License"
+    }
+  ],
+  "documentNamespace": "https://blackducksoftware.github.io/spdx/Test1-fb612c5d-f2aa-4243-be6d-74587b4764d8",
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-package-27865bc0-973a-4479-8321-53f2dd69fe9e",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceLocator": "27865bc0-973a-4479-8321-53f2dd69fe9e",
+          "referenceType": "BlackDuck-Version"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "(LicenseRef-2797ffd5-88c0-442d-9531-a7aeca73988a)",
+      "licenseDeclared": "(LicenseRef-2797ffd5-88c0-442d-9531-a7aeca73988a)",
+      "name": "Test1",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "LATEST"
+    },
+    {
+      "SPDXID": "SPDXRef-package-8ae84639-cb3c-418f-af91-eccde99542c8",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceLocator": "b1dc82e9-b5fe-48dd-b2f1-e6d354f0ce7a",
+          "referenceType": "BlackDuck-Component"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceLocator": "8ae84639-cb3c-418f-af91-eccde99542c8",
+          "referenceType": "BlackDuck-ComponentVersion"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "GPL-2.0-only",
+      "licenseDeclared": "GPL-2.0-only",
+      "name": "Test2",
+      "originator": "NOASSERTION",
+      "supplier": "NOASSERTION",
+      "versionInfo": "LATEST"
+    },
+    {
+      "SPDXID": "SPDXRef-package-2bb00cd3-6867-4ab7-a9e0-5449f20c575e",
+      "downloadLocation": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "OTHER",
+          "referenceLocator": "54862af2-0afe-456b-9e5d-a6ace3c61dab",
+          "referenceType": "BlackDuck-ComponentOrigin"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceLocator": "2bb00cd3-6867-4ab7-a9e0-5449f20c575e",
+          "referenceType": "BlackDuck-ComponentVersion"
+        },
+        {
+          "referenceCategory": "OTHER",
+          "referenceLocator": "edf3fe9d-f9c9-4871-a01a-bf2febe95fa5",
+          "referenceType": "BlackDuck-Component"
+        }
+      ],
+      "filesAnalyzed": false,
+      "licenseConcluded": "GPL-2.0-only",
+      "licenseDeclared": "GPL-2.0-only",
+      "name": "Linux Kernel",
+      "originator": "Organization: long_tail",
+      "supplier": "Organization: long_tail",
+      "versionInfo": "2.6.25.4"
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-DOCUMENT",
+      "relationshipType": "DESCRIBES",
+      "relatedSpdxElement": "SPDXRef-package-27865bc0-973a-4479-8321-53f2dd69fe9e"
+    },
+    {
+      "spdxElementId": "SPDXRef-package-27865bc0-973a-4479-8321-53f2dd69fe9e",
+      "relationshipType": "STATIC_LINK",
+      "relatedSpdxElement": "SPDXRef-package-2bb00cd3-6867-4ab7-a9e0-5449f20c575e"
+    },
+    {
+      "spdxElementId": "SPDXRef-package-27865bc0-973a-4479-8321-53f2dd69fe9e",
+      "relationshipType": "DYNAMIC_LINK",
+      "relatedSpdxElement": "SPDXRef-package-2bb00cd3-6867-4ab7-a9e0-5449f20c575e"
+    },
+    {
+      "spdxElementId": "SPDXRef-package-27865bc0-973a-4479-8321-53f2dd69fe9e",
+      "relationshipType": "HAS_PREREQUISITE",
+      "relatedSpdxElement": "SPDXRef-package-8ae84639-cb3c-418f-af91-eccde99542c8"
+    },
+    {
+      "spdxElementId": "SPDXRef-package-8ae84639-cb3c-418f-af91-eccde99542c8",
+      "relationshipType": "STATIC_LINK",
+      "relatedSpdxElement": "SPDXRef-package-2bb00cd3-6867-4ab7-a9e0-5449f20c575e"
+    },
+    {
+      "spdxElementId": "SPDXRef-package-8ae84639-cb3c-418f-af91-eccde99542c8",
+      "relationshipType": "DYNAMIC_LINK",
+      "relatedSpdxElement": "SPDXRef-package-2bb00cd3-6867-4ab7-a9e0-5449f20c575e"
+    }
+  ]
+}
