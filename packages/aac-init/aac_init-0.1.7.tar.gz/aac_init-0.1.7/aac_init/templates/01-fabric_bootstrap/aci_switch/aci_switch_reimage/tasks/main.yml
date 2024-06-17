@@ -1,0 +1,43 @@
+---
+
+# Copyright: (c) 2024, Rudy Lei <shlei@cisco.com>
+
+- name: ACI SWITCH REIMAGE TASKS
+  block:
+    - name: RENDER ACI SWITCH REIMAGE SCRIPT
+      template:
+        src: aci_switch_reimage.exp.jinja2
+        dest: aci_switch_reimage/files/aci_switch_reimage_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.switch_nodes_connection }}"
+
+    - name: MAKE ACI SWITCH REIMAGE SCRIPT EXECUTABLE
+      file:
+        path: aci_switch_reimage/files/aci_switch_reimage_{{ item.hostname }}.exp
+        mode: "+x"
+      delegate_to: localhost
+      loop: "{{ fabric.switch_nodes_connection }}"
+
+    - name: EXECUTE ACI SWITCH REIMAGE SCRIPT
+      command: ./aci_switch_reimage/files/aci_switch_reimage_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.switch_nodes_connection }}"
+
+    - name: RENDER ACI SWITCH REIMAGE POST CHECK SCRIPT
+      template:
+        src: aci_switch_reimage_post_check.exp.jinja2
+        dest: aci_switch_reimage/files/aci_switch_reimage_post_check_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.switch_nodes_connection }}"
+
+    - name: MAKE ACI SWITCH REIMAGE POST CHECK SCRIPT EXECUTABLE
+      file:
+        path: aci_switch_reimage/files/aci_switch_reimage_post_check_{{ item.hostname }}.exp
+        mode: "+x"
+      delegate_to: localhost
+      loop: "{{ fabric.switch_nodes_connection }}"
+
+    - name: EXECUTE ACI SWITCH REIMAGE POST CHECK SCRIPT
+      command: ./aci_switch_reimage/files/aci_switch_reimage_post_check_{{ item.hostname }}.exp
+      delegate_to: localhost
+      loop: "{{ fabric.switch_nodes_connection }}"
