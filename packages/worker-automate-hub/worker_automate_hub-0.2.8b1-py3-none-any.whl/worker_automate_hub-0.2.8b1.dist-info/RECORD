@@ -1,0 +1,8 @@
+worker_automate_hub/__init__.py,sha256=L_uBShinbfXEyQUD7gpEWuvUW472BrYkB9uRz22efEY,27
+worker_automate_hub/cli.py,sha256=ywi_OZPDvczEm3vR3qeN0VSs3-La9BQXKe__w42D1g8,11809
+worker_automate_hub/config.py,sha256=63CJ0pn0-eEd5ZPOVKM0nKeqFqPhFh260bvG0CikYpI,197
+worker_automate_hub/core/so_maniputation.py,sha256=SK56k_9GFLv9h2NvMA1XeFj5O7kOHl68A4I333_4ABw,7115
+worker_automate_hub-0.2.8b1.dist-info/METADATA,sha256=PmPPeE-wcCMq__C90f2kWm7bQ_iBnwNK-5F3m_SNAoo,1324
+worker_automate_hub-0.2.8b1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+worker_automate_hub-0.2.8b1.dist-info/entry_points.txt,sha256=HeCWF3xLbn4dGV63rdn802qXUWjVGc6HJvymCp8mRGs,60
+worker_automate_hub-0.2.8b1.dist-info/RECORD,,

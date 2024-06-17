@@ -1,0 +1,3 @@
+[console_scripts]
+automate-hub=worker_automate_hub.cli:app
+
