@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-poker"
+version = "0.0.1"
+description = "This project is a Python-based application designed for managing players, tables, and chips, and facilitating gameplay for Texas Hold’em, a popular variant of poker. It provides functionalities for creating and managing player accounts, organizing tables, handling chip transactions, and simulating or facilitating live gameplay sessions of Texas Hold’em."
+authors = ["bhadresh-dahanuwala <bhadresh.dahanuwala@gmail.com>"]
+license = "Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+playing-card-utils = "^3.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
