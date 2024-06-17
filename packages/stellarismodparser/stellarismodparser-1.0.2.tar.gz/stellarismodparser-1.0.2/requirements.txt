@@ -1,0 +1,4 @@
+pylint==3.2.3
+ruff==0.4.9
+semver==3.0.2
+build==0.6.0
