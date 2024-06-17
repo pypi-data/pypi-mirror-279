@@ -1,0 +1,11 @@
+spector/__init__.py,sha256=LofFs1srV8VLTZBzcfxWTobPrROx6Yfkd6R2zxOYs-A,88
+spector/matrix.py,sha256=EpVOEkCEdEqD3ImNzRWY8j29ZcWWYRCZtKkPHpecmWw,4521
+spector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spector/vector.cpp,sha256=yGF5AF7lc6OjJPGxHe1U123uoJkT08G3LRGvUPVVjZM,2067207
+spector/vector.cpython-310-aarch64-linux-gnu.so,sha256=nmwTVdhTQDNRJZ8Gyhfa9KqCv8AvP1Ndagzj5LjWP14,4217968
+spector/vector.pyx,sha256=mr1t87C5Jp-jP8CrpaArv1u6KJG13Rh0iQKPtJlFD2c,20772
+spector-1.5.dist-info/WHEEL,sha256=H0QERcJuEKoCcMIutioyRp9n3LaQjdVoB25CT5wQyPk,154
+spector-1.5.dist-info/LICENSE.txt,sha256=UEd-mwEWPp8XVNMxjMOAWSeMxlhjFsTmJ94wdmkci-o,576
+spector-1.5.dist-info/top_level.txt,sha256=We-Cx-in-0_eOnpQqnrqwdKOhnOBw3Pz2fHi0MQHi0U,8
+spector-1.5.dist-info/RECORD,,
+spector-1.5.dist-info/METADATA,sha256=0V3eAh427T5ixCP5D5mHUdSsyH9YlG48iSJKC8Ewz44,5379
