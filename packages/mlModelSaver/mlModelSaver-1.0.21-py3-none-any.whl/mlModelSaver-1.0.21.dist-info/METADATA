@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: mlModelSaver
+Version: 1.0.21
+Summary: Make life easier for saving and serving ML models
+Home-page: https://github.com/smartdev-ca/mlModelSaver
+Author: Jason Jafari
+Author-email: me@jasonjafari.com
+Project-URL: Documentation, https://github.com/smartdev-ca/mlModelSaver/blob/main/DOCS.md
+Project-URL: Source, https://github.com/smartdev-ca/mlModelSaver
+Project-URL: Tracker, https://github.com/smartdev-ca/mlModelSaver/issues
+Keywords: machine learning model saving serving
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy >=1.26.4
+Requires-Dist: pandas >=2.2.2
+Requires-Dist: scikit-learn >=1.5.0
+Requires-Dist: statsmodels >=0.14.2
+Requires-Dist: matplotlib >=3.9.0
+Requires-Dist: dill >=0.3.8
+
+# mlModelSaver documentation
+
+
+Introducing **[mlModelSaver](https://pypi.org/project/mlModelSaver/)** – a streamlined Python module designed for data scientists and developers who seek a straightforward solution for model saving and serving.
+
+While numerous tools are available for training machine learning models, many lightweight statistical models lack simple, efficient saving mechanisms. Existing enterprise solutions like MLflow are robust but come with considerable complexity. Based on my experience, I saw the need for an abstract model registry concept that simplifies this process.
+
+**[mlModelSaver](https://github.com/smartdev-ca/mlModelSaver)** fills this gap, offering an intuitive way to save machine learning models and transformers. It facilitates seamless integration with frameworks like FastAPI ([Examples](https://github.com/jafarijason/ml_models_deployments)), Flask, and Django, enabling easy deployment and serving of models in production environments. Empower your machine learning workflow with **mlModelSaver** – the easy and efficient tool for model management.
+
