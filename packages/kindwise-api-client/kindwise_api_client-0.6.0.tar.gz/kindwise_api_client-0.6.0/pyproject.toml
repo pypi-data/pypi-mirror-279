@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "kindwise-api-client"
+version = "0.6.0"
+description = "Python SDK toolkit for integrating Kindwise API"
+authors = ["Simon Plhak <simon.plhak@flowerchecker.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/flowerchecker/kindwise"
+packages = [
+    { include = "kindwise"},
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "*"
+requests = "*"
+pillow = "*"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.5.0"
+black = "^23.11.0"
+bump2version = "^1.0.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.4.3"
+requests-mock = "^1.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
