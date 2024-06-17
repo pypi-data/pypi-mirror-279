@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+advancedmodels/__init__.py
+advancedmodels/advancedmodels.py
+advancedmodels.egg-info/PKG-INFO
+advancedmodels.egg-info/SOURCES.txt
+advancedmodels.egg-info/dependency_links.txt
+advancedmodels.egg-info/requires.txt
+advancedmodels.egg-info/top_level.txt
