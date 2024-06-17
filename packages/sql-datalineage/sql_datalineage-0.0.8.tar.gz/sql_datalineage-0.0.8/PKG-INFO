@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: sql-datalineage
+Version: 0.0.8
+Summary: A project to build and visualize data lineage from SQL written in python. It supports column level lineage and can combine with metadata retriever for better result.
+Author-email: Duy Ha <viplazylmt@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/viplazylmt/sql-datalineage
+Project-URL: Source, https://github.com/viplazylmt/sql-datalineage
+Project-URL: Issues, https://github.com/viplazylmt/sql-datalineage/issues
+Keywords: data,lineage,column-level-lineage
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: SQL
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: requests
+Requires-Dist: sqlglot[rs]
+Requires-Dist: pydantic==2.*
+Provides-Extra: dev
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: ruff==0.4.3; extra == "dev"
+
+# SQL Data Lineage
+
+
+# Overview
+A project to build and visualize data lineage from SQL written in python. It supports column level lineage and can combine with metadata retriever for better result.
+
+# Install
+```bash
+pip install sql-datalineage
+```
+
+# Usage
+```bash
+datalineage --help
+```
+
+# Contribution
+
+### Setup Environment
+```bash
+make install-dev
+```
+
+### Run Lint
+```bash
+make style
+```
+
+### Run Tests
+```bash
+make test
+```
