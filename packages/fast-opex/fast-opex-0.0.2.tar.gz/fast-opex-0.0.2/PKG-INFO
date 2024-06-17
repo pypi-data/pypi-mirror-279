@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: fast-opex
+Version: 0.0.2
+Summary: Simpler and faster implementation of the OPEX JSON file format for object detection predictions.
+Home-page: https://github.com/waikato-datamining/fast-opex
+Author: Peter Reutemann
+Author-email: fracpete@waikato.ac.nz
+License: MIT License
+Description: Simpler and faster implementation of the *OPEX JSON file format* for object detection
+        predictions (https://github.com/WaikatoLink2020/objdet-predictions-exchange-format).
+        
+        It is possible to use the orjson library (https://github.com/ijl/orjson) as backend
+        instead of the one from the standard library for further speed-ups.
+        
+        Changelog
+        =========
+        
+        0.0.2 (2024-06-17)
+        ------------------
+        
+        - proper integration of orjson (uses bytes instead of strings)
+        
+        
+        0.0.1 (2024-06-14)
+        ------------------
+        
+        - initial release
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3
