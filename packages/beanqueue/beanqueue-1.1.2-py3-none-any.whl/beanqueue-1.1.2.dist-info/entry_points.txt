@@ -1,0 +1,3 @@
+[console_scripts]
+bq=bq.cmds.main:cli
+
