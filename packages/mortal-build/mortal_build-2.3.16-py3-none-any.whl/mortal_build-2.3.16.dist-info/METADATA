@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mortal-build
+Version: 2.3.16
+Summary: 'mortal工具集::build'
+Author: MJ
+Requires-Python: <=3.11,>=3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: Cython
+
+'mortal工具集::build'
