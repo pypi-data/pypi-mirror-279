@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: cardiac-geometriesx
+Version: 0.0.3
+Summary: A python library for cardiac geometries
+Author-email: Henrik Finsberg <henriknf@simula.no>
+License: MIT
+Project-URL: Homepage, https://github.com/finsberg/cardiac-geometriesx
+Keywords: cardiac,geometry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: fenics-dolfinx>=0.8.0
+Requires-Dist: structlog
+Requires-Dist: cardiac-geometries-core
+Requires-Dist: rich-click
+Requires-Dist: adios4dolfinx
+Provides-Extra: dev
+Requires-Dist: bump-my-version; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: pdbpp; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Provides-Extra: docs
+Provides-Extra: test
+Requires-Dist: pre-commit; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+
+# Cardiac geometries
+
+Cardiac geometries for `dolfinx` (targeting v0.8).
+
+Install
+```
+python3 -m pip install git+https://github.com/ComputationalPhysiology/cardiac-geometriesx
+```
+
+Example usage
+```
+geox lv-ellipsoid --create-fibers lv-mesh
+```
+
+## Authors
+Henrik Finsberg (henriknf@simula.no)
+
+## License
+MIT
