@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+otc-dataverse/__init__.py
+otc-dataverse/main.py
+otc_dataverse.egg-info/PKG-INFO
+otc_dataverse.egg-info/SOURCES.txt
+otc_dataverse.egg-info/dependency_links.txt
+otc_dataverse.egg-info/top_level.txt

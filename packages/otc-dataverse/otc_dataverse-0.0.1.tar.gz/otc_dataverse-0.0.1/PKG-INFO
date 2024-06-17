@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: otc-dataverse
+Version: 0.0.1
+Summary: A package for interacting with the Dataverse API
+Author: Kasap (Petar Kasapinov)
+Author-email: Petar Kasapinov <pkasapinov@otcfin.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Example Package
+
+This is a simple example package.
