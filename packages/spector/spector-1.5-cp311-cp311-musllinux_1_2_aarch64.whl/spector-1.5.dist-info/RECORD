@@ -1,0 +1,13 @@
+spector.libs/libstdc++-1b614e01.so.6.0.32,sha256=XXJsmg9XChAumTluQnKaKPw0aZHT_olzaylk-ZtJWcY,3586193
+spector.libs/libgcc_s-7393e603.so.1,sha256=7G--_FjUcXaygGLbopN7bg1zXff52EmI7Bsc2D2TXbk,201017
+spector/__init__.py,sha256=LofFs1srV8VLTZBzcfxWTobPrROx6Yfkd6R2zxOYs-A,88
+spector/matrix.py,sha256=EpVOEkCEdEqD3ImNzRWY8j29ZcWWYRCZtKkPHpecmWw,4521
+spector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spector/vector.cpp,sha256=yGF5AF7lc6OjJPGxHe1U123uoJkT08G3LRGvUPVVjZM,2067207
+spector/vector.pyx,sha256=mr1t87C5Jp-jP8CrpaArv1u6KJG13Rh0iQKPtJlFD2c,20772
+spector/vector.cpython-311-aarch64-linux-musl.so,sha256=YTZHQ25FuFP2uACL0UTEDPfS1-ZRJOOAZu-WHXkB5WM,3350977
+spector-1.5.dist-info/WHEEL,sha256=LMu7F14ChijxWrju2djrDfL51PsJS74UdcBR1lHaPhI,114
+spector-1.5.dist-info/LICENSE.txt,sha256=UEd-mwEWPp8XVNMxjMOAWSeMxlhjFsTmJ94wdmkci-o,576
+spector-1.5.dist-info/top_level.txt,sha256=We-Cx-in-0_eOnpQqnrqwdKOhnOBw3Pz2fHi0MQHi0U,8
+spector-1.5.dist-info/RECORD,,
+spector-1.5.dist-info/METADATA,sha256=0V3eAh427T5ixCP5D5mHUdSsyH9YlG48iSJKC8Ewz44,5379
