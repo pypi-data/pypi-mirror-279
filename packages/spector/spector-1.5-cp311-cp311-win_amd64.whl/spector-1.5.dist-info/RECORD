@@ -1,0 +1,11 @@
+spector/__init__.py,sha256=q2fK8INR3uxCSKpjBuxUeMyepNs-kuuBsgMhUOYOe5E,90
+spector/matrix.py,sha256=9YqkhKsXXtKN_RioO9sqefN65CZ78HYCJPMP8XeTU3g,4652
+spector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spector/vector.cp311-win_amd64.pyd,sha256=ogUmZ3hA2tzQEJKU7azsOxopBhGqEst41tWC36KSsDo,352256
+spector/vector.cpp,sha256=NuUtqvvi1QCNdxwDoh5NW1TcbagJoEwgcnCmpwJAVxM,2067203
+spector/vector.pyx,sha256=YLWBTprngOAj5IdnUMOdePeATmjvmXFk1xsLKHUFEw0,21412
+spector-1.5.dist-info/LICENSE.txt,sha256=YowybyHGwD9iO0I7xlaSRakhHsqhTIzdZC9XCHWKYdo,589
+spector-1.5.dist-info/METADATA,sha256=__cX2NI9syG0SRfr0Wxn_KzL9lywKmeoVShjrI2a5OI,5526
+spector-1.5.dist-info/WHEEL,sha256=nSybvzWlmdJnHiUQSY-d7V1ycwEVUTqXiTvr2eshg44,102
+spector-1.5.dist-info/top_level.txt,sha256=We-Cx-in-0_eOnpQqnrqwdKOhnOBw3Pz2fHi0MQHi0U,8
+spector-1.5.dist-info/RECORD,,
