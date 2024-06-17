@@ -1,0 +1,11 @@
+todoist_auto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+todoist_auto/gov_tod_label.py,sha256=04_CnEiz1On8XDCumayiazIRJ_3PI6W6Vgvd1WXGTtQ,3547
+todoist_auto/models.py,sha256=zNhlg_zd0rJ5rS1zSLArVaBR0FZMvGpmJryJc-Ihy3s,2291
+todoist_auto/refresh_day_routine.py,sha256=Kp7Dh16hgtowrU4J_mQhipPQBYnUb_la46IvtgcWVTc,6122
+todoist_auto/rm_all_secs.py,sha256=yz01ToTrf-zZL8gQEeuqgzz-mq2dtHO7N1OJV5uual8,532
+todoist_auto/rm_empty_sections.py,sha256=S2OGhOMKWKZ7SRa2NsHX0oIyUf3QSIQSrJ1O3IAAHJY,1208
+todoist_auto/sort_plnd_tod.py,sha256=LN87evGHtrgwHE9c51CHjxB2UKgKA4XgkwVwlmQAdCg,3081
+todoist_auto/util.py,sha256=SZGlgrWUhojPyMunE_1OohSCr8mdClxl2Fprb3vS8_I,1818
+todoist_auto-11.3.0.dist-info/METADATA,sha256=7w7-sx8frA7CAyBsgQsSx8kYYTUaCgThUKJ3td5NHEA,334
+todoist_auto-11.3.0.dist-info/WHEEL,sha256=cDcbFFSNXOE-241I5PFuLkIYfR_FM7WTlPEi33njInY,105
+todoist_auto-11.3.0.dist-info/RECORD,,
