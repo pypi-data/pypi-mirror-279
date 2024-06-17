@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: firstmodulejeremylaitter
+Version: 0.0.2
+Summary: my first python package
+Author: jeremy laitter
+Author-email: jeremy.laitter@proton.me
+Keywords: python,mytag
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 3
+
+my first python package - long description
