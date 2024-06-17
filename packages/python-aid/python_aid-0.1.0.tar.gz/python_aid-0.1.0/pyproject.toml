@@ -1,0 +1,22 @@
+[project]
+name = "python-aid"
+version = "0.1.0"
+description = "Implementation in Python that can generate and convert the aid/aidx used in Misskey."
+authors = [
+    { name = "AmaseCocoa", email = "amase.cocoa@gmail.com" },
+]
+dependencies = []
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
