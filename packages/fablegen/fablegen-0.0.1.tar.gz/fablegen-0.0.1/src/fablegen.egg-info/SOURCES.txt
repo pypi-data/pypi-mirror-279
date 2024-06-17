@@ -1,0 +1,13 @@
+.gitignore
+CMakeLists.txt
+LICENSE
+Makefile
+README.md
+pyproject.toml
+src/fablegen/__init__.py
+src/fablegen.egg-info/PKG-INFO
+src/fablegen.egg-info/SOURCES.txt
+src/fablegen.egg-info/dependency_links.txt
+src/fablegen.egg-info/requires.txt
+src/fablegen.egg-info/top_level.txt
+src/fablegen/include/fablegen.cpython-311-darwin.so

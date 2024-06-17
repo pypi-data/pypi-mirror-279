@@ -1,0 +1,5 @@
+
+[dev]
+python-dotenv
+pytest
+ruff
