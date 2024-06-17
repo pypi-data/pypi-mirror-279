@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: aiterio
+Version: 0.1.0
+Summary: AsyncIterator based connectable components
+Author-email: DorskFR <dorsk.dev@gmail.com>
+License: MIT
+License-File: LICENSE
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# aiterio
+
+* License: MIT
