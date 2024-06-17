@@ -1,0 +1,11 @@
+todo_or_not/__init__.py,sha256=7QJMAC6bbSduH9SYtgH5MdiS7F65gc327X95c0nJyAE,342
+todo_or_not/localize.py,sha256=ezn8LL98mIfrAli3HzR5Cv_wEmL6XAg-_RNzPgOTZy4,16592
+todo_or_not/todo_check.py,sha256=qO3eCOotYkKtBKC9n66JFoLzIf8OdX0CYJvw_Cg8ZrE,29944
+todo_or_not/todo_grammar.py,sha256=tRHgzIz8R-UZI6FY8U63uDxGwELFC4lPN6To227D48s,5159
+todo_or_not/todo_hit.py,sha256=qXDpK4wFw3IoBdI9P_rW_HmHzxmgBhcAl-blY6uzyaA,8641
+todo_or_not/utility.py,sha256=OLWNnvzWBZisLLDuAJ3I5FI_mZcfnlIEkG6QO1IqpAI,2243
+todo_or_not-0.13.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+todo_or_not-0.13.0.dist-info/METADATA,sha256=VYq5CDBjpehaJ8yWqtAiP4UzsYNMu077gGwfLmt-tgs,4532
+todo_or_not-0.13.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+todo_or_not-0.13.0.dist-info/entry_points.txt,sha256=gYsajaMvfP_2jxXyWDwaZ0mW7UAjk94p_LRjS7cD_9A,124
+todo_or_not-0.13.0.dist-info/RECORD,,
