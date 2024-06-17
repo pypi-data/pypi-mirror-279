@@ -1,0 +1,30 @@
+[project]
+name = 'lyrixir'
+version = '0.1.0'
+description = "prints random lyrics from your favorite songs!"
+authors = [
+	{name = 'Poaetce', email = 'poaetcethe2nd@gmail.com'}
+]
+classifiers = [
+	'Development Status :: 3 - Alpha',
+	'Intended Audience :: End Users/Desktop',
+	'License :: OSI Approved :: MIT License',
+	'Operating System :: POSIX :: Linux',
+	'Operating System :: Microsoft :: Windows',
+	'Natural Language :: English',
+	'Programming Language :: Python',
+]
+dependencies = [
+	'requests',
+	'beautifulsoup4',
+]
+
+[project.urls]
+Repository = 'https://github.com/Poaetce/lyrixir'
+
+[project.scripts]
+lyrix = 'lyrixir:main'
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'

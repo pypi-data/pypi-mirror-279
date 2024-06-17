@@ -1,0 +1,16 @@
+Metadata-Version: 2.3
+Name: lyrixir
+Version: 0.1.0
+Summary: prints random lyrics from your favorite songs!
+Project-URL: Repository, https://github.com/Poaetce/lyrixir
+Author-email: Poaetce <poaetcethe2nd@gmail.com>
+License-File: LICENSE
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
