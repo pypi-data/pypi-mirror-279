@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+mov_cli_soundcloud/__init__.py
+mov_cli_soundcloud/scraper.py
+mov_cli_soundcloud.egg-info/PKG-INFO
+mov_cli_soundcloud.egg-info/SOURCES.txt
+mov_cli_soundcloud.egg-info/dependency_links.txt
+mov_cli_soundcloud.egg-info/requires.txt
+mov_cli_soundcloud.egg-info/top_level.txt
