@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+safetensors_dataset/__init__.py
+safetensors_dataset/safetensors.py
+safetensors_dataset.egg-info/PKG-INFO
+safetensors_dataset.egg-info/SOURCES.txt
+safetensors_dataset.egg-info/dependency_links.txt
+safetensors_dataset.egg-info/requires.txt
+safetensors_dataset.egg-info/top_level.txt
