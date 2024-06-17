@@ -1,0 +1,7 @@
+#!python
+# -*-coding:utf8;-*-
+from Lython.Console import main
+
+if __name__ == '__main__':
+    main()
+        
