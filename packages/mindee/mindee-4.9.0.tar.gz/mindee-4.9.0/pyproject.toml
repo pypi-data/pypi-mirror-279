@@ -1,0 +1,49 @@
+[tool.black]
+line-length = 88
+target-version = [
+  'py38',
+  'py39',
+  'py310',
+  'py311',
+  'py312',
+]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+disallow_any_unimported = true
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+strict_equality = true
+warn_unused_ignores = true
+warn_unreachable = true
+
+[[tool.mypy.overrides]]
+module = "pypdfium2.*"
+ignore_missing_imports = true
+
+[tool.pylic]
+safe_licenses = [
+  "Apache Software License",
+  "MIT License",
+  "Mozilla Public License 2.0 (MPL 2.0)",
+  "BSD License",
+  "(Apache-2.0 OR BSD-3-Clause) AND LicenseRef-PdfiumThirdParty",
+  "Historical Permission Notice and Disclaimer (HPND)"
+]
+
+[tool.pytest.ini_options]
+addopts = "--pyargs --cov mindee --cov-report term:skip-covered --cov-report term-missing -m 'not regression'"
+python_files = "test*.py"
+junit_family = "xunit2"
+markers = [
+  "regression: marks tests as regression tests - select with '-m regression'",
+  "lineitems: debug line items"
+]
+testpaths = [
+  "tests",
+]
