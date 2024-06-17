@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gpt-ignore/__init__.py
+gpt-ignore/main.py
+gpt_ignore.egg-info/PKG-INFO
+gpt_ignore.egg-info/SOURCES.txt
+gpt_ignore.egg-info/dependency_links.txt
+gpt_ignore.egg-info/top_level.txt
