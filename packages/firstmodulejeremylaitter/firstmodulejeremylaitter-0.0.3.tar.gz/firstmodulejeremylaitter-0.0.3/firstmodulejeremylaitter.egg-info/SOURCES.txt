@@ -1,0 +1,11 @@
+setup.py
+firstmodulejeremylaitter/__init__.py
+firstmodulejeremylaitter/add.py
+firstmodulejeremylaitter/subtract.py
+firstmodulejeremylaitter.egg-info/PKG-INFO
+firstmodulejeremylaitter.egg-info/SOURCES.txt
+firstmodulejeremylaitter.egg-info/dependency_links.txt
+firstmodulejeremylaitter.egg-info/top_level.txt
+firstmodulejeremylaitter/extras/__init__.py
+firstmodulejeremylaitter/extras/divide.py
+firstmodulejeremylaitter/extras/multiply.py
