@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: fastapi-web-admin
+Version: 1.0.5
+Summary: FastAPI Admin Framework
+Home-page: https://gitee.com/buffaloboy/fast-admin
+Author: buffalo
+License: MIT
+Keywords: fastapi,fastapi-admin
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: fastapi
+Requires-Dist: sqlalchemy
+Requires-Dist: uvicorn
+
+FastAPI Admin Framework 快速构建FastAPI工程
