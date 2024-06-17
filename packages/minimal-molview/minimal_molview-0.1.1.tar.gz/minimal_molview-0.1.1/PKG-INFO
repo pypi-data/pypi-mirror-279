@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: minimal_molview
+Version: 0.1.1
+Summary: A short description of the project (less than one line).
+Author-email: Hugo MacDermottt-Opeskin <hugomacdermott@gmail.com>
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: jinja2
+Provides-Extra: test
+Requires-Dist: pytest>=6.1.2; extra == "test"
+
+minimal_molview
+==============================
+
+A minimal molecular viewer for visualising molecular structures in an HTML file. 
+
+Installation
+------------
+To install the package, you can use the following command:
+
+```bash
+git clone https://github.com/hmacdope/minimal_molview
+pip install -e .
+```
+
+Usage
+------------
+To use the viewer, simply run the following command in the terminal:
+
+```bash
+ minimal_molview 8qa2.pdb -o 8qa2.html
+```
+
+This will generate an HTML file called `8qa2.html` which can be opened in a web browser to view the molecular structure.
+
+### Copyright
+
+Copyright (c) 2024, Hugo MacDermottt-Opeskin
+
+
+#### Acknowledgements
+ 
+Project based on the 
+[Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms) version 1.1.
