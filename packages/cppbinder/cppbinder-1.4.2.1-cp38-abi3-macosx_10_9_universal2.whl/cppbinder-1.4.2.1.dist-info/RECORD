@@ -1,0 +1,12 @@
+cppbinder-1.4.2.1.data/purelib/binder/__init__.py,sha256=AMReznccLbVlTNpZz2L5wLFk7uP9RQEs8D4oiMNpnPI,1249
+cppbinder-1.4.2.1.data/purelib/binder/_version.py,sha256=ZDRp1rBcuYof8sBtoyDMVrk--q6rVapSrveXMAozBoY,416
+cppbinder-1.4.2.1.data/purelib/binder/bin/.gitkeep,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cppbinder-1.4.2.1.data/purelib/binder/bin/binder,sha256=Hh5s2Rdfc5TyTdc3KwyVA_NDBQUOTD51O0sdpHGXd_A,20531688
+cppbinder-1.4.2.1.data/purelib/cmake/clang/ClangConfig.cmake,sha256=kTwHevMMXj8e6pDZsEUOvKWfFZu4J5-WCunzFDlBagk,1994
+cppbinder-1.4.2.1.data/purelib/cmake/clang/ClangTargets.cmake,sha256=RSbSwkntJ14b6mFIxBD2Y_O2Ro9moPO3ouv5l4MOpZI,46824
+cppbinder-1.4.2.1.dist-info/LICENSE,sha256=HQsHsJWfpScEYJ4lFH2YTG6Z6Lce3bdMGLGjbAPacxs,1081
+cppbinder-1.4.2.1.dist-info/METADATA,sha256=nVI4NTlKSWRfFFcNvKaRAwSUR4pnIUHupDcnnIEOjZY,1772
+cppbinder-1.4.2.1.dist-info/WHEEL,sha256=pnArJm6e7uJFOPMQH37QkyNCM-nVY-myS8F9bltZD6g,113
+cppbinder-1.4.2.1.dist-info/entry_points.txt,sha256=LlkMIggsIo9JuJP6VWYkmBcknUo69DSDFKnYyyViTfc,41
+cppbinder-1.4.2.1.dist-info/top_level.txt,sha256=LLF1jg6sXpOOgU5eMcoqHCbQ9Of9ttqRceaGuYbUK0I,7
+cppbinder-1.4.2.1.dist-info/RECORD,,
