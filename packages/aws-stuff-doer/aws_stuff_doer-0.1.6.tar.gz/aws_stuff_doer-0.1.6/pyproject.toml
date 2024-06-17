@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "aws-stuff-doer"
+version = "0.1.6"
+description = "ASD is a utility to help manage your AWS projects and sso sessions."
+authors = [
+    "Aaron West <aphexlog@gmail.com>",
+    "ant <anthony.chiarello132@gmail.com>",
+]
+repository = "https://github.com/aphexlog/aws-stuff-doer"
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "aws_stuff_doer" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+boto3 = "^1.34.36"
+gitpython = "^3.1.41"
+aws-cdk-lib = "^2.126.0"
+boto3-stubs = "^1.34.36"
+setuptools = "^69.0.3"
+lark = "^1.1.9"
+mypy-boto3-sts = "^1.34.0"
+
+[tool.poetry.scripts]
+asd = "aws_stuff_doer.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.pyright]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 88
+skip_gitignore = true
