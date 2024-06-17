@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ssam-ew
+Version: 1.1.3
+Summary: Plot SSAM from earthworm files
+Keywords: seismic,volcano,seiscomp,volcanology,seismology,magma indonesia
+Author-email: Martanto <martanto@live.com>
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy
+Requires-Dist: openpyxl
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: numpy ; extra == "base"
+Requires-Dist: openpyxl ; extra == "base"
+Requires-Dist: pandas ; extra == "base"
+Requires-Dist: matplotlib ; extra == "base"
+Project-URL: Homepage, https://github.com/martanto/ssam-ew
+Project-URL: Issues, https://github.com/martanto/ssam-ew/issues
+Provides-Extra: base
+
+# ssam-ew
+ Spectogram plotter from Earthworm
+
