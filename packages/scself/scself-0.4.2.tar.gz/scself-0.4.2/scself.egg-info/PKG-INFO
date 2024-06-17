@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: scself
+Version: 0.4.2
+Summary: Self Supervised Tools for Single Cell Data
+Home-page: https://github.com/GreshamLab/sc_self_supervised
+Author: Chris Jackson
+Author-email: cj59@nyu.edu
+Maintainer: Chris Jackson
+Maintainer-email: cj59@nyu.edu
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: anndata>=0.8
+Requires-Dist: scanpy
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Requires-Dist: sparse_dot_mkl
+Requires-Dist: numba
+
+# scself
+
+Self Supervised Tools for Single Cell Data
+
+Molecular Cross-Validation for PCs [arXiv manuscript](https://www.biorxiv.org/content/10.1101/786269v1)
+
+```
+mcv(
+    count_data,
+    n=1,
+    n_pcs=100,
+    random_seed=800,
+    p=0.5,
+    metric='mse',
+    standardization_method='log',
+    metric_kwargs={},
+    silent=False,
+    verbose=None,
+    zero_center=False
+)
+```
+
+Noise2Self for kNN selection [arXiv manuscript](https://arxiv.org/abs/1901.11365)
+
+```
+def noise2self(
+    count_data,
+    neighbors=None,
+    npcs=None,
+    metric='euclidean',
+    loss='mse',
+    loss_kwargs={},
+    return_errors=False,
+    connectivity=False,
+    standardization_method='log',
+    pc_data=None,
+    chunk_size=10000,
+    verbose=None
+)
+```
+
+Implemented as in [DEWÄKSS](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008569)
