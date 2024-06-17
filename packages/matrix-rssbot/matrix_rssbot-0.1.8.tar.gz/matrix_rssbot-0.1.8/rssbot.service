@@ -1,0 +1,15 @@
+[Unit]
+Description=RSSbot
+Requires=network.target
+
+[Service]
+Type=simple
+User=rssbot
+Group=rssbot
+WorkingDirectory=/opt/rssbot
+ExecStart=/opt/rssbot/.venv/bin/python3 -um rssbot
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
