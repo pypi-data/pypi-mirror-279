@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: django-germanium
+Version: 2.3.14
+Summary: Helpful methods for Python Selenium and REST testing
+Author: Lukas Rychtecky, Lubos Matl
+Author-email: lukas.rychtecky@gmail.com, matllubos@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: django>=2.2
+Requires-Dist: nose>=1.3.7
+Provides-Extra: selenium
+Requires-Dist: selenium>=2.37.2; extra == "selenium"
+Requires-Dist: PyVirtualDisplay>=0.1.2; extra == "selenium"
