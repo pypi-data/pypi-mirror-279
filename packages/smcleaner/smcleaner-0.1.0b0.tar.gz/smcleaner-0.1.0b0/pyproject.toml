@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "smcleaner"
+version = "0.1.0b"
+description = "A tool to remove inappropriate content from your social media accounts."
+authors = ["Denis Kazakov <denis@kazakov.ru.net>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.scripts]
+smcleaner = "smcleaner.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = {extras = ["all"], version = "^0.12.3"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+mypy = "^1.10.0"
+ruff = "^0.4.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
