@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: django-utk
+Version: 0.0.1
+Summary: The most useful tools for any django project
+Project-URL: Homepage, https://github.com/v1a0/django-utk
+Project-URL: Issues, https://github.com/v1a0/django-utk/issues
+Author-email: v1a0 <contact@v1a0.dev>
+License-File: LICENSE
+Classifier: Framework :: Django
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Django Ultimate Toolkit
+
+The most useful tools for any django project
+
+- Models
+  - Mixins
+    - TimeStampedModel
+    - SoftDeleteModel
+    - DBViewModel
+    - MaterializedDBViewModel
+  - Fields
+    - CreatedAtField
+    - UpdatedAtField
+- Misc
+  - Singleton 
+
