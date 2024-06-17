@@ -1,0 +1,2 @@
+[console_scripts]
+getAndMergeDatasets = src.getAndMergeDatasets:main

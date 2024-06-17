@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: datasetManipulation
+Version: 0.1
+Summary: Naia Science dataset Manipulation utils
+Author: Axelle Lorin for Naia Science
+Description-Content-Type: text/markdown
+Requires-Dist: roboflow ==0.2.29
+Requires-Dist: ultralytics ==8.0.196
+Requires-Dist: pycocotools
+Requires-Dist: split-folders
+
+This package contains utils to download, merge and split datasets
