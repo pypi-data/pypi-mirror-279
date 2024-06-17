@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+lili_activation/__init__.py
+lili_activation/activation.py
+lili_activation.egg-info/PKG-INFO
+lili_activation.egg-info/SOURCES.txt
+lili_activation.egg-info/dependency_links.txt
+lili_activation.egg-info/requires.txt
+lili_activation.egg-info/top_level.txt
