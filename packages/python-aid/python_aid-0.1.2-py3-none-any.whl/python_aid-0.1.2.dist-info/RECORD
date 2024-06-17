@@ -1,0 +1,8 @@
+python_aid-0.1.2.dist-info/METADATA,sha256=HudwJf-aVqHkNiR9pburSt1CmPtu52ar2Wj-hga35CA,1531
+python_aid-0.1.2.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+python_aid-0.1.2.dist-info/licenses/LICENSE,sha256=-SqNpYByVVCoZbbQu2BeIjHVEIeP-J5tcFuae6oXlpY,1086
+python_aid/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+python_aid/aid.py,sha256=yFfoeHK8tLcZZrXmJK2EpTagOJITwGLNTXwhkanwkr8,1041
+python_aid/aidx.py,sha256=vMOkMIVFHcPPi2E2udL5-dyYLkVwNA7Uqgj6u7Yb0BY,1118
+python_aid/base36.py,sha256=MkzebAeULJy1b-PnS-e3HPaNIWO9sos-p_tyM6fhOeU,501
+python_aid-0.1.2.dist-info/RECORD,,
