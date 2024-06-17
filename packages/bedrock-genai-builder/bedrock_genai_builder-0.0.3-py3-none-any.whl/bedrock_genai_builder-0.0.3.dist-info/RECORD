@@ -1,0 +1,9 @@
+bedrock_genai_builder/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bedrock_genai_builder/cli.py,sha256=BrDj1E0x1yaQcuHF8zq8Q1-kcClodwMGmVOCkqNJzBY,1412
+bedrock_genai_builder/code_content.py,sha256=erwwd-ecRlVyq9edyz61asmoQlYFas-zILzMYms1R_w,5604
+bedrock_genai_builder-0.0.3.dist-info/LICENSE.txt,sha256=d52s0kbOAven4zIdzZw-A-2GpVA2G4H3P0qu9DjBwJo,1089
+bedrock_genai_builder-0.0.3.dist-info/METADATA,sha256=HC2sAKuEH8kHCgime1opDxSTOKBT8KuDOirjfggUSPs,24187
+bedrock_genai_builder-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bedrock_genai_builder-0.0.3.dist-info/entry_points.txt,sha256=LsW4g8EnFRWYQQ-q_OfhP7p8psF8qpswl1u42-kSsR0,103
+bedrock_genai_builder-0.0.3.dist-info/top_level.txt,sha256=bZentFhXKBsGL35nv8g4xypjF2dngziq_h5d_367Q9M,22
+bedrock_genai_builder-0.0.3.dist-info/RECORD,,
