@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "1eb89bfa752407df",
+    "type": "split",
+    "children": [
+      {
+        "id": "fc14948cf9ed0d91",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d87282dcd05850e5",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a6736c65aacd056b",
+    "type": "split",
+    "children": [
+      {
+        "id": "712863b8bcff44f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1bc1b5e3c9517554",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f24781b1570f00a8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fcbe9d1311f4f222",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "69d30c5a06e1ba59",
+    "type": "split",
+    "children": [
+      {
+        "id": "4b659f2ab54d1e61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "021cc0367f81530b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "bf331981c87523ab",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "726ce3ea78ed9ca4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "eb9d77cdd2e86aea",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3d04ea6ef0edd79a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false
+    }
+  },
+  "active": "d87282dcd05850e5",
+  "lastOpenFiles": [
+    "References/FT-IR and Raman spectroscopy data fusion with chemometrics for simultaneous determination of chemical quality indices of edible oils during thermal oxidation.md",
+    "References/Discriminant analysis of vegetable oils by thermogravimetric-gas chromatography-mass spectrometry combined with data fusion and chemometrics without sample pretreatment.md",
+    "A Novel Forensic Tool for the Characterization and Comparison of Printing Ink Evidence.. Development and Evaluation of a Searchable Database Using Data Fusion of Spectrochemical Methods.md",
+    "References/Data fusion methodologies for food and beverage authentication and quality assessment – A review,.md",
+    "References/Assessment of premium organic orange juices authenticity using HPLC-HR-MS and HS-SPME-GC-MS combining data fusion and chemometrics,Food Control.md",
+    "References/Assessing the varietal origin of extra-virgin olive oil using liquid chromatography fingerprints of phenolic compound, data fusion and chemometrics.md",
+    "References/A Review of Data Fusion Techniques.md",
+    "References/Data fusion.md",
+    "References/An introduction to multisensor data fusion.md",
+    "References/Springer Handbook of Robotics, Multisensor Data Fusion.md",
+    "To do.md",
+    "References",
+    "UML/Components.md",
+    "SVM.md",
+    "PEP coding standards.md",
+    "Beartype.md",
+    "Devlog/2024-05-18.md",
+    "Devlog/2024-05-17.md",
+    "Devlog/2024-05-09.md",
+    "Devlog/2024-05-08.md",
+    "UML/Sequence.md",
+    "UML/Use cases.md",
+    "Constructors.md",
+    "Use Case Diagram.md",
+    "Devlog/2024-05-07.md"
+  ]
+}
