@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: SqueakyCleanText
+Version: 0.1.0
+Summary: A comprehensive text cleaning and preprocessing pipeline.
+Home-page: https://github.com/rhnfzl/SqueakyCleanText
+Author: Rehan Fazal
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lingua-language-detector
+Requires-Dist: nltk
+Requires-Dist: emoji
+Requires-Dist: ftfy
+Requires-Dist: Unidecode
+Requires-Dist: beautifulsoup4
+Requires-Dist: transformers
+Requires-Dist: torch
+Provides-Extra: dev
+Requires-Dist: hypothesis ; extra == 'dev'
+Requires-Dist: faker ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+
+# SqueakyCleanText
+Clean your Text for Classical ML and Language Model
+
+# TODO
+- Ability to change the NER MODELS from the config file, which supports AutoModel and AutoTokenizer
+- Add more language support in stopwords
