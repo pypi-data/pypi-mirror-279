@@ -1,0 +1,62 @@
+groups:
+- neurodata_type_def: PatchviewSweepGroup
+  neurodata_type_inc: NWBDataInterface
+  doc: Sweep group for Patchview, parent of pvSweep
+  quantity: '?'
+  groups:
+  - neurodata_type_def: PatchviewSweep
+    neurodata_type_inc: NWBDataInterface
+    doc: A sweep with one or multiple traces
+    quantity: '*'
+    attributes:
+    - name: sweep_table_index
+      dtype: int
+      doc: index in the NWB sweep table. Use this to extract the sweep from NWB file
+      required: false
+    - name: local_sweep_index
+      dtype: int
+      doc: local relative index in current sweep group
+      required: false
+    - name: stimulating_electrode_index
+      dtype: int
+      doc: index for the electrode that applies stimulus
+      required: false
+    - name: stimulus_type
+      dtype: text
+      doc: stimulus type. Facilitate auto analysis
+      required: false
+    - name: stimulus_onset
+      dtype: float
+      doc: stimulus onset time in seconds
+      required: false
+    - name: stimulus_offset
+      dtype: float
+      doc: stimulus offset time in seconds
+      required: false
+    - name: stimulus_amplitude
+      dtype: float
+      doc: stimulus amplitude
+      required: false
+    - name: stimulus_holding_amplitude
+      dtype: float
+      doc: holding current/voltage amplitude
+      required: false
+    - name: stimulus_name
+      dtype: text
+      doc: custom human-readable stimulus name
+      required: false
+    datasets:
+    - name: trace_indexes
+      dtype: int
+      dims:
+      - trace number
+      - trace index
+      shape:
+      - null
+      - 4
+      doc: 'index for all traces '
+    - name: trace_labels
+      dtype: text
+      shape:
+      - null
+      doc: 'label for all traces '
