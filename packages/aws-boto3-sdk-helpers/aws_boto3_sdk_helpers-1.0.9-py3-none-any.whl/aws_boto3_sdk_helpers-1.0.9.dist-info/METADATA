@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: aws_boto3_sdk_helpers
+Version: 1.0.9
+Summary: "Contains helper functions for the AWS Python sdk (Boto3) package."
+Author: Yiskaneto
+License: MIT
+Project-URL: homepage, https://github.com/yiskaneto/aws-boto3-sdk-helpers
+Keywords: boto3,botocore,aws
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3
+Requires-Dist: botocore
+
+# AWS Boto3 SDK Helpers
+
+Contains helper functions for the AWS Python sdk (Boto3) package.
+
+## Install
+
+`python -m pip install --upgrade aws-boto3-sdk-helpers`
+
+## Manual use of boto3
+
+A few examples on how to use the AWS python SDK (Boto3)
+
+- [AWS Boto3 SDK Helpers](#aws-boto3-sdk-helpers)
+  - [Setup](#setup)
+    - [Create Virtual Environment](#create-virtual-environment)
+    - [Install Boto 3](#install-boto-3)
+
+## Setup
+
+### Create Virtual Environment
+
+```bash
+python -m venv /opt/python_envs/boto3 && source /opt/python_envs/boto3/bin/activate
+```
+
+### Install Boto 3
+
+[Install Boto 3 Official Docs](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#install-boto3)
+
+```bash
+python -m pip install boto3 botocore
+```
+
+MIT License
+
+Copyright (c) [2024] [Yiskaneto]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
