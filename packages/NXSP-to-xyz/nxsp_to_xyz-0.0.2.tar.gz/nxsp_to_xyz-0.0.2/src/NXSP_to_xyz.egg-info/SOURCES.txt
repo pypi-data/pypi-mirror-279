@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/NXSP_to_xyz/NXSP_to_xyz.py
+src/NXSP_to_xyz/__init__.py
+src/NXSP_to_xyz.egg-info/PKG-INFO
+src/NXSP_to_xyz.egg-info/SOURCES.txt
+src/NXSP_to_xyz.egg-info/dependency_links.txt
+src/NXSP_to_xyz.egg-info/requires.txt
+src/NXSP_to_xyz.egg-info/top_level.txt
