@@ -1,0 +1,9 @@
+contact_local/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+contact_local/contact.py,sha256=TbetqGs8dgI6srAhqioA7Ej32iXtT0Ol4i6MZQ0q79U,1299
+contact_local/contact_constants.py,sha256=hk1Uu8_mgnXSnHdvLb-CeegATxkOvHEu3WOCIdLAWo4,664
+contact_local/contact_local.py,sha256=v9cNZLhHmcOb8mT0181ul-x1YQkTNWVSPnRNHEinoak,38530
+contact_local/contacts_local_exceptions.py,sha256=5JUH8G_20Jwt50vpo-e-BrQKjVb036l_4O7P3r8_htU,1691
+contact_local-0.0.60.dist-info/METADATA,sha256=ai9xyvSB4xhyD_88NR4tv3JvnykUymuyZzLj4i_cjs4,669
+contact_local-0.0.60.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+contact_local-0.0.60.dist-info/top_level.txt,sha256=I-euwk9tyuqosp5fGNE4nuKVBBUOaokpta88I1zhYC8,14
+contact_local-0.0.60.dist-info/RECORD,,
