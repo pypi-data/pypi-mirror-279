@@ -1,0 +1,11 @@
+spector-1.5.dist-info/RECORD,,
+spector-1.5.dist-info/WHEEL,sha256=Vo9YTsjXxZ5SWdH4n69oS5jU3YTIi3eHk0n-aUcTtlw,110
+spector-1.5.dist-info/top_level.txt,sha256=We-Cx-in-0_eOnpQqnrqwdKOhnOBw3Pz2fHi0MQHi0U,8
+spector-1.5.dist-info/LICENSE.txt,sha256=UEd-mwEWPp8XVNMxjMOAWSeMxlhjFsTmJ94wdmkci-o,576
+spector-1.5.dist-info/METADATA,sha256=0V3eAh427T5ixCP5D5mHUdSsyH9YlG48iSJKC8Ewz44,5379
+spector/matrix.py,sha256=EpVOEkCEdEqD3ImNzRWY8j29ZcWWYRCZtKkPHpecmWw,4521
+spector/vector.cpython-312-darwin.so,sha256=CiLiFSg1uOIFLdAFOU0TEA1AWySqsIfLU1RAhAadDDc,435200
+spector/__init__.py,sha256=LofFs1srV8VLTZBzcfxWTobPrROx6Yfkd6R2zxOYs-A,88
+spector/vector.pyx,sha256=mr1t87C5Jp-jP8CrpaArv1u6KJG13Rh0iQKPtJlFD2c,20772
+spector/vector.cpp,sha256=5eWA54GqD9IZsUVjgQ5RQQTjW3c2FRQwZUJ2KXNSwcY,2067208
+spector/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
