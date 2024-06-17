@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: anchio
+Version: 0.1.2
+Summary: 
+License: Apache 2.0
+Author: Developer
+Author-email: dev@anchio.app
+Requires-Python: >=3.11,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: httpx (>=0.27.0,<0.28.0)
+Requires-Dist: janus (>=1.0.0,<2.0.0)
+Requires-Dist: pytest-asyncio (>=0.23.7,<0.24.0)
+Requires-Dist: python-async-anchio (>=0.1.3,<0.2.0)
+Requires-Dist: setuptools (>=70.0.0,<71.0.0)
+Requires-Dist: urllib3 (>=2.2.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Python Anchio SDK
