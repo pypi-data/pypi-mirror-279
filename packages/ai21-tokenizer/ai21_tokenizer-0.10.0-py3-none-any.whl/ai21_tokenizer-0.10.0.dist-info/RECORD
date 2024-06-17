@@ -1,0 +1,13 @@
+ai21_tokenizer/__init__.py,sha256=pcywHPrBUbrNrimVU5K4CrRRXYWEQjabynfcyVR72K8,499
+ai21_tokenizer/base_tokenizer.py,sha256=5NL04YwSjHdl7SIf3KaA61Cfcc19DHzVQJoPmhHLrUc,2189
+ai21_tokenizer/jamba_instruct_tokenizer.py,sha256=YKATgRGMtRWS9dTHVIztRvwUwHSWeCCF3aANVLQLoUA,2822
+ai21_tokenizer/jurassic_tokenizer.py,sha256=a4UtwxMI2_viUTPO3IVihoDCOQjAa2jEBCdhg_w5bsk,9103
+ai21_tokenizer/resources/j2-tokenizer/config.json,sha256=vM7OEN5e2bQeb9qsR09wgybrK1NI9_28SUWDnHerko8,223
+ai21_tokenizer/resources/j2-tokenizer/j2-tokenizer.model,sha256=Dadce3WQgG5ut5Hssr7rid957yuUcogJqR0TSfqbPYI,6659225
+ai21_tokenizer/tokenizer_factory.py,sha256=MnHzHLsJzdPTguTysBneTFDr21QSvLjxSFSXJ3h7Dsg,1188
+ai21_tokenizer/utils.py,sha256=nxJ70YGaDThBoytwrMfCswGrxZW8DGrqXXmuf4bbK7M,647
+ai21_tokenizer/version.py,sha256=d1dN1C0lChtgs8TeflWrdbaPBxD2_S-a-qCHoQG4gyw,19
+ai21_tokenizer-0.10.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ai21_tokenizer-0.10.0.dist-info/METADATA,sha256=p4IGYMboPzvfX5bCR5NwM-kh3Ik3l6HAYyUH1hKf8sU,3168
+ai21_tokenizer-0.10.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ai21_tokenizer-0.10.0.dist-info/RECORD,,
