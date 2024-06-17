@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: vscapi
+Version: 1.2.0
+Summary: VapourSynth C Api bindings in Python
+Author: Setsugen no ao
+Author-email: setsugen@setsugen.dev
+Maintainer: Setsugen no ao
+Maintainer-email: setsugen@setsugen.dev
+Project-URL: Source Code, https://github.com/Setsugennoao/vapoursynth-capi
+Project-URL: Documentation, https://vscapi.encode.moe/en/latest/
+Project-URL: Contact, https://discord.gg/qxTxVJGtst
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: ctypedffi>=1.1.0
+
+# vapoursynth-capi
+
+### VapourSynth C Api bindings in Python
+<br>
+
+You can find support in the [IEW Discord server](https://discord.gg/qxTxVJGtst).
+<br><br>
+## How to install
+
+Install `vscapi` with the following command:
+
+```sh
+$ pip install vscapi
+```
+
+Or if you want the latest git version, install it with this command:
+
+```sh
+$ pip install git+https://github.com/Setsugennoao/vapoursynth-capi.git
+```
