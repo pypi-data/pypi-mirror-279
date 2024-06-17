@@ -1,0 +1,16 @@
+vscapi/__init__.py,sha256=UrI5czqQ-Hx9BKs_W1wolZS93C6pmR4JfJ-4Pt5Rv9I,543
+vscapi/_metadata.py,sha256=uT9AJwD_2DjI1bnhpzugU2cXcOCFxYTtx3P6Z8bqURU,367
+vscapi/lib.py,sha256=Slo7HEeVvGBZ2huDm9O1oQ5HQfqyUwdwGqD0hgpsN74,7186
+vscapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vscapi/structs.py,sha256=y9HBEGojAV419JVmQxpvUaKRMeCVDzgSAgbWGww_KAg,8021
+vscapi/utils.py,sha256=6m8KjDDRciJOV31ttBzraS1A_T8Ug0fID8E_D8Wo_ic,159
+vscapi/vsapi.py,sha256=GrvxWicmwrNirSvmse6jc1I6xqRYyaeHsh_AsSL50ME,16023
+vscapi/vscapi.dll,sha256=txeCEQQtYim3XUXLTIE9AB2neb40L9d6-9uTmX8E0rg,90998
+vscapi/vscapi.so,sha256=e2m4RrHQFd2EwJTek_Xwv5equm2GpFmSD2rMD4xMh0A,15728
+vscapi/vsenums.py,sha256=_iDE6P_hwIlNg_uG-Zpo71DtEzDxIuneBfJX7Q32RN4,8213
+vscapi/vshelper.py,sha256=z2fOcOSBdV29O6kQvI4Tqyr_w_O5fY1-qD75iqdD7yA,3353
+vscapi-1.2.0.dist-info/LICENSE,sha256=c7zRrcdsvNZLijyo88GQRpJcrBlQTR-ANFAUH1PCi24,1088
+vscapi-1.2.0.dist-info/METADATA,sha256=uSoeZAIPl_4cDR5IMF5RmabUTIQoT7df0Ni2hAOf8Rw,1085
+vscapi-1.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+vscapi-1.2.0.dist-info/top_level.txt,sha256=ZZUwqLQd1oKHTIZEKuF39r-muu8fZQ4AjLyRY9jGZqg,7
+vscapi-1.2.0.dist-info/RECORD,,
