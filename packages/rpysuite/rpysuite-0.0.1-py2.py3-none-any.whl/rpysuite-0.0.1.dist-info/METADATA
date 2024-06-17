@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: rpysuite
+Version: 0.0.1
+Summary: description
+Author: dameng
+Author-email: pingf0@gmail.com
+License: MIT or RPYSuite License
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: User Interfaces
+Classifier: Topic :: Software Development :: Widget Sets
+Classifier: Typing :: Typed
+License-File: LICENSE
+
