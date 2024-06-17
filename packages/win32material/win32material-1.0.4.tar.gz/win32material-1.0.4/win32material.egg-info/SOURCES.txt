@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+win32material.egg-info/PKG-INFO
+win32material.egg-info/SOURCES.txt
+win32material.egg-info/dependency_links.txt
+win32material.egg-info/top_level.txt
+win32style/__init__.py
+win32style/win32style.dll
+win32style/win32style.py
