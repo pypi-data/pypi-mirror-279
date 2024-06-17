@@ -1,0 +1,10 @@
+ngstents/__init__.py,sha256=qUwR64_c4tqqJXQ8UiDDAVw0ukmllSVRZAV1KXDH7nY,36
+ngstents/_pytents.lib,sha256=vg8sAT9MD9abdTaMbs-h_H-2ILcn_k-XirF6VMN-xl4,61972
+ngstents/_pytents.pyd,sha256=ZdA1l5n63FRkAHofV7JfusG2DUPkzdheIXhjanDwr_A,366592
+ngstrefftz/__init__.py,sha256=MfLzu_YBlEJUKp_r1iBMMVhNmWa1V98fwPTJ9-YCxeU,1779
+ngstrefftz/_trefftz.lib,sha256=jw-mnwGLHlmU3D1Bzt0PaU16OF2gSAjGcIWEyHrYeww,101978
+ngstrefftz/_trefftz.pyd,sha256=nrc67x8hkjY3dYELOUwTJ1tnxt6vGvTa03QuoTmax8w,1156608
+ngstrefftz-0.3.2403.dev17.dist-info/METADATA,sha256=0MaIWZDb2m3UAeKTR-mWh1399_QuBuKopoN5ioUDnm4,5708
+ngstrefftz-0.3.2403.dev17.dist-info/WHEEL,sha256=ZGqof_gNyiU0F9ZTzrw4zFIqyjwzlcLXZFe0-CwerKU,103
+ngstrefftz-0.3.2403.dev17.dist-info/licenses/LICENSE,sha256=LPNKwDiu5awG-TPd0dqYJuC7k4PBPY4LCI_O0LSpW1s,7814
+ngstrefftz-0.3.2403.dev17.dist-info/RECORD,,
