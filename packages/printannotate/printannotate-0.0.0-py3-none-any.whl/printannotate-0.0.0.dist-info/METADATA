@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: printannotate
+Version: 0.0.0
+Summary: A package to annotate print statements in provided script.
+Home-page: https://github.com/saikotek/printannotate
+Author: Andrzej Wasowski
+Author-email: me@wasowski.dev
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# printannotate
+
+A Python package to annotate print statements with encoded information about the calling script and line number.
+
+## Installation
+
+You can install the package using pip:
+
+pip install printannotate
+
+## Usage
+
+py -m printannotate <script_path>

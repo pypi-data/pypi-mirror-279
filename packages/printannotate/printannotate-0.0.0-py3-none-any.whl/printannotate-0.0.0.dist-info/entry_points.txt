@@ -1,0 +1,2 @@
+[console_scripts]
+printannotate = printannotate.__main__:main
