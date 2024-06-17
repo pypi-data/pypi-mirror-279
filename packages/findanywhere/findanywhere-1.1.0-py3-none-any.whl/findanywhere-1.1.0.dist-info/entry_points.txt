@@ -1,0 +1,6 @@
+[console_scripts]
+findanywhere=whereisit.ui.console:main
+findanywhere_schema=whereisit.schema:main
+whereisit=whereisit.ui.console:main
+whereisit_schema=whereisit.schema:main
+
