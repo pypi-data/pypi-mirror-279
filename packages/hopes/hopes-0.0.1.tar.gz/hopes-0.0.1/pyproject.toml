@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "hopes"
+version = "0.0.1"
+description = "HVAC Off-policy evaluation and selection methods"
+authors = ["Antoine Galataud <antoine@foobot.io>"]
+packages = [
+    { include = "hopes/" },
+]
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+numpy = "1.26.4"
+pandas = "2.2.2"
+scikit-learn = "1.5.0"
+torch = "2.3.1"
+pwlf = "2.2.1"
+matplotlib = "3.9.0"
+urllib3 = "2.2.1"
+requests = "2.32.3"
+pytz = "2024.1"
+PyYAML = "~6.0.1"
+boto3 = "^1.34.74"
+dataclasses-json = "0.6.7"
+tabulate = "0.9.0"
+onnxruntime = "1.18.0"
+
+[tool.poetry.dev-dependencies]
+coverage = { version = "7.5.3", extras = ["toml"] }
+
+[tool.poetry.scripts]
+tests = "tests.discover:run"
+coverage = "tests.discover:coverage"
+
+[tool.coverage.report]
+include = [
+    "hopes/*",
+]
+omit = [
+    "**/__init__.py",
+    "hopes/assert_utils.py",
+    "hopes/dev_utils.py",
+]
+ignore_errors = true
+show_missing = true
+skip_empty = true
+skip_covered = false
+
+[build-system]
+requires = ["setuptools", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
