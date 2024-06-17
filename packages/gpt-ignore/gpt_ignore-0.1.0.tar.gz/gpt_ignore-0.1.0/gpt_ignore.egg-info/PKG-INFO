@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: gpt-ignore
+Version: 0.1.0
+Summary: A tool to manage `.gpt-ignore` files for excluding specific files from OpenAI GPT training data.
+Home-page: https://github.com/tayyipcanbay/gpt-ignore
+Author: Tayyip Canbay
+Author-email: tayyipcanbaydev@gmail.com
+License-File: LICENSE
+Requires-Dist: os
+Requires-Dist: shutil
+Requires-Dist: argparse
