@@ -1,0 +1,7 @@
+_zenith_viz
+build
+cmake-build-debug
+images
+test
+tmp
+zenith_viz
