@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/socks.py
+src/ssl_checker.py
+src/python_ssl_checker.egg-info/PKG-INFO
+src/python_ssl_checker.egg-info/SOURCES.txt
+src/python_ssl_checker.egg-info/dependency_links.txt
+src/python_ssl_checker.egg-info/requires.txt
+src/python_ssl_checker.egg-info/top_level.txt
