@@ -1,0 +1,16 @@
+cdp_client/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cdp_client/cdp.py,sha256=AAdHzAjG1QX7qICvbE_xqEgp12h6184Ls7RdMbpPVJM,33456
+cdp_client/cdp_pb2.py,sha256=jRp5ZrcFWWGdN-ZjxPFGXEKzOGoWP3sCnmYfM7Q64Rc,58846
+cdp_client/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cdp_client/tests/fake_data.py,sha256=A6HAbi_O5Y9jkybz8-nxsGOLd7hp-IvvMdXrR_CjWF4,6920
+cdp_client/tests/test_client.py,sha256=e_71cGawM6iz6rGZBEzDu4FciuktaJXrSmoaKXkTgzk,2265
+cdp_client/tests/test_connection.py,sha256=Vsa_iFO4JuDWtL9l5-9TKlpNMsI_pc_q1lupp8g0Z-g,14833
+cdp_client/tests/test_main.py,sha256=iTw_teUZxYB_s7S7Pm3oHt6-VBZ3S3gn3bnOxxMnATY,64
+cdp_client/tests/test_node.py,sha256=GJY_ymH-VrLkM15hsgOrr-iOzjoWZ3KTOxT_pPVbJ50,10820
+cdp_client/tests/test_nodetree.py,sha256=LYv39_lk-CG5KMxIW4hf-Uj43DW6ByyLhLkW9sTHMhs,2832
+cdp_client/tests/test_requests.py,sha256=EwJWFoU6SKqD4zgh87QHPYZdwdlHVHAjSoOzLfgw9Tw,2962
+cdp_client-2.2.0.dist-info/LICENSE.txt,sha256=kV6osf57DihxDkdNGNwKmdFIdUDV6WiDlSbr3YjqlV8,1082
+cdp_client-2.2.0.dist-info/METADATA,sha256=97rce0rVWoBPqJFSCPMfMphQaCUx_bg-pVKKZYcwGTE,14157
+cdp_client-2.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+cdp_client-2.2.0.dist-info/top_level.txt,sha256=jB1SkK6Q3zW7mSoeDfKRHQM2UZCUkDzD5A4TfJrOkZs,11
+cdp_client-2.2.0.dist-info/RECORD,,
