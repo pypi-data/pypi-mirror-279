@@ -1,0 +1,2 @@
+[console_scripts]
+nltk_downloader = sct.scripts.download_nltk_stopwords:main
