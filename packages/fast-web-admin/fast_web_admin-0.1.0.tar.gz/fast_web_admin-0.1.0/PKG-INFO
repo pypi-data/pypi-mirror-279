@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: fast-web-admin
+Version: 0.1.0
+Home-page: https://gitee.com/buffaloboy/fast-admin
+Author: buffalo
+License: MIT
+Keywords: fastapi,fastapi-admin
+Platform: any
+Requires-Dist: fastapi
+Requires-Dist: sqlalchemy
+Requires-Dist: uvicorn
