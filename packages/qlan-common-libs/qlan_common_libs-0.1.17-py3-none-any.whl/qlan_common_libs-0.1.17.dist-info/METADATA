@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: qlan-common-libs
+Version: 0.1.17
+Summary: A collection of common functions for various tasks.
+Author: Qlan
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+
+# QLAN Common Libraries
+
+QLAN Common Libraries (`qlan_common_libs`) is a collection of utility functions and modules designed to simplify various tasks in Python projects. This package provides a set of reusable functions to streamline development and improve code maintainability.
+
+## Table of Contents
+
+- [QLAN Common Libraries](#qlan-common-libraries)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Example Usage](#example-usage)
+  - [Modules](#modules)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+## Overview
+
+The `qlan_common_libs` package includes a variety of utility functions that can be used in different parts of your application. The library is designed to be lightweight, easy to use, and modular.
+
+## Installation
+
+You can install the `qlan_common_libs` package via pip. Run the following command to install the latest version:
+1, run `source build.sh`
+2, run `pip install build_output/qlan_common_libs-*.*.*-py3-none-any`
