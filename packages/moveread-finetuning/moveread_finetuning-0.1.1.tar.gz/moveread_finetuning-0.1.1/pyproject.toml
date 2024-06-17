@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-finetuning"
+version = "0.1.1"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Round-to-round finetuning for the Moveread OCR"
+dependencies = [
+  "keras", "tensorflow", "moveread-ocr", "tf-tools", "tf-ctc",
+  "demetric", "checkptr", "haskellian", "tensorflow-records"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/moveread-ocr.git"
+
+[project.scripts]
+moveread-finetune = "moveread.finetuning.cli:main"
+
+# [project.optional-dependencies]
+# test = [
+#   "pytest < 5.0.0",
+#   "pytest-cov[all]"
+# ]
