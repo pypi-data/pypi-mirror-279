@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: zcryptpy
+Version: 1.0.1
+Summary: zCrypt - Simple encryption algorithm
+Author-email: Zer0here <lopadotemakho.pterygon@protonmail.com>
+Project-URL: Homepage, https://github.com/RefriZaddo/zCrypt.py
+Project-URL: Issues, https://github.com/RefriZaddo/zCrypt.py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# zCrypt.py
+It's just a simple encryption algorithm, y'know, not much  
+(it converts every letter to uppercase upon encryption because of an issue with encrypted values above 256, sorry about that)
+
+```py
+zencrypt(string)
+# Encrypts an ASCII string
+
+zencrypt_narrated(string)
+# Narrates the encryption of an ASCII string
+
+zdecrypt(string)
+# Decrypts an encrypted string
+
+zdecrypt_narrated(string)
+# Narrates the decryption of an encrypted string
+```

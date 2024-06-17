@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/zcryptpy/__init__.py
+src/zcryptpy/main.py
+src/zcryptpy.egg-info/PKG-INFO
+src/zcryptpy.egg-info/SOURCES.txt
+src/zcryptpy.egg-info/dependency_links.txt
+src/zcryptpy.egg-info/top_level.txt
