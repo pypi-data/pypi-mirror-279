@@ -1,0 +1,10 @@
+copspy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+copspy/api_urls.py,sha256=WyIXqXLaEcULvzAno513GHMF1VRmvVnFVdCr_WTDaW8,378
+copspy/apierror.py,sha256=sBsGXxeuKs2Xd4oG8_Gacf5Y12MavbMHfon24mJmFv8,1006
+copspy/get_profile.py,sha256=IMhosJXxK0FpPvBCcU3O6HYO5-s3ctBlVfoKmycNfKs,1607
+copspy/get_server_status.py,sha256=0yDa4zQolcVzbxnyEQ1I8QHlBskqP3-97WYhwqnALps,539
+u_copsapi-0.2.1.dist-info/LICENSE.txt,sha256=VMcsEKWbK_M4XLew53royaGkvKAeyv6CpA3lPisivfw,1057
+u_copsapi-0.2.1.dist-info/METADATA,sha256=8RFGPWmQvUET4Xk5uXGGGM0DKtlhX1GyLGQ8UxtT8ys,1470
+u_copsapi-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+u_copsapi-0.2.1.dist-info/top_level.txt,sha256=18kK8fq8oXbbwqA6kzT_NGaV_tgzgjzAdIjU0k2Z4Rc,8
+u_copsapi-0.2.1.dist-info/RECORD,,
