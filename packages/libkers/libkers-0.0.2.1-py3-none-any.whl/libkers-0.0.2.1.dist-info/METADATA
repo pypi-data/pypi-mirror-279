@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: libkers
+Version: 0.0.2.1
+Summary: Enumerating networks and finding optimal pathways
+Author: a-ware (Project A-ware)
+Author-email: <all@stickybits.red>
+Keywords: python,enumeration,reconnaissance,c2,breach-simulation,network-analysis
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+Requires-Dist: python3-nmap
+Requires-Dist: paramiko
+Requires-Dist: bs4
+Requires-Dist: scp
+Requires-Dist: tqdm
+
+
+# Kers
+The python package that recruits nodes on a network using found vulnerabilities.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+
+## Introduction
+
+## Installation
+
+## Usage
