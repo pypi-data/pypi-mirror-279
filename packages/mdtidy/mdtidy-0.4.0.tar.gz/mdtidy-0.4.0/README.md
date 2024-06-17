@@ -1,0 +1,96 @@
+# mdtidy
+
+**mdtidy** is a Python library designed to process conversational AI outputs (specifically GPT and Gemini) into Jupyter Notebooks (.ipynb), while also counting code errors within the content. It's an intuitive tool for transforming raw markdown, code blocks, and conversation data into well-structured Jupyter notebooks, specifically tailored for reviewing AI-generated conversation data and integrating with Google Drive and Google Sheets for enhanced data management.
+
+## Features
+
+- **Markdown to Jupyter Notebook**: Convert markdown content with embedded Python code blocks into a Jupyter Notebook file.
+- **Error Counting**: Identify and count common Python error types within the content.
+- **Conversation Analysis**: Supports parsing and formatting conversation data from both GPT and Gemini models.
+- **Google Drive Integration**: Upload processed notebooks to Google Drive.
+- **Google Sheets Integration**: Update Google Sheets with processed conversation data and error counts.
+
+## Installation
+
+Install mdtidy using pip:
+
+```sh
+pip install mdtidy
+```
+
+## Usage
+
+### Convert GPT Conversations to Notebook
+
+This example shows how to process GPT conversation data into a structured Jupyter notebook.
+
+```python
+from mdtidy.process_gpt_conversation import process_gpt_conversation
+
+# Trigger the processing of a GPT conversation, prompting for required details
+process_gpt_conversation()
+```
+
+### Convert Gemini Conversations to Notebook
+
+This example details processing Gemini model conversations into a notebook format, integrating error analysis.
+
+```python
+from mdtidy.process_gemini_conversation import process_gemini_conversation
+
+input_string_1 = """
+# Insert the content of the first input string here, preserving its structure.
+"""
+
+input_string_2 = """
+# Insert the content of the second input string here, preserving its structure.
+"""
+
+# Add more input strings as needed.
+
+# Prepare your input strings for the Gemini model conversation
+input_strings = [input_string_1, input_string_2]  # Extend this list as needed.
+process_gemini_conversation(input_strings)
+```
+
+### Count Code Errors
+
+This function identifies and counts typical Python errors within given content.
+
+```python
+from mdtidy.process_gemini_conversation import count_code_errors
+
+# Example content with typical Python errors
+input_strings_with_errors = [
+    """
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'variable' is not defined
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+"""
+]
+
+# Count and display code errors
+error_counts = count_code_errors(input_strings_with_errors)
+print(error_counts)
+```
+
+### Update Google Sheets
+
+This example shows how to update Google Sheets with processed conversation data and error counts. The first time you run this function, you will be prompted to provide the name of the Google Sheet and the path to your Google Sheets API credentials. These details will be saved for future use, but you will have the option to update them if needed.
+
+```python
+from mdtidy.update_google_sheets import update_google_sheet
+
+# Update the Google Sheet
+update_google_sheet()
+```
+
+The `update_google_sheet` function will automatically use the default directory `comp_ana_json` for JSON files and the stored Google Sheets credentials and spreadsheet name from the configuration file (`google_sheets.ini`).
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
