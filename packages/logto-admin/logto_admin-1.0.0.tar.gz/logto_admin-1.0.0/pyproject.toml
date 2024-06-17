@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "logto-admin"
+version = "1.0.0"
+description = "Python client for Logto Management API"
+license = "MIT"
+authors = [
+    "Iaroslav Semennikov <ysmnnkv@gmail.com>",
+]
+readme = "README.md"
+homepage = "https://github.com/ysemennikov/py-logto-admin"
+repository = "https://github.com/ysemennikov/py-logto-admin"
+documentation = "https://github.com/ysemennikov/py-logto-admin#logto-admin"
+packages = [
+    {include = "logto_admin"},
+]
+include = ["CHANGELOG.md", "logto_admin/py.typed"]
+
+
+[tool.poetry.dependencies]
+python = "^3.8"
+httpx = ">=0.20.0,<0.28.0"
+attrs = ">=21.3.0"
+python-dateutil = "^2.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F", "I", "UP"]
