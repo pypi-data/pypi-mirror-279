@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "beanqueue"
+version = "1.1.2"
+description = "BeanQueue or BQ for short, PostgreSQL SKIP LOCK and SQLAlchemy based worker queue library"
+authors = ["Fang-Pen Lin <fangpen@launchplatform.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+    { include = "bq" },
+]
+
+[tool.poetry.scripts]
+bq = "bq.cmds.main:cli"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.30"
+venusian = "^3.1.0"
+click = "^8.1.7"
+pydantic-settings = "^2.2.1"
+pg-activity = "^3.5.1"
+blinker = "^1.8.2"
+rich = "^13.7.1"
+
+
+[tool.poetry.group.dev.dependencies]
+psycopg2-binary = "^2.9.9"
+pytest-factoryboy = "^2.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
