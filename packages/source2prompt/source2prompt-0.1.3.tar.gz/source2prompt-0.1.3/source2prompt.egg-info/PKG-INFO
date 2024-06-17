@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: source2prompt
+Version: 0.1.3
+Summary: A simple tool to convert source files to a single prompt file for LLMs
+Home-page: https://github.com/IchigoHydrogen/source2prompt
+Author: IchigoHydrogen
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
