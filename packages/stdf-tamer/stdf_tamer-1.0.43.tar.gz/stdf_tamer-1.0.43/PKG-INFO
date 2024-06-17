@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: stdf-tamer
+Version: 1.0.43
+Summary: a stdf reader/writer/analyser/converter and robotframework library
+Keywords: STDF,ATE
+Author: Labor DC jona
+Author-Email: Franz Haas <franz.haas@ams-osram.com>, Roman Steiner <roman.steiner@ams-osram.com>
+License: apache 2.0
+Project-URL: Homepage, https://gittf.ams-osram.info/labor-rapperswil-jona/ams-tamer
+Project-URL: Repository, https://gittf.ams-osram.info/labor-rapperswil-jona/ams-tamer
+Project-URL: Documentation, https://labor-rapperswil-jona.git-pages.ams-osram.info/ams-tamer/index.html
+Requires-Python: >=3.6.0
+Requires-Dist: construct
+Requires-Dist: docopt
+Requires-Dist: rich
+Requires-Dist: dataclasses>=0.8; python_version < "3.7"
+Requires-Dist: importlib_metadata<=1.4; python_version < "3.8"
+Requires-Dist: toml>=0.10.2
+Requires-Dist: robotframework>=6.1.1; extra == "robotframework-bare"
+Requires-Dist: pyarrow>=0.18.15; python_version >= "3.8" and extra == "robotframework-bare"
+Requires-Dist: xlsx2csv; extra == "robotframework-bare"
+Requires-Dist: XlsxWriter; extra == "robotframework-bare"
+Requires-Dist: pyarrow>=0.18.15; python_version >= "3.8" and extra == "fileformats-bare"
+Requires-Dist: xlsx2csv; extra == "fileformats-bare"
+Requires-Dist: XlsxWriter; extra == "fileformats-bare"
+Requires-Dist: stdf-tamer[fileformats_bare]; extra == "fileformats-lts"
+Requires-Dist: polars-lts-cpu; python_version >= "3.8" and extra == "fileformats-lts"
+Requires-Dist: stdf-tamer[fileformats_bare]; extra == "fileformats"
+Requires-Dist: polars; python_version >= "3.8" and extra == "fileformats"
+Requires-Dist: stdf-tamer[robotframework_bare]; extra == "robotframework-lts"
+Requires-Dist: polars-lts-cpu; python_version >= "3.8" and extra == "robotframework-lts"
+Requires-Dist: stdf-tamer[robotframework_bare]; extra == "robotframework"
+Requires-Dist: polars; python_version >= "3.8" and extra == "robotframework"
+Requires-Dist: pdoc>=0.4.1; python_version >= "3.8" and extra == "dev"
+Requires-Dist: ipython>=7.16.3; python_version >= "3.8" and extra == "dev"
+Requires-Dist: radon>=6.0.1; python_version >= "3.8" and extra == "dev"
+Provides-Extra: robotframework-bare
+Provides-Extra: fileformats-bare
+Provides-Extra: fileformats-lts
+Provides-Extra: fileformats
+Provides-Extra: robotframework-lts
+Provides-Extra: robotframework
+Provides-Extra: dev
+Description-Content-Type: text/markdown
+
+## stdf tamer
+This package was originally developed at DC Jona / ams-OSRAM.
+
+It is a general purpose stdf file parser / generator / simulator / analyser and converter.
+
+But mainly it is used for these use cases.:
+
+ - write STDF files from robotframework test cases
+ - analyse STDF file content
+ - convert STDF files to other file formats
+
+# installations
+## For the use case of converting files on windows
+```
+py -m pip install pipx
+py -m pipx install stdf-tamer[fileformats]
+py -m pipx ensurepath
+```
+
+## to remove 
+```
+py -m pipx uninstall stdf-tamer
+```
+## to update
+1. remove
+2. install
+
+This has the pruprose that we only need to suport the install use case.
+
+## Usage:
+```
+  stdfconvert --help
+  stdfanalyse --help
+  stdfrenamer --help
+  stdfrerunwithnewlimits --help
+```
+
+
+## Source.:
+https://gittf.ams-osram.info/labor-rapperswil-jona/ams-tamer
+
+## API Documentation.:
+https://labor-rapperswil-jona.git-pages.ams-osram.info/ams-tamer/index.html
+
+
+# Tips and tricks
+
+## Conversion Speed
+
+In order to speed up conversion of STDF files to other file formats use 2 stdf-tamer installations,
+one in pypy for the actuall parsing of hte STDF files, and one in CPython to perform the acutall
+converison using polars. For this please use a /etc/stdf-tamer.toml config file like this
+
+on windows, or to use a personal configuration, please use the location specified by.:
+```
+pathlib.Path(os.path.expanduser("~")) / ".config/stdf-tamer.toml
+```
+
+locates.
+
+```
+[converter]
+stdf_to_pickle_cmd   = "/path2pypywithstdf-tamer/bin/pypy -m  ams_rw_stdf.convert stdf2pickle"
+```
+
+Windows example:
+```
+[converter]
+stdf_to_pickle_cmd   = "C:\\pypy3.10-v7.3.13-win64\\pypy.exe -m  ams_rw_stdf.convert stdf2pickle"
+```
