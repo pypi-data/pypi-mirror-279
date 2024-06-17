@@ -1,0 +1,17 @@
+LICENSE.md
+README.md
+pyproject.toml
+fwl_mors.egg-info/PKG-INFO
+fwl_mors.egg-info/SOURCES.txt
+fwl_mors.egg-info/dependency_links.txt
+fwl_mors.egg-info/requires.txt
+fwl_mors.egg-info/top_level.txt
+src/Mors/__init__.py
+src/Mors/cluster.py
+src/Mors/constants.py
+src/Mors/miscellaneous.py
+src/Mors/parameters.py
+src/Mors/physicalmodel.py
+src/Mors/rotevo.py
+src/Mors/star.py
+src/Mors/stellarevo.py
