@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: ambient_event_bus_client
+Version: 1.0.2
+Summary: A library to interact with the Ambient Labs Event Bus.
+Home-page: https://github.com/ambientlabscomputing/ambient-event-bus-client
+Author: Jose Catarino
+Author-email: jose@ambientlabscomputing.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Ambient Event Bus Client
+
+## Typical usage example
+
+```python
+from ambient_event_bus_client import Client, ClientOptions
+
+options = ClientOptions(
+    event_api_url="http://localhost:8000",
+    connection_service_url="http://localhost:8001",
+    api_token = "my_token"
+)
+client = Client(options)
+await client.init_client() # ensure you are in an async context
+
+# add subscriptions
+await client.add_subscription(topic="test")
+
+# read messages from subscriptions
+async for message in client.subscribe():
+    print(message)
+
+# publish a message
+message = MessageCreate(topic="my_topic", message="my_message")
+await client.publish(message)
+```
+
+
