@@ -1,0 +1,13 @@
+version: "3"
+
+tasks:
+  install:
+    cmds:
+      - uv venv -p 3.12
+      - uv pip install -e ".[dev]" ;
+  build: hatch build
+  release-*:
+    vars:
+      VERSION: "{{index .MATCH 0}}"
+    cmds:
+      - twine upload dist/rich_structlog-{{.VERSION}}*
