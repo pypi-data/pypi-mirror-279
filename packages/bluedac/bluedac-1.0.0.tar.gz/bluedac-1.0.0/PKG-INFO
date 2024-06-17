@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: bluedac
+Version: 1.0.0
+Summary: 
+Author: ChristianP01
+Requires-Python: >=3.12,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: PyYAML (>=6.0.1,<7.0.0)
+Requires-Dist: aws-cdk-lib (>=2.144.0,<3.0.0)
+Requires-Dist: moto (>=5.0.9,<6.0.0)
+Requires-Dist: pytest (>=8.2.2,<9.0.0)
+Requires-Dist: pytest-cov (>=5.0.0,<6.0.0)
+Description-Content-Type: text/markdown
+
+# DAC
+
+Bluedac is a framework made to help developers to quickly start a new cloud serverless project, specifically tied for AWS.
+
+## In a nutshell
+
+Its scope is to automatize as much as possible the DevOps phases of any project, briefly:
+- Initialize AWS-CDK project, specifying: 
+    - Programming language;
+    - Branching strategy;
+    - Project (deployment) environments.
+- Create boilerplate unit, integration, end-to-end and load tests;
+- Declare deployment strategy;
+- CI/CD pipeline.
+
+## Contribute
+Project's source code available at https://gitlab.com/ChristianP01/bluedac
+
