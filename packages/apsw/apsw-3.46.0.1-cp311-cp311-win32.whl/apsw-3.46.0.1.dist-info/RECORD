@@ -1,0 +1,15 @@
+apsw/__init__.cp311-win32.pyd,sha256=I0hqdxY_uwnTWH4hbWWuZJitdM_Z0ewJyfPL29pcUfg,1648640
+apsw/__init__.pyi,sha256=bBSKQy-P5shU_iRHw6utObrk0HPUr5mPQGz8yQVIOzQ,206391
+apsw/__main__.py,sha256=Vl4cGbdVs3xZpZjYdX_QOVx9EtrvKlcW2t28IgQncpk,64
+apsw/bestpractice.py,sha256=brY0l-QjEUOxnrMWjbUqHC_RUf72kU_u0WK2vvR2s_U,2688
+apsw/ext.py,sha256=WtDYhbiywikCZ9PfYRtEvaWx-DiulE_E-thUmTgC1iQ,69376
+apsw/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apsw/shell.py,sha256=1svBPGuuROGNU7ZQL49GsjeJRGpBHoCdB3rd1s03sRs,143203
+apsw/speedtest.py,sha256=w-ZwhDywfQzN7Dcb9n50eablk2vEExe4RwP23yOV8KU,22446
+apsw/tests.py,sha256=NW00IN4RaWAhDX0toMU2A6FEVEDQXZywF3BcQ6kzX70,431251
+apsw/trace.py,sha256=b9cA9eYBTxTVcxMtsSt7VkaEDl610WLqnS2b2xKmbQc,14201
+apsw-3.46.0.1.dist-info/LICENSE,sha256=osx-ovVqfnSdOH2Jt5flMKemvT3nALF1AK97dOREi6Q,1158
+apsw-3.46.0.1.dist-info/METADATA,sha256=UmIDIguHPTLGYNdj8edYnP-IrktXLXMksHXkIynzkQg,3455
+apsw-3.46.0.1.dist-info/WHEEL,sha256=deu9bZJH225Lz7TZI9C8JKotIcjmi5Ibg2UG8qmj-qM,98
+apsw-3.46.0.1.dist-info/top_level.txt,sha256=AMSo16bHvRC7F5I0KBCKqv4WM4--RyHwQj3g2YbN30g,5
+apsw-3.46.0.1.dist-info/RECORD,,
