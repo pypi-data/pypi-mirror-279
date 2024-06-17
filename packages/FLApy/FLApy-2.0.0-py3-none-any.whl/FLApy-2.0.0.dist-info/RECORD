@@ -1,0 +1,17 @@
+.DS_Store,sha256=CU3ZBpN6_yIIEVnRfVTgQ1bU6OfySzL5jcbTOUcKR6A,6148
+FLApy/DataManagement.py,sha256=ZSX1Ze1wuLngQDclxiOVl2r4esXNWKlwvUP-ZOaW7-U,29402
+FLApy/LAHanalysis.py,sha256=EH8-i3oOXTdY0MgKF6yzlYcgmIek4trJ-_mzvlwE-N4,62374
+FLApy/LAcalculator.py,sha256=f6PKgPiE31_K-BkWWknLr3Ppez_Q79ptQqqi1LzDE6A,20092
+FLApy/Visualization.py,sha256=zfozrsAcxH-g90JEoSQiHqbM8Tu_4da4Njg7h-DGeoI,4866
+FLApy/__init__.py,sha256=ysKqHEg4E4P3Aeydkfc5AQ6U2VBEOGUfUCconVCXBAc,1782
+FLApy_plugin/Tools.py,sha256=NxtCDdvqIx511kxtuNpCzLxLua3QHQNyNUy3Pg9Fffw,14888
+FLApy_plugin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+FLApy_plugin/sphericalAnalyst.py,sha256=mHXqzux47AFHmAXCDDy0w6UGltLwK-xueHIoFFAwIsU,10722
+hemipy/__init__.py,sha256=COfjlEbECOH-dWmKnxAlSbZHyh594TyVUpQHXoAoGgw,74
+hemipy/hemipy.py,sha256=EmIEbGSbYhcHfkjXfH5ug17KyxeaaZ7B2DLyrZeSV1c,34467
+hemipy/hemipyRun.py,sha256=XJyAErc9WhKWHPGwZ_azQZ_Bp8MEjV-52DVQ95j6zAw,240
+FLApy-2.0.0.dist-info/LICENSE,sha256=wcJwAdegsPgqY-s1t6H9m5un6cTY5FD7eG8s8lKy9BU,1062
+FLApy-2.0.0.dist-info/METADATA,sha256=L6ci4QzdY3ry0YbbRkHoT2wR9LBu5PTc7HF2xSkks34,13864
+FLApy-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+FLApy-2.0.0.dist-info/top_level.txt,sha256=d7SnwGoKY7uahsdikuYDdFm_qBwGaikK5zW7qUvtoEQ,19
+FLApy-2.0.0.dist-info/RECORD,,
