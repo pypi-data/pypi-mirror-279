@@ -1,0 +1,36 @@
+-extends "base.haml"
+-set page="Whitelist"
+
+-block head
+	%script(type="application/javascript" src="/static/whitelist.js" nonce="{{view.request['hash']}}" defer)
+
+-block content
+	%details.section
+		%summary << Add Domain
+		#add-item
+			%label(for="new-domain") << Domain
+			%input(type="domain" id="new-domain" placeholder="Domain")
+
+		%input#new-item(type="button" value="Add Domain")
+
+	%fieldset.data-table.section
+		%legend << Whitelist
+
+		%table#whitelist
+			%thead
+				%tr
+					%td.domain << Domain
+					%td.date << Added
+					%td.remove
+
+			%tbody
+				-for item in whitelist
+					%tr(id="{{item.domain}}")
+						%td.domain
+							=item.domain.encode().decode("idna")
+
+						%td.date
+							=item.created.strftime("%Y-%m-%d")
+
+						%td.remove
+							%a(href="#" title="Remove whitlisted domain") << &#10006;

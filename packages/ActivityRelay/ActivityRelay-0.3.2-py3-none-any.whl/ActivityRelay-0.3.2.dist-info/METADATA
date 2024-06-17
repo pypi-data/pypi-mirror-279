@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: ActivityRelay
+Version: 0.3.2
+Summary: Generic LitePub relay (works with all LitePub consumers and Mastodon)
+License: AGPLv3
+Project-URL: Documentation, https://git.pleroma.social/pleroma/relay/-/blob/main/docs/index.md
+Project-URL: Source, https://git.pleroma.social/pleroma/relay
+Project-URL: Tracker, https://git.pleroma.social/pleroma/relay/-/issues
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8
+License-File: LICENSE
+Requires-Dist: activitypub-utils ==0.3.1
+Requires-Dist: aiohttp >=3.9.5
+Requires-Dist: aiohttp-swagger[performance] ==1.0.16
+Requires-Dist: argon2-cffi ==23.1.0
+Requires-Dist: barkshark-lib >=0.1.3-1
+Requires-Dist: barkshark-sql ==0.1.4-1
+Requires-Dist: click >=8.1.2
+Requires-Dist: hiredis ==2.3.2
+Requires-Dist: idna ==3.4
+Requires-Dist: jinja2-haml ==0.3.5
+Requires-Dist: markdown ==3.6
+Requires-Dist: platformdirs ==4.2.2
+Requires-Dist: pyyaml >=6.0
+Requires-Dist: redis ==5.0.5
+Requires-Dist: importlib-resources ==6.4.0 ; python_version < "3.9"
+Provides-Extra: dev
+Requires-Dist: flake8 ==7.0.0 ; extra == 'dev'
+Requires-Dist: mypy ==1.10.0 ; extra == 'dev'
+Requires-Dist: pyinstaller ==6.8.0 ; extra == 'dev'
+Requires-Dist: watchdog ==4.0.1 ; extra == 'dev'
+Requires-Dist: typing-extensions >=4.12.2 ; (python_version < "3.11.0") and extra == 'dev'
+
+# ActivityRelay
+
+A generic LitePub message relay.
+
+
+## Copyleft
+
+ActivityRelay is copyrighted, but free software, licensed under the terms of the GNU
+Affero General Public License version 3 (AGPLv3) license.  You can find a copy of it
+in this package as the `LICENSE` file.
+
+
+## Getting Started
+
+Normally, you would direct your LitePub instance software to follow the LitePub actor
+found on the relay.  In Pleroma this would be something like:
+
+	$ MIX_ENV=prod mix relay_follow https://your.relay.hostname/actor
+
+
+## Documentation
+
+To install or manage your relay, check the [documentation](docs/index.md)

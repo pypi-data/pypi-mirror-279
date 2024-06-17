@@ -1,0 +1,53 @@
+-extends "base.haml"
+-set page="Domain Bans"
+
+-block head
+	%script(type="application/javascript" src="/static/domain_ban.js" nonce="{{view.request['hash']}}" defer)
+
+-block content
+	%details.section
+		%summary << Ban Domain
+		#add-item
+			%label(for="new-domain") << Domain
+			%input(type="domain" id="new-domain" placeholder="Domain")
+
+			%label(for="new-reason") << Ban Reason
+			%textarea(id="new-reason") << {{""}}
+
+			%label(for="new-note") << Admin Note
+			%textarea(id="new-note") << {{""}}
+
+		%input#new-ban(type="button" value="Ban Domain")
+
+	%fieldset.section
+		%legend << Domain Bans
+
+		.data-table
+			%table
+				%thead
+					%tr
+						%td.domain << Domain
+						%td << Date
+						%td.remove
+
+				%tbody
+					-for ban in bans
+						%tr(id="{{ban.domain}}")
+							%td.domain
+								%details
+									%summary -> =ban.domain.encode().decode("idna")
+
+									.grid-2col
+										%label.reason(for="{{ban.domain}}-reason") << Reason
+										%textarea.reason(id="{{ban.domain}}-reason") << {{ban.reason or ""}}
+
+										%label.note(for="{{ban.domain}}-note") << Note
+										%textarea.note(id="{{ban.domain}}-note") << {{ban.note or ""}}
+
+									%input.update-ban(type="button" value="Update")
+
+							%td.date
+								=ban.created.strftime("%Y-%m-%d")
+
+							%td.remove
+								%a(href="#" title="Unban domain") << &#10006;

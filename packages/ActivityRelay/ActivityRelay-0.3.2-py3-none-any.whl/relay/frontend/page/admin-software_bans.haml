@@ -1,0 +1,53 @@
+-extends "base.haml"
+-set page="Software Bans"
+
+-block head
+	%script(type="application/javascript" src="/static/software_ban.js" nonce="{{view.request['hash']}}" defer)
+
+-block content
+	%details.section
+		%summary << Ban Software
+		#add-item
+			%label(for="new-name") << Domain
+			%input(type="name" id="new-name" placeholder="Domain")
+
+			%label(for="new-reason") << Ban Reason
+			%textarea(id="new-reason") << {{""}}
+
+			%label(for="new-note") << Admin Note
+			%textarea(id="new-note") << {{""}}
+
+		%input#new-ban(type="button" value="Ban Software")
+
+	%fieldset.section
+		%legend << Software Bans
+
+		.data-table
+			%table#bans
+				%thead
+					%tr
+						%td.name << Name
+						%td << Date
+						%td.remove
+
+				%tbody
+					-for ban in bans
+						%tr(id="{{ban.name}}")
+							%td.name
+								%details
+									%summary -> =ban.name
+
+									.grid-2col
+										%label.reason(for="{{ban.name}}-reason") << Reason
+										%textarea.reason(id="{{ban.name}}-reason") << {{ban.reason or ""}}
+
+										%label.note(for="{{ban.name}}-note") << Note
+										%textarea.note(id="{{ban.name}}-note") << {{ban.note or ""}}
+
+									%input.update-ban(type="button" value="Update")
+
+							%td.date
+								=ban.created.strftime("%Y-%m-%d")
+
+							%td.remove
+								%a(href="#" title="Unban name") << &#10006;
