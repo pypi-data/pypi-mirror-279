@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: Arabic_math
+Version: 0.1
+Summary: arabic_basic_math
+Author: someguy
+Author-email: someguy@gmail.com
+License: MIT
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: requests
+Requires-Dist: numpy
+Requires-Dist: pandas
+
