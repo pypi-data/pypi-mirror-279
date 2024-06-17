@@ -1,0 +1,13 @@
+LICENSE
+pyproject.toml
+setup.py
+files_and_folders/__init__.py
+files_and_folders/files.py
+files_and_folders/folders.py
+files_and_folders/images.py
+files_and_folders/pdfs.py
+ibott_files.egg-info/PKG-INFO
+ibott_files.egg-info/SOURCES.txt
+ibott_files.egg-info/dependency_links.txt
+ibott_files.egg-info/requires.txt
+ibott_files.egg-info/top_level.txt
