@@ -1,0 +1,2 @@
+[console_scripts]
+asd_gui = ASD_GUI.ASD_GUI:main
