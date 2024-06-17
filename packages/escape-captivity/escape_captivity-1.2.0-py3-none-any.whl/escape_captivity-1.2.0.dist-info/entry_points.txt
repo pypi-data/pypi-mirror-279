@@ -1,0 +1,2 @@
+[console_scripts]
+escape-captivity = escape_captivity.cli:escape_captivity
