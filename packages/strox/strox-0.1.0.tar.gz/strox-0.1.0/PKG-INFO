@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: strox
+Version: 0.1.0
+Summary: Find strings that matches approximately the given pattern
+Author-email: Havsalt <knutolaihelgesen@gmail.com>
+License-File: LICENSE.txt
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Strox - String Approximate
+
+Find strings that matches approximately the given pattern
+
+* License: MIT
