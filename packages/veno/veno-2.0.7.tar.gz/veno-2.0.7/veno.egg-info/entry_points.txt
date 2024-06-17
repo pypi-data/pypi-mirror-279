@@ -1,0 +1,3 @@
+[console_scripts]
+veno = veno.veno:main
+
