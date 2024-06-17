@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: haondt-athena
+Version: 2.2.2
+Summary: a file-based rest api client
+Keywords: api,rest
+Author: haondt
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: click>=8.1.7
+Requires-Dist: PyYAML>=6.0.1
+Requires-Dist: requests>=2.31.0
+Requires-Dist: aiohttp>=3.8.6
+Requires-Dist: Pygments>=2.16.1
+Requires-Dist: watchdog>=4.0.0
+Requires-Dist: Faker>=25.8.0
+Project-URL: Homepage, https://gitlab.com/haondt/athena
+Project-URL: Repository, https://gitlab.com/haondt/athena
+
+# athena
+
+[![PYPI - Version](https://img.shields.io/pypi/v/haondt_athena?label=PyPI)](https://pypi.org/project/haondt-athena/)
+[![GitHub release (latest by date)](https://img.shields.io/gitlab/v/release/haondt/athena)](https://gitlab.com/haondt/athena/-/releases/permalink/latest)
+
+athena is a file-based rest api client.
+
+```sh
+$ pip install haondt-athena
+$ athena init
+$ cat << EOF > athena/hello.py
+from athena.client import Athena
+from athena.test import athert
+
+def run(athena: Athena):
+    client = athena.client()
+    response = client.get('https://example.com')
+    athert(response.status_code).equals(200)
+EOF
+$ athena run athena/hello.py
+hello: passed
+```
+
+athena provides a lightweight alternative to full-blown api platforms like Postman with a few key advantages:
+
+- You are free to use any text editor you would like as the api client. Lightweight editors like Neovim or VSCode allow for a much thinner client.
+- As the workbook is just a collection of plaintext files, you can keep it in the same git repo as the project it is testing.
+- Since requests are just python modules, you can script to your hearts content, and leverage external python libraries.
+
+## Installation 
+
+athena can be installed as a pypi package or from source. athena requires python>=3.11.
+
+```sh
+# from pypi
+python3 -m pip install haondt-athena
+
+# from gitlab
+python3 -m pip install haondt-athena --index-url https://gitlab.com/api/v4/projects/57154225/packages/pypi/simple
+
+# from source
+git clone https://gitlab.com/haondt/athena.git
+python3 -m pip install ./athena
+```
+
+## Usage
+
+Quickstart guide and API / CLI reference available here: https://haondt.gitlab.io/docs/athena/
+
