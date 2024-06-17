@@ -1,0 +1,36 @@
+{
+  "name": "panpdf",
+  "image": "texlive/texlive",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": false,
+      "username": "panpdf"
+    },
+    "ghcr.io/devcontainers-contrib/features/hatch:2": {},
+    "ghcr.io/devcontainers-contrib/features/pandoc:1": {},
+    "ghcr.io/devcontainers-contrib/features/starship:1": {},
+    "./features/zotero": {},
+    "./features/poppler": {}
+  },
+  "remoteUser": "panpdf",
+  "containerEnv": {
+    "ZOTERO_LIBRARY_ID": "${localEnv:ZOTERO_LIBRARY_ID}",
+    "ZOTERO_API_KEY": "${localEnv:ZOTERO_API_KEY}"
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/usr/local/py-utils/bin"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "charliermarsh.ruff",
+        "github.vscode-github-actions",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "postCreateCommand": ".devcontainer/postCreate.sh"
+}
