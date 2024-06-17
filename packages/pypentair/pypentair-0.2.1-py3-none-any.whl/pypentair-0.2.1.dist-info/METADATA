@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pypentair
+Version: 0.2.1
+Summary: Python package for interacting with Pentair Home devices
+Home-page: https://github.com/natekspencer/pypentair
+License: MIT
+Keywords: Pentair,Pentair Home,salt level sensor,python
+Author: Nathan Spencer
+Author-email: natekspencer@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.27.1,<2.0.0)
+Requires-Dist: pycognito (>=2023.5,<2025.0)
+Project-URL: Repository, https://github.com/natekspencer/pypentair
+Description-Content-Type: text/markdown
+
+# pypentair
+
+Python package for interacting with Pentair Home devices
+
