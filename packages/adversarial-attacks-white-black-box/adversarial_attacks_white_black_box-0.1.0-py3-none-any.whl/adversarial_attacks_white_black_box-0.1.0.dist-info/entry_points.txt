@@ -1,0 +1,2 @@
+[console_scripts]
+adversarial-attack = adversarial_attacks_white_black_box.main:main
