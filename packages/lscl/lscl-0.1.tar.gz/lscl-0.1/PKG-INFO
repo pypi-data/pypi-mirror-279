@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: lscl
+Version: 0.1
+Summary: Logstash configuration language handling
+Home-page: https://lscl.touhey.pro/
+Keywords: logstash,lscl
+Author: Thomas Touhey
+Author-email: thomas@touhey.fr
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: CeCILL-C Free Software License Agreement (CECILL-C)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Typing :: Typed
+Requires-Dist: eval-type-backport (>=0.2,<0.3) ; python_version < "3.10"
+Requires-Dist: pydantic (>=2.7.1,<3.0.0)
+Requires-Dist: typing-extensions (>=4.12.2,<5.0.0)
+Project-URL: Repository, https://gitlab.com/kaquel/lscl
+Description-Content-Type: text/x-rst
+
+lscl -- Logstash configuration language handling
+================================================
+
+lscl is a Python module for parsing and rendering Logstash_ configurations
+in its own language, named LSCL for "LogStash Configuration Language".
+
+The project is present at the following locations:
+
+* `Official website and documentation at
+  lscl.touhey.pro <lscl website_>`_;
+* `lscl repository on Gitlab <lscl on Gitlab_>`_;
+* `lscl project on PyPI <lscl on PyPI_>`_.
+
+.. _Logstash: https://www.elastic.co/fr/logstash
+.. _lscl website: https://lscl.touhey.pro/
+.. _lscl on Gitlab: https://gitlab.com/kaquel/lscl
+.. _lscl on PyPI: https://pypi.org/project/lscl
+
