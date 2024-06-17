@@ -1,0 +1,14 @@
+rich_tables/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rich_tables/fields.py,sha256=lhj-l9nGO1iRPQ6kvNeMxPZl7Tz9EDTeMwVQUqZleiY,9409
+rich_tables/generic.py,sha256=P7uKJZCuKXAuKpmVRids5A7CgoZYe3M4ghrnHA4xhYI,8115
+rich_tables/github.py,sha256=XDNxzGSbbXaqrBIJI5fJm95vBsqtK1AvhZkZuZjZ6kA,12143
+rich_tables/music.py,sha256=8AIGaS2JW6-iahQ7PUpjQhsCheS24L70xWO3nCdj9Us,5663
+rich_tables/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rich_tables/sql.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rich_tables/table.py,sha256=Bve-laLNrakwOpefTp-AIUxfOB-MWVVkElXxzwFAVLI,10762
+rich_tables/utils.py,sha256=O_tQAkSDJF8JLsj1Eg2mF9DXRtDr1bUUfK86on2q8Iw,12304
+rich_tables-0.5.1.dist-info/LICENSE,sha256=XkhXM9CJwogvB1gsEoFYeqXOFSfeIkKAG9LhGv5TkWI,1072
+rich_tables-0.5.1.dist-info/METADATA,sha256=LWSlzqZAICPxN9_C3kJy0bUxU1mbG-RszlXOcHu-Z0I,4636
+rich_tables-0.5.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+rich_tables-0.5.1.dist-info/entry_points.txt,sha256=V1k-Rhjgj7-dGkvZ2iNAMz_-28ISj9Wl5i1NoKaAj5k,48
+rich_tables-0.5.1.dist-info/RECORD,,
