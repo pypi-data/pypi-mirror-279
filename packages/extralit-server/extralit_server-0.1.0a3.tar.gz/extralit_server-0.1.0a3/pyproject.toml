@@ -1,0 +1,246 @@
+[project]
+name = "extralit-server"
+dynamic = []
+description = "Open-source tool for accurate & fast scientific literature data extraction with LLM and human-in-the-loop."
+readme = "README.md"
+requires-python = ">=3.9,<3.11"
+keywords = [
+    "literature-review",
+    "data-annotation",
+    "artificial-intelligence",
+    "machine-learning",
+    "human-in-the-loop",
+    "mlops",
+]
+authors = [
+    { name = "Jonny Tran", email = "nhat.c.tran@gmail.com" },
+    { name = "argilla", email = "contact@argilla.io" },
+]
+maintainers = [
+    { name = "Jonny Tran", email = "nhat.c.tran@gmail.com" },
+    { name = "argilla", email = "contact@argilla.io" },
+]
+dependencies = [
+    "pydantic",
+    "rich != 13.1.0",
+    "tqdm",
+    "python-dotenv",
+]
+version = "0.1.0a3"
+
+[project.license]
+text = "Apache-2.0"
+
+[project.optional-dependencies]
+argilla_server = [
+    "fastapi >= 0.103.1,< 1.0.0",
+    "pydantic >= 1.10.7,< 2.0",
+    "uvicorn[standard] >= 0.15.0,< 0.25.0",
+    "opensearch-py ~= 2.0.0",
+    "elasticsearch8[async] ~= 8.7.0",
+    "smart-open",
+    "brotli-asgi >= 1.1,< 1.3",
+    "alembic ~= 1.9.0",
+    "SQLAlchemy ~= 2.0.0",
+    "greenlet >= 2.0.0",
+    "aiosqlite >=0.19.0",
+    "scikit-learn >= 0.24.2",
+    "aiofiles >= 0.6,< 22.2",
+    "PyYAML >= 5.4.1,< 6.1.0",
+    "python-multipart ~= 0.0.5",
+    "python-jose[cryptography] >= 3.2,< 3.4",
+    "passlib[bcrypt] ~= 1.7.4",
+    "httpx~=0.26.0",
+    "oauthlib ~= 3.2.0",
+    "social-auth-core ~= 4.5.0",
+    "psutil >= 5.8, <5.10",
+    "segment-analytics-python == 2.2.0",
+    "rich != 13.1.0",
+    "typer >= 0.6.0, < 0.10.0",
+    "packaging>=23.2",
+    "minio>=7.2.7",
+]
+postgresql = [
+    "psycopg2 ~= 2.9.5",
+    "asyncpg >=0.27.0",
+]
+extraction = [
+    "minio",
+    "hypothesis",
+    "html5lib",
+    "fastapi < 1.0.0",
+    "pydantic",
+    "pypandoc ~= 1.13",
+    "weaviate-client ~= 4.5.7",
+    "beautifulsoup4 ~= 4.12.2",
+    "pandas ~= 2.2.2",
+    "pandera[io] ~= 0.19.3",
+    "numpy ~= 1.26.4",
+    "spacy ~= 3.7.2",
+    "pyarrow == 14.*",
+    "natsort ~= 8.4.0",
+    "rapidfuzz ~= 3.8.1",
+    "dill ~= 0.3.8",
+    "json-repair ~= 0.19.2",
+    "fastparquet",
+    "tiktoken",
+]
+nlp = [
+    "textdescriptives",
+    "setfit ~= 0.7.0",
+]
+ocr = [
+    "nougat-ocr[api]",
+    "transformers ~= 4.25.1",
+]
+pdf = [
+    "unstructured[pdf] ~= 0.12.3",
+    "deepdoctection ~= 0.31.0",
+    "llmsherpa ~= 0.1.3",
+    "python-doctr ~= 0.8.1",
+    "pypdf",
+    "pypdfium2",
+    "pymupdf",
+    "pdf2image ~= 1.16.0",
+]
+llm = [
+    "llama-index ~= 0.10.40",
+    "llama-index-core ~= 0.10.40",
+    "llama-index-vector-stores-weaviate ~= 1.0.0",
+    "llama-index-callbacks-langfuse ~= 0.1.4",
+    "llama-index-llms-openai",
+    "llama-index-embeddings-openai",
+    "llama-index-multi-modal-llms-openai",
+]
+
+[project.urls]
+homepage = "https://www.argilla.io"
+documentation = "https://docs.argilla.io"
+repository = "https://github.com/argilla-io/argilla"
+
+[project.scripts]
+argilla_server = "argilla_server.cli:app"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.build]
+excludes = [
+    ".env.dev",
+    ".env.test",
+]
+
+[tool.pdm.version]
+source = "file"
+path = "src/argilla_server/_version.py"
+
+[tool.pdm.dev-dependencies]
+test = [
+    "pytest>=7.4.4",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+    "pytest-asyncio~=0.21.1",
+    "pytest-env>=1.1.3",
+    "factory-boy~=3.2.1",
+    "httpx>=0.26.0",
+    "datasets > 1.17.0,!= 2.3.2",
+    "spacy>=3.5.0,<3.7.0",
+    "pytest-randomly>=3.15.0",
+]
+
+[tool.pdm.scripts._]
+env_file = ".env.dev"
+
+[tool.pdm.scripts.cli]
+cmd = "python -m argilla_server.cli"
+
+[tool.pdm.scripts.server]
+cmd = "uvicorn argilla_server:app --reload"
+
+[tool.pdm.scripts.migrate]
+cmd = "alembic upgrade head"
+
+[tool.pdm.scripts.test]
+cmd = "pytest"
+env_file = ".env.test"
+
+[tool.pdm.scripts.build-server-image]
+shell = "cp -R dist docker/server && docker build -t argilla/argilla-server:local docker/server"
+
+[tool.pdm.scripts.build-quickstart-image]
+shell = "docker build --build-arg ARGILLA_VERSION=local -t argilla/argilla-quickstart:local docker/quickstart"
+
+[tool.pytest.ini_options]
+log_format = "%(asctime)s %(name)s %(levelname)s %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+log_cli = "True"
+testpaths = [
+    "tests",
+]
+env = [
+    "ARGILLA_ENABLE_TELEMETRY=0",
+]
+
+[tool.coverage.run]
+concurrency = [
+    "greenlet",
+    "thread",
+    "multiprocessing",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "def __str__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "if _TYPE_CHECKING:",
+    "if typing.TYPE_CHECKING:",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.ruff]
+ignore = [
+    "E501",
+]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+line-length = 120
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = [
+    "F401",
+]
+
+[tool.black]
+line-length = 120
