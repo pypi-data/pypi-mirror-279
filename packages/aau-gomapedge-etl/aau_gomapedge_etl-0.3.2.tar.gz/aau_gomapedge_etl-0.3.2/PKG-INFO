@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: aau-gomapedge-etl
+Version: 0.3.2
+Summary: Default template for PDM package
+Author-Email: Kasper Fromm Pedersen <kasperfromm@protonmail.com>, Kristian Torp <torp@cs.aau.dk>
+License: MIT
+Requires-Python: <=3.12,>=3.10
+Requires-Dist: simpleetl==1.1.*
+Requires-Dist: geopy==2.4.*
+Requires-Dist: user-agents==2.2.*
+Requires-Dist: pydantic-settings==2.2.*
+Requires-Dist: geojson-pydantic==1.1.*
+Requires-Dist: requests==2.31.*
+Requires-Dist: yolonnx==0.1.*
+Requires-Dist: onnxruntime-gpu==1.17.*
+Requires-Dist: duckdb==0.10.*
+Requires-Dist: polars[pyarrow]==0.20.*
+Requires-Dist: scikit-learn==1.4.*
+Description-Content-Type: text/markdown
+
+# AAU GoMapEdge ETL
+
+## Cleansing rules
+- A trip must be at least 500 meter long
+- Distanceces are in meters
+- Speeds are in km/h
