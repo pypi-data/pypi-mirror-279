@@ -1,0 +1,13 @@
+embodyserial/__init__.py,sha256=ERyFTQ6teLpAGMA7AR_RoxP7bczeglpkV2MU85GCBeE,213
+embodyserial/__main__.py,sha256=acj-qk6PmLW929sPMwYfp15-G-_VTAWWYUET3CQ9azA,314
+embodyserial/cli.py,sha256=imaY0ERF49wi1KiBH3euw2VkFGA5JOOJ6O92KhOKJOk,12690
+embodyserial/embodyserial.py,sha256=PU4xGD5A4Ou6GBiSFkF5zuozmAHgTBN-UI-uxgrFGs0,27523
+embodyserial/exceptions.py,sha256=sEJGhkp_eaFkyLFI_pNrVVQCwh6SUs3jHb791yE5wqs,741
+embodyserial/helpers.py,sha256=zgqSbEUjcej7oOo72KN3DYK4l5OMcOoJkn7BSkSrrtQ,8991
+embodyserial/listeners.py,sha256=2wdirvToNRnm4MwzlXl_2oF6jJ-S6WA1H_2zozlC3pY,1576
+embodyserial/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+embody_serial-1.0.32.dist-info/LICENSE,sha256=2Jgtr_1iwT_yeE5IoHXZLXcEtHk-RhkpKuaIngrsYCI,1068
+embody_serial-1.0.32.dist-info/METADATA,sha256=_Duk0d4UZvUe8dE4ybp2tfhrPEJjf7icjMr34cX8bn4,5329
+embody_serial-1.0.32.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+embody_serial-1.0.32.dist-info/entry_points.txt,sha256=d5PkNIK0HSmhQBo4LfMvRXRZlE8iXiZZcWGsPPdyH_s,55
+embody_serial-1.0.32.dist-info/RECORD,,
