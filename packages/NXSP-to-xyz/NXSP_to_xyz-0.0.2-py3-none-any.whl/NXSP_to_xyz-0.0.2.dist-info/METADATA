@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: NXSP_to_xyz
+Version: 0.0.2
+Summary: A Python tool
+Author-email: "X.Y.G" <yalu977@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: ase
+
+# NXSP_to_xyz
+
+NXSP_to_xyz is a Python tool to convert NX output initial_condition to traj.xyz.
+
+## Installation
+
+You can install the package using pip:
+
