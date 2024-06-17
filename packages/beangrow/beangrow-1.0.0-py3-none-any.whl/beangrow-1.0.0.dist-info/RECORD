@@ -1,0 +1,17 @@
+beangrow/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beangrow/compute_returns.py,sha256=RyaO0Adt4T0OVegn-QS-kNewEmZQ4kldDAbweipsJq4,4030
+beangrow/compute_returns_beam.py,sha256=LBLBbnMSTaxDej0s7k83ttVLdo8Tfxcn8k4rishs1Og,5416
+beangrow/config.py,sha256=4HhyJU0O7nHOL7A05ptOZeaXclHAbXcj92USu766XXc,2712
+beangrow/config_pb2.py,sha256=vtqBagRo-4jFc-t4TstLL_eh824ftzH2rFiYsgmMBHY,16395
+beangrow/configure.py,sha256=p0Cv_f1waHM2H7YG55BycvYamcFqDjkISRbQ8DAOdoc,6758
+beangrow/download_prices.py,sha256=zFXEgibNeiQk6Ue0tYuvjq28p3LdXvpMBz8s0cPGgjg,2377
+beangrow/download_prices_from_file.py,sha256=Fg8GWEbBF9IJGENrLAXKLuYMPibNT1I_2R8JZ20KuQ8,1746
+beangrow/investments.py,sha256=K4E2tF9KpwhY6m-ezySnNn5Xo1leNycfJeTqnXm46BA,21314
+beangrow/reports.py,sha256=ZiyEleTWgmT-fpTiYJSZwpC76Nhsq4Ixlw-6YsqAreU,19896
+beangrow/returns.py,sha256=e4MlGXoqVnjfpdEO4EKNLzlQzaHCbT_7lGNaJgfE-FY,8179
+beangrow-1.0.0.dist-info/COPYING,sha256=rrbEcgbqInqtk165_zioxRjpqWZossnOaFtsTIC9yFM,18343
+beangrow-1.0.0.dist-info/METADATA,sha256=V9-mMI00kaZAHVgIN3S2lwNYFs7sPrMV2wuhbW-UapA,23301
+beangrow-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+beangrow-1.0.0.dist-info/entry_points.txt,sha256=DbOudIZNdizGhtGsabSWe6kVPdBsS_CNo1h_BVXxuQ8,178
+beangrow-1.0.0.dist-info/top_level.txt,sha256=OjCrXuHq0G_LiKLFs0lnSX18hftL9g7wHGpWZSyQtc8,9
+beangrow-1.0.0.dist-info/RECORD,,
