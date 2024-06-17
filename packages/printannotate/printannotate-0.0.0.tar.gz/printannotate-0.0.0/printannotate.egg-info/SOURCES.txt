@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+printannotate/__init__.py
+printannotate/__main__.py
+printannotate/simple_annotate.py
+printannotate/traced_annotate.py
+printannotate.egg-info/PKG-INFO
+printannotate.egg-info/SOURCES.txt
+printannotate.egg-info/dependency_links.txt
+printannotate.egg-info/entry_points.txt
+printannotate.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
