@@ -1,0 +1,9 @@
+tgram/__init__.py,sha256=-b8VFsclxr1WQIBuHdxcuxtfq6bhsdjvODykhjxD35M,1485
+tgram/decorators.py,sha256=lLxVljfOSZmCGSLgY9-68cKWDq_iZqB94awofsWBAUQ,27
+tgram/methods.py,sha256=RB7TPG1WjsdyfggVAJfeE0rxKzJegp2aSdBrkyaJVuc,40610
+tgram/types.py,sha256=75B77ofaBFP7jy9yfF6tCFdjYAj_QDwQtue49SZwF6g,106418
+tgram-0.1.dist-info/LICENSE,sha256=XANVfkA1o9VMFIhyW0SaBiHydhqYl52e47zQ6Db0y2Q,1060
+tgram-0.1.dist-info/METADATA,sha256=WquOWymkAMJu1u_Bw60BZzZ1w9G8TYR99U7DjydX9yw,559
+tgram-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tgram-0.1.dist-info/top_level.txt,sha256=OJ3vydZrYFKAlUh-CaJFPL2hPadZhGKBETkzZdb3qbg,6
+tgram-0.1.dist-info/RECORD,,
