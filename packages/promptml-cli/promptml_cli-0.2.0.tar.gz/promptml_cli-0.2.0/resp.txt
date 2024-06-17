@@ -1,0 +1,85 @@
+To achieve the task of listing all DNS records for all hosted zones in your AWS account using Python, you can use the `boto3` library. Below is a structured approach to writing the Python script:
+
+[1;36m1[0m. **Install boto3 Library**: If you haven't already installed boto3, you can do so using pip:
+    ```sh
+    pip install boto3
+    ```
+
+[1;36m2[0m. **Set Up AWS Credentials**: Ensure your AWS credentials are set up in your environment, or you can configure them using AWS CLI with `aws configure`.
+
+[1;36m3[0m. **Python Script**: The following script lists all DNS records for all hosted zones in your AWS account:
+
+```python
+import boto3
+
+def [1;35mlist_all_dns_records[0m[1m([0m[1m)[0m:
+    # Create a Route53 client
+    client = [1;35mboto3.client[0m[1m([0m[32m'route53'[0m[1m)[0m
+
+    # List all hosted zones
+    hosted_zones_response = [1;35mclient.list_hosted_zones[0m[1m([0m[1m)[0m
+    hosted_zones = hosted_zones_response[1m[[0m[32m'HostedZones'[0m[1m][0m
+
+    # Iterate over each hosted zone
+    for zone in hosted_zones:
+        zone_id = zone[1m[[0m[32m'Id'[0m[1m][0m
+        zone_name = zone[1m[[0m[32m'Name'[0m[1m][0m
+
+        [1;35mprint[0m[1m([0mf"\nHosted Zone: [1m{[0mzone_name[1m}[0m [1m([0mID: [1m{[0mzone_id[1m}[0m[1m)[0m"[1m)[0m
+
+        # Initialize a boolean flag for pagination
+        is_truncated = [3;92mTrue[0m
+        next_record_name = [3;35mNone[0m
+
+        while is_truncated:
+            # Get DNS records for the specific hosted zone
+            if next_record_name:
+                record_sets_response = [1;35mclient.list_resource_record_sets[0m[1m([0m
+                    [33mHostedZoneId[0m=[35mzone_id[0m,
+                    [33mStartRecordName[0m=[35mnext_record_name[0m
+                [1m)[0m
+            else:
+                record_sets_response = [1;35mclient.list_resource_record_sets[0m[1m([0m
+                    [33mHostedZoneId[0m=[35mzone_id[0m
+                [1m)[0m
+
+            record_sets = record_sets_response[1m[[0m[32m'ResourceRecordSets'[0m[1m][0m
+
+            # Iterate over each record set
+            for record in record_sets:
+                record_name = record[1m[[0m[32m'Name'[0m[1m][0m
+                record_type = record[1m[[0m[32m'Type'[0m[1m][0m
+                record_values = [1;35mrecord.get[0m[1m([0m[32m'ResourceRecords'[0m, [1m[[0m
+                    [1m{[0m[32m'Value'[0m: [32m'No-value'[0m[1m}[0m  # Add default value if [32m'ResourceRecords'[0m is not available
+                [1m][0m[1m)[0m
+
+                [1;35mprint[0m[1m([0mf"Record Name: [1m{[0mrecord_name[1m}[0m | Type: [1m{[0mrecord_type[1m}[0m | Values: [1m{[0m[1m[[0mv[1m[[0m[32m'Value'[0m[1m][0m for v in record_values[1m][0m[1m}[0m"[1m)[0m
+
+            is_truncated = record_sets_response[1m[[0m[32m'IsTruncated'[0m[1m][0m
+            if is_truncated:
+                next_record_name = record_sets_response[1m[[0m[32m'NextRecordName'[0m[1m][0m
+
+if __name__ == [32m"__main__"[0m:
+    [1;35mlist_all_dns_records[0m[1m([0m[1m)[0m
+```
+
+### Explanation:
+
+[1;36m1[0m. **Initialization**:
+    - A boto3 `client` for Route53 is created.
+    - `list_hosted_zones` method is called to retrieve all hosted zones.
+
+[1;36m2[0m. **Iterating Over Hosted Zones**:
+    - For each hosted zone, its ID and name are printed.
+    - DNS records fetching is handled within a while loop to manage pagination [1m([0m`is_truncated`[1m)[0m.
+
+[1;36m3[0m. **Handling Pagination**:
+    - If AWS returns a truncated list, the `NextRecordName` parameter is used to fetch the next set of DNS records.
+    - DNS record details are printed, including the name, type, and values.
+
+Run the script in an environment where you have the necessary AWS permissions to access Route53 resources.
+
+### Important:
+- Modify the script accordingly if you require more specific information or additional attributes from the DNS records.
+- Be cautious with AWS API limits and handle exceptions for robust and reliable code.
+[1;32mTime taken: [0m[1;36m8.233569145202637[0m[1;32m seconds[0m

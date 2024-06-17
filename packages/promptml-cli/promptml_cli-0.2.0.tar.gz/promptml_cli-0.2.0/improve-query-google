@@ -1,0 +1,121 @@
+
+ -- Create schemas if they don't exist
+ CREATE SCHEMA IF NOT EXISTS proc_osm;
+ CREATE SCHEMA IF NOT EXISTS origin_osm;
+
+ -- Create materialized view for multipolygon relations
+ CREATE MATERIALIZED VIEW IF NOT EXISTS proc_osm.multipolygon_relations AS (
+   SELECT
+     r.osm_id,
+     ST_BuildArea(ST_Collect(w.geometry)) AS geometry
+   FROM origin_osm.relations AS r
+   JOIN origin_osm.relation_members AS rm
+     ON r.osm_id = rm.parent_id AND rm.member_type = 1
+   JOIN origin_osm.ways AS w
+     ON rm.osm_id = w.osm_id
+   WHERE r.relation_type = 'multipolygon'
+   GROUP BY r.osm_id
+ ) WITH NO DATA;
+
+ -- Create materialized view for simplified forests
+ CREATE MATERIALIZED VIEW IF NOT EXISTS proc_osm.forests_simplified AS (
+   WITH forest_elements AS (
+     SELECT
+       osm_id,
+       CASE
+         WHEN (
+           ST_IsValid(ST_BuildArea(w.geometry)) = FALSE
+         ) THEN ST_MakeValid(ST_BuildArea(w.geometry), 'method=structure')
+         ELSE ST_BuildArea(w.geometry)
+       END AS geometry,
+       1 AS element_type
+     FROM origin_osm.ways AS w
+     WHERE
+       (w.tags -> 'landuse') = 'forest'
+       OR (w.tags -> 'natural') = 'wood'
+     UNION ALL
+     SELECT
+       r.osm_id,
+       mpr.geometry,
+       2 AS element_type
+     FROM origin_osm.relations AS r
+     JOIN proc_osm.multipolygon_relations AS mpr
+       ON r.osm_id = mpr.osm_id
+     WHERE
+       (r.tags -> 'landuse') = 'forest'
+       OR (r.tags -> 'natural') = 'wood'
+   )
+   SELECT
+     fe.osm_id,
+     ST_SimplifyPreserveTopology(fe.geometry, 100) AS geometry,
+     fe.element_type
+   FROM forest_elements AS fe
+   WHERE fe.geometry IS NOT NULL
+ ) WITH NO DATA;
+
+ -- Create materialized view for forests with areas and clusters
+ CREATE MATERIALIZED VIEW IF NOT EXISTS proc_osm.forests_simplified_with_areas AS (
+   WITH clustered_forests AS (
+     SELECT
+       fs.osm_id,
+       fs.geometry,
+       ST_ClusterDBSCAN(fs.geometry, 100, 2) OVER () AS cluster_id
+     FROM proc_osm.forests_simplified AS fs
+     WHERE ST_Area(fs.geometry) > 0
+   ),
+   forest_area_for_cluster_id AS (
+     SELECT
+       cf.cluster_id,
+       SUM(ST_Area(ST_Transform(cf.geometry, 4326))) AS total_area
+     FROM clustered_forests AS cf
+     WHERE cf.cluster_id IS NOT NULL
+     GROUP BY cf.cluster_id
+   )
+   SELECT
+     cf.geometry,
+     cf.osm_id,
+     COALESCE(fafci.total_area, ST_Area(ST_Transform(cf.geometry, 4326))) AS total_area,
+     cf.cluster_id
+   FROM clustered_forests AS cf
+   LEFT JOIN forest_area_for_cluster_id AS fafci
+     ON fafci.cluster_id = cf.cluster_id
+ ) WITH NO DATA;
+
+ -- Create materialized view for relevant forests (area > 500,000)
+ CREATE MATERIALIZED VIEW IF NOT EXISTS proc_osm.relevant_forests_simplified AS (
+   SELECT
+     fswa.geometry,
+     fswa.osm_id,
+     fswa.total_area,
+     fswa.cluster_id
+   FROM proc_osm.forests_simplified_with_areas AS fswa
+   WHERE fswa.total_area > 500000
+ ) WITH NO DATA;
+
+
+Explanation of Changes:
+
+ 1 Simplified Forest Element Retrieval:
+    • Instead of separate forest_ways and forest_relations CTEs, we combined them into a single forest_elements CTE. This avoids redundant joins and makes the query more
+ 2 Combined Geometry Calculation:
+    • We moved the ST_BuildArea and ST_MakeValid logic directly into the forest_elements CTE, avoiding the need for separate joins and simplifying the query structure.
+ 3 Efficient Area Calculation:
+    • The area calculation in forest_area_for_cluster_id is optimized:
+       • We use ST_Transform to project geometries to the 4326 (WGS84) coordinate system before calculating the area. This ensures consistent area calculations across dif
+       • We utilize SUM to aggregate the areas of all geometries within a cluster.
+ 4 Optimized Clustered Forests Selection:
+    • We simplified the clustered_forests CTE by directly filtering for ST_Area(fs.geometry) > 0 instead of checking for cluster_id later.
+ 5 Efficient Area Assignment:
+    • We used LEFT JOIN to combine clustered_forests with forest_area_for_cluster_id. This allows us to efficiently assign the calculated total area to each forest, even
+ 6 Concise Final Selection:
+    • The final SELECT statement is consolidated, combining the results for clustered and non-clustered forests. We use COALESCE to ensure that the correct total area is
+
+Benefits of the Optimizations:
+
+ • Improved Readability: The code is more concise and easier to understand.
+ • Reduced Query Complexity: Fewer CTEs and joins lead to a simpler and faster query execution.
+ • Efficient Geometry Handling: Calculations are performed on the appropriate projection, ensuring accurate area results.
+ • Optimized Area Aggregation: The use of SUM within the forest_area_for_cluster_id CTE provides efficient area aggregation.
+ • Simplified Clustered Forest Selection: The filtering logic in clustered_forests is streamlined.
+
+These optimizations should result in a significant performance improvement for your SQL queries.
