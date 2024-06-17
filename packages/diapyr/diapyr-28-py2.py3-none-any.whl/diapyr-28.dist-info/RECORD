@@ -1,0 +1,17 @@
+diapyr/__init__.py,sha256=4lj3LXJDrPGL-HTZvCZx_lC8tAfwQfVn6xFOJ1mGOGI,202
+diapyr/diapyr.py,sha256=AJNPMIvTT6oLybJGz-UsC2Flz3qJ7rRw8cVX9Bp_qdk,4398
+diapyr/iface.py,sha256=kStZBvP3GLj_-uLGeUVifFC2GJYXcWwf4VjqV3bfSv8,408
+diapyr/match.py,sha256=kSUrLzdBF-n61_4zZVzUnSR-gJhyyQztfiOy_as6GKM,1932
+diapyr/source.py,sha256=zjmUAIUCp1n_imlVIoNoPBQsWhKniJJnDJA_AMTJ6ZY,6258
+diapyr/start.py,sha256=AJVHTS3CuGi1HijOjkJ7R-Z9vx2vKD3Gg4jt4BWZ3bU,780
+diapyr/util.py,sha256=eZ0qR9JUJ3V23HQRpj_ilwgyhd2wCLvQ2Ch56wIMNqY,2407
+setuphacks/__init__.py,sha256=C_Q8Z1LeX9PUnuHvggRbwucTRA1zc2Vbjk6SpQMhkyU,611
+setuphacks/ez_setup.py,sha256=n9bueLtA3fpAxZXYovvbvYu63JO07AWnPO7GJrMuIuU,60
+setuphacks/fakesetup.py,sha256=qjW4puBILHCdHQzZkUwybTEon56sGzyLWCfc1Chh6Qk,1245
+setuphacks/Cython/Build.py,sha256=kxRY5LWnwDZfbxxJPokNDxv69eDo2zU8xb8JkNuYIpk,55
+setuphacks/Cython/__init__.py,sha256=fwnRDSIENH-E-fX2ynp1cd1pTAM03w691ZUdmWOQE34,19
+diapyr-28.dist-info/METADATA,sha256=FQWVwIDE0m7OTwMbb0Q8AdIL8dJ8RKUbWwvX9Du1heA,2795
+diapyr-28.dist-info/WHEEL,sha256=z9j0xAa_JmUKMpmz72K0ZGALSM_n-wQVmGbleXx2VHg,110
+diapyr-28.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+diapyr-28.dist-info/top_level.txt,sha256=lmooeyFSQk6Ehmh9QALx7I1a7eRTnuRvY577XjxA1e0,18
+diapyr-28.dist-info/RECORD,,
