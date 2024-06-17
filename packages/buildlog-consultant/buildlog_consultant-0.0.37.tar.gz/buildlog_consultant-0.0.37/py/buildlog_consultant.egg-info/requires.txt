@@ -1,0 +1,9 @@
+python_debian
+PyYAML
+requirements-parser
+
+[chatgpt]
+openai
+
+[dev]
+ruff==0.4.8
