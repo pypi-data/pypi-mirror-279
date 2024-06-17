@@ -1,0 +1,2 @@
+[console_scripts]
+pysimultanui_run = pysimultanui.cli:run_ui
