@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: inspect_ai
+Version: 0.3.15
+Summary: Framework for large language model evaluations
+Author: UK AI Safety Institute
+License: MIT License
+Project-URL: Documentation, https://UKGovernmentBEIS.github.io/inspect_ai/
+Project-URL: Source Code, https://github.com/UKGovernmentBEIS/inspect_ai
+Project-URL: Issue Tracker, https://github.com/UKGovernmentBEIS/inspect_ai/issues
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Typing :: Typed
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiofiles
+Requires-Dist: click
+Requires-Dist: debugpy
+Requires-Dist: fsspec
+Requires-Dist: httpx
+Requires-Dist: numpy
+Requires-Dist: platformdirs
+Requires-Dist: python-dotenv
+Requires-Dist: jsonlines
+Requires-Dist: json-stream
+Requires-Dist: nest-asyncio
+Requires-Dist: pydantic >=2
+Requires-Dist: s3fs >=2023
+Requires-Dist: semver
+Requires-Dist: shortuuid
+Requires-Dist: tenacity
+Requires-Dist: beautifulsoup4
+Requires-Dist: docstring-parser
+Requires-Dist: typing-extensions
+Requires-Dist: pyyaml
+Requires-Dist: rich
+Requires-Dist: psutil
+Provides-Extra: dev
+Requires-Dist: accelerate ; extra == 'dev'
+Requires-Dist: anthropic ; extra == 'dev'
+Requires-Dist: boto3 ; extra == 'dev'
+Requires-Dist: datasets ; extra == 'dev'
+Requires-Dist: google-cloud-aiplatform ; extra == 'dev'
+Requires-Dist: google-generativeai ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: ipywidgets ; extra == 'dev'
+Requires-Dist: langchain ; extra == 'dev'
+Requires-Dist: langchainhub ; extra == 'dev'
+Requires-Dist: mistralai ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: nbformat ; extra == 'dev'
+Requires-Dist: openai ; extra == 'dev'
+Requires-Dist: pandas-stubs ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: pytest-dotenv ; extra == 'dev'
+Requires-Dist: pytest-xdist ; extra == 'dev'
+Requires-Dist: ruff ; extra == 'dev'
+Requires-Dist: torch ; extra == 'dev'
+Requires-Dist: transformers ; extra == 'dev'
+Requires-Dist: types-PyYAML ; extra == 'dev'
+Requires-Dist: types-aiofiles ; extra == 'dev'
+Requires-Dist: types-beautifulsoup4 ; extra == 'dev'
+Requires-Dist: types-boto3 ; extra == 'dev'
+Requires-Dist: types-botocore ; extra == 'dev'
+Requires-Dist: types-protobuf ; extra == 'dev'
+Requires-Dist: types-psutil ; extra == 'dev'
+Requires-Dist: types-python-dateutil ; extra == 'dev'
+Requires-Dist: wikipedia ; extra == 'dev'
+Provides-Extra: dist
+Requires-Dist: twine ; extra == 'dist'
+Requires-Dist: build ; extra == 'dist'
+Provides-Extra: doc
+Requires-Dist: quarto-cli ; extra == 'doc'
+
+[<img width="295" src="https://ukgovernmentbeis.github.io/inspect_ai/images/aisi-logo.png" />](https://www.gov.uk/government/organisations/ai-safety-institute)
+
+Welcome to Inspect, a framework for large language model evaluations created by the [UK AI Safety Institute](https://www.gov.uk/government/organisations/ai-safety-institute).
+
+Inspect provides many built-in components, including facilities for prompt engineering, tool usage, multi-turn dialog, and model graded evaluations. Extensions to Inspect (e.g. to support new elicitation and scoring techniques) can be provided by other Python packages.
+
+To get started with Inspect, please see the documentation at <https://UKGovernmentBEIS.github.io/inspect_ai/>.
+
+***
+
+#### Development
+
+To work on development of Inspect, clone the repository and install with the `-e` flag and `[dev]` optional dependencies:
+
+```         
+$ git clone https://github.com/UKGovernmentBEIS/inspect_ai.git
+$ cd inspect_ai
+$ pip install -e ".[dev]"
+```
+
+If you use VS Code, you should be sure to have installed the recommended extensions (Python, Ruff, and MyPy). Note that you'll be prompted to install these when you open the project in VS Code.
