@@ -1,0 +1,15 @@
+README.md
+setup.cfg
+setup.py
+exponentation/__init__.py
+exponentation/methods.py
+exponentation/neuron.py
+exponentation/settings.py
+exponentation/utils.py
+exponentation.egg-info/PKG-INFO
+exponentation.egg-info/SOURCES.txt
+exponentation.egg-info/dependency_links.txt
+exponentation.egg-info/requires.txt
+exponentation.egg-info/top_level.txt
+exponentation/data/Data_learning.csv
+exponentation/data/my_model.pth
