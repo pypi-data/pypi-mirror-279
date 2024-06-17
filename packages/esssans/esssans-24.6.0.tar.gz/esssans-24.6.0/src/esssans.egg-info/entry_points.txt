@@ -1,0 +1,3 @@
+[beamlime.stateless]
+ess-loki-iofq = ess.loki.workflow:loki_iofq_workflow
+ess-loki-monitor = ess.loki.workflow:loki_monitor_workflow
