@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: sparecores-runner
+Version: 0.0.10
+Summary: Start cloud instances.
+Author: Attila Nagy, Gergely Daroczi, Balazs Hodobay
+Maintainer-email: Spare Cores team <pkg@sparecores.com>
+Project-URL: repository, https://github.com/SpareCores/sc-runner
+Project-URL: issues, https://github.com/SpareCores/sc-runner/issues
+Project-URL: documentation, https://sparecores.github.io/sc-runner/
+Project-URL: homepage, https://sparecores.com
+Keywords: cloud,compute
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click
+Requires-Dist: pulumi
+Requires-Dist: pulumi-aws
+Requires-Dist: sparecores-crawler >=0.2.1
+Requires-Dist: sparecores-data >=0.2.1
+Requires-Dist: sqlmodel
+
+# sc-runner
+Spare Cores Runner
+
+## Usage
+### CLI
+
+Create and destroy a default `t3.micro` instance in the default VPC/subnet in AWS:
+```shell
+sc-runner create aws
+sc-runner destroy aws
+```
+
+### Docker
+```shell
+docker run --rm -ti ghcr.io/sparecores/sc-runner:main --help
+```

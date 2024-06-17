@@ -1,0 +1,13 @@
+sc_runner/__init__.py,sha256=u15TKwvdzjHw2QOE2KZKXsER84NHdXjCi7OYDBmfpKU,451
+sc_runner/cli.py,sha256=gjDDqMXz66QqCl_lnUK_BlK9Inr3cKml-WAjf3HQIFQ,2741
+sc_runner/data.py,sha256=7voBXXFxTJpsWfT48rdIi85LAOkY8bX64654DgQ83yM,1566
+sc_runner/runner.py,sha256=AU3SxPSj0naAI8WKfhDn5hKWGE5uTWW22JKwF6-Rsdw,3249
+sc_runner/resources/__init__.py,sha256=FdNpuy4DQDMsFJEKIe6qDkbKxg_0TZKYIk5rclVro6c,321
+sc_runner/resources/aws.py,sha256=hrFGSOnkGCNQF3-oo63ZQbpmD8OkMiZAWXKjFhfKrvU,7834
+sc_runner/resources/base.py,sha256=zwrouIFmrnciXSMsvddmiXmkcVCREhmnkXoygwWLCoY,606
+sparecores_runner-0.0.10.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+sparecores_runner-0.0.10.dist-info/METADATA,sha256=sf07JmSafAqethq-dRB5rQTCw03afDJkuISfdDi206s,1224
+sparecores_runner-0.0.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+sparecores_runner-0.0.10.dist-info/entry_points.txt,sha256=krEhbO0CLsa5nwAWhqkVlHd3eMZ0puEbtm7I7mdCZm4,48
+sparecores_runner-0.0.10.dist-info/top_level.txt,sha256=UwNnHZATlRu6x2id1Ib7YrXTrBx4fI___MDR5nwRNH8,10
+sparecores_runner-0.0.10.dist-info/RECORD,,
