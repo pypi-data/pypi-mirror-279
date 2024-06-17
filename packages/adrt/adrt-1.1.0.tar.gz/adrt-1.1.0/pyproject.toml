@@ -1,0 +1,105 @@
+[build-system]
+requires = [
+    "setuptools>=62.6.0",
+    "numpy>=2,<3",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adrt"
+description = "Fast approximate discrete Radon transform for NumPy arrays"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "BSD-3-Clause"}
+authors = [
+  {name = "Karl Otness"},
+  {name = "Donsub Rim"}
+]
+dependencies = [
+  "numpy>=1.23,<3"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: BSD License",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Image Processing",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: C++",
+  "Operating System :: POSIX :: Linux",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS",
+  "Typing :: Typed",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/karlotness/adrt"
+Documentation = "https://adrt.readthedocs.io"
+"Source Code" = "https://github.com/karlotness/adrt"
+"Bug Tracker" = "https://github.com/karlotness/adrt/issues"
+
+# Additional setuptools settings
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.package-data]
+adrt = [
+  "*.pyi",
+  "py.typed"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "adrt.__version__"}
+
+# cibuildwheel settings
+[tool.cibuildwheel]
+build-frontend = "build"
+before-test = "pip install -r {package}/tests/requirements.txt"
+test-command = "pytest {package}/tests"
+
+[tool.cibuildwheel.linux.environment]
+CPPFLAGS = "-DNDEBUG"
+CFLAGS = "-O3 -flto -fvisibility=hidden -fvisibility-inlines-hidden -fno-math-errno -Wall -Wextra -Wpedantic"
+LDFLAGS = "-Wl,--as-needed,-O1"
+
+[tool.cibuildwheel.macos.environment]
+CPPFLAGS = "-DNDEBUG"
+CFLAGS = "-O3 -flto -fvisibility=hidden -fvisibility-inlines-hidden -Wall -Wextra -Wpedantic"
+LDFLAGS = "-Wl,-dead_strip_dylibs"
+
+[tool.cibuildwheel.windows.environment]
+CL = "/permissive- /Zc:inline,preprocessor,__cplusplus /DNDEBUG"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+addopts = [
+  "--import-mode=importlib",
+  "--capture=no",
+]
+
+[tool.ruff]
+extend-exclude = ["docs/_build/"]
+src = ["src"]
+line-length = 88
+respect-gitignore = true
+fix = false
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "N", "RUF", "UP", "C4", "YTT", "T10", "T20", "ICN", "SIM", "NPY"]
+ignore = ["UP015", "SIM108"]
+
+[tool.ruff.lint.per-file-ignores]
+"setup.py" = ["ICN001"]
+"tools/version_consistency.py" = ["T20"]
+"tools/download_catch2.py" = ["T20"]
+
+[tool.mypy]
+strict = true

@@ -1,0 +1,4 @@
+--only-binary :all:
+pytest>=6
+more-itertools
+scipy
