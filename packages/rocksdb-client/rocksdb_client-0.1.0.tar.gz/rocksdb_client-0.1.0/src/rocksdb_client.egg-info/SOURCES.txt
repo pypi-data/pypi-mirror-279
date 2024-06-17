@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/rocksdb_client.egg-info/PKG-INFO
+src/rocksdb_client.egg-info/SOURCES.txt
+src/rocksdb_client.egg-info/dependency_links.txt
+src/rocksdb_client.egg-info/requires.txt
+src/rocksdb_client.egg-info/top_level.txt
+tests/test_rocksdb_client.py
