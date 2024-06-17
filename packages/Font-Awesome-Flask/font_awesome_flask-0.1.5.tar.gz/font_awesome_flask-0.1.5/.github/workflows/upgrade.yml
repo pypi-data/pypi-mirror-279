@@ -1,0 +1,51 @@
+name: Upgrade Font Awesome library
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "57 2 * * *"
+
+env:
+  LIBRARY: font-awesome
+  INPUT_FILE: input-for-cookiecutter.txt
+  STATIC_FILE: all.min.js
+
+jobs:
+  upgrade-library:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Configure Git for commits
+        run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+      - name: Get the latest library version
+        run: |-
+          echo 'VERSION='$(curl -s https://api.cdnjs.com/libraries/$LIBRARY?fields=version | jq -r .version) >> $GITHUB_ENV
+          echo $VERSION >> $INPUT_FILE
+      - name: Get the latest static file
+        run: |-
+          curl -s https://cdnjs.cloudflare.com/ajax/libs/$LIBRARY/$VERSION/js/$STATIC_FILE -o $STATIC_FILE
+          sed '$!s/$/\\n/' $STATIC_FILE | tr -d '\n' >> $INPUT_FILE
+          echo "" >> $INPUT_FILE
+      - name: Get CSS and JS SRI maps
+        run: |-
+          SRI=$(curl -s https://api.cdnjs.com/libraries/$LIBRARY/$VERSION?fields=sri)
+          echo $SRI | jq --compact-output '{"all": .sri."css/all.min.css", "regular": .sri."css/regular.min.css", "solid": .sri."css/solid.min.css", "brands": .sri."css/brands.min.css", "fontawesome": .sri."css/fontawesome.min.css"}' >> $INPUT_FILE
+          echo $SRI | jq --compact-output '{"all": .sri."js/all.min.js", "regular": .sri."js/regular.min.js", "solid": .sri."js/solid.min.js", "brands": .sri."js/brands.min.js", "fontawesome": .sri."js/fontawesome.min.js"}' >> $INPUT_FILE
+      - name: Build source code
+        run: |
+          cat $INPUT_FILE | pipx run cookiecutter --overwrite-if-exists template
+      - name: Run pre-commit hooks
+        run: |
+          pipx run pre-commit run --files src/**/*
+      - name: Commit and push if there are any changes
+        run: |-
+          git add -A src
+          if ! git diff --quiet; then
+            git commit -m ":arrow_up: Upgrade Font Awesome to version $VERSION"
+            git push
+          fi
