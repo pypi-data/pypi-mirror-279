@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: personalDatabase
+Version: 2.1.0
+Summary: All functions that assist in standardising development approaches.
+Home-page: https://github.com/yourusername/your-repo
+Author: Marcus
+Author-email: marcusongkiansiong@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: custom-development-standardisation >=1.1.2
+Requires-Dist: psycopg2 >=2.9.9
+
+
+# Change log
+### [2.1.0] - 2024-06-16
+add:
+1. foundation: added user parameter for database connection
+2. Foundation: added host parameter for database connection
+fixed:
+others:
+1. Foundation: changed port number from 5432 to 5433
+2. Foundation: With the changes, initialising has two paths. One: default parameter with only data base name. Two: user and host specification alongside database name.
+### [2.0.0] - 2024-06-07
+add:
+fixed:
+others:
+1. Restructuring foundation: explicitly state the database to connect, within the script that uses the package, through the use of functions.
+2. Available commands: execute, initialise
+### [1.0.0] - 2024-06-07
+add:
+1. function_usage: a script for retrieving or modifying data for logging_data table
+2. actions: script for retrieving or modifying data for actions table
+3. general_functionality: utility functions that act on databases. for example, count number of uniques.
+fixed:
+others:
+1. remote_connection: An attempt to build a script to allow for remote connection to database.
