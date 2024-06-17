@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: marzneshein
+Version: 0.1.1
+Summary: Marzneshein Control API Client
+Home-page: https://github.com/sm1ky/marzneshein_api
+Author: Artem
+Author-email: contact@sm1ky.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: httpx
+Requires-Dist: pydantic
+
+# Marzneshein API Client
+
+Marzneshein Control API Client is a Python library that provides an easy-to-use interface to interact with the Marzneshein Control API.
+
+## Installation
+
+```bash
+pip install marzneshein_api
+```
+
+If you notice an error, please create a PR and attach logs
+You can contact me by mail contant@sm1ky.com or in Telegram @sm1ky
