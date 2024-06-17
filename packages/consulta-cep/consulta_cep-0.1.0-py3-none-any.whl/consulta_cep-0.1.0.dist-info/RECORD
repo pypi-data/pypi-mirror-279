@@ -1,0 +1,13 @@
+consulta_cep/__init__.py,sha256=mfbcJwuaou9jW0XeKJvP_n-S1Qq4i2BTF-XpcOuuHHI,547
+consulta_cep/__main__.py,sha256=9GLnjERfLiq0dlm6_aZT9aZ6OTI2LAhxF7CxHSIa8ss,762
+consulta_cep/engine_cep.py,sha256=H8hJ_05IvhKUL2Kd25Rh2YKfKTcmsZzvvS9MJ44vRH8,531
+consulta_cep/servicos.py,sha256=9nmToVIRIQnlraA27FPTXNlPoFzWwpj1mbhZWAy9mTE,985
+consulta_cep/util.py,sha256=22Gw6wyOnFdSh3vXiuSHvz8qgWDHZuHROhyQuACrUYQ,542
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_consulta_cep.py,sha256=9MFJq2No_XMCJos0tPTYayooYVfPW-b0wj8qSA0MXsI,978
+consulta_cep-0.1.0.dist-info/LICENSE,sha256=F9ZcTCVoWv1lkYoM-46OBt-d_IsIJt_n4pVaeLNGDYk,1073
+consulta_cep-0.1.0.dist-info/METADATA,sha256=8G9-D-jk74a0swP2hxfgnVCRMdcAFRowEUbuGGIeBo8,952
+consulta_cep-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+consulta_cep-0.1.0.dist-info/entry_points.txt,sha256=iIZTkyGF6S-UKRqyNWehRgNKU-fKM37ClwxbEj3hog8,56
+consulta_cep-0.1.0.dist-info/top_level.txt,sha256=23pwMZ4rILegQsHegNZSS-3tkcKIDYZaH7hhh2Fp3xo,19
+consulta_cep-0.1.0.dist-info/RECORD,,
