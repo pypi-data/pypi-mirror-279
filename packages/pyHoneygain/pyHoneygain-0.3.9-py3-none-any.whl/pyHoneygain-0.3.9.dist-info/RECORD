@@ -1,0 +1,9 @@
+pyHoneygain/__init__.py,sha256=3VxrL1rJHQGaTYHrjok2xlrWNpYIAN_HjYizXrqKyj0,18
+pyHoneygain/endpoints.py,sha256=ChoM74Jd1pKErKNXkOghZB2dggFXS7waj8Y0q9M5TY4,271
+pyHoneygain/exceptions.py,sha256=yavC4m2Bxk0f5j-ImJJ1v2ZCZ8DI-oQKE8GRNt7pAHw,683
+pyHoneygain/hg.py,sha256=1_UjXqKpu68AN6LdCCzPsvYX4-RdQ55ZkTBPlg86tAs,12097
+pyHoneygain-0.3.9.dist-info/LICENSE,sha256=uzI_QoJ0fZJVsoYyWZKOvcVYbTO3LBEiTZeYgH5rLpI,1068
+pyHoneygain-0.3.9.dist-info/METADATA,sha256=ABVhr2QzWwwF3Sl2camtVg_GCP3_WbQW5kAjWG8Nhjw,6006
+pyHoneygain-0.3.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pyHoneygain-0.3.9.dist-info/top_level.txt,sha256=VVzLwyi_5c8bDufNOFQhNy8aqe3wat-iVVJHK_lAtTU,12
+pyHoneygain-0.3.9.dist-info/RECORD,,
