@@ -1,0 +1,36 @@
+{
+    "personal_information": {
+        "name": "str",
+        "email": "email", // a valid email address,
+        "linkedin": "url", // a valid linkedin url,
+        "phone": "str", 
+        "birth_year": "date", // If age is provided, you should calculate the birthyear
+        "city": "str"
+    },
+    "jobs": [
+        {
+            "title": "str", // A scientific job is also a valid job title
+            "employer": "str", // The employer for a scientific job is usually a university 
+            "start_year": "int", // The year the job started
+            "end_year": "int" 
+        }
+    ],
+    "education": [
+        {
+            "course": "str", // The course of study
+            "institution": "str", // The institution where the course was studied
+            "start_year": "int", // The year the course started
+            "end_year": "int" 
+        }
+    ],
+    "languages": [
+        {
+            "name": "str",
+            "language_level": { // A-Basic, B-Intermediate, C-Advanced, F-Fluent
+                "reading": "char", // A valid language_level A, B, C, F,
+                "writing": "char", // A valid language_level A, B, C, F,
+                "speaking": "char" 
+            }
+        }
+    ]
+}
