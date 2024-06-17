@@ -1,0 +1,9 @@
+tpux/__init__.py,sha256=ls1camlIoMxEZz9gSkZ1OJo-MXqHWwKPtdPbZJmwp7E,22
+tpux/cli.py,sha256=ezhXccgSeB4gthixcSH8K5ncWluPDn-UHbX12fN5tT4,11079
+tpux/podrun.py,sha256=_zery6ksBrLwRKO_ezoiYqhxsP5c2bybDV6rS3diKnc,1039
+tpux/utils.py,sha256=d_ZontwDl-LUdloMfX-b83jN9EcGxGQV4g7CrZhWLJw,1439
+tpux-0.1.1.dist-info/METADATA,sha256=Ge0R36zCYGG9GJ-mQKmq3SqOEX0NAIJYsOD-vQwD-Es,4247
+tpux-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tpux-0.1.1.dist-info/entry_points.txt,sha256=dhWNA2suYqU2JJarFIIAj8PwhQr5WbVA_fxJVDAkaZY,65
+tpux-0.1.1.dist-info/top_level.txt,sha256=qqdPOIyFvjlUa5ZxhMBwKdjcH9z2BandCumUiWDBlGM,5
+tpux-0.1.1.dist-info/RECORD,,
