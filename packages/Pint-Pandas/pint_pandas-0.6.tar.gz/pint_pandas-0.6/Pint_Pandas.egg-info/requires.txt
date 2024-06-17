@@ -1,0 +1,12 @@
+pint>=0.21
+pandas>=1.5
+
+[test]
+pytest
+pytest-mpl
+pytest-cov
+pytest-subtests
+codecov
+coveralls
+nbval
+pyarrow
