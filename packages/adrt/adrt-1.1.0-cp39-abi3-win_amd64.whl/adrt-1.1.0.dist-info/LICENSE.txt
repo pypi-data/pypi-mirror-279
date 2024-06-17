@@ -1,0 +1,69 @@
+Copyright Karl Otness, Donsub Rim
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------------
+
+Additional conditions for this Windows binary build
+
+This program is linked with and uses Microsoft Distributable Code,
+copyrighted by the Microsoft Corporation. The Microsoft Distributable
+Code is included in each .pyd file as a result of running the code
+through a linker.
+
+These components come from Microsoft developer tools such as Microsoft
+Visual C++ and the Windows Software Development Kit. In order to use
+or further distribute this program, you, any distributors, and other
+end users must agree to terms that protect the Microsoft Distributable
+Code at least as much as Microsoft's own requirements for the
+Distributable Code. See Microsoft's documentation (included in its
+developer tools and on its website at microsoft.com) for specific
+details.
+
+Among the restrictions required for compliance with this agreement are
+requirements that you, distributors, and other end users do not:
+
+- alter any copyright, trademark, or patent notice in Microsoft's
+  Distributable Code
+
+- use Microsoft's trademarks in your programs' names or in a way that
+  suggests your programs come from or are endorsed by Microsoft
+
+- distribute Microsoft's Distributable Code to run on a platform other
+  than Microsoft operating systems, run-time technologies or
+  application platforms
+
+- include Microsoft Distributable Code in malicious, deceptive, or
+  unlawful programs
+
+The above restrictions on use and distribution apply only to the
+Microsoft Distributable Code, and you must accept them in order to
+make use of this Windows binary build. The distribution of the rest of
+this software package is governed by the 3-clause BSD license included
+in this file and in other files as marked.
