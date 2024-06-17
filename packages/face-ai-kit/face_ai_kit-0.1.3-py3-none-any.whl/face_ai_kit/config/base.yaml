@@ -1,0 +1,41 @@
+lib:
+  version: '0.1.3'
+  model_url: 'https://github.com/tgoldmann/face-ai-kit/releases/download/pre-release'
+  #local_model_path: '' # This option uses the local path to the model and disables downloading from Github.
+retinaface_detector:
+  provider: 'onnx-cpu'
+  model: 'resnet_dynamic.onnx'
+  nms_threshold: 0.4
+  vis_thres: 0.5
+  conf_threshold: 0.1
+  resolution: [null, null] #resolution: [640,480]
+  min_sizes: [[16, 32], [64, 128], [256, 512]]
+  steps: [8, 16, 32]
+  variance: [0.1, 0.2]
+  clip: False
+
+recognition_magface:
+  algorithm: 'magface'
+  provider: 'onnx-cpu'
+  model: 'magface.onnx'
+
+
+recognition_magface_cwh:
+  algorithm: 'recognition_magface_cwh'
+  provider: 'onnx-cpu'
+  model: 'magface_iresnet100_cwh.onnx'
+
+recognition_arcface:
+  algorithm: 'arcface'
+  provider: 'onnx-cpu'
+  model: 'arcface_resnet50.onnx'
+
+landmarks:
+  #Mediapipe
+  #module: 'mediapipe'
+  #model: 'face_mesh_Nx3x192x192_post.onnx'
+
+  #N19
+  module: 'n19'
+  model: 'm1.onnx'
+  provider: 'onnx-cpu'
