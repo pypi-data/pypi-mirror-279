@@ -1,0 +1,41 @@
+[project]
+
+name='nrt-collections-utils'
+version='1.0.0'
+authors=[
+{ name='Eyal Tuzon', email='eyal.tuzon.dev@gmail.com' }
+]
+description='Collections utilities in Python'
+keywords=[
+'python', 'python3', 'python-3', 'tool', 'tools',
+'collection', 'collections', 'utilities', 'utils', 'util',
+'nrt', 'nrt-utils', 'collections-utils', 'collections-utilities',
+'nrt-collections-utils', 'nrt-collections-utilities',
+'list', 'list-utils', 'list-utilities', 'nrt-list-utils',
+'nrt-list-utilities'
+]
+readme='README.md'
+requires-python='>=3.8'
+classifiers=[
+'Programming Language :: Python :: 3',
+'Programming Language :: Python :: 3.8',
+'Programming Language :: Python :: 3.9',
+'Programming Language :: Python :: 3.10',
+'Programming Language :: Python :: 3.11',
+'Programming Language :: Python :: 3.12',
+'License :: OSI Approved :: MIT License',
+'Operating System :: OS Independent',
+]
+
+dynamic=['dependencies']
+
+[project.urls]
+
+'Homepage'='https://github.com/etuzon/python-nrt-collections-utils'
+'Bug Tracker'='https://github.com/etuzon/python-nrt-collections-utils/issues'
+'documentation'='https://github.com/etuzon/python-nrt-collections-utils/wiki'
+
+[tool.setuptools]
+
+packages = ['nrt_collections_utils']
+py-modules = []
