@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: tgit
+Version: 0.4.0
+Summary: Tool for Git Interaction Temptation (tgit): An elegant CLI tool that simplifies and streamlines your Git workflow, making version control a breeze.
+License: MIT
+Keywords: git,tool,changelog,version,commit
+Author: Jannchie
+Author-email: jannchie@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Version Control
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: PyYAML (>=6.0.1,<7.0.0)
+Requires-Dist: inquirer (>=3.2.5,<4.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Description-Content-Type: text/markdown
+
+# tgit
+
+Tool for managing git repositories.
+
+## Installation
+
+```bash
+pip install tgit
+```
+
+## Usage
+
+```bash
+tgit --help
+```
+
