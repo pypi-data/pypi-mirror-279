@@ -1,0 +1,71 @@
+site_name: pyvisjs
+site_description: "Python Wrapper for vis.js Network."
+site_url: https://22kittens.gitlab.io/pyvisjs
+site_dir: public
+
+
+repo_url: https://gitlab.com/22kittens/pyvisjs
+repo_name: 22kittens/pyvisjs
+edit_uri: edit/dev/docs/
+
+theme:
+  favicon: img/favicon.ico
+  logo: img/favicon-32x32.png
+#  font:
+#    text: Segoe UI
+#    code: JetBrains Mono
+  features:
+    - navigation.tabs
+  #  - navigation.path
+  #  - content.action.view
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/gitlab
+    view: material/eye
+  name: "material"
+  custom_dir: docs_overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+    #  primary: "blue"
+    #  accent: "grey"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+    #  primary: "blue"
+    #  accent: "white"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+plugins:
+  - search
+#  - mkdocstrings:
+#      default_handler: python
+
+markdown_extensions:
+  - pymdownx.highlight:
+#      linenums: true
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - "Getting Started": index.md
+  - "Documentation":
+    - "Network": network.md
+    - "Edges": edges.md
+    - "Nodes": nodes.md
+    - "Options":
+      - "Vis.js options": standard_options.md
+      - "Packege-specific options": pyvisjs_options.md
+  - "Examples":
+    - "Basic example": examples/basic-example.md
+    - "Fixed red Node": examples/fixed-red-node.md
+    - "FIltering example": examples/filtering-example.md
+  - "About":
+    - "Contributing": CONTRIBUTING.md
+    - "License": LICENSE.md

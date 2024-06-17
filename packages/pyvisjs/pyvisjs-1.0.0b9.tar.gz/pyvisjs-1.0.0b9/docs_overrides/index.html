@@ -1,0 +1,517 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+<style type="text/css">
+    #visjsnet {
+        width: 100%;
+        height: 100%;
+        border-bottom: 1px solid lightgray;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .row.flex-grow-1 {
+        flex-grow: 1;
+    }
+    .option {
+        font-weight: normal;
+    }
+    .optgroup {
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+   
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <select id="select-all-fields" class="form-select" data-placeholder="You can filter network here...">
+                <option value="ALL,ALL,ALL">All values</option>
+                <optgroup label="node.file_type">
+                    <option value="node,file_type,dir">dir</option>
+                    <option value="node,file_type,file">file</option>
+                    
+                    </optgroup>
+                    
+                    <optgroup label="node.file_ext">
+                    <option value="node,file_ext,"></option>
+                    <option value="node,file_ext,.TAG">.TAG</option>
+                    <option value="node,file_ext,.html">.html</option>
+                    <option value="node,file_ext,.ico">.ico</option>
+                    <option value="node,file_ext,.js">.js</option>
+                    <option value="node,file_ext,.md">.md</option>
+                    <option value="node,file_ext,.png">.png</option>
+                    <option value="node,file_ext,.py">.py</option>
+                    <option value="node,file_ext,.toml">.toml</option>
+                    <option value="node,file_ext,.txt">.txt</option>
+                    <option value="node,file_ext,.yml">.yml</option>
+                    
+                    </optgroup>
+                    
+                    <optgroup label="node.label">
+                    <option value="node,label,.gitignore">.gitignore</option>
+                    <option value="node,label,.gitlab-ci.yml">.gitlab-ci.yml</option>
+                    <option value="node,label,.pytest_cache">.pytest_cache</option>
+                    <option value="node,label,CACHEDIR.TAG">CACHEDIR.TAG</option>
+                    <option value="node,label,CONTRIBUTING.md">CONTRIBUTING.md</option>
+                    <option value="node,label,LICENSE">LICENSE</option>
+                    <option value="node,label,README.md">README.md</option>
+                    <option value="node,label,__init__.py">__init__.py</option>
+                    <option value="node,label,_version.py">_version.py</option>
+                    <option value="node,label,base.html">base.html</option>
+                    <option value="node,label,base_dictable.py">base_dictable.py</option>
+                    <option value="node,label,basic.html">basic.html</option>
+                    <option value="node,label,bluor.py">bluor.py</option>
+                    <option value="node,label,bs-container.html">bs-container.html</option>
+                    <option value="node,label,cache">cache</option>
+                    <option value="node,label,create_network.js">create_network.js</option>
+                    <option value="node,label,default.html">default.html</option>
+                    <option value="node,label,docs">docs</option>
+                    <option value="node,label,docs_overrides">docs_overrides</option>
+                    <option value="node,label,draw_title.js">draw_title.js</option>
+                    <option value="node,label,edge.py">edge.py</option>
+                    <option value="node,label,edges.md">edges.md</option>
+                    <option value="node,label,examples">examples</option>
+                    <option value="node,label,examples.md">examples.md</option>
+                    <option value="node,label,favicon-32x32.png">favicon-32x32.png</option>
+                    <option value="node,label,favicon.ico">favicon.ico</option>
+                    <option value="node,label,folder_structure.txt">folder_structure.txt</option>
+                    <option value="node,label,functions.js">functions.js</option>
+                    <option value="node,label,home copy.html">home copy.html</option>
+                    <option value="node,label,home.html">home.html</option>
+                    <option value="node,label,img">img</option>
+                    <option value="node,label,index.md">index.md</option>
+                    <option value="node,label,init_tomSelect.js">init_tomSelect.js</option>
+                    <option value="node,label,mkdocs.yml">mkdocs.yml</option>
+                    <option value="node,label,network.py">network.py</option>
+                    <option value="node,label,node.py">node.py</option>
+                    <option value="node,label,nodeids">nodeids</option>
+                    <option value="node,label,options.py">options.py</option>
+                    <option value="node,label,pyproject.toml">pyproject.toml</option>
+                    <option value="node,label,pyvisjs">pyvisjs</option>
+                    <option value="node,label,pyvisjs
+                add
+                package
+                documentation">pyvisjs
+                add
+                package
+                documentation</option>
+                    <option value="node,label,readme.py">readme.py</option>
+                    <option value="node,label,repo.py">repo.py</option>
+                    <option value="node,label,requirements-doc.txt">requirements-doc.txt</option>
+                    <option value="node,label,requirements.txt">requirements.txt</option>
+                    <option value="node,label,select-edge-filter.html">select-edge-filter.html</option>
+                    <option value="node,label,stepwise">stepwise</option>
+                    <option value="node,label,templates">templates</option>
+                    <option value="node,label,test_base_dictable.py">test_base_dictable.py</option>
+                    <option value="node,label,test_edge.py">test_edge.py</option>
+                    <option value="node,label,test_network.py">test_network.py</option>
+                    <option value="node,label,test_node.py">test_node.py</option>
+                    <option value="node,label,test_options.py">test_options.py</option>
+                    <option value="node,label,test_utils.py">test_utils.py</option>
+                    <option value="node,label,tests">tests</option>
+                    <option value="node,label,tom-select.html">tom-select.html</option>
+                    <option value="node,label,utils.py">utils.py</option>
+                    <option value="node,label,v">v</option>
+                    
+                    </optgroup>
+
+
+</select></div>
+    </div>
+    <div class="row flex-grow-1">
+        <div class="col">
+            <div id="visjsnet"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    
+    
+const data = create_network();
+data.network.has_hidden_nodes = false;
+
+// sorry for this dirty trick
+el2m3nt = document.getElementById("__palette_1");
+el2m3nt.parentNode.removeChild(el2m3nt);
+
+el2m3nt = document.getElementsByClassName("vis-button vis-up")[0];
+el2m3nt.parentNode.removeChild(el2m3nt);
+el2m3nt = document.getElementsByClassName("vis-button vis-down")[0];
+el2m3nt.parentNode.removeChild(el2m3nt);
+el2m3nt = document.getElementsByClassName("vis-button vis-left")[0];
+el2m3nt.parentNode.removeChild(el2m3nt);
+el2m3nt = document.getElementsByClassName("vis-button vis-right")[0];
+el2m3nt.parentNode.removeChild(el2m3nt);
+el2m3nt = document.getElementsByClassName("vis-button vis-zoomExtends")[0];
+el2m3nt.parentNode.removeChild(el2m3nt);
+
+
+data.network.once("afterDrawing", 
+    function (ctx) {
+        data.network.Zoom(data.pyvisjs.zoom_factor, data.pyvisjs.duration_ms)
+    }
+);
+
+
+function create_network() {
+
+    vis.Network.prototype.Zoom = function (scale_factor, duration) {
+        const animationOptions = {
+            scale: this.getScale() * scale_factor,
+            animation: { duration: duration }
+        };
+        this.view.moveTo(animationOptions);
+    };
+    
+    // create an array with nodes
+    const ds_nodes = new vis.DataSet([{"color": "orange", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".", "label": "pyvisjs\nadd\npackage\ndocumentation", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\docs", "label": "docs", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\docs_overrides", "label": "docs_overrides", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\examples", "label": "examples", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\pyvisjs", "label": "pyvisjs", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\tests", "label": "tests", "shape": "circle"}, {"file_ext": "", "file_type": "file", "font": {"color": "black"}, "id": ".\\.gitignore", "label": ".gitignore", "shape": "box"}, {"file_ext": ".yml", "file_type": "file", "font": {"color": "black"}, "id": ".\\.gitlab-ci.yml", "label": ".gitlab-ci.yml", "shape": "box"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\CONTRIBUTING.md", "label": "CONTRIBUTING.md", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\default.html", "label": "default.html", "shape": "box"}, {"color": "#DF7DEC", "file_ext": ".txt", "file_type": "file", "font": {"color": "black"}, "id": ".\\folder_structure.txt", "label": "folder_structure.txt", "shape": "box"}, {"file_ext": "", "file_type": "file", "font": {"color": "black"}, "id": ".\\LICENSE", "label": "LICENSE", "shape": "box"}, {"file_ext": ".yml", "file_type": "file", "font": {"color": "black"}, "id": ".\\mkdocs.yml", "label": "mkdocs.yml", "shape": "box"}, {"file_ext": ".toml", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyproject.toml", "label": "pyproject.toml", "shape": "box"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\README.md", "label": "README.md", "shape": "box"}, {"color": "#DF7DEC", "file_ext": ".txt", "file_type": "file", "font": {"color": "black"}, "id": ".\\requirements-doc.txt", "label": "requirements-doc.txt", "shape": "box"}, {"color": "#DF7DEC", "file_ext": ".txt", "file_type": "file", "font": {"color": "black"}, "id": ".\\requirements.txt", "label": "requirements.txt", "shape": "box"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\docs\\img", "label": "img", "shape": "circle"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\docs\\edges.md", "label": "edges.md", "shape": "box"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\docs\\examples.md", "label": "examples.md", "shape": "box"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\docs\\index.md", "label": "index.md", "shape": "box"}, {"file_ext": ".png", "file_type": "file", "font": {"color": "black"}, "id": ".\\docs\\img\\favicon-32x32.png", "label": "favicon-32x32.png", "shape": "box"}, {"file_ext": ".ico", "file_type": "file", "font": {"color": "black"}, "id": ".\\docs\\img\\favicon.ico", "label": "favicon.ico", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\docs_overrides\\home.html", "label": "home.html", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\examples\\bluor.py", "label": "bluor.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\examples\\readme.py", "label": "readme.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\examples\\repo.py", "label": "repo.py", "shape": "box"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\pyvisjs\\templates", "label": "templates", "shape": "circle"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\base_dictable.py", "label": "base_dictable.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\edge.py", "label": "edge.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\network.py", "label": "network.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\node.py", "label": "node.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\options.py", "label": "options.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\utils.py", "label": "utils.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\_version.py", "label": "_version.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\__init__.py", "label": "__init__.py", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\pyvisjs\\templates\\base.html", "label": "base.html", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\pyvisjs\\templates\\basic.html", "label": "basic.html", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\pyvisjs\\templates\\bs-container.html", "label": "bs-container.html", "shape": "box"}, {"color": "#da7422", "file_ext": ".js", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\templates\\create_network.js", "label": "create_network.js", "shape": "box"}, {"color": "#da7422", "file_ext": ".js", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\templates\\draw_title.js", "label": "draw_title.js", "shape": "box"}, {"color": "#da7422", "file_ext": ".js", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\templates\\functions.js", "label": "functions.js", "shape": "box"}, {"color": "#da7422", "file_ext": ".js", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyvisjs\\templates\\init_tomSelect.js", "label": "init_tomSelect.js", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\pyvisjs\\templates\\select-edge-filter.html", "label": "select-edge-filter.html", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\pyvisjs\\templates\\tom-select.html", "label": "tom-select.html", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\test_base_dictable.py", "label": "test_base_dictable.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\test_edge.py", "label": "test_edge.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\test_network.py", "label": "test_network.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\test_node.py", "label": "test_node.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\test_options.py", "label": "test_options.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\test_utils.py", "label": "test_utils.py", "shape": "box"}, {"color": "#54bede", "file_ext": ".py", "file_type": "file", "font": {"color": "black"}, "id": ".\\tests\\__init__.py", "label": "__init__.py", "shape": "box"}]);
+
+    // create an array with edges
+    const ds_edges = new vis.DataSet([{"from": ".", "label": "dir:1", "to": ".\\docs"}, {"from": ".", "label": "dir:2", "to": ".\\docs_overrides"}, {"from": ".", "label": "dir:3", "to": ".\\examples"}, {"from": ".", "label": "dir:4", "to": ".\\pyvisjs"}, {"from": ".", "label": "dir:6", "to": ".\\tests"}, {"from": ".", "label": "file:0", "to": ".\\.gitignore"}, {"from": ".", "label": "file:1", "to": ".\\.gitlab-ci.yml"}, {"from": ".", "label": "file:2", "to": ".\\CONTRIBUTING.md"}, {"from": ".", "label": "file:3", "to": ".\\default.html"}, {"from": ".", "label": "file:4", "to": ".\\folder_structure.txt"}, {"from": ".", "label": "file:5", "to": ".\\LICENSE"}, {"from": ".", "label": "file:6", "to": ".\\mkdocs.yml"}, {"from": ".", "label": "file:7", "to": ".\\pyproject.toml"}, {"from": ".", "label": "file:8", "to": ".\\README.md"}, {"from": ".", "label": "file:9", "to": ".\\requirements-doc.txt"}, {"from": ".", "label": "file:10", "to": ".\\requirements.txt"}, {"from": ".\\docs", "label": "dir:0", "to": ".\\docs\\img"}, {"from": ".\\docs", "label": "file:0", "to": ".\\docs\\edges.md"}, {"from": ".\\docs", "label": "file:1", "to": ".\\docs\\examples.md"}, {"from": ".\\docs", "label": "file:2", "to": ".\\docs\\index.md"}, {"from": ".\\docs\\img", "label": "file:0", "to": ".\\docs\\img\\favicon-32x32.png"}, {"from": ".\\docs\\img", "label": "file:1", "to": ".\\docs\\img\\favicon.ico"}, {"from": ".\\docs_overrides", "label": "file:0", "to": ".\\docs_overrides\\home.html"}, {"from": ".\\examples", "label": "file:0", "to": ".\\examples\\bluor.py"}, {"from": ".\\examples", "label": "file:1", "to": ".\\examples\\readme.py"}, {"from": ".\\examples", "label": "file:2", "to": ".\\examples\\repo.py"}, {"from": ".\\pyvisjs", "label": "dir:0", "to": ".\\pyvisjs\\templates"}, {"from": ".\\pyvisjs", "label": "file:0", "to": ".\\pyvisjs\\base_dictable.py"}, {"from": ".\\pyvisjs", "label": "file:1", "to": ".\\pyvisjs\\edge.py"}, {"from": ".\\pyvisjs", "label": "file:2", "to": ".\\pyvisjs\\network.py"}, {"from": ".\\pyvisjs", "label": "file:3", "to": ".\\pyvisjs\\node.py"}, {"from": ".\\pyvisjs", "label": "file:4", "to": ".\\pyvisjs\\options.py"}, {"from": ".\\pyvisjs", "label": "file:5", "to": ".\\pyvisjs\\utils.py"}, {"from": ".\\pyvisjs", "label": "file:6", "to": ".\\pyvisjs\\_version.py"}, {"from": ".\\pyvisjs", "label": "file:7", "to": ".\\pyvisjs\\__init__.py"}, {"from": ".\\pyvisjs\\templates", "label": "file:0", "to": ".\\pyvisjs\\templates\\base.html"}, {"from": ".\\pyvisjs\\templates", "label": "file:1", "to": ".\\pyvisjs\\templates\\basic.html"}, {"from": ".\\pyvisjs\\templates", "label": "file:2", "to": ".\\pyvisjs\\templates\\bs-container.html"}, {"from": ".\\pyvisjs\\templates", "label": "file:3", "to": ".\\pyvisjs\\templates\\create_network.js"}, {"from": ".\\pyvisjs\\templates", "label": "file:4", "to": ".\\pyvisjs\\templates\\draw_title.js"}, {"from": ".\\pyvisjs\\templates", "label": "file:5", "to": ".\\pyvisjs\\templates\\functions.js"}, {"from": ".\\pyvisjs\\templates", "label": "file:6", "to": ".\\pyvisjs\\templates\\init_tomSelect.js"}, {"from": ".\\pyvisjs\\templates", "label": "file:7", "to": ".\\pyvisjs\\templates\\select-edge-filter.html"}, {"from": ".\\pyvisjs\\templates", "label": "file:8", "to": ".\\pyvisjs\\templates\\tom-select.html"}, {"from": ".\\tests", "label": "file:0", "to": ".\\tests\\test_base_dictable.py"}, {"from": ".\\tests", "label": "file:1", "to": ".\\tests\\test_edge.py"}, {"from": ".\\tests", "label": "file:2", "to": ".\\tests\\test_network.py"}, {"from": ".\\tests", "label": "file:3", "to": ".\\tests\\test_node.py"}, {"from": ".\\tests", "label": "file:4", "to": ".\\tests\\test_options.py"}, {"from": ".\\tests", "label": "file:5", "to": ".\\tests\\test_utils.py"}, {"from": ".\\tests", "label": "file:6", "to": ".\\tests\\__init__.py"}]);
+
+    // create a network
+    const container = document.getElementById('visjsnet');
+
+    // provide the data in the vis format
+    const data = {
+        nodes: ds_nodes,
+        edges: ds_edges
+    };
+    const options = {
+        "edges": {"arrowStrikethrough": false, "arrows": "to"},
+        "height": "800px", 
+        "width": "100%", //"1000px",
+        "interaction": {
+            "dragView": false, 
+            "zoomView": false,
+            "navigationButtons": true,
+        },
+    };
+    const pyvisjs = {
+        "edge_filtering_lookup": null, 
+        "enable_highlighting": true, 
+        "node_filtering_lookup": {
+            "file_ext": ["", ".html", ".ico", ".js", ".md", ".png", ".py", ".toml", ".txt", ".yml"], 
+            "file_type": ["dir", "file"],
+            "label": [".gitignore", ".gitlab-ci.yml", ".pytest_cache", "CACHEDIR.TAG", "CONTRIBUTING.md", "LICENSE", "README.md", "__init__.py", "_version.py", "base.html", "base_dictable.py", "basic.html", "bluor.py", "bs-container.html", "cache", "create_network.js", "default.html", "docs", "docs_overrides", "draw_title.js", "edge.py", "edges.md", "examples", "examples.md", "favicon-32x32.png", "favicon.ico", "folder_structure.txt", "functions.js", "home copy.html", "home.html", "img", "index.md", "init_tomSelect.js", "mkdocs.yml", "network.py", "node.py", "nodeids", "options.py", "pyproject.toml", "pyvisjs", "pyvisjs\nadd\npackage\ndocumentation", "readme.py", "repo.py", "requirements-doc.txt", "requirements.txt", "select-edge-filter.html", "stepwise", "templates", "test_base_dictable.py", "test_edge.py", "test_network.py", "test_node.py", "test_options.py", "test_utils.py", "tests", "tom-select.html", "utils.py", "v"]
+        }, 
+        "title": "pyvisjs code repo visualisation",
+        "dropdown_auto_close": true,
+        "filtering_enabled": true,
+        "startAnimation_enabled": true,
+        "zoom_factor": 3,
+        "duration_ms": 3000,
+
+    };
+
+    return {
+        network: new vis.Network(container, data, options),
+        nodes: ds_nodes.get({ returnType: "Object" }),
+        edges: ds_edges.get({ returnType: "Object" }),
+        ds_nodes: ds_nodes,
+        pyvisjs: pyvisjs,
+    }
+}
+    
+const eventHandler = function(name) {
+    return function() {
+        const list_of_selected_values = arguments[0];
+        dict = convert_field_value_list_to_dict(list_of_selected_values);
+        hide_nodes_by_edge_attribute_values_intersect(dict);
+        if (data.pyvisjs.dropdown_auto_close === true) tom_select.close();
+    };
+};
+
+tom_select = new TomSelect("#select-all-fields", {
+    maxItems: 10,
+    onChange: eventHandler("onChange"),
+    //create: true,
+    //onItemAdd:function(){
+    //    this.setTextboxValue('');
+    //    this.refreshOptions();
+    //},
+    plugins: ['remove_button'],
+});
+
+if (data.pyvisjs.title !== null) {
+    data.network.on("beforeDrawing", function (ctx) {
+        const central_focus = data.network.getViewPosition();
+        const scale = data.network.getScale();
+
+        div = document.getElementById("visjsnet").getElementsByClassName("vis-network")[0];
+        const height = div.clientHeight;
+        const width = div.clientWidth;
+
+        const dx = width / 2 - width * 0.05;
+        const dy = height / 2 - height * 0.05;
+        const x = central_focus.x - dx / scale;
+        const y = central_focus.y - dy / scale;
+        //const font_size = Math.round(30.0 / scale)
+        const font_size = 30.0 / scale;
+
+        ctx.font = ""+font_size+"px JetBrains Mono";
+        //ctx.font = "30px JetBrains Mono";
+        ctx.fillStyle = "#D0D0D0";
+        ctx.fillText(data.pyvisjs.title, x, y);
+    });
+}
+    
+// converts ["edge,country,LV","edge,country,GB"]
+// to
+// {country: {list: ["LV", "GB"], type="edge"}}
+function convert_field_value_list_to_dict(list) {
+    dict = {}
+    for (id in list) {
+        const field_value_triplet = list[id].split(",")
+        const type = field_value_triplet[0]
+        const field = field_value_triplet[1]
+        const value = field_value_triplet[2]
+
+        if (field in dict) dict[field]["list"].push(value)
+        else dict[field] = {"list": [value], "type": type}
+    }
+    return dict
+}
+
+function get_nodes_by_edge_attribute_value(field, value) {
+
+    const result = [];
+
+    for (const key in data.edges) {
+        const edge = data.edges[key];
+
+        if (edge[field] === value)
+        {
+            if (result.includes(edge.from) === false) result.push(edge.from);
+            if (result.includes(edge.to) === false) result.push(edge.to);
+        }
+    }
+
+    return result;
+}
+
+function find_heighbors_by_node_id(id) {
+    for (const key in data.nodes) {
+        const node = data.nodes[key];
+
+        if (node["id"] === id)
+        {
+            const selected_node = node["id"];
+            collected_nodes = data.network.getConnectedNodes(selected_node);
+            collected_nodes.push(selected_node);
+            return collected_nodes
+        }
+    }
+
+    return null;
+}
+
+function get_nodes_by_attribute_value(field, value) {
+    const collected_nodes = [];
+
+    for (const key in data.nodes) {
+        const node = data.nodes[key];
+
+        if (node[field] === value)
+        {
+            collected_nodes.push(node["id"]);
+        }
+    }
+
+    return collected_nodes;
+}
+
+function hide_nodes_by_edge_attribute_values_intersect(option_groups_dict) {
+
+    const selected_nodes_by_field = {}
+
+    for (field in option_groups_dict) {
+        const dict = option_groups_dict[field]
+        const selected_values = dict["list"]
+        const node_or_edge = dict["type"]
+        selected_nodes_by_field[field] = []
+
+        for (id in selected_values) {
+            let collected_nodes = []
+            const value = selected_values[id];
+
+            if (node_or_edge === "ALL" && value === "ALL") {
+                collected_nodes = Object.keys(data.nodes);
+                data.network.has_hidden_nodes = false;
+            }
+            else if (node_or_edge === "edge") {
+                collected_nodes = get_nodes_by_edge_attribute_value(field, value)
+                data.network.has_hidden_nodes = true;
+            }
+            else if (node_or_edge === "node") {
+                collected_nodes = get_nodes_by_attribute_value(field, value);
+                data.network.has_hidden_nodes = true;
+            }
+
+            for (id in collected_nodes) {
+                node_id = collected_nodes[id]
+                if (selected_nodes_by_field[field].includes(node_id) === false) selected_nodes_by_field[field].push(node_id)
+            }
+        }
+    }
+
+    const selected_nodes_intersection = apply_intersect(selected_nodes_by_field);
+    changed_nodes = toggle_nodes(selected_nodes_intersection);
+
+    data.ds_nodes.update(changed_nodes)
+}
+
+function apply_intersect(nodes_by_field_dict) {
+    let field_with_shortest_list = null
+    let min_list_len = 100000;
+
+    //if nodes_by_field_dict is empty dict - return empty list
+    if (nodes_by_field_dict === null || Object.keys(nodes_by_field_dict).length === 0) {
+        return [];
+    }
+
+    //if nodes_by_field_dict contains only one field - just return values
+    if (nodes_by_field_dict.length === 1) {
+        return nodes_by_field_dict[0];
+    }
+
+    // find shortest list
+    for (field_name in nodes_by_field_dict) {
+        const curr_list_len = nodes_by_field_dict[field_name].length
+        if (curr_list_len < min_list_len) {
+            field_with_shortest_list = field_name
+            min_list_len = curr_list_len
+        }
+    }
+
+    // we start from the list of all node ids from the shortest list
+    // our goal is to reduce it by compariong with other lists
+    let intersection = nodes_by_field_dict[field_with_shortest_list]
+
+    // pairwise comparison
+    for (field_name in nodes_by_field_dict) {
+        if (field_name !== field_with_shortest_list) {
+            const nodes_list = nodes_by_field_dict[field_name];
+            intersection = intersection.filter((node_id) => nodes_list.includes(node_id))
+        }
+    }
+
+    return intersection;
+}
+
+function hide_nodes_by_edge_attribute_values_union(option_groups_dict) {
+
+    const selectedNodes = [];
+
+    for (field in option_groups_dict) {
+        const dict = option_groups_dict[field]
+        const selected_values = dict["list"]
+        const node_or_edge = dict["type"]
+
+        for (id in selected_values) {
+            let collected_nodes = []
+            const value = selected_values[id];
+
+            if (node_or_edge === "ALL" && value === "ALL") {
+                collected_nodes = Object.keys(data.nodes);
+                data.network.has_hidden_nodes = false;
+            }
+            else if (node_or_edge === "edge") {
+                collected_nodes = get_nodes_by_edge_attribute_value(field, value)
+                data.network.has_hidden_nodes = true;
+            }
+            else if (node_or_edge === "node") {
+                collected_nodes = get_nodes_by_attribute_value(field, value);
+                data.network.has_hidden_nodes = true;
+            }
+
+            for (id in collected_nodes) {
+                node_value = collected_nodes[id]
+                if (selectedNodes.includes(node_value) === false) selectedNodes.push(node_value)
+            }
+        }
+    }
+
+    changed_nodes = toggle_nodes(selectedNodes);
+
+    data.ds_nodes.update(changed_nodes)
+}
+
+function hide_not_selected_nodes(event) {
+    // has selected nodes or already has hidden nodes - in both cases we have work to do
+    if (event.nodes.length > 0 || data.network.has_hidden_nodes === true) {
+        let selectedNodes;
+        
+        // user clicked outside the nodes network - we want to unhide all the nodes
+        if (event.nodes.length == 0 && data.network.has_hidden_nodes === true) {
+            selectedNodes = Object.keys(data.nodes);
+            data.network.has_hidden_nodes = false;
+        }
+        else {
+            const selectedNode = event.nodes[0];
+            selectedNodes = data.network.getConnectedNodes(selectedNode);
+            selectedNodes.push(selectedNode);
+            data.network.has_hidden_nodes = true;
+        }
+
+        changed_nodes = toggle_nodes(selectedNodes);
+
+        //reset_all_filters(data.pyvisjs.edge_filtering_fields)
+        data.ds_nodes.update(changed_nodes)
+    }
+}
+
+function toggle_nodes(selectedNodes) {
+    const changed_nodes = [];
+    
+    for (const key in data.nodes) {
+        const node = data.nodes[key];
+        const node_id = node["id"];
+        // node is not hidden by default
+        if (node.hasOwnProperty("_hidden") === false) node._hidden = false;
+        
+        // nodes to hide
+        if (selectedNodes.includes(node_id) === false)
+        {
+            // not already hidden
+            if (node._hidden === false)
+            {
+                node._hidden = true;
+                if (data.pyvisjs.enable_highlighting === false) node.hidden = true;
+                node._color = node.color;
+                node.color = "rgba(200,200,200,0.5)";
+                changed_nodes.push(node)
+            }
+        }
+        // nodes to unhide (only if already hidden)
+        else if (node._hidden === true) {
+            node._hidden = false;
+            if (data.pyvisjs.enable_highlighting === false) node.hidden = false;
+            node.color = node._color ? node._color : "#97C2FC";
+            node._color = undefined;
+            changed_nodes.push(node)
+        }
+    }
+
+    return changed_nodes
+}
+
+    </script>
+{{ super() }}
+{% endblock %}
+
+{% block site_nav %}
+{% endblock %}

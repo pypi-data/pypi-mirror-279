@@ -1,0 +1,35 @@
+pyvisjs-dev/
+├── pyvisjs/
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── basic.html
+│   │   ├── bs-container.html
+│   │   ├── functions.js
+│   │   └── select-edge-filter.html
+│   ├── __init__.py
+│   ├── _version.py
+│   ├── base_dictable.py
+│   ├── edge.py
+│   ├── network.py
+│   ├── node.py
+│   ├── options.py
+│   └── utils.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_base_dictable.py
+│   ├── test_edge.py
+│   ├── test_network.py
+│   ├── test_node.py
+│   ├── test_options.py
+│   └── test_utils.py
+├── examples/
+│   ├── readme.py
+│   └── bluor.py
+├── .gitignore
+├── .gitlab-ci.yml
+├── CONTRIBUTING.md
+├── folder_structure.txt
+├── LICENSE
+├── pyproject.toml
+├── README.md
+└── requirements.txt
