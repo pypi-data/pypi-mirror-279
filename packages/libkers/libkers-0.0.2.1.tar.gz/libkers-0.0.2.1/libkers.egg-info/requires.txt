@@ -1,0 +1,6 @@
+requests
+python3-nmap
+paramiko
+bs4
+scp
+tqdm
