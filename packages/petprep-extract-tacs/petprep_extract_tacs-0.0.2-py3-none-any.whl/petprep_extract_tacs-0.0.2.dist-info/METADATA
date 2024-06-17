@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: petprep-extract-tacs
+Version: 0.0.2
+Summary: PETPrep Extraction of Time Activity Curves
+Home-page: https://github.com/mnoergaard/petprep_extract_tacs
+Author: Martin Norgaard
+Author-email: martin.noergaard@di.ku.dk
+License-File: LICENSE
+
