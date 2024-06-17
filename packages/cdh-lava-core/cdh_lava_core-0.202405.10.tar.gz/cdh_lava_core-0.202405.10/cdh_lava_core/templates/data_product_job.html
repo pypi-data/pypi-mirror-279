@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Run Job</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin: 20px;
+		}
+
+		.container {
+			display: inline-block;
+			text-align: left;
+		}
+
+		.dropdown {
+			margin-bottom: 20px;
+			position: relative;
+			display: inline-block;
+		}
+
+		.dropdown select {
+			padding: 15px;
+			width: 300px;
+			height: 50px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			appearance: none;
+			background: #fff;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		.dropdown::after {
+			content: '\25BC';
+			/* Unicode character for down arrow */
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			pointer-events: none;
+		}
+
+		.buttons {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		.buttons button {
+			padding: 10px 20px;
+			margin: 5px;
+			border: none;
+			cursor: pointer;
+			font-size: 16px;
+			border-radius: 4px;
+		}
+
+		.run-button {
+			background-color: #28a745;
+			color: white;
+		}
+
+		.back-button {
+			background-color: #6c757d;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Run Job</h1>
+	<p>Click the <b>Go</b> button below to run the selected job</p>
+	<div class="container">
+		<div class="dropdown">
+			<label for="job_name">Select job to run</label>
+			<select id="job_name" onchange="showSelection()">
+				<option>Please select</option>
+				<option value="process_analytics">process_analytics</option>
+				<option value="process_data" selected>process_data</option>
+			</select>
+		</div>
+		<div class="buttons">
+			<button class="run-button">Go</button>
+			<button class="back-button" onclick="goBack()">Back</button>
+		</div>
+		<p id="user-id">User ID: undefined</p>
+	</div>
+	<script>
+		function showSelection() {
+			const select = document.getElementById('job_name');
+			const selectedValue = select.options[select.selectedIndex].value;
+			alert('Selected Job: ' + selectedValue);
+		}
+	</script>
+</body>
+<script>
+
+
+	function goBack() {
+		window.history.back();
+	}
+</script>
+
+</html>

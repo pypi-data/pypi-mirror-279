@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Data visualisation of grants to user-led organizations">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard-style1.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+
+<body>
+
+    <h3>Chart 1: Waffle chart coloured by category</h3>
+    <div class="container-small">
+        <!-- The class is important to add Flexbox styles in CSS, the "id" is important for selecting this bit in D3 -->
+        <div class="chart" id="chart-colours"></div>
+    </div>
+    <div class="container-text">
+        <div class="legend"></div>
+    </div>
+
+    <h3>Chart 2: Waffle chart sized by value</h3>
+    <div class="container-big">
+        <div class="chart" id="chart-size"></div>
+    </div>
+    <div class="container-text">
+        <div class="legend"></div>
+    </div>
+
+    <h3>Chart 3: Waffle charts in a column chart</h3>
+    <div class="container-big">
+        <div class="column-chart" id="chart-orgtype"></div>
+    </div>
+    <div class="container-text">
+        <div class="legend"></div>
+    </div>
+
+    <h3>Chart 4: Waffle charts in a bar chart</h3>
+    <div class="container-big">
+        <div class="row-chart" id="chart-fundingorg"></div>
+    </div>
+    <div class="container-text">
+        <div class="legend"></div>
+    </div>
+
+    <h3>Chart 5: Waffle charts sized by value in a bar chart</h3>
+    <div class="container-big">
+        <div class="row-chart" id="chart-fundingorgsize"></div>
+    </div>
+    <div class="container-text">
+        <div class="legend"></div>
+    </div>
+
+</body>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard-script1.js') }}"></script>
