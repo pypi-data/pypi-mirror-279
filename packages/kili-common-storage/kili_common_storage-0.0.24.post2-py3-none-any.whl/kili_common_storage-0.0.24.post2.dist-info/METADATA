@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: kili-common-storage
+Version: 0.0.24.post2
+Summary: A storage package for kilimall lite
+Home-page: UNKNOWN
+Author: Ken.Hu
+Author-email: ken.hu@kilimall.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: boto3 (==1.23.10)
+Requires-Dist: elastic-apm (==5.10.1)
+Requires-Dist: esdk-obs-python (==3.22.2)
+Requires-Dist: opencv-python (==4.6.0.66)
+
+UNKNOWN
+
+
