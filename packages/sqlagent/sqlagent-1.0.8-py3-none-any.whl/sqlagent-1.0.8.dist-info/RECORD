@@ -1,0 +1,10 @@
+sqlagent/__init__.py,sha256=LG-zblOfMP6hVPKsBg0_Vu7Np90aDwZoQtZkamDOsus,46
+sqlagent/agent.py,sha256=HGEmuFOU0uS9BHtFdECsFUxkJA52jmqKJg_Oalh8aLs,7432
+sqlagent/components/sql_parser_component.py,sha256=0kqNIeV0IMuKa4tjWFoAeLZM6GvEWbigV8BzV5GTJys,874
+sqlagent/ingestions/load_and_persist_object_index.py,sha256=SamZr7Wk0F5ECnAKYd2B7Y01z8BHvEO6K7iFTcrdC5k,2830
+sqlagent/ingestions/load_and_persist_tables_row.py,sha256=p9aW67JKsJcYgnWs2Zvij34YB3rmUpVk5PTu_7Bujwc,2889
+sqlagent-1.0.8.dist-info/LICENSE,sha256=3Tg8b472hrl_7dcn5WwBQ95FAnpp-JZhrph5Sa246w4,1061
+sqlagent-1.0.8.dist-info/METADATA,sha256=6Ehm8uJk2XrKA5ord4zU-XZX3oKLsUL_cddpcArtRHU,2785
+sqlagent-1.0.8.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sqlagent-1.0.8.dist-info/entry_points.txt,sha256=14OdMF7oz2PeWJILQYe9mPGOpbpohdCuel4gSQT3sGg,47
+sqlagent-1.0.8.dist-info/RECORD,,
