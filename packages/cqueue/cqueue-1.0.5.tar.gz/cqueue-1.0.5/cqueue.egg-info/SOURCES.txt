@@ -1,0 +1,8 @@
+README.md
+setup.py
+cqueue/__init__.py
+cqueue.egg-info/PKG-INFO
+cqueue.egg-info/SOURCES.txt
+cqueue.egg-info/dependency_links.txt
+cqueue.egg-info/requires.txt
+cqueue.egg-info/top_level.txt
