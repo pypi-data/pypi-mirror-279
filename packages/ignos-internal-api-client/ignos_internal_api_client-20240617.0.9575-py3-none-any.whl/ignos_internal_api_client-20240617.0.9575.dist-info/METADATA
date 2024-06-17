@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ignos-internal-api-client
+Version: 20240617.0.9575
+Summary: ignos-internal-api-client
+Home-page: 
+Author-email: 
+Keywords: azure,azure sdk
+Requires-Dist: isodate >=0.6.1
+Requires-Dist: azure-core >=1.30.0
+
+    IgnosInternalApi.
+    
