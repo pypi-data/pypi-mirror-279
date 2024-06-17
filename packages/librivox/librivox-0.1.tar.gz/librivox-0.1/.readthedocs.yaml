@@ -1,0 +1,11 @@
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: 3.12
+  commands:
+    - pip install docutils
+    - mkdir --parents $READTHEDOCS_OUTPUT/html
+    - export GIT_COMMIT=$(git rev-parse HEAD)
+    - rst2html --cloak-email-addresses --source-url=https://codeberg.org/Freso/python-librivox/src/commit/$GIT_COMMIT/README.rst --output $READTHEDOCS_OUTPUT/html/index.html README.rst

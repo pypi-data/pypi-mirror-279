@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: © 2024 Frederik “Freso” S. Olesen
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "librivox"
+dynamic = ["version"]  # dynamic version assignment via hatch-vcs
+description = "LibriVox for Python"
+readme = "README.rst"
+license = "AGPL-3.0-or-later"
+license-files = { globs = ["LICENSES/*"] }
+authors = [
+  { name="Frederik “Freso” S. Olesen" },
+]
+requires-python = ">=3.8"
+dependencies = []
+keywords = ["LibriVox"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Sound/Audio",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/Freso/python-librivox"
+Issues = "https://codeberg.org/Freso/python-librivox/issues"
+Repository = "https://codeberg.org/Freso/python-librivox.git"
+
+[tool.hatch.version]
+source = "vcs"

@@ -1,0 +1,40 @@
+Metadata-Version: 2.3
+Name: librivox
+Version: 0.1
+Summary: LibriVox for Python
+Project-URL: Homepage, https://codeberg.org/Freso/python-librivox
+Project-URL: Issues, https://codeberg.org/Freso/python-librivox/issues
+Project-URL: Repository, https://codeberg.org/Freso/python-librivox.git
+Author: Frederik “Freso” S. Olesen
+License-Expression: AGPL-3.0-or-later
+License-File: LICENSES/AGPL-3.0-or-later.md
+License-File: LICENSES/CC0-1.0.txt
+Keywords: LibriVox
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.8
+Description-Content-Type: text/x-rst
+
+.. SPDX-FileCopyrightText: © 2024 Frederik “Freso” S. Olesen
+..
+.. SPDX-License-Identifier: AGPL-3.0-or-later
+
+=====================
+ LibriVox for Python
+=====================
+
+Python library for interfacing with LibriVox_.
+
+.. _LibriVox: https://librivox.org/

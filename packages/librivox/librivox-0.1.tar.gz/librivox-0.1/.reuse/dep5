@@ -1,0 +1,12 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: LibriVox for Python
+Upstream-Contact: Frederik “Freso” S. Olesen <https://freso.dk/>
+Source: https://codeberg.org/Freso/python-librivox
+
+Files: *
+Copyright: 2024 Frederik “Freso” S. Olesen <https://freso.dk/>
+License: AGPL-3.0-or-later
+
+Files: .gitignore
+Copyright: 2022 github/gitignore contributors <https://github.com/github/gitignore>
+License: CC0-1.0
