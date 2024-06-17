@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools==68.1.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpoly"
+version = "0.1.0"
+description = 'Simple Earth polygon "CLI" tool'
+readme = "README.md"
+authors = [
+    {name = "Douglas Keller", email = "dg.kllr.jr@gmail.com"},
+    ]
+license = {file = "LICENSE"}
+dynamic = ['dependencies', 'scripts', 'entry-points']
+
+[project.urls]
+Homepage = "https://github.com/dkllrjr/gpoly"
+Repository = "https://github.com/dkllrjr/gpoly.git"
