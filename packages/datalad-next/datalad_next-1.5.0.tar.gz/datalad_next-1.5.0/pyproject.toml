@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools >= 43.0.0", "wheel"]
+
+[tool.commitizen]
+name = "cz_customize"
+tag_format = "$version"
+version_scheme = "pep440"
+version_provider = "scm"
+changelog_incremental = true
+template = ".changelog.md.j2"
+gpg_sign = true
+
+[tool.commitizen.customize]
+commit_parser = "^((?P<change_type>feat|fix|rf|perf|test|doc|BREAKING CHANGE)(?:\\((?P<scope>[^()\r\n]*)\\)|\\()?(?P<breaking>!)?|\\w+!):\\s(?P<message>.*)?(?P<body>.*)?"
+change_type_order = ["BREAKING CHANGE", "feat", "fix", "rf", "perf", "doc", "test"]
+changelog_pattern = "^((BREAKING[\\-\\ ]CHANGE|\\w+)(\\(.+\\))?!?):"
+bump_pattern = "^((BREAKING[\\-\\ ]CHANGE|\\w+)(\\(.+\\))?!?):"
+schema_pattern = "(?s)(ci|doc|feat|fix|perf|rf|style|test|chore|revert|bump)(\\(\\S+\\))?!?:( [^\\n\\r]+)((\\n\\n.*)|(\\s*))?$"
+
+[tool.commitizen.customize.bump_map]
+"^\\w+!" = "MAJOR"
+"^BREAKING" = "MAJOR"
+"^feat" = "MINOR"
+"^fix" = "PATCH"
+
+[tool.commitizen.customize.change_type_map]
+"BREAKING CHANGE" = "🪓 Breaking changes"
+doc = "📝 Documentation"
+feat = "💫 New features"
+fix = "🐛 Bug Fixes"
+test = "🛡 Tests"
+rf = "🏠 Refactorings"
+perf = "🚀 Performance improvements"
+
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+markers = [
+    # datalad-next custom markers
+    "skip_if_no_network",
+    # (implicitly) used markers from datalad-core, which are only declared
+    # in its tox.ini (inaccessible to pytest here)
+    "fail_slow",
+    "githubci_osx",
+    "githubci_win",
+    "integration",
+    "known_failure",
+    "known_failure_githubci_osx",
+    "known_failure_githubci_win",
+    "known_failure_osx",
+    "known_failure_windows",
+    "network",
+    "osx",
+    "probe_known_failure",
+    "serve_path_via_http",
+    "skip_if_adjusted_branch",
+    "skip_if_no_network",
+    "skip_if_on_windows",
+    "skip_if_root",
+    "skip_known_failure",
+    "skip_nomultiplex_ssh",
+    "skip_ssh",
+    "skip_wo_symlink_capability",
+    "slow",
+    "turtle",
+    "usecase",
+    "windows",
+    "with_config",
+    "with_fake_cookies_db",
+    "with_memory_keyring",
+    "with_sameas_remotes",
+    "with_testrepos",
+    "without_http_proxy",
+]

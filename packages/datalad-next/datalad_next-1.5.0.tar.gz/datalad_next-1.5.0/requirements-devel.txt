@@ -1,0 +1,5 @@
+# requirements for a development environment
+# (also) to get the docs built properly by RTD
+-e .[devel]
+sphinx
+sphinx_rtd_theme
