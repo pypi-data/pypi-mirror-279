@@ -1,0 +1,4 @@
+[console_scripts]
+v1c=vr180_convert.cli:app
+vr180-convert=vr180_convert.cli:app
+
