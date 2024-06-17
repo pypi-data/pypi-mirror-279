@@ -1,0 +1,14 @@
+trytond/modules/authentication_dummy/__init__.py,sha256=GHd0dyn00Xii8MT9P4pnqeo634S6tzBKs2KpFIWOJ8Y,219
+trytond/modules/authentication_dummy/setup.py,sha256=tTJHgpRq5EQna8OY48J9_MD2ddBYWlS7MoV2gc4HNlk,3787
+trytond/modules/authentication_dummy/tryton.cfg,sha256=zqpR6CS3T4I44c3tCRp-Y0vvihMzF67p-OG3mlab3g0,52
+trytond/modules/authentication_dummy/user.py,sha256=yTxMSaTJiEJOkGJzFcKEr21N-QpBu__kb37M69bYrJo,286
+trytond/modules/authentication_dummy/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+trytond/modules/authentication_dummy/tests/test_authentication_dummy.py,sha256=cbJPhBSqwfxAVSdGbKT1wUdLDqyJZQyJobR7FjB7S2Y,688
+trytond/modules/authentication_dummy/tests/factories/__init__.py,sha256=PwE3wY_1MbBL7ESZLwbHL_xLR31yCUx235y05RReI2o,112
+trytond/modules/authentication_dummy/tests/factories/user.py,sha256=r4GYNhDFTHZK-3Z2xZYo-sDJeaHnP04hDUkgpQqGyFw,329
+trytoncalidae_authentication_dummy-7.2.0.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+trytoncalidae_authentication_dummy-7.2.0.dist-info/METADATA,sha256=unPXE5ytGCHzWQk4D4eIhxeUfYQPWgJ4U0kdPyZTv74,2440
+trytoncalidae_authentication_dummy-7.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+trytoncalidae_authentication_dummy-7.2.0.dist-info/entry_points.txt,sha256=Z18CVu_b4KovszikPtADpv8uRWTjvXnPDY8eZdToVXg,78
+trytoncalidae_authentication_dummy-7.2.0.dist-info/top_level.txt,sha256=1UNriCfRfjRjutJbJ_B8i13huVUoV_Otp9RlW3mCfw4,8
+trytoncalidae_authentication_dummy-7.2.0.dist-info/RECORD,,
