@@ -1,0 +1,2 @@
+[console_scripts]
+ui_excel-cli = ui_excel.cli:main
