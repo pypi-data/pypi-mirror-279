@@ -1,0 +1,16 @@
+praisonai/__init__.py,sha256=5SwxMGd4vNUmYedF_HLLQBo4u8zMEWuEfKhHqJrEE1I,59
+praisonai/__main__.py,sha256=MVgsjMThjBexHt4nhd760JCqvP4x0IQcwo8kULOK4FQ,144
+praisonai/agents_generator.py,sha256=blzU5uru7rctRUTlnxEER9NLyu4aAd-oUjE-0xo81ww,12787
+praisonai/auto.py,sha256=evK0RxnR89e-HBTZD0fyJSD_m9k6rNj1Cmdn7dZKZ7A,7378
+praisonai/chainlit_ui.py,sha256=vOI6zPmQBD7OQJBMcmz-yuc1Hrs1QiO9cdgHcEZc8l4,2610
+praisonai/cli.py,sha256=rOQPALmdQBn1kbM5q9lpjRz4yfcWPybBRQ0ExeDCKqU,9961
+praisonai/deploy.py,sha256=suiVGWFIXP8SIMpXr9Mt6O5dtw1KNRaVf8v_t9KojDI,6031
+praisonai/inbuilt_tools/__init__.py,sha256=mUKnbL6Gram9c9f2m8wJwEzURBLmPEOcHzwySBH89YA,74
+praisonai/inbuilt_tools/autogen_tools.py,sha256=m3Ws2444hzgkiEjqw9Y4PFb_LsU9ZDD23C03uNsyeu0,14556
+praisonai/test.py,sha256=DkS_z3w7TmXt9lc57ToYQzdKN2IkWqXEMDBYUmZiGNk,4040
+praisonai/version.py,sha256=ugyuFliEqtAwQmH4sTlc16YXKYbFWDmfyk87fErB8-8,21
+praisonai-0.0.25.dist-info/LICENSE,sha256=kqvFysVlnFxYOu0HxCe2HlmZmJtdmNGOxWRRkT9TsWc,1035
+praisonai-0.0.25.dist-info/METADATA,sha256=9sVtcu3EXcjQmyZTD-T7fX1E_7AcLUR0Hag9lT-SDLE,9407
+praisonai-0.0.25.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+praisonai-0.0.25.dist-info/entry_points.txt,sha256=Qg41eW3A1-dvdV5tF7LqChfYof8Rihk2rN1fiEE3vnk,53
+praisonai-0.0.25.dist-info/RECORD,,
