@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Shimano_PyTools
+Version: 0.0.1
+Home-page: https://github.com/sanseyunlong/Shimano_PyTools.git
+Author: shimano_zyl
+Author-email: sanseyunlong@gmail.com
+License: Apache
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas (>=0.18.0)
+Requires-Dist: requests (>=2.0.0)
+Requires-Dist: toml (>=0.10)
+Requires-Dist: pyzstd (>=0.15)
+Requires-Dist: numpy (>=1.9.2)
+
+Shimano_PyTools工具包用于禧玛诺内部学习工作
+1、ExcelOpera.py
+用于对Excel进行操作，简化步骤和流程，使得对Excel的各种操作效率提高，步骤减少，学习成本降低；
+2、MSSqlDBUtils.py
+用于对SQL Server进行操作，封装常用的功能，提高效率；
+3、PopUp.py
+用于快速创建可视化界面GUI，可大大提高代码实用性和可操作性。
