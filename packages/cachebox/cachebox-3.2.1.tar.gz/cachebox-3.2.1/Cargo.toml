@@ -1,0 +1,35 @@
+[package]
+name = "cachebox"
+version = "3.2.1"
+edition = "2021"
+
+[lib]
+name = "cachebox"
+crate-type = ["cdylib"]
+
+[profile.dev]
+debug = 2
+debug-assertions = true
+lto = "off"
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+debug = false
+incremental = false
+lto = "fat"
+opt-level = 3
+panic = "abort"
+strip = "symbols"
+
+[dependencies]
+hashbrown = { version = "^0.14", default-features = false, features=["inline-more", "raw"]}
+fastrand = "2"
+parking_lot = "^0.12"
+pyo3 = { version = "^0.21", default-features = false, features=["macros", "extension-module"] }
+ahash = { version = "^0.8", default-features = false, features=["std", "compile-time-rng"] }
+cfg-if = "1.0"
+
+[lints.clippy]
+dbg_macro = "warn"
+print_stdout = "warn"
