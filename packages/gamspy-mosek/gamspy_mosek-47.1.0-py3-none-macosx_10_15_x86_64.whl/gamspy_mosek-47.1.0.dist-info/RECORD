@@ -1,0 +1,11 @@
+gamspy_mosek/__init__.py,sha256=_LSB0fD1vcSD0fYhijylijcIHzZeYi5G7OcIerStIP4,438
+gamspy_mosek/libmosek64.10.2.dylib,sha256=95YQoI3Q_Uh4C0UDwauPUagO4jRAfi8ZbAkRMB_Dnlw,32225648
+gamspy_mosek/libmskcclib64.dylib,sha256=wpcDBcZYRFBpz6y4Gyb2gYVmA53uEJYX-BOu3DOrI10,510816
+gamspy_mosek/libtbb.12.8.dylib,sha256=kvaD1OIeT4MapCpx9pO6zdqQl6D47X2P7ulVbbJ9Y5Y,720160
+gamspy_mosek/libtbb.12.dylib,sha256=kvaD1OIeT4MapCpx9pO6zdqQl6D47X2P7ulVbbJ9Y5Y,720160
+gamspy_mosek/optmosek.def,sha256=xQ5zznUe6Wsjay-keKj_xJThobw9BCxZluAS_IihnMA,46389
+gamspy_mosek/version.py,sha256=NjBx1YDvt7kHgdjpMuKsHX4sKq3hzEidJh02rtVYM48,22
+gamspy_mosek-47.1.0.dist-info/METADATA,sha256=m-Sf3FD23d-VVfr56EQUfPplMlcetzyiOB8_ixClV48,58
+gamspy_mosek-47.1.0.dist-info/WHEEL,sha256=yhUY1Ainpu2uKFxAOUdutLzkcdJTiw2UuOgbSWDf9oo,114
+gamspy_mosek-47.1.0.dist-info/top_level.txt,sha256=D_ibqdJHzeK1ovUML42JCi2Bg_SJ_XL0doZuT9jgKzg,13
+gamspy_mosek-47.1.0.dist-info/RECORD,,
