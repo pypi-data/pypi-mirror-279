@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+globalcache/__init__.py
+globalcache/cache.py
+globalcache.egg-info/PKG-INFO
+globalcache.egg-info/SOURCES.txt
+globalcache.egg-info/dependency_links.txt
+globalcache.egg-info/not-zip-safe
+globalcache.egg-info/top_level.txt
+tests/test.py
+tests/test2.py
+tests/test_classes.py
+tests/test_mp.py
