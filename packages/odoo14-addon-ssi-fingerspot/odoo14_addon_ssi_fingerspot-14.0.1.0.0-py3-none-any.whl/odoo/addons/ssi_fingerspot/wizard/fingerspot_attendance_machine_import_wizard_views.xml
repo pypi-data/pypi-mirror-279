@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 OpenSynergy Indonesia
+     Copyright 2024 PT. Simetri Sinergi Indonesia
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+<record id="fingerspot_attendance_machine_import_wizard_form_views" model="ir.ui.view">
+    <field name="name">fingerspot.attendance.machine.import.wizard.form</field>
+    <field name="model">fingerspot.attendance.machine.import.wizard</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+        <form>
+            <group name="group_1" colspan="4" col="2">
+                <field name="is_admin" invisible="1" />
+                <field
+                        name="fingerspot_backend_id"
+                        attrs="{'invisible': [('is_admin', '=', False )]}"
+                    />
+                <field name="machine_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+            </group>
+            <footer>
+                <button
+                        name="action_import"
+                        string="Import"
+                        type="object"
+                        class="oe_highlight"
+                    /> or
+                <button string="Cancel" class="oe_link" special="cancel" />
+            </footer>
+        </form>
+    </field>
+</record>
+
+<record
+        id="fingerspot_attendance_machine_import_wizard_action_xlsx"
+        model="ir.actions.act_window"
+    >
+    <field name="name">Import Attendance</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">fingerspot.attendance.machine.import.wizard</field>
+    <field name="view_mode">form</field>
+    <field
+            name="view_id"
+            ref="fingerspot_attendance_machine_import_wizard_form_views"
+        />
+    <field name="target">new</field>
+</record>
+
+<menuitem
+        id="fingerspot_attendance_machine_import_wizard_menu_xlsx"
+        action="fingerspot_attendance_machine_import_wizard_action_xlsx"
+        parent="fingerspot_menu"
+        sequence="10"
+    />
+</odoo>
