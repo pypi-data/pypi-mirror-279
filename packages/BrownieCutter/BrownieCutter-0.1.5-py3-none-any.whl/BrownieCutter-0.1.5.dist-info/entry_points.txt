@@ -1,0 +1,2 @@
+[console_scripts]
+BrownieCutter = BrownieCutter.__init__:cli_launcher
