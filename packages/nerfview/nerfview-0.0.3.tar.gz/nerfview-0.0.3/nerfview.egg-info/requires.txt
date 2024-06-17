@@ -1,0 +1,7 @@
+viser>=0.2.1
+jaxtyping>=0.2.15
+
+[dev]
+black
+isort
+ipdb

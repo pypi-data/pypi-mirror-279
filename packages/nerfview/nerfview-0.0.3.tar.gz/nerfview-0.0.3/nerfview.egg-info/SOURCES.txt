@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+nerfview/__init__.py
+nerfview/_renderer.py
+nerfview/version.py
+nerfview/viewer.py
+nerfview.egg-info/PKG-INFO
+nerfview.egg-info/SOURCES.txt
+nerfview.egg-info/dependency_links.txt
+nerfview.egg-info/requires.txt
+nerfview.egg-info/top_level.txt
