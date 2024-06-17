@@ -1,0 +1,246 @@
+{% if specter.price_check %}
+<a class="cursor-pointer text-white h-9 px-2 text-lg bg-dark-800 border-2 border-dark-700 rounded-lg text-md" id="price-bar-btn" title="Bitcoin price" type="button" onclick="showPageOverlay('price-popup', { top: '56px', right: '52px' })">
+        <div title="Price settings" class="h-full flex items-center">
+            <span class="leading-none">{{ 1 | altunit}}</span>
+        </div>        
+    </a>
+{% else %}
+    <a class="cursor-pointer" id="price-bar-btn" title="Bitcoin price" type="button" onclick="showPageOverlay('price-popup', { top: '56px', right: '52px' })">
+        <img src="{{ url_for('static', filename='img/no-dollars.svg') }}" data-style="width: 40px;" title="Enable Fiat price display" class="svg-white"/>
+    </a>
+{% endif %}
+
+<div id="price-popup" class="hidden bg-dark-800 p-4 w-96">
+    <form id="price-form">
+    <input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+
+    <div class="flex justify-between mb-2">
+        <h3 class="mb-0">{{ _("Price Settings") }}</h3>
+        <p class="m-0 cursor-pointer" onclick="hidePageOverlay()" class="cursor-pointer">Close</p>
+    </div>
+
+    {% if specter.price_check %}
+        <div>
+            <p>{{ _("Set a custom rate or choose an automated price provider.") }}</p>
+
+            <nav class="text-center text-dark-200 border-b border-dark-600">
+                <ul class="flex flex-wrap -mb-px">
+                    <li aria-checked="{% if not specter.price_provider %}true{% endif %}" class="mr-2 py-2 border-b-2 border-transparent aria-checked:text-link aria-checked:border-b-2 aria-checked:border-link" id="manual_menu_item">
+                        <button type="button" id="manual_price_btn" class="text-lg inline-block py-1 px-3 hover:text-white rounded-lg hover:bg-dark-700" onclick="setPriceView('manual')">{{ _("Manual") }}</button>
+                    </li>
+                    <li aria-checked="{% if specter.price_provider %}true{% endif %}" class="mr-2 py-2 border-b-2 border-transparent aria-checked:text-link aria-checked:border-b-2 aria-checked:border-link" id="automatic_menu_item">
+                        <button type="button" id="automatic_price_btn" class="text-lg inline-block py-1 px-3 hover:text-white rounded-lg hover:bg-dark-700" onclick="setPriceView('automatic')">{{ _("Automatic") }}</button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div id="manual_price" class="space-y-3 mt-3">
+                <div class="floating-wrapper">
+                    <input class="floating-input peer" type="number" min="0" step="0.01" name="alt_rate" value="{{ specter.alt_rate }}" placeholder="Set the price of bitcoin in your chosen currency">
+                    <label class="floating-label">Price</label>
+                </div>
+                <div class="floating-wrapper">
+                    <input class="floating-input peer" type="text" name="alt_symbol" value="{{ specter.alt_symbol }}" placeholder="eg. $/€/£">
+                    <label class="floating-label">Symbol</label>
+                </div>
+            </div>
+
+            <div id="automatic_price" class="hidden mt-3">
+                <h3>{{ _("Select price provider") }}</h3>
+                <div class="space-y-3">
+                    <fieldset class="floating-wrapper"> 
+                        <select class="floating-input peer" name="price_provider_currency" id="price_provider_currency" onchange="filterProviderOptions()">
+                            <optgroup label="Fiat currencies" id="fiat_currency">
+                                <option value="usd" selected>$ (USD)</option>
+                                <option value="eur" {% if specter.price_provider and specter.price_provider.endswith('eur') %}selected{% endif %}>€ (EUR)</option>
+                                <option value="gbp" {% if specter.price_provider and specter.price_provider.endswith('gbp') %}selected{% endif %}>£ (GBP)</option>
+                                <option value="chf" {% if specter.price_provider and specter.price_provider.endswith('chf') %}selected{% endif %}>Fr. (CHF)</option>
+                                <option value="jpy" {% if specter.price_provider and specter.price_provider.endswith('jpy') %}selected{% endif %}>¥ (JPY)</option>
+                                <option value="aud" {% if specter.price_provider and specter.price_provider.endswith('aud') %}selected{% endif %}>$ (AUD)</option>
+                                <option value="cad" {% if specter.price_provider and specter.price_provider.endswith('cad') %}selected{% endif %}>$ (CAD)</option>
+                                <option value="nzd" {% if specter.price_provider and specter.price_provider.endswith('nzd') %}selected{% endif %}>$ (NZD)</option>
+                                <option value="hkd" {% if specter.price_provider and specter.price_provider.endswith('hkd') %}selected{% endif %}>$ (HKD)</option>
+                                <option value="rub" {% if specter.price_provider and specter.price_provider.endswith('rub') %}selected{% endif %}>₽ (RUB)</option>
+                                <option value="ils" {% if specter.price_provider and specter.price_provider.endswith('ils') %}selected{% endif %}>₪ (NIS)</option>
+                                <option value="jod" {% if specter.price_provider and specter.price_provider.endswith('jod') %}selected{% endif %}>د.ا (JOD)</option>
+                                <option value="twd" {% if specter.price_provider and specter.price_provider.endswith('twd') %}selected{% endif %}>$ (TWD)</option>
+                                <option value="brl" {% if specter.price_provider and specter.price_provider.endswith('brl') %}selected{% endif %}>BRL (BRL)</option>
+                            </optgroup>
+                            <optgroup label="Precious metals" id="metals_currency">
+                                <option class="metals-price-provider" value="xau" {% if specter.price_provider and specter.price_provider.endswith('xau') %}selected{% endif %}>Gold</option>
+                                <option class="metals-price-provider" value="xag" {% if specter.price_provider and specter.price_provider.endswith('xag') %}selected{% endif %}>Silver</option>
+                                <option class="metals-price-provider" value="xpt" {% if specter.price_provider and specter.price_provider.endswith('xpt') %}selected{% endif %}>Platinum</option>
+                                <option class="metals-price-provider" value="xpd" {% if specter.price_provider and specter.price_provider.endswith('xpd') %}selected{% endif %}>Palladium</option>
+                            </optgroup>
+                        </select>
+                        <label class="floating-label">Currency</label>
+                    </fieldset>
+                    <fieldset class="floating-wrapper"> 
+                        <select class="floating-input peer" name="price_provider" id="price_provider" onchange="providerChanged()">
+                            <option data-currency-type="usd" value="bitstamp_usd" {% if specter.price_provider == 'bitstamp' %}selected{% endif %}>Bitstamp USD</option>
+                            <option data-currency-type="usd" value="coindesk_usd" {% if specter.price_provider == 'coindesk' %}selected{% endif %}>Coindesk USD</option>
+                            <option data-currency-type="usd" value="spotbit_bitstamp_usd" {% if specter.price_provider == 'spotbit_bitstamp_usd' %}selected{% endif %}>Spotbit Bitstamp (Tor) USD</option>
+                            <option data-currency-type="usd" value="spotbit_gemini_usd" {% if specter.price_provider == 'spotbit_gemini_usd' %}selected{% endif %}>Spotbit Gemini (Tor) USD</option>
+                            <option data-currency-type="eur" value="bitstamp_eur" {% if specter.price_provider == 'bitstamp_eur' %}selected{% endif %}>Bitstamp EUR</option>
+                            <option data-currency-type="eur" value="coindesk_eur" {% if specter.price_provider == 'coindesk_eur' %}selected{% endif %}>Coindesk EUR</option>
+                            <option data-currency-type="eur" value="spotbit_bitstamp_eur" {% if specter.price_provider == 'spotbit_bitstamp_eur' %}selected{% endif %}>Spotbit Bitstamp (Tor) EUR</option>
+                            <option data-currency-type="eur" value="spotbit_gemini_eur" {% if specter.price_provider == 'spotbit_gemini_eur' %}selected{% endif %}>Spotbit Gemini (Tor) EUR</option>
+                            <option data-currency-type="gbp" value="bitstamp_gbp" {% if specter.price_provider == 'bitstamp_gbp' %}selected{% endif %}>Bitstamp GBP</option>
+                            <option data-currency-type="gbp" value="coindesk_gbp" {% if specter.price_provider == 'coindesk_gbp' %}selected{% endif %}>Coindesk GBP</option>
+                            <option data-currency-type="gbp" value="spotbit_bitstamp_gbp" {% if specter.price_provider == 'spotbit_bitstamp_gbp' %}selected{% endif %}>Spotbit Bitstamp (Tor) GBP</option>
+                            <option data-currency-type="gbp" value="spotbit_gemini_gbp" {% if specter.price_provider == 'spotbit_gemini_gbp' %}selected{% endif %}>Spotbit Gemini (Tor) GBP</option>
+                            <option data-currency-type="chf" value="coindesk_chf" {% if specter.price_provider == 'coindesk_chf' %}selected{% endif %}>Coindesk CHF</option>
+                            <option data-currency-type="jpy" value="coindesk_jpy" {% if specter.price_provider == 'coindesk_jpy' %}selected{% endif %}>Coindesk JPY</option>
+                            <option data-currency-type="aud" value="coindesk_aud" {% if specter.price_provider == 'coindesk_aud' %}selected{% endif %}>Coindesk AUD</option>
+                            <option data-currency-type="cad" value="coindesk_cad" {% if specter.price_provider == 'coindesk_cad' %}selected{% endif %}>Coindesk CAD</option>
+                            <option data-currency-type="nzd" value="coindesk_nzd" {% if specter.price_provider == 'coindesk_nzd' %}selected{% endif %}>Coindesk NZD</option>
+                            <option data-currency-type="hkd" value="coindesk_hkd" {% if specter.price_provider == 'coindesk_hkd' %}selected{% endif %}>Coindesk HKD</option>
+                            <option data-currency-type="rub" value="coindesk_rub" {% if specter.price_provider == 'coindesk_rub' %}selected{% endif %}>Coindesk RUB</option>
+                            <option data-currency-type="ils" value="coindesk_ils" {% if specter.price_provider == 'coindesk_ils' %}selected{% endif %}>Coindesk NIS</option>
+                            <option data-currency-type="jod" value="coindesk_jod" {% if specter.price_provider == 'coindesk_jod' %}selected{% endif %}>Coindesk JOD</option>
+                            <option data-currency-type="twd" value="coindesk_twd" {% if specter.price_provider == 'coindesk_twd' %}selected{% endif %}>Coindesk TWD</option>
+                            <option data-currency-type="brl" value="coindesk_brl" {% if specter.price_provider == 'coindesk_brl' %}selected{% endif %}>Coindesk BRL</option>
+                            <option data-currency-type="xau" value="coindesk_xau" {% if specter.price_provider == 'coindesk_xau' %}selected{% endif %}>Coindesk Gold</option>
+                            <option data-currency-type="xag" value="coindesk_xag" {% if specter.price_provider == 'coindesk_xag' %}selected{% endif %}>Coindesk Silver</option>
+                        </select>
+                        <label class="floating-label">Provider</label>
+                    </fieldset>
+                    <fieldset class="floating-wrapper" id="weight_unit_container"> 
+                        <select class="floating-input" name="weight_unit" id="weight_unit">
+                            <option value="oz" {% if specter.weight_unit == 'oz' %}selected{% endif %}>Oz.</option>
+                            <option value="gram" {% if specter.weight_unit == 'gram' %}selected{% endif %}>Gram</option>
+                            <option value="kg" {% if specter.weight_unit == 'kg' %}selected{% endif %}>KG</option>
+                        </select>
+                        <label class="floating-label">Weight Unit</label>
+                    </fieldset>
+                    <p class="">{{ _("Price will automatically be fetched from the selected provider every 10 minutes.") }}</p>
+                    <p class="hidden" id="providerwarning">{{ _("Note: This provider does not support historical data.") }}</p>
+                </div>
+            </div>
+            <input type="hidden" id="price_type" name="price_type" value="{{ 'automatic' if specter.price_provider else 'manual' }}">
+            <button type="button" class="button w-full bg-accent text-white mt-3 mb-3" onclick="savePriceData(true)">{{ _("Save") }}</button>
+        </div>
+        <button type="button" class="button w-full mb-0" onclick="togglePriceCheck(false)">{{ _("Disable showing price") }}</button>
+    {% else %}
+        <p>{{ _("You can enable showing price feature to see the price information of your Bitcoin amounts across Specter.")}}</p>
+        <button type="button" class="button w-full mb-0 mt-3" onclick="togglePriceCheck(true)">{{ _("Enable showing price") }}</button>
+    {% endif %}
+    </form>
+
+    <script>
+        async function togglePriceCheck(showPrice) {
+            if (showPrice) {
+                showNotification(`{{ _("Turning on show price mode...") }}`, 0)
+            } else {
+                showNotification(`{{ _("Turning off show price mode...") }}`, 0)
+            }
+            let url = `{{ url_for('price_endpoint.toggle') }}`;
+            var formData = new FormData(document.getElementById('price-form'));
+            const result = await send_request(url, 'POST', "{{ csrf_token() }}", formData);
+            if (result) {
+                location.reload();
+                return
+            }
+        }
+
+        async function savePriceData(reload) {
+            showNotification(`{{ _("Updating price data...") }}`, 0)
+            let url = `{{ url_for('price_endpoint.update') }}`;
+            var formData = new FormData(document.getElementById('price-form'));
+            try {
+                const response = await fetch(
+                    url,
+                    {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }
+                );
+                if(response.status != 200){
+                    showError(await response.text());
+                    return;
+                }
+                const jsonResponse = await response.json();
+                if (jsonResponse.success) {
+                    location.reload();
+                    return
+                };
+                showError(`{{ _("Failed to fetch price data from selected provider, please try again or select another provider.") }}`)
+            } catch(e) {
+                console.log("Caught error: ", e);
+                showError(e);
+            }
+        }
+
+        function setPriceView(view) {
+            var manualPrice = document.getElementById("manual_price");
+            var automaticPrice = document.getElementById("automatic_price");
+
+            var manualPriceItem = document.getElementById("manual_menu_item");
+            var automaticPriceItem = document.getElementById("automatic_menu_item");
+
+            var priceType = document.getElementById("price_type");
+            if (view == 'manual') {
+                manualPrice.style.display = 'block';
+                automaticPrice.style.display = 'none';
+
+                manualPriceItem.setAttribute('aria-checked', true);
+                automaticPriceItem.setAttribute('aria-checked', false);
+
+                priceType.value = 'manual';
+            } else {
+                manualPrice.style.display = 'none';
+                automaticPrice.style.display = 'block';
+
+                manualPriceItem.setAttribute('aria-checked', false);
+                automaticPriceItem.setAttribute('aria-checked', true);
+
+                priceType.value = 'automatic';
+            }
+        }
+
+        function filterProviderOptions() {
+            let showUnit = false;
+            for (let metal of document.getElementById('metals_currency').children) {
+                if (metal.selected) {
+                    showUnit = true;
+                }
+            }
+            if (showUnit) {
+                document.getElementById('weight_unit_container').classList.remove('hidden');
+            } else {
+                document.getElementById('weight_unit_container').classList.add('hidden');
+            }
+            for (let provider of document.getElementById('price_provider').options) {
+                if (provider.getAttribute('data-currency-type') == document.getElementById('price_provider_currency').value) {
+                    provider.disabled = false;
+                } else {
+                    provider.disabled = true;
+                    provider.selected = false;
+                }
+            }
+        }
+
+        function providerChanged() {
+            let provider = document.getElementById('price_provider').value
+            // For EUR etc. provider looks like this: coindesk_eur
+            if (provider.startsWith("coindesk")) {
+                document.getElementById('providerwarning').classList.remove("hidden")
+            } else {
+                document.getElementById('providerwarning').classList.add("hidden")
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function(){
+            {% if specter.price_check %}
+                {% if specter.price_provider %}
+                    setPriceView('automatic');
+                {% endif %}
+                filterProviderOptions();
+                providerChanged()
+            {% endif %}
+        });
+    </script>
+</div>

@@ -1,0 +1,116 @@
+<div class="hidden z-30 absolute w-screen h-screen" id="page_overlay">
+    <div class="w-screen overflow-auto h-screen bg-black/40 flex flex-col relative justify-center items-center py-5" id="page_overlay_popup">
+        <div class="box-shadow-xl transition-all absolute max-w-[700px] overflow-hidden rounded-xl text-white" id="page_overlay_popup_content"></div>
+    </div>
+</div>
+
+<!-- <div class="mt-2 text-white btn align-self-end"> -->
+<!--     <a href="#" id="page_overlay_popup_cancel_button" onclick="cancelOverlay()">{{ _("Cancel") }}</a> -->
+<!-- </div> -->
+
+<div class="hidden z-50 absolute w-screen h-screen" id="pacman">
+    <div class="w-screen overflow-auto h-screen bg-black/40 flex flex-col relative justify-center items-center py-5">
+        <div class="flex space-x-2 items-center px-4 py-2 box-shadow-xl transition-all absolute max-w-[700px] overflow-hidden rounded-xl bg-dark-800 text-white">
+            <img class="rounded-full bg-dark-700 w-4 h-4 animate-spin" src="{{ url_for('static', filename='img/refresh.svg') }}"/>
+            <span>Processing...</span>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="loader pghidden absolute self-center m-auto top-[45%] z-100" id="pacman"> -->
+<!--     <!-1- <img src="{{ url_for('static', filename='img/loader.gif') }}"/> -1-> -->
+<!--     <div class="">{{ _("Loading... It may take a while...") }}</div> -->
+<!-- </div> -->
+
+<script>
+    function showPacman(){
+        document.getElementById('pacman').style.display='flex';
+    }
+
+    function showPageOverlay(container_id, position, location) {
+        // Transfer the content to the popup overlay div
+        document.getElementById("page_overlay_popup_content").appendChild(document.getElementById(container_id));
+
+        // Show the whole-screen dimming layer
+        var overlay = document.getElementById("page_overlay");
+        overlay.style.display = "flex";
+
+        // Position and show the popup
+        var overlayPopup = document.getElementById("page_overlay_popup");
+        overlayPopup.style.display = "flex";
+
+        if (position) {
+            var contentContainer = document.getElementById("page_overlay_popup_content");
+            contentContainer.style.left = position.left || "auto";
+            contentContainer.style.top = position.top || "auto";
+            contentContainer.style.right = position.right || "auto";
+            contentContainer.style.bottom = position.bottom || "auto";
+        }
+
+        if (location) {
+            overlayPopup.style.justifyContent = location
+        }
+
+        // Show the content
+        var pageContent = document.getElementById("page_overlay_popup_content").children[0];
+        pageContent.style.display = "block";
+
+        window.scrollTo(0, 0);
+    }
+
+    function hidePageOverlay() {
+        if (overlayIsActive()) {
+            // Transfer the content back into a holder div
+            var holder = document.createElement("div");
+            holder.style.display = "none";
+            document.body.appendChild(holder);
+            holder.appendChild(document.getElementById(document.getElementById("page_overlay_popup_content").children[0].id));
+
+            var overlay = document.getElementById("page_overlay");
+            overlay.style.display = "none"; 
+
+            var overlayPopup = document.getElementById("page_overlay_popup");
+            overlayPopup.style.display = "none";
+
+            var contentContainer = document.getElementById("page_overlay_popup_content");
+            contentContainer.style.left = "auto";
+            contentContainer.style.top = "auto";
+            contentContainer.style.right = "auto";
+            contentContainer.style.bottom = "auto";
+            contentContainer.style.justifySelf = "center";
+
+            // A file using `overlay.html` should implement `onCancelOverlay` JS function to handle popup cancel logic
+            onCancelOverlay();
+        }
+    }
+
+    function overlayIsActive(){
+        let el = document.getElementById("page_overlay");
+        return el.style.display != "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+        // Handler when the DOM is fully loaded
+
+        document.addEventListener("keyup", function(e) {
+            // Dismiss popup with ESC button
+            if (e.keyCode == 27) {
+                var elem = document.getElementById("page_overlay");
+                // If it's visible... (using jQuery's visibility test)
+                if (!!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length )) {
+                    cancelOverlay();
+                }
+            }
+        });
+
+        // Clicking outside of the popup cancels the overlay
+        document.getElementById("page_overlay_popup").addEventListener("click", function(e) {
+            if(e.target !== e.currentTarget) return;
+            cancelOverlay();
+        });
+    });
+
+    function cancelOverlay() {
+        hidePageOverlay();
+    }
+</script>

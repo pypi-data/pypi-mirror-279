@@ -1,0 +1,20 @@
+{% extends "base.jinja" %}
+
+{% block main %}
+    <h1 style="font-size: 2em;">{{ _("Associate Address with Service") }}</h1>
+    <div class="flex">
+        <form method="post">
+            <input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+            <p class="mt-8 mb-4">Address: {{addr_obj.address}}</p>
+            <div id="associate-wrapper" class="floating-wrapper">
+                <select id="associate-with-service" name="service_id" class="floating-input peer">
+                    {% for service in services %}
+                        <option value="{{ service.id }}">{{ service.name }}</option>
+                    {% endfor %}
+                </select>
+                <label for="associate-with-service" class="floating-label">Associated Service</label>
+            </div>
+            <button type="submit" class="button bg-accent mt-4 cursor-pointer">Save</button>
+        </form>
+    </div>
+{% endblock %}

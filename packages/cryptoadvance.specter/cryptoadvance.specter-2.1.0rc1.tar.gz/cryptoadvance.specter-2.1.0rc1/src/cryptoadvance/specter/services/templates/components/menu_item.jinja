@@ -1,0 +1,19 @@
+{# 
+    menu_item - navigation bar menu item.
+    Parameters:
+    - tab: The tab name.
+    - title: The tab title.
+    - active_menuitem: Current active tab name.
+    - optional: is the tab supported for mobile.
+    - isLeft: Is the item at the left edge (first item) of the navigation bar?
+    - isRight: Is the item at the right edge (last item) of the navigation bar?
+ #}
+ {% macro menu_item(service_id, tab, title, active_menuitem, isLeft=false, isRight=false) -%}
+    <li class="mr-2 py-2 border-b-2 border-transparent {% if active_menuitem == tab %}text-link border-b-2 border-link active{% endif %}">
+        <a 
+            href="{{ url_for(service_id+'_endpoint.' ~ tab)}}"
+            class="text-lg inline-block py-1 px-3 hover:text-white rounded-lg hover:bg-dark-700">
+            {{ title }}
+        </a>
+    </li>
+{%- endmacro %}

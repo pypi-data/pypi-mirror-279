@@ -1,0 +1,63 @@
+{% extends "base.jinja" %}
+
+{% block main %}
+    <h1>{{ _("Select your signing device") }}</h1>
+
+    <p>{{ _("Select your device from the list below to get started.") }}</p>
+
+    <div class="mt-10" id="device_setup_wizard">
+        <div id="device-type-container">
+            <input class="w-full" id="device-type-searchbar" type="text" placeholder='{{ _("Filter devices...") }}' oninput="filterDeviceTypes(this.value)">
+
+            <div class="grid gap-5 grid-cols-4 my-5" id="devices_list">
+                {% for cls in specter.device_manager.supported_devices_for_chain(specter) %}
+                    {% if not cls.hot_wallet or specter.rpc %}                     
+                        <a class="" id="label_device_type_{{ cls.name | replace(' ', '') }}" href="{{ url_for('devices_endpoint.new_device_keys', device_type=cls.device_type) if not cls.hot_wallet else url_for('devices_endpoint.new_device_mnemonic', device_type=cls.device_type) }}">
+                            <div class="selection" id="{{ cls.device_type }}_device_card">
+                                <p class="">&nbsp;</p>
+                                <img class="" src="{{ url_for(cls.blueprint(), filename=cls.icon) }}">
+                                <p class="">{{ cls.name }}</p>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <a class="selection-button" href="{{ url_for('devices_endpoint.new_device_manual') }}">{{ _("Manual configuration") }}</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        function filterDeviceTypes(text) {
+            let devicesLabels = []
+            {% for cls in specter.device_manager.supported_devices_for_chain(specter) %}
+                {% if not cls.hot_wallet or specter.rpc %}
+
+                    devicesLabels.push('label_device_type_{{ cls.name | replace(' ', '') }}')
+                {% endif %}
+            {% endfor %}
+            if (text) {
+                for (let deviceLabel of devicesLabels) {
+                    if (deviceLabel.split('label_device_type_')[1].toLowerCase().includes(text.toLowerCase())) {                                        
+                        console.log(deviceLabel)
+                        console.log(document.getElementById(deviceLabel))
+                        console.log(document.getElementById(deviceLabel).style.display)
+                        document.getElementById(deviceLabel).style.display = 'block';
+                    } else {
+                        console.log("non")
+                        console.log(deviceLabel)
+                        console.log(document.getElementById(deviceLabel))
+                        console.log(document.getElementById(deviceLabel).style.display)
+                        document.getElementById(deviceLabel).style.display = 'none';
+                    }
+                }
+            } else {
+                for (let deviceLabel of devicesLabels) {
+                    document.getElementById(deviceLabel).style.display = 'block';
+                }
+            }
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{# 
+    editable_title - Make #title element editable.
+    Parameters:
+    - title: Page title
+ #}
+{% macro editable_title(title) -%}
+    <form action="./" method="POST">
+        <input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input class="mb-2" pattern="^[^']+" title="Do not use single quotes" type="text" autocomplete="off" spellcheck="false" id="newtitle" name="newtitle" value="{{ title }}" style="display: none;" />
+        <div class="flex">
+            <button type="submit" class="btn" id="save" name="action" value="rename" style="display: none;">{{ _("Update") }}</button>
+            <button type="button" class="btn" id="cancel" onclick="toggleEdit()" style="display: none;">{{ _("Cancel") }}</button>
+            <button type="button" class="btn" id="edit" onclick="toggleEdit()">{{ _("Edit Name") }}</button>
+        </div>
+    </form>
+
+    <script>
+	    function toggleEdit() {
+            var title = document.getElementById("title");
+            var newtitle = document.getElementById("newtitle");
+            var edit = document.getElementById("edit");
+            var cancel = document.getElementById("cancel");
+            var save = document.getElementById("save");
+
+            if (edit.style.display === 'none'){
+                edit.style.display = 'block';
+                cancel.style.display = 'none';
+                save.style.display = 'none';
+                title.style.display = 'block';
+                newtitle.style.display = 'none';
+            } else {
+                newtitle.style.fontSize = '1.5em';
+                newtitle.value = '{{ title.replace("'","\\'") }}';
+                newtitle.style.display = 'block';
+                edit.style.display = 'none';
+                cancel.style.display = 'inline-block';
+                save.style.display = 'inline-block';
+                title.style.display = 'none';
+            }
+        }
+    </script>
+{%- endmacro %}

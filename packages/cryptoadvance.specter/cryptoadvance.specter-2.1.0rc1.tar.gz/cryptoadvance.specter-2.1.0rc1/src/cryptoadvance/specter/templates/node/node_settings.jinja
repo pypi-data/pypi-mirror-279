@@ -1,0 +1,249 @@
+{% extends "base.jinja" %}
+
+{% block main %}
+	{% include "includes/qr-scanner.html" %}
+	{% include "includes/text-explainer.html" %}
+
+	{% if node_alias %}
+		<h1 id="connection-name">{{ node.name }}</h1>
+		<form id="name-form" action="./" method="POST">
+			<input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+			<input class="mb-2" type="text" autocomplete="off" spellcheck="false" id="new-name" name="new-name" value="{{ node.name }}" style="display: none;" required/>
+			<div class="flex">
+				<button type="submit" class="btn" id="update" name="action" style="display: none;">{{ _("Update") }}</button>
+				<button type="button" class="btn" id="cancel" onclick="toggleEdit()" style="display: none;">{{ _("Cancel") }}</button>
+				<button type="button" class="btn" id="edit" onclick="toggleEdit()">{{ _("Edit name") }}</button>
+			</div>
+		</form>
+	{% else %}
+		<h1 id="title">{{ _("Configure new connection") }}</h1>
+	{% endif %}
+
+	<form action="?" method="POST">
+		{% if not node_alias %}
+			<section>
+				<h3>{{ _("Information") }} </h3>
+				<div class="floating-wrapper">
+					<input class="floating-input peer" placeholder=" " type="text" id="name" name="name" value="{{ node.name }}" required>
+					<label class="floating-label" for="name">{{ _("Name") }}</label>
+				</div>
+			</section>
+		{% endif %}
+
+		<input type="hidden" class="csrf-token" name="csrf_token" value="{{ csrf_token() }}"/>
+
+		<div class="card">
+			<section>
+				<div id="rpc_settings">
+					<div class="flex justify-between items-center">
+						<h3>{{ _("Configuration") }} </h3>
+						<!-- <qr-scanner id="scan_rpc" class="mb-2 rounded-lg hover:bg-dark-700 pl-1 pr-3"> -->
+						<!-- 	<a slot="button" href="#" class="flex items-center"> -->
+						<!-- 		<img class="w-7 h-7" src="{{ url_for('static', filename='img/qr-code.svg') }}"> -->
+						<!-- 		{{ _("Connect with QR") }} -->
+						<!-- 	</a> -->
+						<!-- </qr-scanner> -->
+					</div>
+
+					<div class="space-y-3">
+						<div class="floating-wrapper">
+							<input class="floating-input peer" placeholder=" " type="text" id="username" name="username" value="{{ node.user }}">
+							<label class="floating-label" for="username">Username</label>
+						</div>
+
+						<div class="floating-wrapper">
+							<input class="floating-input peer" placeholder=" " type="password" id="password" name="password" value="{{ node.password }}">
+							<label class="floating-label" for="password">Password</label>
+						</div>
+
+						<div class="grid grid-cols-2 gap-3 mb-3">
+							<div class="floating-wrapper">
+								<input class="floating-input peer" type="text" id="host" name="host" type="text" {% if node.host %} value="{{ node.protocol }}://{{ node.host }}" {% else %} placeholder=" " {% endif %}>
+								<label class="floating-label" for="host">Host</label>
+							</div>
+							<div class="floating-wrapper">
+								<input class="floating-input peer" placeholder=" " type="text" id="port" name="port" type="text" value="{{ node.port }}">
+								<label class="floating-label" for="port">Port</label>
+								<tool-tip class="floating-info" width="150px">
+									<span slot="paragraph">
+										<p>Bitcoin</p>
+										{{ _("Mainnet: ")}} 8332 <br>
+										{{ _("Testnet: ")}} 18332 <br>
+										{{ _("Regtest: ")}} 18443 <br>
+										{{ _("Signet: ")}} 38332 <br>
+										<p>Liquid</p>
+										{{ _("Mainnet: ")}} 7041 <br>
+										{{ _("Testnet: ")}} 18891 <br>
+										{{ _("Regtest: ") }}  18884 <br>
+									</span>
+								</tool-tip>
+							</div>
+						</div>
+						{% if not node_alias %}
+							<div class="mt-3">
+								<text-explainer>
+									<span slot="title" class="text-lg">{{ _("Need help with the setup?") }} </span>
+									<div class="text-dark-100 max-w-prose" slot="content">
+										{% if datadir_accessable %}
+											You are running Bitcoin Core and Specter on the same machine,
+											{% if bitcoin_conf_values %}
+												and you have created a bitcoin.conf file from which Specter automatically imports the necessary credentials. If you can't connect, perhaps sth. is missing. <br>
+											{% else %}
+												but you haven't created a bitcoin.conf file yet or it is empty. Go to <code class="text-sm">{{ node.datadir }}</code> and create it. <br>
+											{% endif %}
+												 See below for the necessary lines in this file.
+										{% else %}
+											You are not running Bitcoin Core on the same machine as Specter.
+											Make sure you have created a bitcoin.conf file as below on the machine you are runnnig Bitcoin Core.
+											You need to enter the RPC credentials from this file here. You also need to enter the IP (within your LAN e.g. 172.16.0.20) or onion address (if you use Tor) of the remote machine in the host field. <br>
+										{% endif %}
+										<div class="my-1 max-w-prose text-white">Bitcoin.conf sample file</div>
+										<code class="text-sm">
+											server=1 <br>
+											rpcuser=YOURUSERNAME <br>
+											rpcpassword=YOURPASSWORD <br>
+											disablewallet=0 <br>
+										</code>
+									</div>
+								</text-explainer>
+							</div>
+						{% endif %}
+					</div>
+				</div>
+			</section>
+
+			<div class="lg:flex gap-2 mt-10 justify-end">
+				{% if node_alias %}
+					<button type="submit" name="action" value="delete" class="button">{{ _("Delete") }}</button>
+				{% endif %}
+				<button id="connect-btn" type="submit" class="button bg-accent text-white" name="action" value="connect" data-cy="connect-btn">
+					<span id="connect-text">{{ _("Connect") }}</span>
+                	<img class="hidden rounded-full w-4 h-4 animate-spin" id="connecting-indicator" src="{{ url_for('static', filename='img/refresh.svg') }}"/>
+				</button>
+			</div>
+
+			{% if failed_test %}
+				{% macro tick_or_cross(my_boolean) %}
+					<button disabled> 
+						{% if my_boolean %}
+							<div class="mr-2" data-cy="node-test-passed">&#x2714;</div> 
+						{% else %} 
+							<div class="mr-2" data-cy="node-test-failed">&#x274C;</div>  
+						{% endif %}
+					</button>
+				{% endmacro %}
+				{% if not node_alias %} 
+					<h3 class="mt-8">{{ _("Why did the connection attempt fail?") }}</h3>
+				{% else %}
+					<h3 class="mt-8">{{ _("What went wrong with the update of the connection details?") }}</h3>
+				{% endif %}
+				<div class="grid grid-cols-4 grid-rows-1">
+					{% if failed_test == 'connectable' %}
+						<div>{{ tick_or_cross(test['tests']['connectable']) }} Connectable</div>
+						<div class="col-span-4">
+							<p>
+								{{ _("No connection with your Bitcoin Core node could be established. There are a lot of potential issues preventing the connection. Start with double-checking the host and port. Make sure you can reach the host and that Bitcoin Core is listening on the port you have specified.") }} 
+								{{ _('For more hints, have a look at this') }} <a href="https://github.com/cryptoadvance/specter-desktop/blob/master/docs/connect-your-node.md" target="_blank">{{ _('article.') }}</a>
+							</p>
+						</div>
+					{% endif %}
+					{% if failed_test == 'credentials' %}
+						<div>{{ tick_or_cross(test['tests']['credentials']) }} Credentials</div>
+						<div class="col-span-4">
+							<p>
+								{{ _("The RPC authentication with your Bitcoin Core node failed. Double-check that the username and password you have specified in the bitcoin.conf-file are correct.") }}
+								{{ _('For more hints, see') }} <a data-style="color:grey" href="https://github.com/cryptoadvance/specter-desktop/blob/master/docs/connect-your-node.md" target="_blank">{{ _('article.') }}</a>
+							</p>
+						</div>
+					{% endif %}
+					{% if failed_test == 'recent_version' %}
+						<div>{{ tick_or_cross(test['tests']['recent_version']) }} Bitcoin Core version</div>
+						<div class="col-span-4">
+							<p>
+								{{ _("The Bitcoin Core version you are using is too old.") }}
+								{{ _("Specter is working well with Bitcoin Core version 0.17. and higher. You need to upgrade.") }}
+							</p>
+						</div>
+					{% endif %}
+					{% if failed_test == 'wallets' %}
+						<div>{{ tick_or_cross(test['tests']['wallets']) }} Bitcoin Core wallet</div>
+						<div class="col-span-4">
+							<p>
+								{{ _("You don't have wallet support enabled for your Bitcoin Core node.") }}
+								{{ _("Please make sure to have 'disablewallet=0' in your bitcoin.conf.") }}
+							</p>
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+	</form>
+{% endblock %}
+
+{% block scripts %}
+<script>
+	const connectionNameElement = document.getElementById("connection-name");
+	const siderbarConnectionNameElement = document.getElementById("sidebar-connection-name");
+	const newNameElement = document.getElementById("new-name");
+	const editBtn = document.getElementById("edit");
+	const cancelBtn = document.getElementById("cancel");
+	const updateBtn = document.getElementById("update");
+	const nameForm = document.getElementById('name-form')
+	// nameForm is null for new connections
+	if (nameForm) {
+		nameForm.addEventListener('submit', (e) => {
+			e.preventDefault()
+			renameNode()
+		})
+	}
+
+	async function renameNode() {
+		let url = `{{ url_for('nodes_endpoint.rename_node') }}`;
+		const newName = newNameElement.value
+		const nodeAlias = '{{ node_alias }}'
+		const formData = new FormData();
+    	formData.append('newName', newName);
+		formData.append('nodeAlias', nodeAlias);
+		const response = await send_request(url, 'POST', "{{ csrf_token() }}", formData);
+		// Displaying the error messages is handled by the send_request helper function
+		if (response.nameChanged == true) {
+			connectionNameElement.innerText = newName
+			toggleEdit()
+			const connectionRenamedEvent = new CustomEvent('connectionRenamed', {
+				detail: {
+					'newName': newName
+				}
+			})
+			document.dispatchEvent(connectionRenamedEvent)
+			showNotification(`{{ _("Connection name successfully updated.") }}`, 50000)
+		}
+	}
+
+	function toggleEdit() {
+		if (editBtn.style.display === 'none'){
+			editBtn.style.display = 'block';
+			cancelBtn.style.display = 'none';
+			updateBtn.style.display = 'none';
+			connectionNameElement.style.display = 'block';
+			newNameElement.style.display = 'none';
+		} else {
+			newNameElement.style.fontSize = '1.5em';
+			newNameElement.value = connectionNameElement.innerText
+			newNameElement.style.display = 'block';
+			editBtn.style.display = 'none';
+			cancelBtn.style.display = 'inline-block';
+			updateBtn.style.display = 'inline-block';
+			connectionNameElement.style.display = 'none';
+		}
+    }
+
+	const connectBtn = document.getElementById('connect-btn')
+    const connectText = document.getElementById('connect-text');
+    const connectingIndicator = document.getElementById('connecting-indicator')
+    connectBtn.addEventListener('click', () => {
+        connectText.classList.add('hidden')
+        connectingIndicator.classList.remove('hidden')
+    })
+
+</script>
+{% endblock %}

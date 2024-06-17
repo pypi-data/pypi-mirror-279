@@ -1,0 +1,15 @@
+{% from 'components/menu_item.jinja' import menu_item %}
+
+{# 
+    swan_menu - Tabs menu to navigate between the swan screens.
+    Parameters:
+    - active_menuitem: Current active tab. Options: 'general', 'bitcoin_core', 'auth'.
+ #}
+{% macro swan_menu(active_menuitem) -%}
+	<nav class="text-center text-dark-200 border-b border-dark-600">
+		<ul class="flex flex-wrap -mb-px">
+			{{ menu_item(service.id, 'settings', 'Settings', active_menuitem, isRight=true) }}
+			{{ menu_item(service.id, 'withdrawals', 'Withdrawals Overview', active_menuitem, isLeft=true) }}
+		</ul>
+	</nav>
+{%- endmacro %}

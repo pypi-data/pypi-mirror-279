@@ -1,0 +1,314 @@
+<html class="bg-dark-900 text-white">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="./typography.css"
+    />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="./output.css"
+    />
+
+    <body class="flex flex-col items-center">
+        <div class="max-w-[700px] w-[700px]">
+            <h1 class="mt-10">Settings</h1>
+            <form action="">
+                <div>
+                    <h3 class="mt-8">Do you want to connect to a remote Specter?</h3>
+
+                    <div class="space-y-3">
+												<div class="grid grid-cols-2 gap-3">
+													<label class="checkbox-wrapper" for="specterd-mode-active">
+														<input type="radio" class="checkbox-input" id="specterd-mode-active" name="mode" value="specterd" onclick="toggleHWIBridgeView(false)" checked>
+														<span class="checkbox-label">No, run Specter locally</span>
+													</label>
+
+													<label class="checkbox-wrapper" for="hwibridge-mode-active">
+														<input type="radio" class="checkbox-input" id="hwibridge-mode-active" name="mode" value="hwibridge" onclick="toggleHWIBridgeView(true);">
+														<span class="checkbox-label">Yes, I run Specter remotely</span>
+													</label>
+												</div>
+
+                        <div id="hwibridge-mode-settings" class="space-y-3 hidden">
+														<div class="floating-wrapper" for="specter-url">
+																<input id="specter-url" class="floating-input peer" type="url" placeholder=" " />
+																<label class="floating-label">Remote Specter URL</label>
+														</div>
+
+                            <label class="checkbox-wrapper-inline" for="basic-auth-checkbox">
+                                <input type="checkbox" class="checkbox-input" id="basic-auth-checkbox" onchange="toggleBasicAuth(this.checked)">
+																<span class="checkbox-label">HTTP Basic Authentication</label>
+                            </label>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="floating-wrapper hidden" id="basic-auth-user">
+                                    <input type="text" class="floating-input peer" placeholder=" " />
+                                    <label class="floating-label">Username</label>
+                                </div>
+
+                                <div class="floating-wrapper hidden" id="basic-auth-pass" >
+                                    <input type="password" class="floating-input peer" placeholder=" " />
+                                    <label class="floating-label">Password</label>
+                                </div>
+                            </div>
+
+                            <label for="tor-checkbox" class="checkbox-wrapper-inline">
+                                <!-- <img style="width: 25px; margin-right: 7px; vertical-align: bottom;" src="assets/tor.svg"/> -->
+                                <input class="checkbox-input" type="checkbox" id="tor-checkbox" onchange="toggleTorProxy(this.checked)">
+                                <span class="checkbox-label">Connect over Tor</span>
+                            </label>
+
+                            <div class="floating-wrapper hidden" id="proxy-url" >
+                                <input id="proxy-url" type="url" class="floating-input peer" placeholder=" " />
+                                <label class="floating-label">Proxy URL</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span id="toggle_advanced" class="block mt-5 mb-3 cursor-pointer" onclick="toggleAdvanced()">Advanced &#9654;</span>
+
+                    <div id="advanced_settings" class="hidden">
+                        <h3>Specter daemon configurations</h3>
+                        <div class="space-y-3">
+                            <div class="floating-wrapper">
+                                <input class="floating-input peer" id="specterd-version" disabled type="text" placeholder=" " />
+                                <label class="floating-label">Specterd Version</label>
+                                <img class="floating-info w-6 cursor-pointer mt-1" onclick="this.style.display = 'none'; document.getElementById('specterd-version').disabled=false; document.getElementById('download-github-version').style.display='block'" title="Edit version" src="assets/edit_icon.svg"/>
+                            </div>
+
+                            <label for="download-github-version-checkbox" id="download-github-version" class="hidden checkbox-wrapper-inline">
+                                <input class="checkbox-input" type="checkbox" id="download-github-version-checkbox">
+                                <span class="checkbox-label">Re-download from GitHub</span>
+                            </label>
+
+                            <div class="floating-wrapper">
+                                <input class="floating-input peer" id="specterd-hash" disabled type="text" placeholder=" " />
+                                <label class="floating-label">Specterd File Hash</label>
+                                <img class="floating-info w-6 cursor-pointer mt-1" onclick="this.style.display = 'none'; document.getElementById('specterd-hash').disabled=false" title="Edit specterd hash" src="assets/edit_icon.svg"/>
+                            </div>
+
+                            <div class="floating-wrapper">
+                                <input id="specterd-cli-args" class="floating-input peer" type="text" placeholder=" " />
+                                <label class="floating-label">Specterd CLI args (--tor). Use an equal sign to specify values (--port=25441)</label>
+                            </div>
+
+                            <div>
+                                <h3 class="mt-8">Use a custom specterd file</h3>
+                                <input type="file" id="specterd-file" hidden class="inputfile"/>
+                                <label for="specterd-file" class="button">Choose file</label>
+                            </div>
+
+                            <p class="note mt-5">You can download the specterd file from the github releases page: <a style="color: white;" target="_blank" href="https://github.com/cryptoadvance/specter-desktop/releases">https://github.com/cryptoadvance/specter-desktop/releases</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3 mt-8">
+                    <button type="button" id="cancel-btn" class="button" onclick="window.close()">Cancel</button>
+                    <button type="button" id="save-btn" class="button bg-accent" onclick="signalSavePreferences()">Save</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            const fs = require("fs");
+            const path = require("path");
+            const { ipcRenderer } = require("electron");
+            const helpers = require("./src/helpers");
+            const config = require("./src/config");
+            const getFileHash = helpers.getFileHash;
+            const getAppSettings = config.getAppSettings;
+            const appSettingsPath = config.appSettingsPath;
+            const specterdDirPath = helpers.specterdDirPath;
+
+            function toggleAdvanced() {
+                let advancedButton = document.getElementById("toggle_advanced");
+                let advancedSettigns =
+                    document.getElementById("advanced_settings");
+                if (advancedSettigns.style.display === "block") {
+                    advancedSettigns.style.display = "none";
+                    advancedButton.innerHTML = "Advanced &#9654;";
+                    if (isCoinSelectionActive()) {
+                        toggleExpand();
+                    }
+                } else {
+                    advancedSettigns.style.display = "block";
+                    advancedButton.innerHTML = "Advanced &#9660;";
+                }
+            }
+
+            function toggleHWIBridgeView(isActive) {
+                document.getElementById("hwibridge-mode-active").checked =
+                    isActive;
+                document.getElementById(
+                    "hwibridge-mode-settings"
+                ).style.display = isActive ? "block" : "none";
+            }
+
+            function signalSavePreferences() {
+                ipcRenderer.send("request-mainprocess-action", {
+                    message: "save-preferences",
+                });
+            }
+
+            function savePreferences() {
+                let specterdFile =
+                    document.getElementById("specterd-file").files[0];
+                if (specterdFile) {
+                    let specterdPath = path.resolve(
+                        specterdDirPath,
+                        "specterd" +
+                            (specterdFile.path.endsWith(".exe") ? ".exe" : "")
+                    );
+                    fs.copyFileSync(specterdFile.path, specterdPath);
+                } else if (
+                    document.getElementById("download-github-version-checkbox")
+                        .checked
+                ) {
+                    let specterdPath = path.resolve(
+                        specterdDirPath,
+                        "specterd" + (process.platform == "win32" ? ".exe" : "")
+                    );
+                    if (fs.existsSync(specterdPath)) {
+                        fs.unlinkSync(specterdPath);
+                    }
+                    document.getElementById("specterd-hash").value = "";
+                }
+                let hwiBridgeMode = document.getElementById(
+                    "hwibridge-mode-active"
+                ).checked;
+                let remoteSpecterURL =
+                    document.getElementById("specter-url").value;
+                if (hwiBridgeMode) {
+                    let hwiBridgeSettingsPath = path.resolve(
+                        require("os").homedir(),
+                        ".specter/hwi_bridge_config.json"
+                    );
+                    let defaultHWIBridgeSettings = {
+                        whitelisted_domains: "http://127.0.0.1:25441/",
+                    };
+                    try {
+                        fs.writeFileSync(
+                            hwiBridgeSettingsPath,
+                            JSON.stringify(defaultHWIBridgeSettings),
+                            { flag: "wx" }
+                        );
+                    } catch {
+                        // settings file already exists
+                    }
+                    let hwiBridgeSettings = require(hwiBridgeSettingsPath);
+                    if (hwiBridgeSettings) {
+                        hwiBridgeSettings.whitelisted_domains += `\n${remoteSpecterURL}`;
+                    }
+                    fs.writeFileSync(
+                        hwiBridgeSettingsPath,
+                        JSON.stringify(hwiBridgeSettings)
+                    );
+                }
+                let appSettings = getAppSettings();
+                appSettings.mode = hwiBridgeMode ? "hwibridge" : "specterd";
+                appSettings.specterURL = hwiBridgeMode
+                    ? remoteSpecterURL
+                    : "http://localhost:25441";
+                appSettings.basicAuth = document.getElementById(
+                    "basic-auth-checkbox"
+                ).checked;
+                appSettings.basicAuthUser =
+                    document.getElementById("basic-auth-user").value;
+                appSettings.basicAuthPass =
+                    document.getElementById("basic-auth-pass").value;
+                appSettings.tor =
+                    document.getElementById("tor-checkbox").checked;
+                appSettings.proxyURL =
+                    document.getElementById("proxy-url").value;
+                appSettings.specterdVersion =
+                    document.getElementById("specterd-version").value;
+                appSettings.specterdHash =
+                    document.getElementById("specterd-hash").value;
+                appSettings.specterdCLIArgs =
+                    document.getElementById("specterd-cli-args").value;
+                fs.writeFileSync(appSettingsPath, JSON.stringify(appSettings));
+                ipcRenderer.invoke("showMessageBoxSync", "Specter settings were saved successfully!\nPlease reopen the app to activate the changes.", ["Continue"]);
+                ipcRenderer.send("request-mainprocess-action", {
+                    message: "quit-app",
+                });
+            }
+
+            function toggleBasicAuth(basicAuthOn) {
+                if (basicAuthOn) {
+                    document
+                        .getElementById("basic-auth-user")
+                        .classList.remove("hidden");
+                    document
+                        .getElementById("basic-auth-pass")
+                        .classList.remove("hidden");
+                } else {
+                    document
+                        .getElementById("basic-auth-user")
+                        .classList.add("hidden");
+                    document
+                        .getElementById("basic-auth-pass")
+                        .classList.add("hidden");
+                }
+            }
+
+            function toggleTorProxy(torOn) {
+                if (torOn) {
+                    document
+                        .getElementById("proxy-url")
+                        .classList.remove("hidden");
+                } else {
+                    document
+                        .getElementById("proxy-url")
+                        .classList.add("hidden");
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+                let appSettings = getAppSettings();
+                let hwiBridgeMode = appSettings.mode == "hwibridge";
+                if (hwiBridgeMode) {
+                    document.getElementById("specter-url").value =
+                        appSettings.specterURL;
+                }
+                document.getElementById("basic-auth-user").value =
+                    appSettings.basicAuthUser;
+                document.getElementById("basic-auth-pass").value =
+                    appSettings.basicAuthPass;
+                document.getElementById("basic-auth-checkbox").checked =
+                    appSettings.basicAuth;
+                toggleBasicAuth(appSettings.basicAuth);
+                document.getElementById("proxy-url").value =
+                    appSettings.proxyURL;
+                document.getElementById("tor-checkbox").checked =
+                    appSettings.tor;
+                toggleTorProxy(appSettings.tor);
+                document.getElementById("specterd-version").value =
+                    appSettings.specterdVersion;
+                document.getElementById("specterd-hash").value =
+                    appSettings.specterdHash;
+                document.getElementById("specterd-cli-args").value =
+                    appSettings.specterdCLIArgs;
+
+                toggleHWIBridgeView(hwiBridgeMode);
+                document
+                    .getElementById("specterd-file")
+                    .addEventListener("change", (e) => {
+                        let specterdFile =
+                            document.getElementById("specterd-file").files[0];
+                        if (specterdFile) {
+                            getFileHash(
+                                specterdFile.path,
+                                function (specterdHash) {
+                                    document.getElementById(
+                                        "specterd-hash"
+                                    ).value = specterdHash;
+                                }
+                            );
+                        }
+                    });
+            });
+        </script>
+    </body>
+</html>
