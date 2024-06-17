@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: betterjsdc
+Version: 1.0.0
+Summary: A better interface for transforming dataclasses to and from dictionaries.
+Home-page: https://github.com/boboben1/jsondataclass
+Author: Benjamin Brecher
+Author-email: brecherbenjamin@gmail.com
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE

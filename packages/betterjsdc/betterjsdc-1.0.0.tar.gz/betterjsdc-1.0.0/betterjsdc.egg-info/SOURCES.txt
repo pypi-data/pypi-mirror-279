@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+betterjsdc.egg-info/PKG-INFO
+betterjsdc.egg-info/SOURCES.txt
+betterjsdc.egg-info/dependency_links.txt
+betterjsdc.egg-info/top_level.txt
+jsondataclass/__init__.py
+jsondataclass/jsondataclass.py
