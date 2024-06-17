@@ -1,0 +1,14 @@
+pint_pandas/__init__.py,sha256=h5Mr2IiBVF-1ZltJpQs1FSZ0T1t_nP849ir5BS4DL5o,714
+pint_pandas/pint_array.py,sha256=laB66dTTMILSt4TF45jIA6b5GSljpw51YN721WFawJ0,42303
+pint_pandas/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pint_pandas/testsuite/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pint_pandas/testsuite/pandas_test.csv,sha256=b_0FuSTTMArFBXaTp62ILZGYmkrdSMICKBKCUscqB30,202
+pint_pandas/testsuite/test_issues.py,sha256=NUTKFDEca8uafcqpSb-2Yp2AgbeOhVoF8olwXLCHN40,8346
+pint_pandas/testsuite/test_pandas_extensiontests.py,sha256=-GKpsMGAUvLiKv7aCttAB6Q2DVRuKS0KkrVIhw1-HqY,20326
+pint_pandas/testsuite/test_pandas_interface.py,sha256=ozfxQcNni7yu5ZINNW4Sw8IuY-UFaiaRXTJpnKxT04s,13265
+Pint_Pandas-0.6.dist-info/AUTHORS,sha256=HLD-1ixDtdxhiElOXDV9ntTvgnAGRbzwndsw3ApNX8w,317
+Pint_Pandas-0.6.dist-info/LICENSE,sha256=g_WL6FHY6_sSoeNRCkScTUDdaFnDreic1UEu-ngZ2pw,1584
+Pint_Pandas-0.6.dist-info/METADATA,sha256=wy0Dl1dDiwtFHgEQGD-X2JmwQMK_KseOeGu9AjGvyBM,3482
+Pint_Pandas-0.6.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Pint_Pandas-0.6.dist-info/top_level.txt,sha256=mdvitntgoybNhHpSglB1OXQZzVBMvInfx5mUINBzxrc,12
+Pint_Pandas-0.6.dist-info/RECORD,,
