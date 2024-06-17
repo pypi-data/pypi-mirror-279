@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: dune-iga
+Version: 0.1.8.dev20240617102340
+Home-page: 
+Author: mueller@ibb.uni-stuttgart.de
+Author-email: mueller@ibb.uni-stuttgart.de
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Requires-Python: >=3.4
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: geomdl
+Requires-Dist: dune-alugrid<=2.9.0
+Requires-Dist: dune-grid<=2.9.0
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: mpi4py
+Requires-Dist: dune-functions<=2.9.0
+
+# dune-iga
+
+<!--
+SPDX-FileCopyrightText: 2023 The dune-iga developers mueller@ibb.uni-stuttgart.de
+SPDX-License-Identifier: LGPL-3.0-or-later
+-->
+[![codecov](https://codecov.io/github/rath3t/dune-iga/branch/main/graph/badge.svg?token=4O9UV99UR6)](https://codecov.io/github/rath3t/dune-iga)
+
+This is a DUNE grid implementation with NURBS Geometry.
+If fully implements the DUNE Grid interface.
+For details, refer to the DUNE [book](https://link.springer.com/book/10.1007/978-3-030-59702-3).
+It has basic trimming support.
+
+The documentation can be found at [Documentation](https://rath3t.github.io/dune-iga-doc/).
