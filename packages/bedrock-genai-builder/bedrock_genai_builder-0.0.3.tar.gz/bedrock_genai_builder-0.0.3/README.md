@@ -1,0 +1,389 @@
+[![Downloads](https://static.pepy.tech/badge/bedrock-genai-builder)](https://pepy.tech/project/bedrock-genai-builder)
+
+# bedrock-genai-builder: A Python Package for Streamlined Development of Generative AI Applications with AWS Bedrock
+
+## Overview
+
+The bedrock-genai-builder is a Python package designed to facilitate the development and deployment of generative AI applications using AWS Bedrock. This package creates a well-framed, lightweight structure that encapsulates generative AI operations, providing a structured and efficient approach to building and managing generative AI models. It offers a set of utilities, services, and a predefined project structure to streamline the development process and enhance productivity.
+
+The main aim of the bedrock-genai-builder package is to enhance generative AI development using AWS Bedrock. It simplifies the process of integrating generative AI capabilities into applications, making it easier for developers to build and deploy AI-powered solutions.
+
+## Installation and Implementation
+
+### Project Structure Generation
+
+The bedrock-genai-builder package includes a powerful feature for generating an optimized project structure tailored for different application types. This generated structure adheres to best practices and provides a solid foundation for developing generative AI applications.
+
+To generate the project structure, follow these steps:
+
+1. Install the `bedrock-genai-builder` package using the following command:
+   ```
+   pip install bedrock-genai-builder
+   ```
+
+2. Navigate to your desired project folder (root folder) and execute one of the following commands based on your application type:
+   - For AWS Lambda applications:
+     ```
+     bedrock-genai-proj-build --app_type "LAMBDA" .
+     ```
+   - For non-Lambda applications:
+     ```
+     bedrock-genai-proj-build --app_type "NON_LAMBDA" .
+     ```
+
+   This command will create the following files and folders under the root folder:
+   - `bedrock_util/`: A directory containing all the dependencies and utilities for prompt service and generative AI API operations.
+   - Additional folders related to boto3 and other dependencies to ensure smooth functioning.
+   - `prompt_store.yaml`: A configuration file for storing prompt templates and service flows.
+
+   Depending on the specified application type, additional files will be created:
+   - For AWS Lambda applications: `lambda_function.py` will be created as the main entry point for your Lambda function.
+   - For non-Lambda applications: `bedrock_app.py` will be created as the main entry point for your application.
+
+   The generated project structure provides a well-organized and modular architecture, enabling developers to focus on implementing the core functionality of their generative AI applications.
+
+### Prompt Service Framework
+
+The bedrock-genai-builder package includes a robust prompt service framework that allows developers to define and execute predefined prompt flows for generating text completions. This framework provides a structured approach to configuring and managing prompt templates, input variables, and allowed foundation model providers.
+
+The `prompt_store.yaml` file serves as a blueprint for defining prompt service flows. Here's the structure of the `prompt_store.yaml` file:
+
+```yaml
+PromptServices:
+  <serviceID>:
+    prompt: |
+      <prompt>
+    inputVariables:
+      - <prompt input variables>
+    guardrailIdentifier: <guardrail id - string data type> -- optional
+    guardrailVersion: <guardrail version - string data type> -- optional but required if guardrailIdentifier is mentioned
+    allowedFoundationModelProviders:
+      - Amazon
+      - Meta
+      - Anthropic
+      - Mistral AI
+      - Cohere
+```
+
+Required fields are `serviceID`, `prompt`, and `inputVariables` if the prompt has input variables. The `allowedFoundationModelProviders` field can only have values from the specified list.
+
+
+To utilize the prompt service framework, follow these steps:
+
+1. Import the `run_service` function from the `bedrock_util.bedrock_genai_util.prompt_service` module:
+   ```python
+   from bedrock_util.bedrock_genai_util.prompt_service import run_service
+   ```
+
+2. Configure the prompt flows in the `prompt_store.yaml` file. Each prompt flow is defined under the `PromptServices` key and includes the following properties:
+   - `prompt`: The prompt template for the service. Input variables can be specified using curly braces (e.g., `{input}`).
+   - `inputVariables`: A list of input variable names required by the prompt.
+   - `guardrailIdentifier` (optional): The guardrail identifier (string data type) created in AWS Bedrock to filter and secure prompt input and model responses.
+   - `guardrailVersion` (optional but required if `guardrailIdentifier` is mentioned): The version of the guardrail (string data type).
+   - `allowedFoundationModelProviders`: A list of allowed foundation model providers for the service. Allowed values are "Amazon", "Meta", "Anthropic", "Mistral AI", and "Cohere".
+
+   Example configuration in `prompt_store.yaml`:
+   ```yaml
+   PromptServices:
+     getMathDetails:
+       prompt: |
+         You are an expert math teacher. Based on user input below provide assistance.
+
+         input: {input}
+       inputVariables:
+         - input
+       guardrailIdentifier: "abcdefg"
+       guardrailVersion: "1"
+       allowedFoundationModelProviders:
+         - Amazon
+         - Meta
+         - Anthropic
+         - Mistral AI
+         - Cohere
+   ```
+
+3. To execute a prompt service flow, utilize the `run_service` function:
+   ```python
+   bedrock_client = ... # Initialize the Bedrock runtime client
+   service_id = "getMathDetails"
+   model_id = "amazon.titan-text-premier-v1:0"
+   prompt_input_variables = {
+       "input": "What is the formula for calculating the area of a circle?"
+   }
+
+   result = run_service(bedrock_client, service_id, model_id, prompt_input_variables)
+   print(result)
+   ```
+
+   The `run_service` function has the following signature:
+   ```python
+   def run_service(bedrock_client, service_id, model_id, prompt_input_variables=None, **model_kwargs):
+       # ...
+   ```
+
+   - `bedrock_client`: The Bedrock runtime client used for interacting with AWS Bedrock.
+   - `service_id`: The ID of the prompt service flow to run.
+   - `model_id`: The ID of the foundation model to use for text completion generation.
+   - `prompt_input_variables`: A dictionary containing the input variables required by the prompt template.
+   - `**model_kwargs`: Additional keyword arguments specific to the foundation model provider.
+
+   The `run_service` function performs validation of the model and prompt inputs based on the configuration defined in the `prompt_store.yaml` file. It automatically selects the appropriate prompt template, formats it with the provided input variables, and generates the text completion using the specified model.
+
+### Direct Model Invocation Utility
+
+In addition to the prompt service framework, the bedrock-genai-builder package provides a utility function for directly invoking foundation models and generating text completions based on a provided prompt.
+
+To utilize the direct model invocation utility, follow these steps:
+
+1. Import the `generate_text_completion` function from the `bedrock_util.bedrock_genai_util.TextCompletionUtil` module:
+   ```python
+   from bedrock_util.bedrock_genai_util.TextCompletionUtil import generate_text_completion
+   ```
+
+2. Invoke the `generate_text_completion` function with the desired model, prompt, and optional guardrail parameters:
+   ```python
+   bedrock_client = ... # Initialize the Bedrock runtime client
+   model_id = "amazon.titan-text-premier-v1:0"
+   prompt = "What is the capital of France?"
+   guardrail_identifier = "abcdefg"
+   guardrail_version = "1"
+
+   result = generate_text_completion(bedrock_client, model_id, prompt, guardrail_identifier, guardrail_version)
+   print(result)
+   ```
+
+   The `generate_text_completion` function has the following signature:
+   ```python
+   def generate_text_completion(bedrock_client, model: str, prompt, guardrail_identifier=None, guardrail_version=None,
+                                **model_kwargs):
+       # ...
+   ```
+
+   - `bedrock_client`: The Bedrock runtime client used for interacting with AWS Bedrock.
+   - `model`: The ID of the foundation model to use for text completion generation.
+   - `prompt`: The input prompt for generating the text completion.
+   - `guardrail_identifier` (optional): The guardrail identifier (string data type) created in AWS Bedrock to filter and secure prompt input and model responses.
+   - `guardrail_version` (optional): The version of the guardrail (string data type).
+   - `**model_kwargs`: Additional keyword arguments specific to the foundation model provider.
+
+   The `generate_text_completion` function encapsulates the complexity of interacting with different foundation model providers and offers a unified interface for generating text completions. It automatically selects the appropriate utility class based on the specified model and invokes the corresponding `text_completion` method.
+
+
+### **Agent Service**
+
+The bedrock-genai-builder package includes an Agent Service feature that allows you to define and execute agent-based operations using user-defined functions. The package automatically generates the necessary configuration files, `agent_store.yaml` and `tool_spec.json`, to facilitate the creation and maintenance of agent services.
+
+### **Running an Agent Service**
+
+To run an Agent Service, you can use the `run_agent` function provided by the bedrock-genai-builder package. Here's the function signature:
+
+```python
+from bedrock_util.bedrock_genai_util.agent_service import run_agent
+
+def run_agent(
+        bedrock_client,
+        model_id,
+        agent_service_id,
+        function_list,
+        prompt,
+        inference_config=None,
+):
+    # ...
+```
+
+- `bedrock_client`: The Bedrock runtime client used for interacting with AWS Bedrock.
+- `model_id`: The ID of the foundation model to use for the agent operation.
+- `agent_service_id`: The ID of the agent service to run. It should match the `<agent service id>` defined in the `agent_store.yaml` file.
+- `function_list`: A list of user-defined functions that can be used as tools in the agent operation. These functions should be defined in the `tool_spec.json` file and listed in the `allowedTools` field of the corresponding agent service in the `agent_store.yaml` file.
+- `prompt`: The input prompt for the agent operation.
+- `inference_config` (optional): A dictionary containing inference configuration parameters. The available parameters are:
+  - `maxTokens`: The maximum number of tokens to allow in the generated response.
+  - `stopSequences`: A list of stop sequences. A stop sequence is a sequence of characters that causes the model to stop generating the response.
+  - `temperature`: The likelihood of the model selecting higher-probability options while generating a response.
+  - `topP`: The percentage of most-likely candidates that the model considers for the next token.
+
+#### **Agent Service Configuration**
+
+The bedrock-genai-builder package automatically generates two configuration files, `agent_store.yaml` and `tool_spec.json`, to define and manage agent services.
+
+##### **agent_store.yaml**
+
+The `agent_store.yaml` file defines the agent services and their associated instructions and allowed tools. It follows this format:
+
+```yaml
+AgentServices:
+  <agent service id>:
+    agentInstruction: |
+      <Agent instruction>
+    allowedTools:
+      - <list of functions to be used as tools>
+```
+
+- `AgentServices`: This is the root key for the YAML file. It contains one or more agent services.
+- `<agent service id>`: This is the key for a specific agent service. It is used to identify and reference the service.
+- `agentInstruction`: This is the instruction or description for the agent service. It can be a multi-line string using the pipe (|) character.
+- `allowedTools`: This is the list of allowed tools (functions) for the agent service. Each tool is listed as an item in the list.
+
+Example `agent_store.yaml` file:
+
+```yaml
+AgentServices:
+  weatherService:
+    agentInstruction: |
+      You are a helpful weather assistant. Provide weather information based on user input.
+    allowedTools:
+      - getWeather
+      - getForecast
+```
+
+##### **tool_spec.json**
+
+The `tool_spec.json` file defines the agent functions and their configurations. It follows this format:
+
+```json
+{
+  "agentFunctions": {
+    "<function name>": {
+      "description": "<function description>",
+      "functionProperties": {
+        "<function parameters>": {
+          "type": "<data type of function parameters>"
+        }
+      },
+      "requiredProperties": [
+        "<list of function parameters which are required>"
+      ]
+    }
+  }
+}
+```
+
+- `agentFunctions`: This is the root key for the JSON file. It contains one or more agent functions.
+- `<function name>`: This is the key for a specific agent function. It should match the function name used in the `allowedTools` list in the `agent_store.yaml` file.
+- `description`: This is a brief description of the agent function.
+- `functionProperties`: This is an object that defines the parameters of the agent function and their data types.
+- `requiredProperties`: This is an array that lists the required parameters for the agent function.
+
+Example `tool_spec.json` file:
+
+```json
+{
+  "agentFunctions": {
+    "getWeather": {
+      "description": "Get the current weather for a given location.",
+      "functionProperties": {
+        "location": {
+          "type": "string"
+        }
+      },
+      "requiredProperties": [
+        "location"
+      ]
+    },
+    "getForecast": {
+      "description": "Get the weather forecast for a given location.",
+      "functionProperties": {
+        "location": {
+          "type": "string"
+        },
+        "days": {
+          "type": "number"
+        }
+      },
+      "requiredProperties": [
+        "location",
+        "days"
+      ]
+    }
+  }
+}
+```
+
+#### **How run_agent Works**
+
+When you call the `run_agent` function, it performs the following steps:
+
+1. It retrieves the agent service configuration from the `agent_store.yaml` file based on the provided `agent_service_id`.
+
+2. It validates the `function_list` against the `allowedTools` defined in the agent service configuration and the function definitions in the `tool_spec.json` file. Only the functions that are allowed and properly defined will be used as tools in the agent operation.
+
+3. It constructs the agent prompt by combining the `agentInstruction` from the agent service configuration and the provided `prompt`.
+
+4. It invokes the specified foundation model (`model_id`) using the Bedrock runtime client (`bedrock_client`) and passes the constructed agent prompt, the validated `function_list`, and any additional `inference_config` parameters.
+
+5. The foundation model processes the agent prompt and generates a response based on the available tools and the provided prompt.
+
+6. The generated response is returned as the result of the `run_agent` function.
+
+#### **Example Usage**
+
+Here's an example of how to use the `run_agent` function:
+
+```python
+from bedrock_util.bedrock_genai_util.agent_service import run_agent
+
+def getWeather(location):
+    # Implementation to get current weather for the given location
+    # ...
+    return weather_info
+
+def getForecast(location, days):
+    # Implementation to get weather forecast for the given location and number of days
+    # ...
+    return forecast_info
+
+bedrock_client = ... # Initialize the Bedrock runtime client
+model_id = "anthropic.claude-3-sonnet-20240229-v1:0"
+agent_service_id = "weatherService"
+function_list = [getWeather, getForecast]
+prompt = "What's the weather like in New York today? Also, provide a 3-day forecast."
+
+result = run_agent(bedrock_client, model_id, agent_service_id, function_list, prompt)
+print(result)
+```
+
+In this example:
+- We define two user-defined functions, `getWeather` and `getForecast`, that retrieve weather information for a given location.
+- We initialize the Bedrock runtime client (`bedrock_client`) and specify the foundation model ID (`model_id`) as "anthropic.claude-3-sonnet-20240229-v1:0".
+- We set the `agent_service_id` to "weatherService", which corresponds to the agent service defined in the `agent_store.yaml` file.
+- We provide the `function_list` containing the `getWeather` and `getForecast` functions, which are allowed tools for the "weatherService" agent service.
+- We specify the `prompt` that asks for the current weather and a 3-day forecast for New York.
+- We call the `run_agent` function with the provided parameters and store the result in the `result` variable.
+- Finally, we print the generated response.
+
+### **Benefits of Agent Service**
+
+The Agent Service feature in bedrock-genai-builder offers several benefits:
+
+1. Modularity and Reusability: By defining agent services and their allowed tools in the `agent_store.yaml` file, you can create modular and reusable agent configurations. These configurations can be easily shared and reused across different projects or teams.
+
+2. Separation of Concerns: The `agent_store.yaml` file focuses on defining the agent services and their instructions, while the `tool_spec.json` file defines the actual implementation of the agent functions. This separation of concerns allows for better organization and maintainability of the agent service configurations and function implementations.
+
+3. Flexibility and Extensibility: The Agent Service feature provides flexibility in defining custom agent services with specific instructions and allowed tools. You can easily extend the functionality of agent services by adding new functions to the `tool_spec.json` file and updating the `allowedTools` list in the `agent_store.yaml` file.
+
+4. Integration with Foundation Models: The `run_agent` function seamlessly integrates with foundation models provided by AWS Bedrock. It allows you to leverage the power of these models while providing a structured approach to define and execute agent-based operations.
+
+5. Scalability and Maintainability: The configuration-driven approach of the Agent Service feature enables scalability and maintainability. As your agent services grow in complexity, you can easily manage and update the configurations in the `agent_store.yaml` and `tool_spec.json` files without modifying the underlying code.
+
+By utilizing the Agent Service feature in bedrock-genai-builder, you can create powerful and flexible agent-based applications that combine the capabilities of foundation models with custom-defined agent services and tools.
+
+
+## Conclusion
+
+The bedrock-genai-builder Python package offers a comprehensive solution for developing and deploying generative AI applications using AWS Bedrock. It provides a well-structured and efficient approach to building and managing generative AI models, enabling developers to focus on creating innovative and impactful applications.
+
+The package offers several key features that streamline the development process and enhance productivity:
+
+1. Project Structure Generation: The bedrock-genai-builder package simplifies the setup process by generating an optimized project structure tailored for different application types. This ensures best practices and provides a solid foundation for developing generative AI applications.
+
+2. Prompt Service Framework: The prompt service framework allows developers to define and execute predefined prompt flows for generating text completions. It provides a structured approach to configuring and managing prompt templates, input variables, and allowed foundation model providers. The `run_service` function enables easy execution of prompt service flows, making it convenient to generate text completions based on predefined templates and input variables.
+
+3. Direct Model Invocation Utility: The package includes a utility function, `generate_text_completion`, for directly invoking foundation models and generating text completions based on a provided prompt. This utility offers flexibility when custom prompts are needed or when the prompt service framework is not required. It simplifies the process of interacting with different foundation model providers and provides a unified interface for generating text completions.
+
+4. Agent Service: The Agent Service feature allows developers to define and execute agent-based operations using user-defined functions. It automatically generates configuration files (`agent_store.yaml` and `tool_spec.json`) to facilitate the creation and maintenance of agent services. The `run_agent` function enables the execution of agent services, combining the capabilities of foundation models with custom-defined agent services and tools. This feature promotes modularity, reusability, and scalability in building agent-based AI applications.
+
+By leveraging the bedrock-genai-builder package, developers can accelerate the development and deployment of generative AI applications using AWS Bedrock. The package abstracts away the complexities of integrating with AWS Bedrock and provides a high-level interface for generating text completions and executing agent-based operations.
+
+The configuration-driven approach of the package, through files like `prompt_store.yaml`, `agent_store.yaml`, and `tool_spec.json`, enables scalability and maintainability. Developers can easily manage and update configurations without modifying the underlying code, making it convenient to adapt to evolving requirements and scale their applications.
+
+Overall, the bedrock-genai-builder Python package empowers developers to build powerful and flexible generative AI applications using AWS Bedrock. It offers a structured and efficient approach to developing and deploying AI-powered solutions, enabling developers to focus on creating innovative and impactful applications while abstracting away the complexities of integrating with AWS Bedrock.
