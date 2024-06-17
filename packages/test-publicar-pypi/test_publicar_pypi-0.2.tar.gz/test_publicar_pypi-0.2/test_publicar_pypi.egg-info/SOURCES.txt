@@ -1,0 +1,6 @@
+README.md
+setup.py
+test_publicar_pypi.egg-info/PKG-INFO
+test_publicar_pypi.egg-info/SOURCES.txt
+test_publicar_pypi.egg-info/dependency_links.txt
+test_publicar_pypi.egg-info/top_level.txt
