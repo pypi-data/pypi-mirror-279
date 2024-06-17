@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+nyogyi_pretty_xml/__init__.py
+nyogyi_pretty_xml/nyogyi_pretty_xml.py
+nyogyi_pretty_xml.egg-info/PKG-INFO
+nyogyi_pretty_xml.egg-info/SOURCES.txt
+nyogyi_pretty_xml.egg-info/dependency_links.txt
+nyogyi_pretty_xml.egg-info/entry_points.txt
+nyogyi_pretty_xml.egg-info/requires.txt
+nyogyi_pretty_xml.egg-info/top_level.txt
