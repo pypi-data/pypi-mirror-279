@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dbsconnector/__init__.py
+src/dbsconnector/databases.py
+src/dbsconnector.egg-info/PKG-INFO
+src/dbsconnector.egg-info/SOURCES.txt
+src/dbsconnector.egg-info/dependency_links.txt
+src/dbsconnector.egg-info/requires.txt
+src/dbsconnector.egg-info/top_level.txt
