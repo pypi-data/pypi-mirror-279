@@ -1,0 +1,11 @@
+dataset2vec/__init__.py,sha256=xmZOWRBZe6MRfAylLwhi_F9gQaQfbkuLk1nWoBx9tAQ,120
+dataset2vec/config.py,sha256=qH9ydVp52lUNOHNHb61cyZJU4_JnuFIRGqBK4Sb4z14,2813
+dataset2vec/data.py,sha256=tt4GiZ7fz61_3d5ratHn3cgr0v6qMd_DFZqw8vt6x9M,9061
+dataset2vec/model.py,sha256=ZiF_y7LjuchT9IR2NrBBtSA84CnDED6tRx-Nj-OoWRg,9038
+dataset2vec/train.py,sha256=Jl2PwrDCKdt7nJMvM5jUPzUt1mYc62bcIzFTIzaADAo,5425
+dataset2vec/utils.py,sha256=jVzBZmwUfxBlsws7jyVOUAORAWL_NrK95VrUUgVo5Fw,4148
+dataset2vec-0.0.3.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+dataset2vec-0.0.3.dist-info/METADATA,sha256=qul5jzHfBFBC64WtbiZZFlsThH2m3qNCzMQlm-HBkek,2304
+dataset2vec-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dataset2vec-0.0.3.dist-info/top_level.txt,sha256=tRyFp8pnmfOFfo9xOBEliHHi97nWQLkEVKozXLYPPHE,12
+dataset2vec-0.0.3.dist-info/RECORD,,
