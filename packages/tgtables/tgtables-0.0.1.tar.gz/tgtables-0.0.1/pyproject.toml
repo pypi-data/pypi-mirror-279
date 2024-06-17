@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+
+[project]
+name = "tgtables"
+version = "0.0.1"
+
+dependencies = [
+    "pyTelegramBotAPI>=4.19.1"
+]
+
+authors = [
+  { name="chmilenko_d" },
+]
+description = "A package for creating tables in Telegram"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/chmilenko-d/tgtables"
+Issues = "https://github.com/chmilenko-d/tgtables/issues"
