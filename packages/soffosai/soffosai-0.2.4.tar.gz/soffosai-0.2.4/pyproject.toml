@@ -1,0 +1,27 @@
+[build-system]
+requires = [
+    "setuptools >= 40.9.0",
+    "wheel >= 0.36.2",
+]
+
+[project]
+name = "soffosai"
+version = "0.2.4"
+authors = [
+  { name="Soffos.ai", email="Soffos@Soffos.ai" },
+  { name="Franco Such", email="franco.such@Soffos.ai" },
+]
+description = "Python SDK for Soffos AI"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["requests"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/Soffos-Inc/soffos_ai"
+"Bug Tracker" = "https://github.com/Soffos-Inc/soffos_ai/issues"
