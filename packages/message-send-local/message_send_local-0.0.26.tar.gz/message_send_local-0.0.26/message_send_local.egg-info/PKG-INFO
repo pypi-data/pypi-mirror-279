@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: message-send-local
+Version: 0.0.26
+Summary: PyPI Package for Circles message_send_local Python
+Home-page: https://github.com/circles-zone/message-send-local-local-python-package
+Author: Circles
+Author-email: info@circlez.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: database-mysql-local>=0.0.290
+Requires-Dist: message-local>=0.0.123
+Requires-Dist: messages-local>=0.0.49
+Requires-Dist: logger-local>=0.0.135
+
+PyPI Package for Circles message_send_local Python
