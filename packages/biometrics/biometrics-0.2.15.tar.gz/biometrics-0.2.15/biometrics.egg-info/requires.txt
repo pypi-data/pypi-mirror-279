@@ -1,0 +1,10 @@
+networkx
+numpy
+pandas
+plotly
+pysam
+pyvcf3
+python-dateutil
+pytz
+retrying
+six
