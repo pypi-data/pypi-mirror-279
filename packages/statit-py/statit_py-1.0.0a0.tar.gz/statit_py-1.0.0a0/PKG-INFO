@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: statit_py
+Version: 1.0.0a0
+Summary: Utilities for gostatit.com
+Author-email: keyboardcat1010@gmail.com
+Project-URL: Homepage, https://github.com/keyboardcat1/statit_py
+Project-URL: Bug Tracker, https://github.com/keyboardcat1/statit_py/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# statit_py
+This package is a set of utilities for gostatit.com, including API access and some data manipulation utilities.
+
+
