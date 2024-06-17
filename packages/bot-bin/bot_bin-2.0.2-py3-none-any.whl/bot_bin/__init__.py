@@ -1,0 +1,5 @@
+__title__		= 'bot_bin'
+__author__		= 'lambda.dance'
+__license__		= 'BlueOak-1.0.0'
+__copyright__ 	= 'Copyright © @lambda.dance'
+__version__ 	= '2.0.2'
