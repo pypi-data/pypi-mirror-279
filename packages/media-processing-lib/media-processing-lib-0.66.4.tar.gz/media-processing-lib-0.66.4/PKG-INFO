@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: media-processing-lib
+Version: 0.66.4
+Summary: Media processing library for video, audio and images.
+Home-page: https://gitlab.com/mihaicristianpirvu/media-processing-lib
+License: WTFPL
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.TXT
+Requires-Dist: imageio[ffmpeg]==2.25
+Requires-Dist: av==9.2.0
+Requires-Dist: scikit-image==0.19.3
+Requires-Dist: opencv-python==4.7.0.68
+Requires-Dist: pims==0.6.1
+Requires-Dist: librosa==0.9.2
+Requires-Dist: numba>=0.56.4
+Requires-Dist: ffmpeg-python==0.2.0
+Requires-Dist: tqdm>=4.64
+Requires-Dist: decord==0.6.0
+Requires-Dist: Pillow==9.4.0
+Requires-Dist: natsort==8.2.0
+Requires-Dist: numpy<2.0.0,>=1.21.6
+Requires-Dist: overrides>=7.7.0
+Requires-Dist: colorama>=0.4.6
+Requires-Dist: gdown==4.6.0
+
+# Media Processing Lib
+
+Python library to standardize reading/writing and operations using various python compatible libraries.
+
+Basically: https://xkcd.com/927/
