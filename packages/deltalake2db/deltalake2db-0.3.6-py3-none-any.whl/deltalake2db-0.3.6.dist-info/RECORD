@@ -1,0 +1,10 @@
+deltalake2db/__init__.py,sha256=IIqLC1-0QmggXhdMvtzeNxTj5ONV5PU3GgEqMQUDAQk,362
+deltalake2db/azure_helper.py,sha256=i4146nOZNBQCM7BvVZ4BWAUW-IM8x_WpCTlzxfPUljs,1225
+deltalake2db/duckdb.py,sha256=XQ03eCnTBSijmRruqw-ML12fu-op_kfPJU1C_yM1VlA,15196
+deltalake2db/filter_by_meta.py,sha256=1lAVJUQzxt5RzYZT7dcRSmevGBevrgNvsogS7GW1kyc,889
+deltalake2db/polars.py,sha256=znXeWQuMjdxv8BCgJ0OTfBiGwmWeYhKLA8srx2swtpU,8140
+deltalake2db/protocol_check.py,sha256=kiAlwNX4PRqTEDdSeHxuilxHzTWai6Km_D7Ka73nO_8,963
+deltalake2db/sql_utils.py,sha256=3B6fgvntDzkx_Y8zsHf0bchylbOS2511H955QdK3UHI,2666
+deltalake2db-0.3.6.dist-info/METADATA,sha256=_M-VZSbFZEcDWaQ2s_mE1HX6Cgqbx6jGHhuM2Qhxx7c,2636
+deltalake2db-0.3.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+deltalake2db-0.3.6.dist-info/RECORD,,
