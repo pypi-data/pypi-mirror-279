@@ -1,0 +1,8 @@
+README.md
+setup.py
+lstack/__init__.py
+lstack.egg-info/PKG-INFO
+lstack.egg-info/SOURCES.txt
+lstack.egg-info/dependency_links.txt
+lstack.egg-info/requires.txt
+lstack.egg-info/top_level.txt
