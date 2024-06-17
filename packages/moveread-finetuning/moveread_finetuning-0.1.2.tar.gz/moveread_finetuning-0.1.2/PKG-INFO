@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: moveread-finetuning
+Version: 0.1.2
+Summary: Round-to-round finetuning for the Moveread OCR
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/moveread-ocr.git
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: keras
+Requires-Dist: tensorflow
+Requires-Dist: moveread-ocr
+Requires-Dist: tf-tools
+Requires-Dist: tf-ctc
+Requires-Dist: demetric
+Requires-Dist: checkptr
+Requires-Dist: haskellian
+Requires-Dist: tensorflow-records
+
+# Moveread Finetuning
+
+> Round-to-round finetuning for the Moveread OCR
