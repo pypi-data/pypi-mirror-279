@@ -1,0 +1,2 @@
+[console_scripts]
+poetry2rye = poetry2rye.main:main

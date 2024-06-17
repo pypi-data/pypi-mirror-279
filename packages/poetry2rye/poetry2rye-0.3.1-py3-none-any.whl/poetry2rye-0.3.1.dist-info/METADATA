@@ -1,0 +1,60 @@
+Metadata-Version: 2.3
+Name: poetry2rye
+Version: 0.3.1
+Summary: A simple tool to migrate your Poetry project to rye
+Author-email: nahco314 <nahco3_ta@yahoo.co.jp>
+License-File: LICENSE
+Requires-Python: >=3.11
+Requires-Dist: poetry-core>=1.9.0
+Requires-Dist: pydantic~=1.10.8
+Requires-Dist: pyproject-parser~=0.11.0
+Requires-Dist: python-slugify~=8.0.1
+Requires-Dist: tomlkit~=0.11.8
+Requires-Dist: typing-extensions>=4.11.0
+Description-Content-Type: text/markdown
+
+# poetry2rye
+
+A simple tool to migrate your Poetry project to rye.
+
+# Install
+```commandline
+rye install poetry2rye
+```
+
+# Usage
+### Migrate
+`poetry2rye mig [PATH]`
+
+Migrate path projects to rye.
+
+This command does the following:
+- if the project is flat-layout, make it src-layout
+- remove poetry.lock
+  - this doesn't respect the lock file (at this time)
+- change pyproject.toml
+  - remove `[tool.poetry]` and `[tool.poetry.*]`
+  - make `[project]` from `[tool.poetry]` and `[tool.poetry.*]`
+  - change `[build-system]`
+  - add `[tool.rye]`
+  - add `[tool.hatch.metadata]`
+
+### Get Backup
+`poetry2rye get-backup [PATH]`
+
+Options:
+- `-n [NUMBER]`: The number of the backup to retrieve. If not specified, the last backup created will be used.
+- `-y`: Skip the confirmation prompt.
+
+Retrieve the backup automatically created during migration and replace the project with the backup.
+
+if NUMBER is not specified, the last backup created will be used.
+
+The backup folder is `.__p2r_backup_{project_name}_{number}` format and placed in the same directory as the project directory (which is a child of the project parent directory).
+
+# Other
+This tool is for personal use and should be used at your own risk. Backups will be made, but we cannot be held responsible for project corruption!
+
+The license is the MIT License.
+
+If you have any bugs, mistakes, feature suggestions, etc., issues and pull requests are welcome.
