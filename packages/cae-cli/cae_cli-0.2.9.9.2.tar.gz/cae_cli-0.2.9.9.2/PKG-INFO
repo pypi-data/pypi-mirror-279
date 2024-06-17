@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: cae-cli
+Version: 0.2.9.9.2
+Summary: o cae tem como objetivo facilitar a utilização de projeto com arquitetura limpa
+Author: Carlos Vinicius Da Silva
+Author-email: vini989073599@gmail.com
+License: Apache License
+Keywords: cae-cli
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: arch-flow>=0.1.8.6
+Requires-Dist: colorama
+
+teste da aplicação ainda
