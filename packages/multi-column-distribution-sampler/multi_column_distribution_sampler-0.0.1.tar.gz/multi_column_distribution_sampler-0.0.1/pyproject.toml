@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "multi_column_distribution_sampler"
+version = "0.0.1"
+authors = [
+  { name="Alan Abraham", email="alan.abraham.tm@gmail.com" },
+]
+description = "Distribution based sampling for multiple categorical columms"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+keywords = ["sampler", "distribution", "distribution sampler", "sampling", "representative sampling", "pandas", "dataframe", "multiple", "multi column sampler", "multiple column sampling"]
+
+
+[project.urls]
+"Homepage" = "https://github.com/a-abrhm/multi_column_distribution_sampler"
+"Bug Tracker" = "https://github.com/a-abrhm/multi_column_distribution_sampler/issues"
