@@ -1,0 +1,21 @@
+scipy
+
+[:python_version <= "3.8"]
+numpy<2
+
+[:python_version > "3.8"]
+numpy
+
+[docs]
+sphinx
+sphinx_gallery
+matplotlib
+pandas
+
+[examples]
+matplotlib
+pandas
+
+[test]
+pytest
+pandas
