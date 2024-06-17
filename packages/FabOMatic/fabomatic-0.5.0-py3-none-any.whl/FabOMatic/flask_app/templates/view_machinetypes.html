@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <h1>{{ _("Machine Types") }}</h1>
+    <h3>{{ _("This page defines the categories of machines in the LAB.") }}</h3>
+    <a href="{{ url_for('add_machinetype') }}" class="btn btn-primary mb-3">{{ _("Add Machine Type") }}</a>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>{{ _("Machine type") }}</th>
+                <th>{{ _("Auto-logoff") }}</th>
+                <th>{{ _("Power-off") }}</th>
+                <th>{{ _("Access control") }}</th>
+                <th>{{ _("Action") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for machine_type in machine_types %}
+            <tr>
+                <td>{{ machine_type.type_id }}</td>
+                <td>{{ machine_type.type_name }}</td>
+                <td>{% if machine_type.type_timeout_min > 0 %}
+                    {{ machine_type.type_timeout_min }} min
+                    {% else %}
+                    <i>{{ _("disabled") }}</i>
+                    {% endif %}
+                </td>
+                <td>{% if machine_type.grace_period_min is not none and machine_type.grace_period_min > 0 %}
+                    {{ machine_type.grace_period_min }} min
+                    {% else %}
+                    <i>{{ _("disabled") }}</i>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if machine_type.access_management == machine_type.MANAGEMENT_WITH_AUTHORIZATION %}
+                    {{ _("Machines need to be authorized for user") }}
+                    {% endif %}
+                    {% if machine_type.access_management == machine_type.MANAGEMENT_WITHOUT_AUTHORIZATION %}
+                    {{ _("No authorization required for machines") }}
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ url_for('edit_machinetype', type_id=machine_type.type_id) }}"
+                        class="btn btn-warning">{{ _("Edit") }}</a>
+                    <a href="{{ url_for('delete_machinetype', type_id=machine_type.type_id) }}"
+                        class="btn btn-danger">{{ _("Delete") }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

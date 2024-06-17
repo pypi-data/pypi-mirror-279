@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h4>{{ _("System status") }}</h4>
+<div class="row mt-0">
+    <div class="col-md-4">
+
+        <div class="card">
+            <div class="card-header">
+                {{ _("Database info") }}
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ _("Database size (KB)") }}: {{ db_size }} <a href="{{ url_for('download_db') }}"
+                        class="btn btn-info">{{ _("Download DB") }}</a></li>
+                    <li class="list-group-item">Database file : {{ db_file }}</li>
+                    <li class="list-group-item">
+                        {{ _("Restore database") }}:
+                        <form action="{{ url_for('upload_db') }}" method="post" enctype="multipart/form-data">
+                            <input class="form-control" type="file" name="db_file" accept=".sqldb" maxlength="1000000">
+                            <button type="submit" class="btn btn-primary">{{ _("Upload DB") }}</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                {{ _("System info") }}
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ _("Machine info") }}: {{ machine_info }}</li>
+                    <li class="list-group-item">{{ _("Disk free space") }} (MB): {{ disk_free }}</li>
+                    <li class="list-group-item">{{ _("Memory free space") }} (MB): {{ ram_free }}</li>
+                    <li class="list-group-item">{{ _("Backend log file") }}: <a href="{{ url_for('download_logs') }}" class="btn btn-info">{{ _("Download") }}</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('reboot') }}" class="btn btn-danger">{{ _("Reboot system") }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                {{ _("Application info") }}
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{{ _("Version installed") }} : {{ app_version }}</li>
+                    <li class="list-group-item">{{ _("Version available") }} : {{ latest_version }}</li>
+                    <li class="list-group-item"><a href="{{ url_for('update_app') }}" class="btn btn-danger">{{ _("Update application (pip)") }}</a>
+                    </li>
+                    <li class="list-group-item"><a href="{{ url_for('restart_app') }}" class="btn btn-primary">{{ _("Restart application") }}</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<h4>{{ _("Boards list") }}</h4>
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">{{ _("Serial number") }}</th>
+                <th scope="col">{{ _("Machine (ID)") }}</th>
+                <th scope="col">{{ _("IP address") }}</th>
+                <th scope="col">{{ _("FW Version") }}</th>
+                <th scope="col">{{_("Free heap") }}</th>
+                <th scope="col">{{ _("Last seen") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for board in boards %}
+            <tr>
+                <td>{{ board.serial }}</td>
+                <td>{{ board.machine.machine_name }} ({{ board.machine_id }})</td>
+                <td>{{ board.ip_address }}</td>
+                <td>{{ board.fw_version }}</td>
+                <td>{{ board.heap }}</td>
+                <td>{{ board.last_seen | time_since }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>   
+</div>
+{% endblock %}

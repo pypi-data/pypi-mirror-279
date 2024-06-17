@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <h1>Use History</h1>
+    <h4>This page shows the most recent uses of the machine {{ machine.machine_name }}.</h4>
+    <a href="{{ url_for('view_machines') }}" class="btn btn-secondary mb-3">Back</a>
+    <ul class="list-group">
+        {% for use in uses %}
+        {% if use.end_timestamp is none %}
+            <li class="list-group-item list-group-item-light d-flex justify-content-between align-items-center" style="background-color: lightorange; margin: 2px;">
+        {% else %}
+            <li class="list-group-item list-group-item-light d-flex justify-content-between align-items-center" style="background-color: lightorange;">
+        {% endif %}
+            <strong>Start</strong>{{ use.start_timestamp|datetimeformat('%b %d, %Y %I:%M %p') }}<br>
+            {% if use.end_timestamp is none %}
+            <strong>End</strong>Still in use<br>
+            {% else %}
+            <strong>End</strong>{{ use.end_timestamp|datetimeformat('%b %d, %Y %I:%M %p') }}<br>
+            <strong>Duration</strong>{{ ((use.end_timestamp - use.start_timestamp) / 60) | round(0, 'ceil') }} minutes<br>
+            {% endif %}
+            <span class="badge bg-primary rounded-pill">{{ use.user.name }} {{ use.user.surname }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% if uses|length >= 500 %}
+<span class="small">{{ _("Only first 500 records are displayed. Use filters if needed.") }}</span>
+{% endif %}
+<a href="{{ url_for('machine_use_export', machine_id=machine.machine_id) }}" class="link-info"><i class="fas fa-file-excel"></i>Export table</a>
+{% endblock %}

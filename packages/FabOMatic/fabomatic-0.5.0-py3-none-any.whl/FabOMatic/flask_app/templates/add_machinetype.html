@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid mt-0">
+    <h1>{{ _("Add Machine Type") }}</h1>
+    <form method="POST">
+        <div class="mb-3">
+            <label class="form-label">{{ _("Type Name") }}</label>
+            <input type="text" class="form-control" name="type_name" required>
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">{{ _("Auto-logoff delay") }}</label>
+            <div class="input-group-prepend">
+                <div class="input-group-text">{{ _("(minutes)") }}</div>
+            </div>
+            <input type="number" class="form-control" name="type_timeout_min" value="0" required>
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">{{ _("Power-off grace period") }}</label>
+            <div class="input-group-prepend">
+                <div class="input-group-text">{{ _("(minutes)") }}</div>
+            </div>
+            <input type="number" class="form-control" name="grace_period_min" value="0" required>
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">{{ _("Access control") }}</label>
+            <select class="form-select" name="access_control" required>
+                <option value="{{ MachineType.MANAGEMENT_WITH_AUTHORIZATION }}">{{ _("Machine need to be authorized for users") }}</option>
+                <option value="{{ MachineType.MANAGEMENT_WITHOUT_AUTHORIZATION }}">{{ _("No specific authorization required for users") }}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">{{ _("Submit") }}</button>
+    </form>
+</div>
+{% endblock %}
