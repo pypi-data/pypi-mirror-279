@@ -1,0 +1,14 @@
+envenom/__init__.py,sha256=Y5Rse9NzupzBBGQYThULysBuA0Ka5LeZ8YKJ3NDMWF8,936
+envenom/configs.py,sha256=P57q-854kwqWruxLgpVWKtSIRIdnd0hGnqAbfDN0M2w,3499
+envenom/entries.py,sha256=Es4jyFOdKkFo71g-Hugh7SJj-zZx0JP7JrYSBGpMdl4,2057
+envenom/errors.py,sha256=iaFNi6c-Afr2V4pgD4vGnSlgh0AFrzltiw_17c1gVEI,1471
+envenom/examples/advanced.py,sha256=0_2sAQ2u5vPmY9ZoWfUBs1O36QDfXWoTTgnw279M7eo,3749
+envenom/examples/fastapi.py,sha256=_fbaBI-nwzXzwJuOLQ3QHRU1oI9Hc0mBgpVOZBQRO4o,1454
+envenom/examples/quickstart.py,sha256=PRtZ1f5fb1RGb5AJDgkAdrbmsRE8h8BJziMS9AUprPE,3001
+envenom/parsers.py,sha256=w-cyIYNyc3g5MUcN2oZ0Wa7lZWIZ7nwXj_T8yZbyIMk,1891
+envenom/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+envenom/vars.py,sha256=I-EwXG-DwP_68PjPsvPWCpjIgX7B4T1Mk-8vjY0izlg,4104
+envenom-1.0.11.dist-info/LICENSE,sha256=OhDWHGPZbmv_gSSB5bpAJ781UTHBY38UbX6FJBMfrj8,35145
+envenom-1.0.11.dist-info/METADATA,sha256=iKqG0TwC1h9_FReY99KgW61Lup2wFkBUhd-k8B9PibY,8367
+envenom-1.0.11.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+envenom-1.0.11.dist-info/RECORD,,
