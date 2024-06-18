@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: python-cex
+Version: 0.0.4
+Summary: The Cleaning and EXploration kit for Data Scientist.
+Author: John Willliam (Yande)
+Author-email: <satwikayasayande@gmail.com>
+Keywords: python,data science,cleaning,exploring,clean,explore
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Requires-Dist: scipy
+
+
+# CEX
+
+<img src="https://drive.google.com/uc?export=view&id=1XwHm3fgt0oQU1vcx-dlEOgTZA2q1HMli" alt="Thumbnail">
+
+The ultimate kit for Data Scientists to do data Cleaning and EXploration with 30+ built-in functions.
+
+## Features
+<ul>
+  <li>30+ built-in functions for data cleaning and exploration</li>
+  <li>Compatible with popular data science libraries such as pandas and numpy</li>
+  <li>Comprehensive error handling and validation</li>
+</ul>
+
+## Usage
+Quick example:
+```python
+import cex
+import pandas as pd
+
+df = pd.read_csv("data.csv")
+cex.col_category_graph(df)
+```
+
+Result:
+
+<img src="https://drive.google.com/uc?export=view&id=1zLtv2IgZelCBqPFcsA4HFwhmFjpxo6kW" alt="Sample">
+
+
