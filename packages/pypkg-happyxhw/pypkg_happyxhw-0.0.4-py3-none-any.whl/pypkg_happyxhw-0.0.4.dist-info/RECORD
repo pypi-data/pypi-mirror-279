@@ -1,0 +1,11 @@
+pypkg_happyxhw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypkg_happyxhw/main.py,sha256=2msOrgai9w85HOHtJR2AyyYz5nRS7aH49_pJnVRbLZo,193
+pypkg_happyxhw/fsutils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypkg_happyxhw/fsutils/listdir.py,sha256=TOmgZSKzvdS8WIyWYpaX6yULRdWAlfXF0Mw1KSTZfr0,409
+pypkg_happyxhw/setup_logging/__init__.py,sha256=Zguf1ZWQt0N2gSHHqSm3ZAMrSy0y97ZRVVX-8qmDYYY,25
+pypkg_happyxhw/setup_logging/config.yaml,sha256=V5RXvG-YtRLLkw1GTkV_eG7C8-aUsFsPDEfiEIWgyDc,589
+pypkg_happyxhw/setup_logging/setup.py,sha256=9VORrOH-4pNTnl4e_lAUL2qo49BK3mqz54724qmTpso,621
+pypkg_happyxhw-0.0.4.dist-info/METADATA,sha256=QmqT-UJ8-yGZBYIJQ6fGbxOaEHn5AaaoxT3SI1gU5eQ,250
+pypkg_happyxhw-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pypkg_happyxhw-0.0.4.dist-info/top_level.txt,sha256=1sAGWF7QqV90NXZqvJzexT2T1JWPLFen6TmBqQR6beU,15
+pypkg_happyxhw-0.0.4.dist-info/RECORD,,
