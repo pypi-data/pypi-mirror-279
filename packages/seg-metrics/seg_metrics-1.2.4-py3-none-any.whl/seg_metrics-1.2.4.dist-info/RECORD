@@ -1,0 +1,14 @@
+seg_metrics/__init__.py,sha256=myRRKJ018UuiNSzOCPFjSYC8uEpSmA-wLmIn1-SEVlY,25
+seg_metrics/seg_metrics.py,sha256=1rWhyrV3xuFMEI6GNN_ruZ_VHyLzLzw8LKwmPnaCwR4,19729
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/runner.py,sha256=IiDP3u7Hbq3DBenvwPE_Hde_UD_0yjzcTSgaLWPsJOM,922
+tests/test_save_and_load_itk.py,sha256=tp4NHaavRDLnofFW0cR38OBq_mCHvGl9i7eH9OPFzkM,1801
+tests/test_spacing.py,sha256=TlD9LgBnOrGdEioK1Kk3f1JLwRiFJrjjHHSlHYXnND4,1608
+tests/test_tptnfpfn.py,sha256=J1NpyPInMa4zQ8n3ktWA56KYfwJ5bKqqz5h9Gq9QsqA,2552
+tests/test_type_check.py,sha256=RUFPLeMeE_F-W-n3F8ls26CSvZWME8JhAUjGFpChrMs,1066
+tests/test_write_metrics_itk_or_array.py,sha256=_0iork-xbL8m117UV3Ghzx9AaEbo4kHWESHQGZXLkm8,4493
+seg_metrics-1.2.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+seg_metrics-1.2.4.dist-info/METADATA,sha256=XvO7X1yK_oc5jqFGPhXw2KPqdcX1hAPro23BZ28lZ7U,11197
+seg_metrics-1.2.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+seg_metrics-1.2.4.dist-info/top_level.txt,sha256=pvva13QqrUhG3L0AaGE3wNdwKG3OcIy8KU5j0N_cYFI,18
+seg_metrics-1.2.4.dist-info/RECORD,,
