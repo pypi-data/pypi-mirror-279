@@ -1,0 +1,6 @@
+small_gicp.cpython-310-darwin.so,sha256=nBXRacUMr8_1R7XD71Gqbzej-KRohR9b2_q5Dk16KX8,492624
+small_gicp.dylibs/libomp.dylib,sha256=cdDQkJr6xylSMrEeWgWv7dvY-0whApSTRrEPvQtcKEA,734640
+small_gicp-0.1.0.dist-info/RECORD,,
+small_gicp-0.1.0.dist-info/WHEEL,sha256=QUMoBanDxwnWS9FlZfkKhntt7oYjxJhDPGhTRj0nUxQ,113
+small_gicp-0.1.0.dist-info/METADATA,sha256=rGXGLxFEeU5S9swvqAtIyaumXnL6UVT_xyFNy80dt9Q,22447
+small_gicp-0.1.0.dist-info/licenses/LICENSE,sha256=waOrf_m_VOMgqnjGU6zKcPC0-VXZ0SnJGnCGYFno2NA,1068
