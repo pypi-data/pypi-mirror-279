@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pymdzcf
+Version: 0.1.0
+Summary: Fork of Simon's Mimir: PDDL Parser and Planner Toolkit
+Author: Dillon Z. Chen
+Author-email: dillon.chen1@gmail.com
+Requires-Python: >=3.10
+License-File: LICENSE
+
