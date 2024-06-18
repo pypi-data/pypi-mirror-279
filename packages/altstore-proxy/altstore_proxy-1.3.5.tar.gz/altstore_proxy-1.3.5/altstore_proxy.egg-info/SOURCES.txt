@@ -1,0 +1,16 @@
+LICENSE.md
+README.md
+setup.py
+altstore_proxy/__init__.py
+altstore_proxy/run.py
+altstore_proxy.egg-info/PKG-INFO
+altstore_proxy.egg-info/SOURCES.txt
+altstore_proxy.egg-info/dependency_links.txt
+altstore_proxy.egg-info/entry_points.txt
+altstore_proxy.egg-info/not-zip-safe
+altstore_proxy.egg-info/requires.txt
+altstore_proxy.egg-info/top_level.txt
+altstore_proxy/providers/__init__.py
+altstore_proxy/providers/notifications.py
+altstore_proxy/providers/shared_state.py
+altstore_proxy/providers/version.py
