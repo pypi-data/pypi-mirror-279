@@ -1,0 +1,10 @@
+numpy
+torch
+transformers
+datasets
+
+[build]
+
+[dev]
+bumpver
+pytest

@@ -1,0 +1,2 @@
+[console_scripts]
+extract = activation_extractor.__main__:main
