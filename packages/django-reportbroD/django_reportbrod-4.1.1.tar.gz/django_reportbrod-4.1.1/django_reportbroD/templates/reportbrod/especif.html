@@ -1,0 +1,386 @@
+{% load static %}
+
+{% load i18n %} 
+
+<div class="row" >
+    <div class="card text-white bg-info mb-3">
+        <div class="card-header">
+            <h4 class="card-title text-white">{% trans "esp1" %}</h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text text-white">{% trans "esp1_parr" %}</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="row"> 
+    <div class="col-xxl-12">
+        <div class="card card-statistics">
+            <div class="card-header">
+                <div class="card-heading">
+                    <h4 class="card-title"> {% trans "esp2" %}  </h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab tab-vertical">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" id="exportcode-tab" data-toggle="tab" href="#exportcode" role="tab" aria-controls="exportcode" aria-selected="true"> {% trans "exp1" %} </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="exportname-tab" data-toggle="tab" href="#exportname" role="tab" aria-controls="exportname" aria-selected="false"> {% trans "exp2" %}  </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="exportjson-tab" data-toggle="tab" href="#exportjson" role="tab" aria-controls="exportjson" aria-selected="false">{% trans "exp3" %} </a>
+                        </li>
+                       
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="exportcode" role="tabpanel" aria-labelledby="exportcode-tab">
+                           
+                            <p>{% trans 'exp1_desc' %}</p>
+                       
+                            <div class="card card-statistics">
+                                <div class="card-header">
+                                    <div class="card-heading">
+                                        <h4 class="card-title">{% trans "param" %}</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-success mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">{% trans "nameC" %}</th>
+                                                    <th scope="col">{% trans "descc" %}</th>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>template_code</td>
+                                                    <td>
+                                                    <p>
+                                                       {% trans "template_code" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>data</td>
+                                                    <td> <p>
+                                                       {% trans "data" %}
+                                                    </p></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>extension</td>
+                                                    <td><p>
+                                                        {% trans "extension" %}
+                                                    </p></td>
+                                                   
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>file</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "file" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>download</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "download" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                       
+                        </div>
+                        <div class="tab-pane fade" id="exportname" role="tabpanel" aria-labelledby="exportname-tab">
+                            <p>{% trans 'exp2_desc' %}</p>
+                       
+                            <div class="card card-statistics">
+                                <div class="card-header">
+                                    <div class="card-heading">
+                                        <h4 class="card-title">{% trans "param" %}</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-success mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">{% trans "nameC" %}</th>
+                                                    <th scope="col">{% trans "descc" %}</th>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>template_name</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "template_name" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>data</td>
+                                                    <td> <p>
+                                                       {% trans "data" %}
+                                                    </p></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>extension</td>
+                                                    <td><p>
+                                                        {% trans "extension" %}
+                                                    </p></td>
+                                                   
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>file</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "file" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>download</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "download" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>     
+                       
+                        </div>
+                        <div class="tab-pane fade" id="exportjson" role="tabpanel" aria-labelledby="exportjson-tab">
+                            
+                            <p>{% trans 'exp3_desc' %}</p>
+                       
+                            <div class="card card-statistics">
+                                <div class="card-header">
+                                    <div class="card-heading">
+                                        <h4 class="card-title">{% trans "param" %}</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-success mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">{% trans "nameC" %}</th>
+                                                    <th scope="col">{% trans "descc" %}</th>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>path_json</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "path_json" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>data</td>
+                                                    <td> <p>
+                                                       {% trans "data" %}
+                                                    </p></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>extension</td>
+                                                    <td><p>
+                                                        {% trans "extension" %}
+                                                    </p></td>
+                                                   
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">4</th>
+                                                    <td>file</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "file" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+
+                                                <tr>
+                                                    <th scope="row">5</th>
+                                                    <td>download</td>
+                                                    <td>
+                                                    <p>
+                                                        {% trans "download" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="row"> 
+    <div class="col-xxl-12">
+        <div class="card card-statistics">
+            <div class="card-header">
+                <div class="card-heading">
+                    <h4 class="card-title"> {% trans "format" %} </h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="tab tab-vertical">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active show" id="listdict-tab" data-toggle="tab" href="#listdict" role="tab" aria-controls="listdict" aria-selected="true"> {% trans "format1" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="dict-tab" data-toggle="tab" href="#dict" role="tab" aria-controls="dict" aria-selected="false"> {% trans "format2" %} </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="image64-tab" data-toggle="tab" href="#image64" role="tab" aria-controls="image64" aria-selected="false">{% trans "format3" %} </a>
+                        </li>
+                        
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="listdict" role="tabpanel" aria-labelledby="listdict-tab">
+                            <p>
+                                {% trans "convert_list_to_dict" %}
+
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="dict" role="tabpanel" aria-labelledby="dict-tab">
+                            <p>
+                               {% trans "to_dict" %}
+
+                            </p>     
+                       
+                        </div>
+                        <div class="tab-pane fade" id="image64" role="tabpanel" aria-labelledby="image64-tab">
+                            <p> {% trans "convert_to_base64" %}
+
+                            </p>
+                       
+                            <div class="card card-statistics">
+                                <div class="card-header">
+                                    <div class="card-heading">
+                                        <h4 class="card-title">{% trans "param" %}</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-success mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">{% trans "nameC" %}</th>
+                                                    <th scope="col">{% trans "descc" %}</th>
+                                                   
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>path</td>
+                                                    <td>
+                                                    <p>
+                                                       {% trans "path" %}
+                                                    </p>
+                                                        
+                                                    </td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>format_image</td>
+                                                    <td> <p>
+                                                        {% trans "format_image" %}    
+                                                    
+                                                    </p></td>
+                                                    
+                                                </tr>
+                                             
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

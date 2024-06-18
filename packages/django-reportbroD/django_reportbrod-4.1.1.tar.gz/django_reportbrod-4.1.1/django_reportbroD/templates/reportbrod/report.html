@@ -1,0 +1,168 @@
+{% load static %}
+{% load i18n %} 
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>
+    {% block title %}
+{% trans "report_temp" %}
+    {% endblock %}
+
+ </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Novus Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<!-- app favicon -->
+<link rel="shortcut icon" href="{% static 'assets/img/favicon.ico' %}">
+
+<link href="{% static 'reportlib/reportbro.css' %}" rel="stylesheet" type="text/css"/>
+                 
+<script src="{% static 'reportlib/reportbro.js' %}"></script>
+                   
+
+<link href="{% static 'reportlib/css/styles.css' %}" rel="stylesheet" type="text/css"/>
+
+	<!-- plugins -->
+	<script src="{% static 'assets/js/vendors.js' %}"></script>
+
+	<!-- custom app -->
+	<script src="{% static 'assets/js/app.js' %}"></script>
+
+<script src="{% static 'reportlib/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'reportlib/js/jquery.cookie.js' %}"></script>
+	<!-- plugin stylesheets -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/vendors.css' %}" />
+	<!-- app style -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}" />
+
+    
+
+<script type="text/javascript">
+
+    function csrfSafeMethod(method) {
+        // these HTTP methods do not require CSRF protection
+        return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+    }
+    
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                const csrftoken = $.cookie('csrftoken');
+                xhr.setRequestHeader("X-CSRFToken", csrftoken);
+            }
+        }
+    });
+    
+    </script>
+
+</head>
+<body>
+   <!-- begin app -->
+	
+	
+            <div style="padding:30px">
+                <header class="app-header top-bar">
+                    <!-- begin navbar -->
+                    <nav class="navbar navbar-expand-md">
+                
+                   
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="ti ti-align-left"></i>
+                        </button>
+                        <!-- end navbar-header -->
+                        <!-- begin navigation -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="navigation d-flex">
+                                <ul class="navbar-nav nav-left">
+                                    <li class="nav-item">
+                                        <a href="javascript:void(0)" class="nav-link sidebar-toggle">
+                                            <i class="ti ti-align-right"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link "   role="button"  aria-haspopup="true" aria-expanded="false">
+                                            
+                                            <i class="fa fa-edit"></i> {{name}}
+
+                                        </a>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                
+                                <ul class="navbar-nav nav-right ml-auto">
+                                    
+                                    {% for elem in menu %}
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link " href="{{elem.url}}" id="navbarDropdown2" role="button"  aria-haspopup="true" aria-expanded="false" title="{{elem.label}}"
+                                        
+                                        {% if elem.target %}
+                                        target="__blank"
+                                            
+                                        {% endif %}
+                                        >
+                                            <i class="{{elem.icon}}"></i>
+                
+                                            {% if active_page == elem.id %}
+                                        <span class="notify">
+                                            <span class="blink"></span>
+                                <span class="dot"></span>
+                                </span>
+                                {% endif %}
+                                        </a>
+                                        
+                                    </li>
+                
+                
+                                    {% endfor %}
+                                </ul>
+                             
+            
+                        
+                        </div>
+                        <!-- end navigation -->
+                    </nav>
+                    <!-- end navbar -->
+                </header>
+                
+            </div>
+
+			<div id="reportbro"  >
+               
+            </div> 
+
+
+    <script type="text/javascript">
+    
+    function saveReport() {
+        const report = rb.getReport();
+    
+        // console.log(JSON.stringify(report));
+        $.ajax("{% url 'reportbroD:report_save' pk %}", {
+            data: JSON.stringify(report),
+            type: "PUT", contentType: "application/json",
+            success: function(data) {
+                // report definition saved successfully,
+                // set modified flag to false to disable save button
+                rb.setModified(false);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                alert('saving report failed');
+            }
+        });
+    }
+    
+    const report = {{ report_definition }};
+    const rb = new ReportBro(document.getElementById('reportbro'), {
+        reportServerUrl: "{% url 'reportbroD:report_run' %}",
+        saveCallback: saveReport,
+    });
+    if (report) {
+        rb.load(report);
+    }
+    
+    </script>
+
+</body>
+</html>

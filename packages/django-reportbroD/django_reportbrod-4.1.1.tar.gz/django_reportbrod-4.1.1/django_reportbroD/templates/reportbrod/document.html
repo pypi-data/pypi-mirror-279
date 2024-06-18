@@ -1,0 +1,205 @@
+{% extends 'reportbrod/bases/base.html'%}
+{% load static %}
+{% load i18n %} 
+{% block content %}
+                <div class="app-main" id="main">
+                    <!-- begin container-fluid -->
+                    <div class="container-fluid">
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-md-12 m-b-30">
+                                <!-- begin page title -->
+                                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                                    <div class="page-title mb-2 mb-sm-0">
+                                        <h1>{% trans "titledoc" %}</h1>
+                                    </div>
+                                    <div class="ml-auto d-flex align-items-center">
+                                        <nav>
+                                            <ol class="breadcrumb p-0 m-b-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="/"><i class="ti ti-home"></i></a>
+                                                </li>
+                                                <li class="breadcrumb-item active text-primary" aria-current="page">{% trans "titledoc1" %}</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!--faq-contant-start-->
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="card card-statistics faq-contant p-0 p-sm-4">
+                                    <div class="card-body">
+                                        <div class="tab nav-center">
+                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active show" id="research-tab" data-toggle="tab" href="#research" role="tab" aria-controls="research" aria-selected="true"> {% trans "seccion1" %}</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="design-tab" data-toggle="tab" href="#design" role="tab" aria-controls="design" aria-selected="false"> {% trans "seccion2" %}
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="develop-tab" data-toggle="tab" href="#develop" role="tab" aria-controls="develop" aria-selected="false">
+                                                       {% trans "seccion3" %}</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <div class="tab-content" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show pt-20 active" id="research" role="tabpanel">
+                                                    <div class="accordion" id="accordionsimplefill">
+                                                        <div class="mb-2 acd-group">
+                                                            <div class="card-header bg-primary rounded-0">
+                                                                <h5 class="mb-0">
+                                                                    <a href="#collapse" class="btn-block text-white text-left acd-heading" data-toggle="collapse">1. {% trans "tem1" %} </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse" class="collapse show" data-parent="#accordionsimplefill">
+                                                                <div class="card-body" style="text-align: justify;">
+                                                                    <p>{% trans "tem1_parr1" %}</p>
+                                                                        <p>{% trans "tem1_parr2" %}   </p>
+                                                                        <p>  {% trans "tem1_parr3" %}
+                                                                           </p>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-2 acd-group">
+                                                            <div class="card-header rounded-0 bg-primary">
+                                                                <h5 class="mb-0">
+                                                                    <a href="#collapse2" class="btn-block text-white text-left acd-heading collapsed" data-toggle="collapse">2. {% trans 'tem2' %}
+                                                                        </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse2" class="collapse" data-parent="#accordionsimplefill">
+                                                                <div class="card-body">
+                                                                    <p> {% trans "tem2_parr1" %}
+                                                                    </p>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="acd-group border-bottom-0">
+                                                            <div class="card-header rounded-0 bg-primary">
+                                                                <h5 class="mb-0">
+                                                                    <a href="#collapse3" class="btn-block text-white text-left acd-heading collapsed" data-toggle="collapse">3. {% trans "tem3" %}</a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse3" class="collapse" data-parent="#accordionsimplefill">
+                                                                <div class="card-body">
+                                                                    <p>{% trans "tem3_parr1" %}</p>
+                                                                    <p>{% trans "tem3_parr2" %}</p>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="tab-pane fade  pt-20" id="design" role="tabpanel">
+                                                    <div class="accordion" id="accordionsimplefill">
+                                                        <div class="mb-2 acd-group">
+                                                            <div class="card-header bg-primary rounded-0">
+                                                                <h5 class="mb-0">
+                                                                    <a href="#collapse" class="btn-block text-white text-left acd-heading" data-toggle="collapse">1. {% trans "tem21" %}</a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse" class="collapse show" data-parent="#accordionsimplefill">
+                                                                <div class="card-body" style="text-align: justify;">
+                                                                   
+                                                                           <p> 
+                                                                           
+                                                                                 </p>
+
+
+                                                                                 <div class="card card-statistics">
+                                                                                    <div class="card-header">
+                                                                                       
+                                                                                    </div>
+                                                                                    <div class="card-body">
+                                                                                        <div class="list-group">
+                                                                                            <a href="javascript:void(0)" class="list-group-item list-group-item-action flex-column align-items-start active">
+                                                                                                <div class="d-flex w-100 justify-content-between">
+                                                                                                    <h5 class="mb-1 text-white">{% trans "tem21_1parr1" %}</h5>
+                                                                                                    
+                                                                                                </div>
+                                                                                                
+                                                                                                <p class="mb-1 text-white">{% trans "tem21_1parr2" %}</p>
+                                                                                               
+                                        
+                                                                                            </a>
+                                                                                            <div href="javascript:void(0)" class="list-group-item list-group-item-action flex-column align-items-start">
+                                                                                                <div class="d-flex w-100 justify-content-between">
+                                                                                                    <h5 class="mb-1">{% trans "tem21_2parr1" %}</h5>
+                                                                                                    
+                                                                                                </div>
+                                                                                                
+                                                                                                <p class="mb-1">{% trans "tem21_2parr2" %}</p>
+                                                                                                <b class="text-muted">{% trans "tem21_2parr3" %}  <a href="https://github.com/jobsta/albumapp-django">albumapp-django</a></b>
+                                                                                               
+                                                                                            </div>
+                                                                                            
+                                                                                            <div href="javascript:void(0)" class="list-group-item list-group-item-action flex-column align-items-start">
+                                                                                                <div class="d-flex w-100 justify-content-between">
+                                                                                                    <h5 class="mb-1">{% trans "tem21_3parr1" %}</h5>
+                                                                                                
+                                                                                                </div>
+                                                                                               
+                                                                                                <p class="mb-1">
+
+                                                                                                    {% trans "tem21_3parr2" %}
+                                                                                                </p>
+                                                                                               
+                                                                                            
+                                                                                               
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-2 acd-group">
+                                                            <div class="card-header rounded-0 bg-primary">
+                                                                <h5 class="mb-0">
+                                                                    <a href="#collapse2" class="btn-block text-white text-left acd-heading collapsed" data-toggle="collapse">2. {% trans "tem22" %}
+                                                                        </a>
+                                                                </h5>
+                                                            </div>
+                                                            <div id="collapse2" class="collapse" data-parent="#accordionsimplefill">
+                                                                <div class="card-body">
+                                                                    <p> {% trans "tem22_parr1" %} </p>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                      
+                                                    </div>
+                                                </div>
+                                            
+
+                                                <div class="tab-pane fade  pt-20" id="develop" role="tabpanel">
+                                                   
+                                                   {% include 'reportbrod/especif.html' %}
+                                                  
+                                                </div>
+                                            
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--faq-contant-end-->
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+            {% endblock %}
+           

@@ -1,0 +1,5 @@
+include License.txt
+include README.rst
+recursive-include django_reportbroD/static *
+recursive-include django_reportbroD/templates *
+recursive-include django_reportbroD/locale *

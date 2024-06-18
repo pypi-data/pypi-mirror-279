@@ -1,0 +1,113 @@
+{% load static %}
+{% load i18n %} 
+<header class="app-header top-bar">
+    <!-- begin navbar -->
+    <nav class="navbar navbar-expand-md">
+
+        <!-- begin navbar-header -->
+        <div class="navbar-header d-flex align-items-center">
+            <a href="javascript:void:(0)" class="mobile-toggle"><i class="ti ti-align-right"></i></a>
+            <a class="navbar-brand" href="{% url 'reportbroD:list' %}" >
+                <img src="{% static 'assets/img/logo.png' %}" class="img-fluid logo-desktop" alt="logo" />
+                <img src="{% static 'assets/img/logo-icon.png' %}" class="img-fluid logo-mobile" alt="logo" />
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ti ti-align-left"></i>
+        </button>
+        <!-- end navbar-header -->
+        <!-- begin navigation -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navigation d-flex">
+                <ul class="navbar-nav nav-left">
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" class="nav-link sidebar-toggle">
+                            <i class="ti ti-align-right"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  " href="{% url 'reportbroD:list' %}"  role="button"  aria-haspopup="true" aria-expanded="false">
+                            
+                            <i class="fa fa-edit"></i> {% trans "app" %}
+                          
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+
+                <ul class="navbar-nav nav-right ml-auto menuhidden">
+                    
+                    {% for elem in menu %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link " href="{{elem.url}}" id="navbarDropdown2" role="button"  aria-haspopup="true" aria-expanded="false" title="{{elem.label}}"
+                        {% if elem.target %}
+                        target="__blank"
+                            
+                        {% endif %}
+                        >
+                            <i class="{{elem.icon}}"></i>
+
+                            {% if active_page == elem.id %}
+                        <span class="notify">
+                            <span class="blink"></span>
+                <span class="dot"></span>
+                </span>
+                {% endif %}
+                        </a>
+                        
+                    </li>
+
+
+                    {% endfor %}
+                </ul>
+             
+
+                
+{% url 'set_language' as language_url %}
+{% if language_url %}
+                <ul class="navbar-nav nav-right ml-auto ">
+                   
+                  
+
+<form  action="{% url 'set_language' %}" method="post" style="display: inline;">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}">
+  
+    {% get_current_language as LANGUAGE_CODE %}
+   
+    {% if LANGUAGE_CODE == 'es' %}
+    <img src="{% static 'assets/img/spain.png' %}" width="20px;" />
+    {% else %}
+
+    <img src="{% static 'assets/img/eeuu.png' %}" width="20px;" />
+    {% endif %}
+    
+
+    <select  class="js-basic-single form-control"  name="language" onchange="this.form.submit()">
+
+        {% for language in reportbro_langs %}
+            <option value="{{ language.code }}"
+            {% if language.code == LANGUAGE_CODE %} 
+            selected
+            {% endif %}>
+           
+<img src="{% static 'assets/img/spain.png' %}" width="10px;" />
+        
+                {{ language.name_local |lower|capfirst}} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    
+</form>
+
+
+</ul>
+{% endif %} 
+
+        </div>
+        <!-- end navigation -->
+    </nav>
+    <!-- end navbar -->
+</header>
+
