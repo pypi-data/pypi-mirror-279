@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "qolab"
+author = "Eugeniy E. Mikhailov"
+author-email = "eemikh@wm.edu"
+classifiers = ["License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)"]
+description-file = "README.md"
+requires = [
+	"numpy >=1.19.5",
+	"matplotlib >=3.3.4",
+	"pyvisa >=1.11.3",
+	"scipy >=1.6.0",
+	"pyyaml >=5.3.1",
+	"justpy >= 0.2.3",
+	"pandas >= 1.1.5",
+	"starlette == 0.17.1; python_version <= '3.9'",
+	"starlette >= 0.17.1; python_version > '3.9'",
+	"universal_tsdb >=0.1.1",
+	"cachetools >=5.0.0",
+	"pyserial >= 3.4",
+]
+
