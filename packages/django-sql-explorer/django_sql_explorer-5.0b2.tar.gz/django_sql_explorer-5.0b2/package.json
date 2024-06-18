@@ -1,0 +1,39 @@
+{
+  "name": "django-sql-explorer",
+  "description": "Django SQL Explorer",
+  "type": "module",
+  "scripts": {
+    "dev": "export APP_VERSION=$(python -c 'from explorer import __version__; print(__version__)') && npx vite --config vite.config.mjs",
+    "build": "export APP_VERSION=$(python -c 'from explorer import __version__; print(__version__)') && npx vite build --config vite.config.mjs",
+    "preview": "export APP_VERSION=$(python -c 'from explorer import __version__; print(__version__)') && npx vite preview --config vite.config.mjs"
+  },
+  "devDependencies": {
+    "sass": "~1.69.0",
+    "vite": "^5.0.13",
+    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-static-copy": "^1.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisclark/django-sql-explorer.git"
+  },
+  "author": "Chris Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisclark/django-sql-explorer/issues"
+  },
+  "homepage": "https://www.sqlexplorer.io",
+  "dependencies": {
+    "@codemirror/lang-sql": "^6.5.4",
+    "@codemirror/language-data": "^6.3.1",
+    "bootstrap": "^5.0.1",
+    "bootstrap-icons": "^1.11.2",
+    "codemirror": "^6.0.1",
+    "cookiejs": "^2.1.3",
+    "dompurify": "^3.0.7",
+    "jquery": "^3.7.1",
+    "list.js": "^2.3.1",
+    "marked": "^11.1.1",
+    "sortablejs": "^1.15.2"
+  }
+}
