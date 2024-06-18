@@ -1,0 +1,13 @@
+xarray_selafin/Serafin.py,sha256=yoDBGLFnS8x6YpnMud-2rqadeDCrDRMwrZXdCFW_VRA,49058
+xarray_selafin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_selafin/data/Serafin_var2D.csv,sha256=TSDsEvnEXUXqN7ViCxV9WweUEpwAoPnQwEgxjvY7U8U,2562
+xarray_selafin/data/Serafin_var3D.csv,sha256=FxcIKriFWxn6mw75kjKDapbPaKxQOO_vxgCL9uVs0ng,790
+xarray_selafin/variable/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xarray_selafin/variable/variables_2d.py,sha256=_x6eC3i2Fyfp9fqeo_fp4JBA2ln50Jpb4DNWBLt7tuE,12235
+xarray_selafin/variable/variables_3d.py,sha256=11ZSXy9QL07Em7edK4FIaUWSnjT55ERokgl0m0rJW4s,2507
+xarray_selafin/variable/variables_utils.py,sha256=dUjV54cdGBtcuRwlHRF-EMTc4RkD5TAQ6-SgHxg7ofA,5294
+xarray_selafin/xarray_backend.py,sha256=WkA8o6e8MEu7Trpwis155xAN5p9YaonxAClYLrXmruI,12221
+xarray_selafin-0.1.7.dist-info/METADATA,sha256=PHcJ3m1weiOMxPu6o6VOd64d4-SwvvOnqdHZheH1qE4,4151
+xarray_selafin-0.1.7.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+xarray_selafin-0.1.7.dist-info/entry_points.txt,sha256=BtjrDIGERI9X0JY3Z2hYHLB_J6InDBZ5aRIHoAmlids,82
+xarray_selafin-0.1.7.dist-info/RECORD,,
