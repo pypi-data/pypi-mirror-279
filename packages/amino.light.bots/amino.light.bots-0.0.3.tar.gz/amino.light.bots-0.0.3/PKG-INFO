@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: amino.light.bots
+Version: 0.0.3
+Summary: Best library for amino bots
+Home-page: https://github.com/AugustLigh/AminoLightBots
+Author: AugustLight
+License: MIT
+Keywords: amino,aminoapps,amino.fix,amino.light,amino.ligt.py,AminoLightPy,amino-bot,narvii,medialab,api,python,python3,python3.x,minori,august,augustlight,aminolightpy,amino.pyamino.light.botsaminolightbots
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+Requires-Dist: amino.light.py

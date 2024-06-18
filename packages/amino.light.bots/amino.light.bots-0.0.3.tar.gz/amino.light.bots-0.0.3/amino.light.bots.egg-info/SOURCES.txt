@@ -1,0 +1,13 @@
+setup.cfg
+setup.py
+AminoLightBots/__init__.py
+AminoLightBots/bot.py
+AminoLightBots/custom_filters.py
+AminoLightBots/handler_backends.py
+AminoLightBots/typing.py
+AminoLightBots/util.py
+amino.light.bots.egg-info/PKG-INFO
+amino.light.bots.egg-info/SOURCES.txt
+amino.light.bots.egg-info/dependency_links.txt
+amino.light.bots.egg-info/requires.txt
+amino.light.bots.egg-info/top_level.txt
