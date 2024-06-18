@@ -1,0 +1,2 @@
+[console_scripts]
+dbally = dbally_cli.main:cli
