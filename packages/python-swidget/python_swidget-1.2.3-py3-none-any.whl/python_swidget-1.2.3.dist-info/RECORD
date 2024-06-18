@@ -1,0 +1,16 @@
+swidget/__init__.py,sha256=MKDch9qYA0BA_Q_9VFFABJwTwGC3-A6pydOLRBAdPj8,1353
+swidget/cli.py,sha256=Fg2QAbZ0XnbmnReq_zoM51kFk59-AxePsY8IZ_ZZIXA,9052
+swidget/discovery.py,sha256=f54hu4q8Ixu8psX5NHNfnpCUVxkLC6Cz6pTVbvEEMSI,4397
+swidget/exceptions.py,sha256=JOSwaOwwv8YLry687vZmTQLY-BrrTpCs0CIZr7u-J48,79
+swidget/provision.py,sha256=yiYI1JmGB25zR0m0xuLpEL7lC8fJxJQj_TTOocAYu0s,5135
+swidget/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+swidget/swidgetdevice.py,sha256=zKk331enWwbO2S9sWstnlaSwVtywROnswGmaDPcIzaU,28594
+swidget/swidgetdimmer.py,sha256=yyIf0QM9O4PDk0NObop7lEbTFJ4AJGyt2Tl8XGh08dc,2355
+swidget/swidgetoutlet.py,sha256=7Yhl3PX9e_5MtixvpIYH_px6lIb509Rf_-HhCKTH6S8,601
+swidget/swidgetswitch.py,sha256=byjER_5Zn41OLTBB4SGq81KWlcLDPJ9LOUkocW86fsw,611
+swidget/swidgettimerswitch.py,sha256=zKzUYdtSbV6Qh_vqi0Cs1MRRpcwf57hqkMp5z3VbOAU,1098
+swidget/websocket.py,sha256=rXjBz8q7OTDpH_xNWigRS96okFezszz8e04M55hMhKg,6531
+python_swidget-1.2.3.dist-info/METADATA,sha256=NgACeSL9aBy5J2KXnNhn7a096dRlsZI3x8BOsllxR-M,1854
+python_swidget-1.2.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+python_swidget-1.2.3.dist-info/entry_points.txt,sha256=ksGZuoFNqyktLnxPUCFDHokC_7n1uu4GSMUEerwwDmY,43
+python_swidget-1.2.3.dist-info/RECORD,,
