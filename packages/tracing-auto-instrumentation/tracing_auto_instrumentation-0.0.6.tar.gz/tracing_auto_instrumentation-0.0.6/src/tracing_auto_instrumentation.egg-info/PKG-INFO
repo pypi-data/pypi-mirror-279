@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: tracing_auto_instrumentation
+Version: 0.0.6
+Author: LastMile AI
+Project-URL: Homepage, https://github.com/lastmile-ai/tracing_auto_instrumentation
+Project-URL: Bug Tracker, https://github.com/lastmile-ai/tracing_auto_instrumentation/issues
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: lastmile_eval
+Requires-Dist: html2text
+Requires-Dist: pandas
+Requires-Dist: pyarrow
+Requires-Dist: tqdm
+Provides-Extra: ibm
+Requires-Dist: ibm-watsonx-ai; extra == "ibm"
+Provides-Extra: langchain
+Requires-Dist: langchain; extra == "langchain"
+Requires-Dist: langchain_core; extra == "langchain"
+Requires-Dist: langchain_openai; extra == "langchain"
+Requires-Dist: openinference-instrumentation-langchain; extra == "langchain"
+Provides-Extra: llama-index
+Requires-Dist: llama-index; extra == "llama-index"
+Requires-Dist: llama-index-embeddings-openai; extra == "llama-index"
+Requires-Dist: llama-index-readers-web; extra == "llama-index"
+Requires-Dist: llama-index-callbacks-openinference; extra == "llama-index"
+Requires-Dist: openinference-instrumentation-llama-index; extra == "llama-index"
+Provides-Extra: openai
+Requires-Dist: openai; extra == "openai"
