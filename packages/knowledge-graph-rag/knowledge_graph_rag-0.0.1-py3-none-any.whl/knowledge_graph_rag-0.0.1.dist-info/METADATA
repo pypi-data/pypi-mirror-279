@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: knowledge-graph-rag
+Version: 0.0.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy (==1.26.0)
+Requires-Dist: networkx (==3.2.1)
+Requires-Dist: nltk (==3.8.1)
+Requires-Dist: litellm (==1.34.0)
+
+# Graph RAG
+## Create a graph of interconnected documents and boost performance on RAG
+
+### 1. Install Graph RAG:
+
+`pip install graph-rag`
+
+### 2. 
