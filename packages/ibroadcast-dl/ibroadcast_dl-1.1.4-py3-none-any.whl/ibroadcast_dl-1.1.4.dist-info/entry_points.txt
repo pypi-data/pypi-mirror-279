@@ -1,0 +1,3 @@
+[console_scripts]
+ibroadcast-dl=ibroadcastdl.cli:app
+
