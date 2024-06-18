@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "weiroll-py"
+version = "0.2.2"
+description = "Build weiroll transactions with brownie"
+authors = ["FP <FP@no-email.com>"]
+license = "MIT"
+repository = "https://github.com/fp-crypto/weiroll-py"
+packages = [
+    { include = "./weiroll.py" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+eth-brownie = ">=v1.20"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
