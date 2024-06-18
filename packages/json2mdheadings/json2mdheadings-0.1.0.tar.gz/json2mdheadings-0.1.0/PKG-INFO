@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: json2mdheadings
+Version: 0.1.0
+Summary: A Python package for converting JSON data to Markdown with keys as headings.
+Home-page: https://github.com/bnovak1/json2mdheadings
+Author: Brian Novak
+Author-email: tajrkala@gmail.com
+License-File: LICENSE
