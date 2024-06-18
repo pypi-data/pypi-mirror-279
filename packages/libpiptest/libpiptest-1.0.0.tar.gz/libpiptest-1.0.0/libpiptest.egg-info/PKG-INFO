@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: libpiptest
+Version: 1.0.0
+Summary: Module for pip test
+Author-email: ashok <ashok@email.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Requires-Dist: requests

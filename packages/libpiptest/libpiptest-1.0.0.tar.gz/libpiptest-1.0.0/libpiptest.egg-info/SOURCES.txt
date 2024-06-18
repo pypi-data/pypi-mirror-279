@@ -1,0 +1,8 @@
+pyproject.toml
+libpiptest.egg-info/PKG-INFO
+libpiptest.egg-info/SOURCES.txt
+libpiptest.egg-info/dependency_links.txt
+libpiptest.egg-info/requires.txt
+libpiptest.egg-info/top_level.txt
+testAuth/__init__.py
+testAuth/custom_handlers.py
