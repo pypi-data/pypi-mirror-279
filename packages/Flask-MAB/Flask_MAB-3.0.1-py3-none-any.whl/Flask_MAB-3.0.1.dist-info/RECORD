@@ -1,0 +1,11 @@
+flask_mab/__init__.py,sha256=3nQWPPPIBTZe7sSNU-07-clQPXnDaglN-n2WQ87IILs,8535
+flask_mab/bandits.py,sha256=F94hjKYKzxVhksCGxX3xE9BdcoxUlVMVNGrxFF3WmhA,7002
+flask_mab/debug_panels.py,sha256=O5jdSeoGLKi0aD2oCwa6YXzm-e8C1Am2RqKJcc1Oprk,1680
+flask_mab/mab.py,sha256=gn-kGymKfULdLHeARzuRYjRr0bP6nWJgpS1T_6Ej4q0,352
+flask_mab/storage.py,sha256=Mo82uQTSvzXYjvG-7ktGAj7kTEmBFCf2XrJemTjrd2M,1749
+flask_mab/templates/panels/mab-panel.html,sha256=sj787PdMb4_ggv9bwClBk4kXCrIIWexHUIsEhtE5GbI,2557
+Flask_MAB-3.0.1.dist-info/LICENSE,sha256=fjdYWCfAoGPCDvgKxJcbrM7SL405qGqli8zFL5QzkC8,1534
+Flask_MAB-3.0.1.dist-info/METADATA,sha256=9pItMwq862Z8btxwx36SkelXpdootA5Qv4U1vHpYPPg,11625
+Flask_MAB-3.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Flask_MAB-3.0.1.dist-info/top_level.txt,sha256=XpavJpg5o5C1SrCLAoBiey7_lvVIAxlSHSXIjut6UKk,10
+Flask_MAB-3.0.1.dist-info/RECORD,,
