@@ -1,0 +1,11 @@
+message_flow/__init__.py,sha256=6qDH6LlcIxmpzVa8d3R2sSC1Oze-hWHTCm3250PtEcA,247
+message_flow/message_email.py,sha256=cAODPh_pwqG_9qVt01yrtGpOXLixxUra-SSPtloh_9g,1640
+message_flow/message_teams.py,sha256=sPDKWRfIQ80buPtwxFJDh2Vmfne6yndvx7pLTdjByPI,5606
+message_flow/message_teams_chat.py,sha256=0BYi--Y92WRoMv13AfMAIR65f6Smn1ySlwNFlrIt-Mg,748
+message_flow/message_whats.py,sha256=fUU606OL9FT2BjW953_OTeevkj8rsbjQCaVvq-hupoU,991
+message_flow/report_pbi.py,sha256=gstZUppNHMY3NHUldAdVs12NaEfXUijHu9UUErtPm3Q,6325
+message_flow/storage.py,sha256=-QfUQkF0wTRufLAxMH6lzPTY-eCMKiwNM-iKYNjR4mo,1137
+ms_message_flow-0.0.1.dist-info/METADATA,sha256=GK8XHq4dfzu_GiteQj4LdlR26WgTruqC1z6R9Jz9M_8,360
+ms_message_flow-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+ms_message_flow-0.0.1.dist-info/top_level.txt,sha256=S0u6OqMdxA_5eXt8I-OJhp-dmSZKrcBu8q6lmEd4jHw,13
+ms_message_flow-0.0.1.dist-info/RECORD,,
