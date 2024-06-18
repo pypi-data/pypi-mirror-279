@@ -1,0 +1,9 @@
+xmextras/__init__.py,sha256=KJBoM4tWDoNLjrIuPXwOWxNC5UsUzqCcCslQx_Xkzu8,268
+xmextras/mcrlint.py,sha256=a416gkcJ0ZCAhfKziBMsT0eq07mvD9PbURBJg57Dqnw,3330
+xmextras/noxm.py,sha256=DcCPNtB6ecvUMKnInB5EhJ8ztPwSQj-K0tF79PYo4C0,648
+xmextras/xm.py,sha256=Pevl8Go-JiLtwidX45qbF2qrAB08vNeA3fZohBG8G8c,2006
+xmextras-2024.169.1082.dist-info/LICENSE.txt,sha256=uXHyrGUj5FF-zbPZFXfC6se1gZZVSnM5TRMs5Ankgpg,11350
+xmextras-2024.169.1082.dist-info/METADATA,sha256=RtduSbzBg1XOCzMbWFXmsfuxNaLy3YLPegj4t9yQb4M,2018
+xmextras-2024.169.1082.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+xmextras-2024.169.1082.dist-info/entry_points.txt,sha256=6bQR_iQDEIxmsNGwD2kfYfgGThdMVwlME32r3C4kbM0,52
+xmextras-2024.169.1082.dist-info/RECORD,,
