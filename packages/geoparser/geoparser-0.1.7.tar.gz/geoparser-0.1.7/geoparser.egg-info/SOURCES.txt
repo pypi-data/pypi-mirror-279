@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+geoparser/__init__.py
+geoparser/__main__.py
+geoparser/gazetteer.py
+geoparser/geodoc.py
+geoparser/geonames.py
+geoparser/geoparser.py
+geoparser/geospan.py
+geoparser/trainer.py
+geoparser.egg-info/PKG-INFO
+geoparser.egg-info/SOURCES.txt
+geoparser.egg-info/dependency_links.txt
+geoparser.egg-info/requires.txt
+geoparser.egg-info/top_level.txt
