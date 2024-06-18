@@ -1,0 +1,83 @@
+name: CI testing
+
+on:
+    pull_request:
+      branches:
+        - dev
+        - main
+      paths-ignore:
+        - "**.md"
+        - "**.txt"
+        - "**.cff"
+        - 'docs/**'
+        - '.gitignore'
+    push:
+      branches:
+        - main
+
+jobs:
+    testing:
+      name: CI (Python=${{ matrix.python-version }}, OS=${{ matrix.os }})
+      runs-on: ${{ matrix.os }}
+      defaults:
+        run:
+          shell: bash -el {0}
+      strategy:
+        matrix:
+          os: ["ubuntu-latest", "macos-latest", "windows-latest"]
+          python-version: ["3.11"]
+
+          include:
+            - python-version: "3.8"
+              os: "ubuntu-latest"
+            - python-version: "3.9"
+              os: "ubuntu-latest"
+            - python-version: "3.10"
+              os: "ubuntu-latest"
+      steps:
+        - name: checkout actions
+          uses: actions/checkout@v4
+        - uses: conda-incubator/setup-miniconda@v3
+          with:
+            auto-update-conda: true
+            python-version: ${{ matrix.python-version }}
+            channels: conda-forge
+
+        - name: install dependencies
+          run: conda install -c conda-forge freecad -y
+
+        - name: install package
+          run: |
+            python -m pip install --upgrade pip
+            python -m pip install .
+            geouned_cadtocsg --help
+            python -c 'import geouned'
+            python -c 'from geouned import CadToCsg'
+            python -c 'from geouned import CsgToCad'
+            python -m pip install .[tests]
+
+        - name: testing package version
+          run: |
+            python -m pytest -v tests/test_version.py
+            
+        - name: testing GEOUNED CadToCsg functionality
+          run: |
+            python -m pytest -v tests/test_cadtocsg.py
+            geouned_cadtocsg -i tests/config_cadtocsg_complete_defaults.json
+            geouned_cadtocsg -i tests/config_cadtocsg_non_defaults.json
+
+        - name: testing GEOUNED CsgToCad functionality
+          run: |
+            python -m pytest -v tests/test_csgtocad.py
+            geouned_csgtocad -i tests/config_csgtocad_complete.json
+            geouned_csgtocad -i tests/config_csgtocad_minimal.json
+
+        - name: install openmc
+          if: ${{ matrix.os == 'ubuntu-latest'}}
+          run: conda install -c conda-forge openmc -y
+
+        - name: testing with OpenMC
+          if: ${{ matrix.os == 'ubuntu-latest'}}
+          run: |
+            python -m pytest -v tests/test_volumes.py
+            python -m pytest -v tests/test_transport.py

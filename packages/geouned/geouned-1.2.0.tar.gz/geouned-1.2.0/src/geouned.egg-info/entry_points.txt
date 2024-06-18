@@ -1,0 +1,3 @@
+[console_scripts]
+geouned_cadtocsg = geouned.GEOUNED.scripts.geouned_cadtocsg:main
+geouned_csgtocad = geouned.GEOReverse.scripts.geouned_csgtocad:main

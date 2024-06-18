@@ -1,0 +1,11 @@
+tqdm
+numpy
+
+[docs]
+sphinx
+pydata-sphinx-theme
+sphinx_autodoc_typehints
+
+[tests]
+pytest
+black==24.4.2
