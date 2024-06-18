@@ -1,0 +1,12 @@
+---
+
+# Playbook for APIC bootstrap
+
+- name: APIC BOOTSTRAP
+  hosts: localhost
+  gather_facts: False
+
+  tasks:
+    - name: APIC REIMAGE
+      include_role:
+        name: apic_reimage

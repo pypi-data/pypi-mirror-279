@@ -1,0 +1,12 @@
+---
+
+# Playbook for ACI switch bootstrap
+
+- name: ACI SWITCH BOOTSTRAP
+  hosts: localhost
+  gather_facts: False
+
+  tasks:
+    - name: ACI SWITCH REIMAGE
+      include_role:
+        name: aci_switch_reimage
