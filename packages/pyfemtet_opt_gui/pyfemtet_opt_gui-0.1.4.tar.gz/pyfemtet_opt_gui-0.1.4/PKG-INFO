@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyfemtet_opt_gui
+Version: 0.1.4
+Summary: GUI to build and run a script for pyfemtet.opt
+Home-page: https://github.com/pyfemtet/pyfemtet-opt-gui
+License: LGPL-3.0
+Author: kazuma.naito
+Author-email: kazuma.naito@murata.com
+Requires-Python: >=3.11,<3.13
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pyfemtet (>=0.4.5)
+Requires-Dist: pyside6 (>=6.7.1,<7.0.0)
+Project-URL: Repository, https://github.com/pyfemtet/pyfemtet-opt-gui
+Description-Content-Type: text/markdown
+
+# pyfemtet-opt-gui
+GUI to build and run a script for pyfemtet.opt
+
