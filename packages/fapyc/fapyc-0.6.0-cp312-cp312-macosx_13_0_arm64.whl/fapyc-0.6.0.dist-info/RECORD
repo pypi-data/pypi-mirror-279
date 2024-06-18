@@ -1,0 +1,14 @@
+fapyc/__init__.py,sha256=KeSUbho0PvltCnaOTMdiRrfQu4GG3bdNNP4PDlbv0bY,672
+fapyc/_fapyc.cpython-312-darwin.so,sha256=vET1-QVahQmTzWABYONsK6q_H6VDHZsWzQW9PmFk26U,350784
+fapyc/include/fapec_comp.h,sha256=Yyp8xLEOHPhZTaAUj4TQS8xqt0-Higk6KwxF1cr_dNA,10976
+fapyc/include/fapec_decomp.h,sha256=O3_47KNBcbBFyjBU4GmzCjGFblY9wg-zxIdCoZsfKa8,22077
+fapyc/include/fapec_opts.h,sha256=oROaXo5JqAAQ0vG4U8373-CKGa-8FIBFGt-1CztXkBE,42612
+fapyc/lib/libFapecCompress.dylib,sha256=Cx__jOGaEWqvdfJCQORrv4q5XUZngjdBz6lVObFAJ6U,821464
+fapyc/lib/libFapecCompress.so,sha256=IImq9IYwypgA3IbDHeQ4v11fhu-6NgiuuVzqrtRQnFQ,936864
+fapyc/lib/libFapecDecompress.dylib,sha256=6VuMHwzOuPcWO5MbMBZBAuGPdCTEfODpU5krtXjPMxo,357912
+fapyc/lib/libFapecDecompress.so,sha256=y96qZVFVHeHWVKJElhgs6BXrk0HgoRw_rA02Oo98mE4,400224
+fapyc-0.6.0.dist-info/LICENSE,sha256=MJ8njzZUKr2DDsAFsz6hhrqx2e4Y3mCLYeb8aZxZ9a0,1530
+fapyc-0.6.0.dist-info/METADATA,sha256=t_3ADWNMpOuQl9lJowIoCrlNkO7Rv-R_dLREd4pZJIE,12496
+fapyc-0.6.0.dist-info/WHEEL,sha256=aFQ0MChcsL9Fq2N3FISuE6oqEgpnB5X_b5H-LzINXf8,110
+fapyc-0.6.0.dist-info/top_level.txt,sha256=6mrRg_DSbXtLEwgE5fSxauj64kL7igSCWnZx2vQbpWY,6
+fapyc-0.6.0.dist-info/RECORD,,
