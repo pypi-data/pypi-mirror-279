@@ -1,0 +1,12 @@
+biopython<2.0,>=1.83
+ipywidgets<9.0,>=8.1.2
+numpy<2.0,>=1.26.4
+onnxruntime<2.0,>=1.17.3
+pandas<3.0,>=2.2.2
+python_codon_tables<1.0,>=0.1.12
+pytorch_lightning<3.0,>=2.2.1
+scipy<2.0,>=1.13.1
+setuptools<69.0,>=68.2.2
+torch<3.0,>=2.2.2
+tqdm<5.0,>=4.66.2
+transformers<5.0,>=4.40.0

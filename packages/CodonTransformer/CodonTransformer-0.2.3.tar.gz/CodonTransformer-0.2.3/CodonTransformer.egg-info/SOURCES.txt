@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+CodonTransformer/CodonData.py
+CodonTransformer/CodonEvaluation.py
+CodonTransformer/CodonJupyter.py
+CodonTransformer/CodonPrediction.py
+CodonTransformer/CodonUtils.py
+CodonTransformer/__init__.py
+CodonTransformer.egg-info/PKG-INFO
+CodonTransformer.egg-info/SOURCES.txt
+CodonTransformer.egg-info/dependency_links.txt
+CodonTransformer.egg-info/requires.txt
+CodonTransformer.egg-info/top_level.txt
+src/__init__.py
