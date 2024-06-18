@@ -1,0 +1,3 @@
+[console_scripts]
+gen-coveragerc = igbpyutils.dev:generate_coveragerc_cli
+py-check-script-vs-lib = igbpyutils.dev:check_script_vs_lib_cli
