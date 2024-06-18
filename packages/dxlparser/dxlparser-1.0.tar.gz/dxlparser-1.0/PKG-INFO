@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: dxlparser
+Version: 1.0
+Summary: Library for calculating prices and discounts depending on some conditions
+Author-email: Brayan Tellez Cruz <btellez948@gmail.com>, Giovanni Garciliano Díaz <rapunzel@disroot.org>
+Maintainer-email: Giovanni Garciliano Díaz <rapunzel@disroot.org>
+Project-URL: Homepage, https://mmedia1.fi-b.unam.mx/
+Keywords: price,parser
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: COPYING
+
+# dxf-parser
+
+## Ejemplo de uso
+
+```
+import pricelang
+originalExpression = "all: 1200; unam: 500, +15%[f>=2023-12-1 & f<=2023-12-31], +200[n>=3&x>=2000]; general: 800, +50%[f=--2-14]"
+# Parsing the expression string to PriceTree representation
+tree = pricelang.parse(originalExpression)
+tree.show()
+print(tree)
+# Interpreting an expression tree
+conditions = {
+    "f": "2023-12-20",
+    "n": 5,
+    "x": 3000.40,
+    "user": "unam",
+}
+price = pricelang.test(tree, conditions)
+print(price)
+```

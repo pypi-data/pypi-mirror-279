@@ -1,0 +1,16 @@
+COPYING
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/cadena.c
+src/cadena.h
+src/calc.c
+src/calc.h
+src/dxlparser.c
+src/stack.c
+src/stack.h
+src/dxlparser.egg-info/PKG-INFO
+src/dxlparser.egg-info/SOURCES.txt
+src/dxlparser.egg-info/dependency_links.txt
+src/dxlparser.egg-info/top_level.txt
