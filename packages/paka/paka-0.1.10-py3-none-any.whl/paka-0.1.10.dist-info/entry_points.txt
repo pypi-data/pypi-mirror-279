@@ -1,0 +1,3 @@
+[console_scripts]
+paka=paka.cli.__main__:main
+
