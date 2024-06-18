@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: chatur-chains
+Version: 0.1.1
+Summary: LLM chatbot chains and logic for WILMA
+Author-email: Enrique Noriega-Atala <enoriega@arizona.edu>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: langchain ==0.1.16
+Requires-Dist: langchain-core ==0.1.52
+Requires-Dist: langchain-community ==0.0.34
+Requires-Dist: langserve
+Requires-Dist: uvicorn ==0.29.0
+Requires-Dist: chromadb ==0.5.0
+Requires-Dist: fastapi ==0.110.1
+Requires-Dist: chardet
+Requires-Dist: openai ==1.24.0
+Requires-Dist: gpt4all ==2.6.0
+Requires-Dist: pydantic
+Requires-Dist: pytest
+Requires-Dist: langchain-openai ==0.1.6
+Requires-Dist: sentence-transformers ==2.7.0
+Requires-Dist: weaviate-client ==4.5.7
+Requires-Dist: langchain-weaviate ==0.0.1
+
