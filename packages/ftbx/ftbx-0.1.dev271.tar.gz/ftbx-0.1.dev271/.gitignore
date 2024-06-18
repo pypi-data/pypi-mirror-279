@@ -1,0 +1,17 @@
+/venv/
+/.idea/
+*.json
+*.csv
+/*/
+!/src/
+!/tests/
+!/flex-icons/
+!/templates/
+!/templates/*/*/*.json
+*.bat
+.k
+ftbx.bat
+__pycache__
+/*-old/
+*egg*
+*version*
