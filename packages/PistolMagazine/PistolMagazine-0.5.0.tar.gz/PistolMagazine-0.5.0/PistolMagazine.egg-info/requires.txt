@@ -1,0 +1,4 @@
+Faker==25.1.0
+pytest==6.2.4
+dicttoxml~=1.7.16
+PyMySQL~=1.0.2
