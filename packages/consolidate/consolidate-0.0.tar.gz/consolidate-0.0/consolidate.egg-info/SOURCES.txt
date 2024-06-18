@@ -1,0 +1,8 @@
+README.md
+setup.py
+consolidate/__init__.py
+consolidate/main.py
+consolidate.egg-info/PKG-INFO
+consolidate.egg-info/SOURCES.txt
+consolidate.egg-info/dependency_links.txt
+consolidate.egg-info/top_level.txt
