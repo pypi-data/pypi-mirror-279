@@ -1,0 +1,7 @@
+loaders/__init__.py,sha256=y8OvutNIQNPzHpwHo-8IWKyvAOFb-AL0q0MFk9FK7Wo,463
+loaders/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+loaders/common/base_loader.py,sha256=Q56ENCimwggITl1xUiVUHQc4wwToR5-UOlpBHqOA61g,906
+rs_docs_loader-0.0.1.dist-info/METADATA,sha256=trwqbWsqah3ed7JaGLKI2iEj6Ra8VUtrffE4t8CB15c,771
+rs_docs_loader-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+rs_docs_loader-0.0.1.dist-info/top_level.txt,sha256=_XE56P_eJf6fPrqh7AimfR8stFkw_61tzrSJDxJC4Dg,8
+rs_docs_loader-0.0.1.dist-info/RECORD,,
