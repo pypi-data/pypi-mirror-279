@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: hipc
+Version: 0.1.2
+Summary: Submission, storage, and extraction on HPC machines.
+License: GNU General Public License v3.0
+Author: Ryan Park
+Requires-Python: >=3.9
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Description-Content-Type: text/markdown
+
+# hipc
+
+Submission, storage, and extraction on HPC machines.
+
+## Setup Sockets
+
+in $HOME/.ssh/config, add lines of the form.
+This will allow remote login through ssh without the need for a password
+once an initial shell connection is establish.
+
+```
+Host <<host_name>>*
+    ControlMaster auto
+    ControlPath ~/.ssh/sockets/%r@%h:%p
+```
+
+## Installation
+
+```bash
+$ pip install hipc
+```
+
+## Usage
+
+- TODO
+
