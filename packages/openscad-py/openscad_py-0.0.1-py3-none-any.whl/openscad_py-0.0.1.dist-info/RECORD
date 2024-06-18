@@ -1,0 +1,16 @@
+openscad_py/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+openscad_py/combinations.py,sha256=JRcVncFyiDNYn36VXdFYF2ZtIYRIxmdu6Wt7E53BFAo,1989
+openscad_py/complex.py,sha256=VceiySbjyxiqNZjjuhlMoH3IbqqoTO5APofmdfjxVys,310
+openscad_py/entity.py,sha256=ObdQsm2uQEU2PJGcdzM6x5ltICsm_DZRaXAv9tQQDWA,9659
+openscad_py/entity_selector.py,sha256=kgk7kL0VwHsDaP8TnGkUTf8HVDaLpPYjIr5xwkCira8,11483
+openscad_py/objects_2d.py,sha256=oHiJe8OQiILgYWrZZbNoG6_r5j2zCyesc2fBL3ZT4dg,7780
+openscad_py/objects_3d.py,sha256=v65zbHXNPrXIKEzD4VF9Yyqon94aNzVKZsscVc2X5mo,10460
+openscad_py/others.py,sha256=3DES0nidZR3B8k1IB1RyDLkbvZCVcZDPqjClWAmDsFA,4663
+openscad_py/pirimitive.py,sha256=ljMrr18NRjyvuFcxNS2PDDZ7fDeQkn7_h6yj08TV-IE,1004
+openscad_py/transformations.py,sha256=uieXblJp_zEpYhd4rOb325IkttaygZKpJ8OYLeRgKfM,9939
+openscad_py/typing.py,sha256=vrxDDPOLrrFJIdMJOUyXRE9oYt6bVxxUuHMhWsAToLU,60
+openscad_py-0.0.1.dist-info/LICENSE.md,sha256=L-TGNe_sssKAcWzB_NFmChqK17u4HtdnNAfIJnBqZls,1110
+openscad_py-0.0.1.dist-info/METADATA,sha256=_fGw9K9Wv5jirRZkqOfqtgLHo1j8gUsRYUi1UXu9nI4,329
+openscad_py-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+openscad_py-0.0.1.dist-info/top_level.txt,sha256=qsZzAjoSd11k3r9CNbnM56cRRtPK5Tjj7TL9WqyCzrY,12
+openscad_py-0.0.1.dist-info/RECORD,,
