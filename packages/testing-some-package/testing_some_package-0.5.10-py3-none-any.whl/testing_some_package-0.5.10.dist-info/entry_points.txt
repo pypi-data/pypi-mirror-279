@@ -1,0 +1,3 @@
+[console_scripts]
+testing-some-package=testing_some_package.test:mainfunc
+
