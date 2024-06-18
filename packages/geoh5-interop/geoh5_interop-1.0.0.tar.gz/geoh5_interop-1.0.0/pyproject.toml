@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "geoh5-interop"
+version = "1.0.0"
+license = "MIT"
+description = "A meta-package that groups together packages for interoperability between GEOH5 and other file formats."
+authors = ["Mira Geoscience <support@mirageoscience.com>"]
+homepage = "https://www.mirageoscience.com/mining-industry-software/python-integration/"
+readme = "README.rst"
+keywords = ["geology", "geophysics", "data", "interoperability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Topic :: Database",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+include = [
+    { path = "COPYING", format = ["sdist", "wheel"] },
+    { path = "COPYING.LESSER", format = ["sdist", "wheel"] },
+    { path = "LICENSE", format = ["sdist", "wheel"] },
+    { path = "README.rst", format = ["sdist", "wheel"] },
+    { path = "THIRD_PARTY_SOFTWARE.rst", format = ["sdist", "wheel"] },
+    { path = "docs/**/THIRD_PARTY_SOFTWARE.rst", format = ["sdist", "wheel"] },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.11"
+
+# geoh5py is a dependency of other apps: not strictly needed here, but good to ensure version
+geoh5py = {version = "~0.9.0", source = "pypi", allow-prereleases = true}
+#geoh5py = {url = "https://github.com/MiraGeoscience/geoh5py/archive/refs/heads/release/0.9.0.zip#sha256="}
+#geoh5py = {url = "http://localhost:8888/geoh5py.tar.gz#sha256="}
+
+mira-omf = {version = "~3.2.0", source = "pypi", allow-prereleases = true}
+#mira-omf = {url = "https://github.com/MiraGeoscience/omf/archive/refs/heads/release/3.2.0.zip#sha256="}
+#mira-omf = {url = "http://localhost:8888/mira-omf.tar.gz#sha256="}
+
+las-geoh5 = { version = "~0.2.0", source = "pypi", allow-prereleases = true}
+#las-geoh5 = {url = "https://github.com/MiraGeoscience/las-geoh5/archive/refs/heads/release/0.2.0.zip#sha256="}
+#las-geoh5 = {url = "http://localhost:8888/las-geoh5.tar.gz#sha256="}
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools"]
+build-backend = "poetry.core.masonry.api"
