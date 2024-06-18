@@ -1,0 +1,14 @@
+python-dotenv
+numpy
+huggingface_hub
+onnxruntime
+psutil
+tokenizers
+
+[dev]
+pytest
+pytest-cov
+tox
+black
+pip-tools
+flake8
