@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: py_cfba
+Version: 0.0.1
+Summary: `py_cFBA` is a Python toolbox designed for constraint-based flux balance analysis of metabolic networks.
+Author: Ricardo Hernández Medina, Timothy Páez Watson
+Author-email: T.W.PaezWatson@tudelft.nl
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.9.0
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: optlang
+Requires-Dist: python-libsbml
