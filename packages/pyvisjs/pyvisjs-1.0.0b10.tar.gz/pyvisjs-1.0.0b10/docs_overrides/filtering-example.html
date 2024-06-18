@@ -1,0 +1,537 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+{{ super() }}
+
+<link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+<script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+
+<style type="text/css">
+    #visjsnet {
+        width: 100%;
+        height: 600px;
+        border-bottom: 1px solid lightgray;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .row.flex-grow-1 {
+        flex-grow: 1;
+    }
+    .option {
+        font-weight: normal;
+    }
+    .optgroup {
+        font-weight: bold;
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            
+<select id="select-all-fields" class="form-select" data-placeholder="You can filter network here...">
+<option value="ALL,ALL,ALL">All values</option>
+
+
+<optgroup label="edge.to">
+<option value="edge,to,.\.git">.\.git</option>
+<option value="edge,to,.\.gitignore">.\.gitignore</option>
+<option value="edge,to,.\.gitlab-ci.yml">.\.gitlab-ci.yml</option>
+<option value="edge,to,.\.pytest_cache">.\.pytest_cache</option>
+<option value="edge,to,.\.venv">.\.venv</option>
+<option value="edge,to,.\CONTRIBUTING.md">.\CONTRIBUTING.md</option>
+<option value="edge,to,.\LICENSE">.\LICENSE</option>
+<option value="edge,to,.\README.md">.\README.md</option>
+<option value="edge,to,.\dandelion.html">.\dandelion.html</option>
+<option value="edge,to,.\default.html">.\default.html</option>
+<option value="edge,to,.\docs">.\docs</option>
+<option value="edge,to,.\docs_overrides">.\docs_overrides</option>
+<option value="edge,to,.\example.html">.\example.html</option>
+<option value="edge,to,.\examples">.\examples</option>
+<option value="edge,to,.\folder_structure.txt">.\folder_structure.txt</option>
+<option value="edge,to,.\mkdocs.yml">.\mkdocs.yml</option>
+<option value="edge,to,.\node_modules">.\node_modules</option>
+<option value="edge,to,.\pyproject.toml">.\pyproject.toml</option>
+<option value="edge,to,.\pyvisjs">.\pyvisjs</option>
+<option value="edge,to,.\pyvisjs.egg-info">.\pyvisjs.egg-info</option>
+<option value="edge,to,.\requirements-doc.txt">.\requirements-doc.txt</option>
+<option value="edge,to,.\requirements.txt">.\requirements.txt</option>
+<option value="edge,to,.\tests">.\tests</option>
+
+</optgroup>
+
+<optgroup label="edge.label">
+<option value="edge,label,dir:0">dir:0</option>
+<option value="edge,label,dir:1">dir:1</option>
+<option value="edge,label,dir:2">dir:2</option>
+<option value="edge,label,dir:3">dir:3</option>
+<option value="edge,label,dir:4">dir:4</option>
+<option value="edge,label,dir:5">dir:5</option>
+<option value="edge,label,dir:6">dir:6</option>
+<option value="edge,label,dir:7">dir:7</option>
+<option value="edge,label,dir:8">dir:8</option>
+<option value="edge,label,dir:9">dir:9</option>
+<option value="edge,label,file:0">file:0</option>
+<option value="edge,label,file:1">file:1</option>
+<option value="edge,label,file:10">file:10</option>
+<option value="edge,label,file:11">file:11</option>
+<option value="edge,label,file:12">file:12</option>
+<option value="edge,label,file:2">file:2</option>
+<option value="edge,label,file:3">file:3</option>
+<option value="edge,label,file:4">file:4</option>
+<option value="edge,label,file:5">file:5</option>
+<option value="edge,label,file:6">file:6</option>
+<option value="edge,label,file:7">file:7</option>
+<option value="edge,label,file:8">file:8</option>
+<option value="edge,label,file:9">file:9</option>
+
+</optgroup>
+
+<optgroup label="edge.from">
+<option value="edge,from,.">.</option>
+
+</optgroup>
+
+
+
+
+
+<optgroup label="node.color">
+<option value="node,color,#4eba3f">#4eba3f</option>
+<option value="node,color,#8f2d56">#8f2d56</option>
+<option value="node,color,#DF7DEC">#DF7DEC</option>
+<option value="node,color,#F02B4B">#F02B4B</option>
+<option value="node,color,orange">orange</option>
+<option value="node,color,None">None</option>
+
+</optgroup>
+
+<optgroup label="node.file_ext">
+<option value="node,file_ext,"></option>
+<option value="node,file_ext,.html">.html</option>
+<option value="node,file_ext,.md">.md</option>
+<option value="node,file_ext,.toml">.toml</option>
+<option value="node,file_ext,.txt">.txt</option>
+<option value="node,file_ext,.yml">.yml</option>
+
+</optgroup>
+
+<optgroup label="node.file_type">
+<option value="node,file_type,dir">dir</option>
+<option value="node,file_type,file">file</option>
+
+</optgroup>
+
+<optgroup label="node.font">
+<option value="node,font,{&#39;color&#39;: &#39;black&#39;}">{&#39;color&#39;: &#39;black&#39;}</option>
+<option value="node,font,{&#39;color&#39;: &#39;white&#39;}">{&#39;color&#39;: &#39;white&#39;}</option>
+
+</optgroup>
+
+<optgroup label="node.id">
+<option value="node,id,.">.</option>
+<option value="node,id,.\.git">.\.git</option>
+<option value="node,id,.\.gitignore">.\.gitignore</option>
+<option value="node,id,.\.gitlab-ci.yml">.\.gitlab-ci.yml</option>
+<option value="node,id,.\.pytest_cache">.\.pytest_cache</option>
+<option value="node,id,.\.venv">.\.venv</option>
+<option value="node,id,.\CONTRIBUTING.md">.\CONTRIBUTING.md</option>
+<option value="node,id,.\LICENSE">.\LICENSE</option>
+<option value="node,id,.\README.md">.\README.md</option>
+<option value="node,id,.\dandelion.html">.\dandelion.html</option>
+<option value="node,id,.\default.html">.\default.html</option>
+<option value="node,id,.\docs">.\docs</option>
+<option value="node,id,.\docs_overrides">.\docs_overrides</option>
+<option value="node,id,.\example.html">.\example.html</option>
+<option value="node,id,.\examples">.\examples</option>
+<option value="node,id,.\folder_structure.txt">.\folder_structure.txt</option>
+<option value="node,id,.\mkdocs.yml">.\mkdocs.yml</option>
+<option value="node,id,.\node_modules">.\node_modules</option>
+<option value="node,id,.\pyproject.toml">.\pyproject.toml</option>
+<option value="node,id,.\pyvisjs">.\pyvisjs</option>
+<option value="node,id,.\pyvisjs.egg-info">.\pyvisjs.egg-info</option>
+<option value="node,id,.\requirements-doc.txt">.\requirements-doc.txt</option>
+<option value="node,id,.\requirements.txt">.\requirements.txt</option>
+<option value="node,id,.\tests">.\tests</option>
+
+</optgroup>
+
+<optgroup label="node.label">
+<option value="node,label,.git">.git</option>
+<option value="node,label,.gitignore">.gitignore</option>
+<option value="node,label,.gitlab-ci.yml">.gitlab-ci.yml</option>
+<option value="node,label,.pytest_cache">.pytest_cache</option>
+<option value="node,label,.venv">.venv</option>
+<option value="node,label,CONTRIBUTING.md">CONTRIBUTING.md</option>
+<option value="node,label,LICENSE">LICENSE</option>
+<option value="node,label,README.md">README.md</option>
+<option value="node,label,dandelion.html">dandelion.html</option>
+<option value="node,label,default.html">default.html</option>
+<option value="node,label,docs">docs</option>
+<option value="node,label,docs_overrides">docs_overrides</option>
+<option value="node,label,example.html">example.html</option>
+<option value="node,label,examples">examples</option>
+<option value="node,label,folder_structure.txt">folder_structure.txt</option>
+<option value="node,label,mkdocs.yml">mkdocs.yml</option>
+<option value="node,label,node_modules">node_modules</option>
+<option value="node,label,pyproject.toml">pyproject.toml</option>
+<option value="node,label,pyvisjs">pyvisjs</option>
+<option value="node,label,pyvisjs.egg-info">pyvisjs.egg-info</option>
+<option value="node,label,requirements-doc.txt">requirements-doc.txt</option>
+<option value="node,label,requirements.txt">requirements.txt</option>
+<option value="node,label,tests">tests</option>
+
+</optgroup>
+
+<optgroup label="node.shape">
+<option value="node,shape,box">box</option>
+<option value="node,shape,circle">circle</option>
+
+</optgroup>
+
+
+</select>
+</div>
+    </div>
+    
+    <div class="row flex-grow-1">
+        <div class="col">
+            <div id="visjsnet"></div>
+        </div>
+    </div>
+    
+    
+    
+</div>
+
+<script type="text/javascript">
+
+
+// ---------------- NETWORK START ----------------------
+const data = create_network();
+data.network.has_hidden_nodes = false;
+
+function create_network() {
+
+vis.Network.prototype.Zoom = function (scale_factor, duration) {
+    const animationOptions = {
+        scale: this.getScale() * scale_factor,
+        animation: { duration: duration }
+    };
+    this.view.moveTo(animationOptions);
+};
+
+// create an array with nodes
+const ds_nodes = new vis.DataSet([{"color": "orange", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".", "label": "pyvisjs", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\.git", "label": ".git", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\.pytest_cache", "label": ".pytest_cache", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\.venv", "label": ".venv", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\docs", "label": "docs", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\docs_overrides", "label": "docs_overrides", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\examples", "label": "examples", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\node_modules", "label": "node_modules", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\pyvisjs", "label": "pyvisjs", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\pyvisjs.egg-info", "label": "pyvisjs.egg-info", "shape": "circle"}, {"color": "#4eba3f", "file_ext": "", "file_type": "dir", "font": {"color": "black"}, "id": ".\\tests", "label": "tests", "shape": "circle"}, {"file_ext": "", "file_type": "file", "font": {"color": "black"}, "id": ".\\.gitignore", "label": ".gitignore", "shape": "box"}, {"file_ext": ".yml", "file_type": "file", "font": {"color": "black"}, "id": ".\\.gitlab-ci.yml", "label": ".gitlab-ci.yml", "shape": "box"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\CONTRIBUTING.md", "label": "CONTRIBUTING.md", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\dandelion.html", "label": "dandelion.html", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\default.html", "label": "default.html", "shape": "box"}, {"color": "#8f2d56", "file_ext": ".html", "file_type": "file", "font": {"color": "white"}, "id": ".\\example.html", "label": "example.html", "shape": "box"}, {"color": "#DF7DEC", "file_ext": ".txt", "file_type": "file", "font": {"color": "black"}, "id": ".\\folder_structure.txt", "label": "folder_structure.txt", "shape": "box"}, {"file_ext": "", "file_type": "file", "font": {"color": "black"}, "id": ".\\LICENSE", "label": "LICENSE", "shape": "box"}, {"file_ext": ".yml", "file_type": "file", "font": {"color": "black"}, "id": ".\\mkdocs.yml", "label": "mkdocs.yml", "shape": "box"}, {"file_ext": ".toml", "file_type": "file", "font": {"color": "black"}, "id": ".\\pyproject.toml", "label": "pyproject.toml", "shape": "box"}, {"color": "#F02B4B", "file_ext": ".md", "file_type": "file", "font": {"color": "black"}, "id": ".\\README.md", "label": "README.md", "shape": "box"}, {"color": "#DF7DEC", "file_ext": ".txt", "file_type": "file", "font": {"color": "black"}, "id": ".\\requirements-doc.txt", "label": "requirements-doc.txt", "shape": "box"}, {"color": "#DF7DEC", "file_ext": ".txt", "file_type": "file", "font": {"color": "black"}, "id": ".\\requirements.txt", "label": "requirements.txt", "shape": "box"}]);
+
+// create an array with edges
+const ds_edges = new vis.DataSet([{"from": ".", "label": "dir:0", "to": ".\\.git"}, {"from": ".", "label": "dir:1", "to": ".\\.pytest_cache"}, {"from": ".", "label": "dir:2", "to": ".\\.venv"}, {"from": ".", "label": "dir:3", "to": ".\\docs"}, {"from": ".", "label": "dir:4", "to": ".\\docs_overrides"}, {"from": ".", "label": "dir:5", "to": ".\\examples"}, {"from": ".", "label": "dir:6", "to": ".\\node_modules"}, {"from": ".", "label": "dir:7", "to": ".\\pyvisjs"}, {"from": ".", "label": "dir:8", "to": ".\\pyvisjs.egg-info"}, {"from": ".", "label": "dir:9", "to": ".\\tests"}, {"from": ".", "label": "file:0", "to": ".\\.gitignore"}, {"from": ".", "label": "file:1", "to": ".\\.gitlab-ci.yml"}, {"from": ".", "label": "file:2", "to": ".\\CONTRIBUTING.md"}, {"from": ".", "label": "file:3", "to": ".\\dandelion.html"}, {"from": ".", "label": "file:4", "to": ".\\default.html"}, {"from": ".", "label": "file:5", "to": ".\\example.html"}, {"from": ".", "label": "file:6", "to": ".\\folder_structure.txt"}, {"from": ".", "label": "file:7", "to": ".\\LICENSE"}, {"from": ".", "label": "file:8", "to": ".\\mkdocs.yml"}, {"from": ".", "label": "file:9", "to": ".\\pyproject.toml"}, {"from": ".", "label": "file:10", "to": ".\\README.md"}, {"from": ".", "label": "file:11", "to": ".\\requirements-doc.txt"}, {"from": ".", "label": "file:12", "to": ".\\requirements.txt"}]);
+
+// create a network
+const container = document.getElementById('visjsnet');
+
+// provide the data in the vis format
+const data = {
+    nodes: ds_nodes,
+    edges: ds_edges
+};
+const options = {"edges": {"arrows": "to"}, "height": "500px", "interaction": {"dragView": false, "zoomView": false}, "width": "100%"};
+const pyvisjs = {"dropdown_auto_close": false, "enable_highlighting": false};
+
+return {
+    network: new vis.Network(container, data, options),
+    nodes: ds_nodes.get({ returnType: "Object" }),
+    edges: ds_edges.get({ returnType: "Object" }),
+    ds_nodes: ds_nodes, // this is needed to make changes to the nodes model through ds_nodes.update()
+    pyvisjs: pyvisjs,
+}
+}
+
+function hide_not_selected_nodes(event) {
+// has selected nodes or already has hidden nodes - in both cases we have work to do
+if (event.nodes.length > 0 || data.network.has_hidden_nodes === true) {
+    let selectedNodes;
+    
+    // user clicked outside the nodes network - we want to unhide all the nodes
+    if (event.nodes.length == 0 && data.network.has_hidden_nodes === true) {
+        selectedNodes = Object.keys(data.nodes);
+        data.network.has_hidden_nodes = false;
+    }
+    else {
+        const selectedNode = event.nodes[0];
+        selectedNodes = data.network.getConnectedNodes(selectedNode);
+        selectedNodes.push(selectedNode);
+        data.network.has_hidden_nodes = true;
+    }
+
+    changed_nodes = toggle_nodes(selectedNodes);
+
+    //reset_all_filters(data.pyvisjs.edge_filtering_fields)
+    data.ds_nodes.update(changed_nodes)
+}
+}
+
+function toggle_nodes(selectedNodes) {
+const changed_nodes = [];
+
+for (const key in data.nodes) {
+    const node = data.nodes[key];
+    const node_id = node["id"];
+    // node is not hidden by default
+    if (node.hasOwnProperty("_hidden") === false) node._hidden = false;
+    
+    // nodes to hide
+    if (selectedNodes.includes(node_id) === false)
+    {
+        // not already hidden
+        if (node._hidden === false)
+        {
+            node._hidden = true;
+            if (data.pyvisjs.enable_highlighting === false) node.hidden = true;
+            node._color = node.color;
+            node.color = "rgba(200,200,200,0.5)";
+            changed_nodes.push(node)
+        }
+    }
+    // nodes to unhide (only if already hidden)
+    else if (node._hidden === true) {
+        node._hidden = false;
+        if (data.pyvisjs.enable_highlighting === false) node.hidden = false;
+        node.color = node._color ? node._color : "#97C2FC";
+        node._color = undefined;
+        changed_nodes.push(node)
+    }
+}
+
+return changed_nodes
+}
+// ---------------- NETWORK END ----------------------
+
+
+// ---------------- TOM-SELECT START ----------------------
+const eventHandler = function(name) {
+return function() {
+    const list_of_selected_values = arguments[0]
+    dict = convert_field_value_list_to_dict(list_of_selected_values)
+    hide_nodes_by_edge_attribute_values_intersect(dict)
+
+    if (data.pyvisjs.dropdown_auto_close === true) tom_select.close();
+};
+};
+
+tom_select = new TomSelect("#select-all-fields", {
+maxItems: 10,
+maxOptions: null,
+onChange: eventHandler("onChange"),
+//create: true,
+//onItemAdd:function(){
+//    this.setTextboxValue('');
+//    this.refreshOptions();
+//},
+plugins: ['remove_button'],
+});
+
+function convert_field_value_list_to_dict(list) {
+// converts ["edge,country,LV","edge,country,GB"]
+// to
+// {country: {list: ["LV", "GB"], type="edge"}}
+dict = {}
+for (id in list) {
+    const field_value_triplet = list[id].split(",")
+    const type = field_value_triplet[0]
+    const field = field_value_triplet[1]
+    const value = field_value_triplet[2]
+
+    if (field in dict) dict[field]["list"].push(value)
+    else dict[field] = {"list": [value], "type": type}
+}
+return dict
+}
+
+function hide_nodes_by_edge_attribute_values_intersect(option_groups_dict) {
+
+const selected_nodes_by_field = {}
+
+for (field in option_groups_dict) {
+    const dict = option_groups_dict[field]
+    const selected_values = dict["list"]
+    const node_or_edge = dict["type"]
+    selected_nodes_by_field[field] = []
+
+    for (id in selected_values) {
+        let collected_nodes = []
+        const value = selected_values[id];
+
+        if (node_or_edge === "ALL" && value === "ALL") {
+            collected_nodes = Object.keys(data.nodes);
+            data.network.has_hidden_nodes = false;
+        }
+        else if (node_or_edge === "edge") {
+            collected_nodes = get_nodes_by_edge_attribute_value(field, value)
+            data.network.has_hidden_nodes = true;
+        }
+        else if (node_or_edge === "node") {
+            collected_nodes = get_nodes_by_attribute_value(field, value);
+            data.network.has_hidden_nodes = true;
+        }
+
+        for (id in collected_nodes) {
+            node_id = collected_nodes[id]
+            if (selected_nodes_by_field[field].includes(node_id) === false) selected_nodes_by_field[field].push(node_id)
+        }
+    }
+}
+
+const selected_nodes_intersection = apply_intersect(selected_nodes_by_field);
+changed_nodes = toggle_nodes(selected_nodes_intersection);
+
+data.ds_nodes.update(changed_nodes)
+}
+
+function hide_nodes_by_edge_attribute_values_union(option_groups_dict) {
+
+const selectedNodes = [];
+
+for (field in option_groups_dict) {
+    const dict = option_groups_dict[field]
+    const selected_values = dict["list"]
+    const node_or_edge = dict["type"]
+
+    for (id in selected_values) {
+        let collected_nodes = []
+        const value = selected_values[id];
+
+        if (node_or_edge === "ALL" && value === "ALL") {
+            collected_nodes = Object.keys(data.nodes);
+            data.network.has_hidden_nodes = false;
+        }
+        else if (node_or_edge === "edge") {
+            collected_nodes = get_nodes_by_edge_attribute_value(field, value)
+            data.network.has_hidden_nodes = true;
+        }
+        else if (node_or_edge === "node") {
+            collected_nodes = get_nodes_by_attribute_value(field, value);
+            data.network.has_hidden_nodes = true;
+        }
+
+        for (id in collected_nodes) {
+            node_value = collected_nodes[id]
+            if (selectedNodes.includes(node_value) === false) selectedNodes.push(node_value)
+        }
+    }
+}
+
+changed_nodes = toggle_nodes(selectedNodes);
+
+data.ds_nodes.update(changed_nodes)
+}
+
+function get_nodes_by_edge_attribute_value(field, value) {
+
+const result = [];
+
+for (const key in data.edges) {
+    const edge = data.edges[key];
+
+    if (edge[field] == value)
+    {
+        if (result.includes(edge.from) === false) result.push(edge.from);
+        if (result.includes(edge.to) === false) result.push(edge.to);
+    }
+}
+
+return result;
+}
+
+function get_nodes_by_attribute_value(field, value) {
+const collected_nodes = [];
+
+for (const key in data.nodes) {
+    const node = data.nodes[key];
+
+    if (node[field] == value)
+    {
+        collected_nodes.push(node["id"]);
+    }
+}
+
+return collected_nodes;
+}
+
+function apply_intersect(nodes_by_field_dict) {
+let field_with_shortest_list = null
+let min_list_len = 100000;
+
+//if nodes_by_field_dict is empty dict - return empty list
+if (nodes_by_field_dict === null || Object.keys(nodes_by_field_dict).length === 0) {
+    return [];
+}
+
+//if nodes_by_field_dict contains only one field - just return values
+if (nodes_by_field_dict.length === 1) {
+    return nodes_by_field_dict[0];
+}
+
+// find shortest list
+for (field_name in nodes_by_field_dict) {
+    const curr_list_len = nodes_by_field_dict[field_name].length
+    if (curr_list_len < min_list_len) {
+        field_with_shortest_list = field_name
+        min_list_len = curr_list_len
+    }
+}
+
+// we start from the list of all node ids from the shortest list
+// our goal is to reduce it by compariong with other lists
+let intersection = nodes_by_field_dict[field_with_shortest_list]
+
+// pairwise comparison
+for (field_name in nodes_by_field_dict) {
+    if (field_name !== field_with_shortest_list) {
+        const nodes_list = nodes_by_field_dict[field_name];
+        intersection = intersection.filter((node_id) => nodes_list.includes(node_id))
+    }
+}
+
+return intersection;
+}
+// ---------------- TOM-SELECT END ----------------------
+
+// ---------------- DRAW TITLE START ----------------------
+data.network.on("beforeDrawing", function (ctx) {
+const central_focus = data.network.getViewPosition();
+const scale = data.network.getScale();
+
+div = document.getElementById("visjsnet").getElementsByClassName("vis-network")[0];
+const height = div.clientHeight;
+const width = div.clientWidth;
+
+const dx = width / 2 - width * 0.05;
+const dy = height / 2 - height * 0.05;
+const x = central_focus.x - dx / scale;
+const y = central_focus.y - dy / scale;
+//const font_size = Math.round(30.0 / scale)
+const font_size = 30.0 / scale;
+
+ctx.font = ""+font_size+"px JetBrains Mono";
+//ctx.font = "30px JetBrains Mono";
+ctx.fillStyle = "#D0D0D0";
+ctx.fillText('pyvisjs filtering example', x, y);
+});
+
+// ---------------- DRAW TITLE END ----------------------
+
+
+
+</script>
+{{ super() }}
+{% endblock %}
