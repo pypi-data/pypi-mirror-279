@@ -1,0 +1,13 @@
+Metadata-Version: 2.3
+Name: komodoro
+Version: 0.1.0
+Summary: Add your description here
+Author-email: Marcelo Trylesinski <marcelotryle@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: pydantic>=2.7.4
+Requires-Dist: starlette>=0.37.2
+Description-Content-Type: text/markdown
+
+# komodoro
+
+Describe your project here.
