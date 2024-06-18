@@ -1,0 +1,2 @@
+[xblock.v1]
+video_iframe = video_iframe:VideoIframeXBlock

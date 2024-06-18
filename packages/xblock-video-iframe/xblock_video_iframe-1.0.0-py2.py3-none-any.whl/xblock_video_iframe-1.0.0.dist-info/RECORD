@@ -1,0 +1,12 @@
+video_iframe/__init__.py,sha256=p25VSs8ARIwGo28LdfjWEzn0_ccRo5kEyEic_29sW64,116
+video_iframe/video_iframe.py,sha256=4FxZZMsHcNeVFxD7-CAPmlIOi6eE_duOGoz7j1ECUKA,6515
+video_iframe/public/css/video_iframe.css,sha256=VnLHNaKhFmfFISXaO1SY3ZHXifQTOle033LfIMQPAy4,1508
+video_iframe/public/js/src/video_iframe.js,sha256=nyobJrraFw9Qyqj51HN3bzHy2AB3YJLkGNrMexXrxFo,1987
+video_iframe/static/README.txt,sha256=bdJ-FpDeHWYyrxLCGpUvvscSMVrci-pKHC5R7shvg9M,767
+video_iframe/static/html/video_iframe.html,sha256=IdbzJH-QNvCHAgHweEXpVti-mLkRsOr4-OmV2hsQe-s,1698
+xblock_video_iframe-1.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+xblock_video_iframe-1.0.0.dist-info/METADATA,sha256=zSySfX_VilOg3JlU0VgxlY1PhljvZk0rodH9OHsBR64,8528
+xblock_video_iframe-1.0.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+xblock_video_iframe-1.0.0.dist-info/entry_points.txt,sha256=n7tSSHkMmKugmW611KQmqeeB4cE4cJt_FTezGyGAE40,58
+xblock_video_iframe-1.0.0.dist-info/top_level.txt,sha256=rznk3ai3t9ttjOA6YAD8JvWikddy1lpJHO1Pqa5P_9g,13
+xblock_video_iframe-1.0.0.dist-info/RECORD,,
