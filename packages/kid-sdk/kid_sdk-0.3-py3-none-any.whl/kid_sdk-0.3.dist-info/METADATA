@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: kid-sdk
+Version: 0.3
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Zonesmart
+Author-email: e.beliakov@dev.kokoc.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: authlib
+Requires-Dist: pendulum
+Requires-Dist: requests
+
+UNKNOWN
+
