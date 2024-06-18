@@ -1,0 +1,5 @@
+[tool.black]
+extend-exclude = 'Examples/'
+
+[tool.pytest.ini_options]
+python_files="tests/**/test*.py"

@@ -1,0 +1,6 @@
+numpy
+scipy
+matplotlib
+mpmath
+joblib
+h5py
