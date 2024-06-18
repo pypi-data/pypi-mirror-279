@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: align-anything
+Version: 0.0.1b0
+Summary: A small example package
+Author: PKU-Alignment
+Author-email: jmji@zju.edu.cn
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
