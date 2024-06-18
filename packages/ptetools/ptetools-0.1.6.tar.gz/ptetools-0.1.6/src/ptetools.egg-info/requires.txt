@@ -1,0 +1,9 @@
+numpy
+matplotlib
+rich
+qtpy
+PyQt5
+lmfit
+qiskit
+quantuminspire
+termcolor
