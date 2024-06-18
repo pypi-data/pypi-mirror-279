@@ -1,0 +1,23 @@
+# The python libraries and the versions are as follows.
+os
+uuid
+openpyxl
+io
+azure-search-documents==11.4.0
+azure-core-credentials
+re
+csv
+openai==1.2.0
+hashlib
+binascii
+datetime
+PIL
+exif==1.6.0
+ezdxf==1.2.0
+azure-storage-blob==12.19.1
+azure-core-exceptions
+pdfplumber
+requests
+comtypes==1.4.2
+tempfile
+docx
