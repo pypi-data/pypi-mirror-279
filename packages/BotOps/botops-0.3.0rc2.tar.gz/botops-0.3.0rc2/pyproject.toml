@@ -1,0 +1,137 @@
+[project]
+name = "BotOps"
+dynamic = []
+requires-python = ">=3.12"
+description = "Telegram bot framework with related operations."
+authors = [
+    { name = "Kirill Lapushinskiy", email = "kirill@lapushinskiy.ru" },
+]
+readme = "README.md"
+packages = [
+    { include = "botops" },
+]
+include = [
+    "README.md",
+    "CHANGELOG.md",
+]
+repository = "https://github.com/givemepillow/BotOps"
+keywords = [
+    "bot",
+    "telegram",
+    "chatbot",
+    "asyncio",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Communications :: Chat",
+]
+dependencies = [
+    "aiohttp>=3.9.1",
+    "attrs>=23.2.0",
+    "cattrs>=23.2.3",
+    "apscheduler>=3.10.4",
+]
+version = "0.3.0rc2"
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Documentation = "https://github.com/givemepillow/BotOps#readme"
+Issues = "https://github.com/givemepillow/BotOps/issues"
+Source = "https://github.com/givemepillow/BotOps"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+package-type = "library"
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "ruff>=0.1.13",
+    "mypy>=1.8.0",
+]
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+target-version = "py312"
+line-length = 100
+fixable = [
+    "I001",
+    "F541",
+    "F401",
+]
+
+[tool.ruff.format]
+quote-style = "double"
+docstring-code-format = true
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "SIM",
+    "I",
+]
+extend-select = [
+    "B",
+    "Q",
+]
+fixable = [
+    "ALL",
+]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disable_error_code = [
+    "union-attr",
+    "name-defined",
+    "misc",
+    "import-untyped",
+]
+disallow_untyped_defs = true
