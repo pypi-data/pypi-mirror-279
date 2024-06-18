@@ -1,0 +1,237 @@
+Metadata-Version: 2.1
+Name: overwatch_sayak
+Version: 1.0.1
+Summary: A set of easy-to-use utilities that will come in handy in a Computer Vision project
+Home-page: https://github.com/itz-sayak/overwatch_sayak
+License: MIT
+Keywords: machine-learning,deep-learning,vision,ML,DL,AI,Computer Vision,Slided Inference
+Author: Sayak Dutta
+Author-email: sayakdutta1002@gmail.com
+Maintainer: Sayak Dutta
+Maintainer-email: sayakdutta1002@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Provides-Extra: assets
+Provides-Extra: desktop
+Requires-Dist: defusedxml (>=0.7.1,<0.8.0)
+Requires-Dist: matplotlib (>=3.6.0)
+Requires-Dist: numpy (>=1.21.2)
+Requires-Dist: opencv-python (>=4.5.5.64) ; extra == "desktop"
+Requires-Dist: opencv-python-headless (>=4.5.5.64)
+Requires-Dist: pillow (>=9.4)
+Requires-Dist: pyyaml (>=5.3)
+Requires-Dist: requests (>=2.26.0,<=2.32.3) ; extra == "assets"
+Requires-Dist: scipy (==1.10.0) ; python_version < "3.9"
+Requires-Dist: scipy (>=1.10.0,<2.0.0) ; python_version >= "3.9"
+Requires-Dist: tqdm (>=4.62.3,<=4.66.4) ; extra == "assets"
+Project-URL: Documentation, https://github.com/itz-sayak/overwatch_sayak/blob/main/README.md
+Project-URL: Repository, https://github.com/itz-sayak/overwatch_sayak
+Description-Content-Type: text/markdown
+
+# Overwatch Sayak
+
+## Overview
+The powers of this library  `overwatch-sayak` package can be used for object detection in images or video, loading datasets, detection tracking, counting, detecting, Slicing Aided Hyper Inferencing for small object detection, etc. 
+
+## Installation
+you need to install the `overwatch-sayak` package. You can do this using pip:
+
+```bash
+pip install overwatch-sayak
+```
+For importing the library for your code, use the import command with:
+
+```python
+import overwatch_sayak
+```
+## Quickstart
+### Models
+overwatch-sayak was designed to be model-friendly. Just plug in any classification, detection, or segmentation model. We have created connectors for the most popular libraries like Ultralytics, Transformers, or MMDetection for your convenience.
+
+#### Inference
+```python
+import cv2
+import overwatch_sayak as ov
+from inference import get_model
+
+image = cv2.imread("path/to/your/image.jpg")
+model = get_model("yolov8s-640")
+result = model.infer(image)[0]
+detections = ov.Detections.from_inference(result)
+
+len(detections)
+# Output: Number of detections
+```
+### Annotators
+overwatch-sayak offers a wide range of highly customizable annotators, allowing you to compose the perfect visualization for your use case.
+
+```python
+import cv2
+import overwatch_sayak as ov
+
+image = cv2.imread("path/to/your/image.jpg")
+detections = ov.Detections(...)
+
+bounding_box_annotator = ov.BoundingBoxAnnotator()
+annotated_frame = bounding_box_annotator.annotate(
+    scene=image.copy(),
+    detections=detections
+)
+
+# Display or save the annotated image
+cv2.imshow("Annotated Image", annotated_frame)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+# Or save the image
+cv2.imwrite("annotated_image.jpg", annotated_frame)
+```
+### Slicing Inference for Small Object Detection
+Slicing the image into smaller pieces can improve object detection accuracy for detecting small objects. The following example demonstrates how to use the InferenceSlicer for this purpose.
+
+```python
+import overwatch_sayak as ov
+from inference import get_model
+import cv2
+import numpy as np
+
+# Load the image
+image = cv2.imread("/path/to/image.jpg")
+
+# Load the model
+model = get_model("yolov8s-640")
+
+# Define the callback function for slicing inference
+def slicer_callback(slice: np.ndarray) -> ov.Detections:
+    result = model.infer(slice)[0]
+    detections = ov.Detections.from_inference(result)
+    return detections
+
+# Create the slicer
+slicer = ov.InferenceSlicer(
+    callback=slicer_callback,
+    slice_wh=(512, 512),
+    overlap_ratio_wh=(0.4, 0.4),
+    overlap_filter_strategy=ov.OverlapFilter.NONE
+)
+
+# Run the slicer on the image
+detections = slicer(image)
+
+# Annotate the image
+annotated_frame = ov.BoundingBoxAnnotator().annotate(
+    scene=image.copy(),
+    detections=detections
+)
+
+# Display or save the annotated image
+cv2.imshow("Annotated Image", annotated_frame)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+# Or save the image
+cv2.imwrite("annotated_image.jpg", annotated_frame)
+```
+### Datasets
+overwatch-sayak offers a suite of utilities that enable you to load, split, merge, and save datasets in various supported formats..
+
+```python
+import overwatch_sayak as ov
+
+dataset = ov.DetectionDataset.from_yolo(
+    images_directory_path="path/to/images",
+    annotations_directory_path="path/to/annotations",
+    data_yaml_path="path/to/data.yaml"
+)
+
+dataset.classes
+# Output: ['dog', 'person']
+
+len(dataset)
+# Output: Number of images in the dataset
+```
+#### Split
+```python
+train_dataset, test_dataset = dataset.split(split_ratio=0.7)
+test_dataset, valid_dataset = test_dataset.split(split_ratio=0.5)
+
+len(train_dataset), len(test_dataset), len(valid_dataset)
+# Output: (Number of training images, Number of test images, Number of validation images)
+```
+#### Merge
+```python
+ds_1 = ov.DetectionDataset(...)
+len(ds_1)
+# Output: Number of images in ds_1
+ds_1.classes
+# Output: ['dog', 'person']
+
+ds_2 = ov.DetectionDataset(...)
+len(ds_2)
+# Output: Number of images in ds_2
+ds_2.classes
+# Output: ['cat']
+
+ds_merged = ov.DetectionDataset.merge([ds_1, ds_2])
+len(ds_merged)
+# Output: Number of images in the merged dataset
+ds_merged.classes
+# Output: ['cat', 'dog', 'person']
+```
+#### Save
+```python
+dataset.as_yolo(
+    images_directory_path="path/to/save/images",
+    annotations_directory_path="path/to/save/annotations",
+    data_yaml_path="path/to/save/data.yaml"
+)
+
+dataset.as_pascal_voc(
+    images_directory_path="path/to/save/images",
+    annotations_directory_path="path/to/save/annotations"
+)
+
+dataset.as_coco(
+    images_directory_path="path/to/save/images",
+    annotations_path="path/to/save/annotations"
+)
+```
+#### Convert
+```python
+ov.DetectionDataset.from_yolo(
+    images_directory_path="path/to/load/images",
+    annotations_directory_path="path/to/load/annotations",
+    data_yaml_path="path/to/load/data.yaml"
+).as_pascal_voc(
+    images_directory_path="path/to/save/images",
+    annotations_directory_path="path/to/save/annotations"
+)
+```
+
+## Contributing
+If you want to contribute to this project, feel free to open an issue or submit a pull request on GitHub.
+
+## License
+This project is licensed under the MIT License.
+
+
+
+ 
+
