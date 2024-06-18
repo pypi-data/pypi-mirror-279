@@ -1,0 +1,9 @@
+tei2neo/__init__.py,sha256=tGvF6_cxvmAj3pLZ3ZixBxNT9vqQxq92T3aA8Bvy2Ek,79
+tei2neo/main.py,sha256=QX6QJxTUzHBG2PEjsKZSjlgrvUSMKwqbSg56cehuSpY,13324
+tei2neo/parse.py,sha256=2l6vdTPKQxh5ILT3P1eZNEI14v_rNBoqyOXCddkbESc,54887
+tei2neo/toc.py,sha256=zHxqjOrGSCXgL3e9ObWR491BCetlvW6M5K-hyiXM2nA,9090
+tei2neo-0.5.3.dist-info/METADATA,sha256=0iDUke1M48S9vuAxB7IAv9zJf0eMnurE7OszRbH-38M,4028
+tei2neo-0.5.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+tei2neo-0.5.3.dist-info/entry_points.txt,sha256=c3bNrKE_6Lledz5TFBCfAj7H9qkoM7oEwVDQK4wuqMY,45
+tei2neo-0.5.3.dist-info/top_level.txt,sha256=Q6Br_vVmw3fWbcb4Nt2xj_K1RgC5M4VxWAM3Y2lzHb8,8
+tei2neo-0.5.3.dist-info/RECORD,,
