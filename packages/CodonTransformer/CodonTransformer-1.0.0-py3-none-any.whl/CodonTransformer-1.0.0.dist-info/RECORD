@@ -1,0 +1,13 @@
+CodonTransformer/CodonData.py,sha256=WMkX6OtJ5wmDdEGq4zejlEPp2gdGC8GVCEc9ZuWoUMw,13579
+CodonTransformer/CodonEvaluation.py,sha256=oI1eDinDPKj7W2t1RHHNO1DPu5ij9DDF_sUD9pqtwok,10384
+CodonTransformer/CodonJupyter.py,sha256=r2NV3KlkmM7NdAB_Urjwi5ZndAFPPPDggZwztOrIwCA,6384
+CodonTransformer/CodonPrediction.py,sha256=GgsEGyQS27AsOGkeUnx4Y-zrWRdmORnJqjnWi7iAtXA,17723
+CodonTransformer/CodonUtils.py,sha256=ORAhdzdwqH7ivXfa4tkCTbTn61RuOqxuaplQTGsklHM,10596
+CodonTransformer/__init__.py,sha256=QIi2bv9AlgQPx-qnUURDPPnsyOfcmfp8hjTfaq0BWRs,32
+src/__init__.py,sha256=dY5ysimpvTLgME3nuQSvDvtdOSTUKf0fS2in7l6hDns,53
+CodonTransformer-1.0.0.dist-info/LICENSE,sha256=cb8V6fxzqQL8mgMMqnt-rWWhsgYOpblwU7HLRdRcQtg,11550
+CodonTransformer-1.0.0.dist-info/METADATA,sha256=PbYsFwiKQ4YaMak7DExC-kFtUgwwUl0VZW1e3ykYWr4,2590
+CodonTransformer-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+CodonTransformer-1.0.0.dist-info/dependency_links.txt,sha256=otlT8dwmfwGxV96dUVxH3f0SwK_vXpWF2HsnFxNfHsM,86
+CodonTransformer-1.0.0.dist-info/top_level.txt,sha256=77Yu3tNK-ACeDlTMHpjhjwp9fha0GqZniBuV_re0lzI,21
+CodonTransformer-1.0.0.dist-info/RECORD,,
