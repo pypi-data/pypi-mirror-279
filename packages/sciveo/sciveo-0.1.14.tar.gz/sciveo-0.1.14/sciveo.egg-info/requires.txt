@@ -1,0 +1,12 @@
+numpy>=0.0.0
+requests>=0.0.0
+
+[all]
+psutil>=0.0.0
+netifaces>=0.0.0
+
+[mon]
+psutil>=0.0.0
+
+[net]
+netifaces>=0.0.0
