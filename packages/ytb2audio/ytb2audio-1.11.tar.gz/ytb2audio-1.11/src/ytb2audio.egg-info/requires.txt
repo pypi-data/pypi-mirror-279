@@ -1,0 +1,10 @@
+requests
+pytube
+yt-dlp
+asyncio
+
+[dev]
+check-manifest
+
+[test]
+coverage
