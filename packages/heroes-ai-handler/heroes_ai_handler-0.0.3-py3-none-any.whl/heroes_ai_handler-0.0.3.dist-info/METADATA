@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: heroes-ai-handler
+Version: 0.0.3
+Summary: A package for handling GPT, embeddings, and data for an AI Assistant.
+Home-page: https://pypi.org/project/heroes-ai-handler/
+Author: Stefan Jansen
+Author-email: stefan.jansen@heroes.nl
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+python version >=  3.10
+
+
