@@ -1,0 +1,8 @@
+{
+  "source_dir": "/home/runner/work/python-plugins/python-plugins",
+  "build_dir": "/home/runner/work/python-plugins/python-plugins/build/cp312-cp312-linux_x86_64/Release",
+  "cmake_path": "/usr/local/bin/cmake",
+  "skbuild_path": "/tmp/build-env-5gmqna53/lib/python3.12/site-packages/scikit_build_core",
+  "skbuild_version": "0.9.6",
+  "python_executable": "/tmp/build-env-5gmqna53/bin/python"
+}
