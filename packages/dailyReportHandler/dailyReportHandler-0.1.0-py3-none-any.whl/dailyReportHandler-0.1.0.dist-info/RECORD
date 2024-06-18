@@ -1,0 +1,11 @@
+dailyReportHandler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dailyReportHandler/daily.py,sha256=QAYytxLcAsJUyYdP3Dq87fpI95D-JStUJ7qEjSbEcdQ,3621
+dailyReportHandler/dailyReportHandler.py,sha256=UGeiz0hQ8bTH6m_W0hHdQbKomshNil93oAkbf48_xHI,10915
+dailyReportHandler/template.py,sha256=oWb47cezjdD1C4VTNN6bP1RpOLm9jCAr50hSoGW6TPI,3153
+dailyReportHandler/utils.py,sha256=_RIZe2TByd8arSvbLxkgkz4qSFH0XhO6vs1uNGgBjD8,3863
+dailyReportHandler/workFlowHandler.py,sha256=XSsILUDj-BvPKi3UeZqshQrA1b5mqHbmGpL0A3u7hLM,16913
+dailyReportHandler-0.1.0.dist-info/METADATA,sha256=byLVQagop4eSIzFSyxLGmQglyS_QvoRg_4Zpw0SyNkw,475
+dailyReportHandler-0.1.0.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+dailyReportHandler-0.1.0.dist-info/entry_points.txt,sha256=j8GA1gKaRM8wtk4ZymMXkv_7xT9-gZhf5I8-7YIxyEw,128
+dailyReportHandler-0.1.0.dist-info/top_level.txt,sha256=l5-bLpwnKgB67hd2F4h4nlCzWRKxSMZV5pCU0dyHLc8,19
+dailyReportHandler-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,4 @@
+[console_scripts]
+dailyReportHandler = dailyReportHandler.daily:main
+workFlowHandler = dailyReportHandler.workFlowHandler:main
+
