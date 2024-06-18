@@ -1,0 +1,3 @@
+[console_scripts]
+validate=ocsf.validate.compatibility.__main__:main
+
