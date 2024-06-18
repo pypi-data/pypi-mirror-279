@@ -1,0 +1,2 @@
+[console_scripts]
+scholarsync = scholarsync.aio:main

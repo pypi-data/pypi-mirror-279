@@ -1,0 +1,12 @@
+scholarsync/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scholarsync/aio.py,sha256=gh04LR0BoHb5UurVxLS-SqnAUj8UPOt3Iyxx9x-by4s,80685
+scholarsync/data/LICENSE.txt,sha256=zo9yMu89yxvcDQWvfiCDk3Ww3N5kjGzxxRDdpg-Cu0M,6407
+scholarsync/data/README.md,sha256=0LDUn5E5RUKD4YmdE6ExYRx4vGxTeYzL5uezd1Nc-jQ,1698
+scholarsync/data/help.txt,sha256=y_6OSXgiBBEsxdU2d6EV7SErxuMfkFThnbu_h1rAxk0,17901
+scholarsync/data/requirements.txt,sha256=ghXBUWJZYJmDLihJkQ2tk1VgrbM2v4fJvdYwNO_kgjU,45
+scholarsync-0.0.3.0.dist-info/LICENSE,sha256=zo9yMu89yxvcDQWvfiCDk3Ww3N5kjGzxxRDdpg-Cu0M,6407
+scholarsync-0.0.3.0.dist-info/METADATA,sha256=AznMtEiTy-KvyTtltWHKpZvajovKpmDLJEnUCys8dYI,2277
+scholarsync-0.0.3.0.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+scholarsync-0.0.3.0.dist-info/entry_points.txt,sha256=r23BbT-TSmdsAWxe6q49LBm2i47rsllojwL_V74cwNs,53
+scholarsync-0.0.3.0.dist-info/top_level.txt,sha256=xr4jkSPzpzaoLRrVfROYqICTkLZvKbW93jEDc5GuGVw,12
+scholarsync-0.0.3.0.dist-info/RECORD,,
