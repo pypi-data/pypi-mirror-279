@@ -1,0 +1,3 @@
+[console_scripts]
+ni-measurement-plugin-sdk-generator=ni_measurement_plugin_sdk_generator.template:create_measurement
+
