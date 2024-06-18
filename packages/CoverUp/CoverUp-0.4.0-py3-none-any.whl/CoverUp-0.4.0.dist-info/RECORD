@@ -1,0 +1,15 @@
+coverup/__init__.py,sha256=zwY7MtP01hz9A46a3JebAuJ4v40lKPtMJ66ESoB3cuE,59
+coverup/__main__.py,sha256=45Upt444MsYGybJE_DuIndb_kq8zJEZ2g7rq8hu1kJk,62
+coverup/coverup.py,sha256=IRIYNItmYKwIGhp91dfDb5aY89nnMGu4JBggDAC7WUM,31496
+coverup/llm.py,sha256=kZDmbTaRnaxIQyRCbLxtlUZxmvYj4ZDFzkCIgWdOyxE,2579
+coverup/prompt.py,sha256=rQG-cjACiWtciXzS7CJGzNljkx5ehfHMZ29iokx1Efc,8003
+coverup/segment.py,sha256=ei-C4jB9CsuzY8Tju4U-Lpr5BfDcyhbOI2WWxJrsYrk,5634
+coverup/testrunner.py,sha256=y1w9VuhjuSrGQ5cjwrlf7bc0o_CklXkE-39KsHbLQKA,3053
+coverup/utils.py,sha256=HqnWnCKferSb5bPqK16vn0BvaIcjGHR4mZ07lpi80HY,3127
+coverup/version.py,sha256=42STGor_9nKYXumfeV5tiyD_M8VdcddX7CEexmibPBk,22
+CoverUp-0.4.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+CoverUp-0.4.0.dist-info/METADATA,sha256=iibg12Jl-SH_-Edz8YEaH4lohTJF7g_FH1NernNMMPc,7127
+CoverUp-0.4.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+CoverUp-0.4.0.dist-info/entry_points.txt,sha256=Af1YgczBpbNdvOdpPmce7JYhfvSFxZv8-WEuwb3GNBA,49
+CoverUp-0.4.0.dist-info/top_level.txt,sha256=gfuV_lpHe2ibaBBpAgUKgabaqik89j9JndcLQDtdSwk,8
+CoverUp-0.4.0.dist-info/RECORD,,
