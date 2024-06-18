@@ -1,0 +1,3 @@
+[console_scripts]
+rix_template = rix_template.run:main
+

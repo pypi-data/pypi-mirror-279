@@ -1,0 +1,12 @@
+rix_template/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rix_template/run.py,sha256=Elmpc8ZjwGUMvHWnYS9oIt4xuxMufF_G6o7UjTIUEoc,4180
+rix_template/providers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rix_template/providers/shared_state.py,sha256=0FRQQ_g7cos13tW0AgDnWriYPq7PDzzDvXWTgT0S0yQ,402
+rix_template/providers/version.py,sha256=s4qkZXyBiWTRhCFUkDLEOhjknTcZnA0Cy_hRsYHpduM,2226
+rix_template-0.0.4.dist-info/LICENSE,sha256=QQFCAfDgt7lSA8oSWDHIZ9aTjFbZaBJdjnGOHkuhK7k,1060
+rix_template-0.0.4.dist-info/LICENSE.md,sha256=QQFCAfDgt7lSA8oSWDHIZ9aTjFbZaBJdjnGOHkuhK7k,1060
+rix_template-0.0.4.dist-info/METADATA,sha256=cAh7l3I1_IwFsOkuBg9JAj7Vy7lCFXiPEvEWZuBgQCk,1749
+rix_template-0.0.4.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+rix_template-0.0.4.dist-info/entry_points.txt,sha256=-gd5WZusCJoJ2uvvxv1iHSC3tSkcf_54_ByFIhlxOIU,56
+rix_template-0.0.4.dist-info/top_level.txt,sha256=GeQUgNY_M2xgRm8bY0As7Yjz8Wl8NTAHVlhwtaac9cA,13
+rix_template-0.0.4.dist-info/RECORD,,
