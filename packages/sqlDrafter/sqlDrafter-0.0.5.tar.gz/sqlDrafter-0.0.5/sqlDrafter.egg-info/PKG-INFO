@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: sqlDrafter
+Version: 0.0.5
+Summary: sqldrafter is a Python library that helps you generate data queries from natural language questions.
+Home-page: https://www.sqldrafter.com
+Author: yanQiao
+Author-email: xiaoyan@sqldrafter.com
+License: Apache License,Version 2.0
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.28.2
+Requires-Dist: prompt-toolkit>=3.0.38
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: tqdm
+Requires-Dist: pwinput
+Requires-Dist: mysql-connector-python
+Requires-Dist: sasl
+Requires-Dist: thrift
+Requires-Dist: thrift-sasl
+Requires-Dist: PyHive
+
+sqldrafter is a Python library that helps you generate data queries from natural language questions.
