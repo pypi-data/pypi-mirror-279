@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: globy_core
+Version: 0.0.8
+Summary: Globy Core
+Author-email: Björn L <bjorn@globy.ai>
+Project-URL: Homepage, https://github.com/globyai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: colorlog
+
+# Globy Core
+
+### Building the package
+```bash
+python3 -m build .
+```
+
+### Publishing the package to Globy artifactory ("globy-dev")
+```bash
+python3 -m twine upload -r globy-dev dist/*
+```
+
+### Updating the Globy core package in your python environment
+```bash
+pip install --upgrade globy-core --index-url http://localhost:8080
+```
+
+### Upgrading locally
+```bash
+pip install globy_core-0.0.6-py3-none-any.whl  --upgrade
+```
