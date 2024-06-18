@@ -1,0 +1,7 @@
+avocado_mail_result/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+avocado_mail_result/mail_result.py,sha256=EcyxakfBF64UR8mxusfAy9uU7MUlMSPrJDonWgpmSFo,9336
+avocado_framework_plugin_mail_result-105.0.dist-info/METADATA,sha256=U9V9DqRxvTZEZ1CjSpgNjOy8PJxzhqXNG1edPzqDOS4,2831
+avocado_framework_plugin_mail_result-105.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+avocado_framework_plugin_mail_result-105.0.dist-info/entry_points.txt,sha256=bpZwJt7o0LWypXJBUhyBo_TdX06sE9x4_WxoFRZiXXU,146
+avocado_framework_plugin_mail_result-105.0.dist-info/top_level.txt,sha256=hN1LJXwTXWiyfuaLgH3redhLtoWKihWJ66GaaGnsWSE,20
+avocado_framework_plugin_mail_result-105.0.dist-info/RECORD,,
