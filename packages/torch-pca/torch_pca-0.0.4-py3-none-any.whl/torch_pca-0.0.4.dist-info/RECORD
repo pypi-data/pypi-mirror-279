@@ -1,0 +1,9 @@
+torch_pca/__init__.py,sha256=ZYFF2TzSXMA1USNYbQTOa5ucg3Xv7jPIEyCW2Lxovbs,447
+torch_pca/_version.py,sha256=yBVOKdXLEcTVc7YV7ZPqRXhRDRt-pKrfXxcgHkgPY5g,411
+torch_pca/pca_main.py,sha256=P9PK2Ite-JgW8vIduT9B54f-qTUvxia4YN14fuyhuDM,6703
+torch_pca/svd.py,sha256=cgAw9Y782B7r9QFQyYH0EqNC6yUz5kpGaxvj9s2F2Do,1778
+torch_pca-0.0.4.dist-info/LICENSE,sha256=S0gisabsrnLl84rl9nPeVXcr985PbV5Ua6XF2n6lNYA,1074
+torch_pca-0.0.4.dist-info/METADATA,sha256=WE-OBHqi1oXaONOqbqIR8umkyqk5KiEJSJD76B-mMcg,4559
+torch_pca-0.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+torch_pca-0.0.4.dist-info/top_level.txt,sha256=HGYZgI1m0h6mwRp9wBzBv5cjnD7lq7jeKNyzxw2h2CA,10
+torch_pca-0.0.4.dist-info/RECORD,,
