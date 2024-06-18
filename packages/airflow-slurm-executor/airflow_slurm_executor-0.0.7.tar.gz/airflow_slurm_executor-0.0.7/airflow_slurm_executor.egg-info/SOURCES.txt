@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+airflow_slurm_executor/__init__.py
+airflow_slurm_executor/slurm_control.py
+airflow_slurm_executor/slurm_executor.py
+airflow_slurm_executor.egg-info/PKG-INFO
+airflow_slurm_executor.egg-info/SOURCES.txt
+airflow_slurm_executor.egg-info/dependency_links.txt
+airflow_slurm_executor.egg-info/requires.txt
+airflow_slurm_executor.egg-info/top_level.txt
