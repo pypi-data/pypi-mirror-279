@@ -1,0 +1,9 @@
+setup.py
+scriptpilot/__init__.py
+scriptpilot/main.py
+scriptpilot.egg-info/PKG-INFO
+scriptpilot.egg-info/SOURCES.txt
+scriptpilot.egg-info/dependency_links.txt
+scriptpilot.egg-info/entry_points.txt
+scriptpilot.egg-info/requires.txt
+scriptpilot.egg-info/top_level.txt
