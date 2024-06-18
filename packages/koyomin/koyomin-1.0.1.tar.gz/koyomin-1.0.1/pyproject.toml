@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "koyomin"
+version = "1.0.1"
+description = "Oauth lib helper to connect with Koyomin IDP"
+authors = ["AlexandreSenpai <alexandreramos469@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+uvicorn = "^0.29.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

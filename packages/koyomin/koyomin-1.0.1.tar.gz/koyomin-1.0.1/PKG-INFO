@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: koyomin
+Version: 1.0.1
+Summary: Oauth lib helper to connect with Koyomin IDP
+License: MIT
+Author: AlexandreSenpai
+Author-email: alexandreramos469@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.31.0,<3.0.0)
+Requires-Dist: uvicorn (>=0.29.0,<0.30.0)
+Description-Content-Type: text/markdown
+
+
