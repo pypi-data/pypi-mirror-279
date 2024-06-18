@@ -1,0 +1,68 @@
+[build-system]
+requires = [
+    "setuptools>=61.2",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llg3d"
+authors = [
+    { name = "IRMA", email = "matthieu.boileau@math.unistra.fr" },
+]
+description = "Solveur pour l'équation de Landau-Lifshitz-Gilbert stochastique en 3D"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.6"
+dependencies = [
+    "numpy",
+    "mpi4py",
+    "matplotlib",
+    "scipy"
+]
+dynamic = ["version"]
+
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.urls]
+Homepage = "https://gitlab.math.unistra.fr/llg3d/llg3d"
+
+[project.scripts]
+llg3d = "llg3d.llg3d:main"
+"llg3d.post" = "llg3d.post.temperature:main"
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-cov", "pytest-mpi"]
+doc = [
+    "Sphinx >= 7.2.2",
+    "myst-parser",
+    "furo",
+    "nbsphinx",
+    "sphinx-copybutton",
+    "sphinx-autobuild",
+    "sphinx-prompt",
+    "sphinx-last-updated-by-git",
+    "sphinxcontrib-programoutput"
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.setuptools.dynamic.version]
+attr = "llg3d.__version__"
+
+[tool.coverage.run]
+parallel = true
+source = ["src/"]
