@@ -1,0 +1,14 @@
+{
+  "title": "Sagemaker Q Chat",
+  "description": "Settings for q chat",
+  "properties": {
+    "enableQChat": {
+      "type": "boolean",
+      "title": "Enable Q chat",
+      "description": "enable or disable q chat model provider",
+      "default": true
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}
