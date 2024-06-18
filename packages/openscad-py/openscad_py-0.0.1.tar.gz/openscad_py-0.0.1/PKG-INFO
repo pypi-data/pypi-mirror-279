@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: openscad-py
+Version: 0.0.1
+Summary: OpenSCAD Python API
+Author: Mickaël Fabrègue
+Author-email: <mickael.fabregue@proton.me>
+Keywords: python,openscad,3d,2d,cad,modeling
+Classifier: Development Status :: 1 - Planning
+License-File: LICENSE.md
+
+A simple library to generate OpenSCAD code using Python.
