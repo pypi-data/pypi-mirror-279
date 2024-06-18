@@ -1,0 +1,11 @@
+daemonpy/__init__.py,sha256=7qkGEa5E1IXtnEf4R1DAsiuE9gHH6tldeu0ok51_DZw,10459
+daemonpy/daemon_usage.py,sha256=1BN1EYtMum2xaXXC4nGtnEZ5mrgZH2bBOCnVQXBraQw,4836
+daemonpy/file_descriptor.py,sha256=V0u_rx3uhd41Q6aMyrwqu0nHQMO4lWYvrMjDkzgouHQ,5155
+daemonpy/file_process_id.py,sha256=VCL-mQ8C0KI74j0udLX99tEu3BWMzTlp1D-xn_MWcRA,4185
+daemonpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+daemonpy/unix_operations.py,sha256=Dwp0QWfCELZLG7kmsX94bwVWJ-7AFhb9I-Yqzw_3OUA,7081
+daemonpy-2.0.4.dist-info/LICENSE,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+daemonpy-2.0.4.dist-info/METADATA,sha256=fEt8hN_XHL_H8c0TYDN6WYWrIcmskTU1AGEInJOxNp8,7822
+daemonpy-2.0.4.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+daemonpy-2.0.4.dist-info/top_level.txt,sha256=nFEQS8aULR2_3gB7-COB6HzldAHrLhgrzpSwMNXNPI4,9
+daemonpy-2.0.4.dist-info/RECORD,,
