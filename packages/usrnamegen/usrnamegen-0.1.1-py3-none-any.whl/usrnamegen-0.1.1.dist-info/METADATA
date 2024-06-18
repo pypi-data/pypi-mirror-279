@@ -1,0 +1,39 @@
+Metadata-Version: 2.3
+Name: usrnamegen
+Version: 0.1.1
+Summary: Generate random usernames
+Author: Lifr0m
+License-Expression: MIT
+License-File: LICENSE
+Keywords: username
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Provides-Extra: build
+Requires-Dist: build; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: mypy; extra == 'dev'
+Requires-Dist: ruff; extra == 'dev'
+Description-Content-Type: text/markdown
+
+### How to use
+```python
+from usrnamegen import generate_username
+
+username = generate_username()
+```
+
+### Result examples
+```text
+SkinnyIlliteracy64
+FreshAsterisk53
+CrushingMozzarella20
+GenerousRaincoat64
+WarpedVisor70
+GoldenEmploy9
+InsecureFool19
+KindYam32
+UnwittingRace8
+IdealFishery76
+```
