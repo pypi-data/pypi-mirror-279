@@ -1,0 +1,12 @@
+pyifu/__init__.py,sha256=BYHmdcURpDnnEsFoNKfWAOHAEzjs3p7I0hUOJW0RB4I,125
+pyifu/adr.py,sha256=H54hZFJU98HQrr8N9LKG2g-ABljmLWnokAeUFVOC79s,20483
+pyifu/adrfit.py,sha256=vyqfpAhVKbidVMdHsVLxdVna7ExeH_BlsAfSPPcFlYY,9121
+pyifu/mplinteractive.py,sha256=XAnd5o037iEMVSo9egNFEvY1P-QfxCvU-4ryNNDzpbs,23601
+pyifu/spectroscopy.py,sha256=yHWC4pU-H5QGScjfJRgsCmV43GerDu51AhqHq0eAr20,103457
+pyifu/tools.py,sha256=5QkHw32G2RKeyZE8JNW0qKlorq0XTRBH69PJu1ZFrdY,10923
+pyifu-0.13.0.data/scripts/display_cube.py,sha256=v9wGoWatvHWeEILMdnys47M973dKEHP3Br946h381qA,1774
+pyifu-0.13.0.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+pyifu-0.13.0.dist-info/METADATA,sha256=XlKTJluu-cGybO5Q-nDCRrbZ3E2H54OjvPSAACnB_Jg,868
+pyifu-0.13.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyifu-0.13.0.dist-info/top_level.txt,sha256=PHDMkjgbBrrKRLRjt5NpT7YON5qNeST4NbVKf5dXvu0,6
+pyifu-0.13.0.dist-info/RECORD,,
