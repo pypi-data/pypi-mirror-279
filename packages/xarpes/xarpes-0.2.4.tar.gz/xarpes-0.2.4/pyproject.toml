@@ -1,0 +1,28 @@
+[build-system]
+requires = ["flit_core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "xarpes"
+dynamic = ["version"]
+authors = [{name = "xARPES Developers"}]
+description = "Extraction from angle resolved photoemission spectra"
+readme = "README.md"
+license = {file = "LICENSE"}
+urls = {Documentation = "https://xarpes.github.io"}
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.7.0"
+dependencies = [
+    "igor2",
+    "jupyterlab",
+    "jupytext",
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "lmfit",
+    "xarray",
+    "pyqt5",
+]
