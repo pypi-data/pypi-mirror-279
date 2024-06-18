@@ -1,0 +1,31 @@
+#!/bin/bash
+
+source .env
+
+git_folder=$RIKSPROT_DATA_FOLDER/riksdagen-corpus
+echo "git_folder: $git_folder"
+
+usage_message=$(cat <<EOF
+usage: update-timestamps [GIT_FOLDER]
+EOF
+)
+
+if [  $# == 1 ]; then
+    git_folder=$1
+fi
+
+if [ "$git_folder" == "" ] ; then
+    echo $usage_message
+    exit 64
+fi
+
+if [ ! -d "$git_folder" ] ; then
+    echo "error: not such folder $git_folder"
+    exit 64
+fi
+
+curl -s https://raw.githubusercontent.com/MestreLion/git-tools/main/git-restore-mtime -o /tmp/git-restore-mtime
+pushd .  &> /dev/null
+cd ${git_folder}
+python /tmp/git-restore-mtime --commit-time
+popd &> /dev/null
