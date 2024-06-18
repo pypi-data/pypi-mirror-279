@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: ASUkit
+Version: 0.0.1
+Summary: toolkit for AUSnet
+Author: CaoBin
+Author-email: bcao686@connect.hkust-gz.edu.cn
+Maintainer: CaoBin
+Maintainer-email: bcao686@connect.hkust-gz.edu.cn
+License: MIT License
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.5
+Requires-Dist: scipy
+Requires-Dist: ase
+Requires-Dist: spglib
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+
+Maintained by Mr.Bin Cao, Please feel free to contact Bin Cao
+(bcao686@connect.hkust-gz.edu.cn) in case of any problems/comments/suggestions in using the code. 
+
