@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: scriptpilot
+Version: 1.2
+Summary: A tool to manage the execution of multiple Python scripts.
+Home-page: https://github.com/yourusername/scriptpilot
+Author: Javer Valino
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: psutil
+
+
+        ScriptPilot is designed to manage the execution of multiple Python scripts based on their status 
+        defined in a text file named 'sp_on_board.txt'. ScriptPilot provides functionalities to start, stop, 
+        and monitor these scripts. It ensures that scripts are not duplicated and manages their lifecycle 
+        efficiently.
+    
