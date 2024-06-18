@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sdkdataservices"
+version = "1.0.0"
+description = "Common Module"
+authors = [
+    { name = "SP", email = "SP@spglobal.com" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests",
+    "pandas"
+
+]
+[project.urls]
+Homepage = "https://github.com/pypa/sampleproject"
+Issues = "https://github.com/pypa/sampleproject/issues"
+[tool.setuptools.packages.find]
+where = ["."]
