@@ -1,0 +1,10 @@
+sqldrafter/__init__.py,sha256=voz2yGhnya6t9sRnbN12yLp36lPbx0d1_Odyrcxq9cY,5141
+sqldrafter/cli.py,sha256=7yvY7y-0ecVa67OB563RisrceZDSZeInRX6ZOOu3wlw,5508
+sqldrafter/generate_schema.py,sha256=CfRAngMwi6KT4NhkHsUqvfawmOM128F96xXrFMQkSRg,2715
+sqldrafter/space_manager.py,sha256=gwtsW559izvSjCaSmTZaAgXCuqFCDPVb8HPYkruqAgE,837
+sqldrafter/util.py,sha256=a1Kg5oSgNQQHu96KjaLGJWqtlnccp0HbkNVGfTGrflY,14516
+sqlDrafter-0.0.5.dist-info/METADATA,sha256=Y_5jlGgEOwSXvFYVOvsLKCnLCQRH-rEvuMahMboCENg,723
+sqlDrafter-0.0.5.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+sqlDrafter-0.0.5.dist-info/entry_points.txt,sha256=F-8LFZrXeOAnrS9mpczXSkcIDN_SjHUBACaWqIzwJhk,51
+sqlDrafter-0.0.5.dist-info/top_level.txt,sha256=XA4nOob1yvDXOPUz-OPVBbwpCRv0wGid6MKOOXIBJpc,11
+sqlDrafter-0.0.5.dist-info/RECORD,,
