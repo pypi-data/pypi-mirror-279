@@ -1,0 +1,11 @@
+pytest_cleanslate/__init__.py,sha256=uuIQtGXPeT_N57CnFRe8CW5fu9TxIgUYemYIAeQ_fXU,74
+pytest_cleanslate/__main__.py,sha256=nFiWnXkseVNPJ_3LCtJ4nxEU9Tpsv5FLSpwpIHWIHLg,151
+pytest_cleanslate/__version__.py,sha256=B9kKWJLln1i8LjtkcYecvNWGLTrez4gCUOHtnPlInFo,22
+pytest_cleanslate/plugin.py,sha256=8seVvGtGp0-dzdB8CSHNZGevBHLFvBTjFHnYNF9M6xA,5503
+pytest_cleanslate/reduce.py,sha256=xwnhVvJdTNve20Sk7XsQdEKikmbkSkzZ7zAriOLLpmc,11768
+pytest_cleanslate-1.0.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pytest_cleanslate-1.0.5.dist-info/METADATA,sha256=jVDMbB-pdQnACpeTsvzQJ8_teMNsAHbAa2i2Tsllg_o,3363
+pytest_cleanslate-1.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pytest_cleanslate-1.0.5.dist-info/entry_points.txt,sha256=GMkexYXZ1I4Zv7N5kafbgFNQhtT7gC63uGl2RmSlB2E,125
+pytest_cleanslate-1.0.5.dist-info/top_level.txt,sha256=I_rGGNOjY7WRHxJt_Wo8YjXtfrN17sGcPkcXIupDEQc,18
+pytest_cleanslate-1.0.5.dist-info/RECORD,,
