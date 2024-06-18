@@ -1,0 +1,21 @@
+prefect<3.0.0,>=2.13.5
+python-gitlab>=3.12.0
+tenacity>=8.2.3
+
+[dev]
+aiohttp
+coverage
+interrogate
+mkdocs-gen-files
+mkdocs-material
+mkdocs
+mkdocstrings[python]
+mypy
+pillow
+pre-commit
+pytest-asyncio
+pytest
+pytest-xdist
+
+[dev:python_version < "3.8"]
+mock
