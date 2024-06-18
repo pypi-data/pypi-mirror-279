@@ -1,0 +1,10 @@
+python-dotenv
+vastai
+
+[dev]
+pytest
+pytest-mock==3.14.0
+pylint==3.2.2
+twine
+wheel
+vastai
