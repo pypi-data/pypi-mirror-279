@@ -1,0 +1,16 @@
+pydisagg/DisaggModel.py,sha256=G6J4TJLV_APZfLmPh0ALOFIQwfZCqAUp5IsW-p7SC4U,24999
+pydisagg/ParameterTransformation.py,sha256=gxrDzhebgrLeou_afxWizOJWnVdLSQU0NbBXkfyam8Q,723
+pydisagg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydisagg/disaggregate.py,sha256=ub7_TFNGWM7F1kznCUI4o8SVCAr5QUZQ_IpBLzD1XkQ,11855
+pydisagg/models.py,sha256=7p6lllwSXI6iAEyokHvf264jPf6LGP1dEXZueiSTlDI,1796
+pydisagg/transformations.py,sha256=We77NOG6p148Hb-IGDTKoDbrCkpk-N1y3q4wL8pB6sQ,1928
+pydisagg/ihme/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydisagg/ihme/validator.py,sha256=U5jOeupc_aqbY8Afuft5lEMs5tV0R5NShVLdzFLjhgk,4263
+pydisagg/ihme/splitter/__init__.py,sha256=8Bi5P6jj-J7EvbTnWR_PT3Y2ZzO2t_XrnK6NaQrWfWU,423
+pydisagg/ihme/splitter/age_splitter.py,sha256=v1S47yu9E5YW_UrSBzpmQtBvSnLcTpSPuEeAWvzX7Rc,13320
+pydisagg/ihme/splitter/sex_splitter.py,sha256=OyhgIxxOFEx4CqEHK8u1o4An6mN8HTBv4iuIPEx816E,7748
+pydisagg-0.5.0.dist-info/LICENSE,sha256=63w0xbN99sgqV5CB-FQxrw5Elm64xVcg0EzzZDSPhWA,1328
+pydisagg-0.5.0.dist-info/METADATA,sha256=ylByMeRFs41MK0uqyOSMzuJKu9R3T6jX_D_9pOC2WUk,3799
+pydisagg-0.5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pydisagg-0.5.0.dist-info/top_level.txt,sha256=4wGmtd4IDaMRxcGETmqlL-s0z6MfVmyKzp2HhR39G1U,9
+pydisagg-0.5.0.dist-info/RECORD,,
