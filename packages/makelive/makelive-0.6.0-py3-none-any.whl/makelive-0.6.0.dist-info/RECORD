@@ -1,0 +1,9 @@
+makelive/__init__.py,sha256=7z1eHgLh-9HS2GBMNrgdXzROlRvumpCAFH2bFr1qRJw,410
+makelive/__main__.py,sha256=MiB3VaB1SJ-6fQ53fEMchvAMVX0U85jokUVq6MQymsA,5156
+makelive/makelive.py,sha256=r6KlN9zxtZxoEa01yZabrngO4gWAv_17yoUx6SPxZxQ,17173
+makelive/version.py,sha256=cID1jLnC_vj48GgMN6Yb1FA3JsQ95zNmCHmRYE8TFhY,22
+makelive-0.6.0.dist-info/entry_points.txt,sha256=AqcZNZYVnTxtAeqTnuUcIdEly-btlDEi2IS5ck7zfmk,51
+makelive-0.6.0.dist-info/LICENSE,sha256=3vCl9u_6RdiG0pAPptOgAJE7YJUV0EITP_k4C3LHs-Q,1070
+makelive-0.6.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+makelive-0.6.0.dist-info/METADATA,sha256=4wrwJ0EJ4hc9KDCUjsZGkyHudI04FfzytUIbcJuHulo,8159
+makelive-0.6.0.dist-info/RECORD,,
