@@ -1,0 +1,93 @@
+<!--
+SPDX-FileCopyrightText: 2023 Justus Perlwitz
+SPDX-FileCopyrightText: 2024 Justus Perlwitz
+SPDX-FileCopyrightText: 2021-2023 Bhatihya Perera
+
+SPDX-License-Identifier: MIT
+-->
+
+# pomoglorbo
+
+*Terminal Pomodoro Timer*
+
+## Installation
+
+This is a fork of the original
+[pydoro](https://github.com/JaDogg/pydoro). Installing this fork will
+require you to clone this repository and install it from there like so:
+
+```
+# Provided you CDed into the repository
+# If your system uses pip, type pip instead
+# If you really want a global install, leave --user out
+pip3 install --user .
+```
+
+You can also use `pip install ".[audio]"` to get audio dependencies for
+OSX(`pyobjc-core`) and Linux(`PyGObject`).
+
+Also for Linux `pygame` will be used if it's installed. (Try this if
+you cannot get `PyGObject` to work)
+
+For some systems you may have to use `pip3` instead. **Only Python 3.6+
+is supported.**
+
+I am not entirely sure if this will work with Windows, please try and
+let me know. The original version might have worked.
+
+This might work with pipx, but I can't guarantee. Refer to the original
+pydoro for advice on this.
+
+## Usage
+
+Run `pomoglorbo` to launch. More info in
+[the wiki](https://github.com/JaDogg/pydoro/wiki) of the original version.
+
+## Development
+
+Run pomoglorbo inside a poetry venv using the following command:
+
+```bash
+poetry run src/pomoglorbo/cli/__init__.py
+```
+
+You can additonally specify a config file to be used like so:
+
+```bash
+env POMOGLORBO_CONFIG_FILE=test/config.ini \
+    poetry run src/pomoglorbo/cli/__init__.py
+```
+
+## Options
+
+See `pomoglorbo --help` for a complete overview of available options. At the
+time of writing, these were the available flags:
+
+```
+options:
+  -h, --help            show this help message and exit
+  --focus               focus mode: hides clock and mutes sounds (equivalent to --no-clock and --no-sound)
+  --no-clock            hides clock
+  --no-sound            mutes all sounds
+  --audio-check         play audio and exit
+  -v, --version         display version and exit
+  --audio-file path     custom audio file
+  --work-state-cmd-suffix WORK_STATE_CMD_SUFFIX [WORK_STATE_CMD_SUFFIX ...]
+                        arguments to append to every command invocation
+```
+
+## Credits
+
+- [pydoro](https://github.com/JaDogg/pydoro) - by Bhathiya Perera
+- Pomodoro - Invented by Francesco Cirillo
+- prompt-toolkit - Awesome TUI library
+- b15.wav - [Dana](https://freesound.org/s/377639/) robinson designs,
+  CC0 from freesound
+
+## Contributors
+
+See the `CONTRIBUTORS` file in the root directory.
+
+## Copyright
+
+See the LICENSES folder for more information.
