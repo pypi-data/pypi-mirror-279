@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nlpbridge
+Version: 0.1.0
+Summary: NLP Bridge
+Home-page: https://github.com/GZU4AI/nlpbridge/tree/vitalis
+Author: 
+Author-email: 
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# NLPBridge
