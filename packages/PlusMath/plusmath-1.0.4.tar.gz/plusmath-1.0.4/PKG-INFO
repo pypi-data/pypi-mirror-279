@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: PlusMath
+Version: 1.0.4
+Summary: Does Python not have enough math tools? PlusMath is here to help!
+Home-page: https://github.com/cornusandu/MoreMath
+Author: Sandu Bogdan
+Author-email: bogdanelsandu@hotmail.com
+Project-URL: Bug Tracker, https://github.com/cornusandu/MoreMath/issues
+Project-URL: GitHub Repository, https://github.com/cornusandu/MoreMath
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: license.txt
+
+# MyMath
+PlusMath is a python library dedicated to offering you as many and as self-explenatory math tools as possible!<br>Get started by downloading the newest version of PlusMath!
