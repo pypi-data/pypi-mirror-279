@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+hyperapi_cordoba/hyperapi.py
+hyperapi_cordoba.egg-info/PKG-INFO
+hyperapi_cordoba.egg-info/SOURCES.txt
+hyperapi_cordoba.egg-info/dependency_links.txt
+hyperapi_cordoba.egg-info/requires.txt
+hyperapi_cordoba.egg-info/top_level.txt

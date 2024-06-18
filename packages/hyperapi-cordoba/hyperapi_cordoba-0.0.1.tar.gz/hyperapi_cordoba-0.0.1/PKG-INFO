@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: hyperapi_cordoba
+Version: 0.0.1
+Summary: HyperAPI's powerful apis for image and spectrum processing
+Home-page: https://github.com/HyperCorn
+Download-URL: https://github.com/HyperCorn/HyperAPI-Python-Client/releases/tag/v0.0.1
+Author: HyperCorn
+Author-email: hypercorncordoba@gmail.com
+Keywords: IMAGES,SPECTRUMS,CROPS,SATELITAL-IMAGES
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE.txt
+Requires-Dist: requests
