@@ -1,0 +1,12 @@
+sklearn_crfsuite/__init__.py,sha256=p-rFpGLrhXcmdbJ2FK3BkUT-0Aa-kZ57tTya4wpuk-0,27
+sklearn_crfsuite/_fileresource.py,sha256=oJQvLj6ZiiYRN1pvSYUvh2QHYTAHbNpsG0vGYyt4fHY,2143
+sklearn_crfsuite/compat.py,sha256=OW2TuMOzxVWeC77XQ2WLxQtO-Neoh_zfxsZ4JvViYzc,107
+sklearn_crfsuite/estimator.py,sha256=UQ4BNTr-eHs0kad4h7W89aa3VGH-O6c2WNawsy4INeY,17484
+sklearn_crfsuite/metrics.py,sha256=KPtbTQmfs9xpla_WmxxYB2hAN1o5MvJL-LAONIOYmVI,2011
+sklearn_crfsuite/scorers.py,sha256=vXooZm8kIPpPxsOBXJJBX_MXs5o_SM--lWOMXY9hdMU,341
+sklearn_crfsuite/trainer.py,sha256=_fibm8jm4GuFuacDBrq9K48I8KkH914LqI4dYLbc7rQ,1607
+sklearn_crfsuite/utils.py,sha256=C_YbFrd7ukLTVcocPzWiWAF8N7wixdfbo_sO2lHAGdc,181
+sklearn_crfsuite-0.4.0.dist-info/METADATA,sha256=B__9mjOZt2hcB5Y1TjhmcSkB8YfcxG7VgtJIbw9Qux0,4505
+sklearn_crfsuite-0.4.0.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+sklearn_crfsuite-0.4.0.dist-info/top_level.txt,sha256=WfZHb5tfZ_xJXVrLDxk3huGZlX6F6_-XcbB2MnhROu8,17
+sklearn_crfsuite-0.4.0.dist-info/RECORD,,
