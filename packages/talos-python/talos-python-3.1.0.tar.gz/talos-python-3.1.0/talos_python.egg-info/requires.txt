@@ -1,0 +1,7 @@
+cffi
+python-snappy
+atomic
+dnspython
+requests
+futures
+IPy
