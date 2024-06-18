@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "miniqmt"
+version = "20240618"
+description = "迅投量化工具的封装包"
+license = "MIT"
+authors = ["vex1023 <vex1023@qq.com>"]
+homepage = "https://gitee.com/vex1023/miniqmt"
+keywords = ["quant", "tools","xtquant","miniqmt","xtquant20240329版本"]
+readme = "README.md"
+
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+packages = [
+    { include = "xtquant",from = "src/" },
+    { include = "miniqmt",from = "src/" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-dateutil = "*"
+pydantic = "^2.0"
+sqlalchemy = "^1.4"
+joblib = "*"
+requests = "*"
+vxutils = "*"
+vxquant = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "*"
+pylint = "*"
+twine = "*"
+black = "*"
