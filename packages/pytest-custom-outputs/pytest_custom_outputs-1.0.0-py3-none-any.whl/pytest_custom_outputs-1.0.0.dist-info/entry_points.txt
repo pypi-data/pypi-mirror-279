@@ -1,0 +1,2 @@
+[pytest11]
+custom_outputs = pytest_custom_outputs.custom_outputs
