@@ -1,0 +1,9 @@
+spw_corrosion/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+spw_corrosion/corrosion.py,sha256=UcKhm-jqOwMJBLA5IH6xTO96nyl7ulXdG3mq7bj_83o,9478
+spw_corrosion/plotting_functions.py,sha256=bM8bSNSRRuh3JKeobK6AXVucmzNBhMIN6mZ-iYMOjP8,3292
+spw_corrosion/wall_properties.py,sha256=56AwDvlS_RNnHODYB2uVkq8SCV_9EN05om90ZJ3PSPQ,2704
+spw_corrosion-0.1.1.dist-info/LICENSE.txt,sha256=4HBVyDiGNK87tJC4StPe9skRQ_MU1hfhbRFywpIkaf0,1083
+spw_corrosion-0.1.1.dist-info/METADATA,sha256=CnDi69UQF1PMl2Q-F2REydjlevjkjmqQZI8NX5FLXzs,648
+spw_corrosion-0.1.1.dist-info/WHEEL,sha256=pkctZYzUS4AYVn6dJ-7367OJZivF2e8RA9b_ZBjif18,92
+spw_corrosion-0.1.1.dist-info/top_level.txt,sha256=8vN3Q7jGg40hexYSyBjI_sm04J4nmYlY3SA-aSXXzhU,14
+spw_corrosion-0.1.1.dist-info/RECORD,,
