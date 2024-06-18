@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: qolab
+Version: 0.11
+Summary: Collection of method useful in the quantum optics lab: qolab 
+Author: Eugeniy E. Mikhailov
+Author-email: eemikh@wm.edu
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Requires-Dist: numpy >=1.19.5
+Requires-Dist: matplotlib >=3.3.4
+Requires-Dist: pyvisa >=1.11.3
+Requires-Dist: scipy >=1.6.0
+Requires-Dist: pyyaml >=5.3.1
+Requires-Dist: justpy >= 0.2.3
+Requires-Dist: pandas >= 1.1.5
+Requires-Dist: starlette == 0.17.1; python_version <= '3.9'
+Requires-Dist: starlette >= 0.17.1; python_version > '3.9'
+Requires-Dist: universal_tsdb >=0.1.1
+Requires-Dist: cachetools >=5.0.0
+Requires-Dist: pyserial >= 3.4
+
+# qolab
+
+Collection of scripts to run experimental hardware with python.
+
+Started in April 2021 by Eugeniy E. Mikhailov
+
+## Build instructions
+
+To build a python wheel package and put it in `./dist/` directory, run
+
+~~~~~
+flit build
+~~~~~
+
+
