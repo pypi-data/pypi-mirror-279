@@ -1,0 +1,6 @@
+numpy==1.26.4
+matplotlib==3.8.4
+optax
+healpy==1.16.6
+s2wav>=1.0.4
+s2fft>=1.1.1
