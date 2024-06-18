@@ -1,0 +1,21 @@
+Metadata-Version: 2.3
+Name: pysocha
+Version: 0.1.0
+Summary: Extremely simple static site generator
+Author-email: Tod Hansmann <githubpub@todandlorna.com>
+Requires-Python: >=3.8
+Requires-Dist: flask>=3.0.3
+Requires-Dist: jinja2>=3.1.4
+Requires-Dist: linkify-it-py>=2.0.3
+Requires-Dist: markdown-it-py>=3.0.0
+Requires-Dist: mdit-py-plugins>=0.4.1
+Requires-Dist: python-dateutil>=2.9.0.post0
+Requires-Dist: python-frontmatter>=1.1.0
+Requires-Dist: python-slugify>=8.0.4
+Requires-Dist: pyyaml>=6.0.1
+Requires-Dist: typer>=0.12.3
+Description-Content-Type: text/markdown
+
+# pysocha
+
+pysocha is a static site generator of as simple a variety as we can make for our needs.
