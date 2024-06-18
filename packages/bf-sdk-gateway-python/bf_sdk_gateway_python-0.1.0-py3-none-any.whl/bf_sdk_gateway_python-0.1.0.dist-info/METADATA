@@ -1,0 +1,235 @@
+Metadata-Version: 2.1
+Name: bf-sdk-gateway-python
+Version: 0.1.0
+Summary: SDK para integração com o gateway de pagamentos bemfácil®
+Home-page: https://github.com/bemfacil/bf_gateway_sdk_python
+Author: Daniel Lima do Nascimento
+Author-email: daniel.nascimento@bemfacil.com.br
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+
+# bemfácil® Payment SDK
+
+Este SDK facilita a integração com o gateway de pagamentos bemfácil®, permitindo que você realize operações como
+autenticação, tokenização de cartões, criação de transações, captura de pagamentos e consulta de status de transações.
+
+## Instalação
+
+Para instalar o SDK, você pode usar o pip:
+
+```sh
+pip install bemfacil_payment_sdk
+```
+
+## Uso
+
+Para usar o SDK, você precisa de um nome de usuário e senha fornecidos pela bemfacil®. Para obter essas credenciais,
+entre em contato com a bemfacil® para adquirir um usuário de teste ou de produção.
+
+### Configuração Inicial
+
+Primeiro, configure o SDK com suas credenciais. Você pode fazer isso diretamente no seu código ou integrá-lo em um
+projeto Django (veja a seção de Integração com Django abaixo).
+
+```python
+from bemfacil_payment_sdk.client import BemFacilPaymentClient
+
+client = BemFacilPaymentClient(
+    username='seu_email@empresa.com',
+    password='sua_senha'
+)
+```
+
+### Tokenização de Cartão
+
+Para tokenizar um cartão, você pode usar o seguinte código:
+
+```python
+card_token = client.tokenize_card('5555666677778884', '12/25', {
+    'first_name': 'John',
+    'last_name': 'Doe',
+    'birth_date': '01/01/1970',
+    'phone': '+5511999999999',
+    'email': 'john.doe@example.com'
+})
+print(card_token)
+```
+
+### Criação de Transação
+
+Para criar uma transação, use o seguinte código:
+
+```python
+transaction = client.create_transaction('40404040411', 10, 'credit', 1)
+print(transaction)
+```
+
+### Captura de Pagamento
+
+Para capturar um pagamento, use o seguinte código:
+
+```python
+capture_response = client.capture_payment(transaction['transaction_id'], {
+    'number': '5555666677778884',
+    'expiry_date': '12/25',
+    'cvv': '123'
+})
+print(capture_response)
+```
+
+### Consulta de Status de Transação
+
+Para consultar o status de uma transação, use o seguinte código:
+
+```python
+status = client.get_transaction_status(transaction['transaction_id'])
+print(status)
+```
+
+### Atualização de Senha
+
+Para atualizar a senha, use o seguinte código:
+
+```python
+response = client.change_password('nova_senha123')
+print(response)
+```
+
+### Atualização do Token de Autenticação
+
+Para atualizar o token de autenticação, use o seguinte código:
+
+```python
+client.refresh_auth_token()
+print('Token atualizado:', client.api_key)
+```
+
+## Integração com Django
+
+Você pode integrar este SDK em um projeto Django. Aqui está um exemplo de como fazer isso:
+
+### Configuração
+
+Adicione as configurações do bemfacil® no seu `settings.py`:
+
+```python
+# settings.py
+BEMFACIL_USERNAME = 'seu_email@empresa.com'
+BEMFACIL_PASSWORD = 'sua_senha'
+BEMFACIL_BASE_URL = 'https://gws-hml.bemfacil.com.br'
+```
+
+Crie um arquivo de configuração para inicializar o cliente do SDK:
+
+**config/bemfacil.py**:
+
+```python
+from django.conf import settings
+from bemfacil_payment_sdk.client import BemFacilPaymentClient
+
+
+def get_bemfacil_client():
+    return BemFacilPaymentClient(
+        username=settings.BEMFACIL_USERNAME,
+        password=settings.BEMFACIL_PASSWORD,
+        base_url=settings.BEMFACIL_BASE_URL
+    )
+```
+
+Use o SDK em suas views:
+
+**views.py**:
+
+```python
+from django.shortcuts import render
+from django.http import JsonResponse
+from config.bemfacil import get_bemfacil_client
+
+
+def tokenize_card_view(request):
+    if request.method == 'POST':
+        card_number = request.POST.get('card_number')
+        card_expiry = request.POST.get('card_expiry')
+        card_holder_data = {
+            'first_name': request.POST.get('first_name'),
+            'last_name': request.POST.get('last_name'),
+            'birth_date': request.POST.get('birth_date'),
+            'phone': request.POST.get('phone'),
+            'email': request.POST.get('email')
+        }
+        client = get_bemfacil_client()
+        try:
+            response = client.tokenize_card(card_number, card_expiry, card_holder_data)
+            return JsonResponse(response)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+
+    return render(request, 'tokenize_card.html')
+
+
+def create_transaction_view(request):
+    if request.method == 'POST':
+        document = request.POST.get('document')
+        amount = request.POST.get('amount')
+        payment_method = request.POST.get('payment_method')
+        installments = request.POST.get('installments')
+        client = get_bemfacil_client()
+        try:
+            response = client.create_transaction(document, amount, payment_method, installments)
+            return JsonResponse(response)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+
+    return render(request, 'create_transaction.html')
+```
+
+## Testes
+
+Para rodar os testes, use o comando:
+
+```sh
+python -m unittest discover tests
+```
+
+## Usuários de teste
+
+| Username                  | Password      |         
+|---------------------------|---------------|
+| gateway01@bemfacil.com.br | BemFacil2024@ |
+| gateway02@bemfacil.com.br | BemFacil2024@ |
+| gateway03@bemfacil.com.br | BemFacil2024@ |
+
+## Cartões de Teste
+
+Aqui estão alguns cartões de teste que você pode usar para simular transações durante o desenvolvimento:
+
+| Bandeira   | Número do Cartão | Exp Date | Cod. Sec |
+|------------|------------------|----------|----------|
+| VISA       | x895379980000580 | 12/23    | 518      |
+| VISA       | x895379980000572 | 12/23    | 841      |
+| VISA       | x895379980000564 | 12/23    | 11       |
+| VISA       | x895379980000325 | 12/23    | 45       |
+| Mastercard | 512X342233150747 | ANY      | ANY      |
+| Mastercard | 512X343287499758 | ANY      | ANY      |
+| Mastercard | 51203501XXX64594 | ANY      | ANY      |
+| Mastercard | 222269042006459X | ANY      | ANY      |
+
+## Contato
+
+Para obter as credenciais de usuário de teste ou de produção, entre em contato com a bemfacil®.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+```
+
+Este `README.md` oferece uma visão clara e detalhada de como utilizar o SDK, incluindo exemplos de código e instruções de configuração. Além disso, informa ao usuário sobre a necessidade de obter credenciais da bemfacil® para testar o SDK.
+

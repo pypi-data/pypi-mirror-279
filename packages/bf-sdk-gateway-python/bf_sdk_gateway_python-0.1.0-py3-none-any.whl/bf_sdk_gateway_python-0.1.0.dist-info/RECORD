@@ -1,0 +1,11 @@
+bf_sdk_gateway_python/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bf_sdk_gateway_python/client.py,sha256=k5PHnnQIyrNLPWlrX294Sf_cx_i2VQMAbHrn-g88Y4g,9284
+bf_sdk_gateway_python/exceptions.py,sha256=43wuvxkTu3dXh-5Yee07zuTnG3NHOvmrn0a42vg5gV8,327
+bf_sdk_gateway_python/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=EYRJcgPgOgI-Jcrhs0_asbJebJsQzX3VFNARLVWNJUA,4049
+bf_sdk_gateway_python-0.1.0.dist-info/LICENSE,sha256=MpKH-pDW_QlHse_ca6yJJKZVyZxibGtCtg5QFbhsghs,1084
+bf_sdk_gateway_python-0.1.0.dist-info/METADATA,sha256=xrVcuP3LisREU9iUgnRWOTx-TyYotPe-aPAEZ-pK8Rw,6852
+bf_sdk_gateway_python-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bf_sdk_gateway_python-0.1.0.dist-info/top_level.txt,sha256=nrDNwakIVMPe-WLW32vZSj2VyucW7qM6-49e9uvAdwE,28
+bf_sdk_gateway_python-0.1.0.dist-info/RECORD,,
