@@ -1,0 +1,8 @@
+README.md
+setup.py
+socialagent/__init__.py
+socialagent/socialagent.py
+socialagent.egg-info/PKG-INFO
+socialagent.egg-info/SOURCES.txt
+socialagent.egg-info/dependency_links.txt
+socialagent.egg-info/top_level.txt
