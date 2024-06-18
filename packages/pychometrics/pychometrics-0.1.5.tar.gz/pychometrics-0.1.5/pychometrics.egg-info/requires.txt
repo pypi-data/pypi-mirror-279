@@ -1,0 +1,7 @@
+pandas
+numpy
+scipy
+reportlab
+re
+os
+pytest
