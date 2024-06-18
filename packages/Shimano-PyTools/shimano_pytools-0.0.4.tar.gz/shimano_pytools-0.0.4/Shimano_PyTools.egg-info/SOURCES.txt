@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+Shimano_PyTools/ExcelOpera.py
+Shimano_PyTools/MSSqlDBUtils.py
+Shimano_PyTools/PopUp.py
+Shimano_PyTools/__init__.py
+Shimano_PyTools.egg-info/PKG-INFO
+Shimano_PyTools.egg-info/SOURCES.txt
+Shimano_PyTools.egg-info/dependency_links.txt
+Shimano_PyTools.egg-info/requires.txt
+Shimano_PyTools.egg-info/top_level.txt
