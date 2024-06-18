@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: dinbrief
+Version: 0.5.0
+Summary: PDF renderer for DIN 5008 and DIN 676 compliant letters and invoices
+Home-page: https://github.com/bikeshedder/dinbrief
+License: BSD OR MIT OR Apache-2.0
+Keywords: dinbrief,DIN,5008,676,brief,letter,invoice,pdf
+Author: Michael P. Jung
+Author-email: michael.jung@terreon.de
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: qrcode (>=7.4.2,<8.0.0)
+Requires-Dist: reportlab (>=4.0.4,<5.0.0)
+Project-URL: Repository, https://github.com/bikeshedder/dinbrief
+Description-Content-Type: text/markdown
+
+This package provides code for rendering PDF letters and invoices
+compliant to DIN 5008 and DIN 676 using reportlab. A so called
+"DIN Brief" fits into "DIN-lang" window envelopes.
+
