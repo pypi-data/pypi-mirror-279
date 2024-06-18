@@ -1,0 +1,16 @@
+from collections.abc import MutableSequence
+
+def calculate_rms_inner(
+    samples: MutableSequence[int],
+    channels: int,
+    max_amplitude: float,
+    sample_rate: int,
+) -> float: ...
+def calculate_peak_inner(
+    samples: MutableSequence[int],
+    channels: int,
+    max_amplitude: float,
+) -> float: ...
+def parse_integrated_loudness(filter_output: str) -> float: ...
+def parse_momentary_loudness(filter_output: str) -> list[float]: ...
+def convert_24bit_to_32bit(data: bytes) -> bytes: ...
