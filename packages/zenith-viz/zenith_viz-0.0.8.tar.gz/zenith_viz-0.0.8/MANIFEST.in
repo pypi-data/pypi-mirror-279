@@ -1,0 +1,3 @@
+recursive-include zenith_viz *
+recursive-include zenith_viz/shaders *.shader
+recursive-include zenith_viz/resources *.yml
