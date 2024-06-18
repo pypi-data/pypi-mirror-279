@@ -1,0 +1,13 @@
+datamaker/__about__.py,sha256=ezFvM8Imnp7inD0agWcmjRbIdmhyVxN8g-oFNbWSawg,157
+datamaker/__init__.py,sha256=8zl9lHLSKkpcheiJuhwoM9C_SutODkk1eLi9qKidV0w,466
+datamaker/custom_providers.py,sha256=8Tx8GM6hTstecqKUJ1h15oxf_Dr8HbWHMHmRLvfLHzI,505
+datamaker/fake.py,sha256=Nx6ux-vE6yOGtu7VWFZrGLz1quJ6f1fMFtqflDlLZ8c,1197
+datamaker/generation.py,sha256=braCtqZNOsspqElqX0QxgzCfa_9NRp-feuLqSdN0lwY,5055
+datamaker/schema.py,sha256=SG9K5kkb5j8iZnZHLPyuyC5OGVSff3Ld2lTq1vMe-u4,2250
+datamaker/sorting.py,sha256=g8XEBE_Ff5QHGa0BG9wV9tDjJEHtvRCI-VmaJdhyoug,1282
+datamaker/utils/casing.py,sha256=nO150SiBRcYn3Za-UkPahX0XpML9ZLGlitx7qH0oZI4,745
+datamaker_core-0.0.0.dist-info/METADATA,sha256=3gpAxcsbI5xSY-P0hOGpygoDAU38gSvkqq2sF4cIXt4,1647
+datamaker_core-0.0.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+datamaker_core-0.0.0.dist-info/licenses/LICENSE,sha256=QyxCcq1C1xpf5za6a1hTIf2_VSL0jd-V7XFBaznf3jo,1077
+datamaker_core-0.0.0.dist-info/licenses/LICENSE.txt,sha256=Yv52dR2pd2ca-r5PI5uJ07FQLpKqISyZZzML76ZQEQ8,1127
+datamaker_core-0.0.0.dist-info/RECORD,,
