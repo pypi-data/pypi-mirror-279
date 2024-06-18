@@ -1,0 +1,11 @@
+dekegg-0.1.6.dist-info/METADATA,sha256=xbzsP2T_P-z_xlEqzRMA9NXSZlrAPPNWPgZ05AhaPb8,267
+dekegg-0.1.6.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+dekegg-0.1.6.dist-info/entry_points.txt,sha256=E37pk5PQRlix1AyzxRoAvqVguP_mimaDDsWrcgt9_V4,121
+dekegg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dekegg/bdist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dekegg/bdist/fixegg.py,sha256=Y7JRBQyMX_BG6mZzC0SUmewM7WzBNBndjXyzOsizQmU,2375
+dekegg/bdist/fullegg.py,sha256=TUhGpC_OzXAXdjws7WmLVyBEwJUq7iFWa1OV7dcAE6Y,2322
+dekegg/core.py,sha256=l42N_2ufz5kv5dhTAcYsS3xIE3_0UDH97thJN8UCeeQ,1314
+dekegg/templatefiles/project/pyproject.toml-tpl,sha256=qUl3EhtEi4NDw1cWS7Zgm3PQCA7LPvtPbxpjzeR6ezs,194
+dekegg/tmpl.py,sha256=U-lN30qOFbHGzI3McIE26Yg8z-AVRr65j_izhySGjTg,305
+dekegg-0.1.6.dist-info/RECORD,,

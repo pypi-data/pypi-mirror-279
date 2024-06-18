@@ -1,0 +1,4 @@
+[distutils.commands]
+bdist_fixegg = dekegg.bdist.fixegg:bdist_fixegg
+bdist_fullegg = dekegg.bdist.fullegg:bdist_fullegg
+
