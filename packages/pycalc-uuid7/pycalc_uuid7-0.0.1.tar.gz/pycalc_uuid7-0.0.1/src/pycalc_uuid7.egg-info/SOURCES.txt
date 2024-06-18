@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/uuid7.py
+src/pycalc_uuid7.egg-info/PKG-INFO
+src/pycalc_uuid7.egg-info/SOURCES.txt
+src/pycalc_uuid7.egg-info/dependency_links.txt
+src/pycalc_uuid7.egg-info/top_level.txt
