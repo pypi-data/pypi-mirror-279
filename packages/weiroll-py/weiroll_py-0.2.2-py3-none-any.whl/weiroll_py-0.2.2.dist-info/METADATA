@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: weiroll-py
+Version: 0.2.2
+Summary: Build weiroll transactions with brownie
+Home-page: https://github.com/fp-crypto/weiroll-py
+License: MIT
+Author: FP
+Author-email: FP@no-email.com
+Requires-Python: >=3.10,<3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: eth-brownie (>=v1.20)
+Project-URL: Repository, https://github.com/fp-crypto/weiroll-py
