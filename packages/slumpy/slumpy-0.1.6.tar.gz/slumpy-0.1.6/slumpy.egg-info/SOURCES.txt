@@ -1,0 +1,10 @@
+LICENSE
+slumpy/__init__.py
+slumpy/boolum_type.py
+slumpy/intum_type.py
+slumpy/realum_type.py
+slumpy/strum_type.py
+slumpy.egg-info/PKG-INFO
+slumpy.egg-info/SOURCES.txt
+slumpy.egg-info/dependency_links.txt
+slumpy.egg-info/top_level.txt
