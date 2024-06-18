@@ -1,0 +1,3 @@
+[console_scripts]
+redflag=addepar_redflag.util.cli:cli
+
