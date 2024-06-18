@@ -1,0 +1,7 @@
+jsonpointer>=2.4
+jsonschema>=4.22
+orjson>=3.9
+numpy>=1.22
+
+[plt]
+matplotlib>=3.7
