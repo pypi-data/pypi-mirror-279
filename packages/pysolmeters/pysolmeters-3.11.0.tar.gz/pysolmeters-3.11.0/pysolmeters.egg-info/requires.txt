@@ -1,0 +1,4 @@
+pysolbase>=3.0.0
+ujson
+greenlet
+gevent
