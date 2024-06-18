@@ -1,0 +1,14 @@
+tom_fink/__init__.py,sha256=Q6QIutJn_Yj5iJKkdndkWzQZE9UvyRgd-TdyOz5ZJZY,805
+tom_fink/alertstream.py,sha256=OcPBZ0Yge17wkGuMeXP99ipdye7Yz7ZTkPg5HWwJq0U,5117
+tom_fink/fink.py,sha256=J7l2aP1YZY8c5k7KtksKqRjxB9Gpe6tpYfJp_xyH0GM,13513
+tom_fink/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tom_fink/tests/boot_django.py,sha256=gSHrSAaD8BBI7V1i7GZJ9xS1LQNLQdlRcgGP0FuV6no,1041
+tom_fink/tests/django_shell.py,sha256=FB7sRcow1rW1KIiWmTsaGWduQsQ59v9qzAEQMEPqAuQ,149
+tom_fink/tests/run_canary_tests.py,sha256=RZCN5fv4V8sELB-tKAOmZHqxe-vfmhep90yrPEyexu4,429
+tom_fink/tests/run_tests.py,sha256=rNPGdWVraoSOS3D1MX3NNTojb6kLMnBBPuuwvsWkxXo,429
+tom_fink/tests/tests.py,sha256=do-BaliZzXtHYOBPmMZcmjmviDTbyU8RB-rn17XU1HQ,541
+tom_fink/tests/tests_canary.py,sha256=y8OrUTklr4zjxF4Ce_-sDbhVQ2MK4_VyTM-yHFsGrCE,344
+tom_fink-0.6.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+tom_fink-0.6.1.dist-info/METADATA,sha256=hVfaObt-L6FQFVMumajcUWd1RVdnrlWBNJ8tTPu8sec,8715
+tom_fink-0.6.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tom_fink-0.6.1.dist-info/RECORD,,
