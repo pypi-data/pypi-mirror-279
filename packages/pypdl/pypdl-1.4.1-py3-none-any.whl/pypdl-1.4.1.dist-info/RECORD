@@ -1,0 +1,10 @@
+pypdl/__init__.py,sha256=ldW9NkkavxfPWNreA6SfS_IP7L6dTsJMRzlteds5-5c,96
+pypdl/downloader.py,sha256=m1YNTWIEovYmahIWi4K4L4pg3dOBwu2fBDAFznVRkZI,2430
+pypdl/pypdl_factory.py,sha256=tDZubXAH-xL8GcEpSJHocyzAJU_qfI7wjaCRYo7iMO4,9326
+pypdl/pypdl_manager.py,sha256=5P6L8u--ujPy8tyH8h4Lzg1N8AOo5WOdY6XZwhkhky4,12128
+pypdl/utls.py,sha256=mrtoUUpQnlo9xkSn-_Dd6-XhD-Dz3p-e-R2pWaOrqGg,5351
+pypdl-1.4.1.dist-info/LICENSE,sha256=I8CJ6vo_K6Z-SGcqJ2U2UWSzr5SgfHz5Ctz9Ad4xXew,1065
+pypdl-1.4.1.dist-info/METADATA,sha256=rGUiKVx51So_gIzYHGq1OC79MBfTVxv4AqEgqE8B7uM,20253
+pypdl-1.4.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pypdl-1.4.1.dist-info/top_level.txt,sha256=R_ieUOK8Dpdr_uj11_bFzCn5kw8sVFz3jGxB9LBPbUw,6
+pypdl-1.4.1.dist-info/RECORD,,
