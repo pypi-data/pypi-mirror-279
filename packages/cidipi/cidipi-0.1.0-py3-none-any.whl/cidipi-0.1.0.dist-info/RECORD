@@ -1,0 +1,15 @@
+cidipi/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cidipi/client.py,sha256=3i5BGk_WHI4z1Oh4Gf1dH02d-RzQbMIDYHd6Ifj62mM,5346
+cidipi/event.py,sha256=7tOx7P7RZm0Oyf9SPznMmp2JLCkWkh_DLCakFXQjdCg,409
+cidipi/interface.py,sha256=oF3f2NPs3VVfHP9nFLNPwuHm2YGnmuA7gAQDzz8bYCI,613
+cidipi/models.py,sha256=Y0fbxl2ux8RCSTVWWbYpFks9zq0pwhCffepJXL4ZOPA,3689
+cidipi/protocols/__init__.py,sha256=LSj4BNY-rS1aZvdCpGc_TERplPjzJ9pOUqU7S_gDSH0,85
+cidipi/protocols/commands.py,sha256=HwP7OCg7AbYyl9Z4DwvbtspHTpGwIMphCN5AIh6eKlI,252567
+cidipi/protocols/events.py,sha256=IJyzeQwYWBnaC9uPO6s9JNcJtccKI0zfYXqLezPpLgk,95682
+cidipi/protocols/types.py,sha256=2o9iTVU_d95JUCUPZlSy64fSl77n89AbFjW54IjzWtM,314239
+cidipi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cidipi/utils.py,sha256=7JWGV-QyIRqlQU1R162tOSFbLNIaaIBQ94wLpcF7cg8,1155
+cidipi-0.1.0.dist-info/LICENSE,sha256=eo641dVVL7zMFq-BAas8L7MYhIPOAoxeOI-Z5E0UMes,1072
+cidipi-0.1.0.dist-info/METADATA,sha256=Ef1CldcfCpJO5XSRIksIgdUu25fRH8QI4Yf7KcjUvEw,1157
+cidipi-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cidipi-0.1.0.dist-info/RECORD,,
