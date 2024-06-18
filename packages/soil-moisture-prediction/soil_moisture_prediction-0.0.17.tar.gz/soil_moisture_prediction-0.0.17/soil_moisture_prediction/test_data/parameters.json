@@ -1,0 +1,57 @@
+{
+    "geometry": [
+        840782,
+        841246,
+        5653831,
+        5654184,
+        250
+    ],
+    "predictors": {
+        "pred_soc.csv": {
+            "type": "",
+            "unit": "",
+            "std_deviation": false
+        },
+        "pred_sand.csv": {
+            "type": "",
+            "unit": "",
+            "std_deviation": false
+        },
+        "pred_topo.csv": {
+            "type": "",
+            "unit": "",
+            "std_deviation": false
+        },
+        "pred_clay.csv": {
+            "type": "",
+            "unit": "",
+            "std_deviation": false
+        },
+        "pred_bdod.csv": {
+            "type": "",
+            "unit": "",
+            "std_deviation": false
+        }
+    },
+    "soil_moisture_data": {
+        "crn_soil-moisture.csv": [
+            "20190618",
+            "20190619"
+        ]
+    },
+    "monte_carlo_soil_moisture": true,
+    "monte_carlo_predictor": false,
+    "predictor_qmc_sampling": false,
+    "monte_carlo_iterations": 10,
+    "past_prediction_as_feature": false,
+    "average_measurements_over_time": false,
+    "what_to_plot": {
+        "predictors": true,
+        "pred_correlation": true,
+        "day_measurements": true,
+        "day_predictor_importance": true,
+        "day_prediction_map": true,
+        "alldays_predictor_importance": true
+    },
+    "save_results": true
+}
