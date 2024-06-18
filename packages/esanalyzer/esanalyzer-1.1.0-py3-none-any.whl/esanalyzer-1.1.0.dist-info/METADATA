@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: esanalyzer
+Version: 1.1.0
+Summary: Emotion("fear", "anger", "surprise", "sadness", "disgust", "joy") and Sentiment("Positive","Negative") Analysis
+Home-page: https://github.com/ajaysingh111444/python/tree/esanalyzer/esanalyzer/version/1.1.0
+Author: Ajay Singh Rajput
+Requires-Python: >=3.12.3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: nrclex ==3.0.0
+Requires-Dist: datasets ==2.16.1
+Requires-Dist: scikit-learn ==1.3.2
+Requires-Dist: pandas ==2.1.4
+Requires-Dist: numpy ==1.26.3
+Requires-Dist: googletrans ==4.0.0-rc1
+Requires-Dist: transformers ==4.36.2
+Requires-Dist: nltk ==3.8.1
+Requires-Dist: torch ==2.3.0
+Requires-Dist: torchvision ==0.18.0
+Requires-Dist: torchaudio ==2.3.0
+Requires-Dist: tensorflow ==2.16.1
+Requires-Dist: flax ==0.8.3
+Requires-Dist: textblob ==0.18.0.post0
+
+# esanalyzer
+
+    The Python Emotion Analysis and Sentiment Analysis library you've been looking for.
+
+    ## Services
+    - Emotion Analysis("fear", "anger", "surprise", "sadness", "disgust", "joy")
+    - Sentiment Analysis("Positive","Negative")
+    - Multi Language Support
+    
+    ## Supported Python Version
+    - 3.12.3
+
+    ## Usage
+    - Install using `pip install esanalyzer`
+
+    ```python
+    from esanalyzer import EmotionAnalyzer
+
+    #Instance Config
+	#default requiredOnly = {"sentiment":True,"emotions":False,"googleTranslate":False}
+	requiredOnly = {"sentiment":True,"emotions":True,"googleTranslate":True}
+
+	# Create an instance of EmotionAnalyzer
+	analyzer = EmotionAnalyzer(requiredOnly)
+
+    # Call the analyze method with the text
+    text = "Wow, I am so happy"
+    result = analyzer.analyze(text)
+
+    # Use the result as needed
+    print(result)
+    
+    
+    {'library': 'default', 'result': {'surprise': 80}, 'max_prediction': {'label': 'surprise', 'percentage': 80}, 'sentiment': 'Positive', 'sentiment_score': 0.999592125415802, 'threshold_value': 0.8}
+    
+    ```
+    
+    
