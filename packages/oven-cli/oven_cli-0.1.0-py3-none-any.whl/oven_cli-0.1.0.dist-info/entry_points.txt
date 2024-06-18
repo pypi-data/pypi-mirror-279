@@ -1,0 +1,2 @@
+[console_scripts]
+oven = oven.__main__:main
