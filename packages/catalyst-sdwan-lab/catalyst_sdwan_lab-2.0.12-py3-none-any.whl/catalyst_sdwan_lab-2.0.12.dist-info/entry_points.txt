@@ -1,0 +1,4 @@
+[console_scripts]
+csdwan=catalyst_sdwan_lab.__main__:main
+sdwan-lab=catalyst_sdwan_lab.__main__:main
+
