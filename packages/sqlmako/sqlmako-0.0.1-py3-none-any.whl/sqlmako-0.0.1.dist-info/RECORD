@@ -1,0 +1,8 @@
+sqlmako/__init__.py,sha256=VLiVIVDA67qEE13POf7_mWZRLMAKA56wVSu-e6gYcpo,38
+sqlmako/fields.py,sha256=7otkPN1gCrVJRXasiy0znzBQT0ftCeRHpZOi2cCKgvw,281
+sqlmako/model.py,sha256=NY9eg9VcmrD2flwQ0o9fazDqrKtjgR4mNJmPBYiboXU,176
+sqlmako/queryset.py,sha256=qE0VQqWMjTXSIyJxUki4ko7yc5KzEZXR8SZehsfpifw,6141
+sqlmako-0.0.1.dist-info/LICENSE,sha256=9coCbh2K9ylIsT7eJuuMtM2uSnk1fboMhUmt7Gxafv0,1061
+sqlmako-0.0.1.dist-info/METADATA,sha256=G_b-B3KlzUA6kKODxuS19KY0RlJNOos5Xp0wabclAoo,2730
+sqlmako-0.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+sqlmako-0.0.1.dist-info/RECORD,,
