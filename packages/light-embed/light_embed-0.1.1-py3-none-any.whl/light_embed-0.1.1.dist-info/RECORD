@@ -1,0 +1,14 @@
+light_embed/__init__.py,sha256=WCeotn31CUF24ZNVpwxNCga4XtmuMxqYbvnqjsj3EMQ,268
+light_embed/text_embedding.py,sha256=Z6H4yvtabHUBh5MyC4R0v11Z3afzne5WuUPEhz5VrmA,5519
+light_embed/modules/__init__.py,sha256=zq0CiqO-9ef_HLsHy2-SA5dxH9hKYblcVtRF3oXiirs,119
+light_embed/modules/onnx_base.py,sha256=9ZSmpD72psGOY-3cIsBUJdGP6VSz4QBZ9cTIuMYdVdA,1402
+light_embed/modules/onnx_text.py,sha256=4ohjDZvP0sULd6OmTOHSnosK89Fhv-plSAHskwyEB3s,645
+light_embed/modules/tokenizer.py,sha256=NYISW7IJuq-H6EDbj9NMNRCxAaNHXEDLppqGBsxzizY,2885
+light_embed/utils/__init__.py,sha256=wzGDLNsomH-DwybFTRPkxz4f1zgapInlb2rVASBNtZs,105
+light_embed/utils/functions.py,sha256=xxykVOH3-HkssysYxerTfF3yh4aKAkYOCtZXnjTKaf4,3478
+light_embed/utils/model.py,sha256=ThVQ1O0baAT--PzkGoJRTnIQ-Z8iLwlAm7caPLGrars,1467
+light_embed/utils/supported_models.json,sha256=ypr46k0J18RpnDBA6CKSth60fGVS_GhIJkoiws3vsLs,1832
+light_embed-0.1.1.dist-info/METADATA,sha256=Lxm7NIDSSBjZ9nJ3sML4yx905ffC0p5MXEj4ywsM9mQ,2112
+light_embed-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+light_embed-0.1.1.dist-info/top_level.txt,sha256=c4HAW9mBIggQu3NbPW3XHozPiz2feFW5Or37JdldThI,12
+light_embed-0.1.1.dist-info/RECORD,,
