@@ -1,0 +1,5 @@
+lxml
+numpy
+pyclothoids
+scipy
+xmlschema==2.5.1
