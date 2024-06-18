@@ -1,0 +1,11 @@
+cis_web/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cis_web/_version.py,sha256=hB095avW4HuDZxn8qPHRG1UMzSSonb8ZDAsLxt9hmk8,411
+cis_web/chan_info_sys_mockups.py,sha256=tHy-Hv-11vOo0Ort25zhnodK_B6M_McLgUwQbRO400Q,6590
+cis_web/cis.py,sha256=F1-B1YmFMnGmw-ZoUyUCk_smt6BrJXSM_VclHUP20WA,1024
+cis_web/monitor_gunicorn.py,sha256=m5AP-cwbBJ6bYnW6ezrkMHUCM-hLZOMfvn42DUsSU5M,3640
+channel_information_system-0.0.3.dist-info/LICENSE,sha256=BNSClIg0lzY0T1EfUAB69RSK4MvHClDOlmjDjEnTPW0,34467
+channel_information_system-0.0.3.dist-info/METADATA,sha256=3sHimcMUxQZZq2fTawPUIxFNN7op9W5_Bn9_EEOeX74,7424
+channel_information_system-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+channel_information_system-0.0.3.dist-info/entry_points.txt,sha256=-XbS46TWW0SkWS4r5PsM1VZOfo0UXxTI7hlXDWeCWyI,71
+channel_information_system-0.0.3.dist-info/top_level.txt,sha256=rSgXgdcPWcymy61-r-CareYrmO25p1h9iATAX-rDBYU,8
+channel_information_system-0.0.3.dist-info/RECORD,,

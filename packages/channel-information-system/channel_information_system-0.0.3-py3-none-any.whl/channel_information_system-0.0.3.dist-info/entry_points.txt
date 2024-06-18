@@ -1,0 +1,2 @@
+[console_scripts]
+cis-monitor-gunicorn = cis_web.monitor_gunicorn:main
