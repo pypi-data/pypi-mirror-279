@@ -1,0 +1,3 @@
+[console_scripts]
+podrun = tpux.podrun:main
+tpux = tpux.cli:main
