@@ -1,0 +1,10 @@
+PyCloudFS/__init__.py,sha256=TRY79NhumYw3gT62U2wZ0uDGxZP8W1_qfICufQ2z2nY,84
+PyCloudFS/amazon_web_service.py,sha256=nZUvWqptMNvUuzaPRoUFRlXvU6QhLSxFUzh8WM1nqKM,4243
+PyCloudFS/base_abstract.py,sha256=mOGwsPCYdYtp_NRKhjBuhMn4_o7j9V92XzWEFiMBoQY,4200
+PyCloudFS/base_exceptions.py,sha256=3TnyD3Wi1T23zHDwe9eIdLtUCiUrk_mjQC0_9xgt3cg,541
+PyCloudFS/google_cloud_storage.py,sha256=oD-3wWyLWEe7l1zipu97PqOhuXXLRgftT1jhXAWR0Ms,4942
+pycloudfs-0.0.1.dist-info/LICENSE,sha256=WPONZsh1L0wcGwOg1KJXsSPkBy0jOJ3o9HuNJVOWqLs,1103
+pycloudfs-0.0.1.dist-info/METADATA,sha256=CQKJc8o5jgl1Wc7tjPbXKb6DAPAh7YORg3-2Bl6QLRM,999
+pycloudfs-0.0.1.dist-info/WHEEL,sha256=yQN5g4mg4AybRjkgi-9yy4iQEFibGQmlz78Pik5Or-A,92
+pycloudfs-0.0.1.dist-info/top_level.txt,sha256=D4sQHp_d5tlSXiSeXUO7AM64bfunvw9gULBBpqzRROI,10
+pycloudfs-0.0.1.dist-info/RECORD,,
