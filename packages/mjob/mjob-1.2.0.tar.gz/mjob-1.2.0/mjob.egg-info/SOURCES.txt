@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+mjob/__init__.py
+mjob/mjob.py
+mjob.egg-info/PKG-INFO
+mjob.egg-info/SOURCES.txt
+mjob.egg-info/dependency_links.txt
+mjob.egg-info/entry_points.txt
+mjob.egg-info/requires.txt
+mjob.egg-info/top_level.txt
