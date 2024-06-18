@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: dailyReportHandler
+Version: 0.1.2
+Summary: A file manager to generate daily report
+Home-page: https://github.com/dancehole/dailyReportHandler
+Author: Dancehole
+Author-email: 1391755954@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# dailyReportHandler
+> 日报处理文件引擎，封装成为一个python包方便命令行调用
+
+readme待补充。。。
+
+
+
