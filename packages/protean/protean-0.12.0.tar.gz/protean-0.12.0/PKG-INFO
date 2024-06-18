@@ -1,0 +1,104 @@
+Metadata-Version: 2.1
+Name: protean
+Version: 0.12.0
+Summary: Protean Application Framework
+Home-page: https://github.com/proteanhq/protean
+License: BSD 3-Clause
+Keywords: ddd,domain-driven-design,clean-architecture,hexagonal-architecture,onion-architecture,microservices,python-framework,repository-pattern,cqrs,event-sourcing,aggregates,entities,value-objects,services,bounded-contexts,asynchronous,event-driven-architecture,cqrs-framework,event-sourcing-framework
+Author: Subhash Bhushan C
+Author-email: subhash@team8solutions.com
+Requires-Python: >=3.11,<4.0
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: celery
+Provides-Extra: elasticsearch
+Provides-Extra: flask
+Provides-Extra: message-db
+Provides-Extra: postgresql
+Provides-Extra: redis
+Provides-Extra: sendgrid
+Provides-Extra: sqlite
+Requires-Dist: bleach (>=4.1.0)
+Requires-Dist: celery[redis] (>=5.2.7,<5.3.0) ; extra == "celery"
+Requires-Dist: cookiecutter (>=1.7.0)
+Requires-Dist: copier (>=9.1.1,<10.0.0)
+Requires-Dist: elasticsearch (>=7.17.9,<7.18.0) ; extra == "elasticsearch"
+Requires-Dist: elasticsearch-dsl (>=7.4.1,<7.5.0) ; extra == "elasticsearch"
+Requires-Dist: flask (>=1.1.1) ; extra == "flask"
+Requires-Dist: inflection (>=0.5.1)
+Requires-Dist: ipython (>=8.23.0,<9.0.0)
+Requires-Dist: marshmallow (>=3.15.0)
+Requires-Dist: message-db-py (>=0.2.0) ; extra == "message-db"
+Requires-Dist: psycopg2 (>=2.9.9) ; extra == "postgresql"
+Requires-Dist: python-dateutil (>=2.8.2)
+Requires-Dist: redis (>=3.5.2,<3.6.0) ; extra == "redis"
+Requires-Dist: sendgrid (>=6.1.3) ; extra == "sendgrid"
+Requires-Dist: sqlalchemy (>=2.0.30,<2.1.0) ; extra == "postgresql" or extra == "sqlite"
+Requires-Dist: typer[all] (>=0.9.0,<0.10.0)
+Requires-Dist: werkzeug (>=2.0.0)
+Project-URL: Documentation, https://protean.readthedocs.io/en/latest/
+Project-URL: Repository, https://github.com/proteanhq/protean
+Description-Content-Type: text/x-rst
+
+********************************************************
+Protean: The Domain-Centric, Antifragile Framework
+********************************************************
+
+Protean helps you build software on architecture stacks that need to survive in the ever changing technology landscape.
+
+.. image:: https://github.com/proteanhq/protean/actions/workflows/ci.yml/badge.svg?branch=master
+    :target: https://github.com/proteanhq/protean/actions
+    :alt: Build Status
+.. image:: https://codecov.io/gh/proteanhq/protean/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/proteanhq/protean
+    :alt: Coverage
+.. image:: https://pyup.io/repos/github/proteanhq/protean/shield.svg
+     :target: https://pyup.io/repos/github/proteanhq/protean/
+     :alt: Updates
+
+Installation
+############
+
+::
+
+    pip install protean
+
+Documentation
+#############
+
+Online docs are available at: https://protean.readthedocs.io/en/latest/
+
+How to Contribute
+#################
+
+1.  Check for open issues or open a fresh issue to start a discussion
+    around a feature idea or a bug.
+2.  Fork [the repository](https://github.com/proteanhq/protean) on
+    GitHub to start making your changes to the **master** branch (or
+    branch off of it).
+3.  Write a test which shows that the bug was fixed or that the feature
+    works as expected.
+4.  Send a pull request and bug the maintainer until it gets merged and
+    published. :) Make sure to add yourself to
+    [AUTHORS](https://github.com/proteanhq/protean/blob/master/AUTHORS.rst).
+
+On shoulders of giants...
+#########################
+
+Protean is not built in a vacuum. Principles and philosophies that Protean espouses are contributions from multiple sources, especially the Open Source Community. It not only refers to well-published architectural ideas and design patterns but also heavily draws inspiration from concrete implementations.
+
+Specifically, Protean is majorly influenced by the venerable Django Framework, and that reflects in many aspects of its underlying constructs and documentation. Thank you, Django, and the Python community, for showing what's possible.
+
+[ ~ Dependencies scanned by PyUp.io ~ ]
+
