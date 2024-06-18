@@ -1,0 +1,56 @@
+[tool.poetry]
+name = "quantfinlib"
+version = "0.0.3"
+description = "Fundamental package for quantitative finance with Python."
+
+authors = ["Thijs van den Berg, Andrejs Fedjajevs, Mohammadjavad Vakili, Nathan de Vries"]
+
+maintainers = [
+    "Thijs van den Berg <thijs@sitmo.com>", 
+    "Andrejs Fedjajevs <Andrejs.Fedjajevs@shell.com>", 
+    "Mohammadjavad Vakili <Mohammadjavad.Vakili@shell.com>", 
+    "Nathan de Vries <Nathan.deVries@shell.com>",
+]
+
+license = "MIT"
+
+readme = "README.md"
+
+homepage = "https://quantfinlib.org/"
+
+repository = "https://github.com/quantfinlib/quantfinlib"
+
+keywords = ["quantitative finance", "asset management", "financial engineering"]
+
+
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business",
+    "Topic :: Office/Business :: Financial",
+    "Topic :: Office/Business :: Financial :: Investment",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^2.0.0"
+pandas = "^2.2.2"
+matplotlib = "^3.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "^1.0.1"
+black = "^24.4.2"
+flake8 = "^7.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
