@@ -1,0 +1,11 @@
+ranking_challenge/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ranking_challenge/fake.py,sha256=2VCsYe1AdyGlbdKAgcZ67SSuVyZQ32a0zXd9-5dsnt4,5008
+ranking_challenge/fake_test.py,sha256=027HxQcc8nIQfDvpTCLgxerucrJ_Ppo11A2bzq369bE,1186
+ranking_challenge/request.py,sha256=S5ktK2rCezI0k0ggU5JMjmS-R3mA5KaywGoqH4Iv21A,5685
+ranking_challenge/response.py,sha256=e-EG6L5AplXz52L6RMrONVE2q9NERxugEs0kA3FaYt8,775
+ranking_challenge/survey.py,sha256=qEL32n_9iJpBd6QccCBAzKsnJ7bGBTJsX_1JYAsYFzo,8753
+ranking_challenge-2.1.4.dist-info/LICENSE,sha256=yA96Y2tL6pNqa-VUVSc-dIh08jRxhaMwVrlXpiwNEhE,1137
+ranking_challenge-2.1.4.dist-info/METADATA,sha256=1LpPIFVF39wEHf3sbu-pGpMRBJ4Ninvw8AxLlZM6jLI,3647
+ranking_challenge-2.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ranking_challenge-2.1.4.dist-info/entry_points.txt,sha256=TpgulBlqYS5u_sPLQgshWKZ6Ueh68TBhenZe9UxX2dg,55
+ranking_challenge-2.1.4.dist-info/RECORD,,
