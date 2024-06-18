@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mllib_exam
+Version: 0.1.1
+Author: VS
+License: MIT
+Platform: any
+Requires-Dist: loguru
+Requires-Dist: pyperclip
+Requires-Dist: pyyaml
+
