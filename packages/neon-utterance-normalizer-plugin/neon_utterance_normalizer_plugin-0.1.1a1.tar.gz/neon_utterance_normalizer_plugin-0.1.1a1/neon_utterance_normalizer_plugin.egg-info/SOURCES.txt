@@ -1,0 +1,11 @@
+LICENSE.md
+README.md
+setup.py
+neon_utterance_normalizer_plugin/__init__.py
+neon_utterance_normalizer_plugin.egg-info/PKG-INFO
+neon_utterance_normalizer_plugin.egg-info/SOURCES.txt
+neon_utterance_normalizer_plugin.egg-info/dependency_links.txt
+neon_utterance_normalizer_plugin.egg-info/entry_points.txt
+neon_utterance_normalizer_plugin.egg-info/requires.txt
+neon_utterance_normalizer_plugin.egg-info/top_level.txt
+neon_utterance_normalizer_plugin.egg-info/zip-safe
