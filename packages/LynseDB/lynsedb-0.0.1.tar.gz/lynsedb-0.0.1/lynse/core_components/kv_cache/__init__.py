@@ -1,0 +1,204 @@
+import os
+from typing import List
+
+from lynse.core_components.kv_cache.filter import MatchField, MatchID, FieldCondition, Filter, MatchRange
+
+
+class IndexSchema:
+    def __init__(self):
+        self.indices = {}
+
+    @staticmethod
+    def _check_field_name(field_name: str):
+        if ':id:' == field_name.strip():
+            raise ValueError("The field name ':id:' is reserved.")
+
+    def _add_index(self, field_name: str, field_type):
+        self._check_field_name(field_name)
+        self.indices[field_name] = field_type
+
+    def add_string_index(self, field_name: str):
+        self._add_index(field_name, str)
+
+    def add_int_index(self, field_name: str):
+        self._add_index(field_name, int)
+
+    def to_json(self):
+        indices = {k: v.__name__ for k, v in self.indices.items()}
+        return indices
+
+    def load_from_json(self, schema_dict):
+        self.indices = {k: eval(v) for k, v in schema_dict.items()}
+        return self
+
+
+class VeloKV:
+    def __init__(self, filepath=None, as_temp_file=False):
+        """
+        Create a VeloKV instance.
+
+        Parameters:
+            filepath: str
+                The path to the file where the cache will be stored.
+            as_temp_file: bool
+                If True, the cache will be stored in a temporary file.
+        """
+        from lynse.core_components.kv_cache.kv_query import KVCacheQuery
+        from lynse.core_components.kv_cache.kv_storage import KVCacheStorage
+
+        self.storage = KVCacheStorage(filepath, as_temp_file=as_temp_file)
+        self.query_handler = KVCacheQuery(self.storage)
+        self.filepath = filepath
+
+    def store(self, data: dict, external_id: int):
+        """
+        Store a record in the cache.
+
+        Parameters:
+            data: dict
+                The record to store.
+            external_id: int
+                The external ID of the record.
+
+        Returns:
+            int: The internal ID of the record.
+        """
+        return self.storage.store(data, external_id)
+
+    def query(self, filter_instance, filter_ids=None, return_ids_only=True):
+        """
+        Query the cache.
+
+        Parameters:
+            filter_instance: Filter or dict
+                The filter object or the specify data to filter.
+            filter_ids: List[int]
+                The list of external IDs to filter.
+            return_ids_only: bool
+                If True, only the external IDs will be returned.
+
+        Returns:
+            List[dict]: The records. If not return_ids_only, the records will be returned.
+            List[int]: The external IDs. If return_ids_only, the external IDs will be returned.
+        """
+        return self.query_handler.query(filter_instance, filter_ids, return_ids_only)
+
+    def retrieve(self, external_id, include_external_id=False):
+        """
+        Retrieve a record from the cache.
+
+        Parameters:
+            external_id: int
+                The external ID of the record.
+            include_external_id: bool
+                If True, the external ID will be included in the record.
+
+        Returns:
+            dict: The record.
+        """
+        return self.query_handler.retrieve(external_id, include_external_id=include_external_id)
+
+    def retrieve_ids(self, external_ids: List[int], include_external_id: bool = False):
+        """
+        Retrieve records from the cache.
+
+        Parameters:
+            external_ids: List[int]
+                The external IDs of the records.
+            include_external_id: bool
+                If True, the external IDs will be included in the records.
+
+        Returns:
+            List[dict]: The records.
+        """
+        return self.query_handler.retrieve_ids(external_ids, include_external_id=include_external_id)
+
+    def concat(self, other: 'VeloKV') -> 'VeloKV':
+        """
+        Concatenate two caches.
+
+        Parameters:
+            other: VeloKV
+                The other cache to concatenate.
+
+        Returns:
+            VeloKV: The concatenated cache.
+        """
+        if not isinstance(other, VeloKV):
+            raise ValueError("The other cache must be an instance of VeloKV.")
+        for external_id, data in other.storage.retrieve_all():
+            self.store(data, external_id)
+        return self
+
+    def delete(self):
+        """
+        Delete the cache.
+        """
+        self.storage.delete()
+
+        if hasattr(self, 'query_handler'):
+            del self.query_handler
+
+    def commit(self):
+        """
+        Commit the cache.
+
+        This method is used to save the cache to disk.
+        """
+        self.storage.commit()
+
+    def build_index(self, schema: IndexSchema, rebuild_if_exists=False):
+        """
+        Build an index for the cache.
+
+        Parameters:
+            schema: IndexSchema
+                The index schema.
+            rebuild_if_exists: bool
+                If True, the index will be rebuilt if it already exists.
+
+        Returns:
+            None
+        """
+        if not schema.indices:
+            raise ValueError("The index schema is empty.")
+        self.storage.build_index(schema.indices, rebuild_if_exists)
+        self.storage.index.save(self.storage.index_path)
+
+    def remove_index(self, field_name: str):
+        """
+        Remove an index from the cache.
+
+        Parameters:
+            field_name: str
+                The name of the field.
+
+        Returns:
+            None
+        """
+        self.storage.remove_index(field_name)
+        if not self.storage.index.indices:
+            if os.path.exists(self.storage.index_path):
+                os.remove(self.storage.index_path)
+        else:
+            self.storage.index.save(self.storage.index_path)
+
+    def remove_all_field_indices(self):
+        """
+        Remove all the field indices from the cache.
+
+        Returns:
+            None
+        """
+        indices = self.list_indices()
+        for index in indices:
+            self.remove_index(index)
+
+    def list_indices(self):
+        """
+        List the indices in the cache.
+
+        Returns:
+            List[str]: The list of indices.
+        """
+        return list(self.storage.index.indices.keys())
