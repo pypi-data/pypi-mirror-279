@@ -1,0 +1,16 @@
+scidx/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scidx/client/__init__.py,sha256=3LFCNS2f5RWa0fiOAiv33-65y-cOcfFgN8F6mQFM2lM,605
+scidx/client/delete_organization.py,sha256=meiqlDwrrvzRQSDJtZIG51QfFibo7VC92HxiEW_IYD8,815
+scidx/client/init_client.py,sha256=hfOT2C29OzorU3Ue-TtVd3fU4U5pHfdATsiKkBhpH4Y,529
+scidx/client/register_datasource.py,sha256=ALk_OuVBNYYe3APz3fOow_d7y3s5pF46eI-h4s46Lzk,2253
+scidx/client/register_organization.py,sha256=ZxCF2uRXMT8vtBTAso8syLjESELwR8yZbgvxm-h7qbI,1207
+scidx/client/search_datasource.py,sha256=MrtK-s35e6eaqzcpVmSWaYc2tEAbf_OkneSXowZJVys,1171
+scidx/client/search_organization.py,sha256=JypMbMu8PiI1Nh2G2lLgRV1kabxNu3hzh4xY1Ovf2EQ,670
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_full_api_flow.py,sha256=PJ1I8AcQLhOYGm0ajKmnEttbEdgBmueGVat-_2Rt6x4,3976
+scidx-0.0.0.dist-info/AUTHORS,sha256=m7z43XBxIzTqNb8OtEmPzCqfXXyHxPUxXg1xsyhpY7E,230
+scidx-0.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+scidx-0.0.0.dist-info/METADATA,sha256=W6NYF_TJuYz92oOEjF9dRsg0DN-3Ue3QqEBCXmXXBZ0,3412
+scidx-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+scidx-0.0.0.dist-info/top_level.txt,sha256=qV2bRkLuj-JWCEUKqRwZJcSP5A4AHrI3ybGt84FtY3M,12
+scidx-0.0.0.dist-info/RECORD,,
