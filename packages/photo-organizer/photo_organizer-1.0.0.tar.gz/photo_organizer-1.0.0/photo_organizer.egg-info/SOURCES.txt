@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+photo_organizer/__init__.py
+photo_organizer/main.py
+photo_organizer.egg-info/PKG-INFO
+photo_organizer.egg-info/SOURCES.txt
+photo_organizer.egg-info/dependency_links.txt
+photo_organizer.egg-info/entry_points.txt
+photo_organizer.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
