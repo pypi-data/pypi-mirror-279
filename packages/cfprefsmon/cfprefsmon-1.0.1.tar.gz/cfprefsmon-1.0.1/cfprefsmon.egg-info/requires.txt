@@ -1,0 +1,7 @@
+pymobiledevice3>=4.10.0
+maclog
+click
+
+[test]
+pytest
+cmd2_ext_test
