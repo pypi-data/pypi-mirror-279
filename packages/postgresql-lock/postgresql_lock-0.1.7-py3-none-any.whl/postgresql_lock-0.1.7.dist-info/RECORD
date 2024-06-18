@@ -1,0 +1,12 @@
+postgresql_lock/__init__.py,sha256=M8Ph734IvjdRYqdzDJ_KSSZ7Z5pmNjNVS8enWBmx0a4,347
+postgresql_lock/asyncpg.py,sha256=46YlVudwuLKVm9t-z1DLzMJXf_6dX2fXEq6DxZ2WoeA,2791
+postgresql_lock/errors.py,sha256=Zk-cozw0RRizbYsXZHtW2RkFY_78S1cLC9VWcaIo4QU,565
+postgresql_lock/lock.py,sha256=uFWwkqm-vkhrI10qjUY87Mf2A6VTni9kkLhZAAthe70,11308
+postgresql_lock/psycopg2.py,sha256=PMnOF8vshWbJZgA8p4rDAmm7c0k5KXOozgGcVW5GXyw,2937
+postgresql_lock/psycopg3.py,sha256=m0_cG7NeSknIWWZE5kKOfZviHBVNyBgxz-z6qE1eqyM,3704
+postgresql_lock/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+postgresql_lock/sqlalchemy.py,sha256=cleSAvpEzI54n30oRcQR8HmwBaAqc_ELYSWvh5WShr4,3414
+postgresql_lock-0.1.7.dist-info/LICENSE,sha256=8gJcKmTJTfpfX3PliGTO28e1LGg7O88gaDikkIFAd1E,1496
+postgresql_lock-0.1.7.dist-info/METADATA,sha256=XFqXLJvSW7kzKFFNPB3XnGlio5CbTvcz66UKSs1K7YQ,4880
+postgresql_lock-0.1.7.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+postgresql_lock-0.1.7.dist-info/RECORD,,
