@@ -1,0 +1,15 @@
+[sapientml.config]
+sapientml=sapientml_core:SapientMLConfig
+
+[sapientml.datastore]
+localfile=sapientml_core.datastore.localfile:LocalFile
+
+[sapientml.export_modules]
+sample-dataset=sapientml_core.datastore.localfile.export_modules
+
+[sapientml.pipeline_generator]
+sapientml=sapientml_core:SapientMLGenerator
+
+[sapientml.preprocess]
+default=sapientml_core.preprocess.default:DefaultPreprocess
+
