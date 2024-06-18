@@ -1,0 +1,4 @@
+[console_scripts]
+seppl-escape = seppl.tool.escape:sys_main
+seppl-unescape = seppl.tool.unescape:sys_main
+
