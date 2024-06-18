@@ -1,0 +1,5 @@
+include README.txt
+recursive-include Infrastructure/Environment *.bicep *.txt
+recursive-include Infrastructure/Search *.http *.txt
+recursive-include Maps *.html *.js *.css *.txt
+include requirements.txt

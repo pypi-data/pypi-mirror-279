@@ -1,0 +1,2 @@
+The Index.http holds the API call request to create the index within Azure Search Service. Run the code from local machine to create the index with all the requisite settings.
+Use Index-Rest Calls.http to manage and delete existing indexes. Can also be used to query specific data.

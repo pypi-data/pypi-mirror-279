@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: rrfi-scripts
+Version: 1.0.0
+Summary: Scripts for RRFI POC
+Home-page: https://github.com/Jithh/RRFI
+Author: Virajith Murali
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/plain
+
+Each of these scripts must be run individually one at a time to extract data from the storage container into the search index. 
+Run the code from local machine. Ensure that all the keys and container names and Index names are correct.
+Running multiple scprits parallely will affect the performance of the OpenAI service.
+

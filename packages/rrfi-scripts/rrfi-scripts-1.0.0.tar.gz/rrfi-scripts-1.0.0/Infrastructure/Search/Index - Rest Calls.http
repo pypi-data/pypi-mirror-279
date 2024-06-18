@@ -1,0 +1,24 @@
+@baseUrl = https://rrfimainsearch.search.windows.net
+@apiKey = 1LnrhfcdFVeuJ7jVOe2ElJi2uFib34RZhLWnig1nDiAzSeAIlOEO
+
+ ### List existing indexes by name
+ GET  {{baseUrl}}/indexes?api-version=2023-11-01&$select=name  HTTP/1.1
+   Content-Type: application/json
+   api-key: {{apiKey}}
+
+### Run a query - search documents
+POST {{baseUrl}}/indexes/rrfisearch/docs/search?api-version=2023-11-01  HTTP/1.1
+    Content-Type: application/json
+    api-key: {{apiKey}}
+
+    {
+        "search": "IMG001.jpg",
+        "select": "*",
+        "count": true
+    }
+
+
+### Delete an index
+DELETE  {{baseUrl}}/indexes/rrfisearch?api-version=2023-11-01 HTTP/1.1
+    Content-Type: application/json
+    api-key: {{apiKey}}
