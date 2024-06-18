@@ -1,0 +1,2 @@
+[console_scripts]
+pyprofiler = pyprofiler.cli:cli

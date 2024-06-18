@@ -1,0 +1,11 @@
+pyprofiler/__init__.py,sha256=ovguP4wzQEDNguczwiZnhMm4dRRVcvnzmHrfQtlRCNQ,15
+pyprofiler/__main__.py,sha256=3aI6egLuHbc_FTNGkoLQhHvcNXSrbrGUePYEWj3NVRo,123
+pyprofiler/cli.py,sha256=dOC4vq4WqMOvzTDHNiRzDKuUWD3IliH80O35eMA0ezs,2064
+pyprofiler/printer.py,sha256=4VGzWPfeoKAzx8ntGnp1uMr8xak4czZa26e-peR0SXk,563
+pyprofiler/profiler.py,sha256=J7P-BSpuYCqWmv8HHi7uaiK-fw1o40nP20dGlcZiKsk,7090
+pyprofiler/utils.py,sha256=07fZdkqd8mXxl8O298AS7iF3P8ZRVwiKwhpLSPiguDY,1065
+simple_pyprofiler-2024.0.0.dist-info/METADATA,sha256=EaFop7ZpmbPpZFt7Tz62hOSQprWMj_knUBVifXQ5rZA,1174
+simple_pyprofiler-2024.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+simple_pyprofiler-2024.0.0.dist-info/entry_points.txt,sha256=qkfBTG4KhS83ZbcO4dIKFT0VsiCP39bDXBpvYDR1myQ,50
+simple_pyprofiler-2024.0.0.dist-info/top_level.txt,sha256=KnFjx8KBD5HvNlmCvHkuiW-mcRszhqUVrN14XtiUd40,11
+simple_pyprofiler-2024.0.0.dist-info/RECORD,,
