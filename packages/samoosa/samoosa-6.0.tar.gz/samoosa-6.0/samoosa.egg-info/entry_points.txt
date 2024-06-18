@@ -1,0 +1,3 @@
+[console_scripts]
+api_setup = api_setup:set_api
+samoosa = samoosa:main_function
