@@ -1,0 +1,13 @@
+gordias/__init__.py,sha256=oWmdZ1yVG98Ap0LmaB5db58JT5zJf5XtrOpyhFMn0eM,241
+gordias/config.py,sha256=zj6VbHlV-ReyG2e2cgnCQVdZU3rP9_9rgnssrbuQ67Q,20677
+gordias/dask_setup.py,sha256=wfgzdexFwOZgVLPUcMv06Get4tCp0QlkSHs8uQeRMV8,8776
+gordias/datahandling.py,sha256=-6od9BRKaJRGbKioIej8KrTLDfNoZLdRVH1JxmLiVeE,9796
+gordias/metadata.py,sha256=0e0uPvlje9vkYBkaVPqyrEGRkGHUB7AoY6RZd1tnOnc,2438
+gordias/etc/config.yml,sha256=n7be1ND9tbFVXaFbJf5VgU4YdpwgVW23Rc5L91aHkco,5602
+gordias/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gordias/util/cube_diffs.py,sha256=UM6erF6dEDPPsLc_vNsbTkJFfOQr88tfHdMMaI6_PK0,14058
+gordias-0.2.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+gordias-0.2.0.dist-info/METADATA,sha256=X8Uqsw8DURg7uomiJ0Iphhufrx1SAyqougsH0em1XCA,1355
+gordias-0.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gordias-0.2.0.dist-info/top_level.txt,sha256=fOjVYcX32cArF7SACUo32qv13_C70xXTqM1PLsUp7Io,8
+gordias-0.2.0.dist-info/RECORD,,
