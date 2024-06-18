@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: llg3d
+Version: 1.2.0
+Summary: Solveur pour l'équation de Landau-Lifshitz-Gilbert stochastique en 3D
+Author-email: IRMA <matthieu.boileau@math.unistra.fr>
+Project-URL: Homepage, https://gitlab.math.unistra.fr/llg3d/llg3d
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS
+Requires-Dist: numpy
+Requires-Dist: mpi4py
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Provides-Extra: doc
+Requires-Dist: Sphinx >=7.2.2 ; extra == 'doc'
+Requires-Dist: myst-parser ; extra == 'doc'
+Requires-Dist: furo ; extra == 'doc'
+Requires-Dist: nbsphinx ; extra == 'doc'
+Requires-Dist: sphinx-copybutton ; extra == 'doc'
+Requires-Dist: sphinx-autobuild ; extra == 'doc'
+Requires-Dist: sphinx-prompt ; extra == 'doc'
+Requires-Dist: sphinx-last-updated-by-git ; extra == 'doc'
+Requires-Dist: sphinxcontrib-programoutput ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-mpi ; extra == 'test'
+
+# LLG3D: A solver for the stochastic Landau-Lifshitz-Gilbert equation in 3D
+
+[![pipeline status](https://gitlab.math.unistra.fr/llg3d/llg3d/badges/main/pipeline.svg)](https://gitlab.math.unistra.fr/llg3d/llg3d/-/commits/main)
+[![coverage report](https://gitlab.math.unistra.fr/llg3d/llg3d/badges/main/coverage.svg)](https://llg3d.pages.math.unistra.fr/llg3d/coverage)
+[![Latest Release](https://gitlab.math.unistra.fr/llg3d/llg3d/-/badges/release.svg)](https://gitlab.math.unistra.fr/llg3d/llg3d/-/releases)
+[![Doc](https://img.shields.io/badge/doc-sphinx-blue)](https://llg3d.pages.math.unistra.fr/llg3d/)
+
+LLG3D is written in Python and utilizes the MPI library for parallelizing computations.
+
+See the [documentation](https://llg3d.pages.math.unistra.fr/llg3d/).
