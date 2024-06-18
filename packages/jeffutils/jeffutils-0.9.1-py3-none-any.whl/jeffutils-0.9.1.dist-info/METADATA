@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: jeffutils
+Version: 0.9.1
+Summary: Welcome to Jeff Hansen's suite of useful python functions! I use lots of these functions on most of my Data Analysis, Backend-Dev, and Machine Learning projects, and I hope you find some of them useful as well!
+Home-page: https://github.com/jeffxhansen/jeffutils
+Author: Jeff Hansen
+Author-email: jeffxhansen@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+
