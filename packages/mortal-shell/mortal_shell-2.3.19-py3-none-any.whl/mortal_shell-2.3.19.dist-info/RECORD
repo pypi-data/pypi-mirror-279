@@ -1,0 +1,7 @@
+mortal_shell/__init__.py,sha256=51jKYuJU9tYXnlBGuDOO-dPCDf8I36fpy5ba0ErZqWw,560
+mortal_shell/shell_main.pyd,sha256=5xxY1clMOaTv7H39POSG7EdzytM4Yd8AdAOCMLgTZVQ,86528
+mortal_shell/shell_main.so,sha256=w6xjZ36z4phfstZMKw6136RdXdLvl8443qaTbmXcL3E,129352
+mortal_shell-2.3.19.dist-info/METADATA,sha256=r8emnv09PalPWnyP06muF7Lr1k8gGkTlzQ2N33m0yik,340
+mortal_shell-2.3.19.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mortal_shell-2.3.19.dist-info/top_level.txt,sha256=QyzbgU3czLyjXoIEmkmOsXimzrYFwcgh3Y60_CRFDkM,13
+mortal_shell-2.3.19.dist-info/RECORD,,
