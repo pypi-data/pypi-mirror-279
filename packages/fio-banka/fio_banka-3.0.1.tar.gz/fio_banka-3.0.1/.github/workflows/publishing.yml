@@ -1,0 +1,43 @@
+# TODO: It would be great to reuse `tests.yaml` workflow (the job is mostly
+#   identical). E.g. via https://docs.github.com/en/actions/using-workflows/reusing-workflows
+name: publishing
+on:
+  release:
+    types: [published]
+jobs:
+  # https://github.com/pypa/gh-action-pypi-publish/tree/release/v1#trusted-publishing
+  # Separate building from publishing — it makes sure that any scripts
+  # maliciously injected into the build or test environment won't be able
+  # to elevate privileges while flying under the radar.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade build
+      - name: Build package
+        run: python3 -m build
+      - name: Upload packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: Packages
+          path: dist
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - name: Download packages
+        uses: actions/download-artifact@v4
+        with:
+          name: Packages
+          path: dist
+      - name: Publish packages to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.9.0

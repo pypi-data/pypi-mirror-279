@@ -1,0 +1,21 @@
+name: tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pipenv build
+          pipenv sync --dev
+      - name: Build package
+        # The `build` pkg is not installed in the virtualenv.
+        run: python3 -m build
+      - name: Run tests
+        run: pipenv run pytest
