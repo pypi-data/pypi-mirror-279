@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: transep
+Version: 1.0.3
+Summary: Transfer function hydrograph separation model (TRANSEP)
+Home-page: https://transep.readthedocs.io
+Author: Robin Schwemmle
+Author-email: robin.schwemmle@hydrology.uni-freiburg.de
+License: MIT
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: scipy ==1.13.1
+
+# TRANSEP
+<p align="center">
+  <img src="doc/_static/logo.png" width="400">
+</p>
+
+The transfer function hydrograph separation (TRANSEP) package provides coupled
+but constrained representations of transport and hydraulic transfer functions
+([Weiler et al., 2003](https://doi.org/10.1029/2003wr002331)). These functions 
+can be used to simulate hydrologic
+response (e.g. discharge) and tracer concentrations (e.g. bromide). The following models are
+available:
+
+- Dispersion model (DM)
+- Exponential piston model (EPM)
+- Gamma model (GM)
+- Linear reservoir model (LRM)
+- Parallel linear reservoir model (PLRM)
+
+## Full Documentation
+
+The full documentation can be found at: https://transep.readthedocs.io
+
+## License
+This software can be distributed freely under the MIT license. Please read the LICENSE for further information.
+© 2024, Robin Schwemmle (<robin.schwemmle@hydrology.uni-freiburg.de>)
+
+## References
+Weiler, M., McGlynn, B. L., McGuire, K. J., and McDonnell, J. J.: How
+does rainfall become runoff? A combined tracer and runoff transfer
+function approach, Water Resources Research, 39,
+[https://doi.org/10.1029/2003wr002331](https://doi.org/10.1029/2003wr002331), 2003.

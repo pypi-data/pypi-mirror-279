@@ -1,0 +1,10 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test.py,sha256=Ewp_v8Q5Sxy_q6-NL6yO-c98eS9Q-xovaHmnGICgS-A,1196
+transep/__init__.py,sha256=_IlvtobtvmR9Zosxv868QDnVkzXgio5aQmBY7buC2nw,166
+transep/_version.py,sha256=KmHtVGuTsh2BoY3uchW5XomftD4YPs00G274pBCNLJM,497
+transep/transep.py,sha256=nceUPtJpdBtIw72HQ6cdD8TMTqAnaI7BTFBF-hvVF6k,8123
+transep-1.0.3.dist-info/LICENSE,sha256=J5o_nSRPwZ6d7bLyi5rcUBwyVkZeH3MDsGI3Ltry4ME,1072
+transep-1.0.3.dist-info/METADATA,sha256=NaO4Dp99edUgJuHk0N19WfS266Y08c3zOo3nw8OPRx8,2203
+transep-1.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+transep-1.0.3.dist-info/top_level.txt,sha256=a3iKwmoPDkwo0JpItBn62C9QSrUBhjMzaS120curRcA,13
+transep-1.0.3.dist-info/RECORD,,
