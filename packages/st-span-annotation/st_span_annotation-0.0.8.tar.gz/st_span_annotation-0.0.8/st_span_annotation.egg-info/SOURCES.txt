@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+st_span_annotation/__init__.py
+st_span_annotation.egg-info/PKG-INFO
+st_span_annotation.egg-info/SOURCES.txt
+st_span_annotation.egg-info/dependency_links.txt
+st_span_annotation.egg-info/requires.txt
+st_span_annotation.egg-info/top_level.txt
+st_span_annotation/frontend/build/asset-manifest.json
+st_span_annotation/frontend/build/bootstrap.min.css
+st_span_annotation/frontend/build/index.html
+st_span_annotation/frontend/build/static/js/main.9fcefe0a.js
+st_span_annotation/frontend/build/static/js/main.9fcefe0a.js.LICENSE.txt
+st_span_annotation/frontend/build/static/js/main.9fcefe0a.js.map

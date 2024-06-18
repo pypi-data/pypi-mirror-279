@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: st-span-annotation
+Version: 0.0.8
+Summary: Streamlit component to annotate text span
+Home-page: 
+Author: r-terada
+Author-email: r.terada1993@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: streamlit>=0.63
+Provides-Extra: devel
+Requires-Dist: wheel; extra == "devel"
+Requires-Dist: pytest==7.4.0; extra == "devel"
+Requires-Dist: playwright==1.39.0; extra == "devel"
+Requires-Dist: requests==2.31.0; extra == "devel"
+Requires-Dist: pytest-playwright-snapshot==1.0; extra == "devel"
+Requires-Dist: pytest-rerunfailures==12.0; extra == "devel"
+
+# st-span-annotation
+
+Streamlit component to annotate text span
+
+## Usage instructions
+
+```python
+from typing import TypedDict
+
+import streamlit as st
+from st_span_annotation import st_span_annotation
+
+class Span(TypedDict):
+    start: int
+    end: int
+    label: str
+    text: str
+
+
+text = """Alice and Bob are planning to visit New York next week.
+They will be attending a conference on AI."""
+labels = ["PERSON", "LOCATION", "DATE", "EVENT"]
+initial_spans: list[Span] = [
+    {"start": 0, "end": 5, "label": "PERSON", "text": "Alice"},
+    {"start": 36, "end": 44, "label": "LOCATION", "text": "New York"},
+    {"start": 45, "end": 54, "label": "DATE", "text": "next week"},
+    {"start": 81, "end": 97, "label": "EVENT", "text": "conference on AI"},
+]
+color_palette: dict[str, str] = {
+    "PERSON": "lightblue",
+    "LOCATION": "lightgreen",
+    "DATE": "lightyellow",
+    "EVENT": "lightcoral",
+}
+
+result: list[Span] = st_span_annotation(
+    text=text,
+    labels=labels,
+    spans=initial_spans,  # optional
+    color_palette=color_palette,  # optional
+    is_editable=True,  #optional
+)
+
+st.write(result)
+```
