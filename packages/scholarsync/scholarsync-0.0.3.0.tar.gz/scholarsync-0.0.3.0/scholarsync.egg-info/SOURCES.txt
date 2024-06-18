@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+scholarsync/__init__.py
+scholarsync/aio.py
+scholarsync.egg-info/PKG-INFO
+scholarsync.egg-info/SOURCES.txt
+scholarsync.egg-info/dependency_links.txt
+scholarsync.egg-info/entry_points.txt
+scholarsync.egg-info/requires.txt
+scholarsync.egg-info/top_level.txt
+scholarsync/data/LICENSE.txt
+scholarsync/data/README.md
+scholarsync/data/help.txt
+scholarsync/data/requirements.txt

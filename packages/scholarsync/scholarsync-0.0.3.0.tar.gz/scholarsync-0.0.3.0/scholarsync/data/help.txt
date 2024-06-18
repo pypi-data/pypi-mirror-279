@@ -1,0 +1,338 @@
+<entry_point_01>
+
+# Python script for performing PubMed searches based on user-provided query terms and storing results in an output file.
+"""
+PubMed Search Script
+
+Inputs:
+- PubMed search query: A comma-separated list of search terms. Each term can be a specific query with field tags (e.g., 'term[field]') or a regular term for title/abstract search.
+- Default_search_location : The default location that is searched if nothing is mentioned with query (e.g., 'term1, term2 ; it would become term1[default], term2[default]....
+- Output filename: The name of the file to store the search results.
+- Start date (optional): Start date for filtering search results based on publication date (format: YYYY/MM/DD).
+- End date (optional): End date for filtering search results based on publication date (format: YYYY/MM/DD).
+
+Usage:
+1. Enter a PubMed search query, specifying search terms with or without field tags.
+2. Provide an output filename for storing the search results.
+3. Optionally, specify start and end dates to filter search results based on publication date.
+4. Run the script to perform PubMed searches and store the results in the specified output file.
+
+Working:
+- The script processes the input PubMed search query, ensuring each term has an appropriate field tag ([tiab] for title/abstract if not specified).
+- It generates combinations of query terms to explore different search criteria.
+- PubMed queries are constructed based on the combinations of terms and optional date constraints.
+- BioPython's Entrez module is used to execute PubMed searches and retrieve search results.
+- The total number of hits and PubMed IDs (PMIDs) for each query combination are stored in the output file.
+
+Output:
+- The script generates an output file containing search results for each combination of query terms.
+- For each combination, the file includes the constructed PubMed query, total hits, and list of PMIDs retrieved.
+"""
+</entry_point_01>
+<entry_point_02>
+
+
+"""
+Script Description:
+This script retrieves PubMed article abstracts based on provided PubMed IDs and saves them into an XML file.
+
+Functionality:
+- Allows users to input PubMed IDs directly or specify a path to a text file containing PubMed IDs.
+- Uses Biopython to fetch article abstracts from PubMed database.
+- Generates an XML file containing PubMed articles with abstracts and saves it to a specified output path.
+
+Usage:
+1. Run the script.
+2. Input PubMed IDs directly (comma-separated) when prompted, or specify a path to a text file containing PubMed IDs.
+3. After processing, specify the path to save the output XML file when prompted.
+
+Inputs:
+- PubMed IDs (either entered directly or from a text file)
+- Output file path to save the generated XML file , and the txt files containing the lists of IDs that have no full texts , no abstracts etc.
+
+Outputs:
+- XML file containing PubMed articles with abstracts, saved to the specified output path
+
+Dependencies:
+- Biopython (for PubMed data retrieval and XML handling)
+
+Usage Example:
+$ python fetch_pubmed_abstracts.py
+
+Enter PubMed IDs directly or specify a path to a text file: 38450162,38138010,37264047
+Enter path to save the output XML file (e.g., /path/to/abstracts.xml): /output/path/abstracts.xml
+
+Abstracts downloaded and saved to '/output/path/abstracts.xml'
+Number of PubMed IDs processed: 3
+</entry_point_02>
+<entry_point_03>
+
+"""
+#    Script Description:
+#    Can Handle the pause and resume
+
+### Inputs:
+# 1. The script takes input PubMed IDs either directly as input separated by commas or from a specified text file containing the IDs.
+# 2. An email address is required to access the Entrez database, provided as a string in the script.
+
+### Outputs:
+# 1. The script creates an output directory named with a timestamp (output_<timestamp>) to store downloaded files.
+# 2. Inside the output directory, subdirectories are created for each PubMed ID containing downloaded full-text articles in PDF and HTML formats.
+# 3. If full text is not available for any PubMed ID, a list of those IDs is saved in a text file named not_available_ids.txt.
+# 4. Summary statistics are printed at the end, including the total number of input PubMed IDs, the number of PDFs and HTML files downloaded, and the number of PubMed IDs for which full text was not available.
+
+### Workflow:
+# 1. The script starts by checking if a file containing PubMed IDs exists and is non-empty. If the file exists and contains PubMed IDs, it reads the IDs from the file.
+# 1A.If old file file containing PubMed IDs exists and is non-empty(remaining_id.txt) is not found, It check the Pipeline_1.txt to see if there is any pipeline mode , if it exists, it take the PubMed IDs from it , and if not goes into full manual mode.
+#    It prompts the user to enter PubMed IDs either directly or specify a text file containing the IDs. This list is transfered to the file named as remaining_id.txt and the array named as feeder_pubmed_ids  array
+# 2. For each PubMed ID, the script fetches the corresponding article information from the Entrez database using Biopython.
+# 3. It extracts the PMCID (PubMed Central ID) from the article record and checks if full text is available.
+# 4. If full text is available, the script creates a subdirectory for the PubMed ID in the output directory and downloads the PDF and HTML files from the NCBI website.
+# 5. If full text is not available, the PubMed ID is added to a list of IDs with no full text available.
+# 6. The script adds a delay of 1 second between each request to avoid rate limiting.
+# 7. After processing all PubMed IDs, it prints a summary of the execution, including the total number of input PubMed IDs, the number of PDFs and HTML files downloaded, and the number of PubMed IDs for which full text was not available.
+# 8. If any PubMed IDs were found to have no full text available, a text file containing those IDs is saved in the output directory.
+
+### Script Execution Pause and Retrieve Progress:
+# The script automatically checks if a file containing PubMed IDs (remaining_id.txt) exists and is non-empty. If such a file exists, it retrieves the remaining PubMed IDs from the file and continues the execution from where it left off. This allows the script to resume execution if interrupted or paused. Additionally, after processing each PubMed ID, it updates the input file to remove the processed IDs, ensuring that the progress is saved even if the script is stopped and restarted.
+"""
+
+</entry_point_03>
+<entry_point_04>
+"""
+PubMed ID to PMC ID and DOI Converter
+
+Description:
+This script takes PubMed IDs as input and retrieves corresponding PMC IDs and DOIs from online databases. It then saves the retrieved information to text files and provides a summary of the processing results.
+
+Inputs:
+- PubMed IDs: Input PubMed IDs can be provided either as a comma-separated list or by specifying a file path containing PubMed IDs (one ID per line). The script prompts the user to input PubMed IDs interactively.
+
+Outputs:
+1. 'pmc_ids_found.txt': Text file containing the PMC IDs found for the provided PubMed IDs.
+2. 'dois_found.txt': Text file containing the DOIs (as URLs) found for the PubMed IDs.
+3. 'pmids_not_found.txt' or 'pmids_not_found_with_reason.txt': Text file containing PubMed IDs for which no PMC IDs were found. If specified, this file includes reasons for no PMC IDs found.
+4. 'pmids_no_doi.txt': Text file containing PubMed IDs for which no DOI could be retrieved.
+
+Workflow:
+1. Collect PubMed IDs from user input (either comma-separated or from a file).
+2. Use the PubMed ID to PMC ID converter API to retrieve PMC IDs for each PubMed ID.
+3. Attempt to retrieve DOI for each PubMed ID by scraping the PubMed webpage.
+4. Organize the retrieved PMC IDs and DOIs into lists.
+5. Write the found PMC IDs and DOIs to respective output files.
+6. Write the list of PubMed IDs with no PMC IDs found to an output file.
+7. Write the list of PubMed IDs with no DOI retrieved to a separate output file.
+8. Provide a summary of the processing results including counts of input PubMed IDs, retrieved PMC IDs, retrieved DOIs, and PubMed IDs for which DOI retrieval failed.
+
+Usage:
+1. Run the script and follow the prompts to input PubMed IDs.
+2. Choose whether to include reasons for PubMed IDs with no PMC IDs found.
+3. Review the generated output files for the results and summary of the processing.
+
+
+</entry_point_04>
+<entry_point_05>
+
+"""
+Script: PubMed ID/ or any other url Transformation Tool, it can also be used reversibly to do stripping
+
+Description:
+This script transforms PubMed IDs by either prefixing them with specified URL prefixes or stripping existing prefixes based on user choice.
+
+Usage:
+1. Run this script in a Python environment.
+2. Follow the prompts to provide input paths and choose the transformation operation.
+
+Functioning:
+- Reads PubMed IDs from a text file.
+- Depending on the chosen operation ('prefix' or 'strip'):
+  - 'prefix': Prefixes each PubMed ID with specified URL prefixes.
+  - 'strip': Removes existing prefixes from PubMed IDs based on specified URL prefixes.
+- Supports input of custom URL prefixes either from a file or through interactive input.
+- Uses default URL prefixes if no custom prefixes are provided.
+
+Input:
+- PubMed IDs file path: Path to a text file containing PubMed IDs separated by commas, spaces, or tabs.
+- Operation choice ('prefix' or 'strip'): Choose to either add prefixes ('prefix') or remove prefixes ('strip').
+- URL prefixes file path (optional): Path to a text file containing URL prefixes for prefixing or stripping PubMed IDs.
+
+Output:
+- Transformed PubMed IDs are saved to an output text file named 'transformed_pubmed_ids.txt' in the same directory as the script.
+
+Usage Example:
+1. Provide path to the PubMed IDs file.
+2. Choose the operation ('prefix' or 'strip').
+3. Optionally provide path to a file containing URL prefixes, or use default prefixes.
+4. Transformed PubMed IDs are saved to 'transformed_pubmed_ids.txt'.
+
+"""
+
+
+</entry_point_05>
+<entry_point_06>
+
+
+"""
+PDF Scraper and Downloader
+//we need to make the url constructer script also
+This utility retrieves HTML content from specified URLs, extracts all 'src' attributes from the HTML, identifies URLs pointing to PDF files, and downloads those PDF files.
+
+Input:
+- Accepts either a file path containing URLs (one URL per line) or a single URL as input.
+
+Output:
+- Prints the full HTML content of each URL.
+- Extracts and prints all 'src' attributes found in the HTML.
+- Identifies and prints 'src' attributes containing '.pdf'.
+- Downloads the identified PDF files and saves them locally with appropriate filenames.
+
+Usage:
+1. Run the script.
+2. Choose input mode:
+   - Enter '1' to input URLs directly.
+   - Enter '2' to specify a file path containing URLs.
+3. Provide input based on the chosen mode:
+   - For mode '1': Enter comma-separated URLs.
+   - For mode '2': Enter the file path containing URLs.
+
+"""
+
+
+</entry_point_06>
+<entry_point_07>
+
+'''
+Code Description:
+This Python script is designed to eliminate duplicate files within a specified directory by calculating the hash of each file and copying only one file per unique hash to another directory. It provides a function `copy_unique_files()` that takes a source directory, an optional file extension, and generates a timestamped destination directory. The script calculates the hash of each file in the source directory, identifies unique files based on their hash values, and copies them to the destination directory while preserving their original names.
+
+Input:
+- source_directory: The path to the directory containing the files to be processed.
+- file_extension (optional): A string representing the file extension to filter files by. If provided, only files with this extension will be processed. If set to None, all files will be processed regardless of their extension.
+
+Output:
+- The script copies unique files from the source directory to a destination directory with a timestamped name, ensuring that only one file per unique hash value is retained. If any files with duplicate hashes are found, only one copy of each unique file will be preserved in the destination directory.
+
+Working:
+1. The script defines a function `calculate_hash()` to compute the SHA256 hash of a given file.
+2. It defines another function `copy_unique_files()` to perform the main functionality:
+    a. Generate a timestamp to create a unique destination directory.
+    b. Create the timestamped destination directory.
+    c. Initialize a dictionary `hash_to_path` to store hash values as keys and corresponding file paths as values.
+    d. Iterate over the files in the source directory.
+    e. For each file, if a file extension is provided and the file does not match the extension, skip to the next file.
+    f. Calculate the hash of the file using `calculate_hash()` function.
+    g. If the file hash is not already present in `hash_to_path`, add it along with the file path to the dictionary.
+    h. After iterating over all files, copy unique files to the destination directory based on the hash-to-path mapping.
+3. Example usage is provided at the bottom of the script, demonstrating how to call `copy_unique_files()` function with appropriate arguments.
+
+Note:
+- The script does not traverse subdirectories within the source directory. It operates only on files directly present in the specified directory.
+- By default, the script includes all files in the source directory. If a specific file extension is provided, only files with that extension will be processed.
+- Files for which permission errors occur during hash calculation will be skipped.
+'''
+</entry_point_07>
+<entry_point_08>
+
+
+"""
+Script Description:
+This script extracts text from PDF files and saves it into separate text files. It provides two methods for inputting PDF files: a static path and a manual entry. It creates a new directory for the extracted text files with a timestamp appended to the directory name.
+
+Inputs:
+- pdf_path: Path to the PDF file or directory containing PDF files.
+- output_directory: Path to the directory where the extracted text files will be saved.
+
+Outputs:
+- Text files containing the extracted text from the PDF files.
+
+Workflow:
+1. Check if the input PDF path is valid and if it's a single PDF file or a directory containing multiple PDF files.
+2. Create the output directory if it doesn't exist.
+3. Iterate over each PDF file.
+4. Extract text from each page of the PDF file and save it into a separate text file.
+5. Print the progress and completion message for each PDF file.
+
+Functions:
+- extract_text_from_pdf(pdf_path, output_directory): Extracts text from PDF files and saves it into separate text files.
+- pdf_2_txt_static(): Method for providing the PDF path statically.
+- pdf_2_txt_manual(): Method for manually entering the PDF path.
+
+"""
+
+</entry_point_08>
+
+
+<entry_point_Util_01>
+
+"""
+Script Description:
+
+Purpose:
+The script retrieves citations for a given list of DOIs (Digital Object Identifiers) or DOI URLs. It supports various citation formats and styles, allowing users to customize the output according to their preferences. Additionally, it provides options to export the citations to different file formats.
+
+Input Parameters:
+1. Input File Path (required):
+   - Path to a text file containing a list of DOIs or DOI URLs, with each identifier on a separate line.
+
+2. Output Directory Path (required):
+   - Path to the directory where the exported citation files will be saved.
+
+3. Citation Format (optional, default: "citeproc-json"):
+   - Format of the citations to retrieve. Supported formats include:
+     - Text ("text")
+     - BibTeX ("bibtex")
+     - RIS ("ris")
+     - Citeproc JSON ("citeproc-json")
+     - Schema.org ("schema.org")
+     - Codemeta ("codemeta")
+     - Citation count ("citation-count")
+
+4. Citation Style (required):
+   - Style of the citations to generate. Available styles include various academic citation styles such as APA, MLA, Chicago, Harvard, etc.
+
+5. Output File Format (optional, default: "txt"):
+   - Format of the exported citation file. Supported formats include:
+     - Text ("txt")
+     - BibTeX ("bib")
+     - RIS ("ris")
+     - JSON ("json")
+     - CSL (Citation Style Language) XML ("csl")
+
+Defaults:
+- Citation Format: "citeproc-json"
+- Output File Format: "txt"
+
+Workflow:
+1. Input File Reading:
+   - Read the input file containing the list of DOIs or DOI URLs.
+
+2. User Interaction:
+   - Prompt the user to provide the output directory path.
+   - Prompt the user to select the citation format, citation style, and output file format.
+
+3. Citation Retrieval:
+   - Extract DOIs from the input file.
+   - Use the extracted DOIs to retrieve citations in the specified format and style using the Habanero library.
+
+4. Export Citations:
+   - Export the retrieved citations to a file in the selected output format.
+   - If the selected format is CSL (Citation Style Language), manually create a CSL XML file with the citations.
+
+5. Output:
+   - Display a confirmation message with the path to the exported citation file.
+
+Output Parameters:
+- Exported Citation File:
+  - A file containing the citations in the selected output format, saved in the specified output directory.
+
+Summary:
+The script allows users to fetch citations for a list of DOIs, customize the citation format and style, and export the citations to various file formats. It provides flexibility and ease of use for managing academic references and citations.
+"""
+
+
+
+</entry_point_Util_01>
+
+<entry_point_09>
+ the subulities and to be added later 
+</entry_point_09>
