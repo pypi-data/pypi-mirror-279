@@ -1,0 +1,29 @@
+[project]
+name = "deksoftware"
+version = "0.1.59"
+description = ""
+authors = [
+    { name = "sanzenwin", email = "sanzenwin@gmail.com" },
+]
+dependencies = [
+    "dekartifacts<1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+deksoftware = "deksoftware.click.__entry__:main"
+
+[tool.pdm.build]
+includes = [
+    "deksoftware",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
