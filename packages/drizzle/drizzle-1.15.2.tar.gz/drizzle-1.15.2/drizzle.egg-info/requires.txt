@@ -1,0 +1,14 @@
+numpy
+astropy
+
+[docs]
+sphinx
+sphinx-automodapi
+sphinx-rtd-theme
+matplotlib
+
+[docs:python_version < "3.11"]
+tomli
+
+[test]
+pytest
