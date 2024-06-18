@@ -1,0 +1,15 @@
+ocsf/validate/compatibility/__init__.py,sha256=crxBcTYzSv3kr8Cbauh3A0LA6ddSlEFHQ0vpCHfC6ls,808
+ocsf/validate/compatibility/__main__.py,sha256=lVgGh5GWvYNCDVu1dguJscONPfFwIOIpt-5-Vc6Bq_Y,7259
+ocsf/validate/compatibility/added_required_attrs.py,sha256=A2RD76pDo-UDjc-KZmusdOk74680D4D_eJTXcMDfiY0,2723
+ocsf/validate/compatibility/changed_type.py,sha256=FeUB6V6XrglODYjJT66cJdB0pRbkoHfp8QhMvLU8ifI,2206
+ocsf/validate/compatibility/example.toml,sha256=9DV1uAGwdhQXcTbUR6FNCeFO6pUb300nz14GfDpY7B8,567
+ocsf/validate/compatibility/increased_requirement.py,sha256=eIqmAdxfP7KKrYTiLy3fM7aKJsutMkGIwM99bp9KOeY,2755
+ocsf/validate/compatibility/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ocsf/validate/compatibility/removed_records.py,sha256=cEunSeMO6Mt4kDYMv_PXiq31RO7gWTDYrFVlLzEjyNw,10727
+ocsf/validate/compatibility/removed_uids.py,sha256=m7Kn51nl7eZpbxbLNtZGppjlvGNvWr4z1RW8RVtYNXw,1835
+ocsf/validate/compatibility/validator.py,sha256=bNtM8V7FhJtqoDhPzmGB26jPmKB5-gcpbMgP6YF9w4k,728
+ocsf_validate_compatibility-0.1.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ocsf_validate_compatibility-0.1.0.dist-info/METADATA,sha256=TR1v7b2rRZjOTu1h2Ex9GiUNlaYoUZj8hZen7dxsAe4,597
+ocsf_validate_compatibility-0.1.0.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+ocsf_validate_compatibility-0.1.0.dist-info/entry_points.txt,sha256=AuQgJiYQV8KBF-PG4yTLp2Vc2j9AxVlBXF0LuDAn9Kw,70
+ocsf_validate_compatibility-0.1.0.dist-info/RECORD,,
