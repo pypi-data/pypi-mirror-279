@@ -1,0 +1,6 @@
+gevent
+geventhttpclient
+greenlet
+pysolbase>=3.0.0
+pytz
+urllib3
