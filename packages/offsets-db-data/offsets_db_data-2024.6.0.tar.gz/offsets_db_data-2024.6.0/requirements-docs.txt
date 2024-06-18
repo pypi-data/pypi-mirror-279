@@ -1,0 +1,8 @@
+sphinx-book-theme>=1.1.2
+myst-nb
+sphinx
+sphinx-copybutton
+sphinx-design
+sphinxext-opengraph
+jupyterlab
+sphinx-togglebutton
