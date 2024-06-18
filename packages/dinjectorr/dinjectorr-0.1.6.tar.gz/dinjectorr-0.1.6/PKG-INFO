@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: dinjectorr
+Version: 0.1.6
+Summary: A simple dependency injector for Python
+Home-page: https://github.com/dmtno/dinjectorr
+Author: DMYTRO IVANOV
+Author-email: dima.ivanov.py@gmail.com
+License: MIT
+License-File: LICENSE
