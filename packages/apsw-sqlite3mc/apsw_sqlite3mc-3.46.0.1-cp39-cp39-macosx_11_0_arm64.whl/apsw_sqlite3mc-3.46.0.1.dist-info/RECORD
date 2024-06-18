@@ -1,0 +1,17 @@
+apsw_sqlite3mc-3.46.0.1.dist-info/RECORD,,
+apsw_sqlite3mc-3.46.0.1.dist-info/LICENSE,sha256=Gd223RMV4M3WPsS9y8e-Z7duOQJAqPNnAEQ5uPoMPJ8,1132
+apsw_sqlite3mc-3.46.0.1.dist-info/WHEEL,sha256=t3aNIuHimB-eyeerOmc50nLML0b4_R6yjydcdcJkGHg,108
+apsw_sqlite3mc-3.46.0.1.dist-info/top_level.txt,sha256=AMSo16bHvRC7F5I0KBCKqv4WM4--RyHwQj3g2YbN30g,5
+apsw_sqlite3mc-3.46.0.1.dist-info/METADATA,sha256=q6KH2tbm9K01lwX93aR5p0txHEtCh6vUQZd02neIh7w,9850
+apsw/trace.py,sha256=hPT7JVQXiYHve3e4ZGxx8Z3Ndz_1pOFU01OImto4Ng0,13822
+apsw/mcall.py,sha256=id3cAkj_YbRzBHi5D4eDZSurnKNN4qpPBeGxovMlkG8,4760
+apsw/__init__.pyi,sha256=c4G3el_5F0xlTPdGnusVbhTQ5ORa_BXNcGUES1GoHUA,201931
+apsw/shell.py,sha256=um-MFtkWBwRo6UDg424KOtwB-hEM57qWOYrhgmoVLAA,139700
+apsw/bestpractice.py,sha256=YlxOmJnyA8VXo-1sGfT8jfRntYrdrZHSae-F6v7K44g,2600
+apsw/__init__.cpython-39-darwin.so,sha256=L0U8z148-82z_QOGH20joZhlQrUdrd--touABx8a2xs,2485296
+apsw/mctests.py,sha256=eNziXjNg0-iZDyTx6OHWD27SysKgoPVDVHiadm7QdUY,11561
+apsw/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apsw/speedtest.py,sha256=bsLFydAv0F-e5WcCClGJRKSI6NVcva6Ne53WAo6jCOk,21859
+apsw/tests.py,sha256=5wW2RbN6HyfStBUaGnITypT5cgcvtOHLr9cV_f3Tn60,420356
+apsw/__main__.py,sha256=fU3oLvilCWjpCeO7FWgNI71ubHIxatkHYMOOQiU8-sk,60
+apsw/ext.py,sha256=SOxAGpphFKo74J2cPxKadQ2k5UtCzNqo_VL0xgqVCug,67676
