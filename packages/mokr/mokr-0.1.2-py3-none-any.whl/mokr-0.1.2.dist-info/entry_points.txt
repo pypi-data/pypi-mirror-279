@@ -1,0 +1,3 @@
+[console_scripts]
+mokr=mokr.console:main
+
