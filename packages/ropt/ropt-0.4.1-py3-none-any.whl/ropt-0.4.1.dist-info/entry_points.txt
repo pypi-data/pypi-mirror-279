@@ -1,0 +1,17 @@
+[ropt.plugins.function_transform]
+default = ropt.plugins.function_transform.default:DefaultFunctionTransformPlugin
+
+[ropt.plugins.optimization_step]
+default = ropt.plugins.optimization_steps.default:DefaultOptimizationStepsPlugin
+
+[ropt.plugins.optimizer]
+scipy = ropt.plugins.optimizer.scipy:SciPyOptimizerPlugin
+
+[ropt.plugins.realization_filter]
+default = ropt.plugins.realization_filter.default:DefaultRealizationFilterPlugin
+
+[ropt.plugins.sampler]
+scipy = ropt.plugins.sampler.scipy:SciPySamplerPlugin
+
+[ropt.plugins.workflow]
+default = ropt.plugins.workflow.default:DefaultWorkflowPlugin
