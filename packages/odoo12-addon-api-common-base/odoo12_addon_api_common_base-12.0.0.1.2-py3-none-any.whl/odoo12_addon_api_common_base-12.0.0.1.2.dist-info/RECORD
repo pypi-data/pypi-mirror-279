@@ -1,0 +1,14 @@
+odoo/addons/api_common_base/CHANGELOG.md,sha256=724pWPIwAQhNcvdYoTgIGYq1vfqFleWhvgONqwncII0,774
+odoo/addons/api_common_base/README.rst,sha256=kBqFw8ymzFf2HsqRCikJesPUBAX3qPxnmhwX0tZ9_H0,2822
+odoo/addons/api_common_base/__init__.py,sha256=aEYfl_8RMqfwsefrPWP812z4M3daM2RTWeuPQw7Go5o,25
+odoo/addons/api_common_base/__manifest__.py,sha256=jFLGgXxJXcMNFQHPVcq70NPMpkDGtVVmGN9C67yM1DY,643
+odoo/addons/api_common_base/controllers/__init__.py,sha256=yOHNZm_ZjPI2TywkyAVTTj5JaNghV7jQEcJLIUaQqQA,18
+odoo/addons/api_common_base/controllers/main.py,sha256=-4IjlejIAfs6n9WkKE8GutHqqiiMIgL2XFZYEf0t6LA,206
+odoo/addons/api_common_base/demo/api_key.xml,sha256=3FYNq5bxyWU8RkqEBFAhr8B61e6Qo9l73nQ1Y7jawAg,289
+odoo/addons/api_common_base/static/description/icon.png,sha256=3taXULJl0n0Ko0YOBXiXtspPonsicVgYojo1ghzHmuY,17607
+odoo/addons/api_common_base/tests/__init__.py,sha256=1fjF7WJCpxYhSmDkLTm71LWcQ_ag3KGExORbXIDIaRc,29
+odoo/addons/api_common_base/tests/common_service.py,sha256=rFpIuLaGINUULhlrENmoSPR5pITeaVrwPmlPEEOaewg,1381
+odoo12_addon_api_common_base-12.0.0.1.2.dist-info/METADATA,sha256=NeE_zM0wAIiNlmg03gHMbhNuXwcs4ios6gJ9vNObZWM,3493
+odoo12_addon_api_common_base-12.0.0.1.2.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+odoo12_addon_api_common_base-12.0.0.1.2.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_api_common_base-12.0.0.1.2.dist-info/RECORD,,
