@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: hvicorn
+Version: 0.0.5
+Summary: Something for creating webapps like uvicorn, But for online chatrooms...
+Home-page: https://github.com/Hiyoteam/hvicorn
+Author: 0x24a
+Author-email: admin@thz.cool
+License: MIT
+Keywords: bot hack.chat hack.chat-bot
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: websocket-client==1.8.0
+Requires-Dist: pydantic==2.7.3
+Requires-Dist: setuptools==70.0.0
+
+# hvicorn
+A simple hack.chat bot framework with type hinting
+
+Docs: [简体中文](docs/zh-CN.md)
