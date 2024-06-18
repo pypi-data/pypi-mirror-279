@@ -1,0 +1,5 @@
+[avocado.plugins.init]
+mail = avocado_mail_result.mail_result:MailInit
+
+[avocado.plugins.job.prepost]
+mail = avocado_mail_result.mail_result:Mail

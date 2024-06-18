@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+VERSION
+setup.py
+avocado_framework_plugin_mail_result.egg-info/PKG-INFO
+avocado_framework_plugin_mail_result.egg-info/SOURCES.txt
+avocado_framework_plugin_mail_result.egg-info/dependency_links.txt
+avocado_framework_plugin_mail_result.egg-info/entry_points.txt
+avocado_framework_plugin_mail_result.egg-info/requires.txt
+avocado_framework_plugin_mail_result.egg-info/top_level.txt
+avocado_mail_result/__init__.py
+avocado_mail_result/mail_result.py
