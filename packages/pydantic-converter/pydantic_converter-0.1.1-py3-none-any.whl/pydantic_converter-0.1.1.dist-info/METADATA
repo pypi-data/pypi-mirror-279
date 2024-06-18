@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: pydantic-converter
+Version: 0.1.1
+Summary: Convert pydantic model to other format
+Author-email: Ja-sonYun <killa30867@gmail.com>
+Requires-Python: >=3.9
+Requires-Dist: fire>=0.6.0
+Requires-Dist: pydantic>2.0
+Requires-Dist: pyhumps>=3.8.0
+Requires-Dist: rich>=13.7.1
+Description-Content-Type: text/markdown
+
+# pydantic-converter
+
+Convert pydantic models to other formats like typescript interfaces.
+
+## Installation
+
+```bash
+pip install pydantic-converter
+```
+
+## Usage
+
+You need to install [json-schema-to-typescript](https://github.com/bcherny/json-schema-to-typescript#readme) to use this tool.
+
+```python
+from pydantic_converter import schema
+from pydantic import BaseModel
+
+
+@schema
+class User(BaseModel):
+    name: str
+    age: int
+```
+
+```sh
+pydantic-converter ./ ./output.ts
+```
+
+```typescript
+export interface User {
+  name: string;
+  age: number;
+}
+```

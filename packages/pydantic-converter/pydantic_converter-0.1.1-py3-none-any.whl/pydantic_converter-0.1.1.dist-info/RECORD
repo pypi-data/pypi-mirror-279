@@ -1,0 +1,9 @@
+pydantic_converter/__init__.py,sha256=OHEMBb2_bPXFii65_Hd8I2LILBg93cIroVKlRlCWp9A,67
+pydantic_converter/__main__.py,sha256=hWURp6TmzwnVuF9dult5gx3LdZ7iAMZfaeozEQ3gJbA,115
+pydantic_converter/cli.py,sha256=bhcJvGcGUU8s-jRH9No3Fl-2IGhv50YEp7F1lTDSAj0,4535
+pydantic_converter/marker.py,sha256=FbkG75w4XrKwNq07VjHjbQLFkkwOXIyPgml8npNKu_w,562
+pydantic_converter/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pydantic_converter-0.1.1.dist-info/METADATA,sha256=3UC3CZppyOu6xWzTsX2K5tXBPf3cGChM4Fyqk919WpY,889
+pydantic_converter-0.1.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pydantic_converter-0.1.1.dist-info/entry_points.txt,sha256=XVcsqdhrIxtERP6tFKUIWfnUn_t4NO0Nkog0Pzf3Kj0,71
+pydantic_converter-0.1.1.dist-info/RECORD,,
