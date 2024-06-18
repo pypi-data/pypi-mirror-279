@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: trueloss
+Version: 0.1.0
+Summary: trueloss gives out the base loss for a keras neural network
+Home-page: https://github.com/trueloss/trueloss
+Author: Siddique Abusaleh
+Author-email: trueloss.py@gmail.com.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+markdown
