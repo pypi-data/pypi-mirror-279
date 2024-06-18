@@ -1,0 +1,16 @@
+README.md
+setup.py
+heroes_ai_handler.egg-info/PKG-INFO
+heroes_ai_handler.egg-info/SOURCES.txt
+heroes_ai_handler.egg-info/dependency_links.txt
+heroes_ai_handler.egg-info/top_level.txt
+src/BlobConversionHandler.py
+src/ChatCompletor.py
+src/DatabaseHandler.py
+src/EmbeddingHandler.py
+src/FileHandler.py
+src/Logger.py
+src/Printer.py
+src/Utils.py
+src/WebsiteScraper.py
+src/__init__.py
