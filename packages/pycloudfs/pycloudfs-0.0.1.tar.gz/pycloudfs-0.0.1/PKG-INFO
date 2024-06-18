@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: pycloudfs
+Version: 0.0.1
+Summary: Python wrapper for cloud storage APIs
+Home-page: https://github.com/WadhwaniAI/PyCloudFS
+Author: Wadhwani Institute for Artificial Intelligence
+Author-email: samarth@wadhwaniai.org
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: boto3>=1.34.54
+Requires-Dist: botocore>=1.34.54
+Requires-Dist: google-api-core>=2.18.0
+Requires-Dist: google-auth>=2.29.0
+Requires-Dist: google-cloud-core>=2.4.1
+Requires-Dist: google-cloud-storage>=2.16.0
+Provides-Extra: dev
+Requires-Dist: ipykernel>=6.29.3; extra == "dev"
+Requires-Dist: jupyter_client>=8.6.1; extra == "dev"
+Requires-Dist: twine>=5.1.0; extra == "dev"
+
+# PyCloudFS
+Python based API file management for cloud providers
