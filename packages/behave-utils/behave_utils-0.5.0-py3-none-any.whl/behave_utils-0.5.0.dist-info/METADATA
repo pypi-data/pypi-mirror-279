@@ -1,0 +1,82 @@
+Metadata-Version: 2.1
+Name: behave-utils
+Version: 0.5.0
+Summary: Utilities for writing Behave step implementations
+Home-page: https://code.kodo.org.uk/dom/behave-utils
+License: MPL-2.0
+Author: Dominik Sekotill
+Author-email: dom.sekotill@kodo.org.uk
+Requires-Python: >=3.10,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Testing :: BDD
+Classifier: Typing :: Typed
+Requires-Dist: behave (>=1.2,<2.0)
+Requires-Dist: jsonpath-python (>=1.0,<2.0)
+Requires-Dist: orjson (>=3.6,<4.0)
+Requires-Dist: packaging (>=21)
+Requires-Dist: parse (>=1.19,<2.0)
+Requires-Dist: requests (>=2.26,<3.0)
+Requires-Dist: trio (>=0.20.0,<0.21.0)
+Requires-Dist: xdg (>=5.1,<6.0)
+Project-URL: Issues, https://code.kodo.org.uk/dom/behave-utils/-/issues
+Project-URL: Repository, https://code.kodo.org.uk/dom/behave-utils
+Description-Content-Type: text/markdown
+
+[![gitlab-ico]][gitlab-link]
+[![pre-commit-ico]][pre-commit-link]
+[![licence-mpl20]](/LICENCE.txt)
+[![pipeline-status]][pipeline-report]
+
+
+Miscellaneous Utilities for Behave Tests
+========================================
+
+This Python package contains various helpful functions and classes for writing behaviour 
+tests suites with [Behave](https://behave.readthedocs.io/en/stable/).
+
+
+Usage
+-----
+
+Add to your project's test dependencies:
+
+```
+behave-utils
+```
+
+
+---
+
+[gitlab-ico]:
+  https://img.shields.io/badge/GitLab-code.kodo.org.uk-blue.svg?logo=gitlab
+  "GitLab"
+
+[gitlab-link]:
+  https://code.kodo.org.uk/dom/behave-utils
+  "Behave-Utils at code.kodo.org.uk"
+
+[pre-commit-ico]:
+  https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+  "Pre-Commit: enabled"
+
+[pre-commit-link]:
+  https://github.com/pre-commit/pre-commit
+  "Pre-Commit at GitHub.com"
+
+[licence-mpl20]:
+  https://img.shields.io/badge/Licence-MPL--2.0-blue.svg
+  "Licence: Mozilla Public License 2.0"
+
+[pipeline-status]:
+  https://code.kodo.org.uk/dom/behave-utils/badges/main/pipeline.svg
+
+[pipeline-report]:
+  https://code.kodo.org.uk/dom/behave-utils/pipelines?ref=main
+  "Pipelines"
+
