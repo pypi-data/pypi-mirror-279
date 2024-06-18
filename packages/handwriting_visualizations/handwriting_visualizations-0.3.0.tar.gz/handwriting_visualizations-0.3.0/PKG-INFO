@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: handwriting_visualizations
+Version: 0.3.0
+Summary: 
+Author: Bdalab team
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: handwriting-features (>=1.0.8,<2.0.0)
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: plotly
+Description-Content-Type: text/markdown
+
+# Handwriting visualizations
+- stable version: 0.3.0
+
+# Publishing to pypi
+- Easiest way is to be on WSL2 or Linux distro
+- Install **poetry**
+- Rename file **_Makefile** to **Makefile**
+- In the Makefile edit **YOUR_PYPI_TOKEN** with your generated pypi token
+- In the same directory as this README file is run commands:
+```
+make set_token
+make publish
+```
+
+

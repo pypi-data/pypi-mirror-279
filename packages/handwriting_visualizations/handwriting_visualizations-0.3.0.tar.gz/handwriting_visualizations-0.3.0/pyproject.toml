@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "handwriting_visualizations"
+version = "0.3.0"
+description = ""
+authors = ["Bdalab team"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+handwriting-features = "^1.0.8"
+numpy = "*"
+pandas = "*"
+plotly = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
