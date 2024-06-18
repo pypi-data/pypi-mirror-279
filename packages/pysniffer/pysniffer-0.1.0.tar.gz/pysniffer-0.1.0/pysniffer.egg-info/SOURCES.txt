@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+pysniffer/__init__.py
+pysniffer/decorator.py
+pysniffer.egg-info/PKG-INFO
+pysniffer.egg-info/SOURCES.txt
+pysniffer.egg-info/dependency_links.txt
+pysniffer.egg-info/top_level.txt
+test/__init__.py
+test/test_decorator.py
