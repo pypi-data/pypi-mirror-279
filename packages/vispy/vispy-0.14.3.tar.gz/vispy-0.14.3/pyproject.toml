@@ -1,0 +1,13 @@
+[build-system]
+requires = [
+    "wheel",
+    "setuptools>=42",
+    # see https://numpy.org/devdocs/dev/depending_on_numpy.html#numpy-2-0-specific-advice
+    "numpy>=2.0.0rc2",
+    "setuptools_scm[toml]>=7.1",
+    "Cython>=3.0.0"
+]
+
+[tools.setuptools_scm]
+write_to = "vispy/version.py"
+local_scheme = "dirty-tag"
