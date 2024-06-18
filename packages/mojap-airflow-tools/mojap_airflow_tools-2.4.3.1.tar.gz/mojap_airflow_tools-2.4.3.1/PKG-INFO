@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mojap-airflow-tools
+Version: 2.4.3.1
+Summary: A few wrappers and tools to use Airflow on the Analytical Platform
+Author: MoJ Data Engineering
+Requires-Python: >=3.10,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: apache-airflow (==2.4.3)
+Requires-Dist: apache-airflow-providers-cncf-kubernetes (==4.4.0)
+Requires-Dist: packaging (==23.1)
+Requires-Dist: pendulum (==2.1.2)
+Requires-Dist: tenacity (==8.3.0)
