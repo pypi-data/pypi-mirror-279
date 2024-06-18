@@ -1,0 +1,12 @@
+multidms/__init__.py,sha256=RQwZ6DLz0Bvajjaz-r60e7F6wxOjr7AeqvBa0sxVqKM,1968
+multidms/biophysical.py,sha256=FSKPNG0qLatGlr3gdMPABX9_B0LojzlDokP1O0qW9nQ,15613
+multidms/data.py,sha256=f4mgCfd_cWlomF-y9gQTiWyitKWRyMqlCoWPnS_-BKQ,29787
+multidms/model.py,sha256=ROsNUizd76hrQgSHeDjhFfnJQi27hmuE7nmvjrHIi5U,60150
+multidms/model_collection.py,sha256=P9Rmc6YZpu4xnHh_9EigKPjiFS5LVp3fqliXhmwTgZU,42661
+multidms/plot.py,sha256=vDrqF7CsjlQwoaRekg7qvJTGFiLcDVvLQ13UKiRebg8,23290
+multidms/utils.py,sha256=MXE4-viSSqQmKLyD-3JbxYdjF1OADPB9_OumVLizx44,5890
+multidms-1.0.0.dist-info/LICENSE,sha256=mJ4ZEGg5nui2ZBfp2ROb3o3ft3TJ4TkypMQnImQoCDo,1095
+multidms-1.0.0.dist-info/METADATA,sha256=S4hgWMKoKclLR2hG-k31QCXh8tFQKfs05EbTzbMvarg,4264
+multidms-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+multidms-1.0.0.dist-info/top_level.txt,sha256=NIdwAxUTLTJjI9-QL1q_dkT2pVlN3yOZY7apfx0X2nk,9
+multidms-1.0.0.dist-info/RECORD,,
