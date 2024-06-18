@@ -1,0 +1,20 @@
+prefect<3.0.0,>=2.14.10
+atlassian-python-api!=3.41.5,!=3.41.6,!=3.41.7,!=3.41.8,>=3.32.1
+
+[dev]
+aiohttp
+coverage
+interrogate
+mkdocs-gen-files
+mkdocs-material
+mkdocs
+mkdocstrings[python]
+mypy
+pillow
+pre-commit
+pytest-asyncio
+pytest
+pytest-xdist
+
+[dev:python_version < "3.8"]
+mock
