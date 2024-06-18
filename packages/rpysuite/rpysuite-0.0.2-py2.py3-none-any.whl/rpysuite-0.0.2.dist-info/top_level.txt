@@ -1,0 +1,17 @@
+reactpy
+reactpy/_console
+reactpy/_static
+reactpy/_static/app
+reactpy/_static/app/dist
+reactpy/_static/app/dist/assets
+reactpy/backend
+reactpy/core
+reactpy/web
+reactpy/web/templates
+rpysuite
+rpysuite/components
+rpysuite/components/router
+rpysuite/examples
+rpysuite/examples/mantine_demo
+rpysuite/examples/mantine_demo/inputs
+rpysuite/examples/mantine_demo/layout
