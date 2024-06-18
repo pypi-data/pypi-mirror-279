@@ -1,0 +1,132 @@
+"""Provide scan payload model."""
+
+import json
+import sys
+from pathlib import Path
+from typing import List, Dict, Any, Optional
+
+from pydantic import BaseModel
+from pydantic_core import to_jsonable_python
+
+from spotter.library.environment import Environment, EnvironmentV3
+from spotter.library.parsing.parsing import ParsingResult
+
+
+class Payload(BaseModel):
+    tasks: List[Dict[str, Any]]
+    playbooks: List[Dict[str, Any]]
+
+    def to_json_file(self, export_path: Path) -> None:
+        """
+        Export scan payload to JSON file.
+
+        :param export_path: File path to export to (will be overwritten if exists)
+        """
+        try:
+            with export_path.open("w", encoding="utf-8") as export_file:
+                json.dump(to_jsonable_python(self), export_file, indent=2)
+        except TypeError as e:
+            print(f"Error: {str(e)}", file=sys.stderr)
+            sys.exit(2)
+
+
+class PayloadV3(Payload):
+    """A container for information about the scan payload/input."""
+
+    environment: EnvironmentV3
+
+
+class PayloadV4(Payload):
+    environment: Environment
+    dynamic_inventories: Optional[List[Dict[str, Any]]] = None
+    roles: Optional[List[Dict[str, Any]]] = None
+    module_defaults: Optional[List[Dict[str, Any]]] = None
+
+    def as_payload_v3(self) -> PayloadV3:
+        environment_v3 = EnvironmentV3(
+            python_version=self.environment.python_version,
+            ansible_version=self.environment.ansible_version,
+            installed_collections=self.environment.installed_collections,
+            ansible_config=self.environment.ansible_config,
+            galaxy_yml=self.environment.galaxy_yml,
+            collection_requirements=self.environment.collection_requirements,
+            cli_scan_args=self.environment.cli_scan_args,
+        )
+        return PayloadV3(environment=environment_v3, tasks=self.tasks, playbooks=self.playbooks)
+
+    @classmethod
+    def from_args(
+        cls,
+        parsing_result: ParsingResult,
+        environment: Environment,
+        include_metadata: bool,
+        import_payload: Optional[Path],
+    ) -> "PayloadV4":
+        """
+        Convert CLI arguments to ScanPayload object.
+
+        :param parsing_result: ParsingResult object
+        :param environment: Environment object
+        :param include_metadata: Upload metadata (i.e., file names, line and column numbers)
+        :param import_payload: Path to file where ScanPayload can be imported from
+        :return: ScanPayload object
+        """
+        if import_payload:
+            return cls.from_json_file(import_payload)
+
+        tasks = (
+            parsing_result.tasks_with_relative_path_to_cwd()
+            if include_metadata
+            else parsing_result.tasks_without_metadata()
+        )
+        playbooks = (
+            parsing_result.playbooks_with_relative_path_to_cwd()
+            if include_metadata
+            else parsing_result.playbooks_without_metadata()
+        )
+        dynamic_inventories = parsing_result.clean_inventory(include_metadata)
+
+        roles = parsing_result.roles
+        module_defaults: List[Dict[str, Any]] = []
+
+        return PayloadV4(
+            environment=environment,
+            tasks=tasks,
+            playbooks=playbooks,
+            dynamic_inventories=dynamic_inventories,
+            roles=roles,
+            module_defaults=module_defaults,
+        )
+
+    @classmethod
+    def from_json_file(cls, import_path: Path) -> "PayloadV4":
+        """
+        Load ScanPayload object from JSON file.
+
+        :param import_path: File path with JSON to import from
+        :return: ScanPayload object holding input tuple (environment, tasks, playbooks)
+        """
+        try:
+            if not import_path.exists():
+                print(f"Error: import file at {import_path} does not exist.", file=sys.stderr)
+                sys.exit(2)
+
+            with import_path.open("r", encoding="utf-8") as import_file:
+                scan_payload = json.load(import_file)
+                environment_dict = scan_payload.get("environment", None)
+                if environment_dict is not None:
+                    environment = Environment(**environment_dict)
+                else:
+                    environment = Environment()
+
+                return cls(
+                    environment=environment,
+                    tasks=scan_payload.get("tasks", []),
+                    playbooks=scan_payload.get("playbooks", []),
+                    dynamic_inventories=scan_payload.get("dynamic_inventories", []),
+                    roles=scan_payload.get("roles", []),
+                    module_defaults=scan_payload.get("module_defaults", []),
+                )
+        except (json.JSONDecodeError, TypeError) as e:
+            print(f"Error: {str(e)}", file=sys.stderr)
+            sys.exit(2)
