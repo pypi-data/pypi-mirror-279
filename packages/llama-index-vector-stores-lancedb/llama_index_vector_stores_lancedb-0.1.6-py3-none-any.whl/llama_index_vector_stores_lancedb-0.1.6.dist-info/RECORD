@@ -1,0 +1,6 @@
+llama_index/vector_stores/lancedb/__init__.py,sha256=Sgp2vY4u-2sIowQIK9ZD2UNqo1WssHxODlf69jBDDLQ,104
+llama_index/vector_stores/lancedb/base.py,sha256=3TxC98hfLj_ZpWZPxMLCDG3VoOOKheTFphls-1gX0FQ,19441
+llama_index/vector_stores/lancedb/util.py,sha256=OWfCQ8cnpr_BlSUk7OOmvOwIls-lcavxEuXbeXfZhdQ,333
+llama_index_vector_stores_lancedb-0.1.6.dist-info/METADATA,sha256=Ut6VPrVPKw2MFvhoOHexJVnOKcW10QS4WxesAcgTUZ8,720
+llama_index_vector_stores_lancedb-0.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+llama_index_vector_stores_lancedb-0.1.6.dist-info/RECORD,,
