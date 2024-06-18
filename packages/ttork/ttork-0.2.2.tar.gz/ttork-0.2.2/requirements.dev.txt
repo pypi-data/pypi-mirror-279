@@ -1,0 +1,11 @@
+# Tools
+pip-tools
+textual-dev
+
+# Linters
+pylint
+flake8
+black
+
+# Unit Testing
+pytest
