@@ -1,0 +1,14 @@
+mors/__init__.py,sha256=4JEDlGbY4KPoTnaid65mTo9tOMhW378XjJz41QvvQRE,1010
+mors/cluster.py,sha256=EZLa9TVi2iUiVE-vC6P6Ck3N2XawaU8NRryGBXfPJLE,15110
+mors/constants.py,sha256=9LkOWsF8KAT5z6TjjF-uu4ciIBBH9UetnsVh0hgct7M,2004
+mors/miscellaneous.py,sha256=Dm-XgKiFdKUJskQaIghxwdHKjKwLuNmBqtXXkOHZC_c,12348
+mors/parameters.py,sha256=2BAehuq3DAoTP9ZtI13KWLiP-swtQqvQieqZ4zH153U,8906
+mors/physicalmodel.py,sha256=BWxDuSz7xmGtWI7VLfZaS6vIqtxS7BnLUhD-qiKVreM,51796
+mors/rotevo.py,sha256=70ohn0r6Zle0tGrnGFRhWX0rBdqKiN691JuFrcm3pOc,32483
+mors/star.py,sha256=Xxbz3gySpQUpuxGX8mbcx0zCN6gLg4aLiT-WZKcI7rA,27686
+mors/stellarevo.py,sha256=zcyvjlU716drKQ_T7P15KVCJsdzcXx3Cc-S7yv6iouI,33425
+fwl_mors-24.6.17.dist-info/LICENSE.md,sha256=UK5JduXdInbCkrePOd4uetb4NhwD3uaijCY0vjGWAFc,1111
+fwl_mors-24.6.17.dist-info/METADATA,sha256=zM0BKLJM2bVoUhnsPNcpJBagVJsg7tOQqYKT6eyFdlA,30348
+fwl_mors-24.6.17.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fwl_mors-24.6.17.dist-info/top_level.txt,sha256=1v0Np_6NTnuNAWYHap4PcQXQrNfoLC3JtorvHm0SRt4,5
+fwl_mors-24.6.17.dist-info/RECORD,,
