@@ -1,0 +1,17 @@
+pdfmergetk/__init__.py,sha256=YoWqSh89FBxsAbmIijavzvCMnFxAnxibZMfx5pzAUoA,595
+pdfmergetk/__main__.py,sha256=MFeU_USFU_ihgHV_Qyyr4uZ56QrqtwWW2SwPnkbR-2w,121
+pdfmergetk/about.py,sha256=RaGCGvUMIm-yvdHgaqQvgcOgjiJMLlWRv_ot9UWhbPQ,265
+pdfmergetk/configmanager.py,sha256=KNG6xL7LXvP-oB8Q-byiaVzUDhVakgaBZFyM_U8XpVc,6988
+pdfmergetk/dataclass.py,sha256=LHXL_N6kyYzkkwr6dCt5jo4J9CFHrcOrcp6KHCskskc,5810
+pdfmergetk/gui.py,sha256=HZ_c5lUXs2OTZeQaTFt94rFUa3LQeHltUjwJTBXvCQs,42555
+pdfmergetk/installer.py,sha256=pqq4Z5l4di9HafV27oS2JZkXIfydzj3gQMk1_t0vZUo,1087
+pdfmergetk/langs.py,sha256=oD7dOuhywiOIRrN_AfWLEJATt0q86UrDdUDuJME9S8w,1115
+pdfmergetk/models.py,sha256=LcHym8ZHOWzlaTKyio5X9cCL8zpyIwwkef-gm0_sxHg,800
+pdfmergetk/reader.py,sha256=mRQJva1ry4-UTUWo_QHY7mrPCz0tBXNOh-3_dY1SSKY,1708
+pdfmergetk/reset.py,sha256=0g5O0S-N_KTKGiqrBr08a7QG9qPnDOMFIeIyersOQpk,176
+pdfmergetk/styles.py,sha256=rzv6AZDhkEVsDvSHjWAliZHWRdvef_iH3oIBMqluiqg,3946
+pdfmergetk-0.1.1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pdfmergetk-0.1.1.dist-info/METADATA,sha256=GNXZYkly8s_lRQ16fG2zf03WSrKnOt5ONQFwYXMTJsw,4090
+pdfmergetk-0.1.1.dist-info/WHEEL,sha256=Zb28QaM1gQi8f4VCBhsUklF61CTlNYfs9YAZn-TOGFk,88
+pdfmergetk-0.1.1.dist-info/entry_points.txt,sha256=OEwlt1gWBQzFzG-aJEZ69nwHcd0nj9yAC2yYC0Q6yLs,126
+pdfmergetk-0.1.1.dist-info/RECORD,,

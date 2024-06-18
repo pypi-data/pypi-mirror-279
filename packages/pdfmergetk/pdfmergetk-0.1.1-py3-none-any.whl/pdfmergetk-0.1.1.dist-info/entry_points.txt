@@ -1,0 +1,5 @@
+[console_scripts]
+mergepdf=pdfmergetk.gui:main
+mergepdfreset=pdfmergetk.reset:main
+pdfmergetklinks=pdfmergetk.installer:main
+
