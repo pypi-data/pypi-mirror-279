@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: sankalp
+Version: 0.5.1
+Summary: A simple CLI package for Sankalp Shrivastava
+Home-page: https://github.com/1sankalp
+Author: Sankalp Shrivastava
+Author-email: s@sankalp.sh
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: rich
+Requires-Dist: PyInquirer
+
+# sankalp
+
+A simple interactive CLI for Sankalp Shrivastava.
+
+## After installation, run this to learn more about me!
+
+```python
+sankalp
+```
