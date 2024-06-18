@@ -1,0 +1,12 @@
+dragodis>=0.8.0
+cmd2>=2
+tabulate
+hexdump
+pyhidra>=0.6.0
+yara-python
+
+[:sys_platform == "win32"]
+pyreadline3
+
+[testing]
+pytest>=3.0.0
