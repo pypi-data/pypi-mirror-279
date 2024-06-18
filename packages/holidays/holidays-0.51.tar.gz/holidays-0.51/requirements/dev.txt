@@ -1,0 +1,16 @@
+# Test environments.
+pre-commit
+ruff
+tox
+
+# Localization.
+lingva
+
+# Holidays pre-calculation.
+convertdate
+hijridate
+
+# Deployment.
+build
+gitpython
+pygithub
