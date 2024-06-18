@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.py
+pyprofiler/__init__.py
+pyprofiler/__main__.py
+pyprofiler/cli.py
+pyprofiler/printer.py
+pyprofiler/profiler.py
+pyprofiler/utils.py
+simple_pyprofiler.egg-info/PKG-INFO
+simple_pyprofiler.egg-info/SOURCES.txt
+simple_pyprofiler.egg-info/dependency_links.txt
+simple_pyprofiler.egg-info/entry_points.txt
+simple_pyprofiler.egg-info/requires.txt
+simple_pyprofiler.egg-info/top_level.txt

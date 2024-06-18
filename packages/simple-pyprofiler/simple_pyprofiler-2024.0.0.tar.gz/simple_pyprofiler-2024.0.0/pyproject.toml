@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-pyprofiler"
+version = "2024.0.0"
+requires-python = ">=3.8"
+description = "Easy profiler for python functions"
+readme = "README.md"
+dependencies = [
+  'PyYAML ~= 6.0'
+]
+
+[project.urls]
+Repository = "https://github.com/mrkickling/pyprofiler.git"
+
+[project.scripts]
+pyprofiler = "pyprofiler.cli:cli"
