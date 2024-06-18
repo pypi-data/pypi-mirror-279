@@ -1,0 +1,11 @@
+beam/__init__.py,sha256=veR8piv6xqc8WMGb0_h30zAUIhknC6vhC52JcRgugj4,730
+beam/__main__.py,sha256=SWl8heft01nReVk1xDsEGxvE2M4pSHYj146Bng2Z9xk,38
+beam/cli/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+beam/cli/configure.py,sha256=uy8AebgMosttfHFrhKJb96j1wbx2xLxAE0VrnzgiL-Y,1310
+beam/cli/login.py,sha256=galassxmAxRgN7ogAjpBOSVVNZVoOoSM9f8eTZLtbAY,2931
+beam/cli/main.py,sha256=N_wZXxrEmQlFU_f-5rzfp_rJuxbD3ut-V81KA7ne3UI,573
+beam/cli/quickstart.py,sha256=v3LsQZ0OokrGRmwliPI1XjEV2ccCSO-VW95fQRZjyxw,582
+beam_client-0.2.31.dist-info/METADATA,sha256=Yw3VNyq_nt1lEREeQcRH1rwyoV-z2RH6vsrS5eDuxyE,528
+beam_client-0.2.31.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+beam_client-0.2.31.dist-info/entry_points.txt,sha256=Fg35KinO1dhiV5HoHNntJkWIAym1NcXFL89xVWxBXv8,42
+beam_client-0.2.31.dist-info/RECORD,,
