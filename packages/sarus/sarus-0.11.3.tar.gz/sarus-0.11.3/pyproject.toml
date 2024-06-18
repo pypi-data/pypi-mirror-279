@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sarus"
+description = "Python client for the Sarus Gateway"
+readme = "README.rst"
+license = {text= "Apache License 2.0"}
+requires-python = ">=3.9, <3.11"
+authors = [
+    {name = "Sarus Technologies", email="contact@sarus.tech"}
+]
+keywords = ["differential privacy", "AI", "Data privacy"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "sarus-data-spec-public==4.1.1.dev0",
+    "cloudpickle>=1.2, <2.1",
+    "pyarrow >= 11.0",
+    "protobuf >= 3.20.3",
+]
+dynamic = ["version"]
+
+[tool.setuptools.packages.find]
+include= ["sarus*"]
+exclude= ["tests","docs",'examples']
+
+[project.optional-dependencies]
+sklearn = [
+    "scikit-learn==1.2.2",
+    "scipy==1.9.0"
+]
+imblearn = [
+    "imbalanced-learn"
+]
+tensorflow = [
+    "tensorflow~=2.7.0"  # same as on PLL server
+]
+pandas_profiling = [
+    "ydata-profiling<4.7"  # dependency error introduced in 4.6.1
+]
+plotly = [
+    "plotly"
+]
+xgboost = [
+    "xgboost ~= 1.6.1"
+]
+skopt = [
+    "scikit-optimize"
+]
+shap = [
+    "shap"
+]
+optbinning = [
+    "optbinning >= 0.18.0"
+]
+tests = [
+    "pytest >= 7.4.2",
+    "pytest-mock~=3.5.1",
+    "pytest-cov >= 4.1.0",
+    "responses",
+    "typeguard~=4.0"
+]

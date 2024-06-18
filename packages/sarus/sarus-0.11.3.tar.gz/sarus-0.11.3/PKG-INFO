@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: sarus
+Version: 0.11.3
+Summary: Python client for the Sarus Gateway
+Author-email: Sarus Technologies <contact@sarus.tech>
+License: Apache License 2.0
+Keywords: differential privacy,AI,Data privacy
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: <3.11,>=3.9
+Description-Content-Type: text/x-rst
+Requires-Dist: sarus-data-spec-public==4.1.1.dev0
+Requires-Dist: cloudpickle<2.1,>=1.2
+Requires-Dist: pyarrow>=11.0
+Requires-Dist: protobuf>=3.20.3
+Provides-Extra: sklearn
+Requires-Dist: scikit-learn==1.2.2; extra == "sklearn"
+Requires-Dist: scipy==1.9.0; extra == "sklearn"
+Provides-Extra: imblearn
+Requires-Dist: imbalanced-learn; extra == "imblearn"
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow~=2.7.0; extra == "tensorflow"
+Provides-Extra: pandas-profiling
+Requires-Dist: ydata-profiling<4.7; extra == "pandas-profiling"
+Provides-Extra: plotly
+Requires-Dist: plotly; extra == "plotly"
+Provides-Extra: xgboost
+Requires-Dist: xgboost~=1.6.1; extra == "xgboost"
+Provides-Extra: skopt
+Requires-Dist: scikit-optimize; extra == "skopt"
+Provides-Extra: shap
+Requires-Dist: shap; extra == "shap"
+Provides-Extra: optbinning
+Requires-Dist: optbinning>=0.18.0; extra == "optbinning"
+Provides-Extra: tests
+Requires-Dist: pytest>=7.4.2; extra == "tests"
+Requires-Dist: pytest-mock~=3.5.1; extra == "tests"
+Requires-Dist: pytest-cov>=4.1.0; extra == "tests"
+Requires-Dist: responses; extra == "tests"
+Requires-Dist: typeguard~=4.0; extra == "tests"
+
+
+Sarus
+
+===
+
+Python client for the Sarus Gateway. It provides simple connectors to leverage confidential data while ensuring data privacy. Users can explore & train AI models on sensitive data, via synthetic data browsing, remote training and differential privacy.
+
+Installation
+------------
+
+PIP
+^^^
+
+To install locally the latest available version :
+
+``pip install sarus``
+
+Usage
+-----
+
+Client
+^^^^^^
+
+Use this class to connect to **Sarus Gateway**.
+
+.. code-block:: python
+
+   from sarus import Client
+
+   client = Client(url="http://admin.sarus.tech:5000")
+   available = client.available_datasets()
+   print(f'Datasets available on the server: {available}')
