@@ -1,0 +1,41 @@
+{
+    "collection": {
+        "extra_fields":{
+            "constellation": "",
+            "anything": "anything",
+            "gsd": "something",
+            "mission": "",
+            "platform": "",
+            "instruments": [],
+            "version": ""
+        },
+        "keywords": ["something"],
+        "license": "something",
+        "providers": []
+
+    },
+    "item": {
+        "extra_fields":{
+            "anything": "anything",
+            "something_else": "something"
+        },
+        "properties":{
+            "anything": "anything",
+            "something_else": "something"
+        },
+        "description": "",
+        "geometry": {},
+        "gsd": "",
+        "instruments": [],
+        "keywords": [],
+        "license": "",
+        "platform": "",
+        "providers": [],
+        "title": "",
+        "start_datetime": "It will fill out automatically if set `extra_metadata` to True`",
+        "end_datetime": "It will fill out automatically if set `extra_metadata` to True`",
+        "created": "It will fill out automatically if set `extra_metadata` to True`",
+        "updated": "It will fill out automatically if set `extra_metadata` to True`",
+        "version": ""
+    }
+}

@@ -1,0 +1,541 @@
+{
+        "main_metadata": {
+                        "horizontal_extent_lon_min": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                        "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                        "name":"geospatial_lon_min",
+                                                        "value": null
+                                                        }
+                                                },
+                        "horizontal_extent_lon_max": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                        "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                        "name":"geospatial_lon_max",
+                                                        "value": null
+                                                        }
+                                                },
+                        "horizontal_extent_lat_min": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                        "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                        "name":"geospatial_lat_min",
+                                                        "value": null
+                                                        }
+                                                },
+                        "horizontal_extent_lat_max": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                        "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                        "name":"geospatial_lat_max",
+                                                        "value": null
+                                                        }
+                                                },
+                        "temporal_extent_end_datetime": {
+
+                                                        "tds2stac_mode_analyser": "get",
+                                                        "tds2stac_webservice_analyser": "ncml",
+                                                        "netcdf": null,
+                                                        "group": {
+                                                                    "name":"CFMetadata"
+                                                                },
+                                                        "attribute": {
+                                                                    "name":"time_coverage_end",
+                                                                    "value": null
+                                                                    }
+                                                        },
+                        "temporal_extent_start_datetime": {
+                                                        "tds2stac_mode_analyser": "get",
+                                                        "tds2stac_webservice_analyser": "ncml",
+                                                        "netcdf": null,
+                                                        "group": {
+                                                                    "name":"CFMetadata"
+                                                                },
+                                                        "attribute": {
+                                                                    "name":"time_coverage_start",
+                                                                    "value": null
+                                                                    }
+                                                        },
+                        "variable_ids": {
+                                        "tds2stac_mode_analyser": "get",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "variable": {
+                                                "name": null
+                                                }
+                                }
+                        },
+    "common_metadata": {
+                        "constellation": null,
+                        "created": null,
+                        "description": {
+                                        "tds2stac_mode_analyser": "get",
+                                        "tds2stac_webservice_analyser": "catalog",
+                                        "catalog": null,
+                                        "dataset":{
+                                                "name": null
+                                        }
+                                        },
+                        "gsd": null,
+                        "instruments": null,
+                        "license": null,
+                        "mission": null,
+                        "providers": null,
+                        "title": null,
+                        "updated": null
+                        },
+    "item_datacube_extension":{
+                        "horizontal_ids_lat": {
+                                        "tds2stac_mode_analyser": "check",
+                                        "tds2stac_manual_variable": "Latitude",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "group": {
+                                                    "name":"CFMetadata"
+                                                },
+                                        "attribute": {
+                                                    "name":"geospatial_lat_min"
+                                                    }
+                                        },
+                        "horizontal_ids_lon": {
+                                        "tds2stac_mode_analyser": "check",
+                                        "tds2stac_manual_variable": "Longitude",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "group": {
+                                                    "name":"CFMetadata"
+                                                },
+                                        "attribute": {
+                                                    "name":"geospatial_lon_min"
+                                                    }
+                                        },
+                        "horizontal_type": {
+                                            "tds2stac_mode_analyser": "str",
+                                            "tds2stac_manual_variable": "DimensionType.SPATIAL.value"
+                                            },
+                        "horizontal_axis_x": {
+                                            "tds2stac_mode_analyser": "check",
+                                            "tds2stac_manual_variable": "x",
+                                            "tds2stac_webservice_analyser": "ncml",
+                                            "netcdf": null,
+                                            "group": {
+                                                        "name":"CFMetadata"
+                                                    },
+                                            "attribute": {
+                                                        "name":"geospatial_lon_min"
+                                                        }
+                                            },
+                        "horizontal_axis_y": {
+                                            "tds2stac_mode_analyser": "check",
+                                            "tds2stac_manual_variable": "y",
+                                            "tds2stac_webservice_analyser": "ncml",
+                                            "netcdf": null,
+                                            "group": {
+                                                        "name":"CFMetadata"
+                                                    },
+                                            "attribute": {
+                                                        "name":"geospatial_lat_min"
+                                                        }
+                                            },
+                        "horizontal_description_lat": {
+                                                    "tds2stac_mode_analyser": "check",
+                                                    "tds2stac_manual_variable": "Latitude",
+                                                    "tds2stac_webservice_analyser": "ncml",
+                                                    "netcdf": null,
+                                                    "group": {
+                                                                "name":"CFMetadata"
+                                                            },
+                                                    "attribute": {
+                                                                "name":"geospatial_lat_min"
+                                                                }
+                                                    },
+                        "horizontal_description_lon": {
+                                                    "tds2stac_mode_analyser": "check",
+                                                    "tds2stac_manual_variable": "Longitude",
+                                                    "tds2stac_webservice_analyser": "ncml",
+                                                    "netcdf": null,
+                                                    "group": {
+                                                                "name":"CFMetadata"
+                                                            },
+                                                    "attribute": {
+                                                                "name":"geospatial_lon_min"
+                                                                }
+                                                    },
+                        "horizontal_extent_lon_min": {
+                                                    "tds2stac_mode_analyser": "get",
+                                                    "tds2stac_webservice_analyser": "ncml",
+                                                    "netcdf": null,
+                                                    "group": {
+                                                                "name":"CFMetadata"
+                                                            },
+                                                    "attribute": {
+                                                                "name":"geospatial_lon_min",
+                                                                "value": null
+                                                                }
+                                                    },
+                        "horizontal_extent_lon_max": {
+                                                    "tds2stac_mode_analyser": "get",
+                                                    "tds2stac_webservice_analyser": "ncml",
+                                                    "netcdf": null,
+                                                    "group": {
+                                                            "name":"CFMetadata"
+                                                            },
+                                                    "attribute": {
+                                                                "name":"geospatial_lon_max",
+                                                                "value": null
+                                                                }
+                                                    },
+                        "horizontal_extent_lat_min": {
+                                                    "tds2stac_mode_analyser": "get",
+                                                    "tds2stac_webservice_analyser": "ncml",
+                                                    "netcdf": null,
+                                                    "group": {
+                                                            "name":"CFMetadata"
+                                                            },
+                                                    "attribute": {
+                                                                "name":"geospatial_lat_min",
+                                                                "value": null
+                                                                }
+                                                    },
+                        "horizontal_extent_lat_max": {
+                                                    "tds2stac_mode_analyser": "get",
+                                                    "tds2stac_webservice_analyser": "ncml",
+                                                    "netcdf": null,
+                                                    "group": {
+                                                            "name":"CFMetadata"
+                                                            },
+                                                    "attribute": {
+                                                                "name":"geospatial_lat_max",
+                                                                "value": null
+                                                                }
+                                                    },
+                        "horizontal_values": null,
+                        "horizontal_step": null,
+                        "horizontal_reference_system": {
+                                                    "tds2stac_mode_analyser": "str",
+                                                    "tds2stac_manual_variable": 4326
+                                                    },
+                        "vertical_id": {
+                                        "tds2stac_mode_analyser": "check",
+                                        "tds2stac_manual_variable": "Altitude",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "group": {
+                                                    "name":"CFMetadata"
+                                                },
+                                        "attribute": {
+                                                    "name":"geospatial_vertical_min"
+                                                    }
+                                        },
+                        "vertical_type": {
+                                        "tds2stac_mode_analyser": "str",
+                                        "tds2stac_manual_variable": "DimensionType.SPATIAL.value"
+                                        },
+                        "vertical_axis": {
+                                        "tds2stac_mode_analyser": "check",
+                                        "tds2stac_manual_variable": "z",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "group": {
+                                                    "name":"CFMetadata"
+                                                },
+                                        "attribute": {
+                                                    "name":"geospatial_vertical_min"
+                                                    }
+                                        },
+                        "vertical_description": {
+                                                "tds2stac_mode_analyser": "check",
+                                                "tds2stac_manual_variable": "Vertical",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                            "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                            "name":"geospatial_vertical_min"
+                                                            }
+                                                },
+                        "vertical_extent_upper": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                            "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                            "name":"geospatial_vertical_max",
+                                                            "value": null
+                                                            }
+                                                    },
+                        "vertical_extent_lower": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                            "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                            "name":"geospatial_vertical_min",
+                                                            "value": null
+                                                            }
+                                            },
+                        "vertical_values": null,
+                        "vertical_step": null,
+                        "vertical_unit": null,
+                        "temporal_id": {
+                                            "tds2stac_mode_analyser": "check",
+                                            "tds2stac_manual_variable": "Time",
+                                            "tds2stac_webservice_analyser": "ncml",
+                                            "netcdf": null,
+                                            "group": {
+                                                        "name":"CFMetadata"
+                                                    },
+                                            "attribute": {
+                                                        "name":"time_coverage_start"
+                                                        }
+                                            },
+                        "temporal_type": {
+                                        "tds2stac_mode_analyser": "str",
+                                        "tds2stac_manual_variable": "DimensionType.TEMPORAL.value"
+                                        },
+                        "temporal_axis": {
+                                        "tds2stac_mode_analyser": "check",
+                                        "tds2stac_manual_variable": "time",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "group": {
+                                                    "name":"CFMetadata"
+                                                },
+                                        "attribute": {
+                                                    "name":"time_coverage_start"
+                                                    }
+                                        },
+                        "temporal_description": {
+                                                "tds2stac_mode_analyser": "check",
+                                                "tds2stac_manual_variable": "Time",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "group": {
+                                                            "name":"CFMetadata"
+                                                        },
+                                                "attribute": {
+                                                            "name":"time_coverage_start"
+                                                            }
+                                                },
+                        "temporal_extent_end_datetime": {
+
+                                                        "tds2stac_mode_analyser": "get",
+                                                        "tds2stac_webservice_analyser": "ncml",
+                                                        "netcdf": null,
+                                                        "group": {
+                                                                    "name":"CFMetadata"
+                                                                },
+                                                        "attribute": {
+                                                                    "name":"time_coverage_end",
+                                                                    "value": null
+                                                                    }
+                                                        },
+                        "temporal_extent_start_datetime": {
+                                                        "tds2stac_mode_analyser": "get",
+                                                        "tds2stac_webservice_analyser": "ncml",
+                                                        "netcdf": null,
+                                                        "group": {
+                                                                    "name":"CFMetadata"
+                                                                },
+                                                        "attribute": {
+                                                                    "name":"time_coverage_start",
+                                                                    "value": null
+                                                                    }
+                                                        },
+                        "temporal_values": null,
+                        "temporal_step": null,
+                        "additional_dimensions": null,
+                        "additional_axes": null,
+                        "additional_values": null,
+                        "additional_units": null,
+                        "additional_step": null,
+                        "additional_reference_system": null,
+                        "additional_type": {
+                                                "tds2stac_mode_analyser": "str",
+                                                "tds2stac_manual_variable": "dimension"
+                                                },
+                        "additional_description": null,
+                        "additional_ids": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_manual_variable": "dimension",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "dimension": {
+                                                                "name":null
+                                                        }
+                        },
+                        "additional_extents": {
+                                                "tds2stac_mode_analyser": "list",
+                                                "tds2stac_manual_variable": "[None, None]"
+                                                },
+                        "variable_ids": {
+                                        "tds2stac_mode_analyser": "get",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "netcdf": null,
+                                        "variable": {
+                                                    "name": null
+                                                    }
+                                        },
+                        "variable_dimensions": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "netcdf": null,
+                                                "variable": {
+                                                            "shape": null
+                                                            }
+                                                },
+                        "variable_type": {
+                                        "tds2stac_mode_analyser": "str",
+                                        "tds2stac_manual_variable": "VariableType.data.value"
+                                         },
+                        "variable_description": {
+                                                "tds2stac_mode_analyser": "get",
+                                                "tds2stac_webservice_analyser": "ncml",
+                                                "tds2stac_reference_key": "variable_ids",
+                                                "netcdf": null,
+                                                "variable": null,
+                                                "attribute": {
+                                                            "name":"long_name",
+                                                            "value": null
+                                                            }
+                                                },
+                        "variable_extent": null,
+                        "variable_values": null,
+                        "variable_unit": {
+                                        "tds2stac_mode_analyser": "get",
+                                        "tds2stac_webservice_analyser": "ncml",
+                                        "tds2stac_reference_key": "variable_ids",
+                                        "netcdf": null,
+                                        "variable": null,
+                                        "attribute": {
+                                                    "name":"units",
+                                                    "value": null
+                                                    }
+                                        }
+                        },
+    "scientific_extension": {
+                        "doi": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "10.1080/17550874.2023.2274839"
+                                },
+                        "citation": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "10.1080/17550874.2023.2274839"
+                                },
+                        "publications": {
+                                "tds2stac_mode_analyser": "list",
+                                "tds2stac_manual_variable": "[10.1080/17550874.2023.2274839, 'name']"
+
+                                }
+                        },
+
+    "contact_extension": {
+                        "name": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "Mostafa Hadizadeh"
+                                },
+                        "organization": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "KIT"
+                                },
+                        "identifier": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "1011"
+                                },
+                        "position": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "Happiness manager"
+                                },
+                        "logo_href": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "https://codebase.helmholtz.cloud/uploads/-/system/group/avatar/16928/cat4kit__1_.png?width=60"
+                                },
+                        "logo_rel": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "icon"
+                                },
+                        "logo_type": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "image/png"
+                                },
+                        "logo_title": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "Ca4KIT"
+                                },
+                        "phones_value": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "+49123456789"
+                                },
+                        "phones_roles": {
+                                "tds2stac_mode_analyser": "list",
+                                "tds2stac_manual_variable": "['voice']"
+                                },
+                        "emails_value": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "no@thanks.com"
+                                },
+                        "emails_roles": {
+                                "tds2stac_mode_analyser": "list",
+                                "tds2stac_manual_variable": "['work']"
+                                },
+                        "addresses_deliveryPoint": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "123456"
+                                },
+                        "addresses_city": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "Karlsruhe"
+                                },
+                        "addresses_administrativeArea": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "Baden-Württemberg"
+                                },
+                        "addresses_postalCode": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "76131"
+                                },
+                        "addresses_country": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "Germany"
+                                },
+                        "links_href": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "https://www.kit.edu/"
+                                },
+                        "links_rel": {
+                                "tds2stac_mode_analyser": "str",
+                                "tds2stac_manual_variable": "website"
+                                },
+                        "contactInstructions": {
+                                "tds2stac_mode_analyser": "list",
+                                "tds2stac_manual_variable": "['Please contact me via email']"
+                                },
+                        "roles": {
+                                "tds2stac_mode_analyser": "list",
+                                "tds2stac_manual_variable": "['author', 'editor']"
+                                }
+
+                        }
+}
