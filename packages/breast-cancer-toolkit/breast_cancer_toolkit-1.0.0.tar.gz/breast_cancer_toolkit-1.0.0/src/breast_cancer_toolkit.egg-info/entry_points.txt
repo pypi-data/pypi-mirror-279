@@ -1,0 +1,2 @@
+[console_scripts]
+bct = breast_cancer_toolkit.cli:run
