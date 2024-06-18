@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+ntt_api_management/__init__.py
+ntt_api_management/i_ntt_api.py
+ntt_api_management/ntt_api_base.py
+ntt_api_management/ntt_api_management.py
+ntt_api_management.egg-info/PKG-INFO
+ntt_api_management.egg-info/SOURCES.txt
+ntt_api_management.egg-info/dependency_links.txt
+ntt_api_management.egg-info/top_level.txt
+tests/__init__.py
+tests/api_management_daily_limit_test.py
+tests/api_management_minute_limit_test.py
+tests/ntt_daily_limit_api.py
+tests/ntt_minute_limit_api.py
