@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+cangjielang/__init__.py
+cangjielang.egg-info/PKG-INFO
+cangjielang.egg-info/SOURCES.txt
+cangjielang.egg-info/dependency_links.txt
+cangjielang.egg-info/entry_points.txt
+cangjielang.egg-info/top_level.txt
+cangjielang.egg-info/zip-safe
+cangjielang/shell/__init__.py
+cangjielang/shell/usage.py
+cangjielang/src/temp.txt
