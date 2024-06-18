@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: codefuse-muagent
+Version: 0.0.5
+Summary: A multi-agent framework that facilitates the rapid construction of collaborative teams of agents.
+Home-page: https://github.com/codefuse-ai/CodeFuse-muAgent
+Author: shanshi
+Author-email: wyp311395@antgroup.com
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: openai ==1.34.0
+Requires-Dist: langchain ==0.2.3
+Requires-Dist: langchain-community ==0.2.4
+Requires-Dist: langchain-openai ==0.1.8
+Requires-Dist: langchain-huggingface ==0.0.3
+Requires-Dist: sentence-transformers
+Requires-Dist: loguru
+Requires-Dist: fastapi
+Requires-Dist: pandas
+Requires-Dist: Pyarrow
+Requires-Dist: jieba
+Requires-Dist: psutil
+Requires-Dist: faiss-cpu
+Requires-Dist: notebook
+Requires-Dist: docker
+Requires-Dist: sseclient
+Requires-Dist: chromadb ==0.4.17
+Requires-Dist: javalang ==0.13.0
+Requires-Dist: nebula3-python ==3.1.0
+Requires-Dist: SQLAlchemy ==2.0.19
+Requires-Dist: redis ==5.0.1
+Requires-Dist: pydantic <=1.10.14
+
