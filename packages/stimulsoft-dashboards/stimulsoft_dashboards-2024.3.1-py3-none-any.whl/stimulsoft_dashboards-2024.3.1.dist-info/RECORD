@@ -1,0 +1,14 @@
+stimulsoft_dashboards/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+stimulsoft_dashboards/report/StiDashboard.py,sha256=vZQ29sEFjXMfUyqhkagAfknVIJn6R_3GHbeYmvqOciw,167
+stimulsoft_dashboards/report/__init__.py,sha256=tUWbshcaZ4Qj0wlflVucBS9DIMiczw7Uj2dNXjwxqL0,40
+stimulsoft_dashboards/resources/StiResourcesHelper.py,sha256=_DN4Ou0cW6Qc2aah0UOT2TC1ROZf0byocmcWqoH0ixk,660
+stimulsoft_dashboards/resources/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+stimulsoft_dashboards/resources/scripts/StiScriptResource.py,sha256=CckRYjqQHqiFA46-xVM0xWGbH-s4csVnX9eRAsCqsR8,502
+stimulsoft_dashboards/resources/scripts/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+stimulsoft_dashboards/resources/scripts/stimulsoft.dashboards.js,sha256=yIT35nRfO73keVYNAn5udzRezWXxL8cEXxfSWVw6JbQ,713804
+stimulsoft_dashboards/resources/scripts/stimulsoft.dashboards.pack.js,sha256=I2j_-Svg3FlpXQ1MMwq_vOImI1mMa3nvCPcSHkV-5w0,198102
+stimulsoft_dashboards-2024.3.1.dist-info/LICENSE.md,sha256=VErulj2cmTCahUzmjIxt5whHreRE4rxWLmwAhpz6Z-I,25131
+stimulsoft_dashboards-2024.3.1.dist-info/METADATA,sha256=_X4EdaCcnBw4ORsV1X7SJWHtrdH7L6ZX-G4Ez2m9YTk,8612
+stimulsoft_dashboards-2024.3.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+stimulsoft_dashboards-2024.3.1.dist-info/top_level.txt,sha256=tgrvsbDxhm3BoRehDGukrabawlskGBiSmEW2a-pDBfc,22
+stimulsoft_dashboards-2024.3.1.dist-info/RECORD,,
