@@ -1,0 +1,8 @@
+cftime>=1.2.1
+netcdf4
+numpy>=1.20
+pandas>=1.0.5
+python-dateutil
+pytz
+shapely>=1.8
+simplejson
