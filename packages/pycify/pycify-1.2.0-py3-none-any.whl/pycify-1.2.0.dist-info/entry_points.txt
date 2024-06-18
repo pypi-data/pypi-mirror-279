@@ -1,0 +1,2 @@
+[console_scripts]
+pycify = pycify.cli:cli

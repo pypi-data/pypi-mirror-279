@@ -1,0 +1,10 @@
+pycify/__init__.py,sha256=DOmXvbXk5O9wc9Kg3krGIf343lwUdJY7Z2-rmku1Sqw,5205
+pycify/__main__.py,sha256=xj88A5iRI_GlFFBf1Pj6zedCf_mWsxeCRR_8Cn8UCbE,127
+pycify/cli.py,sha256=FuiGdjrYmYk3MTQaXaOdDrBJW6OUdYBkrhLClf-bFPk,1230
+pycify/py.typed,sha256=DtCsIDq6KOv2NOEdQjTbeMWJKRh6ZEL2E-6Mf1RLeMA,59
+pycify-1.2.0.dist-info/LICENSE,sha256=YD40_6TzmQPWHbo2lKsJb1ZDP1pi_n0I-Xnlju-vUbA,1072
+pycify-1.2.0.dist-info/METADATA,sha256=2ozMajFmGbS8a4Z8YumY2EEXhkk9ZIPARQ7GxJJqec4,2083
+pycify-1.2.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pycify-1.2.0.dist-info/entry_points.txt,sha256=09eN4PSnm4egGvM0n80qexsM0k_S3EZGDwI7VwLhx_w,42
+pycify-1.2.0.dist-info/top_level.txt,sha256=KW5RoMpOaEAOFJnjT0tCPog9sCOsWI0wKR5B5lrjy1I,7
+pycify-1.2.0.dist-info/RECORD,,
