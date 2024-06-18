@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: FinRobot
+Version: 0.1.5
+Summary: FinRobot: An Open-Source AI Agent Platform for Financial Applications using LLMs
+Home-page: https://github.com/AI4Finance-Foundation/FinRobot
+Author: AI4Finance Foundation
+Author-email: contact@ai4finance.org
+License: MIT
+Keywords: Financial Large Language Models,AI Agents
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.10, <3.12
+License-File: LICENSE
+
+FinRobot
