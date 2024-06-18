@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "django-ltree-2"
+version = "0.1.7"
+description = "Continual of django-ltree"
+authors = ["baseplate-admin <61817579+baseplate-admin@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "django_ltree"}]
+classifiers = [ 
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/baseplate-admin/django-ltree-2/issues"
+"homepage" = "https://github.com/baseplate-admin/django-ltree-2"
+"repository" = "https://github.com/baseplate-admin/django-ltree-2"
+
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+django = ">=4.2"
+psycopg = ">=3.1.18"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.1"
+pytest-django = "^4.8.0"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.2.6"
+myst-parser = ">=2,<4"
+sphinx-reload = "^0.2.0"
+shibuya = "^2024.6.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
