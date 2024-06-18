@@ -1,0 +1,43 @@
+network:
+
+  name: andromeda
+  # I want the VPN interface on
+  # all peers to be named `andromeda`
+  # (required)
+
+  peer:
+  # (At least 2 peers are required)
+
+    node01:
+    # ^ Name of the peer.
+    # Only used for organizing
+    # the configuration
+
+      address:
+
+        interface: 10.0.0.1/24
+        # The `andromeda` interface
+        # (named using network.name above)
+        # on node01 will be assigned
+        # this address
+
+        relay:
+        # Send packets on <subnet> to <peer>
+        # using the VPN interface
+          10.0.0.0/24: node02
+          192.168.100.0/24: node02
+
+    node02:
+
+      address:
+
+        interface: 10.0.0.2/24
+
+        host: 192.168.100.100:25000
+        # Other peers can use this
+        # address/hostname/domain name
+        # to connect and establish the VPN
+        # (A port number is required)
+
+        relay:
+          10.0.0.1/32: node01
