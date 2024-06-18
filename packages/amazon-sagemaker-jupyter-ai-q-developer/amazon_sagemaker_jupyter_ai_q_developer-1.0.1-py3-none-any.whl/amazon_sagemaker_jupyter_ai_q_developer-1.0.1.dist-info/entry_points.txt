@@ -1,0 +1,2 @@
+[jupyter_ai.model_providers]
+amazon-q = amazon_sagemaker_jupyter_ai_q_developer.provider:AmazonQProvider
