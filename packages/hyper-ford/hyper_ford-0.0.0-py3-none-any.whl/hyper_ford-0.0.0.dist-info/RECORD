@@ -1,0 +1,17 @@
+hyperford/PyBorg/pyborg/__init__.py,sha256=U4O0k7bT0XJIlMYo1n73yOPIEfssjpT-15Nys-ocPRU,20
+hyperford/PyBorg/pyborg/borg.py,sha256=Uc5VMjNqxHAHJt2ac6aU29Bur_sYbey5LaWmZExCJ24,3582
+hyperford/model/model_functions.py,sha256=WuuEPJYzb-yDOTX-Ph9qHua9w_zTmjdyFKAN17KAtco,15252
+hyperford/optimise/MO_energy_function.py,sha256=qshc3-FB1_6hOGZ56kRDK1IUDxiIjdBvhkFbR6or-wo,7277
+hyperford/optimise/PostProcessor.py,sha256=ukFs55vwBWRZjtlg3ZHa4iAEEGhsUvg6tK9dUD56XXo,3122
+hyperford/optimise/Run_Borg_MO_Optimisation.py,sha256=HLXEBgplpEsolpZc1iURja8HMKlS8O7GJGRAmk_Gd5A,6223
+hyperford/optimise/Run_MO_Optimisation.py,sha256=nFwvjgIj6ajM0iUjVCtvsvoQjHDFaM4G7nlhsf4ieTQ,6471
+hyperford/optimise/Run_Optimisation.py,sha256=5j7iRrmiQoS12YP3t93mJn_IiuCnlnN2Ni2Jqzt3vq0,6754
+hyperford/optimise/opt_energy_functions.py,sha256=_Yb0LRjOihcLraZEc-QlDyGiK23UpOSx5Fz_uK0fQlE,7302
+hyperford/simulate/Run_Simulation.py,sha256=lU3tfuz5BPIG_1p7a3fdb4e_E7Z7Q5M_sauZ0JXlU-Q,4427
+hyperford/simulate/sim_energy_functions.py,sha256=JrJOI_n9BkEkJTW9E7wq8Jp_2H8AtwNPixdPS0LxhVI,6861
+hyperford/utils/globalpars_JSON.py,sha256=K0nfIG6Qqt0p-FO9IvhzopfJtyOCTaoIP3fqesJcmyk,5506
+hyperford/utils/parameters_check.py,sha256=LA1MoLr_94vPDN9nvT_1rfZVDSMNLNCDTJA3xRYWBsw,6952
+hyper_ford-0.0.0.dist-info/METADATA,sha256=tDXZ4hDa-bugdg7MiYsKBjxXP7D2zUlrg2q0zljhags,3522
+hyper_ford-0.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hyper_ford-0.0.0.dist-info/top_level.txt,sha256=V4raeUsG9SNns4MmV_x_hwuwYK0QKxKQgOEeDA09fYo,10
+hyper_ford-0.0.0.dist-info/RECORD,,
