@@ -1,0 +1,9 @@
+trufflepig/__init__.py,sha256=uDMFNx4UcuuhRx_hW8C-n_O2zD3mPSOrqlsynnJ_Zy4,56
+trufflepig/_constants.py,sha256=8zs_iybDYFRk9V671l-on1RnmlXUU8jJIK8o7L8cfes,37
+trufflepig/client.py,sha256=JL5-6Lo47SFM7e1y8JDO5t_PO_OUmMzcrya15LAX3R0,3627
+trufflepig/index.py,sha256=Vq1K--6WRoDlVimgby90uPbjUDKWa_ZLvo-fU9TFlPE,29160
+trufflepig_py-0.1.7.dist-info/LICENSE,sha256=VznBWlWWhk94pA7TCUToraKVuTt0Z4_xLcz8KRJ23e4,1079
+trufflepig_py-0.1.7.dist-info/METADATA,sha256=0atVeUDNoJmQQFfh0u3hIhrkLesvtSYDFYl2qqPPrxI,127
+trufflepig_py-0.1.7.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+trufflepig_py-0.1.7.dist-info/top_level.txt,sha256=5-ZDL5rMysoV8tAKdk8vuqXR7hb6jJ_GZ0azxX5Bme8,11
+trufflepig_py-0.1.7.dist-info/RECORD,,
