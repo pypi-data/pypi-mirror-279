@@ -1,0 +1,8 @@
+setup.py
+synochatbot/__init__.py
+synochatbot/bot.py
+synochatbot.egg-info/PKG-INFO
+synochatbot.egg-info/SOURCES.txt
+synochatbot.egg-info/dependency_links.txt
+synochatbot.egg-info/requires.txt
+synochatbot.egg-info/top_level.txt
