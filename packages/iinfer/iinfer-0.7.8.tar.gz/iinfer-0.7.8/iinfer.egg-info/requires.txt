@@ -1,0 +1,12 @@
+argcomplete
+async_timeout
+eel
+motpy
+opencv-python
+Pillow
+pyyaml
+redis
+requests
+tabulate
+urllib3
+wheel
