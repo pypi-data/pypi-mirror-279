@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: pycalc_uuid7
+Version: 0.0.1
+Summary: A PyCalc UUID package
+Author-email: AE <AlekseevE2015@yandex.ru>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyCalc UUID Package
+
+## What is this? ##
+This is a PyCalc UUID7 package.
+
+### Using ###
+
+
+
+---
+## Developer ##
+My site:
