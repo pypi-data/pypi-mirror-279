@@ -1,0 +1,11 @@
+pennylane_snowflurry/__init__.py,sha256=U3_neQO46QAYyaKgLzfT3U2DJ3xQ5rI_IS2a2MFEljE,105
+pennylane_snowflurry/_version.py,sha256=i7M9cODTfgXHiZ8xJ7P2WilyW7yX5wiW0R_0IlZyDgc,692
+pennylane_snowflurry/execution_config.py,sha256=z_lE2xIx_zis0zm_pfInT_zS8KtUpAJbsUJa6b3L4hQ,3917
+pennylane_snowflurry/pennylane_converter.py,sha256=9_mvnzsUvLSzWtaq7S2zIRmBMdbGeygPXK6KhY-ngvY,19224
+pennylane_snowflurry/snowflurry_device.py,sha256=rFW3JIFBBIa-qFIG4TQOIV24K2BC5fYiUaoragBTqfc,9660
+pennylane_snowflurry-0.2.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pennylane_snowflurry-0.2.1.dist-info/METADATA,sha256=hx2Zt12wcaCz0bB0TdoR79l6SkEXpWBdoRhj9OIVz0c,5608
+pennylane_snowflurry-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pennylane_snowflurry-0.2.1.dist-info/entry_points.txt,sha256=0UL5D8Yld-EPpvpQD-ERWCK1zKLXREnAA6XaaeWOA1w,82
+pennylane_snowflurry-0.2.1.dist-info/top_level.txt,sha256=ZetXNALZ5ORnZ7o8RxWNxwjaLVODcEcd_0AhnLoBH2E,21
+pennylane_snowflurry-0.2.1.dist-info/RECORD,,
