@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: ansible_mockable
+Version: 1.0.0
+Summary: Ansible Mockable
+Author: Kirill Satarin (@kksat)
+License: GPLv3
+Project-URL: Bug Tracker, https://github.com/kksat/ansible.mockable/issues
+Project-URL: Documentation, https://github.com/ansible/ansible
+Project-URL: Source Code, https://docs.ansible.com/ansible-core/
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+

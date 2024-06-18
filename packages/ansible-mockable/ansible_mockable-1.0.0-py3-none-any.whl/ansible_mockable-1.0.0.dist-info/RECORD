@@ -1,0 +1,13 @@
+ansible_collections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_collections/ansible/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_collections/ansible/mockable/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_collections/ansible/mockable/plugins/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_collections/ansible/mockable/plugins/callback/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_collections/ansible/mockable/plugins/callback/mockable.py,sha256=fJbXuMnrQmDWbWDqc_67cM2EYcjAL0ZUO8kyCBonQRs,2815
+ansible_collections/ansible/mockable/plugins/module_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ansible_collections/ansible/mockable/plugins/module_utils/mockable.py,sha256=PvjcnmyvvBLbR0wdy_5vlaZtJIarzXVg2EFHm8sgN04,3052
+ansible_mockable-1.0.0.dist-info/LICENSE,sha256=-5gWaMGKJ54oX8TYP7oeg2zITdTapzyWl9PP0tispuA,34674
+ansible_mockable-1.0.0.dist-info/METADATA,sha256=pEaCBYZBasjd9XdVgkLhjRWo4uCsHYbZvXUlxQ4TmHs,1265
+ansible_mockable-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ansible_mockable-1.0.0.dist-info/top_level.txt,sha256=Ewd3po1TABWcg_I6s4xI-LgzJCB9yipiW6b_5tNTYpg,20
+ansible_mockable-1.0.0.dist-info/RECORD,,
