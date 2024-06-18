@@ -1,0 +1,991 @@
+diff --git a/shapeaxi/notebooks/saxi_depth.ipynb b/shapeaxi/notebooks/saxi_depth.ipynb
+index 494142b..bcd3c02 100644
+--- a/shapeaxi/notebooks/saxi_depth.ipynb
++++ b/shapeaxi/notebooks/saxi_depth.ipynb
+@@ -4,7 +4,18 @@
+    "cell_type": "code",
+    "execution_count": null,
+    "metadata": {},
+-   "outputs": [],
++   "outputs": [
++    {
++     "ename": "",
++     "evalue": "",
++     "output_type": "error",
++     "traceback": [
++      "\u001b[1;31mRunning cells with 'Python 3.10.5' requires the ipykernel package.\n",
++      "\u001b[1;31mRun the following command to install 'ipykernel' into the Python environment. \n",
++      "\u001b[1;31mCommand: '/opt/local/bin/python3.10 -m pip install ipykernel -U --user --force-reinstall'"
++     ]
++    }
++   ],
+    "source": [
+     "import torch\n",
+     "from torch.utils.data import DataLoader\n",
+@@ -137,16 +148,8 @@
+    "name": "python3"
+   },
+   "language_info": {
+-   "codemirror_mode": {
+-    "name": "ipython",
+-    "version": 3
+-   },
+-   "file_extension": ".py",
+-   "mimetype": "text/x-python",
+    "name": "python",
+-   "nbconvert_exporter": "python",
+-   "pygments_lexer": "ipython3",
+-   "version": "3.10.8"
++   "version": "3.10.5"
+   }
+  },
+  "nbformat": 4,
+diff --git a/shapeaxi/saxi_dataset.py b/shapeaxi/saxi_dataset.py
+index f8fbb00..d6702f5 100644
+--- a/shapeaxi/saxi_dataset.py
++++ b/shapeaxi/saxi_dataset.py
+@@ -27,7 +27,8 @@ else:
+   code_path = '/'.join(os.path.dirname(os.path.abspath(__file__)).split('/')[:-1])
+ sys.path.append(code_path)
+ 
+-
++import monai
++from monai.data import DataLoader as monai_DataLoader
+ from shapeaxi import utils
+ 
+ #####################################################################################################################################################################################
+@@ -286,7 +287,7 @@ class SaxiIcoDataModule(pl.LightningDataModule):
+ 
+ 
+ class SaxiFreesurferDataset(Dataset):
+-    def __init__(self,df,transform = None,version=None,name_class ='fsqc_qc',freesurfer_path=None):
++    def __init__(self,df,transform = None,version=None, name_class ='fsqc_qc',freesurfer_path=None):
+         self.df = df
+         self.transform = transform
+         self.version = version
+@@ -294,12 +295,12 @@ class SaxiFreesurferDataset(Dataset):
+         self.freesurfer_path = freesurfer_path
+ 
+     def __len__(self):
+-        return(len(self.df)) 
++        return len(self.df.index)
+ 
+     def __getitem__(self,idx):
+         #Get item for each hemisphere (left and right)
+-        vertsL, facesL, vertex_featuresL, face_featuresL,Y = self.getitem_per_hemisphere('L', idx)
+-        vertsR, facesR, vertex_featuresR, face_featuresR,Y = self.getitem_per_hemisphere('R', idx)
++        vertsL, facesL, vertex_featuresL, face_featuresL, Y = self.getitem_per_hemisphere('L', idx)
++        vertsR, facesR, vertex_featuresR, face_featuresR, Y = self.getitem_per_hemisphere('R', idx)
+         return  vertsL, facesL, vertex_featuresL, face_featuresL, vertsR, facesR, vertex_featuresR, face_featuresR, Y 
+     
+     def data_to_tensor(self,path):
+@@ -337,7 +338,7 @@ class SaxiFreesurferDataset(Dataset):
+     def getitem_per_hemisphere(self, hemisphere, idx):
+         white_matter_vertex = False
+         row = self.df.loc[idx]
+-        sub_session = '_ses-' + row['eventname'].replace('_', '').replace('year', 'Year').replace('arm', 'Arm').replace('followup', 'FollowUp').replace('yArm','YArm')
++        sub_session = '_' + row['eventname']
+         path_to_fs_data = os.path.join(self.freesurfer_path, row['Subject_ID'], row['Subject_ID'] + sub_session, 'surf')
+ 
+         # Load Data
+@@ -394,6 +395,17 @@ class SaxiFreesurferDataset(Dataset):
+         face_features = torch.cat([torch.take(vf, faces_pid0) for vf in vertex_features.transpose(0, 1)], dim=-1)
+         
+         return verts, faces, vertex_features, face_features, Y
++    
++    def getSurf(self, idx):
++        row = self.df.loc[idx]
++        sub_session = '_' + row['eventname']
++        lh_inflated_path = os.path.join(self.freesurfer_path, row['Subject_ID'], row['Subject_ID'] + sub_session, 'surf', 'lh_inflated.vtk')
++        rh_inflated_path = os.path.join(self.freesurfer_path, row['Subject_ID'], row['Subject_ID'] + sub_session, 'surf', 'rh_inflated.vtk')
++
++        if not lh_inflated_path or not rh_inflated_path:
++            raise ValueError(f'File {lh_inflated_path} or/and {rh_inflated_path} does not exist')
++        else:
++            return utils.ReadSurf(lh_inflated_path), utils.ReadSurf(rh_inflated_path), lh_inflated_path, lh_inflated_path
+ 
+ 
+ class SaxiFreesurferDataModule(pl.LightningDataModule):
+@@ -458,13 +470,13 @@ class SaxiFreesurferDataModule(pl.LightningDataModule):
+         return verts_l, faces_l, vertex_features_l, face_features_l, verts_r, faces_r, vertex_features_r, face_features_r, Y
+     
+     def train_dataloader(self):  
+-        return DataLoader(self.train_dataset,batch_size=self.batch_size, shuffle=True, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces)
++        return DataLoader(self.train_dataset,batch_size=self.batch_size, shuffle=True, num_workers=self.num_workers, pin_memory=True, drop_last=True, collate_fn=self.pad_verts_faces)
+ 
+     def val_dataloader(self):
+-        return DataLoader(self.val_dataset,batch_size=self.batch_size, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces)        
++        return DataLoader(self.val_dataset,batch_size=self.batch_size, num_workers=self.num_workers, drop_last=True, collate_fn=self.pad_verts_faces)        
+ 
+     def test_dataloader(self):
+-        return DataLoader(self.test_dataset,batch_size=1, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces)
++        return DataLoader(self.test_dataset,batch_size=1, num_workers=self.num_workers, drop_last=True, collate_fn=self.pad_verts_faces)
+ 
+     def get_weigths(self):
+         return self.weights
+@@ -512,65 +524,64 @@ class SaxiFreesurferMPDataModule(pl.LightningDataModule):
+ 
+     def setup(self,stage=None):
+         # Assign train/val datasets for use in dataloaders
+-        self.train_dataset = SaxiRingMTDataset(self.df_train,self.train_transform,name_class = self.name_class,freesurfer_path = self.freesurfer_path)
+-        self.val_dataset = SaxiRingMTDataset(self.df_val,self.val_and_test_transform,name_class = self.name_class,freesurfer_path = self.freesurfer_path)
+-        self.test_dataset = SaxiRingMTDataset(self.df_test,self.val_and_test_transform,name_class = self.name_class,freesurfer_path = self.freesurfer_path)
++        self.train_dataset = SaxiFreesurferMPdataset(self.df_train,self.train_transform,name_class = self.name_class,freesurfer_path = self.freesurfer_path)
++        self.val_dataset = SaxiFreesurferMPdataset(self.df_val,self.val_and_test_transform,name_class = self.name_class,freesurfer_path = self.freesurfer_path)
++        self.test_dataset = SaxiFreesurferMPdataset(self.df_test,self.val_and_test_transform,name_class = self.name_class,freesurfer_path = self.freesurfer_path)
+     
+     def pad_verts_faces_through_timepoints(self, batch):
+         padded_batch = {}
+-        timepoints = ['T1L', 'T1R', 'T2L', 'T2R', 'T3R', 'T3L']
++        timepoints = ['T1L', 'T2L', 'T3L', 'T1R', 'T2R', 'T3R']
++
+         # Initialize the dictionary with empty lists for each timepoint
+         for timepoint in timepoints:
+             padded_batch[timepoint] = []
++        padded_batch['Y'] = []
+ 
+-        # Collect the values for each timepoint
+-        for timepoint in timepoints:
+-            for b in batch:
+-                value = b.get(timepoint)
++        for sub in batch:
++            for timepoint in timepoints:
++                value = sub.get(timepoint)
+                 padded_batch[timepoint].append(value)
+-
++            padded_batch['Y'].append(sub['Y'])
++        
+         # Pad the values for each timepoint
+         for timepoint in timepoints:
+             padded_batch[timepoint] = self.pad_verts_faces(padded_batch[timepoint])
++        padded_batch['Y'] = torch.tensor(padded_batch['Y'])
+ 
+         return padded_batch
+ 
+-    def pad_verts_faces(self, value):
+ 
+-        if any(v is None for v in value):
+-            return torch.tensor([]), torch.tensor([]), torch.tensor([]), torch.tensor([]), torch.tensor([])
+-
+-        verts = [v for v, f, vf, ff, y in value]
+-        faces = [f for v, f, vf, ff, y in value]
+-        vertex_features = [vf for v, f, vf, ff, y in value]
+-        face_features = [ff for v, f, vf, ff, y in value]
+-        Y = [y for v, f, vf, ff, y in value]
++    def pad_verts_faces(self, value):
+ 
++        verts = [v for v, f, vf, ff in value]
++        faces = [f for v, f, vf, ff in value]
++        vertex_features = [vf for v, f, vf, ff in value]
++        face_features = [ff for v, f, vf, ff in value]
++       
+         # Padding the sequences
+-        verts = pad_sequence(verts, batch_first=True, padding_value=0.0) 
++        verts = pad_sequence(verts, batch_first=True, padding_value=0.0)
+         faces = pad_sequence(faces, batch_first=True, padding_value=-1)
+         vertex_features = pad_sequence(vertex_features, batch_first=True, padding_value=0.0)
+-        face_features = torch.cat(face_features)
+-        Y = torch.tensor(Y)
++        face_features = torch.cat(face_features) if face_features else torch.tensor([])  # Handle empty case
+ 
+-        return verts, faces, vertex_features, face_features, Y
++        return verts, faces, vertex_features, face_features 
+ 
+ 
+     def train_dataloader(self):  
+-        return DataLoader(self.train_dataset,batch_size=self.batch_size, shuffle=True, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces_through_timepoints)
++        return monai_DataLoader(self.train_dataset,batch_size=self.batch_size, shuffle=True, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces_through_timepoints)
+ 
+     def val_dataloader(self):
+-        return DataLoader(self.val_dataset,batch_size=self.batch_size, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces_through_timepoints)        
++        return monai_DataLoader(self.val_dataset,batch_size=self.batch_size, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces_through_timepoints)        
+ 
+     def test_dataloader(self):
+-        return DataLoader(self.test_dataset,batch_size=1, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces_through_timepoints)
++        return monai_DataLoader(self.test_dataset,batch_size=1, num_workers=self.num_workers, pin_memory=True, persistent_workers=True, drop_last=True, collate_fn=self.pad_verts_faces_through_timepoints)
+ 
+     def get_weigths(self):
+         return self.weights
+ 
+ 
+ class SaxiFreesurferMPdataset(Dataset):
+-    def __init__(self,df,transform = None,version=None,name_class ='fsqc_qc',freesurfer_path=None):
++    def __init__(self, df, transform=None, version=None, name_class='fsqc_qc', freesurfer_path=None):
+         self.df = df
+         self.transform = transform
+         self.version = version
+@@ -580,38 +591,32 @@ class SaxiFreesurferMPdataset(Dataset):
+         self.keys = list(self.df_grouped.groups.keys())
+ 
+     def __len__(self):
+-        return(len(self.keys))
++        return len(self.keys)
+ 
+-    def __getitem__(self,idx):
+-        #Get item for each hemisphere (left and right)
+-        subject_id = self.keys[idx]  # Get the subject ID corresponding to the index
+-        subject_data = self.df_grouped.get_group(subject_id)  # Get the data for this subject ID
++    def __getitem__(self, idx):
++        subject_id = self.keys[idx]
++        subject_data = self.df_grouped.get_group(subject_id)
+         dicoL = self.getitem_per_hemisphere('L', subject_data)
+         dicoR = self.getitem_per_hemisphere('R', subject_data)
+         merged_dico = dicoL | dicoR
+-        return  merged_dico
++        return merged_dico
+ 
+-    def data_to_tensor(self,path):
++    def data_to_tensor(self, path):
+         data = nib.freesurfer.read_morph_data(path)
+         data = data.byteswap().newbyteorder()
+         data = torch.from_numpy(data).float()
+         return data
+ 
+     def set_wm_as_texture(self, sphere, wm_path):
+-        # Create the vtkPolyDataNormals filter
+         normals_filter = vtk.vtkPolyDataNormals()
+         normals_filter.SetInputData(sphere)
+         normals_filter.ComputePointNormalsOn()
+         normals_filter.ComputeCellNormalsOff()
+         normals_filter.Update()
+ 
+-        # Get the output vtkPolyData with normals
+         output_with_normals = normals_filter.GetOutput()
+-
+-        # Access the normals array
+         normals_array = output_with_normals.GetPointData().GetNormals()
+ 
+-        # Check if normals_array is None or empty
+         if normals_array is None:
+             print(wm_path)
+         elif normals_array.GetNumberOfTuples() == 0:
+@@ -621,17 +626,13 @@ class SaxiFreesurferMPdataset(Dataset):
+ 
+         return sphere
+ 
+-    # Get the verts, faces, vertex_features, face_features and Y from an hemisphere
+-    def getitem_per_hemisphere(self, hemisphere, subject_data):
+-        dico = {}
+-        nb_timepoints = len(subject_data)
+-        timepoint_counter = 1
+ 
++    def getitem_per_hemisphere(self, hemisphere, subject_data):
++        dico = {}   
+         for _, row in subject_data.iterrows():
+-            sub_session = '_ses-' + row['eventname'].replace('_', '').replace('year', 'Year').replace('arm', 'Arm').replace('followup', 'FollowUp').replace('yArm','YArm')
++            sub_session = '_' + row['eventname']
+             path_to_fs_data = os.path.join(self.freesurfer_path, row['Subject_ID'], row['Subject_ID'] + sub_session, 'surf')
+ 
+-            # Load Data
+             hemisphere_prefix = 'lh' if hemisphere == 'L' else 'rh'
+             path_sa = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.area')
+             path_thickness = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.thickness')
+@@ -645,6 +646,16 @@ class SaxiFreesurferMPdataset(Dataset):
+                 self.data_to_tensor(path_sulc).unsqueeze(dim=1),
+             ]
+ 
++            for time_point in range(1, 4):
++                key = f"T{time_point}{hemisphere}"
++                if key not in dico:
++                    dico[key] = (
++                        torch.zeros((1, 3)),  # verts
++                        torch.zeros((1, 3)),  # faces
++                        torch.zeros((1, 4)),  # vertex_features
++                        torch.zeros((1, 4)),  # face_features
++                    )
++
+             sphere_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.sphere.reg')
+             sphere_vtk_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.sphere.reg.vtk')
+             wm_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.white')
+@@ -668,25 +679,143 @@ class SaxiFreesurferMPdataset(Dataset):
+ 
+             vertex_features = torch.cat(l_features, dim=1)
+ 
+-            #Y
+             Y = torch.tensor([int(row[self.name_class])])
+ 
+-            #Sphere per hemisphere
+             verts, faces = utils.PolyDataToTensors_v_f(sphere)
+ 
+-            #Transformations
+             if self.transform:        
+                 verts = self.transform(verts)
+ 
+-            # Face Features
+-            faces_pid0 = faces[:,0:1]       
+-
++            faces_pid0 = faces[:,0:1]
+             face_features = torch.cat([torch.take(vf, faces_pid0) for vf in vertex_features.transpose(0, 1)], dim=-1)
+ 
+-            # dictionary to store the data : {Timepoint1 : [verts, faces, vertex_features, face_features, Y], Timepoint2 : [verts, faces, vertex_features, face_features, Y], ...}
+-            key = "T" + str(timepoint_counter) + hemisphere
+-            dico[key] = (verts, faces, vertex_features, face_features, Y)
++            if '2Year' in row['eventname']:
++                time_point = 2
++            elif '4Year' in row['eventname']:
++                time_point = 3
++            else:
++                time_point = 1
++
++            key = f"T{time_point}{hemisphere}"
++            dico[key] = (verts, faces, vertex_features, face_features)
++
++        if hemisphere == 'R':
++            dico['Y'] = Y
++
++        return dico
++
++
+ 
+-            timepoint_counter += 1
+ 
+-        return dico
+\ No newline at end of file
++
++
++
++class SaxiFreesurferDataset_test(Dataset):
++    def __init__(self,df,transform = None,version=None, name_class ='fsqc_qc',freesurfer_path=None):
++        self.df = df
++        self.transform = transform
++        self.version = version
++        self.name_class = name_class
++        self.freesurfer_path = freesurfer_path
++
++    def __len__(self):
++        return len(self.df.index)
++
++    def __getitem__(self,idx):
++        #Get item for each hemisphere (left and right)
++        vertsL, facesL, vertex_featuresL, face_featuresL, Y = self.getitem_per_hemisphere('L', idx)
++        vertsR, facesR, vertex_featuresR, face_featuresR, Y = self.getitem_per_hemisphere('R', idx)
++        return  vertsL, facesL, vertex_featuresL, face_featuresL, vertsR, facesR, vertex_featuresR, face_featuresR, Y 
++    
++    def data_to_tensor(self,path):
++        data = nib.freesurfer.read_morph_data(path)
++        data = data.byteswap().newbyteorder()
++        data = torch.from_numpy(data).float()
++        return data
++
++    def set_wm_as_texture(self, sphere, wm_path):
++        # Create the vtkPolyDataNormals filter
++        normals_filter = vtk.vtkPolyDataNormals()
++        normals_filter.SetInputData(sphere)
++        normals_filter.ComputePointNormalsOn()
++        normals_filter.ComputeCellNormalsOff()
++        normals_filter.Update()
++
++        # Get the output vtkPolyData with normals
++        output_with_normals = normals_filter.GetOutput()
++
++        # Access the normals array
++        normals_array = output_with_normals.GetPointData().GetNormals()
++
++        # Check if normals_array is None or empty
++        if normals_array is None:
++            print(wm_path)
++        elif normals_array.GetNumberOfTuples() == 0:
++            wm_surf = utils.ReadSurf(wm_path)
++            wm_normals = utils.ComputeNormals(wm_surf)
++            sphere.GetPointData().SetScalars(wm_normals)
++
++        return sphere
++
++            
++    # Get the verts, faces, vertex_features, face_features and Y from an hemisphere
++    def getitem_per_hemisphere(self, hemisphere, idx):
++        white_matter_vertex = False
++        row = self.df.loc[idx]
++        sub_session = sub_session = '_ses-' + row['eventname'].replace('_', '').replace('year', 'Year').replace('arm', 'Arm').replace('followup', 'FollowUp').replace('yArm','YArm')
++        path_to_fs_data = os.path.join(self.freesurfer_path, row['Subject_ID'], row['Subject_ID'] + sub_session, 'surf')
++
++        # Load Data
++        hemisphere_prefix = 'lh' if hemisphere == 'L' else 'rh'
++        path_sa = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.area')
++        path_thickness = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.thickness')
++        path_curvature = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.curv')
++        path_sulc = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.sulc')
++
++        l_features = [
++            self.data_to_tensor(path_sa).unsqueeze(dim=1),
++            self.data_to_tensor(path_thickness).unsqueeze(dim=1),
++            self.data_to_tensor(path_curvature).unsqueeze(dim=1),
++            self.data_to_tensor(path_sulc).unsqueeze(dim=1),
++        ]
++
++        sphere_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.sphere.reg')
++        sphere_vtk_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.sphere.reg.vtk')
++        wm_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.white')
++        wm_vtk_path = os.path.join(path_to_fs_data, f'{hemisphere_prefix}.white.vtk')
++
++        paths = [path_sa, path_thickness, path_curvature, path_sulc, sphere_path, wm_path, sphere_vtk_path, wm_vtk_path]
++
++        for path in paths:
++            if not os.path.exists(path):
++                print(f'File {path} does not exist')
++                return
++
++        if not os.path.exists(sphere_vtk_path):
++            mris_command = f'mris_convert {sphere_path} {sphere_vtk_path}'
++            subprocess.run(mris_command, shell=True)
++        if not os.path.exists(wm_vtk_path):
++            mris_command = f'mris_convert {wm_path} {wm_vtk_path}'
++            subprocess.run(mris_command, shell=True)
++
++        sphere = utils.ReadSurf(sphere_vtk_path)
++        sphere = self.set_wm_as_texture(sphere, wm_vtk_path)
++
++        vertex_features = torch.cat(l_features, dim=1)
++
++        #Y
++        Y = torch.tensor([int(row[self.name_class])])
++
++        #Sphere per hemisphere
++        verts, faces = utils.PolyDataToTensors_v_f(sphere)
++
++        #Transformations
++        if self.transform:        
++            verts = self.transform(verts)
++
++        # Face Features
++        faces_pid0 = faces[:,0:1]       
++        
++        face_features = torch.cat([torch.take(vf, faces_pid0) for vf in vertex_features.transpose(0, 1)], dim=-1)
++        
++        return verts, faces, vertex_features, face_features, Y
+diff --git a/shapeaxi/saxi_eval.py b/shapeaxi/saxi_eval.py
+index c9fa6bf..cd3bb61 100755
+--- a/shapeaxi/saxi_eval.py
++++ b/shapeaxi/saxi_eval.py
+@@ -333,7 +333,7 @@ def main(args):
+     else:        
+         df = pd.read_parquet(path_to_csv)
+ 
+-    if args.nn == "SaxiClassification" or args.nn == "SaxiIcoClassification" or args.nn == "SaxiIcoClassification_fs" or args.nn == 'SaxiRing' or args.nn == 'SaxiRingClassification':
++    if args.nn == "SaxiClassification" or args.nn == "SaxiIcoClassification" or args.nn == "SaxiIcoClassification_fs" or args.nn == 'SaxiRing' or args.nn == 'SaxiRingClassification' or args.nn == 'SaxiRingMT':
+       score = SaxiClassification_eval(df, args, y_true_arr, y_pred_arr, path_to_csv)
+ 
+     elif args.nn == "SaxiSegmentation":
+@@ -357,7 +357,7 @@ def get_argparse():
+   parser.add_argument('--class_column', type=str, help='Which column to do the stats on', default='class')
+   parser.add_argument('--csv_tag_column', type=str, help='Which column has the actual names', default=None)
+   parser.add_argument('--csv_prediction_column', type=str, help='csv true class', default='pred')
+-  parser.add_argument('--nn', type=str, help='Neural network name : SaxiClassification, SaxiRegression, SaxiSegmentation, SaxiIcoClassification, SaxiRing, SaxiRingClassification', required=True, choices=['SaxiClassification', 'SaxiRegression', 'SaxiSegmentation', 'SaxiIcoClassification', 'SaxiIcoClassification_fs', 'SaxiRing', 'SaxiRingClassification'])
++  parser.add_argument('--nn', type=str, help='Neural network name : SaxiClassification, SaxiRegression, SaxiSegmentation, SaxiIcoClassification, SaxiRing, SaxiRingMT, SaxiRingClassification', required=True, choices=['SaxiClassification', 'SaxiRegression', 'SaxiSegmentation', 'SaxiIcoClassification', 'SaxiIcoClassification_fs', 'SaxiRing', 'SaxiRingMT', 'SaxiRingClassification'])
+   parser.add_argument('--title', type=str, help='Title for the image', default='Confusion matrix')
+   parser.add_argument('--figsize', type=str, nargs='+', help='Figure size', default=(6.4, 4.8))
+   parser.add_argument('--surf_id', type=str, help='Name of array in point data for the labels', default='UniversalID')
+diff --git a/shapeaxi/saxi_folds.py b/shapeaxi/saxi_folds.py
+index a5b6568..7a9d331 100644
+--- a/shapeaxi/saxi_folds.py
++++ b/shapeaxi/saxi_folds.py
+@@ -311,9 +311,9 @@ def main(args, arg_groups):
+ 
+         saxi_predict_args = Namespace(**saxi_predict_args)
+         fname = os.path.basename(csv_test)
+-        out_prediction = os.path.join(saxi_predict_args.out, os.path.basename(best_model_path), fname.replace(ext, "_prediction" + ext))
+ 
+-        if not os.path.exists(out_prediction):
++        if not os.path.exists(os.path.join(saxi_predict_args.out, os.path.basename(best_model_path), fname.replace(ext, "_prediction" + ext))):
++            out_prediction = os.path.join(saxi_predict_args.out, os.path.basename(best_model_path), fname.replace(ext, "_prediction" + ext))
+             saxi_predict.main(saxi_predict_args)
+ 
+         print(bcolors.SUCCESS, "End test for fold {f}".format(f=f), bcolors.ENDC)
+@@ -456,7 +456,7 @@ def main(args, arg_groups):
+             saxi_gradcam.main(saxi_gradcam_args)
+ 
+ 
+-        elif args.nn == "SaxiIcoClassification" or args.nn == "SaxiIcoClassification_fs":
++        elif args.nn == "SaxiIcoClassification" or args.nn == "SaxiIcoClassification_fs" or args.nn == "SaxiRing":
+             
+             if args.csv is not None:
+                 csv_train = args.csv.replace(ext, '_train_fold{f}_train_train.csv').format(f=f)
+@@ -468,8 +468,6 @@ def main(args, arg_groups):
+             saxi_gradcam_args = get_argparse_dict(saxi_gradcam.get_argparse())
+             saxi_gradcam_args['nn'] = args.nn
+             saxi_gradcam_args['csv_test'] = out_prediction
+-            saxi_gradcam_args['csv_train'] = csv_train
+-            saxi_gradcam_args['csv_valid'] = csv_valid
+             saxi_gradcam_args['surf_column'] = args.surf_column
+             saxi_gradcam_args['class_column'] = args.class_column
+             saxi_gradcam_args['num_workers'] = args.num_workers
+@@ -479,7 +477,7 @@ def main(args, arg_groups):
+             saxi_gradcam_args['fps'] = args.fps
+             saxi_gradcam_args['path_ico_right'] = args.path_ico_right
+             saxi_gradcam_args['path_ico_left'] = args.path_ico_left
+-            saxi_gradcam_args['target_class'] = 1
++            saxi_gradcam_args['target_class'] = 1.0
+             saxi_gradcam_args['device'] = 'cuda:0'
+             saxi_gradcam_args['fs_path'] = args.fs_path
+             saxi_gradcam_args['out'] = os.path.join(saxi_predict_args_out, os.path.basename(best_model_path))
+@@ -559,6 +557,13 @@ def main(args, arg_groups):
+ 
+ 
+ def cml():
++    '''
++    Command line interface for the saxi_folds.py script
++
++    Args : 
++        None
++    '''
++
+     # Command line interface
+     parser = argparse.ArgumentParser(description='Automatically train and evaluate a N fold cross-validation model for Shape Analysis Explainability and Interpretability')
+     # Arguments used for split the data into the different folds
+diff --git a/shapeaxi/saxi_gradcam.py b/shapeaxi/saxi_gradcam.py
+index 61e0efb..bad1a51 100644
+--- a/shapeaxi/saxi_gradcam.py
++++ b/shapeaxi/saxi_gradcam.py
+@@ -20,7 +20,7 @@ import vtk
+ from vtk.util.numpy_support import vtk_to_numpy, numpy_to_vtk
+ 
+ from shapeaxi import saxi_nets, post_process as psp
+-from shapeaxi.saxi_dataset import SaxiDataset, SaxiIcoDataset, SaxiIcoDataset_fs
++from shapeaxi.saxi_dataset import SaxiDataset, SaxiIcoDataset, SaxiFreesurferDataset, SaxiFreesurferDataset_test
+ from shapeaxi.saxi_transforms import TrainTransform, EvalTransform, UnitSurfTransform, RandomRotationTransform, GaussianNoisePointTransform, NormalizePointTransform, CenterTransform
+ 
+ # Loops over the folds to generate a visualization to explain what is happening in the network after the evaluation part of the training is done.
+@@ -28,14 +28,8 @@ from shapeaxi.saxi_transforms import TrainTransform, EvalTransform, UnitSurfTran
+ 
+ 
+ ## Gradcam function for Regression and Classification model
+-def SaxiClassification_Regression_gradcam(args):
+-    
+-    SAXINETS = getattr(saxi_nets, args.nn)
+-    model = SAXINETS.load_from_checkpoint(args.model)
+-    model.ico_sphere(radius=args.radius, subdivision_level=args.subdivision_level)
+-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+-    model = model.to(device)
+-    model.eval()
++def SaxiClassification_Regression_gradcam(args, df_test, model, device):
++
+     # The dataset and corresponding data loader are initialized for evaluation purposes.
+     test_ds = SaxiDataset(df_test, transform=EvalTransform(), **vars(args))
+ 
+@@ -46,7 +40,6 @@ def SaxiClassification_Regression_gradcam(args):
+ 
+     if isinstance(target_layer, nn.Sequential):
+         target_layer = target_layer[-1]
+-
+         target_layers = [target_layer]
+ 
+     # Construct the CAM object once, and then re-use it on many images:
+@@ -172,7 +165,7 @@ class Classification_for_right_path(nn.Module):
+         return x 
+ 
+ 
+-def SaxiIcoClassification_gradcam(args, df_test, model):     
++def SaxiIcoClassification_gradcam(args, df_test, model, device):     
+     
+     list_demographic = ['Gender','MRI_Age','AmygdalaLeft','HippocampusLeft','LatVentsLeft','ICV','Crbm_totTissLeft','Cblm_totTissLeft','AmygdalaRight','HippocampusRight','LatVentsRight','Crbm_totTissRight','Cblm_totTissRight'] #MLR
+     list_path_ico = [args.path_ico_left,args.path_ico_right]
+@@ -180,11 +173,9 @@ def SaxiIcoClassification_gradcam(args, df_test, model):
+     test_ds = SaxiIcoDataset(df_test,list_demographic,list_path_ico,transform=UnitSurfTransform())
+     test_loader = DataLoader(test_ds, batch_size=1, num_workers=args.num_workers, pin_memory=True)
+ 
+-    hemisphere = 'left'#'left','right'
+-
+     targets = None
+-    # if not args.target_class is None:
+-    #     targets = [ClassifierOutputTarget(args.target_class)]
++    if not args.target_class is None:
++        targets = [ClassifierOutputTarget(args.target_class)]
+ 
+     for idx, batch in tqdm(enumerate(test_loader), total=len(test_loader)):
+ 
+@@ -204,7 +195,7 @@ def SaxiIcoClassification_gradcam(args, df_test, model):
+ 
+         classification_layer = model.Classification
+ 
+-        if hemisphere == 'left':
++        if args.hemisphere == 'left':
+             input_tensor_cam = xL
+             xR = model.poolingR(model.IcosahedronConv2dR(model.TimeDistributedR(xR))) 
+             classifier = Classification_for_left_path(classification_layer,xR,D)
+@@ -232,36 +223,68 @@ def SaxiIcoClassification_gradcam(args, df_test, model):
+ #####################################################################################################################################################################################
+ 
+ 
+-class Classification_for_path_fs(nn.Module):
+-    def __init__(self, classification_layer, x_other):
++class PoolingAttentionLayer(nn.Module):
++    # class to return only the context vector of each pooling layer
++    def __init__(self, attention_layer):
+         super().__init__()
+-        self.classification_layer = classification_layer
+-        self.x_other = x_other
++        self.attention_layer = attention_layer
+ 
+     def forward(self, x):
+-        l = [x, self.x_other]
+-        x = torch.cat(l, dim=1)
+-        x = self.classification_layer(x)
++        x, score = self.attention_layer(x)
+         return x
+ 
+ 
+-def SaxiIcoClassification_fs_gradcam(args, df_test, model):     
++class SelfAttentionLayer(nn.Module):
++    # class to return only the context vector of the Attention layer
++    def __init__(self, attention_layer, values_layer):
++        super().__init__()
++        self.attention_layer = attention_layer
++        self.values_layer = values_layer
+ 
+-    test_ds = SaxiIcoDataset_fs(df_test,transform=UnitSurfTransform(),name_class=args.class_column,freesurfer_path=args.fs_path)
+-    test_loader = DataLoader(test_ds, batch_size=1, num_workers=args.num_workers, pin_memory=True)
++    def forward(self, x):
++        values = self.values_layer(x)  # Pass input through the values_layer
++        x, score = self.attention_layer(x, values)
++        return x
+ 
+-    target_layers = []
+-    hemisphere = 'left'#'left','right'
+ 
+-    # for hemisphere in ['left', 'right']:
++def SaxiFreesurfer_gradcam(args, df_test, model, device):
++    test_ds = SaxiFreesurferDataset(df_test, transform=UnitSurfTransform(), name_class=args.class_column, freesurfer_path=args.fs_path)
++    test_loader = DataLoader(test_ds, batch_size=1, num_workers=args.num_workers, pin_memory=True)
+ 
+     targets = None
+-    if not args.target_class is None:
++    if args.target_class is not None:
+         targets = [ClassifierOutputTarget(args.target_class)]
+ 
+-    for idx, batch in tqdm(enumerate(test_loader), total=len(test_loader)):
++    scale_intensity = ScaleIntensityRange(0.0, 1.0, 0, 255)
++
++    out_dir = os.path.join(os.path.dirname(args.csv_test), "grad_cam", str(args.target_class))
++    
++    if not os.path.exists(out_dir):
++        os.makedirs(out_dir)
+ 
+-        VL, FL, VFL, FFL, VR, FR, VFR, FFR, Y = batch 
++    model_camL = nn.Sequential(
++        model.TimeDistributedL,
++        PoolingAttentionLayer(model.down1),
++        PoolingAttentionLayer(model.down2),
++        SelfAttentionLayer(model.Att, model.W),
++    )
++
++    model_camR = nn.Sequential(
++        model.TimeDistributedR,
++        PoolingAttentionLayer(model.down1),
++        PoolingAttentionLayer(model.down2),
++        SelfAttentionLayer(model.Att, model.W),
++    )
++    
++    target_layers_l = [model_camL[0].module.layer4[-1]]
++    camL = GradCAM(model=model_camL, target_layers=target_layers_l)
++
++    target_layers_r = [model_camR[0].module.layer4[-1]]
++    camR = GradCAM(model=model_camR, target_layers=target_layers_r)
++
++
++    for idx, batch in tqdm(enumerate(test_loader), total=len(test_loader)):
++        VL, FL, VFL, FFL, VR, FR, VFR, FFR, Y = batch
+         VL = VL.cuda(non_blocking=True)
+         FL = FL.cuda(non_blocking=True)
+         VFL = VFL.cuda(non_blocking=True)
+@@ -273,37 +296,52 @@ def SaxiIcoClassification_fs_gradcam(args, df_test, model):
+         FFL = FFL.squeeze(0)
+         FFR = FFR.squeeze(0)
+ 
+-        if hemisphere == 'left':
+-            x, PF = model.render(VL,FL,VFL,FFL)
+-        else:
+-            x, PF = model.render(VR,FR,VFR,FFR)
+-        
+-        del VL, FL, VFL, FFL, VR, FR, VFR, FFR, Y
+-        torch.cuda.empty_cache() 
++        XL, PFL = model.render(VL, FL, VFL, FFL)
++        XR, PFR = model.render(VR, FR, VFR, FFR)
+ 
+-        classification_layer = model.Classification
+-        if hemisphere == 'left':
+-            input_tensor_cam = x
+-            x_other = model.poolingR(model.IcosahedronConv2dR(model.TimeDistributedR(x))) 
++        grayscale_camL = camL(input_tensor=XL, targets=targets)
++        grayscale_camR = camR(input_tensor=XR, targets=targets)
++
++        # Left hemisphere
++        hemisphere = 'left'
++        out_surf_path = os.path.join(out_dir, "lh_inflated.vtk")
++
++        GCAM = torch.tensor(grayscale_camL).to(device)
++
++        P_faces = torch.zeros(1, FL.shape[1]).to(device)
++        V_gcam = -1*torch.ones(VL.shape[1], dtype=torch.float32).to(device)
++
++        for pf, gc in zip(PFL.squeeze(), GCAM):
++            P_faces[:, pf] = torch.maximum(P_faces[:, pf], gc)
++
++        faces_pid0 = FL[0,:,0].to(torch.int64)
++        V_gcam[faces_pid0] = P_faces
++
++        surfL, surfR, surfL_path, surfR_path = test_ds.getSurf(idx)
++
++        V_gcam = numpy_to_vtk(V_gcam.cpu().numpy())
++
++        if not args.target_class is None:
++            array_name = "grad_cam_target_class_{target_class}".format(target_class=args.target_class)
+         else:
+-            input_tensor_cam = x
+-            x_other = model.poolingL(model.IcosahedronConv2dL(model.TimeDistributedL(x))) 
++            array_name = "grad_cam_max"
+ 
+-        classifier = Classification_for_path_fs(classification_layer, x_other)
+-        model_cam = nn.Sequential(model.TimeDistributedL if hemisphere == 'left' else model.TimeDistributedR,
+-                                    model.IcosahedronConv2dL if hemisphere == 'left' else model.IcosahedronConv2dR,
+-                                    model.poolingL if hemisphere == 'left' else model.poolingR,
+-                                    classifier)
++        V_gcam.SetName(array_name)
++        surfL.GetPointData().AddArray(V_gcam)
+ 
+-        target_layers.append(model_cam[0].module.layer4[-1])  # Append target layer for GradCAM
+-        cam = GradCAM(model=model_cam, target_layers=target_layers)
++        # Median filtering is applied to smooth the CAM on the surface
++        psp.MedianFilter(surfL, V_gcam)
+ 
++        # out_surf_path = os.path.join(out_dir, surfL_path)
+ 
+-    grayscale_cam = torch.Tensor(cam(input_tensor=input_tensor_cam, targets=targets))
++        if not os.path.exists(os.path.dirname(out_surf_path)):
++            os.makedirs(os.path.dirname(out_surf_path))
++
++        writer = vtk.vtkPolyDataWriter()
++        writer.SetFileName(out_surf_path)
++        writer.SetInputData(surfL)
++        writer.Write()
+ 
+-    name_save = f'grad_cam_{hemisphere}.pt'
+-    torch.save(grayscale_cam, args.out+"/"+name_save)
+-    print('Gradcam saved in',args.out+"/"+name_save)
+ 
+ 
+ 
+@@ -317,19 +355,23 @@ def main(args):
+     else:
+         df_test = pd.read_parquet(args.csv_test)
+ 
++    SAXINETS = getattr(saxi_nets, args.nn)
++    model = SAXINETS.load_from_checkpoint(args.model)
++    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
++
+     if args.nn == 'SaxiClassification' or args.nn == 'SaxiRegression':
+-        SaxiClassification_Regression_gradcam(args, df_test)
++        model.ico_sphere(radius=args.radius, subdivision_level=args.subdivision_level)
++        model = model.to(device)
++        model.eval()
++        SaxiClassification_Regression_gradcam(args, df_test, model, device)
+ 
+-    elif args.nn == 'SaxiIcoClassification' or args.nn == 'SaxiIcoClassification_fs':
+-        SAXINETS = getattr(saxi_nets, args.nn)
+-        model = SAXINETS.load_from_checkpoint(args.model)
+-        device = torch.device(args.device if torch.cuda.is_available() else "cpu")
++    elif args.nn == 'SaxiIcoClassification' or args.nn == 'SaxiIcoClassification_fs' or args.nn == 'SaxiRing':
+         model.to(device)
+         model.eval()
+         if args.nn == 'SaxiIcoClassification':
+-            SaxiIcoClassification_gradcam(args, df_test, model) 
++            SaxiIcoClassification_gradcam(args, df_test, model, device) 
+         else:
+-            SaxiIcoClassification_fs_gradcam(args, df_test, model)
++            SaxiFreesurfer_gradcam(args, df_test, model, device)
+ 
+ 
+ 
+@@ -339,8 +381,6 @@ def get_argparse():
+ 
+     ##Input
+     input_group = parser.add_argument_group('Input')
+-    input_group.add_argument('--csv_valid',  type=str, help='CSV with column surf')
+-    input_group.add_argument('--csv_train',  type=str, help='CSV with column surf')
+     input_group.add_argument('--csv_test',  type=str, help='CSV with column surf', required=True)   
+     input_group.add_argument('--surf_column',  type=str, help='Surface column name', default="surf")
+     input_group.add_argument('--class_column',  type=str, help='Class column name', default="class")
+@@ -361,7 +401,7 @@ def get_argparse():
+     model_group = parser.add_argument_group('Model')
+     model_group.add_argument('--model', type=str, help='Model for prediction', required=True)    
+     model_group.add_argument('--target_layer', type=str, help='Target layer for GradCam. For example in ResNet, the target layer is the last conv layer which is layer4', default='layer4')
+-    model_group.add_argument('--target_class', type=int, help='Target class', default=None)
++    model_group.add_argument('--target_class', type=int, help='Target class', default=1)
+     model_group.add_argument('--nn', type=str, help='Neural network name : SaxiClassification, SaxiRegression, SaxiSegmentation, SaxiIcoClassification', default='SaxiClassification')
+ 
+     ##Gaussian Filter
+diff --git a/shapeaxi/saxi_logger.py b/shapeaxi/saxi_logger.py
+index 2c52f3d..596da80 100644
+--- a/shapeaxi/saxi_logger.py
++++ b/shapeaxi/saxi_logger.py
+@@ -242,3 +242,25 @@ class SaxiImageLoggerNeptune_Ico_fs(Callback):
+                 trainer.logger.experiment["images/x"].upload(fig)
+                 plt.close()
+ 
++
++class SaxiImageLoggerNeptune_SaxiRingMT(Callback):
++    def __init__(self, num_images=12, log_steps=10):
++        self.log_steps = log_steps
++        self.num_images = num_images
++
++    def on_train_batch_end(self, trainer, pl_module, outputs, batch, batch_idx):
++        if batch_idx % self.log_steps == 0:
++            
++            T1L, T2L, T3L, T1R, T2R, T3R, Y = batch
++            VF, F, FF, VF = T3L
++            num_images = min(VL.shape[1], self.num_images)
++
++            with torch.no_grad():
++                XL, PFL = pl_module.render(V, F, VF, FF)
++                grid_XL = torchvision.utils.make_grid(XL[0, 0:num_images, 0:3, :, :], nrow=3, padding=0)#Grab the first image, RGB channels only, X, Y. The time dimension is on dim=1
++                fig = plt.figure(figsize=(7, 9))
++                grid_XL = grid_XL.permute(1, 2, 0)
++                ax = plt.imshow(grid_XL.detach().cpu().numpy())
++                trainer.logger.experiment["images/x"].upload(fig)
++                plt.close()
++
+diff --git a/shapeaxi/saxi_predict.py b/shapeaxi/saxi_predict.py
+index a64a5bd..57a8404 100644
+--- a/shapeaxi/saxi_predict.py
++++ b/shapeaxi/saxi_predict.py
+@@ -226,13 +226,12 @@ def SaxiIcoClassification_predict(args, mount_point, df, fname, ext):
+         print(bcolors.SUCCESS, f"Saving results to {out_name}", bcolors.ENDC)
+ 
+ 
+-def SaxiFreesurfer_predict(args, mount_point, df, fname, ext):, 
++def SaxiFreesurfer_predict(args, mount_point, df, fname, ext): 
+     SAXINETS = getattr(saxi_nets, args.nn)
+     model = SAXINETS.load_from_checkpoint(args.model)
+     model.to(torch.device(args.device))
+     model.eval()
+     test_ds = SaxiFreesurferDataset(df,transform=UnitSurfTransform(),name_class=args.class_column,freesurfer_path=args.fs_path)
+-        
+     test_loader = DataLoader(test_ds, batch_size=1, num_workers=args.num_workers, pin_memory=True)
+ 
+     with torch.no_grad():
+@@ -282,14 +281,12 @@ def SaxiFreesurfer_predict(args, mount_point, df, fname, ext):,
+         print(bcolors.SUCCESS, f"Saving results to {out_name}", bcolors.ENDC)
+ 
+ 
+-def SaxiFreedurferMT_predict(args, mount_point, df, fname, ext):, 
++def SaxiFreedurferMP_predict(args, mount_point, df, fname, ext):
+     SAXINETS = getattr(saxi_nets, args.nn)
+     model = SAXINETS.load_from_checkpoint(args.model)
+     model.to(torch.device(args.device))
+     model.eval()
+-    timepoints = ['T1', 'T2', 'T3']
+-    test_ds = SaxiFreesurferMPdataset(df,transform=UnitSurfTransform(),name_class=args.class_column,freesurfer_path=args.fs_path)
+-        
++    test_ds = SaxiFreesurferDataset(df,transform=UnitSurfTransform(),name_class=args.class_column,freesurfer_path=args.fs_path)
+     test_loader = DataLoader(test_ds, batch_size=1, num_workers=args.num_workers, pin_memory=True)
+ 
+     with torch.no_grad():
+@@ -300,28 +297,21 @@ def SaxiFreedurferMT_predict(args, mount_point, df, fname, ext):,
+ 
+         for idx, batch in tqdm(enumerate(test_loader), total=len(test_loader)):
+             # The generated CAM is processed and added to the input surface mesh (surf) as a point data array
+-            for timepoint in timepoints:
+-                left_side = f'{timepoint}L'
+-                right_side = f'{timepoint}R'
+-                VL, FL, VFL, FFL, Y = batch[left_side]
+-                VR, FR, VFR, FFR, Y = batch[right_side]
+-                VL = VL.cuda(non_blocking=True,device=args.device)
+-                FL = FL.cuda(non_blocking=True,device=args.device)
+-                VFL = VFL.cuda(non_blocking=True,device=args.device)
+-                FFL = FFL.cuda(non_blocking=True,device=args.device)
+-                VR = VR.cuda(non_blocking=True,device=args.device)
+-                FR = FR.cuda(non_blocking=True,device=args.device)
+-                VFR = VFR.cuda(non_blocking=True,device=args.device)
+-                FFR = FFR.cuda(non_blocking=True,device=args.device)
+-                FFL = FFL.squeeze(0)
+-                FFR = FFR.squeeze(0)
+-
+-                X = (VL, FL, VFL, FFL, VR, FR, VFR, FFR)
+-                x = model(X)
+-
+-                x = softmax(x).detach()
+-                probs.append(x)
+-                predictions.append(torch.argmax(x, dim=1, keepdim=True))
++            T1L = batch['T1L']
++            T2L = batch['T2L']
++            T3L = batch['T3L']
++            T1R = batch['T1R']
++            T2R = batch['T2R']
++            T3R = batch['T3R']
++            Y = batch['Y']
++
++            # Forward pass
++            x = (T1L, T2L, T3L, T1R, T2R, T3R)
++            x = model(X)
++
++            x = softmax(x).detach()
++            probs.append(x)
++            predictions.append(torch.argmax(x, dim=1, keepdim=True))
+ 
+         probs = torch.cat(probs).detach().cpu().numpy()
+         predictions = torch.cat(predictions).cpu().numpy().squeeze()
+@@ -343,6 +333,8 @@ def SaxiFreedurferMT_predict(args, mount_point, df, fname, ext):,
+         print(bcolors.SUCCESS, f"Saving results to {out_name}", bcolors.ENDC)
+ 
+ 
++
++
+ def main(args):
+     # Read of the test data from a CSV or Parquet file
+     mount_point = args.mount_point
+@@ -396,7 +388,7 @@ def main(args):
+         SaxiFreesurfer_predict(args, mount_point, df, fname, ext)
+     
+     elif args.nn == "SaxiRingMT":
+-        SaxiFreedurferMT_predict(args, mount_point, df, fname, ext)
++        SaxiFreedurferMP_predict(args, mount_point, df, fname, ext)
+ 
+     else:
+         raise NotImplementedError(f"Neural network {args.nn} is not implemented")             
+diff --git a/shapeaxi/saxi_train.py b/shapeaxi/saxi_train.py
+index 375b544..b0dd63a 100644
+--- a/shapeaxi/saxi_train.py
++++ b/shapeaxi/saxi_train.py
+@@ -21,7 +21,7 @@ from shapeaxi.saxi_dataset import SaxiDataModule, SaxiIcoDataModule, SaxiFreesur
+ from shapeaxi.saxi_transforms import TrainTransform, EvalTransform, RandomRemoveTeethTransform, UnitSurfTransform, RandomRotationTransform,ApplyRotationTransform, GaussianNoisePointTransform, NormalizePointTransform, CenterTransform
+ from shapeaxi import saxi_nets
+ from shapeaxi.saxi_nets import MonaiUNet, SaxiIcoClassification
+-from shapeaxi.saxi_logger import SaxiImageLoggerTensorboard, SaxiImageLoggerTensorboardSegmentation, SaxiImageLoggerTensorboardIco, SaxiImageLoggerTensorboardIco_fs, SaxiImageLoggerNeptune, SaxiImageLoggerNeptune_Ico_fs
++from shapeaxi.saxi_logger import SaxiImageLoggerTensorboard, SaxiImageLoggerTensorboardSegmentation, SaxiImageLoggerTensorboardIco, SaxiImageLoggerTensorboardIco_fs, SaxiImageLoggerNeptune, SaxiImageLoggerNeptune_Ico_fs, SaxiImageLoggerNeptune_SaxiRingMT
+ 
+ 
+ def logger_neptune_tensorboard(args):
+@@ -48,6 +48,8 @@ def logger_neptune_tensorboard(args):
+ 
+         if args.nn == "SaxiIcoClassification_fs" or args.nn == "SaxiRing":
+             image_logger = SaxiImageLoggerNeptune_Ico_fs(num_images=args.num_images)
++        elif args.nn == "SaxiRingMT":
++            SaxiImageLoggerNeptune_SaxiRingMT(num_images=args.num_images)
+         else:
+             image_logger = SaxiImageLoggerNeptune(num_images=args.num_images)
+ 
+@@ -224,7 +226,6 @@ def SaxiRing_train(args, checkpoint_callback, mount_point, train, val, test, ear
+         #Use of SaxiRingMT
+         data = SaxiFreesurferMPDataModule(args.batch_size,train,val,test,train_transform=train_transform,val_and_test_transform=val_and_test_transform,num_workers=args.num_workers,name_class=args.class_column,freesurfer_path=args.fs_path)
+ 
+-    
+     saxi_args['out_classes'] = len(nb_classes)  
+     saxi_args['out_size'] = 256
+ 
+@@ -240,7 +241,7 @@ def SaxiRing_train(args, checkpoint_callback, mount_point, train, val, test, ear
+     if image_logger:
+         callbacks.append(image_logger)
+ 
+-    trainer = Trainer(log_every_n_steps=args.log_every_n_steps,logger=logger,max_epochs=args.epochs,callbacks=callbacks,accelerator="gpu", devices=torch.cuda.device_count())
++    trainer = Trainer(log_every_n_steps=args.log_every_n_steps,logger=logger,max_epochs=args.epochs,callbacks=callbacks,accelerator="gpu", devices=torch.cuda.device_count(), accumulate_grad_batches=7, strategy='ddp')
+     trainer.fit(model,datamodule=data,ckpt_path=args.model)
+ 
+ 
+@@ -307,7 +308,7 @@ def get_argparse():
+ 
+     ##Hyperparameters
+     hyper_group = parser.add_argument_group('Hyperparameters')
+-    hyper_group.add_argument('--nn', type=str, help='Neural network name : SaxiClassification, SaxiRegression, SaxiSegmentation, SaxiIcoClassification, SaxiIcoClassification_fs, SaxiRing, SaxiRingClassification', required=True, choices=["SaxiClassification", "SaxiRegression", "SaxiSegmentation", "SaxiIcoClassification", "SaxiIcoClassification_fs", "SaxiRing", "SaxiRingClassification", "SaxiRingMT"])
++    hyper_group.add_argument('--nn', type=str, help='Neural network name : SaxiClassification, SaxiRegression, SaxiSegmentation, SaxiIcoClassification, SaxiIcoClassification_fs, SaxiRing, SaxiRingMT, SaxiRingClassification', required=True, choices=["SaxiClassification", "SaxiRegression", "SaxiSegmentation", "SaxiIcoClassification", "SaxiIcoClassification_fs", "SaxiRing", "SaxiRingClassification", "SaxiRingMT"])
+     hyper_group.add_argument('--base_encoder', type=str, help='Base encoder for the feature extraction', default='resnet18')
+     hyper_group.add_argument('--base_encoder_params', type=str, help='Base encoder parameters that are passed to build the feature extraction', default='pretrained=False,spatial_dims=2,n_input_channels=1,num_classes=512')
+     hyper_group.add_argument('--hidden_dim', type=int, help='Hidden dimension for features output. Should match with output of base_encoder. Default value is 512', default=512)
