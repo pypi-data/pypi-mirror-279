@@ -1,0 +1,109 @@
+Metadata-Version: 2.1
+Name: ropt
+Version: 0.4.1
+Summary: The ropt ensemble optimizer module
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pydantic
+Requires-Dist: scipy
+Requires-Dist: importlib-metadata; python_version < "3.10"
+Requires-Dist: typing-extensions; python_version < "3.9"
+Provides-Extra: test
+Requires-Dist: ruff; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pandas-stubs; extra == "test"
+Requires-Dist: types-tabulate; extra == "test"
+Provides-Extra: docs
+Requires-Dist: mkdocs; extra == "docs"
+Requires-Dist: mkdocstrings[python]; extra == "docs"
+Requires-Dist: mkdocs-material; extra == "docs"
+Requires-Dist: mike; extra == "docs"
+Provides-Extra: pandas
+Requires-Dist: pandas; extra == "pandas"
+Requires-Dist: tabulate; extra == "pandas"
+Provides-Extra: xarray
+Requires-Dist: xarray; extra == "xarray"
+Requires-Dist: netcdf4; extra == "xarray"
+Provides-Extra: parsl
+Requires-Dist: parsl; extra == "parsl"
+
+# `ropt`
+`ropt` is a Python module for running robust optimization workflows.
+
+`ropt` is developed by the Netherlands Organisation for Applied Scientific
+Research (TNO). All files in this repository are released under the GNU General
+Public License v3.0 (a copy is provided in the LICENSE file).
+
+Detailed documentation and examples can be found in the online
+[manual](https://tno-ropt.github.io/ropt/).
+
+
+## Dependencies
+`ropt` has been tested with Python versions 3.8-3.12.
+
+`ropt` requires one or more optimization plugins to function. By default, a
+plugin based on optimizers included with [SciPy](https://scipy.org/) is
+installed.
+
+
+## Installation
+From PyPI:
+```bash
+pip install ropt
+```
+
+The following optional-dependencies can be installed to enable extra functionality:
+
+- `pandas` : Enables support for `pandas` export and tabular output.
+- `xarray` : Enables support for xarray and writing netCDF files.
+- `parsl`  : Enables the parsl-based evaluator functionality.
+
+Install with:
+```bash
+pip install ropt[<dep>]
+```
+where \<dep\> is one of the optional dependencies listed above. To install all:
+```bash
+pip install ropt[pandas,xarray,parsl]
+```
+
+
+## Development
+The `ropt` source distribution can be found on
+[GitHub](https://github.com/tno-ropt/ropt). To install from source, enter the
+distribution directory and execute:
+
+```bash
+pip install .
+```
+
+Documentation is written using [`MkDocs`](https://www.mkdocs.org/) and
+[`mkdocstrings`](https://mkdocstrings.github.io/). To view it, install the
+necessary dependencies and start the `MkDocs` built-in server within the `ropt`
+distribution directory:
+
+```bash
+pip install .[docs]
+mkdocs serve
+```
+
+## Running the tests
+To run the test suite, install the necessary dependencies and execute `pytest`:
+
+```bash
+pip install .[test]
+pytest
+```

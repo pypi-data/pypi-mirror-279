@@ -1,0 +1,33 @@
+numpy
+pydantic
+scipy
+
+[:python_version < "3.10"]
+importlib-metadata
+
+[:python_version < "3.9"]
+typing-extensions
+
+[docs]
+mkdocs
+mkdocstrings[python]
+mkdocs-material
+mike
+
+[pandas]
+pandas
+tabulate
+
+[parsl]
+parsl
+
+[test]
+ruff
+mypy
+pytest
+pandas-stubs
+types-tabulate
+
+[xarray]
+xarray
+netcdf4
