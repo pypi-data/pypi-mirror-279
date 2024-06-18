@@ -1,0 +1,13 @@
+key0:
+  key01:
+  key01__meta__:
+    shell: echo 123456
+  key02:
+  key03: 123456
+  key04:
+  key04__meta__:
+    default: 123456
+  key05:
+  key05__meta__:
+    type: password # https://inquirerpy.readthedocs.io/en/latest/pages/prompt.html
+    default: 123456

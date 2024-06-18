@@ -1,0 +1,27 @@
+[project]
+name = "dekprompt"
+version = "0.1.4"
+description = "Prompt with applying"
+authors = [
+    { name = "sanzenwin", email = "sanzenwin@gmail.com" },
+]
+dependencies = [
+    "InquirerPy<=0.3.4",
+    "dektools[yaml,exec]<1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[tool.pdm.build]
+includes = [
+    "dekprompt",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
