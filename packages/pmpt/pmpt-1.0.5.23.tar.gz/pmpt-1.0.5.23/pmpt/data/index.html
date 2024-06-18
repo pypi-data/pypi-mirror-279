@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMPT WebUI</title>
+    <!-- Bootstrap CSS -->
+    <link href="statics/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="statics/css/bootstrap-icons.min.css">
+    <style>
+        .trs>* {
+            text-align: center;
+        }
+
+        .memu>.left {
+            margin-right: 1.75%;
+            float: left;
+
+        }
+        .memu>.left {
+            margin-right: 1.75%;
+            float: left;
+
+        }
+        .memu>.right {
+            margin-right: 1.75%;
+            float: right;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="memu">
+            <button id="add-row-btn" class="btn btn-primary btn-sm left">Add</button>
+            <button id="add-row-btn" class="btn btn-primary btn-sm left">Search</button>
+            <button class="btn btn-outline-primary btn-sm right"><i class="bi bi-gear"></i></button>
+            <button class="btn btn-outline-primary btn-sm right"><i class="bi bi-arrow-counterclockwise"></i></button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr class="trd">
+                    <th scope="col">Package Name</th>
+                    <th scope="col">Version</th>
+                    <th scope="col">Options</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+                <!-- Table rows will be dynamically added here -->
+            </tbody>
+        </table>
+        <div align="center" id="loading">
+            <img src="statics/img/loading.svg" width="10%">
+        </div>
+    </div>
+    <div class="modal fade" id="alert" tabindex="-1" aria-labelledby="alertTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="alertTitle">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="alertBody">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="alertOK">OK</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close" onclick="javascript:">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS and jQuery -->
+    <script src="statics/js/jquery-3.7.1.min.js"></script>
+    <script src="statics/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        var alertCallback = 10;
+
+        function alert(title, body, callback) {
+
+            alertCallback = callback
+            $("#alertTitle").html(title)
+            $("#alertBody").html(body)
+            $("#alertOK").attr("onclick", "javasrcipt:" + callback)
+            $("#alert").modal("show")
+
+        }
+        // Function to add a new row to the table
+        function addRow(name, ver) {
+            var newRowHtml = `
+        <tr pn=${name} >
+          <td><a href="/package/${name}">${name}</a></td>
+          <td>${ver}</td>
+          <td class="row">
+              <button onclick="javascript:packageDel(this)" href="#" class="btn btn-link col">Delete</button>
+              <button onclick="javascript:packageDel(this)" href="#" class="btn btn-link col">Update</button>
+              <button onclick="javascript:packageDel(this)" href="#" class="btn btn-link col">More</button>
+          </td>
+        </tr>
+      `;
+
+            // Append the new row to the table body
+            $("#table-body").append(newRowHtml);
+        }
+
+        function delpack(namd) {
+            $.ajax({
+                url: "/api/remove"
+            })
+        }
+
+        function packageDel(element) {
+            var parentRow = element.parentNode.parentNode;
+
+            // Get the value of the 'pn' attribute of the parent row
+            var packageName = parentRow.getAttribute('pn');
+            alert("Delete Package", "Are you sure you want to delete?", "delpack('" + packageName + "')")
+
+        }
+
+        // Add event listener for the "Add Row" button
+        $(document).ready(function() {
+            $.ajax({
+                url: "http://127.0.0.1:14536/api/list",
+                type: "GET",
+                dataType: "JSON",
+                success: function(res) {
+                    $.each(res, function(index, items) {
+                        addRow(items.name, items.ver);
+                    });
+                    $("#loading").remove()
+                },
+                error: function(xhr) {
+                    alert("Error","Unable to connect to backend","retryGetList()")
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
