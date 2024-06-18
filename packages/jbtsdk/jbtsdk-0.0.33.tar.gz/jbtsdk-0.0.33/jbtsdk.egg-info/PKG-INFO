@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: jbtsdk
+Version: 0.0.33
+Summary: SDK Jabuti Technologies
+Author: Thales Araújo
+License: MIT License
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: langchain
+Requires-Dist: langchain_community
+Requires-Dist: streamlit
