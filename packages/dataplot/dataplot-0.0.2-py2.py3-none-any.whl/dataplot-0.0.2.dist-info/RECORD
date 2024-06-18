@@ -1,0 +1,14 @@
+dataplot/__init__.py,sha256=hPs74FFupuMHpTHDA9SypQHPJFC5yVpl4Id1-VcDMaE,925
+dataplot/__version__.py,sha256=E6qIpg62QQ8UPSwkf-_sRKg36zFjIaQcWDkYMxeEWjM,83
+dataplot/core.py,sha256=Roa9sKJKnltL_fn8EScZtr8vDTvRznjTrmmbV7jk3DE,2303
+dataplot/dataset.py,sha256=sVoc7RHOxb4u-CKAD15YJ-OTlYxNdT4q7ofGk2xGrwo,11808
+dataplot/histogram.py,sha256=Pt1qrYs43swajhwImwzM_cedtchlzEqUIkoHBcXXr5A,2368
+dataplot/linechart.py,sha256=fbAuRm5GrG5BTLg8rY1YnuX6C_Ib6TKJqCl0HQ6sDIA,1425
+dataplot/setter.py,sha256=lRHOXZwJCvt2u0ce1sjE3oTNTELHpm7apPoF9nMIvkU,11287
+dataplot/utils/__init__.py,sha256=mnq62wFb5aBF9dNq52PPjQGMGVhCB1g9SCy3oYVBuIY,42
+dataplot/utils/multi.py,sha256=oC0cbTd_BK17HCng-x9IKDKn6ZGqC863PgdU7_Seucg,5219
+dataplot-0.0.2.dist-info/LICENSE,sha256=rlOb8JrIQs-p03IkqjgLlXbFGIwdABeHAaRckd4b8N8,1495
+dataplot-0.0.2.dist-info/METADATA,sha256=XIpO90r2DuBqsP56K5Qhvm2VGMh2lBR7AwTA2CWKIuM,1289
+dataplot-0.0.2.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+dataplot-0.0.2.dist-info/top_level.txt,sha256=BlMt7-1FchXXSBfUjepi7BQnEfu5AM6QWyTRjcrR-YQ,9
+dataplot-0.0.2.dist-info/RECORD,,

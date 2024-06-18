@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: dataplot
+Version: 0.0.2
+Summary: Provides plotters useful in datascience.
+Home-page: https://github.com/Chitaoji/dataplot/
+Author: Chitaoji
+Author-email: 2360742040@qq.com
+License: BSD
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8.13
+Description-Content-Type: text/markdown
+Requires-Dist: attrs
+Requires-Dist: lazyr >=0.0.11
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+
+
+# dataplot
+Provides plotters useful in datascience.
+
+## Installation
+```sh
+$ pip install dataplot
+```
+
+## Requirements
+```txt
+attrs
+lazyr>=0.0.11
+matplotlib
+numpy
+pandas
+scipy
+```
+
+## See Also
+### Github repository
+* https://github.com/Chitaoji/dataplot/
+
+### PyPI project
+* https://pypi.org/project/dataplot/
+
+## License
+This project falls under the BSD 3-Clause License.
+
+## History
+
+### v0.0.2
+* Updated the meta-data.
+
+### v0.0.1
+* Initial release.
+
