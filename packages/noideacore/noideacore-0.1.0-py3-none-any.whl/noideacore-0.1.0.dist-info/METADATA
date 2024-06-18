@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: noideacore
+Version: 0.1.0
+Summary: 
+Author: No1d3a
+Author-email: furids11@gmail.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: mysql-connector-repackaged (>=0.3.1,<0.4.0)
+Requires-Dist: pycryptodomex (==3.20.0)
+Requires-Dist: python_dateutil (==2.8.2)
+Description-Content-Type: text/markdown
+
+# BPPY (Basic Package PYthon)
+
+This Package offer mostly basic Python Functions like encrypting with sha256, using dates and other. The main reason to use this package is the sql.py, because it offers a simple to use sql class to 
+
+### How to use the sql.py
+
+- First you have to create a SQL_CLASS object, and select its sql database type, currently only Mysql and sqlite is supported, just type 'mysql' or 'sqlite'.
+- Then you have to use .login() with the parameters. The 'tables' parameter is a list of the tablenames as Stings. You dont have to fill it out, you can also just fill it out in basic_read(), basic_write() or basic_delete(). Just remember you the have to use None to use the original tables.
+- The you can then use the basic_read() or basic_write() function or just the Execute_SQL_Command() to use plain text sql querys. The args represent the columns to use and the kwargs are used for a where statement.
