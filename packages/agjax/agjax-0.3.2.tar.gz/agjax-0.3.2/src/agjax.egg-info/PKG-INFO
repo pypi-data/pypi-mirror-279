@@ -1,0 +1,118 @@
+Metadata-Version: 2.1
+Name: agjax
+Version: 0.3.2
+Summary: A jax wrapper for autograd-differentiable functions.
+Author-email: "Martin F. Schubert" <mfschubert@gmail.com>
+Maintainer-email: "Martin F. Schubert" <mfschubert@gmail.com>
+License: The MIT License (MIT)
+        
+        Copyright (c) 2023 Martin Schubert
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: autograd,jax,python,wrapper,gradient
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: autograd
+Requires-Dist: jax
+Requires-Dist: jaxlib
+Requires-Dist: numpy~=1.25
+Provides-Extra: tests
+Requires-Dist: parameterized; extra == "tests"
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: pytest-cov; extra == "tests"
+Requires-Dist: pytest-xdist; extra == "tests"
+Provides-Extra: docs
+Requires-Dist: matplotlib; extra == "docs"
+Requires-Dist: jupyter-book==1.0.0; extra == "docs"
+Requires-Dist: sphinx-autodoc-typehints; extra == "docs"
+Requires-Dist: sphinx-click; extra == "docs"
+Requires-Dist: ceviche_challenges; extra == "docs"
+Provides-Extra: dev
+Requires-Dist: agjax[docs,tests]; extra == "dev"
+Requires-Dist: bump-my-version; extra == "dev"
+Requires-Dist: darglint; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+
+# Agjax -- jax wrapper for autograd-differentiable functions.
+`v0.3.2`
+
+Agjax allows existing code built with autograd to be used with the jax framework.
+
+In particular, `agjax.wrap_for_jax` allows arbitrary autograd functions ot be differentiated using `jax.grad`. Several other function transformations (e.g. compilation via `jax.jit`) are not supported.
+
+Meanwhile, `agjax.experimental.wrap_for_jax` supports `grad`, `jit`, `vmap`, and `jacrev`. However, it depends on certain under-the-hood behavior by jax, which is not guaranteed to remain unchanged. It also is more restrictive in terms of the valid function signatures of functions to be wrapped: all arguments and outputs must be convertible to valid jax types. (`agjax.wrap_for_jax` also supports non-jax inputs and outputs, e.g. strings.)
+
+## Installation
+```
+pip install agjax
+```
+
+## Usage
+Basic usage is as follows:
+```python
+@agjax.wrap_for_jax
+def fn(x, y):
+  return x * npa.cos(y)
+
+jax.grad(fn, argnums=(0,  1))(1.0, 0.0)
+
+# (Array(1., dtype=float32), Array(0., dtype=float32))
+```
+
+The experimental wrapper is similar, but requires that the function outputs and datatypes be specified, simiilar to `jax.pure_callback`.
+```python
+wrapped_fn = agjax.experimental.wrap_for_jax(
+  lambda x, y: x * npa.cos(y),
+  result_shape_dtypes=jnp.ones((5,)),
+)
+
+jax.jacrev(wrapped_fn, argnums=0)(jnp.arange(5, dtype=float), jnp.arange(5, 10, dtype=float))
+
+# [[ 0.28366217  0.          0.          0.          0.        ]
+#  [ 0.          0.96017027  0.          0.          0.        ]
+#  [ 0.          0.          0.75390226  0.          0.        ]
+#  [ 0.          0.          0.         -0.14550003  0.        ]
+#  [ 0.          0.          0.          0.         -0.91113025]]
+```
+
+Agjax wrappers are intended to be quite general, and can support functions with multiple inputs and outputs as well as functions that have nondifferentiable outputs or arguments that cannot be differentiated with respect to. These should be specified using `nondiff_argnums` and `nondiff_outputnums` arguments. In the experimental wrapper, these must still be jax-convertible types, while in the standard wrapper they may have arbitrary types.
+
+```python
+@functools.partial(
+  agjax.wrap_for_jax, nondiff_argnums=(2,), nondiff_outputnums=(1,)
+)
+def fn(x, y, string_arg):
+  return x * npa.cos(y), string_arg * 2
+
+(value, aux), grad = jax.value_and_grad(
+  fn, argnums=(0, 1), has_aux=True
+)(1.0, 0.0, "test")
+
+print(f"value = {value}")
+print(f"  aux = {aux}")
+print(f" grad = {grad}")
+```
+```
+value = 1.0
+  aux = testtest
+ grad = (Array(1., dtype=float32), Array(0., dtype=float32))
+```
