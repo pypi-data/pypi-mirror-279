@@ -1,0 +1,9 @@
+README
+setup.py
+stab.py
+pystab.egg-info/PKG-INFO
+pystab.egg-info/SOURCES.txt
+pystab.egg-info/dependency_links.txt
+pystab.egg-info/top_level.txt
+stab/mcculloch.c
+stab/stab.c
