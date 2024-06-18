@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fwl-mors"
+version = "24.6.17"
+description = "Stellar rotation and activity evolution model"
+readme = "README.md"
+authors = [
+    {name = "Colin P. Johnstone", email = "colinjohnstone@gmail.com" }
+]
+license = {text = "MIT License"}
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.10",
+]
+keywords = ["exoplanet", "stellar evolution"]
+requires-python = '>=3.10'
+dependencies = [
+  'matplotlib',
+  'numpy'
+]
+
+[project.urls]
+homepage = "https://github.com/FormingWorlds/MORS"
+
+[project.optional-dependencies]
+develop = [
+  "bump-my-version",
+  "pytest"
+]
+publishing = [
+  "twine",
+  "wheel",
+  "build"
+]
+
+[tool.setuptools]
+package-dir = {"mors" = "src/mors"}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.bumpversion]
+current_version = "24.6.17"
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = "version = \"{current_version}\""
+replace = "version = \"{new_version}\""
