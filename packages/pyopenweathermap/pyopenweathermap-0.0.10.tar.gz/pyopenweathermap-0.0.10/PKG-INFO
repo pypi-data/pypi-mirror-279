@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pyopenweathermap
+Version: 0.0.10
+Summary: lib for OpenWeatherMap for Home Assistant
+License: MIT
+Keywords: homeassistant,owm,openweathermap
+Author: Evgeny
+Author-email: iam@freekode.org
+Requires-Python: >=3.11,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: aiohttp (>=3.9.5,<4.0.0)
+Description-Content-Type: text/markdown
+
+# pyopenweathermap
+
+Python library for OpenWeatherMap API for Home Assistant
+
