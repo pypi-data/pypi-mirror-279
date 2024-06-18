@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+aiojellyfin/__init__.py
+aiojellyfin/py.typed
+aiojellyfin.egg-info/PKG-INFO
+aiojellyfin.egg-info/SOURCES.txt
+aiojellyfin.egg-info/dependency_links.txt
+aiojellyfin.egg-info/not-zip-safe
+aiojellyfin.egg-info/requires.txt
+aiojellyfin.egg-info/top_level.txt
