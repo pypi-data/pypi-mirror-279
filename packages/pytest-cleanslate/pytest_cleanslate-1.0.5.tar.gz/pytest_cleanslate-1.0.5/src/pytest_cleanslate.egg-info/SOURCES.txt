@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/pytest_cleanslate/__init__.py
+src/pytest_cleanslate/__main__.py
+src/pytest_cleanslate/__version__.py
+src/pytest_cleanslate/plugin.py
+src/pytest_cleanslate/reduce.py
+src/pytest_cleanslate.egg-info/PKG-INFO
+src/pytest_cleanslate.egg-info/SOURCES.txt
+src/pytest_cleanslate.egg-info/dependency_links.txt
+src/pytest_cleanslate.egg-info/entry_points.txt
+src/pytest_cleanslate.egg-info/requires.txt
+src/pytest_cleanslate.egg-info/top_level.txt
+tests/test_cleanslate.py
+tests/test_reduce.py
