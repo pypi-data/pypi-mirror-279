@@ -1,0 +1,10 @@
+**/env.txt
+**/.env
+*.log
+devpi/secret/secretfile
+**/garak_runs
+llm/_security/simple_garak/runs/**
+**/.cache
+.vscode/
+llm/_security/terrapin/terrapin
+**/cosign.key
