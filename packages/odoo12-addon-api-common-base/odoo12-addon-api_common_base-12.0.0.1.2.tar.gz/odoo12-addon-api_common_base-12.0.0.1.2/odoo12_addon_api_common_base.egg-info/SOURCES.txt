@@ -1,0 +1,17 @@
+setup.py
+odoo/addons/api_common_base/CHANGELOG.md
+odoo/addons/api_common_base/README.rst
+odoo/addons/api_common_base/__init__.py
+odoo/addons/api_common_base/__manifest__.py
+odoo/addons/api_common_base/controllers/__init__.py
+odoo/addons/api_common_base/controllers/main.py
+odoo/addons/api_common_base/demo/api_key.xml
+odoo/addons/api_common_base/static/description/icon.png
+odoo/addons/api_common_base/tests/__init__.py
+odoo/addons/api_common_base/tests/common_service.py
+odoo12_addon_api_common_base.egg-info/PKG-INFO
+odoo12_addon_api_common_base.egg-info/SOURCES.txt
+odoo12_addon_api_common_base.egg-info/dependency_links.txt
+odoo12_addon_api_common_base.egg-info/not-zip-safe
+odoo12_addon_api_common_base.egg-info/requires.txt
+odoo12_addon_api_common_base.egg-info/top_level.txt
