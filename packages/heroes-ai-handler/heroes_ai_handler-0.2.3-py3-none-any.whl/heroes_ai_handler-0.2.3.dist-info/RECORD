@@ -1,0 +1,14 @@
+heroes-ai-handler/BlobConversionHandler.py,sha256=-4csGFdVoYiDGQZZ-edisNkdvvBqt9R9X66O4UTKI7A,4020
+heroes-ai-handler/ChatCompletor.py,sha256=-Z2dEHaHThCIMozW8zIv73yWo8ZtHYQw_7YHp7xbNeM,5070
+heroes-ai-handler/DatabaseHandler.py,sha256=wpT95CeGvY9wjqYSPPDUePWFGJkY3SoYvRfSevCp5fI,5171
+heroes-ai-handler/EmbeddingHandler.py,sha256=KrfBYDyKZpqLzIOSt34uC-xUgzXV9__BBJJXGLk8WHc,6447
+heroes-ai-handler/FileHandler.py,sha256=nSf4PTVzRdC_vjv1TBZSMOpGxCzvDj92fXHXaRdTccc,12345
+heroes-ai-handler/Logger.py,sha256=vHXF0BZJqreCsvFMRzFS_ZNbLOJY4XRPc1QMpQLwCC4,1300
+heroes-ai-handler/Printer.py,sha256=6Kq9BOn2dvrSVZDzwG6gnwW4jTRM2kMZMWsN5kqUtCs,214
+heroes-ai-handler/Utils.py,sha256=RAWivP-lIQlEjYiSuIQQtZWrBxCT9NkFJCCivBGim9s,676
+heroes-ai-handler/WebsiteScraper.py,sha256=KGMZ9WBXrSNKTq29aN7RCVLbVpjvO3h9gPAzmIiK7kA,6962
+heroes-ai-handler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+heroes_ai_handler-0.2.3.dist-info/METADATA,sha256=J_7JiEvxzyXQDiCXNJrOmPHlmmL1zocznwQC9JceJVk,664
+heroes_ai_handler-0.2.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+heroes_ai_handler-0.2.3.dist-info/top_level.txt,sha256=Ce22ihWiOkIp2UqW0Ajc0ULnb54TjN_qVR8oZhdRNoo,18
+heroes_ai_handler-0.2.3.dist-info/RECORD,,
