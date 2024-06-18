@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: nctalk
+Version: 0.0.4
+Summary: Send messages to NextCloud Talk
+Maintainer-email: Ferhat Ayaz <cocos@me.com>
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# nctalk
