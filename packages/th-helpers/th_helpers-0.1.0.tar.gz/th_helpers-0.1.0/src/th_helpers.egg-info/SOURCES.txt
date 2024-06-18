@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+src/th_helpers/__init__.py
+src/th_helpers.egg-info/PKG-INFO
+src/th_helpers.egg-info/SOURCES.txt
+src/th_helpers.egg-info/dependency_links.txt
+src/th_helpers.egg-info/requires.txt
+src/th_helpers.egg-info/top_level.txt
+src/th_helpers/scraper/__init__.py
+src/th_helpers/scraper/limitless.py
+src/th_helpers/scraper/pokedata.py
+src/th_helpers/scraper/utils.py
