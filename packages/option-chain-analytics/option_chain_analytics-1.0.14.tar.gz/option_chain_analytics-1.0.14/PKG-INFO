@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: option_chain_analytics
+Version: 1.0.14
+Summary: Implementation of data management and outputs queries for Option Chains
+Home-page: https://github.com/ArturSepp/OptionChainAnalytics
+License: LICENSE.txt
+Keywords: options chain,implied volatility,volatility surface,volatility fitting,options data
+Author: Artur Sepp
+Author-email: artursepp@gmail.com
+Maintainer: Artur Sepp
+Maintainer-email: artursepp@gmail.com
+Requires-Python: >=3.8,<3.11
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Requires-Dist: PyYAML (>=6.0)
+Requires-Dist: easydev (>=0.12.0)
+Requires-Dist: fsspec (>=2022.11.0)
+Requires-Dist: matplotlib (>=3.2.2)
+Requires-Dist: numba (>=0.56.4)
+Requires-Dist: numpy (>=1.22.4)
+Requires-Dist: openpyxl (>=3.0.10)
+Requires-Dist: pandas (>=1.5.2)
+Requires-Dist: psycopg2 (>=2.9.5)
+Requires-Dist: pyarrow (>=10.0.1)
+Requires-Dist: qis (>=1.0.30)
+Requires-Dist: scipy (>=1.10)
+Requires-Dist: seaborn (>=0.12.2)
+Requires-Dist: tqdm (>=4.64.1)
+Requires-Dist: yfinance (>0.1.38)
+Project-URL: Documentation, https://github.com/ArturSepp/OptionChainAnalytics
+Project-URL: Issues, https://github.com/ArturSepp/OptionChainAnalytics/issues
+Project-URL: Personal website, https://artursepp.com
+Project-URL: Repository, https://github.com/ArturSepp/OptionChainAnalytics
+Description-Content-Type: text/markdown
+
+# OptionChainAnalytics
+ Analytics for processing option chain and options time series data
+
+
+Core python dependencies:
+
+    python = ">=3.8,<3.11"
+    numba = ">=0.59.0"
+    numpy = ">=1.26.4"
+
+Core packages dependencies
+
+    vanilla_option_pricers = ">=1.0.1"
+    qis = ">=2.0.68"
+
