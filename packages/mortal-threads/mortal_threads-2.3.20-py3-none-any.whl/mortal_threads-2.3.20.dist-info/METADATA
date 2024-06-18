@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mortal-threads
+Version: 2.3.20
+Summary: 'mortal工具集::threads'
+Author: MJ
+Requires-Python: <=3.11,>=3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: mortal-timer
+Requires-Dist: mortal-var
+Requires-Dist: mortal-log
+
+'mortal工具集::threads'
