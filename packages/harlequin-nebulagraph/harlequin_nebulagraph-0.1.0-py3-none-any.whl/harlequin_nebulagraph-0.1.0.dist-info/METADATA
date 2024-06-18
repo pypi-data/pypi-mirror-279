@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: harlequin-nebulagraph
+Version: 0.1.0
+Summary: A Harlequin adapter for NebulaGraph.
+License: Apache-2.0
+Author: Wey Gu
+Author-email: weyl.gu@gmail.com
+Requires-Python: >=3.8.1,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: harlequin (>=1.7,<2.0)
+Requires-Dist: nebula3-python (>=3.8.0,<4.0.0)
+Description-Content-Type: text/markdown
+
+![Harlequin NebulaGraph Adapter](https://raw.githubusercontent.com/wey-gu/harlequin-nebulagraph/main/assets/harlequin-nebulagraph-banner.png)
+
+`harlequin-nebulagraph` is a NebulaGraph adapter for [Harlequin](https://github.com/tconbeer/harlequin), a Database IDE for the terminal.
+
+This adapter will use Application Default Credentials to authenticate with NebulaGraph and run queries.
+
+## Getting Started
+
+1. Install the adapter: `pip install harlequin-nebulagraph`
+
+2. Run `harlequin -a nebulagraph` to start the terminal
+
+Defaults to `localhost:9669`, `root`, and `password`. You can override these with the following environment variables:
+
+```bash
+harlequin -a nebulagraph -h 127.0.0.1 -p 9669 -u root -P password
+```
+
+## Documentation
+
+For more information about the adapter, see the [Harlequin Docs](https://harlequin.sh/docs/nebulagraph/index).
