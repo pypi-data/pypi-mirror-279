@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: odoo-addons-oca-l10n-romania
+Version: 15.0.20240617.0
+Summary: Meta package for oca-l10n-romania Odoo addons
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Odoo
+Classifier: Framework :: Odoo :: 15.0
+Requires-Dist: odoo-addon-currency-rate-update-RO-BNR <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-anaf-sync <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-alpha <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-base <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-bcr <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-brd <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-ing <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-import-mt940-rffsn <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-bank-statement-report <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-edi-ubl <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-edit-currency-rate <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-period-close <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-account-report-invoice <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-address-extended <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-city <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-config <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-dvi <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-etransport <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-fiscal-validation <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-message-spv <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-nondeductible-vat <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-partner-create-by-vat <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-partner-unique <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-payment-receipt-report <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-payment-to-statement <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-pos <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-siruta <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-account <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-account-date <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-account-date-wizard <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-account-mrp <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-account-notice <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-account-reception-in-progress <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-picking-comment-template <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-picking-valued-report <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-price-difference <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-stock-report <15.1dev,>=15.0dev
+Requires-Dist: odoo-addon-l10n-ro-vat-on-payment <15.1dev,>=15.0dev
+
+UNKNOWN
+
