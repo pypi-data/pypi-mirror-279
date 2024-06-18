@@ -1,0 +1,14 @@
+scipy
+numpy
+
+[all]
+PyStemmer
+tqdm
+black
+
+[dev]
+black
+
+[extra]
+PyStemmer
+tqdm

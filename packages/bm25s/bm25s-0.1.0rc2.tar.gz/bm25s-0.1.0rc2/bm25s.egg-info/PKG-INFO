@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: bm25s
+Version: 0.1.0rc2
+Summary: An ultra-fast implementation of BM25 based on sparse matrices
+Home-page: https://github.com/xhluca/bm25s
+Author: Xing Han Lù
+Author-email: bm25s@googlegroups.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: extra
+Provides-Extra: dev
+Provides-Extra: all
+License-File: LICENSE
+
+# BM25S
+
+Work in progress, please check back soon!
