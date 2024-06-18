@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+beholdr_io_metric_client/__init__.py
+beholdr_io_metric_client/client.py
+beholdr_io_metric_client/exceptions.py
+beholdr_io_sdk.egg-info/PKG-INFO
+beholdr_io_sdk.egg-info/SOURCES.txt
+beholdr_io_sdk.egg-info/dependency_links.txt
+beholdr_io_sdk.egg-info/requires.txt
+beholdr_io_sdk.egg-info/top_level.txt
