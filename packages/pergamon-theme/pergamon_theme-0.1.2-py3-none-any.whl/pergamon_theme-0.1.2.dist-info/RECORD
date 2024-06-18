@@ -1,0 +1,16 @@
+pergamon_theme/__init__.py,sha256=ORqmqcLm3Mqet-Zgtir-F09r04kZbiF_u7_AIWFQKO0,586
+pergamon_theme/_version.py,sha256=vYZ6rLVUw05xbWIGie5W7cVk18sWwVN72cGSZ2ngSYU,171
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/package.json,sha256=_T3SSZVzfOWLSCqv3Nh5VA49pe_TtF2Ne93ajH4xTQA,5584
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/schemas/pergamon_theme/package.json.orig,sha256=c30eGu5_8572hhTgATmLZWL2yCc1dcUJwpVmg2qgRsA,6344
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/schemas/pergamon_theme/plugin.json,sha256=tMvqheS0RZFkgvcoq9EX22Zc_VP6LI4XlwP7It6tIgw,460
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/static/509.ba6948aa1ae203fa34d1.js,sha256=umlIqhriA_o00U115U0DnU_ubex0q1D36-ILc3V-fh0,1509
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/static/remoteEntry.c1eaa594ea6b73f910ac.js,sha256=weqllOprc_kQrMG5v9y_WJCbR9tQnImF-LnJL6TFY08,6410
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/static/style.js,sha256=-CQt0ZTPaCTvrRiLcznxflAbfvIKlOVzjOos-muaXQ8,118
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/static/third-party-licenses.json,sha256=MNToQfru1YnHAie-2Virp23yWsc5co3qG0IzrO6SEfw,20
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/themes/pergamon_theme/index.css,sha256=p7na5woDdhSP9CfKKkELTsae5yPhCnEw0qSZuD4duMY,15036
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/themes/pergamon_theme/index.js,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pergamon_theme-0.1.2.data/data/share/jupyter/labextensions/pergamon_theme/install.json,sha256=vJ029S5mc849GoUBMPtlyzt7y0V3LEyE34Skooinvkc,189
+pergamon_theme-0.1.2.dist-info/METADATA,sha256=c9O_ZSKxlZYLhAJ99AIwhr3SW5SiC19AmG2JJ8o-jGU,5078
+pergamon_theme-0.1.2.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pergamon_theme-0.1.2.dist-info/licenses/LICENSE,sha256=kYMGAvscdF5XXe_68LfSbTi5vFj5Ig8lre-eCPTadvQ,1516
+pergamon_theme-0.1.2.dist-info/RECORD,,
