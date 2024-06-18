@@ -1,0 +1,26 @@
+[console_scripts]
+dirac-clic-make-productions = ILCDIRAC.ILCTransformationSystem.scripts.dirac_clic_make_productions:main
+dirac-fcc-make-productions = ILCDIRAC.ILCTransformationSystem.scripts.dirac_fcc_make_productions:main
+dirac-ilc-add-cvmfs-software = ILCDIRAC.Core.scripts.dirac_ilc_add_cvmfs_software:main
+dirac-ilc-add-software = ILCDIRAC.Core.scripts.dirac_ilc_add_software:main
+dirac-ilc-add-tasks-to-prod = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_add_tasks_to_prod:main
+dirac-ilc-add-user = ILCDIRAC.Core.scripts.dirac_ilc_add_user:main
+dirac-ilc-add-whizard = ILCDIRAC.Core.scripts.dirac_ilc_add_whizard:main
+dirac-ilc-filestatus-transformation = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_filestatus_transformation:main
+dirac-ilc-find-in-FC = ILCDIRAC.Interfaces.scripts.dirac_ilc_find_in_FC:main
+dirac-ilc-get-info = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_get_info:main
+dirac-ilc-get-prod-log = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_get_prod_log:main
+dirac-ilc-list-users = ILCDIRAC.Core.scripts.dirac_ilc_list_users:main
+dirac-ilc-make-ddsimtarball = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_make_ddsimtarball:main
+dirac-ilc-moving-transformation = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_moving_transformation:main
+dirac-ilc-production-summary = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_production_summary:main
+dirac-ilc-replication-transformation = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_replication_transformation:main
+dirac-ilc-show-software = ILCDIRAC.Interfaces.scripts.dirac_ilc_show_software:main
+dirac-ilc-upload-gen-files = ILCDIRAC.ILCTransformationSystem.scripts.dirac_ilc_upload_gen_files:main
+dirac-repo-create-lfn-list = ILCDIRAC.Interfaces.scripts.dirac_repo_create_lfn_list:main
+dirac-repo-retrieve-jobs-output = ILCDIRAC.Interfaces.scripts.dirac_repo_retrieve_jobs_output:main
+dirac-repo-retrieve-jobs-output-data = ILCDIRAC.Interfaces.scripts.dirac_repo_retrieve_jobs_output_data:main
+ilcdirac-version = ILCDIRAC.Interfaces.scripts.ilcdirac_version:main
+
+[dirac]
+metadata = ILCDIRAC:extension_metadata
