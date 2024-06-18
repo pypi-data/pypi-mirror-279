@@ -1,0 +1,13 @@
+mojo/collections/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mojo/collections/caseinsensitivebytesdict.py,sha256=87FV52ChbFjBs4wtFeel-IOQdGrspL-Mv6PS6BAj0Do,5853
+mojo/collections/caseinsensitivestringdict.py,sha256=shz4tKiIsx-GjDsRxYU5aMmiKv3GN4vkLs2EdHFysM4,5862
+mojo/collections/context.py,sha256=cAloK2Anxvl_LAupKnKBJ6YE79PFRdBmgqcm5zUZApU,15293
+mojo/collections/contextpaths.py,sha256=sCAVpiu9dG9vo5higp5fSZy8HyrdT8hQtla_U-mhLmk,5616
+mojo/collections/contextuser.py,sha256=JTXYBvBgRDdkJUh5IY4DgkQYPcNvYPKZVojr2hns7ZE,660
+mojo/collections/helpers.py,sha256=VBUwvSEwWxWdExNM2XYxe779dgJDijv2rqKaM3dwosQ,951
+mojo/collections/mergemap.py,sha256=TlOb7I6I-6v99IqmZXVMoCm5YxtfnMZGEqO8qoqr6Lo,6670
+mojo/collections/wellknown.py,sha256=3dfrUfAv_70JKjHfbnLWre4aFZehw4QQT81BvirVVIE,1153
+mojo_collections-1.3.16.dist-info/WHEEL,sha256=vVCvjcmxuUltf8cYhJ0sJMRDLr1XsPuxEId8YDzbyCY,88
+mojo_collections-1.3.16.dist-info/LICENSE.txt,sha256=Bgm_Qp_6KGyErWM0c5AfjkrBcKVgKlaOGglNBWqIKuQ,1556
+mojo_collections-1.3.16.dist-info/METADATA,sha256=jIAgfYXVOnvr87J9EquZuFb2z7PVHUCPMzzehG2EMhU,1638
+mojo_collections-1.3.16.dist-info/RECORD,,
