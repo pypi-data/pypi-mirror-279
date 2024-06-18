@@ -1,0 +1,11 @@
+fraposa_pgsc/__init__.py,sha256=cJSdEhFB_IOFCHzB9plzv6qjDaTGtG-0nWN3JyXw5e8,262
+fraposa_pgsc/fraposa.py,sha256=FSK54R_HJNiLw70CQLQnCIGuVoUmB4k_VStM41o9OiI,26831
+fraposa_pgsc/fraposa_runner.py,sha256=WDV2QfbMIJpVin8ow0k_leQzLBQHDXUseR278Qdn5PA,2926
+fraposa_pgsc/plotpcs.py,sha256=WGLHavf249xANOwAecIu1gnFJiBNy_1D3TJ9xGoU4y4,424
+fraposa_pgsc/predstupopu.py,sha256=-SkeHWlIHvjT3cK17JIdA3gO_7ROwPoZNuVCvy2pxgg,1009
+fraposa_pgsc/variants.py,sha256=1CuDe4m08yV9R3UKmmYcAFGiQaO1MWVKT7zzvSahLLc,1388
+fraposa_pgsc-0.1.1.dist-info/LICENSE,sha256=_HWmcpjTcqtz0gqwSzPDFG8lDesyqqMPTJ6MHPAjQeM,1323
+fraposa_pgsc-0.1.1.dist-info/METADATA,sha256=9jWSouHidaD13Os2tXbZ166BvNNeoVkHrl8G-HEPAVE,12230
+fraposa_pgsc-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+fraposa_pgsc-0.1.1.dist-info/entry_points.txt,sha256=EEt5raJp1sYXa7PG_SPVaoyUCl0gcEdJIbwprmq-8r4,142
+fraposa_pgsc-0.1.1.dist-info/RECORD,,
