@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: uel
+Version: 1.7.0.dev1
+Author: XingHao. Li<3584434540@qq.com>
+License-File: LICENSE
+Requires-Dist: objprint

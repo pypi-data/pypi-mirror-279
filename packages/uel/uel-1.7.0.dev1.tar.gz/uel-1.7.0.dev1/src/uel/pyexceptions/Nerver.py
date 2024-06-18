@@ -1,0 +1,2 @@
+class Nerver(Exception):
+    pass
