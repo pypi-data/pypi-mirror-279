@@ -1,0 +1,3 @@
+[console_scripts]
+docker-ready=docker_ready_cli:cli
+
