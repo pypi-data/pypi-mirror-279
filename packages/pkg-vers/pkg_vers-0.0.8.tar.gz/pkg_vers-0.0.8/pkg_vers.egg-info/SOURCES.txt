@@ -1,0 +1,17 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.py
+pkg_vers/__init__.py
+pkg_vers/__main__.py
+pkg_vers/package_manager.py
+pkg_vers/utils.py
+pkg_vers.egg-info/PKG-INFO
+pkg_vers.egg-info/SOURCES.txt
+pkg_vers.egg-info/dependency_links.txt
+pkg_vers.egg-info/requires.txt
+pkg_vers.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_ipynb.py
+tests/test_package_manager.py
+tests/test_utils.py
