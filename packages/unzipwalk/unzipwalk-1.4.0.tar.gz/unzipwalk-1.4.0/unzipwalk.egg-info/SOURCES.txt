@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+requirements.txt
+tests/test_unzipwalk.py
+unzipwalk/__init__.py
+unzipwalk.egg-info/PKG-INFO
+unzipwalk.egg-info/SOURCES.txt
+unzipwalk.egg-info/dependency_links.txt
+unzipwalk.egg-info/entry_points.txt
+unzipwalk.egg-info/requires.txt
+unzipwalk.egg-info/top_level.txt
