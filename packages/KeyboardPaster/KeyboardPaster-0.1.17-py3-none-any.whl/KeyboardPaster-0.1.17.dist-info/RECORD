@@ -1,0 +1,13 @@
+keyboardpaster/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyboardpaster/app.py,sha256=9N7HUFGgYdUFkcI2bFHKR0kERBR6kIi49yCWVxTeqOE,10249
+keyboardpaster/keyboard_layout_detector.py,sha256=S9q63t-wGxXVyy3vfPEolBurndhQdk1l8WHZbNZx67E,10577
+keyboardpaster/keyboardpaster_app.kv,sha256=uAFBOjEtRSKoYpsI4BAoYf6bp1tN5ry8zfvBsR6Bb7E,3962
+keyboardpaster/shared_resources.py,sha256=Yzhd3_vfPrVeig8nJo8PdG2gJVrSGKkHCo68LH6Y1FA,24
+keyboardpaster/modules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+keyboardpaster/modules/autoupdate.py,sha256=CSqMVOMwFcS9qV0pfE-eOIMyWSYUL34s7UU4H-SN7fI,1394
+KeyboardPaster-0.1.17.dist-info/LICENSE,sha256=yoiSh0VZK7LOfY0wKk9UJZ4P8D9s1JiTfl3s7TDB63o,1097
+KeyboardPaster-0.1.17.dist-info/METADATA,sha256=C5EBh7ZeMCZChHWE9hmAakxWTKUITvR_ZdxV7N0XhEY,2337
+KeyboardPaster-0.1.17.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+KeyboardPaster-0.1.17.dist-info/entry_points.txt,sha256=z-sEDcvya0pSQzChB9DoOs7S5zffBQQAknn4ovmuFuU,55
+KeyboardPaster-0.1.17.dist-info/top_level.txt,sha256=eRqaBwy9ET6lyICfO_ADoGaSGepx44wAwuPSuhgnqrU,15
+KeyboardPaster-0.1.17.dist-info/RECORD,,
