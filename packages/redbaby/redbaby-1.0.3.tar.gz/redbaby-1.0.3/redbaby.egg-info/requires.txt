@@ -1,0 +1,6 @@
+compose
+compose-stubs
+crypteia==1.0.1
+pydantic
+pydantic-settings
+pymongo

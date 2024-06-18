@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: redbaby
+Version: 1.0.3
+Summary: Mini reimplementation of REDB, baby redb, redbaby.
+Home-page: https://github.com/teialabs/redbaby
+Author: Nei Cardoso de Oliveira Neto
+Author-email: nei@teialabs.com
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: compose
+Requires-Dist: compose-stubs
+Requires-Dist: crypteia==1.0.1
+Requires-Dist: pydantic
+Requires-Dist: pydantic-settings
+Requires-Dist: pymongo
+
+# redbaby
