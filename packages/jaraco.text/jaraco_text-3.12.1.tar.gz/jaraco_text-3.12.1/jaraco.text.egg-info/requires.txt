@@ -1,0 +1,27 @@
+jaraco.functools
+jaraco.context>=4.1
+autocommand
+inflect
+more_itertools
+
+[:python_version < "3.9"]
+importlib_resources
+
+[doc]
+sphinx>=3.5
+jaraco.packaging>=9.3
+rst.linker>=1.9
+furo
+sphinx-lint
+jaraco.tidelift>=1.4
+
+[test]
+pytest!=8.1.*,>=6
+pytest-checkdocs>=2.4
+pytest-cov
+pytest-mypy
+pytest-enabler>=2.2
+pytest-ruff>=0.2.1
+
+[test:python_version < "3.10"]
+pathlib2
