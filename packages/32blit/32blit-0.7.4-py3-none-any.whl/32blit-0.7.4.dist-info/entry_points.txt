@@ -1,0 +1,2 @@
+[console_scripts]
+32blit = ttblit:main
