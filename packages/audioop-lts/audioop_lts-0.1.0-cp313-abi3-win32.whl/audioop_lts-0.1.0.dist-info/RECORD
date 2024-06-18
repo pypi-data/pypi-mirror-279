@@ -1,0 +1,9 @@
+audioop/__init__.py,sha256=4ep-Vq3-_RVpEMyra728Kioj--DnU8goSmmQ0k5hpHw,818
+audioop/__init__.pyi,sha256=LNsmmloNjDkTfP96EtwunRyuql5MXRUUVmySv6AYsZY,2225
+audioop/_audioop.pyd,sha256=QrRbLDIpJNClTAyzRQ4iecJEzRwKO6hReJ2Eq5mYmyU,38912
+audioop/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audioop_lts-0.1.0.dist-info/LICENSE,sha256=NDI35L5OF4e7VAGavNYdSEZax_wuEvQYOEb6aLhEc3E,14215
+audioop_lts-0.1.0.dist-info/METADATA,sha256=JUmVnA4Mn_CJetf-s6xqtLsxyUnthHWFSPRndY3XjTA,1701
+audioop_lts-0.1.0.dist-info/WHEEL,sha256=ZUtvFiNnJnBmaoBtWBqj0UmwTgP0dIszMcC1pIMctak,97
+audioop_lts-0.1.0.dist-info/top_level.txt,sha256=zl-DTW3eCS46Ddt9xGWY-5evE7-FSvwemDaBMelsgCs,8
+audioop_lts-0.1.0.dist-info/RECORD,,
