@@ -1,0 +1,94 @@
+# SS-RawData-API
+Python interface for the Sheffield Solar `rawdata` API endpoints.
+
+Documentation for the API is [here](https://docs.google.com/document/d/1cqBbKyWuM5fkYf9qzymYBtwo9VIqtZ8E48Tf8kOzXCA/).
+
+## How do I get set up?
+
+### Deployment
+- Run `pip install ss-rawdata-api`
+
+### Development
+* Clone the repo
+* Run `pip install -e .` (ideally in a conda env or similar)
+
+## Usage and code examples
+
+```python
+from datetime import datetime
+import pytz
+
+from ss_rawdata_api import SSRawDataAPI
+
+ss_rawdata_api = SSRawDataAPI(
+    user_id=1,
+    api_key="1a2b3c4d"
+)
+system_metadata = ss_rawdata_api.metadata
+generation_data = ss_rawdata_api.download(
+    start=pytz.utc.localize(datetime(2023, 1, 1, 0, 5)),
+    end=pytz.utc.localize(datetime(2023, 1, 31, 0, 0)),
+    period=5,
+    n_processes=10
+)
+```
+
+## Command Line Utilities
+
+The command line utility can be used to download data to a CSV file:
+
+```
+>> ss_rawdata_api -h
+usage: ss_rawdata_api.py [-h] -s "<yyyy-mm-dd HH:MM:SS>" -e "<yyyy-mm-dd HH:MM:SS>" -o </path/to/output/dir>
+                         [--period <5|30>] [--n_processes <n_processes>]
+                         [--credentials </path/to/credentials/file.yaml>] [-http <http_proxy>]
+                         [-https <https_proxy>] [--download-metadata]
+
+This is a command line interface (CLI) for the SS-RawData-API module
+
+options:
+  -h, --help            show this help message and exit
+  -s "<yyyy-mm-dd HH:MM:SS>", --start "<yyyy-mm-dd HH:MM:SS>"
+                        Specify a UTC start date in 'yyyy-mm-dd HH:MM:SS' format (inclusive).
+  -e "<yyyy-mm-dd HH:MM:SS>", --end "<yyyy-mm-dd HH:MM:SS>"
+                        Specify a UTC end date in 'yyyy-mm-dd HH:MM:SS' format (inclusive).
+  -o </path/to/output/dir>, --outdir </path/to/output/dir>
+                        Specify a directory to write data to.
+  --period <5|30>       Desired temporal resolution (in minutes) for PV outturn estimates. Default is 5.
+  --n_processes <n_processes>
+                        Number of threads to use when downloading historical data.
+  --credentials </path/to/credentials/file.yaml>
+                        Specify a YAML file containing API credentials.
+  -http <http_proxy>, --http-proxy <http_proxy>
+                        HTTP Proxy address
+  -https <https_proxy>, --https-proxy <https_proxy>
+                        HTTPS Proxy address
+  --download-metadata   Download the system metadata as a separate file.
+
+Jamie Taylor, 2023-07-05
+```
+
+The credentials file should look something like:
+
+```yaml
+ss_rawdata_api:
+    user_id: 1
+    api_key: 1a2b3c4d
+```
+
+
+## Documentation
+
+* To be added
+
+## Who do I talk to?
+
+* Jamie Taylor - [jamie.taylor@sheffield.ac.uk](mailto:jamie.taylor@sheffield.ac.uk "Email Jamie") - [SheffieldSolar](https://github.com/SheffieldSolar)
+
+## Authors
+
+* **Jamie Taylor** - [SheffieldSolar](https://github.com/SheffieldSolar)
+
+## License
+
+No license is defined yet - use at your own risk.

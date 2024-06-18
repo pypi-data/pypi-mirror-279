@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ss-rawdata-api"
+version = "0.1.0"
+description = "Python interface for the Sheffield Solar rawdata API endpoints."
+readme = "README.md"
+requires-python = ">=3.10"
+#license = {file = "LICENSE.txt"}
+keywords = ["Sheffield Solar", "API", "data", "solar", "pv"]
+authors = [
+  {name = "Jamie Taylor", email = "jamie.taylor@sheffield.ac.uk"}
+]
+maintainers = [
+  {name = "Jamie Taylor", email = "jamie.taylor@sheffield.ac.uk"},
+  {name = "Julian Briggs", email = "julian.briggs@sheffield.ac.uk"},
+  {name = "Andrew Richards", email = "a.c.richards@sheffield.ac.uk"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  #"License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent"
+]
+dynamic = ["dependencies"]
+
+
+[project.urls]
+"Homepage" = "https://docs.google.com/document/d/1cqBbKyWuM5fkYf9qzymYBtwo9VIqtZ8E48Tf8kOzXCA/edit"
+"Bug Reports" = "https://github.com/SheffieldSolar/SS-RawData-API/issues"
+"Source" = "https://github.com/SheffieldSolar/SS-RawData-API"
+
+
+[project.scripts]
+ss_rawdata_api = "ss_rawdata_api.ss_rawdata_api:main"
+
+
+[tool.setuptools.package-data]
+"ss_rawdata_api.api_credentials_example.yaml" = ["api_credentials_example.yaml"]
+
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+#include = []
+exclude = ["data*"]
