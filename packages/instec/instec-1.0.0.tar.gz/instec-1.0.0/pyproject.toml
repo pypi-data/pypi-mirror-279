@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "instec"
+version = "1.0.0"
+authors = [
+  { name="Matthew Chen", email="matthew.chen@instec.com" },
+]
+description = "A basic implementation of SCPI commands for the MK2000B in Python."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "pyserial >= 3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/instecinc/pyinstec"
+Issues = "https://github.com/instecinc/pyinstec/issues"
