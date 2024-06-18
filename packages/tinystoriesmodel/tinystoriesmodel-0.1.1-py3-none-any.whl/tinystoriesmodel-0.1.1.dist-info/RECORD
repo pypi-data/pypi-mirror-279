@@ -1,0 +1,8 @@
+tiny_model/__init__.py,sha256=uSbPO9u09AOZyZDB541nDKLt07UUS6KuRjM917kQ0ic,74
+tiny_model/model.py,sha256=8Qb4RJ6VLM7ud25KhqazsdxTc9NBjgPuQwRuUv1hk3g,8472
+tiny_model/neo_tok_ids_to_ts.pt,sha256=1XWvK2cPzB9Onzh1Od7qMbr3NpMcnsOekIuM6GJnvFM,403278
+tiny_model/tokenization.py,sha256=AgrI27jGFWPkbM92F0PC5sDMe4ZACddv-pdnqewPQT0,6670
+tiny_model/ts_tok_ids_to_neo.pt,sha256=uvKel_o3f6Syj2jRSYQ05VrjJzkhjBZoGYfRo2yksbU,81230
+tinystoriesmodel-0.1.1.dist-info/METADATA,sha256=7IT0Z3vBq2jlvC2T24p4BmJl1QF95D4ht1Xx7HzaU9U,1860
+tinystoriesmodel-0.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tinystoriesmodel-0.1.1.dist-info/RECORD,,
