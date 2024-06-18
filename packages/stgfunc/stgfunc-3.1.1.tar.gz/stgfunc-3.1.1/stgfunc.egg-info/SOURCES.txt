@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+stgfunc/__init__.py
+stgfunc/_metadata.py
+stgfunc/experimental.py
+stgfunc/other.py
+stgfunc/py.typed
+stgfunc.egg-info/PKG-INFO
+stgfunc.egg-info/SOURCES.txt
+stgfunc.egg-info/dependency_links.txt
+stgfunc.egg-info/requires.txt
+stgfunc.egg-info/top_level.txt
