@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+srai_openai/__init__.py
+srai_openai/client_openai_chatgpt.py
+srai_openai/client_openai_embedding.py
+srai_openai/client_openai_whisper.py
+srai_openai.egg-info/PKG-INFO
+srai_openai.egg-info/SOURCES.txt
+srai_openai.egg-info/dependency_links.txt
+srai_openai.egg-info/requires.txt
+srai_openai.egg-info/top_level.txt
