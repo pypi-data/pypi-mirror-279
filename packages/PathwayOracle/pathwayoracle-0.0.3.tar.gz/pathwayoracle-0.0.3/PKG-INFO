@@ -1,0 +1,30 @@
+Metadata-Version: 2.3
+Name: PathwayOracle
+Version: 0.0.3
+Summary: An LLM-empowered, KG-Driven, Gene Pathway Analysis Tool
+Project-URL: Homepage, https://github.com/yoyo4581/PathwayOracle
+Project-URL: Issues, https://github.com/yoyo4581/PathwayOracle/issues
+Author-email: Yahya Al Sabeh <yahyaalsabeh@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Requires-Dist: hdbscan
+Requires-Dist: langchain
+Requires-Dist: langchain-community
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-text-splitters
+Requires-Dist: matplotlib
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: python-dotenv
+Requires-Dist: scikit-learn
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
