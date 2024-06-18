@@ -1,0 +1,16 @@
+jewcal/__init__.py,sha256=JyVfrGJnyibwSJhUrxkIvyweyXDPToTFLFcQ0YnR-V0,887
+jewcal/__main__.py,sha256=vwUU2UgVii0RHuMa7AxRY4NxaXMuVXQOeiBK1JMKaEQ,610
+jewcal/constants.py,sha256=hiOnyNox3pXv4gL69uGFFLtsO31N2ylqxL8tAEvj4G0,3657
+jewcal/core.py,sha256=MZVkg7ZQcj6wiiz005JqRsKULHvExDec-v57SHzNC2o,9752
+jewcal/py.typed,sha256=7pj9OxyIhuSo3frkAs49_eER-3aGLySlTYC4WhJ-hfk,87
+jewcal/models/__init__.py,sha256=DnTDYvRBWPHXxCst1edMZ3YBuXrI-LGg6OHhaag31Hw,29
+jewcal/models/events.py,sha256=6IQMibx4lLB_Mb3j_MTMpflNUi401-usVAnLVvmSAx0,2514
+jewcal/models/jewish_date.py,sha256=8gE7q21xdBEnqB-cP6czKjYVYCekC0l2uFA3FcSEoOQ,1961
+jewcal/utils/__init__.py,sha256=yBFm7AVNd4wsNHi7bvsO2ewOfifC8PClyONxJYVwAz8,28
+jewcal/utils/calculations.py,sha256=aeiUuTy58AX076xR9QUORKVbB-bqFPenhVCQVtZ5Utw,9206
+jewcal-0.6.1.dist-info/LICENSE,sha256=4UaFv-3ooxPOhz5FJz2S_8sAiC37FdvV7TfD30ZLBdo,1066
+jewcal-0.6.1.dist-info/METADATA,sha256=8bVd_QCNbmb6Y4eljk32qGFBl4N41_G6OgiSf6jeQPQ,4044
+jewcal-0.6.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+jewcal-0.6.1.dist-info/entry_points.txt,sha256=a727SP7xkkYkzehYdxOxLgrR2ydF1Nmk5lifd-lIWU4,48
+jewcal-0.6.1.dist-info/top_level.txt,sha256=lfiwSPaYchQQEGwfW_bKwgDUS-VS_lp-gtGh5qd-QI4,7
+jewcal-0.6.1.dist-info/RECORD,,
