@@ -1,0 +1,3 @@
+[console_scripts]
+scrape-and-ntfy = scrape_and_ntfy.__main__:main
+
