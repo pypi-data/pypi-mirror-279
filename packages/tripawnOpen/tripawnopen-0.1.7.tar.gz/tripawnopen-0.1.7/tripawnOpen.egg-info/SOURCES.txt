@@ -1,0 +1,7 @@
+setup.py
+tripawnOpen/__init__.py
+tripawnOpen/operation.py
+tripawnOpen.egg-info/PKG-INFO
+tripawnOpen.egg-info/SOURCES.txt
+tripawnOpen.egg-info/dependency_links.txt
+tripawnOpen.egg-info/top_level.txt
