@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: dekprompt
+Version: 0.1.4
+Summary: Prompt with applying
+Author-Email: sanzenwin <sanzenwin@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: InquirerPy<=0.3.4
+Requires-Dist: dektools[exec,yaml]<1.0.0
+Description-Content-Type: text/markdown
+
+Prompt with applying
