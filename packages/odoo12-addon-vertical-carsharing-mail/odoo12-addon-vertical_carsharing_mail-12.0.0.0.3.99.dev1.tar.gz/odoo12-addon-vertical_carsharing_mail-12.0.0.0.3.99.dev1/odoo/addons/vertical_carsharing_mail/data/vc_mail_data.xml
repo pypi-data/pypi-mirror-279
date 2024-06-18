@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <template id="message_notification_email" inherit_id="mail.message_notification_email">
+      <!--Remove has access button-->
+      <xpath expr="//div[1]/div[1]" position="attributes">
+        <attribute name="style">display:none</attribute>
+      </xpath>
+      <xpath expr="//div[1]/div[2]" position="attributes">
+        <attribute name="style">display:none</attribute>
+      </xpath>
+      <!--Remove "Powered by Odoo"-->
+      <xpath expr="//div[1]/p[1]" position="attributes">
+        <attribute name="style">display:none</attribute>
+      </xpath>
+    </template>
+    
+    <template id="mail_notification_paynow" inherit_id="mail.mail_notification_paynow">
+      <!--Remove "your model" sentence-->
+      <xpath expr="//tbody[1]/tr[1]/td[1]/table[1]/tr[1]/td[1]/span[1]" position="attributes">
+        <attribute name="style">display:none</attribute>
+      </xpath>
+      <!--Remove has access button-->
+      <xpath expr="//tbody[1]/tr[2]/td[1]/div[1]" position="attributes">
+        <attribute name="style">display:none</attribute>
+      </xpath>
+      <!--Remove "Powered by Odoo"-->
+      <xpath expr="//td[@style='min-width: 590px; padding: 8px; font-size:11px;']" position="attributes">
+        <attribute name="style">min-width: 590px; padding: 8px; font-size:11px; display: none;</attribute>
+      </xpath>
+    </template>
+
+  </data>
+</odoo>

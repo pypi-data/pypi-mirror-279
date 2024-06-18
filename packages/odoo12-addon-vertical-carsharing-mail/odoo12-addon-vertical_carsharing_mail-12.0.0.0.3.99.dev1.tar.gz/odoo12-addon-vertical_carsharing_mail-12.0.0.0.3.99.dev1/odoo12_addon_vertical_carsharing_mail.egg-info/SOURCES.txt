@@ -1,0 +1,12 @@
+setup.py
+odoo/addons/vertical_carsharing_mail/__init__.py
+odoo/addons/vertical_carsharing_mail/__manifest__.py
+odoo/addons/vertical_carsharing_mail/data/vc_mail_data.xml
+odoo/addons/vertical_carsharing_mail/models/__init__.py
+odoo/addons/vertical_carsharing_mail/models/account_invoice.py
+odoo12_addon_vertical_carsharing_mail.egg-info/PKG-INFO
+odoo12_addon_vertical_carsharing_mail.egg-info/SOURCES.txt
+odoo12_addon_vertical_carsharing_mail.egg-info/dependency_links.txt
+odoo12_addon_vertical_carsharing_mail.egg-info/not-zip-safe
+odoo12_addon_vertical_carsharing_mail.egg-info/requires.txt
+odoo12_addon_vertical_carsharing_mail.egg-info/top_level.txt
