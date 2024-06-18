@@ -1,0 +1,10 @@
+typing_extensions
+reactivex
+
+[pillow]
+
+[pillow:sys_platform != "linux" or platform_machine != "x86_64"]
+Pillow
+
+[pillow:sys_platform == "linux" and platform_machine == "x86_64"]
+pillow-simd
