@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mgallery"
+authors = [
+  {name = "Roopkumar Das", email = "roopkumards@gmail.com"},
+]
+version = "0.1.1"
+description = "a cli tool to create gallery out of txt and png/jpeg files"
+readme = "README.md"
+license = {file = "LICENSE.md"}
+keywords = ["gallery", "image to webpage", "twitter like gallery"]
+dependencies = [
+    'pillow>=8.3.0',
+]
+
+[project.scripts]
+mgallery = "mgallery.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/RoopkumarD/mgallery"
+Repository = "https://github.com/RoopkumarD/mgallery"
+Issues = "https://github.com/RoopkumarD/mgallery/issues"
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]

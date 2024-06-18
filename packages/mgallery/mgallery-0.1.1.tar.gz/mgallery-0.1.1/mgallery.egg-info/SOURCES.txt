@@ -1,0 +1,14 @@
+LICENSE.md
+MANIFEST.in
+README.md
+pyproject.toml
+mgallery/__init__.py
+mgallery/__main__.py
+mgallery/htmlcreator.py
+mgallery.egg-info/PKG-INFO
+mgallery.egg-info/SOURCES.txt
+mgallery.egg-info/dependency_links.txt
+mgallery.egg-info/entry_points.txt
+mgallery.egg-info/requires.txt
+mgallery.egg-info/top_level.txt
+mgallery/javascripts/tailwindcss.js
