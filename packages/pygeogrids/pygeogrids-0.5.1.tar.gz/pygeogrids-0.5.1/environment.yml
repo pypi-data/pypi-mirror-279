@@ -1,0 +1,22 @@
+name: pygeogrids
+channels:
+  - conda-forge
+dependencies:
+  - geos
+  - gdal
+  - matplotlib
+  - cartopy
+  - ipykernel
+  - pip
+  - pip:
+    - numpy
+    - pandas
+    - netCDF4
+    - pykdtree
+    - pyproj
+    - scipy
+    - sphinx
+    - nbsphinx
+    - sphinx_rtd_theme
+    - pytest
+    - pytest-cov
