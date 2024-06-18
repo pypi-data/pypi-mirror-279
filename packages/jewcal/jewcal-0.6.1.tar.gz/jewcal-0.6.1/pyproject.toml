@@ -1,0 +1,153 @@
+[build-system]
+requires = ['setuptools', 'setuptools_scm[toml]']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+
+[tool.setuptools.package-data]
+jewcal = [
+	'py.typed',
+]
+
+[project]
+name = 'jewcal'
+description = 'Convert Gregorian to Jewish dates with holidays for Diaspora and Israel.'
+keywords = [
+  'jewish calendar',
+  'hebrew calendar',
+]
+license = {file = 'LICENSE'}
+dynamic = ['version']
+authors = [{ name='essel-dev'}]
+readme = 'README.rst'
+requires-python = '>=3.10'
+dependencies = []
+classifiers = [
+	'License :: OSI Approved :: MIT License',
+	'Operating System :: OS Independent',
+	'Programming Language :: Python :: 3.10',
+	'Programming Language :: Python :: 3.11',
+	'Programming Language :: Python :: 3.12',
+	'Topic :: Utilities',
+	'Typing :: Typed',
+]
+
+[project.urls]
+'GitHub' = 'https://github.com/essel-dev/jewcal'
+'Documentation' = 'https://jewcal.readthedocs.io/'
+'Changelog' = 'https://github.com/essel-dev/jewcal/releases'
+'Bug Tracker' = 'https://github.com/essel-dev/jewcal/issues'
+
+[project.scripts]
+jewcal = 'jewcal.__main__:main'
+
+[project.optional-dependencies]
+dev = [
+	'pre-commit',
+	'tox',
+	'sphinx',
+	'sphinx-rtd-theme',
+]
+
+[tool.tox]
+legacy_tox_ini = """
+	[tox]
+	envlist =
+		py{310,311,312}
+        ruff-format
+		ruff-lint
+		pylint
+		mypy
+		darglint
+		pre-commit
+		docs
+
+	[testenv]
+	package = wheel
+	wheel_build_env = .pkg
+	deps =
+		coverage
+		py310: coverage[toml]
+	commands =
+		coverage run -m unittest discover
+		py312: coverage report -m
+
+	[testenv:pylint]
+	deps = pylint
+	commands = pylint src tests docs
+
+	[testenv:ruff-lint]
+	deps = ruff
+	commands = ruff check --fix
+
+	[testenv:ruff-format]
+	deps = ruff
+	commands = ruff format
+
+	[testenv:mypy]
+	deps = mypy
+	commands = mypy
+
+	[testenv:darglint]
+	deps = darglint
+	commands = darglint -s google src tests docs
+
+	[testenv:pre-commit]
+	deps = pre-commit
+	commands = pre-commit run --all-files
+
+	[testenv:docs]
+	changedir=docs
+	deps =
+		sphinx
+		sphinx-rtd-theme
+	allowlist_externals = make
+	commands = make clean html
+
+	[gh-actions]
+	python =
+		3.10: py310
+		3.11: py311
+		3.12: py312, isort, ruff-format, ruff-lint, pylint, mypy, darglint
+"""
+
+[tool.coverage.run]
+source = [
+	'src'
+]
+
+[tool.ruff.lint]
+select = [
+	'ALL',
+]
+ignore = [
+	'ANN101', # flake8-annotations : missing-type-self: deprecated
+	'PT009'  # Use a regular `assert` instead of unittest-style `assertEqual`
+]
+
+[tool.ruff.lint.per-file-ignores]
+'docs/source/conf.py' = ['INP001']  # __init__.py missing
+'src/jewcal/__main__.py' = ['T201']  # print
+
+[tool.ruff.lint.pydocstyle]
+convention = 'google'
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'
+
+[tool.ruff.format]
+quote-style = 'single'
+docstring-code-format = true
+
+[tool.mypy]
+files = 'src, tests, docs'
+strict = true
+show_error_codes = true
+enable_error_code = ['ignore-without-code', 'redundant-expr', 'truthy-bool']
+warn_unreachable = true
+namespace_packages = true
+explicit_package_bases = true
+
+[[tool.mypy.overrides]]
+module = 'jewcal.*'
+ignore_missing_imports = true

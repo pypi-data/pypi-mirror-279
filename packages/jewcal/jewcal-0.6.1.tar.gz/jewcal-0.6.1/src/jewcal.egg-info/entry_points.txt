@@ -1,0 +1,2 @@
+[console_scripts]
+jewcal = jewcal.__main__:main
