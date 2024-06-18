@@ -1,0 +1,133 @@
+Metadata-Version: 2.1
+Name: kiara_plugin.tabular
+Version: 0.5.5
+Summary: kiara data-types and modules for working with tables and databases.
+Author-email: Markus Binsteiner <markus@frkl.io>
+License: MPL-2.0
+Project-URL: homepage, https://github.com/DHARPA-Project/kiara_plugin.tabular
+Project-URL: documentation, https://DHARPA-Project.github.io/kiara_plugin.tabular
+Project-URL: repository, https://github.com/DHARPA-Project/kiara_plugin.tabular
+Keywords: kiara
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: AUTHORS.md
+Requires-Dist: kiara<0.6.0,>=0.5.11
+Requires-Dist: kiara_plugin.core_types<0.6.0,>=0.5.1
+Requires-Dist: duckdb<1.1.0,>=1.0.0
+Requires-Dist: numpy<2.0.0
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: polars>=0.18.0
+Requires-Dist: pyarrow>=12.0.0
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: sqlalchemy-utc>=0.10.0
+Requires-Dist: sqlalchemy-utils>=0.38.0
+Requires-Dist: sqlite-utils==3.30
+Provides-Extra: dev-documentation
+Requires-Dist: kiara[dev_documentation]; extra == "dev-documentation"
+Provides-Extra: dev-testing
+Requires-Dist: kiara[dev_testing]; extra == "dev-testing"
+Requires-Dist: pandas-stubs; extra == "dev-testing"
+Provides-Extra: dev-utils
+Requires-Dist: kiara[dev_utils]; extra == "dev-utils"
+
+[![PyPI status](https://img.shields.io/pypi/status/kiara_plugin.tabular.svg)](https://pypi.python.org/pypi/kiara_plugin.tabular/)
+[![PyPI version](https://img.shields.io/pypi/v/kiara_plugin.tabular.svg)](https://pypi.python.org/pypi/kiara_plugin.tabular/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/kiara_plugin.tabular.svg)](https://pypi.python.org/pypi/kiara_plugin.tabular/)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FDHARPA-Project%2Fkiara%2Fbadge%3Fref%3Ddevelop&style=flat)](https://actions-badge.atrox.dev/DHARPA-Project/kiara_plugin.tabular/goto?ref=develop)
+[![Coverage Status](https://coveralls.io/repos/github/DHARPA-Project/kiara_plugin.tabular/badge.svg?branch=develop)](https://coveralls.io/github/DHARPA-Project/kiara_plugin.tabular?branch=develop)
+[![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+# [**kiara**](https://dharpa.org/kiara.documentation) plugin: (tabular)
+
+kiara data-types and modules for working with tables and databases.
+
+ - Documentation: [https://DHARPA-Project.github.io/kiara_plugin.tabular](https://DHARPA-Project.github.io/kiara_plugin.tabular)
+ - Code: [https://github.com/DHARPA-Project/kiara_plugin.tabular](https://github.com/DHARPA-Project/kiara_plugin.tabular)
+ - `kiara`: [https://dharpa.org/kiara.documentation](https://dharpa.org/kiara.documentation)
+
+## Description
+
+TODO
+
+## Development
+
+### Requirements
+
+- Python (version >= 3.8)
+- pip, virtualenv
+- git
+- make (on Linux / Mac OS X -- optional)
+
+
+### Prepare development environment
+
+If you only want to work on the modules, and not the core *Kiara* codebase, follow the instructions below. Otherwise, please
+check the notes on how to setup a *Kiara* development environment under (TODO).
+
+#### Using `pixi` (recommended)
+
+The recommended way to setup a development environment is to use [pixi](https://github.com/prefix-dev/pixi). Check out [their install instructions](https://github.com/prefix-dev/pixi#installation).
+
+Once you have `pixi` installed, you need to initialize the environment once:
+
+```
+pixi run install-dev-dependencies
+```
+
+You also need to do this whenever a depdendency of this plugin is updated (for example the core `kiara` package).
+
+Once that is done, you can enter the environment with:
+
+```
+pixi shell
+```
+
+This will start a sub-shell with the virtual environment activated, and all dependencies of the plugin package installed. To confirm it works, you can run any `kiara` command:
+
+```
+kiara --version
+# or
+kiara operation list
+# or
+...
+...
+```
+
+Once you are finished with your development session, you can exit the sub-shell as you would normally do in such cases:
+
+```
+exit
+```
+
+Alternatively, you can also run the `kiara` executable directly, it is located in `.pixi/env/bin/kiara`. So either adapt your `PATH` variable, or do something like:
+
+```
+.pixi/env/bin/kiara operation list
+```
+
+In most cases it's recommended to use a pixi shell though.
+
+
+### Using pre-defined development-related tasks
+
+The included `pyproject.toml` file includes some useful tasks that help with development:
+
+- `pixi run pre-commit-check`: runs a set of checks against all files
+- `pixi run tests`: runs the unit tests
+- `pixi run mypy`: run mypy checks
+
+## Copyright & license
+
+This project is MPL v2.0 licensed, for the license text please check the [LICENSE](/LICENSE) file in this repository.
