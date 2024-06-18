@@ -1,0 +1,304 @@
+Metadata-Version: 2.1
+Name: fenics_pulse
+Version: 2024.0.0
+Summary: A python library based on FEniCS that aims to solve problems in continuum mechanics, in particular cardiac mechanics
+Author-email: Henrik Finsberg <henriknf@simula.no>
+License: GNU LESSER GENERAL PUBLIC LICENSE
+                               Version 3, 29 June 2007
+        
+         Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+         Everyone is permitted to copy and distribute verbatim copies
+         of this license document, but changing it is not allowed.
+        
+        
+          This version of the GNU Lesser General Public License incorporates
+        the terms and conditions of version 3 of the GNU General Public
+        License, supplemented by the additional permissions listed below.
+        
+          0. Additional Definitions.
+        
+          As used herein, "this License" refers to version 3 of the GNU Lesser
+        General Public License, and the "GNU GPL" refers to version 3 of the GNU
+        General Public License.
+        
+          "The Library" refers to a covered work governed by this License,
+        other than an Application or a Combined Work as defined below.
+        
+          An "Application" is any work that makes use of an interface provided
+        by the Library, but which is not otherwise based on the Library.
+        Defining a subclass of a class defined by the Library is deemed a mode
+        of using an interface provided by the Library.
+        
+          A "Combined Work" is a work produced by combining or linking an
+        Application with the Library.  The particular version of the Library
+        with which the Combined Work was made is also called the "Linked
+        Version".
+        
+          The "Minimal Corresponding Source" for a Combined Work means the
+        Corresponding Source for the Combined Work, excluding any source code
+        for portions of the Combined Work that, considered in isolation, are
+        based on the Application, and not on the Linked Version.
+        
+          The "Corresponding Application Code" for a Combined Work means the
+        object code and/or source code for the Application, including any data
+        and utility programs needed for reproducing the Combined Work from the
+        Application, but excluding the System Libraries of the Combined Work.
+        
+          1. Exception to Section 3 of the GNU GPL.
+        
+          You may convey a covered work under sections 3 and 4 of this License
+        without being bound by section 3 of the GNU GPL.
+        
+          2. Conveying Modified Versions.
+        
+          If you modify a copy of the Library, and, in your modifications, a
+        facility refers to a function or data to be supplied by an Application
+        that uses the facility (other than as an argument passed when the
+        facility is invoked), then you may convey a copy of the modified
+        version:
+        
+           a) under this License, provided that you make a good faith effort to
+           ensure that, in the event an Application does not supply the
+           function or data, the facility still operates, and performs
+           whatever part of its purpose remains meaningful, or
+        
+           b) under the GNU GPL, with none of the additional permissions of
+           this License applicable to that copy.
+        
+          3. Object Code Incorporating Material from Library Header Files.
+        
+          The object code form of an Application may incorporate material from
+        a header file that is part of the Library.  You may convey such object
+        code under terms of your choice, provided that, if the incorporated
+        material is not limited to numerical parameters, data structure
+        layouts and accessors, or small macros, inline functions and templates
+        (ten or fewer lines in length), you do both of the following:
+        
+           a) Give prominent notice with each copy of the object code that the
+           Library is used in it and that the Library and its use are
+           covered by this License.
+        
+           b) Accompany the object code with a copy of the GNU GPL and this license
+           document.
+        
+          4. Combined Works.
+        
+          You may convey a Combined Work under terms of your choice that,
+        taken together, effectively do not restrict modification of the
+        portions of the Library contained in the Combined Work and reverse
+        engineering for debugging such modifications, if you also do each of
+        the following:
+        
+           a) Give prominent notice with each copy of the Combined Work that
+           the Library is used in it and that the Library and its use are
+           covered by this License.
+        
+           b) Accompany the Combined Work with a copy of the GNU GPL and this license
+           document.
+        
+           c) For a Combined Work that displays copyright notices during
+           execution, include the copyright notice for the Library among
+           these notices, as well as a reference directing the user to the
+           copies of the GNU GPL and this license document.
+        
+           d) Do one of the following:
+        
+               0) Convey the Minimal Corresponding Source under the terms of this
+               License, and the Corresponding Application Code in a form
+               suitable for, and under terms that permit, the user to
+               recombine or relink the Application with a modified version of
+               the Linked Version to produce a modified Combined Work, in the
+               manner specified by section 6 of the GNU GPL for conveying
+               Corresponding Source.
+        
+               1) Use a suitable shared library mechanism for linking with the
+               Library.  A suitable mechanism is one that (a) uses at run time
+               a copy of the Library already present on the user's computer
+               system, and (b) will operate properly with a modified version
+               of the Library that is interface-compatible with the Linked
+               Version.
+        
+           e) Provide Installation Information, but only if you would otherwise
+           be required to provide such information under section 6 of the
+           GNU GPL, and only to the extent that such information is
+           necessary to install and execute a modified version of the
+           Combined Work produced by recombining or relinking the
+           Application with a modified version of the Linked Version. (If
+           you use option 4d0, the Installation Information must accompany
+           the Minimal Corresponding Source and Corresponding Application
+           Code. If you use option 4d1, you must provide the Installation
+           Information in the manner specified by section 6 of the GNU GPL
+           for conveying Corresponding Source.)
+        
+          5. Combined Libraries.
+        
+          You may place library facilities that are a work based on the
+        Library side by side in a single library together with other library
+        facilities that are not Applications and are not covered by this
+        License, and convey such a combined library under terms of your
+        choice, if you do both of the following:
+        
+           a) Accompany the combined library with a copy of the same work based
+           on the Library, uncombined with any other library facilities,
+           conveyed under the terms of this License.
+        
+           b) Give prominent notice with the combined library that part of it
+           is a work based on the Library, and explaining where to find the
+           accompanying uncombined form of the same work.
+        
+          6. Revised Versions of the GNU Lesser General Public License.
+        
+          The Free Software Foundation may publish revised and/or new versions
+        of the GNU Lesser General Public License from time to time. Such new
+        versions will be similar in spirit to the present version, but may
+        differ in detail to address new problems or concerns.
+        
+          Each version is given a distinguishing version number. If the
+        Library as you received it specifies that a certain numbered version
+        of the GNU Lesser General Public License "or any later version"
+        applies to it, you have the option of following the terms and
+        conditions either of that published version or of any later version
+        published by the Free Software Foundation. If the Library as you
+        received it does not specify a version number of the GNU Lesser
+        General Public License, you may choose any version of the GNU Lesser
+        General Public License ever published by the Free Software Foundation.
+        
+          If the Library as you received it specifies that a proxy can decide
+        whether future versions of the GNU Lesser General Public License shall
+        apply, that proxy's public statement of acceptance of any version is
+        permanent authorization for you to choose that version for the
+        Library.
+        
+Project-URL: Homepage, https://finsberg.github.io/pulse/
+Project-URL: Documentation, https://finsberg.github.io/pulse/
+Project-URL: Source, https://github.com/finsberg/pulse
+Project-URL: Tracker, https://github.com/finsberg/pulse/issues
+Keywords: finite element,mechanics,cardiac,heart
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: daiquiri
+Requires-Dist: h5py
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: all
+Requires-Dist: fenics-pulse[test] ; extra == 'all'
+Requires-Dist: fenics-pulse[docs] ; extra == 'all'
+Requires-Dist: fenics-pulse[mesh] ; extra == 'all'
+Requires-Dist: fenics-pulse[dev] ; extra == 'all'
+Provides-Extra: dev
+Requires-Dist: bump2version ; extra == 'dev'
+Requires-Dist: ipython ; extra == 'dev'
+Requires-Dist: pdbpp ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: jupyter-book ; extra == 'docs'
+Requires-Dist: sphinxcontrib-bibtex ; extra == 'docs'
+Provides-Extra: mesh
+Requires-Dist: gmsh ; extra == 'mesh'
+Requires-Dist: ldrb ; extra == 'mesh'
+Requires-Dist: meshio ; extra == 'mesh'
+Provides-Extra: plot
+Requires-Dist: fenics-plotly ; extra == 'plot'
+Requires-Dist: matplotlib ; extra == 'plot'
+Provides-Extra: test
+Requires-Dist: jupytext ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: fenics-plotly ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: pytest-env ; extra == 'test'
+Requires-Dist: cardiac-geometries >=1.1.2 ; extra == 'test'
+
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/pulse/badges/version.svg)](https://anaconda.org/conda-forge/pulse)
+[![Anaconda-Server Badge](https://anaconda.org/conda-forge/pulse/badges/downloads.svg)](https://anaconda.org/conda-forge/pulse)
+[![CI](https://github.com/finsberg/pulse/actions/workflows/main.yml/badge.svg)](https://github.com/finsberg/pulse/actions/workflows/main.yml)
+[![Platform](https://anaconda.org/finsberg/pulse/badges/platforms.svg)](https://anaconda.org/finsberg/pulse)
+[![status](http://joss.theoj.org/papers/9abee735e6abadabe9252d5fcc84fd40/status.svg)](http://joss.theoj.org/papers/9abee735e6abadabe9252d5fcc84fd40)
+[![codecov](https://codecov.io/gh/finsberg/pulse/branch/master/graph/badge.svg?token=cZEkiXSOKm)](https://codecov.io/gh/finsberg/pulse)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/finsberg/pulse/master.svg)](https://results.pre-commit.ci/latest/github/finsberg/pulse/master)
+
+# pulse
+
+A software for solving problems in cardiac mechanics.
+
+## Overview
+`pulse` is a software based on [FEniCS](https://fenicsproject.org) that aims to solve problems in cardiac mechanics (but is easily extended to solve more general problems in continuum mechanics). `pulse` is a results of the author's [PhD thesis](https://www.duo.uio.no/handle/10852/62015), where most of the relevant background for the code can be found.
+
+While FEniCS offers a general framework for solving PDEs, `pulse` specifically targets problems in continuum mechanics. Therefore, most of the code for applying compatible boundary conditions, formulating the governing equations, choosing appropriate spaces for the solutions and applying iterative strategies etc. are already implemented, so that the user can focus on the actual problem he/she wants to solve rather than implementing all the necessary code for formulating and solving the underlying equations.
+
+## Installation instructions
+
+### Install with pip
+`pulse` can be installed directly from [PyPI](https://pypi.org/project/fenics-pulse/)
+```
+python3 -m pip install fenics-pulse
+```
+or you can install the most recent development version
+```
+python3 -m pip install git+https://github.com/finsberg/pulse.git
+```
+
+### Install with conda
+You can also install the package using `conda`
+```
+conda install -c conda-forge pulse
+```
+
+### Docker
+It is also possible to use Docker. There is a prebuilt docker image
+using the development version of FEniCS, python3.10 and pulse. You can get it by typing
+```
+docker pull ghcr.io/finsberg/pulse:latest
+```
+
+## Requirements
+* FEniCS version 2019.1.0 or newer (older versions might work but is not tested against anymore)
+
+Note that if you install FEniCS using anaconda then you will not get support for parallel HDF5
+see e.g [this issue](https://github.com/conda-forge/hdf5-feedstock/issues/51).
+
+## Getting started
+Check out the demos in the demo folder. These demos are currently in jupyter notebook format.
+If you want to run them as python files you can convert the notebooks to `.py` files using e.g [jupytext](https://jupytext.readthedocs.io/en/latest/)
+
+If you have a question about how to use the software you can ask a question or start a new discussion in the [discussion section](https://github.com/finsberg/pulse/discussions)
+
+## Automated test
+Test are provided in the folder [`tests`](tests). You can run the test
+with `pytest`
+```
+python3 -m pytest tests -vv
+```
+
+## Documentation
+Documentation can be found at [finsberg.github.io/pulse](https://finsberg.github.io/pulse)
+You can create documentation yourselves by typing `make html` in the
+root directory.
+
+## Citing
+
+If you use `pulse` in your own research, please cite the [JOSS paper](https://joss.theoj.org/papers/10.21105/joss.01539)
+
+```
+@article{pulse,
+  doi = {10.21105/joss.01539},
+  url = {https://doi.org/10.21105/joss.01539},
+  year  = {2019},
+  month = {sept},
+  publisher = {The Open Journal},
+  volume = {4},
+  number = {41},
+  pages = {1539},
+  author = {Henrik Finsberg},
+  title = {pulse: A python package based on FEniCS for solving problems in cardiac mechanics},
+  journal = {The Journal of Open Source Software}
+}
+```
+
+## Known issues
+* If you encounter errors with `h5py` try to uninstall it (`pip uninstall h5py`) and then re-install it without installing any binary packages, i.e
+```
+python3 -m pip install h5py --no-binary=h5py
+```
+
+## Contributing
+See [CONTRIBUTING.md](CONTRIBUTING.md)
