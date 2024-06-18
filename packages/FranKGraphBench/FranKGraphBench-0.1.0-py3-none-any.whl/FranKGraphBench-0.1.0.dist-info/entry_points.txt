@@ -1,0 +1,4 @@
+[console_scripts]
+chart_generation = chart_generation:chart_generation
+data_integration = data_integration:data_integration
+framework = framework:framework
