@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: banksy_py
+Version: 0.0.1
+Summary: Pip installable version of Banksy_py; all credit goes to the Banksy authors.
+Author: Nigel Chou;Yifei Yue
+Author-email: Nigel_Chou@gis.a-star.edu.sg
+Requires-Python: >=3.8
+License-File: LICENSE.md
+Requires-Dist: anndata>=0.10.2
+Requires-Dist: anyio>=4.0.0
+Requires-Dist: certifi
+Requires-Dist: h5py>=3.10.0
+Requires-Dist: igraph>=0.10.6
+Requires-Dist: importlib-metadata>=4.6
+Requires-Dist: joblib>=1.3.2
+Requires-Dist: jsonschema>=4.19.1
+Requires-Dist: jsonschema-specifications>=2023.7.1
+Requires-Dist: matplotlib<3.9.0
+Requires-Dist: matplotlib-inline>=0.1.6
+Requires-Dist: numpy<2.0,>=1.24.4
+Requires-Dist: pandas>=2.1.1
+Requires-Dist: pickleshare>=0.7.5
+Requires-Dist: scanpy>=1.9.5
+Requires-Dist: scikit-learn>=1.3.1
+Requires-Dist: scipy>=1.11.3
+Requires-Dist: seaborn>=0.13.0
+Requires-Dist: tornado>=5.1
+Requires-Dist: umap-learn>=0.5.4
+Requires-Dist: urllib3<4.0
+Requires-Dist: websocket-client<3.0
