@@ -1,0 +1,2 @@
+[console_scripts]
+pybc = py_ballisticcalc.__main__:main
