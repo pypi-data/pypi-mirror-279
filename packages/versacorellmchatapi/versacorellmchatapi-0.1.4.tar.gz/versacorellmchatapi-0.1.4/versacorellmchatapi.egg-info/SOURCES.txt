@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+tests/__init__.py
+tests/test_api.py
+versacorellmchatapi/__init__.py
+versacorellmchatapi/api.py
+versacorellmchatapi.egg-info/PKG-INFO
+versacorellmchatapi.egg-info/SOURCES.txt
+versacorellmchatapi.egg-info/dependency_links.txt
+versacorellmchatapi.egg-info/requires.txt
+versacorellmchatapi.egg-info/top_level.txt
