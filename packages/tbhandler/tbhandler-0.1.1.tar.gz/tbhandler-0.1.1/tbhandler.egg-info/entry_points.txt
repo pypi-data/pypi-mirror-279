@@ -1,0 +1,3 @@
+[console_scripts]
+ask_open_exception_file = tbhandler.opener:main
+install_sitecustomize = tbhandler.sitecustomize_remover:main
