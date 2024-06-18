@@ -1,0 +1,4 @@
+[console_scripts]
+hat-event-server = hat.event.server.main:main
+hat-event-lmdb-convert = hat.event.backends.lmdb.convert.main:main
+hat-event-lmdb-manager = hat.event.backends.lmdb.manager.main:main
