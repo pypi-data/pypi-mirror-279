@@ -1,0 +1,8 @@
+[console_scripts]
+pellipip = pellipop.pip:main
+pellipop = pellipop.cli:main
+pellipop-cli = pellipop.cli:main
+pellipop-gui = pellipop.gui:main
+
+[gui_scripts]
+pellipop = pellipop.gui:main
