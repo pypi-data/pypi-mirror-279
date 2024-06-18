@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: bs-greenlight-cli
+Version: 0.2
+Summary: 
+License: MIT
+Author: Christian Decker
+Author-email: decker@blockstream.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: click (>=8,<9)
+Requires-Dist: gl-client (==0.2.0)
+Requires-Dist: grpcio (>=1,<2)
+Requires-Dist: protobuf (>=5,<6)
