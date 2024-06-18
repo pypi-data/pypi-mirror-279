@@ -1,0 +1,18 @@
+[project]
+name = "py2vhdl_ai"
+version = "0.0.1"
+authors = [
+    {name = "Yevhenii Holopotyliuk", email = "yevhenii.holopotyliuk@gmail.com"}
+]
+description = "Test build"
+readme = "README.md"
+requires-python = ">=3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/YevheniiHolopotyliuk/Py2VHDL-AI"
+Issues = "https://github.com/YevheniiHolopotyliuk/Py2VHDL-AI"
