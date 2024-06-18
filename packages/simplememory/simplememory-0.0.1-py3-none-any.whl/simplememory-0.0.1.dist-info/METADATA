@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: simplememory
+Version: 0.0.1
+Summary: The framework for agent memory
+Author-email: agent memory <agentmemorydefault@gmail.com>
+Project-URL: Homepage, https://github.com/agencymemory/simplememory
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic ==2.7.4
+Requires-Dist: openai ==1.34.0
+Requires-Dist: langchain-openai ==0.1.8
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: pinecone-client ==4.1.1
+
+# simplememory
+This will be the memory of the agents
+
+**To use this package:**
+
+Ensure that `.env` exists with below.
+
+```
+OPENAI_API_KEY=sk-"ADD YOUR API KEY HERE"
+PINECONE_API_KEY = "ADD YOUR API KEY HERE"
+PINECONE_INDEX="ADD YOUR INDEX NAME HERE"
+```
+
+**How to add to semantic memory:**
+```
+from memory.semantic_memory import SemanticMemory
+if __name__=="__main__":
+    sc= SemanticMemory()
+    semantic_val,memory_item = sc.add_memory_item(mem_key="What is the capital of india?",mem_val="The capital of India is New Delhi"
+    print(semantic_val)
+    print(memory_item)
+
+```
+**How to retrieve semantic memory:**
+```
+from memory.semantic_memory import SemanticMemory
+if __name__=="__main__":
+    sc= SemanticMemory()
+    result = sc.retrieve_memory_item(mem_key="what is the capital of India?")
+    print(result['matches'][0]['metadata']['key'])
+    print(result['matches'][0]['metadata']['value'])
+    print(result['matches'][0]['score'])
+```

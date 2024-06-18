@@ -1,0 +1,8 @@
+memory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+memory/memory_base.py,sha256=LvTEbT9l0dpIf9sZJuq5EUqmsIcclHKwUs-MH4HR3-k,326
+memory/semantic_memory.py,sha256=mfESHGweu8UJil058xUVl6kTbbCYYV4oGeML8oUwe64,1419
+simplememory-0.0.1.dist-info/LICENSE,sha256=iy_ilAEHxDDKgwYKH_6tz_CbStbHjt-JzXMfH6h9P18,1069
+simplememory-0.0.1.dist-info/METADATA,sha256=8GFL5ZTAtJWyh6zc-TH6WSjFDNRHR6KXVwHqQ_M3bLE,1582
+simplememory-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+simplememory-0.0.1.dist-info/top_level.txt,sha256=plUqRjD5ukqJEMYsc-bhdIrLgYnGmx3mALaoMw-3E8o,7
+simplememory-0.0.1.dist-info/RECORD,,
