@@ -1,0 +1,3 @@
+[console_scripts]
+testplus=mojo.testplus.cli.testplus_command:testplus_root_command
+
