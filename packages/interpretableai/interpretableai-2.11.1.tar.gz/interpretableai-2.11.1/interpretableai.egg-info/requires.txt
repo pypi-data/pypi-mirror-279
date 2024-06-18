@@ -1,0 +1,4 @@
+julia>=0.6.2
+pandas>=0.24
+appdirs>=1.4.3
+future
