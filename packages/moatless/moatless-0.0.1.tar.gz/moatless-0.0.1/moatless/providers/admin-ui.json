@@ -1,0 +1,126 @@
+{
+  "name": "AgenticLoop",
+  "initial_message": "Remove all uses of the practitionerUrl variable in the codebase",
+  "transitions": [
+    {
+      "name": "PlanToCode",
+      "state": {
+        "include_message_history": true,
+        "model": "gpt-4o",
+        "temperature": 0.0,
+        "max_tokens": 1000,
+        "max_iterations": 5,
+        "max_tokens_in_edit_prompt": 500,
+        "expand_context_with_related_spans": true
+      },
+      "actions": [
+        {
+          "action": {
+            "thoughts": "I will remove the practitionerUrl variable from the specified code span.",
+            "action": {
+              "instructions": "Remove the practitionerUrl variable from the code.",
+              "file_path": "src/stores/__tests__/OriginStore.test.ts",
+              "span_id": "63_69"
+            }
+          },
+          "output": {
+            "instructions": "Remove the practitionerUrl variable from the code.",
+            "file_path": "src/stores/__tests__/OriginStore.test.ts",
+            "span_id": "63_69",
+            "start_line": 59,
+            "end_line": 73
+          },
+          "completion_cost": 0.003795
+        }
+      ]
+    },
+    {
+      "name": "EditCode",
+      "state": {
+        "include_message_history": true,
+        "model": "gpt-4o",
+        "temperature": 0.0,
+        "max_tokens": 1000,
+        "max_iterations": 4,
+        "instructions": "Remove the practitionerUrl variable from the code.",
+        "file_path": "src/stores/__tests__/OriginStore.test.ts",
+        "span_id": "63_69",
+        "start_line": 59,
+        "end_line": 73,
+        "allow_files_not_in_context": false,
+        "show_initial_message": true,
+        "show_file_context": true,
+        "lint_updated_code": true
+      },
+      "actions": [
+        {
+          "action": {
+            "content": "<replace>\n      origins: [],\n    };\n\n    origin = {\n      id: 'testId-a',\n      parentOriginId: 'testId',\n      name: 'testId A Origin',\n      clinicName: 'testClinicName',\n      patientUrl: 'testPatientUrl',\n      email: 'testEmail',\n      bankIdDisplayName: 'testBankIdDisplayName',\n      smsDisplayName: 'testSmsDisplayName',\n      countryCode: 'testCountryCode',\n      originGroup: 'testOriginGroup',\n"
+          },
+          "output": {
+            "message": "Applied the change to src/stores/__tests__/OriginStore.test.ts.",
+            "diff": "--- src/stores/__tests__/OriginStore.test.ts\n+++ src/stores/__tests__/OriginStore.test.ts\n@@ -65,7 +65,6 @@\n       name: 'testId A Origin',\n       clinicName: 'testClinicName',\n       patientUrl: 'testPatientUrl',\n-      practitionerUrl: 'testPractitionerUrl',\n       email: 'testEmail',\n       bankIdDisplayName: 'testBankIdDisplayName',\n       smsDisplayName: 'testSmsDisplayName',\n",
+            "lint_messages": []
+          },
+          "completion_cost": 0.00527
+        }
+      ]
+    },
+    {
+      "name": "PlanToCode",
+      "state": {
+        "include_message_history": true,
+        "model": "gpt-4o",
+        "temperature": 0.0,
+        "max_tokens": 1000,
+        "max_iterations": 5,
+        "message": "Applied the change to src/stores/__tests__/OriginStore.test.ts.",
+        "diff": "--- src/stores/__tests__/OriginStore.test.ts\n+++ src/stores/__tests__/OriginStore.test.ts\n@@ -65,7 +65,6 @@\n       name: 'testId A Origin',\n       clinicName: 'testClinicName',\n       patientUrl: 'testPatientUrl',\n-      practitionerUrl: 'testPractitionerUrl',\n       email: 'testEmail',\n       bankIdDisplayName: 'testBankIdDisplayName',\n       smsDisplayName: 'testSmsDisplayName',\n",
+        "lint_messages": [],
+        "max_tokens_in_edit_prompt": 500,
+        "expand_context_with_related_spans": true
+      },
+      "actions": [
+        {
+          "action": {
+            "thoughts": "I will remove the practitionerUrl variable from the specified code span.",
+            "action": {
+              "instructions": "Remove the practitionerUrl variable from the code.",
+              "file_path": "src/stores/OriginStore.ts",
+              "span_id": "19_3"
+            }
+          },
+          "retry_message": "File src/stores/OriginStore.ts is not found in the file context. You can only request changes to files that are in file context:\n * src/stores/__tests__/OriginStore.test.ts\n",
+          "completion_cost": 0.004725000000000001
+        },
+        {
+          "action": {
+            "thoughts": "I will remove the practitionerUrl variable from the specified code span.",
+            "action": {
+              "instructions": "Remove the practitionerUrl variable from the code.",
+              "file_path": "src/stores/__tests__/OriginStore.test.ts",
+              "span_id": "19_3"
+            }
+          },
+          "retry_message": "Span not found: 19_3. Available spans: ",
+          "completion_cost": 0.0053
+        },
+        {
+          "action": {
+            "thoughts": "I will remove the practitionerUrl variable from the specified code span.",
+            "action": {
+              "instructions": "Remove the practitionerUrl variable from the code.",
+              "file_path": "src/stores/__tests__/OriginStore.test.ts",
+              "span_id": "19_4"
+            }
+          },
+          "retry_message": "Span not found: 19_4. Available spans: ",
+          "completion_cost": 0.005705000000000001
+        }
+      ]
+    }
+  ],
+  "info": {
+    "error": "Max retries reached."
+  }
+}
