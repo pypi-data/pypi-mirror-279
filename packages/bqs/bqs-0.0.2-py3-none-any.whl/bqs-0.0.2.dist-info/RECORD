@@ -1,0 +1,17 @@
+bqs/__init__.py,sha256=jpOYaGUyh2X3XD3LubxdtSHgaAjMIfOduo3RyqoaDEA,72
+bqs/algorithms/__init__.py,sha256=Pk51X33fbnPNPD1xfKjTw-oNIg8TBWKYgfhsqv5e42c,112
+bqs/algorithms/qaoa.py,sha256=BzZH71RpIiWU_827i4D6dkyZ9izL71z-WHN157456ls,13623
+bqs/generators/__init__.py,sha256=Hx74viblmHRXoW43NkUIeoWEKueKu7GJw856dmDe97c,81
+bqs/generators/cartesian.py,sha256=FRFDaQq4-7RIGL2LqchhprvNXob08bFqo4Kc2GafaRI,1444
+bqs/generators/khot.py,sha256=6oe1WzDYqUGapa2Cruhno5QXr84uLgHlaW4bg1gmUfU,2574
+bqs/generators/qubos.py,sha256=aWxuHNsXGHoIw9Ea4LZnTIles0A62vdSuQu03uGLba8,24826
+bqs/utils/__init__.py,sha256=LmhPLENz1irQd5jbMOBo_3wpdW5N2cVtIblq5KZCYtk,77
+bqs/utils/optimizers.py,sha256=hFC0v5eExJ4rvPLdxM0cODvm-bUBK2wiWxLnau5HuOw,14213
+bqs/utils/qaoa_utils.py,sha256=njA219FpmgV4h1v7hD0kSulr-9kQVIhpApLQo9sVf-w,26882
+bqs/utils/solver_utils.py,sha256=pHUq2jKUj5eoZeE1c-dZwK0wyaz4HEzaCJvPiWu2ysE,9101
+bqs/utils/vqa_utils.py,sha256=CfJ4w0v28KVUGIINBN-uPx4dANi6kv2PWioI2-I63cY,2066
+bqs-0.0.2.dist-info/LICENSE,sha256=QRzF22CmF0vGTrCdgOJpu2Ice0VZuSlfC6jNUpB1Zbg,1066
+bqs-0.0.2.dist-info/METADATA,sha256=NPaqasoNND0FtrpM5gdee7X-yJJv9p-g8PZq0qgppnM,5450
+bqs-0.0.2.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+bqs-0.0.2.dist-info/top_level.txt,sha256=7HMmghBWO02tby1A-Da4C89norEAOB2k9ZowVq_TYKw,4
+bqs-0.0.2.dist-info/RECORD,,
