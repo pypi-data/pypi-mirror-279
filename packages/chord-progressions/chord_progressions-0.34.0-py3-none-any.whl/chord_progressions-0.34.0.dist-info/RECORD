@@ -1,0 +1,15 @@
+chord_progressions/__init__.py,sha256=0jWkHR_iRtk7cbN4WTuLp0rSuyJ2fZFk1K3a_FXWyHo,499
+chord_progressions/chord.py,sha256=RMZcK-JqBnbAm5t1ZTBLBPZ0XWvm6DfHTj3k1y4pU6g,2760
+chord_progressions/evaluate.py,sha256=EWabYMYubTZUkjIKQ4_Plj4A7VXnZkKcYu2nrrMcTMA,5383
+chord_progressions/midi.py,sha256=f_P9d4DkejOjILS6M8rQUR77qJ_TIxCTmoy71ak-7gQ,895
+chord_progressions/pitch.py,sha256=9oSFLtzXiUtaUQ2e3pnbCvJRcPok4gouqGPc6WwLgow,6211
+chord_progressions/progression.py,sha256=Y-oUjQGi2pgpYeVuZJifo5gKdX-xpQsat7ItMJjA5sw,6977
+chord_progressions/rhythm.py,sha256=kk-LWAKlWFF5-TpYSrUR96GqhojL9bOVkJWGzRY_GWU,1766
+chord_progressions/solver.py,sha256=ds5gWxJJlFGtopCHJLGRmqaGf8dCNX61fgwQAbf4Hfc,11427
+chord_progressions/type_templates.py,sha256=jXp-OU8VtB1wb03vHHcSgr_f_WBss5hp4EgK9O5f_Qk,13535
+chord_progressions/utils.py,sha256=03w7P-NqKs9U4BWW1A39DE1OQZwe_pOr1Klh3yzyxp8,1990
+chord_progressions-0.34.0.dist-info/LICENSE,sha256=V2dHNS2CkYTZxI-6hSanka_6hw6_N8SHd8y53NPuczM,1072
+chord_progressions-0.34.0.dist-info/METADATA,sha256=501pWqI9SVc-uP8QWVjlsEZpbOHx51V8Fi1iTCOYEzU,4375
+chord_progressions-0.34.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+chord_progressions-0.34.0.dist-info/top_level.txt,sha256=Emedf18hhlKZEO6CuZipH3x5qTuhEXKtHHMorefHLw4,19
+chord_progressions-0.34.0.dist-info/RECORD,,
