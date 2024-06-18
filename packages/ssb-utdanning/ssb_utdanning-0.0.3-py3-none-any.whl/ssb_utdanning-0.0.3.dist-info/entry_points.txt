@@ -1,0 +1,3 @@
+[console_scripts]
+ssb-utdanning=ssb_utdanning.__main__:main
+
