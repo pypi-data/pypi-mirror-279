@@ -1,0 +1,23 @@
+bgfactory/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bgfactory/common/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bgfactory/common/config.py,sha256=6x0nAfOe0z8WLQV7XpMo6jGxQ9ShZk9QlNccsJE-JNQ,124
+bgfactory/common/profiler.py,sha256=PDn0Or8BJWRpp0lE1un3pGiFSKm-nOG6GLphTrgf-lw,1427
+bgfactory/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bgfactory/components/cairo_helpers.py,sha256=cVkCaRmM61ZLvagRQtMxlp6AhIUj6BmTDOl3zBaj69c,791
+bgfactory/components/card_sheet.py,sha256=vMAJ4L2lquYGMN7fNZOdhFsBAoIYFAFUwez54CQ79HU,2689
+bgfactory/components/component.py,sha256=72H9puBeiIjRHqplxYuxVVHTucF_kC17fZEAnNnN0SU,2325
+bgfactory/components/constants.py,sha256=Vd5I5Yp133mgmeLTAkcZpXcmETqE45NuyViOwJQCG5w,409
+bgfactory/components/grid.py,sha256=bAI9BPqe4mMRHz--mQnVQXnAAOCbCkn-JeWSOhGd0Hk,19349
+bgfactory/components/pango_helpers.py,sha256=M-tb1MiQWZfT7B4fv6ispWd48MfcGSiqKnJUrMyXfTk,631
+bgfactory/components/shape.py,sha256=Elj660m_6tBzKjh7H9OE91Ree9yo4lp_Q4jisTjSkrI,5713
+bgfactory/components/source.py,sha256=l5t5wKPKRABPwUQXBCcL9hWW8eLg1Dk1GmN7B4KlKPM,6652
+bgfactory/components/test text bounds.py,sha256=EMSuwkEZp0HLGjcZ4iiOR0ibbZxNP8lQMflzIPIw3fE,514
+bgfactory/components/test_surface_source.py,sha256=R-hrbLfsj724lFlEOBKWgS7emjiTstZmTt4AqUEPyyM,709
+bgfactory/components/text.py,sha256=2APzj1UkIQ3ZIo3wO5iu7xy87VNVoh4RW8atAOn3UYI,18601
+bgfactory/components/transformations.py,sha256=jPFr71nqF8E4e6k7xQxu6dYMcOA0sbPIFavaBWj1Ss4,834
+bgfactory/components/utils.py,sha256=AQb5CsVkgeBVYqPugiZU9EY5FDKlLdP-2Rppb2J2WHU,557
+bgfactory-0.1.1.dist-info/LICENSE.txt,sha256=6faJQp_NbyiczCGo3DE3oXrRnzmpOg4mwboAC2FVpCA,1078
+bgfactory-0.1.1.dist-info/METADATA,sha256=orasfRr3EHsKVrlYPWBppgXRLo-WfCRm14cHpks2_n4,867
+bgfactory-0.1.1.dist-info/WHEEL,sha256=ewwEueio1C2XeHTvT17n8dZUJgOvyCWCt0WVNLClP9o,92
+bgfactory-0.1.1.dist-info/top_level.txt,sha256=bu5aYuuPTKudCKNRCO-EtXj4ja64DsN0OXco8n9J_co,10
+bgfactory-0.1.1.dist-info/RECORD,,
