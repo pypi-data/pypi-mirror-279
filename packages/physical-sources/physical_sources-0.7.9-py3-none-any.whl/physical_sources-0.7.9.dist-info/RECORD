@@ -1,0 +1,13 @@
+physical_sources-0.7.9.dist-info/METADATA,sha256=DV4FkivoOjEMUGt9oVi9wzkFPSa0APy_ZGc5aMCaCgQ,1398
+physical_sources-0.7.9.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+physical_sources-0.7.9.dist-info/licenses/LICENSE.txt,sha256=oMEvX1AkRDG2Lv8KpPEP4has2adfiGSpoSOFJhFz8Tc,1246
+physical_sources/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+physical_sources/acoustic/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+physical_sources/acoustic/analytic_source.py,sha256=uhfsXp19EDIX9uBM0c89Nr51BrZ15yhWb7fS5lDRXzk,4081
+physical_sources/acoustic/grid_sphere_source.py,sha256=DLbThFY-Vni0h9y4wLTkQggXezME19mKI8n2UXaO1uk,15758
+physical_sources/acoustic/inoisesource.py,sha256=ZlQxyW_obdV_sHswRDE9Rm9QbsVbI-jnVWk4TpfHIzs,909
+physical_sources/acoustic/point_source.py,sha256=QgZiVhxJKyj6g1bikAoJKWCPC675GOSEofzmyI-40Hs,25196
+physical_sources/acoustic/source_definitions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+physical_sources/acoustic/source_definitions/noisefile.py,sha256=DxOMIXfwkEvjSD6SCauYadoSTHBzuCH0Cgpeve3Bdtc,2439
+physical_sources/acoustic/sphere_source.py,sha256=AE343WQTYNqA1qjSB92naZ2chAuUqncImlQtrWzKNZ4,55412
+physical_sources-0.7.9.dist-info/RECORD,,
