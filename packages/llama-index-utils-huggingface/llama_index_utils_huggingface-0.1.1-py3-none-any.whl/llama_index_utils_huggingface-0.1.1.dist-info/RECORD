@@ -1,0 +1,5 @@
+llama_index/utils/huggingface/__init__.py,sha256=L-ggBtVi2-v_JmeW7ZIoN0Xf_SY0FMsHIdoSgW7r4N4,852
+llama_index/utils/huggingface/base.py,sha256=bKag3484AjjY_gBd4GcKwbsHVnH30rTZQZbmmEmv1zY,3198
+llama_index_utils_huggingface-0.1.1.dist-info/METADATA,sha256=Dr9BCqH9yorAgix9gu-KGUYpFW90rcb3IO6D2o5ZpCw,648
+llama_index_utils_huggingface-0.1.1.dist-info/WHEEL,sha256=d2fvjOD7sXsVzChCqf0Ty0JbHKBaLYwDbGQDwQTnJ50,88
+llama_index_utils_huggingface-0.1.1.dist-info/RECORD,,
