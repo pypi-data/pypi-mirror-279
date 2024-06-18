@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+mlex/__init__.py
+mlex.egg-info/PKG-INFO
+mlex.egg-info/SOURCES.txt
+mlex.egg-info/dependency_links.txt
+mlex.egg-info/not-zip-safe
+mlex.egg-info/top_level.txt
