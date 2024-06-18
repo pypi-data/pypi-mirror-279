@@ -1,0 +1,3 @@
+[console_scripts]
+pywatch=py_proc_watch:_entry_point
+
