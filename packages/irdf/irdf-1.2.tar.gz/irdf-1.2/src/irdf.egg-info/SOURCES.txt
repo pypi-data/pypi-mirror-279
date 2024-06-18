@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/irdf/__init__.py
+src/irdf/graph.py
+src/irdf/table.py
+src/irdf.egg-info/PKG-INFO
+src/irdf.egg-info/SOURCES.txt
+src/irdf.egg-info/dependency_links.txt
+src/irdf.egg-info/requires.txt
+src/irdf.egg-info/top_level.txt
