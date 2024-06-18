@@ -1,0 +1,2 @@
+[console_scripts]
+pydantic-converter = pydantic_converter.__main__:run
