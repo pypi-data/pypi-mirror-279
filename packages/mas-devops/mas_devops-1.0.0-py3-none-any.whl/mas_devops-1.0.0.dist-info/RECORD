@@ -1,0 +1,12 @@
+mas/devops/__init__.py,sha256=Ri80BcQVbPk2oUkkG5hQFHe75avethjiqfbJ3Uw-1lo,490
+mas/devops/mas.py,sha256=zyZnDSVOabItSKxXhA13h2bAaMawqFfNGWYCrXzEetY,1779
+mas/devops/ocp.py,sha256=TQPFF5OuoIBvyUNSsQBrK2AblHUbMFP_zGr7rTJrfhA,3448
+mas/devops/tekton.py,sha256=-Np0EdFNsHikFnOuSnpBy0DOS0RU29ZgrT6070CrHT8,8133
+mas/devops/templates/pipelinerun-uninstall.yml.j2,sha256=hWE59LKtH1s1P3HEPexwKAG-o3GUPHcbk67U5IWd5Gc,872
+mas/devops/templates/pipelinerun-upgrade.yml.j2,sha256=iTMZhho2eBmYxw1hnPn67xYGhpYrjSwz04CGh902FaE,406
+mas/devops/templates/subscription.yml.j2,sha256=C3b_c2llELzshRGNiWoek-iNTEj2Rorwh-H7VitPcU4,317
+mas_devops-1.0.0.dist-info/LICENSE,sha256=jDSfgHZNBkjmRfQe8jdypwyZWgkktSNfc19KPQnfEnw,14197
+mas_devops-1.0.0.dist-info/METADATA,sha256=GrNOvxY_qiDubHQ9LPVW2vJzp2Ao6I7fdHkGm98ICn4,2075
+mas_devops-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mas_devops-1.0.0.dist-info/top_level.txt,sha256=_Hlsp7pvMvyV14LFg-vk1hULq30j61EILnnxMFIhhc8,4
+mas_devops-1.0.0.dist-info/RECORD,,
