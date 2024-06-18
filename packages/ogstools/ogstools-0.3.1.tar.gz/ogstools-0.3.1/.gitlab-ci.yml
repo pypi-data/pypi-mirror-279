@@ -1,0 +1,201 @@
+stages:
+  - test
+  - prepare
+  - deploy
+
+variables:
+  POETRY_CACHE_DIR: "$CI_PROJECT_DIR/.cache"
+  DOCKER_IMAGE: registry.opengeosys.org/ogs/tools/ogstools/devcontainer-3.9
+  DOCKER_USER_IMAGE: registry.opengeosys.org/ogs/tools/ogstools/main-3.9
+
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_IID
+      changes:
+        - Dockerfile
+      variables:
+        DOCKER_IMAGE: $CI_REGISTRY_IMAGE/devcontainer-3.9:$CI_COMMIT_REF_SLUG
+    - if: $CI_MERGE_REQUEST_IID
+    - if: $CI_COMMIT_TAG
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH && $CI_PROJECT_PATH == "ogs/tools/ogstools"'
+
+image: $DOCKER_IMAGE
+
+cache:
+  paths:
+    - .cache
+
+.setup-headless: &setup-headless
+  - make setup
+  - make setup_headless
+  - source .venv/bin/activate
+
+pre-commit:
+  tags: [shell, envinf]
+  rules:
+    - if: $CI_MERGE_REQUEST_IID
+  needs: []
+  script:
+    - git fetch origin ${CI_MERGE_REQUEST_DIFF_BASE_SHA}
+    - pre-commit run --from-ref ${CI_MERGE_REQUEST_DIFF_BASE_SHA} --to-ref HEAD
+
+build:
+  script:
+    - pip install build
+    - pyproject-build
+
+tests (arch):
+  tags: [shell, envinf]
+  needs: []
+  script:
+    - *setup-headless
+    - make test
+
+tests:
+  script:
+    - make setup_devcontainer
+    - source .venv-devcontainer/bin/activate
+    - make coverage
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    when: always
+    paths:
+      - htmlcov
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+
+tests win:
+  tags: [windows]
+  needs: []
+  before_script:
+    - python -m venv .venv
+    - .venv\Scripts\Activate.ps1
+    - pip install -e ".[dev,test,docs]"
+  script:
+    - pytest
+
+# Remove -j 1 when this is resolved:
+# https://github.com/pydata/pydata-sphinx-theme/issues/1643
+.docs-script: &docs-script
+  - make setup_devcontainer
+  - source .venv-devcontainer/bin/activate
+  - make docs SPHINXOPTS="-W --keep-going -n -j 1"
+  - mv docs/_build/html public
+
+docs preview:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - *docs-script
+  artifacts:
+    paths:
+      - public
+  environment:
+    name: docs preview $CI_MERGE_REQUEST_IID $CI_PROJECT_ROOT_NAMESPACE
+    url: "https://$CI_PROJECT_ROOT_NAMESPACE.$CI_PAGES_DOMAIN/-/$SUBGROUP_SLUG$CI_PROJECT_NAME/-/jobs/$CI_JOB_ID/artifacts/public/index.html"
+
+pages:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  image: registry.opengeosys.org/ogs/tools/feflow-python-docker:8.0.1
+  script:
+    - *docs-script
+  artifacts:
+    paths:
+      - public
+  environment: production
+
+pages-tag:
+  stage: prepare
+  rules:
+    - if: $CI_COMMIT_TAG
+  image: registry.opengeosys.org/ogs/tools/feflow-python-docker:8.0.1
+  script:
+    - *docs-script
+  artifacts:
+    paths:
+      - public
+
+child-pipeline:
+  stage: deploy
+  rules:
+    - if: $CI_COMMIT_TAG
+  trigger:
+    project: ogs/tools/ogstools-docs
+    strategy: depend
+  variables:
+    PARENT_PIPELINE_ID: $CI_PIPELINE_ID
+    PARENT_PIPELINE_TAG: $CI_COMMIT_TAG
+
+publish:
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: manual
+  variables:
+    TWINE_REPOSITORY: pypi
+    PYTHON_KEYRING_BACKEND: keyring.backends.null.Keyring
+  script:
+    - pip install build twine
+    - pyproject-build
+    - twine upload dist/*
+
+devcontainer image:
+  stage: .pre
+  tags:
+    - envinf
+    - shell
+  rules:
+    - changes:
+        - .devcontainer/*
+    - when: manual
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - devcontainer build --workspace-folder . --push true --image-name ${DOCKER_IMAGE}
+
+user container image:
+  stage: .pre
+  needs: []
+  tags:
+    - envinf
+    - shell
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
+      variables:
+        DOCKER_USER_IMAGE: registry.opengeosys.org/ogs/tools/ogstools/main-3.9:$CI_COMMIT_TAG
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $DOCKER_USER_IMAGE .
+    - docker push $DOCKER_USER_IMAGE
+
+code_quality_ruff:
+  image: python:3.10-slim
+  needs: []
+  script:
+    # Use same ruff as in .pre-commit-config.yaml
+    - pip install ruff==0.0.277
+    - ruff . --format gitlab > ruff-code-quality-report.json || true
+  artifacts:
+    reports:
+      codequality: ruff-code-quality-report.json
+
+code_quality_mypy:
+  image: python:3.10-slim
+  needs: []
+  script:
+    # Use same mypy as in .pre-commit-config.yaml
+    - pip install mypy==1.4.1 mypy-to-codeclimate
+    - mypy ogstools > mypy-output.txt || true
+    - mypy-to-codeclimate mypy-output.txt mypy-code-quality-report.json || true
+  artifacts:
+    reports:
+      codequality: mypy-code-quality-report.json
+
+ogs/tools/feflow-converter-tests:
+  stage: test
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+  trigger: ogs/tools/feflow-converter-tests
