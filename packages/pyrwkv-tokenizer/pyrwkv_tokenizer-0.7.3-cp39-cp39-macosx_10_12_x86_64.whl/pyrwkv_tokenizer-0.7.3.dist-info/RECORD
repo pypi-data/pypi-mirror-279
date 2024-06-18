@@ -1,0 +1,7 @@
+pyrwkv_tokenizer-0.7.3.dist-info/METADATA,sha256=vRrzTaFmwk5cPzMaJdCT2GxRSfrr0uPcWR7G-TzuPzE,3075
+pyrwkv_tokenizer-0.7.3.dist-info/WHEEL,sha256=bSddg7wgePAOvbYTfoIy6Oe0tzPmKVe09YIH11Zlat4,104
+pyrwkv_tokenizer-0.7.3.dist-info/license_files/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+pyrwkv_tokenizer/__init__.py,sha256=U0z6sKX-N2Jaei9epPChUvmwOQ_IQqBkCsekcMA4E6Q,949
+pyrwkv_tokenizer/rwkv_vocab_v20230424.txt,sha256=5t7j1OMbTVxArJlQisbHAc7vS-1oG_IWfOmpCFUryok,1093733
+pyrwkv_tokenizer/pyrwkv_tokenizer.cpython-39-darwin.so,sha256=Z15j4VpBgD0DsBY70cHt7zIbarrH-jK7zq5B_qnIkAM,2570000
+pyrwkv_tokenizer-0.7.3.dist-info/RECORD,,
