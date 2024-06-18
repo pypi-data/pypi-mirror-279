@@ -1,0 +1,11 @@
+botops-0.3.0rc1.dist-info/METADATA,sha256=KN4oMiFKroDCRkLURwUyJ1v5E5Ixdx226f1ht9oWsr0,2972
+botops-0.3.0rc1.dist-info/WHEEL,sha256=vnE8JVcI2Wz7GRKorsPArnBdnW2SWKWGow5gu5tHlRU,90
+botops-0.3.0rc1.dist-info/licenses/LICENSE.txt,sha256=sdSbRTruAB6HqnP9HZk08adwcTnTPhNzDlRM4ZinSO4,1109
+botops/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+botops/telegram/__init__.py,sha256=a3n-YgAd2mcWNat3uMOH3wHcmolj6YTiduoLVoho2_k,41
+botops/telegram/bot.py,sha256=ZQR0O1qFQu75ley56j92VC4isKVoPwqLCGTuy6eEels,1545
+botops/telegram/enums.py,sha256=WNuxljyXTrHuRXWgpmwUNf1ePUvRZQhw9nXpGkGaLkU,1087
+botops/telegram/erros.py,sha256=LuSeOOcue-gvRlrAdzuVChVf1qAnVwWswu4Uc0WySX8,200
+botops/telegram/methods.py,sha256=ezHfcKVQ-iuyd474RvoeEgkR0jr6B9MZ1AGp3Sdywgk,1445
+botops/telegram/types.py,sha256=wk3ksgABZietwXN1SaYpnGa9wYbHo31IxMHPqOj0F4Q,15472
+botops-0.3.0rc1.dist-info/RECORD,,
