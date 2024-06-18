@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+src/__init__.py
+src/gpt_client.py
+src/scrapper.py
+src/utils.py
+src/websearch_funcs.py
+src/asset_sentiment_analyzer.egg-info/PKG-INFO
+src/asset_sentiment_analyzer.egg-info/SOURCES.txt
+src/asset_sentiment_analyzer.egg-info/dependency_links.txt
+src/asset_sentiment_analyzer.egg-info/requires.txt
+src/asset_sentiment_analyzer.egg-info/top_level.txt
