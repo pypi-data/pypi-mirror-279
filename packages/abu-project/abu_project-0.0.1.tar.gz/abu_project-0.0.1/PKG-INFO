@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: abu_project
+Version: 0.0.1
+Summary: This package comes with lots of functionality which makes your work easy ! 
+Home-page: 
+Author: abuawaish
+Author-email: abuawaish7@gmail.com
+License: MIT
+Keywords: funny
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Education
+Classifier: Development Status :: 5 - Production/Stable
+License-File: LICENSE.txt
+
+This is very simple package that comes with the following functionality:
+1. multiplication_table() : It prints the multiplication table from 1 to 5 by default
+2. fahrenheit_to_celsius() : It converts the fahrenheit to celsius by passing the one integer parameter to this function
+3. celsius_to_fahrenheit() : It converts the celsius to fahrenheit by passing the one integer parameter to this function
+4. finds_the_longest_word() : It returns the Longest Word by providing string as the first parameter
+
+
+Change Log
+==========
+
+0.0.1(01/05/2024)
+--------------------
+- First Release
