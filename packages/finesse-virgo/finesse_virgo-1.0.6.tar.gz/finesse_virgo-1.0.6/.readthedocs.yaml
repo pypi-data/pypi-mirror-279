@@ -1,0 +1,14 @@
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "miniconda3-4.7"
+  jobs:
+    pre_build:
+      - git clone https://gitlab.com/ifosim/finesse/finesse-virgo.git
+      - pip install -e finesse3/[docs]
+      - kat3 --version
+
+conda:
+  environment: environment.yml

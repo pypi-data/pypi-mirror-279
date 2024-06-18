@@ -1,0 +1,17 @@
+finesse>=3.0a23.dev17
+numpy
+scipy
+matplotlib
+control
+tqdm
+
+[docs]
+sphinx
+sphinx_rtd_theme
+sphinxcontrib-bibtex
+sphinxcontrib-katex
+sphinxcontrib-svg2pdfconverter
+sphinxcontrib-programoutput
+jupyter-sphinx
+numpydoc
+reslate
