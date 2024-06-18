@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: parabellum
+Version: 0.1.0
+Summary: Parabellum environment for parallel warfare simulation
+Author: Noah Syrkis
+Author-email: noah@syrkis.com
+Requires-Python: >=3.11,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: darkdetect (>=0.8.0,<0.9.0)
+Requires-Dist: jaxmarl (==0.0.3)
+Requires-Dist: jupyterlab (>=4.2.2,<5.0.0)
+Requires-Dist: moviepy (>=1.0.3,<2.0.0)
+Requires-Dist: pygame (>=2.5.2,<3.0.0)
+Description-Content-Type: text/markdown
+
+# parabellum
+
+Parabellum is an ultra-scalable, high-performance warfare simulation engine.
+It is based on JaxMARL's SMAX environment, but has been heavily modified to
+support a wide range of new features and improvements.
+
+## Installation
+
+Install through PyPI:
+
+```bash
+pip install parabellum
+```
+
+## Usage
+
+```python
+import parabellum as pb
+```
+
