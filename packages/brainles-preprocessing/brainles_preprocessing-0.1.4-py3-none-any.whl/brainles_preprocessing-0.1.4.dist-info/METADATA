@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: brainles_preprocessing
+Version: 0.1.4
+Summary: TODO.
+Home-page: https://github.com/BrainLesion/preprocessing
+License: AGPL-3.0
+Keywords: brain tumor,glioma,BraTS,skullstripping,brain extraction
+Author: Florian Kofler
+Author-email: florian.kofler@tum.de
+Maintainer: Florian Kofler
+Maintainer-email: florian.kofler@tum.de
+Requires-Python: >=3.10,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: all
+Provides-Extra: ants
+Provides-Extra: ereg
+Requires-Dist: antspyx (>=0.4.2,<0.5.0) ; extra == "all" or extra == "ants"
+Requires-Dist: auxiliary (>=0.0.42)
+Requires-Dist: brainles_hd_bet (>=0.0.8)
+Requires-Dist: ereg (>=0.0.10,<0.0.11) ; extra == "all" or extra == "ereg"
+Requires-Dist: nibabel (>=3.2.1)
+Requires-Dist: numpy (>=1.23.0,<2.0.0)
+Requires-Dist: path (>=16.10.0,<17.0.0)
+Requires-Dist: pathlib (>=1.0.1,<2.0.0)
+Requires-Dist: rich (>=13.6.0,<14.0.0)
+Requires-Dist: tqdm (>=4.64.1,<5.0.0)
+Requires-Dist: ttictoc (>=0.5.6,<0.6.0)
+Project-URL: Repository, https://github.com/BrainLesion/preprocessing
+Description-Content-Type: text/markdown
+
+[![PyPI version preprocessing](https://badge.fury.io/py/brainles-preprocessing.svg)](https://pypi.python.org/pypi/brainles-preprocessing/)
+[![Documentation Status](https://readthedocs.org/projects/brainles-preprocessing/badge/?version=latest)](http://brainles-preprocessing.readthedocs.io/?badge=latest)
+[![tests](https://github.com/BrainLesion/preprocessing/actions/workflows/tests.yml/badge.svg)](https://github.com/BrainLesion/preprocessing/actions/workflows/tests.yml)
+
+
+# BrainLes-Preprocessing
+`BrainLes preprocessing` is a comprehensive tool for preprocessing tasks in biomedical imaging, with a focus on (but not limited to) multi-modal brain MRI. It can be used to build to build modular preprocessing pipelines:
+
+This includes **normalization**, **co-registration**, **atlas registration** and **skulstripping / brain extraction**.
+
+BrainLes is written `backend-agnostic` meaning it allows to swap the registration and brain extration tools.
+
+<!-- TODO mention defacing -->
+
+<!-- TODO include image here -->
+
+
+## Installation
+
+With a Python 3.10+ environment you can install directly from [pypi.org](https://pypi.org/project/brainles-preprocessing/):
+
+```
+pip install brainles-preprocessing
+```
+
+
+## Usage
+Please have a look at our [Jupyter Notebook tutorials](https://github.com/BrainLesion/tutorials/tree/main/preprocessing) illustrating the usage of BrainLes preprocessing.
+
+
+<!-- TODO citation -->
+
+
+## FAQ
+Please credit the authors by citing their work.
+
+### Atlas Reference
+We provide the SRI-24 atlas from this [publication](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2915788/).
+However, custom atlases can be supplied.
+
+### Brain extraction
+We currently provide support for [HD-BET](https://github.com/MIC-DKFZ/HD-BET).
+
+### Registration
+We currently provide support for [ANTs](https://github.com/ANTsX/ANTs) (default), [Niftyreg](https://github.com/KCL-BMEIS/niftyreg) (Linux), eReg (experimental)
+
+<!-- TODO mention defacing -->
+
