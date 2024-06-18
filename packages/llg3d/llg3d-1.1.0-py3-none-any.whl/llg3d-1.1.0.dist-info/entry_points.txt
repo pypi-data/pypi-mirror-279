@@ -1,0 +1,3 @@
+[console_scripts]
+llg3d = llg3d.llg3d:main
+llg3d.post = llg3d.post.temperature:main
