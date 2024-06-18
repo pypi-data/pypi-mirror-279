@@ -1,0 +1,17 @@
+[build-system]
+# list of packages that are needed to build your package
+requires = [
+    "setuptools>=42",
+	"svgwrite",
+	"svg.path",
+	"svgpathtools",
+	"svgutils",
+	"jsonpickle",
+	"html2image",
+	"svglib",
+	"reportlab",
+	"colour",
+	"IPython",
+	"pandas"
+]
+build-backend = "setuptools.build_meta"
