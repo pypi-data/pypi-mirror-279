@@ -1,0 +1,9 @@
+README.md
+pyLSPAPI.py
+pyproject.toml
+setup.py
+pyLSPAPI.egg-info/PKG-INFO
+pyLSPAPI.egg-info/SOURCES.txt
+pyLSPAPI.egg-info/dependency_links.txt
+pyLSPAPI.egg-info/requires.txt
+pyLSPAPI.egg-info/top_level.txt
