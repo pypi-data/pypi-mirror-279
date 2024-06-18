@@ -1,0 +1,68 @@
+# mID 805
+# 'doc' (, )
+# Dr. Falk Rauchfuß
+# 24.12.2021 12:24
+# Max Mustermann
+# 24.12.1999
+# 
+# weiblich
+# 162 cm
+# 54 kg
+# 31,762406
+# 513,0
+# 
+# Nahrungskarenz: über 3 Std., Raucher: Nein, Sauerstoff: Nein, Beatmung: Nein, Medikation: Ja
+# 
+# Wir berichten Ihnen über die durchgeführten Untersuchungen bei unserem gemeinsamen Patienten / unserer gemeinsamen Patientin:
+# Der LiMAx-Test gibt die aktuelle Leberfunktionskapazität des CYP1A2-Systems an. Aktuell ist dieser Wert ...
+
+Zeit(relativ)	DOB	Fehler
+-311	-3.6	0
+-285	-1.4	2
+-260	-0.1	2
+-234	-0.6	2
+-208	-0.1	0
+-182	0.4	2
+-157	0.4	0
+-131	0.3	0
+-105	0.3	2
+-79	0.3	2
+-53	0.6	2
+-28	0.1	2
+-2	-0.1	0
+24	-0.1	1,2
+50	0	2
+75	0.4	2
+101	0.7	2
+127	1.5	0
+153	5.5	2
+179	12.4	2
+204	17	2
+230	20.6	2
+256	22.3	0
+282	24.1	0
+307	25.7	2
+333	27.8	2
+359	28.5	0
+385	28.8	2
+410	29.8	2
+436	30.3	0
+462	31.1	2
+488	31.9	2
+514	31.7	0
+539	31.9	2
+565	31.8	0
+591	32.2	0
+617	31.8	2
+642	31.5	0
+668	31.8	2
+694	31.7	0
+720	31.7	2
+746	31.5	2
+771	32	0
+797	31.4	2
+823	30.6	0
+849	30	0
+874	29.9	2
+900	30.4	0
+926	30.7	0
