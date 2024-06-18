@@ -1,0 +1,15 @@
+models:
+  User:
+    config:
+      number: 10
+      auto_add: true
+    fields:
+      name: $variable_name
+      password: $class_name
+      phone: 123456789
+  Admin:
+    config:
+      number: 10
+    fields:
+      name: $variable_name
+      group_name: $class_name

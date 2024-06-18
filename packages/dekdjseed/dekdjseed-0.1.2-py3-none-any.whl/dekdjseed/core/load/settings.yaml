@@ -1,0 +1,5 @@
+models:
+  object:
+    config:
+      number: 10
+      auto_add: false # 涉及标准流程手动创建的对象，有些会因为不能为空值而报错，这时设为True可以让该值自动填充。
