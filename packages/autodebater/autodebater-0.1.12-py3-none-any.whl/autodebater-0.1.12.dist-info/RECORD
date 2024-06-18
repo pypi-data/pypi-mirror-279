@@ -1,0 +1,16 @@
+autodebater/__init__.py,sha256=3DuaxLZxcC8GgZJTQUhEWlBO9QprPFMDsyvJa9t_EEA,50
+autodebater/debate.py,sha256=KBtn2hEHGkpv3YvaIbJcUxYZ1RH3wH7cle9nuuOYQjA,4323
+autodebater/debate_runners.py,sha256=bHEzC_0Bjt--br5-IhErig3asIhU_gxgqRgRwVeu81s,2229
+autodebater/defaults.py,sha256=bHSfsx4qq_kq-R1bgPKXAS7EJnYEWbnPJMXSm0rW1LI,847
+autodebater/defaults.yaml,sha256=wRBRKRDk8q7cepEB8qq98bX82yVeLyO_7YcRIEaDr-E,4286
+autodebater/dialogue.py,sha256=eDhBDLvLEhiK-dx2jPVenujpc7FpqE6IQc9a-m2ld5w,2616
+autodebater/errors.py,sha256=zIsrliFzXpr4B2NAuP8dsWoicEyoF0z07QRA0rbFVRk,126
+autodebater/llm.py,sha256=hdP8esLjW3znhGdCYkO7eqs-errO6_AOC_n1tTlEQ1M,1845
+autodebater/participants.py,sha256=bSo0BCg-Tzqb2jM2R9R-i86Em7AZ0RhkI3hAQd99tOs,4424
+autodebater/run_debates.py,sha256=qwxpEMPK3dlzqKmLTkcnRyyqMXAjfTufjUGkaOVErvg,1946
+autodebater/scoring.py,sha256=hkmYv9V1mGn4pEtDxyxCgrQxOtpyh2yyozHc_sHztrU,336
+autodebater-0.1.12.dist-info/LICENSE,sha256=fgrXhjWDOBfvxnogCh0y9aDyVX_0_kRSjLsMjeY5Cw4,1064
+autodebater-0.1.12.dist-info/METADATA,sha256=gqS0mPaFBEFl3q1z2ui62Bb_QHaXs2LYpJHkCm96QLU,4128
+autodebater-0.1.12.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+autodebater-0.1.12.dist-info/entry_points.txt,sha256=I8NyuPJ9B8CJ0y_J_pltDVh-uCM-omig29OjHk_jzwU,59
+autodebater-0.1.12.dist-info/RECORD,,

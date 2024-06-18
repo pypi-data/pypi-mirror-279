@@ -1,0 +1,3 @@
+[console_scripts]
+autodebater=autodebater.run_debates:app
+
