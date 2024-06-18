@@ -1,0 +1,17 @@
+h5py
+numpy
+scikit-learn
+pygrinder>=0.4
+tsdb>=0.2
+pypots
+
+[basic]
+numpy
+scikit-learn
+matplotlib
+pandas
+torch
+tensorboard
+scipy
+h5py
+pypots
