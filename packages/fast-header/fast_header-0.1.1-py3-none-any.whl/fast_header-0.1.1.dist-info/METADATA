@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: fast-header
+Version: 0.1.1
+Summary: 
+Author: Chongchen Chen
+Author-email: chenkovsky@qq.com
+Requires-Python: >=3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: pydantic (>=2.7.0)
+Description-Content-Type: text/markdown
+
+# Fast Header
+
+HTTP Header Encoder & Decoder for Python
+
+## Install
+
+```bash
+pip install fast-header
+```
+
+## Usage
+
+### cache control
+
+```python
+from fast_header import CacheControl
+
+cc = CacheControl(max_stale=True)
+assert cc.max_stale
+assert str(cc) == "max_stable"
+cc = CacheControl.parse("max_stable")
+```
+
+### etag
+
+```python
+from fast_header import ETag
+setag = ETag(value="a") # strong etag
+wetag = ETag(value="a", weak=True) # weak etag
+```
+
+
