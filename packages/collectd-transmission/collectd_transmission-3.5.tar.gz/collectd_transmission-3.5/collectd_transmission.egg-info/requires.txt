@@ -1,0 +1,4 @@
+transmission-rpc>=3.0
+
+[:python_version < "3.10"]
+importlib-metadata
