@@ -1,0 +1,6 @@
+[
+  "test_CheckRoutine.py::test_runBASH03_script_with_backticks",
+  "test_CheckRoutine.py::test_runBASH04_script_args_in_string",
+  "test_CheckRoutine.py::test_runC10_package_with_Klocwork_issues",
+  "test_CheckRoutine.py::test_runPy05_files_with_lint_issues"
+]

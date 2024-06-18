@@ -1,0 +1,5 @@
+{
+  "test_CheckRoutine.py": true,
+  "test_CheckRoutine.py::test_runBASH03_script_with_backticks": true,
+  "test_CheckRoutine.py::test_runC10_package_with_Klocwork_issues": true
+}
