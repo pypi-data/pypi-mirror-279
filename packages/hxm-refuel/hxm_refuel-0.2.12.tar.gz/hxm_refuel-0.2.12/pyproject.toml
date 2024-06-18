@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "hxm-refuel"
+version = "0.2.12"
+description = "Wrapper for financial database APIs"
+authors = ["djmcnay <39102979+djmcnay@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.12"
+xbbg = "^0.7.7"
+snowflake-connector-python = "^3.2.0"
+snowflake-sqlalchemy = "^1.5.0"
+pyarrow = ">=10.0.1, <10.1.0"
+cryptography = "^41.0.5"
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.0.8"
+python-dotenv = "^1.0.0"
+pytest = "^7.4.2"
+blpapi = {version = "^3.24.4", source = "bloomberg"}
+
+[[tool.poetry.source]]
+name = "bloomberg"
+url = "https://bcms.bloomberg.com/pip/simple"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
