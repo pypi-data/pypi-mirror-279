@@ -1,0 +1,3 @@
+[console_scripts]
+dangling-finder=dangling_finder.main:app
+
