@@ -1,0 +1,16 @@
+-r base.in
+-r optional.in
+gitpython
+h5py
+ipykernel
+ipython!=8.7.0  # Breaks syntax highlighting in Jupyter code cells.
+myst-parser
+nbsphinx
+pooch
+pydata-sphinx-theme>=0.14
+requests
+sphinx
+sphinx-autodoc-typehints
+sphinx-copybutton
+sphinx-design
+sphinx-gallery

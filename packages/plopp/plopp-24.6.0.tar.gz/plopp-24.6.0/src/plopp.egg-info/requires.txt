@@ -1,0 +1,12 @@
+matplotlib>=3.5
+
+[all]
+scipp
+ipympl
+pythreejs
+mpltoolbox
+ipywidgets
+graphviz
+
+[scipp]
+scipp
