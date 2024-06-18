@@ -1,0 +1,3 @@
+[console_scripts]
+midiphone=midiphone.__main__:main
+
