@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: talos-python3
+Version: 3.1.0
+Summary: talos python3 sdk
+Author: huyumei
+Author-email: huyumei@xiaomi.com
+Maintainer: fangchengjin
+Maintainer-email: fangchengjin@xiaomi.com
+Requires-Dist: cffi
+Requires-Dist: python-snappy==0.6.1
+Requires-Dist: atomic
+Requires-Dist: dnspython
+Requires-Dist: requests
+Requires-Dist: IPy
