@@ -1,0 +1,118 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "behave-utils"
+version = "0.5.0"
+description = "Utilities for writing Behave step implementations"
+license = "MPL-2.0"
+readme = "README.md"
+repository = "https://code.kodo.org.uk/dom/behave-utils"
+
+authors = [
+	"Dominik Sekotill <dom.sekotill@kodo.org.uk>",
+]
+
+classifiers = [
+	"Development Status :: 3 - Alpha",
+	"Topic :: Software Development :: Testing",
+	"Topic :: Software Development :: Testing :: BDD",
+	"Typing :: Typed",
+]
+
+packages = [
+	{ include = "behave_utils" },
+	{ include = "behave-stubs", from = "stubs" },
+]
+
+include = [
+	"stubs",
+]
+
+[tool.poetry.urls]
+Issues = "https://code.kodo.org.uk/dom/behave-utils/-/issues"
+
+[tool.poetry.dependencies]
+python = "~=3.10"
+behave = "~=1.2"
+jsonpath-python = "~=1.0"
+orjson = "~=3.6"
+parse = "~=1.19"
+requests = "~=2.26"
+trio = "~=0.20.0"
+xdg = "~=5.1"
+packaging = ">=21"
+
+
+[tool.isort]
+force_single_line = true
+
+[tool.mypy]
+strict = true
+warn_unused_configs = true
+warn_unreachable = true
+mypy_path = ["stubs"]
+plugins = ["trio_typing.plugin"]
+
+[[tool.mypy.overrides]]
+module = "coverage.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.coverage"
+disallow_subclassing_any = false
+
+
+[tool.flakeheaven]
+base = "https://code.kodo.org.uk/dom/project-templates/-/raw/main/.flakerules.toml"
+max_line_length = 92
+max_doc_length = 92
+
+[tool.flakeheaven.plugins]
+pycodestyle = ["-E701", "-E226", "-W191"]
+
+[tool.flakeheaven.exceptions."tests/"]
+flake8-docstrings = ["-D100"]
+
+[tool.flakeheaven.exceptions."README.md"]
+flake8-docstrings = ["-*"]
+
+[tool.flakeheaven.exceptions."doc/*"]
+flake8-docstrings = ["-*"]
+
+
+[tool.coverage.run]
+data_file = "results/coverage.db"
+branch = true
+source = [
+	"behave_utils",
+]
+plugins = [
+	"tests.coverage",
+]
+
+[tool.coverage.report]
+precision = 2
+skip_empty = true
+exclude_lines = [
+	"pragma: no cover",
+	"if .*\\b__name__\\b",
+	"if .*\\bTYPE_CHECKING\\b",
+	"class .*(.*\\bProtocol\\b.*):",
+	"@overload",
+]
+partial_branches = [
+	"pragma: no branch",
+	"if .*\\b__debug__\\b",
+]
+
+[tool.coverage.json]
+output = "results/coverage.json"
+
+[tool.coverage.xml]
+output = "results/coverage.xml"
+
+[tool.coverage.html]
+directory = "results/coverage.html.d"
+show_contexts = true
