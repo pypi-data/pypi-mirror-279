@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: tripawnOpen
+Version: 0.1.8
+Summary: Under Tacker package creation written by MitrePat
+Home-page: https://eu4ng.tistory.com
+Author: anomaly
+Author-email: anomaly@test.com
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+
