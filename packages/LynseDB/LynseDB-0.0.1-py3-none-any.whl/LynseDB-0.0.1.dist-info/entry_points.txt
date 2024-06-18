@@ -1,0 +1,2 @@
+[console_scripts]
+lynse = lynse.api.http_api.http_api:main
