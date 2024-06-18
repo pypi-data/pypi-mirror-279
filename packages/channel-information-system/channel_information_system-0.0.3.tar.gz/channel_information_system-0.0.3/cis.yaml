@@ -1,0 +1,20 @@
+name: cis-3.10
+channels:
+  - conda-forge
+dependencies:
+  - python >=3.10,<3.12
+  - pip
+  - pytz
+  - setuptools
+  - python-build
+  - twine
+  - flask
+  - gunicorn >=21.0, <22.0
+  - opencv >=4.6, <5.0
+  - ja-webutils
+  - mysql
+  - ipython
+  - pytest
+# - channel-information-system
+# we have to use pip for these
+# pymysql
