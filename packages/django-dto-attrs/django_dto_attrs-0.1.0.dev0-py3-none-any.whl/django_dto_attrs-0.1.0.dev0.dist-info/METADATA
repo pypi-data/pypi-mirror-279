@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: django-dto-attrs
+Version: 0.1.0.dev0
+Summary: High performance DTOs with Django ORM integration and optional validation.
+Project-URL: Repository, https://github.com/flango-dev/django-dto-attrs
+Project-URL: Documentation, https://github.com/flango-dev/django-dto-attrs/blob/main/README.md
+Project-URL: Changelog, https://github.com/flango-dev/django-dto-attrs/blob/main/CHANGELOG.md
+Author-email: Florian Kromer <kromer-florian@protonmail.com>
+License: MIT License
+        
+        Copyright (c) 2024 flango.dev (Florian Kromer)
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+License-File: LICENSE
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.12
+Requires-Dist: attrs>=23.2.0
+Requires-Dist: cattrs>=23.2.3
+Description-Content-Type: text/markdown
+
+# django-dto-cattrs
+
+Like [django-dto](https://github.com/nicogall/django-dto) but dataclass features not coupled to the Python version in use.
+
+Uses [attrs](https://github.com/python-attrs/attrs) and [cattrs](https://github.com/python-attrs/cattrs) under the hood.
