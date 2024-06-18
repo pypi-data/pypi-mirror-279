@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+JsonStructor/JsonStructor.py
+JsonStructor/__init__.py
+JsonStructor.egg-info/PKG-INFO
+JsonStructor.egg-info/SOURCES.txt
+JsonStructor.egg-info/dependency_links.txt
+JsonStructor.egg-info/top_level.txt
