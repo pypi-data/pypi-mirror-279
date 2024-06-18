@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: repoguess
+Version: 0.0.5
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+`repoguess` is a companion project to [taxonomy](https://github.com/JelleZijlstra/taxonomy/)
+for inferring the location of type specimens.
