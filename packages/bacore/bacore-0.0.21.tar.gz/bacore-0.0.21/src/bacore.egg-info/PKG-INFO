@@ -1,0 +1,93 @@
+Metadata-Version: 2.1
+Name: bacore
+Version: 0.0.21
+Summary: BACore is a framework for business analysis and test automation.
+Author-email: Kristian Grönberg <kristian@gronberg.org>, Jacob Dahlberg <dahlberg.jacob@gmail.com>, Jonatan Söderström <jonatan.m.soderstrom@gmail.com>
+License: MIT License
+        
+        Copyright (c) 2023 bacoredev
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: business analysis,test automation,testing
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 1 - Planning
+Classifier: Framework :: MkDocs
+Classifier: Framework :: Pydantic :: 2
+Classifier: Framework :: Pytest
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Requires-Python: >=3.12.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pydantic>=2.5.2
+Requires-Dist: pydantic-settings>=2.1.0
+Provides-Extra: api
+Requires-Dist: fastapi[all]>=0.68.1; extra == "api"
+Requires-Dist: uvicorn>=0.29.0; extra == "api"
+Provides-Extra: build
+Requires-Dist: build>=1.0.3; extra == "build"
+Requires-Dist: twine>=4.0.2; extra == "build"
+Provides-Extra: cli
+Requires-Dist: hatch>=1.9.1; extra == "cli"
+Requires-Dist: keyring>=24.3.0; extra == "cli"
+Requires-Dist: Jinja2>=3.1.2; extra == "cli"
+Requires-Dist: typer>=0.8.0; extra == "cli"
+Provides-Extra: dev
+Requires-Dist: bpython>=0.24; extra == "dev"
+Requires-Dist: pdbpp>=0.10.3; extra == "dev"
+Requires-Dist: pytest-testmon>=2.1.0; extra == "dev"
+Requires-Dist: pytest-watch>=4.2.0; extra == "dev"
+Requires-Dist: python-language-server[all]>=0.36.2; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: markdown-exec[ansi]>=1.7.0; extra == "docs"
+Requires-Dist: mkdocs>=1.5.3; extra == "docs"
+Requires-Dist: mkdocs-caption>=0.0.10; extra == "docs"
+Requires-Dist: mkdocs-material>=9.4.14; extra == "docs"
+Requires-Dist: mkdocstrings>=0.24.0; extra == "docs"
+Requires-Dist: mkdocstrings-python>=1.7.5; extra == "docs"
+Requires-Dist: mkdocs-git-show-history-log-plugin>=0.2; extra == "docs"
+Requires-Dist: neoteroi-mkdocs>=1.0.4; extra == "docs"
+Provides-Extra: jupyter
+Requires-Dist: jupyterlab>=4.0.9; extra == "jupyter"
+Requires-Dist: jupyter-collaboration>=2.0.0; extra == "jupyter"
+Provides-Extra: test
+Requires-Dist: allure-pytest>=2.13.2; extra == "test"
+Requires-Dist: Faker>=25.8.0; extra == "test"
+Requires-Dist: hypothesis>=6.103.1; extra == "test"
+Requires-Dist: lxml>=4.9.4; extra == "test"
+Requires-Dist: playwright>=1.40.0; extra == "test"
+Requires-Dist: pydantic-xml>=2.7.0; extra == "test"
+Requires-Dist: pytest>=7.4.3; extra == "test"
+Requires-Dist: pytest-playwright>=0.4.3; extra == "test"
+Requires-Dist: pytest-testmon>=2.1.0; extra == "test"
+Requires-Dist: pytest-watch>=4.2.0; extra == "test"
+Provides-Extra: testreport
+Requires-Dist: allure-pytest>=2.13.2; extra == "testreport"
+
+# bacore
+Bacore is a business analysis and test automation framework. It is written in Python and is available through
+[pypi.org](https://pypi.org/project/bacore/).
+
+Documentation is available at [bacore.dev](https://bacore.dev).
+
+It is *very* early days for bacore, and the developers would ask you to let it "cook" for a bit longer before trying it
+out.
+
