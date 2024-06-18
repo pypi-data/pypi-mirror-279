@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: libcoapy
+Version: 2024.6.17
+Summary: Python module to communicate over the CoAP protocol
+Author-email: Mario Kicherer <dev@kicherer.org>
+License: Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://github.com/anyc/libcoapy/
+Project-URL: Issues, https://github.com/anyc/libcoapy/issues
+Keywords: CoAP,network
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+libcoapy
+========
+
+libcoapy project enables communication over the CoAP protocol (RFC 7252). The
+`llapi` module provides ctypes-based wrappers for the [libcoap](https://libcoap.net/)
+C library. The `libcoapy` module uses `llapi` to provide a high-level class interface
+to the libcoap functions.
+
+Dependencies:
+-------------
+
+ - libcoap
+
+Status
+------
+
+This project is still in early development. Several functions of the libcoap
+library are not yet available and existing high-level libcoapy APIs might change
+in the future.
+
+Example
+-------
+
+```python
+from libcoapy import *
+
+if len(sys.argv) < 2:
+	uri_str = "coaps://localhost/.well-known/core"
+else:
+	uri_str = sys.argv[1]
+
+ctx = CoapContext()
+
+session = ctx.newSession(uri_str, hint="user", key="password")
+
+def rx_cb(session, tx_msg, rx_msg, mid):
+	print(rx_msg.bytes)
+	if not tx_msg.observe:
+		session.ctx.stop_loop()
+
+session.sendMessage(payload="example data", observe=False, response_callback=rx_cb)
+
+ctx.loop()
+```
+
+For an example with the low-level API, see `examples/ll-client.py`.
