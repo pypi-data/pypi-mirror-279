@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "neops_graphql"
+version = "1.7.27.beta.18"
+description = "A low-level generated GraphQL for Neops"
+authors = ["Leandro Lerena <leandro.lerena@zebbra.ch>"]
+readme = "README.md"
+include = ["neops_graphql/**/*"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "*"
+httpx = "*"
+websockets = "*"
+
+[tool.poetry.group.dev.dependencies]
+ariadne-codegen = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ariadne-codegen]
+schema_path = "../schema.graphql"
+queries_path = "../graphql"
+target_package_name = "neops_graphql"
