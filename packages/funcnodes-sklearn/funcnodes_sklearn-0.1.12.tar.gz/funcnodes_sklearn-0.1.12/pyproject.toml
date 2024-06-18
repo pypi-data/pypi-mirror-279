@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "funcnodes-sklearn"
+version = "0.1.12"
+description = ""
+authors = ["Kourosh Rezaei <kouroshrezaei90@gmail.com>"]
+readme = "README.md"
+
+homepage = "https://linkdlab.de/"
+
+repository = "https://github.com/kouroshrezaei/funcnodes_sklearn"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+scikit-learn = "^1.4.2"
+funcnodes = "^0.2.21"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
