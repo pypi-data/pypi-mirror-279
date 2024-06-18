@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: pysedm
+Version: 0.31.1
+Summary: Simulating Transient in the sky and how to observe them
+Home-page: https://github.com/MickaelRigault/pysedm
+Author: Mickael Rigault
+Author-email: m.rigault@ipnl.in2p3.fr
+License: Apache Software License
+Keywords: astronomy,astrophysics
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+Requires-Dist: iminuit>=2.0.0
+Requires-Dist: shapely
+Requires-Dist: scikit-image
+Requires-Dist: pyarrow
+Requires-Dist: pynverse
+Requires-Dist: astropy
+Requires-Dist: extinction
+Requires-Dist: sep
+Requires-Dist: ztfquery
+Requires-Dist: pyifu>=0.13.0
+Requires-Dist: modefit>=0.4.2
+Requires-Dist: pycalspec
+Requires-Dist: astrobject>=0.10.0
+Provides-Extra: docs
+Requires-Dist: nbsphinx; extra == "docs"
+Provides-Extra: tests
+Requires-Dist: pytest; extra == "tests"
+Requires-Dist: coverage; extra == "tests"
