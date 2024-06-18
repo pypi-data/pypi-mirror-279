@@ -1,0 +1,17 @@
+apsw/__init__.cp310-win_amd64.pyd,sha256=Oqe8u_RkffJeI-IQFRjQLcHLNwsBtuFy9h9zG62ZpyM,2146304
+apsw/__init__.pyi,sha256=bBSKQy-P5shU_iRHw6utObrk0HPUr5mPQGz8yQVIOzQ,206391
+apsw/__main__.py,sha256=Vl4cGbdVs3xZpZjYdX_QOVx9EtrvKlcW2t28IgQncpk,64
+apsw/bestpractice.py,sha256=brY0l-QjEUOxnrMWjbUqHC_RUf72kU_u0WK2vvR2s_U,2688
+apsw/ext.py,sha256=WtDYhbiywikCZ9PfYRtEvaWx-DiulE_E-thUmTgC1iQ,69376
+apsw/mcall.py,sha256=IEtTKJAX5USyPTa9s7SNJpgTAK2HpotkRosh0EZBIgc,4914
+apsw/mctests.py,sha256=l0XHFxmKnG9YsKecBVqoO4EOJ6kYAwhsy-23FvWaMiA,11884
+apsw/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+apsw/shell.py,sha256=1svBPGuuROGNU7ZQL49GsjeJRGpBHoCdB3rd1s03sRs,143203
+apsw/speedtest.py,sha256=w-ZwhDywfQzN7Dcb9n50eablk2vEExe4RwP23yOV8KU,22446
+apsw/tests.py,sha256=w-cbyVENQRvej1wsB_Rlo6ZgTLkcKYuU57vD5XACdyg,431277
+apsw/trace.py,sha256=b9cA9eYBTxTVcxMtsSt7VkaEDl610WLqnS2b2xKmbQc,14201
+apsw_sqlite3mc-3.46.0.1.dist-info/LICENSE,sha256=osx-ovVqfnSdOH2Jt5flMKemvT3nALF1AK97dOREi6Q,1158
+apsw_sqlite3mc-3.46.0.1.dist-info/METADATA,sha256=drKXbFwz24nxnCwLR5FgZBTyTfzjzSLYX-8M0DRBff0,10099
+apsw_sqlite3mc-3.46.0.1.dist-info/WHEEL,sha256=lO6CqtLHCAi38X3Es1a4R1lAjZFvN010IMRCFo2S7Mc,102
+apsw_sqlite3mc-3.46.0.1.dist-info/top_level.txt,sha256=AMSo16bHvRC7F5I0KBCKqv4WM4--RyHwQj3g2YbN30g,5
+apsw_sqlite3mc-3.46.0.1.dist-info/RECORD,,
