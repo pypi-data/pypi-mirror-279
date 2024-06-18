@@ -1,0 +1,7 @@
+pandas
+numpy
+ray[tune]
+scikit-learn
+scipy
+matplotlib
+plotly
