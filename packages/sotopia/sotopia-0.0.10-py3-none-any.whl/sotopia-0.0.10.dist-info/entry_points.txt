@@ -1,0 +1,3 @@
+[console_scripts]
+sotopia_benchmark=sotopia.benchmark:app
+
