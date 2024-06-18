@@ -1,0 +1,2903 @@
+[35.0.4]
+
+Release date: 2024-06-18
+
+*Core
+
+NEW: Based on DIRAC 8.0.48
+
+*Calibration
+
+FIX: (!500) Calib: fix potential used without assignment
+
+*ILCTransformationSystem
+
+FIX: (!500) dirac_ilc_production_summary: fix potential use before assignment
+FIX: (!500) SidProductionJob: fix possible use before assignment, add error message
+
+*Overlay
+
+FIX: (!502) ResetCounters Agent: Replace removed service calls
+
+*Workflow
+
+FIX: (!500) AnalyseWN: fix potential use before assignment
+
+
+[35.0.3]
+
+*ILCTransformation
+
+FIX: (!498) dirac-ilc-add-cvmfs-software has the dry run now working properly.
+
+*Workflow
+
+NEW: (!498) Whizard2 parses log files extracting luminosity, cross section and efficiency.
+NEW: (!498) Steering files for CLD are added to Gaudi.
+
+[35.0.2]
+Release date: 2024-03-15
+
+*Workflow
+
+FIX: (!497) DelphesPythia8_EDM4HEP now works correctly with LHE input files.
+
+
+[35.0.1]
+Release date: 2024-03-13
+
+*Documentation
+
+CHANGE: (!496) Update of the production manager documentation to include the new DelphesPythia8EvtGen_EDM4HEP_k4Interface productions.
+
+*ILCTransformationSystem
+
+CHANGE: (!496) changes to the DelphesApp workflow to include executable DelphesPythia8EvtGen_EDM4HEP_k4Interface.
+
+*Interfaces
+
+NEW: (!496) DelphesApp workflow for executable DelphesPythia8EvtGen_EDM4HEP_k4Interface.
+
+*Workflow
+
+NEW: (!496) DelphesApp workflow for executable DelphesPythia8EvtGen_EDM4HEP_k4Interface.
+
+
+[35.0]
+Release date: 2023-11-15
+
+*Core
+
+NEW: Based on DIRAC 8.0.32
+
+CHANGE: The location for the magic import of the "Script" and "parseCommandLine" changed! And one can no longer directly import "parseCommandLine"! See the example jobs for the new syntax!
+
+*Overlay
+
+FIX: (!488) OverlayDB: adapt to new signature for _query and _update
+
+
+[34.0.1]
+Release date: 2023-11-15
+
+*Docs
+
+FIX: (!480) Correct the ddsim with job splitting example.
+FIX: (!480) left over copy/paste description for setSplitOutputData
+Fix: Add sphinx-jquery to fix the missing issue collector in the documentation page
+CHANGE: (!468) remove instructions for python2 client, no longer supported
+
+*Transformation System
+
+NEW: (!478) FCC full simulations (in 3 steps: Gen, Sim, Rec) is available. DDSim is used for the simulation.
+
+
+[34.0]
+Release date: 2023-09-06
+
+*Core
+
+NEW: Depend on DIRAC version 7.3
+NEW: Python3 only
+CHANGE: (!440) Delphes Application: After looking in the local folder, look up the pythia cards in outside folder defined by OperationsOption "/ProcessList/PythiaCardsLocation". Reading the pythia card, check if it contains the same energy specified for the output path.
+CHANGE: (!440) Gaudi Application: When using Delphes, after looking in the local folder, look up the pythia cards in outside folder defined by OperationsOption "/ProcessList/PythiaCardsLocation". Reading the pythia card, check if it contains the same energy specified for the output path.
+NEW: (!430) Addition of some functionalities to the Gaudi Application interface.
+NEW: (!430) Correct paths for storing FCC simulations outputs.
+FIX: (!421) client installation: corrected (a typo in) the URL of the configuration service, fixes problems during dirac-configure.
+
+*ILCTransformationSystem
+
+NEW: (!455) Addition of the Whizard2 Application to the fcc production script.
+FIX: (!455) Increasing precision of the energy to the 3rd decimal digit in the output file path.
+FIX: (!432) Making Delphes generatorSteeringFile optional.
+NEW: (!432) Adding pythia card content to the info provided by dirac-ilc-get-info.
+
+*Interfaces
+
+CHANGE: (!455) New method for the choice of Gaudi workflow that is being used.
+FIX: (!447) Setting extensions of Gaudi and Delphes applications to 'root' for production output definitions.
+NEW: (!430) Implementation of the Delphes Application interface.
+
+*Workflows
+
+FIX: (!444) Putting randomSeed modulo 900000000 in the Pythia cards to avoid having a random seed bigger than the Pythia limit.
+CHANGE: (!455) Update of the KKMC application to work with the current k4h wrapper.
+CHANGE: (!455) Update of the Delphes application to be used after an external generator with stdhep output.
+CHANGE: (!461) DDSim detectors are now selected according to the key4hep environment used, thanks to the environment variable in the setup script. This is most useful for using nightly builds, where the absolute paths of the detector models change.
+
+*Documentation
+
+NEW: (!440) Documentation for FCC production code.
+CHANGE: (!455) Update of the production manager documentation to include the new applications.
+CHANGE: (!468) remove instructions for python2 client, no longer supported
+
+[v32r0p3]
+Release date: 2021-11-18
+
+*Core
+NEW: Based on Dirac v7r2p34
+CHANGE: (!401) resolvePathsAndNames: fixes when ProductionOutputData contains a semicolon
+CHANGE: (!401) resolvePathsAndNames: be more lenient in terms of file extensions, anything outputfile with a dot in it should work now
+CHANGE: (!402) UploadOutputData: make it more configurable with Operations/Productions/ExtensionToFiletypes parameter
+NEW: (!382) dirac-ilc-add-cvmfs-software: also add detectors from FCCDetectors to the CS
+
+*Interfaces
+
+CHANGE: (!401) ProductionJob: add some treatment for FCC production creation
+
+*Workflow
+
+CHANGE: (!401) KKMC: Add treatment for ProductionOutputData
+CHANGE: (!401) KKMC: If production outputdata changes the outputfile name, keep a copy of the original filename
+CHANGE: (!402) KKMC: always copy outputfile to events.lhe
+CHANGE: (!403) Also run injectJobIndex when running jobs in mode=local, for testing
+FIX: (!403) Fix the use of %n to inject the job index at an arbitrary location
+FIX: (!397) Allow running GaudiApplication when not setting a detectorModel
+
+
+[v32r0p2]
+Release date: 2021-08-17
+
+*ILCTransformationSystem
+
+FIX: (!393) Fix setting the input data query for created transformations
+CHANGE: (!393) ``ProductionJob.createProduction`` now returns the transformation object in the return S_OK
+
+
+[v32r0p1]
+Release date: 2021-08-06
+
+*Interfaces
+
+NEW: (!386) New application, ``GaudiApp``, to run, for example, the Key4hep ``k4run``
+
+*Workflow
+
+FIX: (!387) Fix for ``GenericApplication`` when no setup script is set, fixes ILCDIRAC-971
+FIX: (!388) ``ModuleBase`` Fix exception in redirectLogOutput when program output contains Unicode characters., Fixes ILCDIRAC-972
+
+[v32r0]
+Release date: 2021-07-28
+
+*Core
+
+NEW: Based on Dirac v7r2p16
+
+*ILCTransformationSystem
+
+CHANGE: (!376) Use the changed way of creating and retrieving InputDataQuery
+CHANGE: (!380) The DataRecoveryAgent and related tools have been moved to DIRAC
+
+*Interfaces
+
+CHANGE: (!376) Remove the ``ProductionJob.applyInputDataQuery`` function.
+
+[v31r0p1]
+Release date: 2021-04-14
+
+*Core
+
+NEW: Based on Dirac v7r1p36
+
+*Docs
+
+FIX: (!374) Fix commands for installing iLCDirac client
+
+*Interfaces
+
+NEW: (!373) GenericApplication: Added possibility to source shell script
+
+[v31r0]
+Release date: 2021-03-23
+
+*Core
+
+NEW: Based on Dirac v7r1p34
+
+[v29r2p9]
+Release date: 2021-03-08
+
+*Interfaces
+
+NEW: (!356) New application for running kkmc
+
+
+[v29r2p8]
+Release date: 2021-02-26
+
+*CORE
+
+CHANGE: (!345) Change to new location of ``dirac-install`` file
+
+*Workflow
+
+FIX: (!346) ``OverlayInput.getDataManagerFile``: fix parsing of the return value of DataManager.getFile which would erroneously signal success leading to failed jobs not trying several SEs in turn
+FIX: (!347) ``OverlayInput``: fix latitude to polar angle conversion for site to SE distance calculations
+
+
+[v29r2p7]
+Release date: 2021-02-26
+
+*Interfaces
+
+FIX: (!336) ``Whizard2``: Fix the setting of for using the raw sindarin file introduced in the previous patch
+
+*Workflow
+
+FIX: (!337) ``OverlayInput``: fix bug when no input files could be downloaded overlayInput should no exit with an error correctly
+CHANGE: (!337) ``OverlayInput``: implement an ordering of the sourceSEs for background files based on the distance of the site to the StorageElement, fixes ILCDIRAC-941
+
+
+[v29r2p6]
+Release date: 2021-02-24
+
+*Interfaces
+NEW: (!335) ``Whizard2.setSinFile``: added optional parameter ``raw``, if set fewer modifications to the sindarin file are done by iLCDirac allowing more complicate ``simulate`` instructions to be passed to Whizard2
+
+[v29r2p5]
+Release date: 2021-02-03
+
+*FrameworkSystem
+
+CHANGE: (!314) ``MonitorAgents`` add DoNotRestartInstancePattern to disable restart of some instances selectively
+
+*ILCTransformationSystem
+
+FIX: (!311) FileStatusTransformationAgent: split getReplica into chunks to avoid timeouts
+CHANGE: (!312) ``dirac-ilc-production-summary``: add ``-N, --sample_size`` to chose the number of files to check for metadata. Fix logic to speed up running the script
+CHANGE: (!312) ``dirac-ilc-production-summary``: removed unused ``--verbose`` flag
+
+*WorkloadManagementSystem
+
+CHANGE: (!328) OverlayModule: pick up the numberOfEvents of the background files if pathToOverlayFiles is used.
+CHANGE: (!313) ``SoftwareVersions``: update banlist every 600 seconds
+
+
+[v29r2p4]
+Release date: 2020-08-27
+
+*Interfaces
+
+FIX: (!310) fix for using :func:`~ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplitOutputData` to prevent files from being uploaded twice
+
+
+[v29r2p3]
+Release date: 2020-08-25
+
+*Core
+
+NEW: Based on Dirac v6r22p33
+
+*Docs
+
+CHANGE: (!305) change installation instructions to new configuration server
+
+*Interfaces
+
+NEW: (!309) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.UserJob`: added :func:`~ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplitParameter` and :func:`~ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplitOutputData` functions to ease the use of parametric jobs. See their docstring for details.
+
+*Workflow
+
+NEW: (!309) add possibility to use placeholders to use parametric jobs to scan argument lists, or change output files.
+
+*WorkloadManagementSystem
+
+FIX: (!308) DownloadInputData: fix skipping other SEs when getFileMetadata fails for the first SE, fixes ILCDIRAC-928
+
+[v29r2p2]
+Release date: 2020-05-18
+
+*Core
+
+NEW: (!300) added lowerFirst function to lower case the first character in a string
+NEW: Based on Dirac v6r22p29
+
+*ILCTransformationSystem
+
+CHANGE: (!304) ``dirac-ilc-get-prod-log`` change default Datatype when looking for Reconstruction transformation log files to DST
+CHANGE: (!304) ``dirac-ilc-get-prod-log`` now uses findDirectoriesByMetadata, should speed up discovery of log folders
+NEW: (!304) ``dirac-ilc-get-prod-log``: add ``--Query`` parameter to change metadata query
+FIX: (!300) Fix the parsing of the "MoveStatus" and "MoveGroupSize" options
+FIX: (!303) ``dirac-ilc-get-prod-log``: Avoid downloading duplicated directory when -A option is used.
+
+*Interfaces
+
+FIX: (!297) Improve docstring for ``Whizard2.setIntegratedProcess``
+
+
+[v29r2p1]
+Release date: 2020-01-08
+
+*Core
+NEW: Based on Dirac v6r22p18
+
+*Workflow
+
+FIX: (!296) OverlayInput: clear StorageElementCache at the end of the ``OverlayInput`` module. Needed to ensure sessions are closed until DIRAC is patched
+
+*CalibrationSystem
+
+FIX: (!295) fix bug of improper CalibrationAgent behaviour when one the active calibrations does not have associated grid jobs.
+NEW: (!295) add unit test for CalibrationAgent
+CHANGE: (!295) print error message when there is an error during execution of createCalibration.
+CHANGE: (!295) improve Pandora calibration user guide
+
+
+[v29r2]
+
+Release date: 2019-10-16
+
+*Core
+NEW: Based on Dirac v6r22p13
+
+[v29r1p2]
+
+*Core
+NEW: Based on Dirac v6r21p16
+NEW: (!288) `dirac-ilc-add-cvmfs-software`: Added treatment for ``pandora_calibration_scripts`` application, fixes ILCDIRAC-896, needed by the CalibrationSystem
+CHANGE: (!288) `dirac-ilc-add-cvmfs-software`: Dropped deprecated ILDConfig option
+
+
+*CalibrationSystem
+
+NEW: (!262) New system to run PandoraPFA calorimeter calibration inside iLCDirac. See the documentation in the UserGuide about `calibration`.
+
+*ILCTransformationSystem
+
+CHANGE: (!290) The ``DataRecoveryAgent`` can now also treat transformations with multiple input files. For example when merging stdhep.
+CHANGE: (!290) Some option names for ``TransformationTypes`` to be treated for the ``DataRecoveryAgent`` have changed.
+NEW: (!290) New command ``dirac-transformation-recover-data`` to run the functionality in a single production
+
+*Interfaces
+
+FIX: (!292) Correct the output of number of jobs for jobsplitting
+NEW: (!287) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.StdhepCut`, :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.StdhepCutJava` new function ``setFileMask`` to set the selection of input files.
+NEW: (!287) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.StdhepCut`, :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.StdhepCutJava` new function ``setStoreFile`` to enable or disable the storing of the output file. Use this when ``StdhepCut`` is not the last module in a production workflow
+CHANGE: (!287) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob` change logging from ``info`` to ``notice``, so there is a printout when used in scripts without debug flags
+
+*Workflow
+
+CHANGE: (!292) Better logging output when input files cannot be resolved
+CHANGE: (!287) The default ``fileMask`` for :mod:`~ILCDIRAC.Workflow.Modules.StdHepCut` is changed to ``*.stdhep`` instead of ``../*.stdhep``
+
+[v29r1p1]
+
+*Core
+
+NEW: Based on Dirac v6r21p15
+
+*ILCTransformationSystem
+
+CHANGE: (!284) The :mod:`~ILCDIRAC.ILCTransformationSystem.Agent.FileStatusTransformationAgent` now obtains the proxy of the transformation owner to check files. It no longer uses a ``shifterProxy``
+
+*Interfaces
+
+FIX: (!282) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob`: return success in checkFindDirectories when running ``dryRun`` mode, fixes problem with `dirac-clic-make-productions` in dryRun mode
+NEW: (!285) New function ``printAvailableOptions`` in :class:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.OverlayInput.OverlayInput`
+CHANGE: (!285) If the ``OverlayInput`` consistency check fails, a list of available options partially compatible with the requested settings is printed
+
+*Test
+
+NEW: (!282) add CI test to run `dirac-clic-make-productions` in dryRun mode
+
+
+[v29r1]
+
+Release date: 2019-07-03
+
+*ILCTransformationSystem
+
+CHANGE: (!279) `dirac-ilc-add-tasks-to-prod` now also works for 'Standard' MCGeneration transformations
+CHANGE: (!279) `dirac-ilc-add-tasks-to-prod` instead of mandatory options with flags (-t, -p) the script also accepts positional arguments
+NEW: (!279) `dirac-ilc-add-tasks-to-prod` new flag ``--Total`` to set the MaxNumberOfTasks to the given number of tasks, instead of adding to the number of tasks. Total has to be larger than current max number of tasks
+
+*Core
+
+NEW: Based on Dirac v6r21p10
+
+
+
+[v29r0p5]
+
+Release date: 2019-07-02
+
+
+*Interfaces
+
+NEW: (!278) New function :func:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim.DDSim.setExtraParticles` to modify the particle table in :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim`.
+
+*Workflow
+
+CHANGE: (!272) add setting of ``ProductionOutputData`` job parameter for :class:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob` to the ``UploadOutputData`` module in view of speeding up the ``DataRecoveryAgent``
+
+*Core
+
+NEW: Based on Dirac v6r20p28
+FIX: (!277) :mod:`ILCDIRAC.Core.Utilities.OutputDataPolicy` : Fix exception when constructing file name from ``inputFilename`` for ILD transformation jobs. The ``inputData`` type was changed from string to list in DIRAC v6r20p17
+
+*ILCTransformationSystem
+
+FIX: (!271) `dirac-clic-make-productions`: fix a problem when creating REC productions when multiple generation productions where created. The transformation name is now created differently to allow this.
+FIX: (!271) `dirac-clic-make-productions`: can now set the ``additionalName`` per application
+FIX: (!271) In :class:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob`. Correct the check for missing directories when checking for meta data
+CHANGE: (!274) `dirac-ilc-moving-transformation` fixed setting of plugin, ``BroadcastProcessed`` is again the default
+CHANGE: (!274) `dirac-ilc-moving-transformation` default ``groupSize`` changed to 10
+CHANGE: (!274) `dirac-ilc-replication-transformation` default ``groupSize`` changed to 10
+FIX: (!275) `dirac-ilc-moving-transformation`: Always use ``Broadcast`` for REC files
+
+*WorkloadManagementSystem
+
+CHANGE: (!270) the :class:`ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob` function ``setClicConfig`` was renamed to ``setCLICConfig`` to correspond to the spelling in UserJob.
+CHANGE: (!270) the ``setConfigPackage`` functions are now defined in :class:`ILCDIRAC.Interfaces.API.NewInterface.Job.Job`, with specialisations in ``UserJob`` or ``ProductionJob``, solves ILCDIRAC-865
+FIX: (!276) The ``JobResetAgent`` treats more error cases, like user jobs with Failover Requests where files are removed, or files are trying to be overwritten in requests
+
+
+[v29r0p4]
+
+Release date: 2019-03-19
+
+*ILCTransformationSystem
+
+FIX: (!257) `dirac-clic-make-productions`: creation Gen transformations now is working again
+FIX: (!257) `dirac-clic-make-productions`: Gen transformations can use the FE. syntax now via the Whizard2 ``applicationOptions``
+CHANGE: (!259) `dirac-clic-make-productions`: new Parameter ``MoveGroupSize`` to set the number of files for each moving request, defaults to 10 instead of 1 as used before
+CHANGE: (!261) The ``DataRecoveryAgent`` now does service calls in bulk to speed up processing by factor at least 4
+CHANGE: (!263) ILCDIRAC-873 :mod:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob`: refactor the registration of metadata, ``_registerMetadata`` now returns S_ERROR if something went wrong. Adding verbose output.
+FIX: (!263) `dirac-clic-make-productions`: Fix for inputDataQuery for Split Productions
+CHANGE: (!266) `dirac-clic-make-productions`: Disable keeping of REC files by default. It can be enabled by setting ``KeepRecFile=True`` in the Marlin application options of the transformation creation file
+
+*Interfaces
+
+NEW: (!264) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Marlin`: new member flag ``keepRecFile``, if set to ``False`` ProductionJobs are not uploading REC files
+NEW: (!265) New function :func:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Whizard2.Whizard2.setIntegratedProcess` to make whizard2 use an already integrated process. The user is responsible for providing a correct sindarin file
+
+*Miscellaneous
+
+FIX: (!260) use print function instead of print statement
+FIX: (!260) remove the usage of the long suffix to distinguish between long and int
+FIX: (!260) convert octal literals to new syntax
+NEW: (!260) Add pylint test to check python 3 compatibility
+NEW: (!258) Enable codecov in travis
+
+
+[v29r0p3]
+
+Release date: 2019-02-12
+
+
+*ILCTransformationSystem
+
+CHANGE: (!243) The ``DataRecoveryAgent`` no longer uses a shifterProxy
+NEW: (!245) `dirac-clic-make-productions`: new options for configuration. add ForEach type configuration for application parameters, see :ref:`clicProdMan`.
+NEW: (!245) `dirac-clic-make-productions`: Add ``MoveStatus`` options to set the status of the replication transformations after creation: Active or Stopped. Needs DIRAC v6r20p19
+NEW: (!245) `dirac-clic-make-productions`: additionalName can be used as ``ApplicationParameter`` to give more sensible names for different transformations types when created in a chain
+FIX: (!252) `dirac-clic-make-productions`: When starting a chain with a simulation productions, the number of events was not set, now always set NumberOfEvents into the meta dictionary
+FIX: (!254) `dirac-clic-make-productions`: Fix exception when creation non overlay Reconstruction productions
+
+*Interfaces
+
+CHANGE: (!244) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob`: use TransformationClient instead of RPCClient
+NEW: (!245) :class:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob` new member parameter ```maxFCFoldersToCheck`` to limit the number of FileCatalog folders that are checked for metadata
+CHANGE: (!251) The JDL created for Jobs no longer contains *Site* if not explicitly set in the job creation
+
+*FrameworkSystem
+
+CHANGE: (!244) ``MonitorAgents``: Use Client instead of RPCClient
+
+*WorkloadManagementSystem
+
+CHANGE: (!244) :mod:`~ILCDIRAC.WorkloadManagementSystem.Agent.JobResetAgent`: use Client instead of RPCClient
+
+*Workflow
+
+CHANGE: (!244) :mod:`~ILCDIRAC.Workflow.Modules.OverlayInput`: use OverlaySystemClient instead of RPCClient
+CHANGE: (!244) :mod:`~ILCDIRAC.WorkloadManagementSystem.Client.DownloadInputData`: use Client instead of RPCClient
+CHANGE: (!244) :mod:`~ILCDIRAC.Workflow.Modules.GetSRMFile`: use JObMonitoringClient instead of RPCClient
+
+
+[v29r0p2]
+
+Release date: 2018-09-19
+
+*Core
+
+CHANGE: (!241) The names of the loggers have changed for all Core.Utilities, this makes it easier to see where messages are coming from, and will allow better silencing of individual modules in the future
+NEW: (!241) New function :func:`ILCDIRAC.Core.Utilities.Utilities.listify` to turn a comma separated string into a list
+NEW: Based on Dirac v6r20p13
+
+*WorkloadManagementSystem
+
+CHANGE: (!232) :class:`~ILCDIRAC.WorkloadManagementSystem.Agent.JobResetAgent.JobResetAgent`: Treat Failed RegisterFile requests. Existing files are unregistered so that the RegisterFile request can succeed, solves ILCDIRAC-860
+
+*Workflow
+
+CHANGE: (!238) The number of events to process is no longer always taken from the FileCatalog when defined, only when it is not set explicitly, this change is necessary when trying to split production files, which have the *NumberOfEvents* metadata defined
+CHANGE: (!238) The name of the loggers has changed, the output will be more hierarchical
+
+*Docs
+
+CHANGE: (!238) The overview pages for packages has changed to *index*
+
+*Interfaces
+
+NEW: (!238) New automatic job splitting function to split one file across multiple jobs :func:`~ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplitFilesAcrossJobs`
+NEW: (!238) New function to set the job indices to use for automatic job splitting: :func:`~ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplitJobIndexList`
+CHANGE: (!238) The name of the loggers has changed, the output will be more hierarchical
+CHANGE: (!238) ``runLocal`` is used from DIRAC interfaces again, as the patches to run locally with LFNs in input sandboxes have been ported to upstream
+FIX: (!239) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Whizard2`: fix to be able to parse and replace non-integer sqrts values
+
+*FrameworkSystem
+
+NEW: (!235) ``MonitorAgents``: add component control: ensure services/agents/executors are in the correct run status.
+NEW: (!235) ``MonitorAgents``: add component control: ensure the URL for running services is set
+
+*ILCTransformationSystem
+
+CHANGE: (!228) `dirac-clic-make-productions`: better information about moving transformation in dryRun mode, moving transformations will be added to the same group as other transformations
+CHANGE: (!228) `dirac-ilc-replication-transformation`, `dirac-ilc-moving-transformation`: transformation group is now the group the prodID belongs to as well, unless set with -R/--groupName
+NEW: (!230) `dirac-clic-make-productions`: new parameter overlayEventType, added configuration for 91.2 and 365 fcc overlay information
+
+[v29r0p1]
+
+Release date: 2018-08-03
+
+*Core
+
+NEW: Based on Dirac v6r20p7
+
+*WorkloadManagementSystem
+
+CHANGE: (!225) :mod:`~ILCDIRAC.WorkloadManagementSystem.Agent.JobResetAgent`: only reset requests that are not waiting or scheduled
+FIX: (!225) :mod:`~ILCDIRAC.WorkloadManagementSystem.Agent.JobResetAgent`: Take into account that some requests have multiple files
+
+*Interfaces
+
+FIX: (!227) :mod:`~ILCDIRAC.Interfaces.Utilities.DDInterfaceMixin`: ensure errors for :func:`~ILCDIRAC.Interfaces.Utilities.DDInterfaceMixin.DDInterfaceMixin.setDetectorModel` cannot be ignored.
+
+*Workflow
+
+FIX: (!222) :mod:`~ILCDIRAC.Workflow.Modules.ModuleBase`: Fix cleanup of request operations in case of failure. RemovalReplica requests are also removed, which in the past lead to un-fulfillable requests
+FIX: (!222) :mod:`~ILCDIRAC.Workflow.Modules.ModuleBase`: only calculate checksum once.
+CHANGE: (!222) :mod:`~ILCDIRAC.Workflow.Modules.ModuleBase`: change the name of the log output to **__name__**
+CHANGE: (!223) :mod:`~ILCDIRAC.Workflow.Modules.OverlayInput`: only wait 3 minutes between copying if the previous copy attempt failed, fixes ILCDIRAC-850
+
+*FrameworkSystem
+
+FIX: (!224) ``MonitorAgents``: prevent exception for missing LogAge for services
+CHANGE: (!224) ``MonitorAgents``: add hostname to the email subject, include service url in error messages
+
+*ILCTransformationSystem
+
+FIX: (!226) :class:`~ILCDIRAC.ILCTransformationSystem.Agent.FileStatusTransformationAgent`: Do not create reset request, set file unused to force creation of a new request.
+
+[v29r0]
+
+Release date: 2018-07-18
+
+*Core
+
+NEW: Based on Dirac v6r20p5
+
+
+
+[v28r0p8]
+
+Release date: 2018-06-12
+
+*ILCTransformationSystem
+
+FIX: (!212) `dirac-ilc-get-info`: fixes and modifications for new whizard2 production
+FIX: (!216) TransformationPlugin: BroadcastProcessed: only print about failure for ``getDescendents`` if there was a failure
+
+*Interfaces
+
+NEW: (!214) New function :func:`~ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplittingStartIndex` to set the starting index for the naming of output files.
+CHANGE: (!215) :class:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob` classes now execute the :class:`~ILCDIRAC.Workflow.Modules.ReportErrors.ReportErrors` Module at the very end, solves ILCDIRAC-760. Only works for productions created with this or later releases.
+FIX: (!212) :class:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob`: Fix for meta energy _without_ decimal digits
+NEW: (!218) Parametric (Splitting) Jobs can now be tested locally. Only the first entry of the sequence will be run however! Fixes ILCDIRAC-818
+FIX: (!218) When testing jobs locally, the LFNs in the input sandbox will be treated without exceptions.
+
+*FrameworkSystem
+
+NEW: (!213) ``MonitorAgents`` now also monitors services by pinging them
+
+*Workflow
+
+NEW: (!215) New module :class:`~ILCDIRAC.Workflow.Modules.ReportErrors.ReportErrors` to print out application errors at the end of ProductionJob workflow executions
+
+
+[v28r0p7]
+
+Release date: 2018-06-07
+
+*ILCTransformationSystem
+
+NEW: (!209) New function :func:`~ILCDIRAC.Core.Utilities.ProductionData.getExperimentFromPath` which determines the experiment based on the path of the file. Replaces hardcoded values with flexible reading from the configuration system. See section **Operations/Production/ExperimentBasePaths**
+NEW: (!210) `dirac-clic-make-productions` sets some parameters based on the proxy, e.g., fcc_prod or ilc_prod groups
+CHANGE: (!210) `dirac-clic-make-productions` non-integer energies can be used for productions, e.g. 91.2 GeV
+CHANGE: (!210) `dirac-clic-make-productions` more easy settings for multiple production chains, setting one or more entries to a list should in most cases be possible, other values will be taken for all chains.
+
+*Interfaces
+
+NEW: (!210) The :class:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Whizard2.Whizard2` interface now allows the setting of the energy in the Sindarin file via the API, if parsing does not work an error is raised
+CHANGE: (!210) :mod:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob`: instead of checking the proxy group the proxy properties are checked for ProductionManagement
+
+*Core
+
+CHANGE: (!210) `checkOrGetGroupProxy` now also takes a list as argument and returns :func:`~DIRAC:DIRAC.Core.Utilities.ReturnValues.S_OK` with the group found
+
+[v28r0p6]
+
+Release date: 2018-06-06
+
+
+*Interfaces
+
+NEW: (!207) Whizard2: add possibility to simulate multiple processes with the function :func:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Whizard2.Whizard2.setProcessVariables`
+
+*FrameworkSystem
+
+FIX: (!199) ``MonitorAgents`` fix exception after restarting of agent. Wring signature for callback function
+NEW: (!201) ``MonitorAgents`` now also monitors executors, restarts them if **RestartExecutors** is True, solves ILCDIRAC-824
+
+*Docs
+
+FIX: (!204) Fixed wrong imports in splitting example
+FIX: (!205) Fixed syntax errors in splitting example
+NEW: (!205) added parametric job name to splitting example
+
+*ILCTransformationSystem
+
+FIX: (!198) Fix a problem in `dirac-clic-make-productions` when starting chains from generator files
+NEW: (!198) In `dirac-clic-make-productions`, allow creating chains only with prodIDs and obtain the EvtType, Energy and Number of Events from the ProductionInfo or FileCatalog
+FIX: (!202) :class:`~ILCDIRAC.ILCTransformationSystem.Agent.FileStatusTransformationAgent`: Protect against exception when **TaskID==None**, solves ILCDIRAC-831
+FIX: (!206) `dirac-clic-make-productions`: Fix a bug when not creating RecOver productions, the wrong check was done for the creation of the moving transformation
+NEW: (!206) `dirac-clic-make-productions`: When creating chains, the splitting step will be skipped if the number of events per job and the number of events in the generator files is the same. This allows the creation of multiple chains some of which contain splitting steps and some not
+
+[v28r0p5]
+
+*WorkloadManagementSystem
+
+FIX: (!194) fixing :mod:`~ILCDIRAC.WorkloadManagementSystem.Agent.JobResetAgent`
+
+*ILCTransformationSystem
+
+FIX: (!195) Fixed bugs that prevented the use of `dirac-ilc-moving-transformation` and `dirac-ilc-replication-transformation`
+
+
+[v28r0p4]
+
+*WorkloadManagementSystem
+
+NEW: (!187) :mod:`~ILCDIRAC.WorkloadManagementSystem.Agent.JobResetAgent`: automatically resets jobs that somehow got stuck in staging or completed status
+
+*FrameworkSystem
+
+NEW: (!191) new ``MonitorAgents`` to restart stuck agents
+
+*Workflow
+
+CHANGE: (!182) :mod:`~ILCDIRAC.Workflow.Modules.UploadLogFile` and :mod:`~ILCDIRAC.Workflow.Modules.UploadOutputData`: Change logic to determine the experiment. ILD is using new paths: /ilc/prod/ilc/mc-opt
+and /ilc/prod/ilc/ild (Testing only)
+
+*ILCTransformationSystem
+
+NEW: (!180) Adding new :class:`~ILCDIRAC.ILCTransformationSystem.Agent.FileStatusTransformationAgent`
+NEW: (!184) :class:`~ILCDIRAC.ILCTransformationSystem.Agent.FileStatusTransformationAgent`'s errors are sent in email notification
+FIX: (!186) `dirac-clic-make-productions`: reset extraCommandLine options after each (reco) production so multiple overlay options do not appear in the string.
+NEW: (!186) `dirac-clic-make-productions`: add option to set arbitrary options for Applications (Marlin, DDSim, Overlay at the moment). All options that can be set with setter functions can be set via an extra section, e.g., "[Marlin]". Can be used to set a different SteeringFile name. Sections are automatically created with **-p**
+NEW: (!188) `dirac-ilc-replication-transformation`, `dirac-ilc-moving-transformation` have additional parameter --groupSize to set the number of files per task
+NEW: (!188) `dirac-ilc-replication-transformation` allows multiple ProdIDs to be passed
+NEW: (!188) New configuration section in Operations/Defaults/Production/TransformationDatatypes maps Datatypes with TransformationTypes, e.g. REC -> MCReconstruction etc. Used in `dirac-ilc-replication-transformation` and `dirac-ilc-moving-transformation` to check consistency of ProdID and datatype
+NEW: (!189) Add Whizard2 to the CLIC production script (`dirac-clic-make-productions`)
+
+[v28r0p3]
+
+*Workflow
+
+CHANGE: (!182) UploadLogFile and UploadOutputData: Change logic to determine the experiment. ILD is using new paths: /ilc/prod/ilc/mc-opt
+and /ilc/prod/ilc/ild (Testing only)
+
+
+[v28r0p2]
+
+*Interfaces
+
+CHANGE: (!179) At job submission a check is done that ensure LFNs in the input sandbox have more than one replica, or a replica at a decent storage element (ILCDIRAC-805)
+
+*Workflow
+
+FIX: (!177) MarlinAnalysis: When obtaining the MARLIN_DLL from the init_script, suppress output from sourcing that script
+
+
+[v28r0p1]
+
+*Core
+
+NEW: Based on Dirac v6r19p4
+
+NEW: (!175) New utility for Configuration: :func:`~ILCDIRAC.Core.Utilities.Configuration.getOptionValue` to get option from any level of given path in Configuration
+
+*Workflow
+
+CHANGE: (!175) MaxNbFilesToGet can now be set at any level of the Overlay hierarchy
+
+[v28r0]
+
+*Core
+
+NEW: Based on Dirac v6r19p3
+
+
+[v27r0p2]
+
+*ILCTransformationSystem
+
+CHANGE: (!170) ILDProductionJobOpt2017: The detector model in output path, basename and meta value for DetectorModel meta key can now be defined by a function ``setDetectorForBasename``. If the variable ``detector_basename`` is defined by the function, it is used for the detector name. Otherwise, the detector name is obtained from the detector name found in the input file.
+CHANGE: (!171) Allow `dirac-ilc-moving-transformation` to create moving transformation for Split productions
+CHANGE: (!167) FilenameEncoder: Detector model in the rec and dst file names could be different from the input sim files for ILD detector optimization production. In previous version, detector model in sim file name was used for the rec and dst file names. It is modified to use a detector model given by the production, namely given by the second argument of resolvePathsAndNames.getProdFilenameFromInput
+FIX: (!167) FilenameEncoder: Avoid "%" in the file name when constructing rec and dst files from sim file produced during DBD era.
+
+
+[v27r0p1]
+
+*WorkloadManagementSystem
+
+FIX: (!166) Adapt DownloadInputData for GFAL2 plugins, ILCDIRAC-796
+
+
+[v27r0]
+
+*Core
+
+NEW: Based on DIRAC v6r17p33
+
+[v26r0p14]
+
+*Interfaces
+
+NEW: (!150) :class:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Whizard2.Whizard2` interface (ILCDIRAC-467)
+
+
+[v26r0p13]
+
+*Interface
+
+NEW: (!153) `ILCDIRAC.Interfaces.Utilities.SplitMixin.SplitMixin.setSplitDoNotAlterOutputFilename`: function to disable the injecting of the JobIndex into the filename
+
+*ILCTransformationSystem
+
+FIX: (!155) DataRecoveryAgent: fix problem to get canceled request status. Fixes problem were the request cannot be successful, and thus some jobs were not dealt with properly.
+FIX: (!156) `dirac-clic-make-productions` use ProdID as string, fixes problem if ProdID is 0
+CHANGE: (!156) `dirac-clic-make-productions` *_productionname* function no longer has *prodname* argument
+
+*Interfaces
+
+CHANGE: (!156) Updated docstring for :func:`~ILCDIRAC.Interfaces.Utilities.DDInterfaceMixin.DDInterfaceMixin.setDetectorModel` to include examples of the different options
+
+*Workflow
+
+NEW: (!153) if some kind of jobSplitting is done the OutputData LFNs are automatically injected with the JobIndex in the splitting sequence. See :mod:`ILCDIRAC.Core.Utilities.Splitting`
+
+
+[v26r0p12]
+
+*Core
+
+CHANGE: (!141) **GetOverlayFiles** module renamed to :mod:`~ILCDIRAC.Core.Utilities.OverlayFiles` and added some helper functions to it; reduce code duplication in the OverlayInput interface and workflow module
+CHANGE: (!151) `dirac-ilc-add-cvmfs-software` add dryrun option, add possibility to add any Config package
+
+*Workflow
+
+NEW: (!153) if some kind of jobSplitting is done the OutputData LFNs are automatically injected with the JobIndex in the splitting sequence. See :mod:`ILCDIRAC.Core.Utilities.Splitting`
+
+*ILCTransformationSystem
+
+FIX: (!140) ``MovingTransformation``: fix the *targetSE* argument type; fix if *targetSE* is a string
+FIX: (!140) `dirac-clic-make-productions`: *Move* parameter was not parsed before, now moving transformations are also created if it is True
+FIX: (!144) `dirac-clic-make-productions` make more parameters optional
+CHANGE: (!144) `dirac-clic-make-productions` change parameter name *NumberOfEventsInBaseFiles* to *eventsInSplitFiles*
+CHANGE: (!144) `dirac-clic-make-productions` change parameter *overlayEnergy* to *overlayEvents*
+CHANGE: (!144) `dirac-clic-make-productions` Produciton Group is now taking only from the config file, no additional string is added. Use string replacements for automatic group names
+FIX: (!152) `dirac-clic-make-productions`: allow moving of DST files
+NEW: (!152) `dirac-clic-make-productions`: add cliReco option to set extraCLIArguments for Marlin
+
+*Docs
+
+CHANGE: (!140) move production manager notes from the twiki to the ilcdirac docs
+NEW: (!140) CLIC Production manager guide with some notes for CLIC productions
+CHANGE: (!142) restructuring of the documentation; additional example script
+NEW: (!147) Add JIRA issue collector to the doc pages.
+
+*Interface
+
+NEW: (!153) :func:`~ILCDIRAC.Interfaces.API.NewInterface.UserJob.UserJob.setSplitDoNotAlterOutputFilename`: function to disable the injecting of the JobIndex into the filename
+NEW: (!146) :class:`~ILCDIRAC.Interfaces.API.NewInterface.UserJob.UserJob`: new functions to ease the automatic splitting of jobs :func:`~ILCDIRAC.Interfaces.API.NewInterface.UserJob.UserJob.setSplitInputData`, :func:`~ILCDIRAC.Interfaces.API.NewInterface.UserJob.UserJob.setSplitEvents`
+
+[v26r0p11]
+*Interface
+
+NEW: (!136) new attribute *processorName* for :class:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.OverlayInput.OverlayInput`. Set the name of the Marlin processor the input files belong to. This enables multiple use of the OverlayInput application to download files for different Marlin processors.
+CHANGE: (!136) :class:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob` change capitalisation of the *version* argument of :func:`~ILCDIRAC.Interfaces.API.NewInterface.ProductionJob.ProductionJob.setConfig`
+
+*ILCTransformationSystem
+
+NEW: (!128) `dirac-clic-make-productions` script to create productions for the new ddsim/marlin software chain
+NEW: (!124) `dirac-ilc-get-prod-log` new options to get all files in a folder (-A) and to automatically start downloading without confirmation (-N)
+NEW: (!126) `dirac-ilc-moving-transformation`: new option (--allFor) to set a prodID and have the three corresponding moving transformations: prodID/GEN, prodID+1/SIM and prodID+2/REC created. Added consistency check for Datatype
+
+*Interfaces
+
+NEW: (!125) :class:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.StdHepSplit.StdHepSplit`: new property to set maxRead flag for the hepsplit application
+
+*Workflow
+
+CHANGE: (!135) The output parser for :class:`~ILCDIRAC.Workflow.Modules.MarlinAnalysis.MarlinAnalysis` will now pass lines containing 'EventNumber' or 'StatusMonitor' to the standard output, in addition to 'event' and 'ProgressHandler'
+CHANGE: (!136) :class:`~ILCDIRAC.Workflow.Modules.OverlayInput.OverlayInput` fix the path for /eos/experiment/clicdp to get files directly from EOS
+CHANGE: (!136) :class:`~ILCDIRAC.Workflow.Modules.MarlinAnalysis` can now handle setting of parameters for Overlay processors defined in a processor group. Implemented in the new module `Core.Utilities.MarlinXML`
+NEW: (!125) :class:`~ILCDIRAC.Workflow.Modules.StdHepSplit.StdHepSplit`: set "--maxread" if maxRead is set for the application, no changes if maxRead is 0 for backward compatibility
+CHANGE: (!127) Marlin the DST/REC files for processors called Output_DST/Output_REC files in production environments are now handled as well. For Users all processors of Type LCIOOutputProcessor should be used to change the output file name, not just the one called 'MyLCIOOutputProcessor'
+
+*Docs
+
+NEW: (!130) import documentation from ILCDIRAC-Ops repo, always compile docs
+NEW: (!137) *docs/GetReleaseNotes.py* script to get the release notes from the merged merge requests since given date
+
+
+[v26r0p10]
+
+* Interfaces:
+
+CHANGE: DDSim: use *detectorModel* as the *detectorType*, needed in CLIC productions
+NEW ProctionJob: add :func:`~ILCDIRAC.Interfaces.API.NewInterface.UserJob.UserJob.setCLICConfig` function to add ClicConfigPackage to productions
+
+* Core:
+
+CHANGE: :mod:`~ILCDIRAC.Core.Utilities.InstalledFiles`: allow using arbitrary ConfigPackage to provide steering files. For now ILDConfig or ClicConfig defined in ConfigurationSystem
+
+* Workflow:
+
+NEW: :class:`~ILCDIRAC.Workflow.Modules.ModuleBase.ModuleBase`: General :func:`~ILCDIRAC.Workflow.Modules.ModuleBase.ModuleBase.treatConfigPackage` function to replace treatILDConfigPackage backward compatible
+
+[v26r0p9]
+
+* Workflow:
+
+NEW: :class:`~ILCDIRAC.Workflow.Modules.SLICAnalysis`: allow user to preload libraries for SLIC. Add a tarball with folder 'preload' to the Sandbox. Libraries (files containing '.so' in that folder will be added to the LD_PRELOAD environment variable.
+
+
+[v26r0p8]
+
+* Core:
+
+NEW: Based on v6r15p27
+
+NEW: ILD FilenameEncoder now also hadles files for Split transformations
+
+* ILCTransformationSystem
+
+FIX: DataRecoveryAgent: No longer send messages if nothing changed.
+FIX: DataRecoveryAgent: Deal with MCSimulation/MCReconstruction jobs where the inputFile does not exist
+
+* Interfaces
+
+FIX: Changes to ILDProductionChainOpt2017 and DBD: Define output SEs, limit number of jobs for all productions
+
+[v26r0p7]
+
+* Workflow
+
+NEW: DDSim: ddsim now allows a user to add their own plugins.
+     A tarball with the content lib/libmydd4hepplugin.so, lib/libmydd4hepplugin.components can be added to the input sandbox
+
+NEW: Marlin: Marlin also can use the dd4hep plugins provided by a users
+
+FIX: detector model zipfiles/tarballs for marlin were not working before
+
+[v26r0p6]
+
+* Core
+
+NEW: FilenameEncoder by Akiya Miyamoto
+CHANGE: OutputDataPolicy: "\*_ILD" production types use FilenameEncoder
+
+* Interfaces:
+
+CHANGE: Rename ILDProductionJob to ILDProductionJobDBD for DBD productions
+CHANGE: Rename ILDProductionChain to ILDProductionChainDBD
+
+NEW: ILDProductionJobOpt2017: Production job class using the FilenameEncoder
+NEW: ILDProductionChainOpt2017: using ILDProductionJobOpt2017
+
+* ILCTransformationSystem:
+
+FIX: DataRecoveryAgent: Fixed a bug that caused files to be reset too often
+
+* Workflow:
+
+CHANGE: DDSim Workflow module is now picking up ProductionOutputdata from WorkflowCommons instead of re-creating the filename
+
+[v26r0p5]
+
+* Core:
+
+NEW: Based on DIRAC v6r15p25
+
+*Interfaces:
+
+NEW: More tests for interface modules
+
+[v26r0p4]
+
+* Core:
+
+NEW: Based on DIRAC v6r15p23
+
+* Interfaces
+
+CHANGE: The Marlin application no longer has a default GearFile because having a gear file causes problems when dd4hep geometry is used instead.
+
+
+* DataManagement:
+
+CHANGE: (from DIRAC): dirac-dms-find-lfns command signature changed, now the PATH argument has to be used to define the basepath for the search
+
+* ILCTransformation
+
+FIX: dirac-ilc-production-summary: fix bug causing a crash when whizard details did not exist
+
+
+
+[v26r0p3]
+
+* Core:
+
+NEW: Based on DIRAC v6r15p17
+FIX: ILCDIRAC-718 pilots at KEK not matching jobs
+FIX: ILCDIRAC-713 dirac-dms-find-lfns produced output files not readable by other dirac commands
+
+NEW: Tests also running on Centos7 now
+
+
+* ILCTransformationSystem:
+
+NEW: plugin BroadcastProcessed to create transformations to move only files with descendents
+NEW: dirac-ilc-moving-transformation creates BroadcastProcessed transformations for GEN/SIM files
+
+* Workflow:
+
+FIX: Hopefully clearer message when packages are not found directly on CVMFS, ILCDIRAC-708
+
+[v26r0p2]
+
+* Core:
+
+NEW: More Unite tests
+NEW: Based on DIRAC v6r15p12 (-alpha?) Fixe for ILCDIRAC-703
+
+FIX: `dirac-ilc-list-users` needed to be adapted for interface change in :mod:`DIRAC.Core.Security.VOMSService`, ILCDIRAC-702
+
+* ILCTransformationSystem:
+
+FIX: DataRecoveryAgent using DiraAPI getJobJDL function to get dictionary of JDLs, ILCDIRAC-705
+
+* Interfaces:
+
+FIX: Fix exception in internal :class:`DIRAC.Core.Base.API.API` ``._reportError`` function when function argument is 'name'
+
+[v26r0p1]
+
+* Core:
+
+NEW: Based on DIRAC v6r15p11 (-alpha) to solve a problem with accessing files on RAL
+
+[v26r0]
+
+* Core:
+
+NEW: Based on DIRAC v6r15p10
+NEW: Many unittests for Utilities and other modules
+CHANGE: Removed obsolete modules
+
+* Workflow:
+
+FIX: DDSim randomSeed will be set to the jobID by default
+
+* Interfaces:
+
+FIX: ILDProductionJob code cleaned and some bugs fixed, ILCDIRAC-641
+FIX: Some more errors from application configurations will now be reported before submission
+
+* Utilities:
+
+FIX: Clean code in CombinedSoftwareInstallation. Unnecessary call to os.path.join.
+FIX: PrepareLibs refactored
+FIX: PrepareOption files refactored for better maintanability
+
+* Resources:
+
+CHANGE: Go back to XROOTStorage from DIRAC
+
+* ILCTransformationSystem:
+
+NEW: Add script to create "moving" transformations. Moving files from one SE to another (replicate and the remove replica)
+
+[v25r0p10]
+
+* Core:
+
+NEW: based on DIRAC v6r14p37
+FIX: Add CVMFS Software script now adds DDSimDetectorModels
+
+
+[v25r0p9]
+
+* ILCTransformationSystem:
+
+FIX: ILCDIRAC-665: Also handle cases if a file gets stuck in 'Processed' status
+
+* Overlay:
+
+NEW: Set the NSKipEventsRandom parameter for BGOverlay processor. Calculates number of Events based on NBEvts Configuration Parameter
+NEW: Allow defining different parameter for the same background type by using EventType parameter to set the correct EventType
+
+* Interfaces:
+
+NEW: When applications check for existance of steering files packages on CVMFS are considered as well
+
+* Workflow:
+
+NEW: Move back to CPUNormalisation from DIRAC, fix ILCDIRAC-661 implemented and released in DIRAC
+
+[v25r0p8]
+
+* Core:
+
+NEW: Based on DIRAC v6r14p35
+
+* Workflow:
+
+FIX: :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim`: Fix for running ddsim when init script is needed. The LD_LIBRARY_PATH was not put together correctly and on some sites the local libstdc++.so was picked up.
+
+[v25r0p7]
+
+* Workflow:
+
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.OverlayInput` for KEK was not getting the correct path to copy files.
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.DDSimAnalysis`: Enable use of tarballs with non-system compiler, ILCDIRAC-671
+
+* Interface:
+
+NEW: :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Marlin` has the new function :func:`~ILCDIRAC.Interfaces.Utilities.DDInterfaceMixin.DDInterfaceMixin.setDetectorModel` that works the same way as the :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim` function and can be used to set the dd4hep geometry based model. (ILCDIRAC-659)
+
+[v25r0p6]
+
+* Workflow:
+
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.MokkaAnalysis` outputfile event parameters were not properly set for Polarisation
+CHANGE: :mod:`~ILCDIRAC.Workflow.Modules.OverlayInput` files are taken from cern eos instead of castor, when running at cern  (ILCDIRAC-636)
+
+* Interfaces:
+
+FIX: Files from the ParametricInputData should now be handled correctly
+
+[v25r0p5]
+
+* WorkloadManagement:
+
+FIX: Copy ``getCPUNormalization`` from DIRAC and reduce memory footprint ILCDIRAC-661
+
+[v25r0p4]
+
+* WorkloadManagement:
+
+FIX: Copy :mod:`~ILCDIRAC.WorkloadManagementSystem.Client.DownloadInputData` from DIRAC and fix ILCDIRAC-655
+
+[v25r0p3]
+
+* Core:
+
+NEW: Based on dirac v6r14p26
+
+* ILCTransformationSystem:
+
+FIX: ``DataRecoveryAgent`` now properly sets MaxReset for files with a large ErrorCount
+
+* Workflow:
+
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.DDSimAnalysis` Add DD4hepInstall environment variable to script for TarBallBased installations. Fixes problem for running these jobs locally.
+
+[v25r0p2]
+
+* Core:
+
+NEW: Based on dirac v6r14p24
+
+* Workflow:
+
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.DDSimAnalysis`: correctly handle the tarball
+
+[v25r0p1]
+
+* Interfaces:
+
+FIX: Correctly handle :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim` detector models
+
+
+[v25r0p0]
+
+*Core
+NEW: These release notes are the summary of every pre-release after the last v23r1 release
+NEW: Based on dirac v6r14p18, many changes in Dirac
+
+*Interfaces
+NEW: Added :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim` Interfaces, ILCDIRAC-507
+
+*Workflow
+NEW: Added :mod:`~ILCDIRAC.Workflow.Modules.DDSimAnalysis` Workflow Module, ILCDIRAC-507
+
+*ILCTransformation
+FIX: Adapt to interface changes in DIRAC/Transformation, ILCDIRAC-599
+
+
+[v25-pre3]
+
+*Interfaces
+NEW: Added :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.DDSim` Interfaces, ILCDIRAC-507
+
+*Workflow
+NEW: Added :mod:`~ILCDIRAC.Workflow.Modules.DDSimAnalysis` Workflow Module, ILCDIRAC-507
+
+[v25-pre2]
+
+*Core
+NEW: Based on Dirac v6r14p11
+FIX: XRootStorage is working again thanks to v6r14p20
+CHANGE: Removed some deprecated and unused packages
+NEW: Added many tests and made them compatible with nosetests
+
+
+[v25-pre1]
+
+*Core
+NEW: Based on Dirac v6r14p10
+
+*ILCTransformation
+FIX: Adapt to interface changes in DIRAC/Transformation, ILCDIRAC-599
+
+
+[v24-pre5]
+
+*Core
+NEW: Based on Dirac v6r13p14
+
+[v24-pre3]
+
+*Core
+NEW: Based on Dirac v6r13p9
+
+[v24-pre2]
+
+*Core
+NEW: Based on Dirac v6r13p8
+
+[v24-pre1]
+
+*Core
+NEW: Based on Dirac v6r13p7
+
+############################################################
+
+[v23r1p1]
+
+*Note
+
+CHANGE: Moved many scripts to different locations (ILCDIRAC-581) for easier
+  automatic generation of the documentation. This requires a re-installation of
+  the ILCDIRAC client to remove outdated files. Apart from this
+
+*Interfaces
+
+CHANGE: Removed RemoveFileAndDaughtersWhenFileHasNoAncestor.py, script superseded by one in ILCDIRAC-Ops and ``DataRecoveryAgent``
+CHANGE: Moved :any:`dirac-ilc-get-info` to `ILCTransformationSystem <ILCDIRAC.ILCTransformationSystem.scripts>`
+CHANGE: Moved `dirac-ilc-get-prod-log` to `ILCTransformationSystem <ILCDIRAC.ILCTransformationSystem.scripts>`
+CHANGE: Moved `dirac-ilc-production-summary` to `ILCTransformationSystem <ILCDIRAC.ILCTransformationSystem.scripts>`
+CHANGE: Moved `dirac-ilc-replication-transformation` to `ILCTransformationSystem <ILCDIRAC.ILCTransformationSystem.scripts>`
+CHANGE: Moved `dirac-ilc-upload-gen-files` to `ILCTransformationSystem <ILCDIRAC.ILCTransformationSystem.scripts>`
+
+FIX: Updated :mod:`~ILCDIRAC.Interfaces.API.NewInterface.Applications.Marlin` documentation
+FIX: Fix a typo `UserJob.setInputSandbox` documentation
+
+*Core
+CHANGE: Moved `ilcdirac-version` to `Interfaces <ILCDIRAC.Interfaces.scripts>`
+CHANGE: Moved `dirac-ilc-show-software` to `Interfaces <ILCDIRAC.Interfaces.scripts>`
+CHANGE: The log file failover location was changed so that log files are not picked up by the InputDataAgent for productions
+
+################################################################################
+
+[v23r0p12]
+
+*Workflow
+FIX: ILCDIRAC-612: Watchdog was not disabled properly when downloading overlay files
+FIX: ILCDIRAC-612: Logging output was wrong when copying overlay files at IMPERIAL
+
+[v23r0p11]
+
+Based von DIRAC v6r12p53, see also v6r12p52
+
+*Workflow
+
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.RootMacroAnalysis` and :mod:`~ILCDIRAC.Workflow.Modules.RootExecutableAnalysis` can now use the software versions natively installed on CVMFS (ILCDIRAC-582)
+FIX: :mod:`~ILCDIRAC.Workflow.Modules.RootExecutableAnalysis` can now also be used to run binaries located in the PATH, e.g., 'hadd' to join root files
+
+*ILCTransformationSystem
+
+NEW: :any:`dirac-ilc-get-prod-log` now accepts -P prodID to get log files for given productionID (C. Calancha, ILCDIRAC-585)
+FIX: ``DataRecoveryAgent`` now ignores productions where nothing has changed since the last cycle, (ILCDIRAC-588)
+
+[v23r0p10]
+Based on DIRAC v6r12p51
+
+*WorkloadManagement
+NEW: :mod:`~ILCDIRAC.WorkloadManagementSystem.Executor.SoftwareVersions` Executor: Takes care to ban sites which are not compatible with the SofwarePackages required for any given job
+
+*ILCTransformation
+FIX: ``DataRecoveryAgent``: Fixes for notification, updates configuration before every cycle
+
+*RequestManagement
+FIX: ``RestartReqExeAgent`` deal with multiple PIDs
+
+[v23r0p9]
+
+*Core
+NEW: Based on Dirac v6r12p50
+
+*Interfaces
+FIX: DIRAC FileCatalog CLI: fixes for path arguments
+
+[v23r0p8]
+
+*Workflow
+FIX: Set OMP_NUM_THREADS=1 for all in :mod:`~ILCDIRAC.Workflow.Modules.ModuleBase` and in the execution of the Script in :mod:`~ILCDIRAC.Workflow.Modules.ApplicationScript`
+
+*ILCTransformation
+NEW: Rewrite of the ``DataRecoveryAgent``
+
+[v23r0p6]
+
+*Interfaces
+FIX: :any:`dirac-ilc-upload-gen-files`: ILCDIRAC-571 correct energy variable, better logging for metadata setting in case of errors
+
+*RequestManagement
+NEW: ``RestartReqExeAgent`` to restart the RequestManagementAgent when it gets stuck, ILCDIRAC-572
+
+*Workflow
+FIX: ILCDIRAC-576: :mod:`~ILCDIRAC.Workflow.Modules.ApplicationScript`: Set OMP_NUM_THREADS=1
+
+[v23r0p5]
+
+*Core
+NEW: Option to set the location of the shared area, needed to run with OSG cvmfs for now
+
+
+[v23r0p4]
+
+*Core
+FIX: Based on Dirac v6r12p49, for real this time
+NEW: ilcdirac-version script to display the ilcdirac and dirac versions
+
+[v23r0p3]
+
+*Core
+FIX: Based on Dirac v6r12p48
+NEW: createTarBallForProgram.sh script to create a tarball of the executable and required libraries
+
+
+*Interfaces
+FIX: ProductionJob: Adapt to new changePathMode interface (ILCDIRAC-544)
+FIX: dirac-ilc-add-user: Adapt to new changePathOwner, changePathGroup interface
+FIX: dirac-ilc-replication-transformation: check that ilc_prod proxy is used
+
+
+
+[v23r0p2]
+
+*Core
+FIX: Based on Dirac v6r12p47, fixes issue with removing metadata in the filecatalog
+
+*Interfaces
+FIX: ILCDIRAC-547: Give error when dirac-ilc-find-in-FC does not get a path as first argument
+
+[v23r0p1]
+
+*Core
+NEW: based on Dirac v6r12p46: Many fixes for Xroot(EOS), GlobusCEs
+
+*Interfaces
+
+FIX: ILCDIRAC-537: ILDProductionChain set different basepath for stdhepsplit productions
+
+[v23r0]
+
+*Core
+NEW: Based on Dirac v6r12p44
+
+*Interfaces
+FIX: Cleanup of interfaces member variables, should be completely transparent for users
+
+*Transformation
+FIX: Fixes for ILDProductionJob from C. Calancha (ILCDIRAC-413)
+
+[v23-pre5]
+
+*Core
+NEW: Based on Dirac v6r12p44
+
+*Interfaces
+FIX: Cleanup of interfaces member variables, should be completely transparent for users
+
+[v23-pre3]
+
+*Core
+NEW: Based on Dirac v6r12p42
+
+*Transformation
+FIX: Fixes for ILDProductionJob from C. Calancha (ILCDIRAC-413)
+
+
+
+[v23-pre1]
+
+*Core
+NEW: Based on Dirac v6r12-pre21: DO NOT USE
+
+
+[v22r2p5]
+
+*Transformation
+NEW: Script to create replication transformations dirac-ilc-replication-transformation
+
+*Workflow
+FIX: OverlayInput will only waste time after downloading the first file
+
+*Dirac
+NEW: based on v6r11p5 (GlobusComputingElement)
+
+[v22r2p4]
+
+*Workflow
+FIX: Fix if ILDConfig cannot access CVMFS
+
+[v22r2p3]
+
+*Dirac
+NEW: Based on Dirac version v6r11p33: Issue regarding space in CE_OS description
+
+*Workflow
+FIX: ILCDIRAC-413 fix regarding picking up ILDConfig from CVMFS
+
+*RMS
+FIX: LogUpload would place log files in the wrong location
+
+*Scripts
+FIX: ILCDIRAC-474: dirac-ilc-add-whizard fixes for creating the replication request
+
+*Core
+FIX: ILCDIRAC-479: Fix python warning
+
+
+[v22r2p2]
+
+*Dirac
+NEW: Based on Dirac version v6r11p32: Fixes issue for dirac-ilc-list-user
+
+[v22r2p1]
+
+*Workflow
+FIX: OverlayInput will now always try to get files from the DataManager if files do not exist on local SE
+
+
+[v22r2p0]
+
+*DIRAC
+NEW: v6r11p31
+
+*Workflow
+CHANGE: Tar and compress production logfiles
+FIX: CVMFS support for native installations (Mokka, Marlin)
+FIX: Fix some of the issues with module- and step_commons-parameters
+FIX: Mokka: ProcessID is now passed to the module
+FIX: Remove SystemConfig/sysconfig, replace with platform
+FIX: Bugfixes/conventions/pylint cleanup, refactoring
+
+[v22r2-pre4]
+
+*Workflow
+FIX: Fix some of the issues with module and step_commons - parameters
+FIX: Mokka: ProcessID is now passed to the module
+
+[v22r2-pre3]
+
+*DIRAC
+NEW: v6r11p31
+
+*Workflow
+FIX: CVMFS support for native installations (Mokka, Marlin)
+FIX: Bugfixes/conventions/pylint cleanup, refactoring
+
+
+[v22r2-pre1]
+
+*Workflow
+CHANGE: Tar and compress logfiles
+FIX: Remove SystemConfig/sysconfig, replace with platform
+
+
+[v22r1p15]
+
+*Workflow
+FIX: ILCDIRAC-452: getNumberOfEvents will now fail if no information is found. if NumberOfEvents is 0 the job will fail.
+
+
+[v22r1p14]
+
+*Workflow
+FIX: MokkaAnalysis: wait 100 seconds for socket
+FIX: CombinedSoftwareInstallation: Allow for mixing sharedarea (CVMFS) and LocalArea software
+
+[v22r1p13]
+
+*Workflow
+FIX: MokkaAnalysis: Place mysql logs in subdirectory $CWD/mysqllogs
+
+[v22r1p12]
+
+*Workflow
+FIX: ILCDIRAC-442: We need to run removeLibc correctly, pointing to the library folder
+
+
+[v22r1p11]
+
+*Workflow
+FIX: ILCDIRAC-442: We need to run removeLibc in case mysql4grid is not on cvmfs
+
+[v22r1p10]
+
+*Workflow
+FIX: ILCDIRAC-442: mysql.sock must be in /tmp folder
+FIX: ILCDIRAC-442: Don't copy mysql4grid
+
+
+[v22r1p9]
+
+*Workflow
+FIX: ILCDIRAC-442: copy mysql4grid to local working directory
+
+
+[v22r1p8]
+
+*Workflow
+FIX: ILCDIRAC-442: more debugging output
+
+[v22r1p7]
+
+*Workflow
+FIX: ILCDIRAC-302: SlicPandora would remove detector.zip: fix exception in unzip function that caused this issue
+FIX: MarlinAnalysis: Fix Issue when LCFIVertex and LCFIPlus are both in the MARLIN_DLL
+FIX: ILCDIRAC-442: MokkaAnalysis: Fix when mysql is available via CVMFS
+
+[v22r1p6]
+
+*General
+NEW: Dirac version v6r11p31
+
+*FileCatalog
+NEW: FC Search: new flag -D to only display folders
+
+*Interfaces
+CHANGE: use ilcdirac-support@cern.ch for email address
+FIX: ProductionJob ILCDIRAC-427: Register energy metadata
+FIX: ProductionJob ILCDIRAC-427: Accept energy metadata as integer
+
+*Core
+CHANGE: use ilcdirac-support@cern.ch for email address
+CHANGE: Allow specifying additional libraries to remove in removeLibc function
+
+*ILCTransformation
+FIX: DataRecoveryAgent: Use the new ReqClient
+
+*Workflow
+NEW: Mokka: Print libraries used by Mokka and mysql executable (debug only)
+FIX: ILCDIRAC-423: remove libgcc_s.so.1 from older mysq4grid versions
+
+[v22r1p5]
+
+*Workflow
+FIX: ILCDIRAC-422: Mokka did not work when ILDConfig parameter set
+
+[v22r1p4]
+
+*General
+NEW: Dirac version v6r11p28
+
+*Transformation
+FIX: TransformationCleaningAgent will now cleanup files when cleaning productions
+
+*Workflow
+FIX: Print correct message about files being uploaded
+
+[v22r1p3]
+
+*Workflow
+FIX: ILCDIRAC-417: Missing Checksum entry when creating RegistrationRequests during Failover
+FIX: ILCDIRAC-418: Properly cleanup requests when production jobs fail and we want to remove possible output files
+
+
+[v22r1p2]
+
+*Workflow
+FIX: ILCDIRAC-406: Create removal requests for production output when any kind of failure happens
+FIX: OverlayInput: only print list of files for DEBUG
+FIX: UserJobFinalization: Actually print the content of working directory as promised
+
+*Interfaces
+CHANGE: Move application to their own file, transparent change for users
+
+[v22r1p1]
+
+*Workflow
+FIX: ILCDIRAC-400 Backward compatibility for old jobs/productions still using SystemConfig
+
+*ILCTransformationSystem
+FIX: ILCDIRAC-399 ILCTransformationAgent: Adapt to DataManager
+FIX: ILCDIRAC-398 DataRecoveryAgent: Fixed SyntaxError and KeyError
+
+[v22r1p0]
+
+*Core
+CHANGE: Tag for official first release based on v6r11p25 Contains all the changes for v22r0
+
+[v22r0p10]
+
+*Workflow
+NEW: ILCDIRAC-222: Print working directory content also for user jobs. Print content recursively
+NEW: ILCDIRAC-381: OverlayInput: One can now set the path at which the Overlay files should be picked up. This ignores all of the meta data
+
+*Interfaces
+NEW: ILCDIRAC-381: OverlayInput: new function setPathToFiles to set the path where the overlay files should be picked up. There is a check that there are files in that folder, but there is no check if it makes sense to overlay these files.
+NEW: OverlayInput: Two alternative spellings for old functions: setNumberOfSignalEventsPerJob and setBackgroundType, alternatives for setNbSigEvtsPerJob and setBkgEvtType, respectively.
+
+
+[v22r0p9]
+
+*Workflow
+FIX: ILCDIRAC-384: Do not submit failover to same SE as targetSE
+FIX: ILCDIRAC-382: Allow job.setExecutable to be run before Workflow modules
+
+[v22r0p8]
+Workflow
+*CHANGE: Change the way removal request is created
+
+[v22r0p7]
+
+*Workflow
+FIX problems for request
+FIX: ModuleBase: getRequestContainer: if Request was not properly initialized do it
+
+*DataManagement
+FIX: Remove use of ReplicaManager, because RepMan is deprecated
+
+[v22r0p6]
+
+*Workflow
+FIX: Solve problems from selecting cvmfs code and not setRequired parts
+FIX: SLIC Module not finding installation directory
+FIX: stdhepcut: outputfile was not found
+
+[v22r0p5]
+
+*Workflow
+NEW: Added tests, improved logging output
+FIX: UploadOutputData
+FIX: FailoverTransfer
+FIX: UploadLogFile
+FIX: ModuleBase
+
+[v22r0p4]
+
+Workflow
+*FIX: Fix OutputDataPolicy
+
+[v22r0p3]
+
+Workflow
+*FIX: Restore OutputDataPolicy
+
+[v22r0p2]
+
+*Core
+NEW: Based on Dirac v6r11p17: DO NOT USE
+FIX: Some bug fixes, now jobs are running locally
+
+[v22r0p1]
+
+*Core
+NEW: Based on Dirac v6r11p17: DO NOT USE
+FIX: InputData Executor not working
+
+[v22r0p0]
+
+*Core
+NEW: Based on Dirac v6r11p14: DO NOT USE
+
+[v21r5p2]
+
+*Core
+FIX: dirac-ilc-add-user script
+
+[v21r5p1]
+
+*Core
+NEW: Same as for v21r0p0, but using Dirac v6r10 instead of v6r9
+
+[v21r0p0]
+
+*Workflow:
+FIX: Kept changes to RCSID and HeadURL and whitespace for pylint
+FIX: tried to exclude everything related to (Set)Required
+
+*Interfaces
+CHANGE: LCApplication class, between Application and Applications. Allows the definition of the steering files per application
+CHANGE: LCUtilityApplication: Needed for the steeringfiles handling Refactoring of Application classes
+
+*Scripts
+FIX: dirac-ilc-show-software: If an application has additional sections (AdditionalEnvVar) but no Dependencies dirac-ilc-show-software would crash.
+FIX: dirac-ilc-add-whizard: Fix passing full path to the tar call instead of the relative path
+FIX: dirac-ilc-add-software: cleanup
+
+*Core
+NEW: Include functionality for CVMFS (S.Poss)
+
+*Workflow
+NEW: StdHepCut: Allowing to specify cuts inline (S.Poss)
+NEW: HandleProdOutputData removed, was not used
+
+*ILCTransformationSystem
+FIX: Cleanup of DataRecoveryAgent
+
+[v20r1p10]
+
+*Core
+FIX: small problem in fullCopy
+
+*Workflow
+CHANGE: ModuleBase: leave the fullCopy decide if the file is here of not.
+
+[v20r1p9]
+
+*Core
+NEW: fullCopy now accepts \*items. Will not copy all items from the base directory, nor all items from all
+sub directories
+
+*Workflow
+CHANGE: ModuleBase: Use new fullCopy signature.
+
+[v20r1p8]
+
+*Workflow:
+FIX: ModuleBase: in case there are no required items.
+
+[v20r1p7]
+
+*Core
+FIX: the fullCopy utility needs more work.
+
+*Scripts
+FIX: dirac-ilc-show-software: If an application has additional sections (AdditionalEnvVar) but no Dependencies dirac-ilc-show-software would crash.
+
+[v20r1p6]
+
+*Worfklow
+FIX: MarlinAnalysis: Marlin dll in case of user libs
+
+[v20r1p5]
+
+*Workflow
+FIX: MokkaAnalysis: copy the mac file to the run directory
+
+[v20r1p4]
+
+*Workflow
+FIX: Request name
+
+[v20r1p3]
+
+*Workflow
+FIX: cat is not echo
+
+[v20r1p2]
+
+*Core
+NEW: fullCopy utility (first try)
+
+*Interfaces
+NEW: setRequired method for the applications
+
+*Workflow
+NEW: Handle the Required
+FIX: adapt more to the Failover client
+
+[v20r1p1]
+
+*Workflow
+FIX: signature of failover methods
+
+[v20r1p0]
+
+*all
+CHANGE: merge CVMFS branch with trunk, implement the changes in v20r0pX
+
+*ILCTransformationSystem
+NEW: TarTheLogs agent that takes care of tarring and putting on castor production logs for stopped prods
+
+[v20r0p7]
+
+*Core
+FIX: bad tag name
+
+[v20r0p6]
+
+*Core
+FIX: :any:`checkCVMFS` method
+
+*Interfaces
+FIX: LCApplication: only add the steering files to the soft to install if it's been defined
+NEW: LCUtilityApplication: needed for the steeringfiles handling
+
+*Workflow
+CHANGE: some refactoring to cope better with new structure
+
+[v20r0p5]
+
+*Core
+FIX: CheckCVMFS method
+
+*Interfaces
+FIX: LCApplication: only add the steering files to the soft to install if it's been defined
+
+[v20r0p4]
+
+*Interfaces
+NEW: LCApplication class, between Application and Applications. Allows the definition of the steering files per application
+
+*Workflow
+CHANGE: Handle the steering files per applications
+
+[v20r0p3]
+
+*Core
+CHANGE: Check if the env script is present in CVMFS
+
+[v20r0p2]
+
+*Core
+CHANGE: Remove also libstdc++
+
+*Workflow
+FIX: MokkaAnalysis: the MySQL handling
+FIX: MarlinAnalysis: the MARLIN_DLL env parsing
+FIX: SLICPandora: remove bad char
+
+[v20r0p1]
+
+*Core
+CHANGE: few pylint compliance things
+
+*Workflow
+FIX: MokkaAnalysis call back to the getEnvScript missing
+FIX: createMarlinTarBall: better handling of RPATH in libraries
+FIX: ILCDIRAC-267: ILDProductionJob: add evtType to dst-file path
+
+[v20r0p0]
+
+*Core
+CHANGE: Adjust the CombineSoftwareInstallation for the future CVMFS support
+CHANGE: drop the Particle.tbl from the mokka steering file, put it in command line
+
+*Workflow
+CHANGE: ILCSoft modules (Mokka, Marlin, SLIC, SLICPandora) now uses environment variables
+CHANGE: Mokka: drop the SQLWrapper (finally)
+
+[v19r1p20]
+
+*Core
+
+FIX: Create tarball scripts were overwriting LD_LIBRARY_PATH
+FIX: TARSoft installation would fail for second job because the code for checking
+      of libraries to be ignored was faulty
+
+[v19r1p19]
+
+*Interfaces
+
+NEW: OverlayInput: setUseEnergyForFileLookup (default True)
+     Decide whether to use the Energy to find background files or not
+     Relates to ILCDIRAC-344
+
+*Workflow
+NEW: OverlayInput: useEnergyForFileLookup
+
+[v19r1p18]
+
+*Core
+
+FIX: dirac-ilc-add-software: rewrite, some bug fixes
+FIX: dirac-ilc-get-prod-log: beautification
+
+[v19r1p17]
+
+*Core
+
+FIX: dirac-ilc-add-user adapted for new e-group interface
+
+[v19r1p16]
+
+*Core
+
+FIX: dirac-architecture allow for CentOS release 6
+
+[v19r1p15]
+
+*Core
+
+FIX: dirac-ilc-show-software would crash for applications with AdditionalEnvVar but without dependencies
+FIX: dirac-ilc-add-whizard produced a wrong tarball structure
+FIX: ILDProduction: Too many slashes in the LFNs, cleanup of ProcessList Module
+
+[v19r1p14]
+
+*Core
+CHANGE: updated list of installed steering files
+
+*Interfaces
+FIX: Bug fix in the overlay application
+
+[v19r1p13]
+
+*Interfaces
+FIX: Bug fix in the overlay application
+
+[v19r1p12]
+
+Move to the latest patch version of DIRAC: v6r8p28
+
+[v19r1p11]
+
+*Core
+FIX: excaping and de-escaping of special characters in the xml handler for Marlin
+
+*Interfaces
+NEW: Add possibility of additional user provided CLI parameters
+
+*Workflow
+NEW: Add support of additional user provided CLI parameters
+
+[v19r1p10]
+
+*Workflow
+FIX: energy meta data look-up for overlay input was broken. in addition, it is now only used if actually set.
+
+[v19r1p9]
+
+*Interfaces
+CHANGE: More intuitive method names for overlay application, removed default values for defining number of overlay events
+
+*Workflow
+FIX: Bug in the order of selecting the number of events in one case, had energy before detector, but order is detector and then energy
+CHANGE: Use energy in lookup of overlay input
+
+[v19r1p8]
+
+
+[v19r1p7]
+
+*TarSoft
+CHANGE: Add memory limit for java testing
+
+[v19r1p6]
+
+
+
+[v19r1p5]
+
+
+
+[v19r1p4]
+
+*Interfaces
+FIX: Fix new application
+
+[v19r1p3]
+
+*Interfaces
+FIX: More typos
+
+[v19r1p2]
+
+*Applications
+NEW: Add CheckWNs application to probe the WNs. This dumps into a log file several properties of the WN, in particular the SharedArea content and disk usage
+FIX: A few typos in the Applications.
+
+*Workflow
+NEW: Corresponding module to probe the WNs
+
+[v19r1p1]
+
+*Core
+CHANGE: When using dirac-ilc-add-user, if at CERN, the user will also be added to the e-group
+
+*Interfaces
+NEW: Add script to remove broken ancestor/daughters chains
+
+[v19r1p0]
+
+*Core
+NEW: Script to register users, adding them to the FC
+NEW: Script to list the VO members
+CHANGE: Make PrepareLibs a code that can be called directly, and use that in the createXXTarBall scripts
+NEW: Read in the whizard.in and return the python dictionary.
+
+*Interfaces
+CHANGE: Rename all Application members to match the setters
+NEW: Have a function to return the dictionary of the application, allows deep copy and recreation from scratch
+CHANGE: UserJob will now require a user proxy.
+
+[v19r0p2]
+
+*Workflow
+FIX: When the Split jobs fail, do not mark the files as unused
+
+[v19r0p1]
+
+*Workflow
+NEW: Add CutEfficiency and Reduction as metadata for the files produced by stdhepcutX
+
+[v18r0p8]
+
+*Interfaces
+FIX: ProductionJob allows to used Limited, Sliced and SlicedLimited plugins
+
+*ILCTransformationSystem
+FIX: Many small glitches here and there.
+
+[v18r0p7]
+
+*Workflow
+FIX: bad tag
+
+[v18r0p6]
+
+*ILCTransformationSystem
+NEW: Implementation of ILCDIRAC specific agents to handle the Sliced productions
+NEW: Implement the plugin for the sliced productions
+
+*Workflow
+CHANGE: Get the StartFrom form the Workflow and pass it properly to Mokka and SLIC, needed for the Sliced productions
+
+*Interfaces
+CHANGE: Update a few scripts documentation
+
+*Core
+CHANGE: A bit of cleanup, and a few fixes
+
+[v18r0p5]
+
+*Interfaces.Applications
+NEW: Add StdhepCutJava application
+
+[v18r0p4]
+
+*StdhepCutJava
+CHANGE: Final command call
+
+
+[v18r0p3]
+
+*RegisterOutpuData
+FIX: again the exception
+
+[v18r0p2]
+
+*Workflow
+NEW: Added StdhepCutJava application: need final command call
+FIX: ApplicationScript arguments were overwritten by ParametricParameters, mostly empty
+
+[v18r0p1]
+
+*ALL
+CHANGE: This was made from git
+
+[v18r0p0]
+
+NEW: New system: ILCTransformationSystem
+
+*Core
+NEW: Added the createTarBall scripts
+CHANGE: Merge several script into one, define the FileUtils to handle the upload of the softwares
+CHANGE: Update the ilcdirac-install script to get the proxy before getting the the dirac-configure
+CHANGE: Handle the file meta data for ILD case, generalize to all
+
+*ILCTransformationSystem
+NEW: Add DataRecoveryAgent: fix it and simplify
+NEW: add Transformation Class to handle the Limited plugin
+NEW: Add the Limited plugin to allow restricting the productions to a certain number of tasks
+NEW: add script to increase the number of tasks for the Limited productions
+
+*Interfaces
+CHANGE: Finalize the ILDProductionJob
+CHANGE: Finalize the ILDProductionChain script
+NEW: Add dirac-ilc-get-info script that obtains all the info of a given file and/or production
+CHANGE: Change the setILDConfig to setConfig in PoructionJob, add method in ILDProductionJob, setILDconfig that calls the first
+
+*ProcessProductionSystem
+CHANGE: Removed the DataRecoveryAgent as it's in the ILCTransformationSystem
+
+*Workflow
+CHANGE: Change a bit the logic, in particular promote the number of events resolution to Module Base
+CHANGE: Get all the file meta data and push to the daughter what is relevant (default and ILDRegisterOutputData)
+CHANGE: A bit of cleanup: remove unused imports
+
+[v17r3p6]
+
+*Interfaces
+CHANGE: Use the Transformation class provided in ILCDIRAC
+FIX: Fix the ILDConfig handling
+
+*Transformation
+CHANGE: Allow for -1 as number of tasks
+NEW: Add our Transformation class (needed for the moment)
+
+*Workflow
+CHANGE: Remove obsoleted code, refactor a bit, complete the ILDRegisterOutputData module
+
+[v17r3p5]
+
+*Interfaces
+NEW: Add script to upload generator files for Akiya, Mikael, Tim
+NEW: Add script to extend Limited productions
+
+*TransfornmationSystem
+NEW: New plugin for Limited transformations
+
+[v17r3p3]
+
+*ModuleBase
+FIX: Fix copy path
+
+[v17r3p3]
+
+*ModuleBase
+CHANGE: Add more message for debugging
+
+[v17r3p2]
+
+*TarSoft
+CHANGE: Print a message when software installation was successful
+
+[v17r3p1]
+
+* Workflow
+FIX: Same as previous, but fix tag
+
+[v17r3p0]
+
+*Interface
+NEW: Add ILDProductionJob and ILDProductionChain script
+
+*Core
+CHANGE: Get all the file meta data, needed for ILDProduction namin conventions to adjust
+
+*Workflow
+NEW: Add ILDConfig package resolution, get all meta data and put some in the Mokka RunHeader
+
+[v17r2p3]
+
+*Interface
+NEW: Added CLI find utility
+
+[v17r2p2]
+
+*Workflow
+FIX: Fix bad import
+
+[v17r2p1]
+
+FIX: Fix version
+
+[v17r2p0]
+
+*Core
+CHANGE: Make proper scripts, merge common utilities
+
+*Interfaces
+FIX: Fix scripts once again
+
+*Workflow
+CHANGE: Adjust to merging old utilities in Core.
+
+[v17r1p6]
+
+FIX: Same as previous
+
+[v17r1p5]
+
+*TARSoft
+FIX: Bug fix
+
+[v17r1p4]
+
+*All
+FIX: Same as previous, but with proper tags for the packages
+
+[v17r1p3]
+
+*Core
+FIX: Changed import order in scripts to make them right
+
+*Interfaces
+FIX: Changed import order in scripts to make them right
+
+[v17r1p2]
+
+*Interface
+Scripts are actual scripts, removed out dated things
+
+*Workflow
+Some cleanup
+
+[v17r1p1]
+
+*Core
+Reshuffle a bit more the TARsoft utility
+
+[v17r1r0]
+
+Based on DIRAC v6r7p15
+
+[v17r0r0]
+
+Based on DIRAC v6r7
+
+[v16r9r2]
+
+*FindSteeringFiles
+Fix import error
+
+[v16r9r1]
+
+*TarSoft
+Don't check the checksum of the md5sum file as it's never going to be correct
+
+[v16r9r0]
+
+*TarSoft
+Add md5sum checks, and add time out to lock file validity.
+
+*scripts
+Make them proper script, with __name__=="__main__".
+
+[v16r8r2]
+
+*Interfaces
+Fix Application initialization
+[v16r8r1]
+*Interfaces
+Fix Application initialization
+
+[v16r8r0]
+*Overlay
+Proper init of Client
+*Interfaces
+Use super for class inheritance
+Fix bug in error catching
+*Workflow
+Use super for class uinheritance
+Catch more error in Whizard
+*ProcessProductionSystem
+Proper init of Client
+
+[v16r7p0]
+Move to DIRAC v6r6p14
+[v16r6p0]
+Move to DIRAC v6r6p10
+
+[v16r5p2]
+*Core
+Allow choosing the user prefix in the user LFNs.
+*Interfaces
+Secure input sandbox: when list of list is provided this should be flattened
+
+[v16r5p1]
+Move to DIRAC v6r6p3
+[v16r5p0]
+Move to DIRAC v6r6p1
+[v16r4p0]
+Move to DIRAC v6r6
+[v16r3p0]
+Move to DIRAC v6r6
+*Interfaces
+Change some log levels to reflect the fact that the default is Notice
+
+[v16r2p0]
+Move to Dirac v6r6-pre13
+[v16r1p0]
+Move to Dirac v6r6-pre11
+[v16r0p0]
+Move to Dirac v6r6-pre9
+
+[v14r0p0]
+Move to Dirac v6r4p28 for webFC
+
+[v13r2p3]
+*Core
+CHANGE: Some refactoring to have clearer installation
+CHANGE: If the lock file is too old, it means somehow the other installation was broken midcourse, then overwrite
+
+[v13r2p2]
+*Core
+BUGFIX: return value of install was bad
+
+[v13r2p0]
+*Core
+CHANGE: Added listing of any directory
+*PPRS
+CHANGE: Added listing of both local and shared areas
+
+[v13r2p0]
+*Core
+CHANGE: Refactoring of the TARInstall module to have a lock mechanism
+
+[v13r1p8]
+*Core
+CHANGE: Remove REC and DST creation in the LCSIM steering file if not present in the input
+*Workflow
+CHANGE: Create the .lcsim folder only if not already present, and rename the job.lcsim using the step_number
+
+[v13r1p7]
+*Core
+BUGFIX: overlay in ILD_DBD
+
+[v13r1p6]
+*Core
+Add support for overlay in ILD_DBD
+
+
+[v13r1p5]
+*dirac-architecture
+Add support for slc6
+
+[v13r1p4]
+*CombinedSoftwareInstallation
+Try to create the directory
+
+[v13r1p3]
+*dirac-architecture
+Addd support for gcc44
+*Interfaces
+Fix Marlin before LCSIM for SID DBD production
+*Workflow
+Fix Marlin's GearFile that was not set right is not specified by the users.
+
+[v13r1p2]
+*SIDProduction, Production
+Fix handling of number of events when files are grouped in a production
+*LCSIM
+Fix case when lcsim is to run after marlin in the production context
+
+[v13r1p1]
+*SIDProduction
+Fix the stupid bug that made the overlay being accounted for in the production
+
+[v13r1p0]
+*PrepareOptionsFile and MarlinAnalysis
+Handle the case where Marlin must run as intermediate step, with OutputFile set
+
+[v13r0p1]
+*all
+Move to v6r4p20
+
+[v13r0p0]
+*all
+Move to v6r4p20
+
+[v12r0p10]
+*Interfaces
+Fix Production script for SID
+
+[v12r0p9]
+*TarSoft
+Adapt to new JAVA tar ball
+
+[v12r0p8]
+*OverlayInput
+Fix the backward compatibility
+
+[v12r0p7]
+*Applications
+Handle the overlay better
+*Workflow
+Bug fix in SIDRegisterOutputData, plus drop the known background in OverlayInput
+[v12r0p6]
+*Workflow
+Fix wrong overwriting of number of events: reset to 0 if not found in the FC instead of using default value.
+[v12r0p5]
+Testing the new tar location
+[v12r0p4]
+*OverlayInput
+bug fix
+[v12r0p3]
+*OverlayInput
+Add print out
+[v12r0p2]
+*OverlayInput
+Add print out
+[v12r0p1]
+*OverlayInput
+Handle better the CS lookup
+
+[v12r0p0]
+*all
+Needed to play with DIRAC v6r4p18
+[v11r1p2]
+*OverlayInput
+Do a nasty hack to handle the machine meta data.
+
+[v11r1p1]
+*Core
+Bad tag name...
+
+[v11r1p0]
+*all
+Move central services to DIRAC
+*OverlayInput
+Adapt to new CS schema, needed for DBD productions
+[v11r0p2]
+*all
+Make sure the getOption is replaced by getValue
+[v11r0p1]
+*all
+Use the new Operations Helper class
+[v11r0p0]
+*all
+To go with new DIRAC
+[v10r2p0]
+*MokkaAnalysis
+Change env variable G4LEDATA to use data provided in new Mokka
+[v10r1p1]
+*all
+Review to make pylint compliant: score  8.56/10
+[v10r1p0]
+*OverlayInput
+Allow for several background types, needed for SID production.
+[v10r0p12]
+*StdhepSplit
+Fix output file list
+[v10r0p11]
+*StdhepSplit
+Fix output file list
+[v10r0p10]
+*StdhepSplit
+Cahnmge status=2 to status=0
+[v10r0p8]
+*StdhepSplit
+Debugged.
+[v10r0p8]
+*StdhepSplit
+Debug
+[v10r0p7]
+*StdhepSplit
+Debug
+[v10r0p6]
+*StdhepSplit
+Fix parsing for number of event per file
+[v10r0p5]
+*RegisterOutpuitData
+Bug fix import
+[v10r0p4]
+*RegisterOutpuitData
+Bug fix import
+[v10r0p3]
+*DownloadInputData
+Exception fixed
+[v10r0p2]
+*WhizardOption
+BUGFIX: rstrip only strings
+[v10r0p1]
+*WhizardOption
+BUGFIX: rstrip only strings
+
+[v10r0p0]
+*OverlayInput
+Bug fix: Handle the 350GeV case.
+*WhizardOptions
+NEW: add method to get the options as python dict
+*ProductionJob
+BUGFIX: Handling of 350GeV
+*WhizardAnalysis
+NEW: Store the cross section and its error for every job and every process in WhizardAnalysis, stored in workflow_commons['Info']
+*RegisterOutputData
+CHANGE: Add registration of additional info (workflow_commons['Info']) for every file
+*ProcessProductionSystem
+NEW: LesHouchesFileManager: service that provides the content of the LesHouches files on request, does not require them to be installed on the grid. Not working yet
+
+[v9r0p4]
+*PrepareLCSIMFile
+Bug fix: Checking existance of an element was not correct.
+
+[v9r0p3]
+*PrepareLCSIMFile
+Bug fix: NumberOfEvents was set twice
+
+[v9r0p2]
+*PrepareLCSIMFile
+Forgot to cast the number of events to str
+
+[v9r0p1]
+*Workflow
+Also update in Mokka, SLIC, and SLICPandora the number of events in the Workflow_commons
+
+[v9r0p0]
+*All
+Same as previous, but new major version as there is a change of the interface
+
+[v8r2p26]
+*Core
+Add verbose message in InputFileUtilities, and allow change of number of events in LCSIM file
+*Workflow
+Add support for number of evetns in LCSIMAnalysis. Play with NbEvts of workflow_commons only if positive defined.
+
+[v8r2p25]
+*Worklow
+Bug fix in MokkaAnalysis and SLICAnalysis: when using Particle Gun, there is no InputFile
+
+[v8r2p24]
+*MarlinAnalysis
+Still bug with respect to InoputFile treatment.
+
+[v8r2p23]
+*TarSoft
+BUGFIX: When overwriting, the removal should be done before download.
+
+[v8r2p22]
+*Workflow
+BUGFIX: treatment of inputfiles in SLICPandora as not right.
+
+[v8r2p21]
+*Workflow
+BUGFIX: Ancestor registration was buggy because of list
+
+[v8r2p20]
+*Workflow
+BUGFIX: if the parameters are not filed, return empty list
+
+[v8r2p19]
+*Core
+Catch potential errors in xml treatement
+*LCSIMAnalysis
+Print content of InputFile to check what the hell is happening
+
+[v8r2p18]
+*Core
+TarSoft: remove folder_name when overwriting and print message if folder is still there
+*workflow
+Bugfix in OverlayInput: now InputData is always a list
+
+[v8r2p17]
+*Core
+InputFilesUtilities takes into account the fact that the InputFile and InputData are now Lists
+TarSoft: Remove existing directory when overwrite
+*Workflow
+InputFile and InputData are now cast to lists
+
+[v8r2p16]
+*UploadOutputData
+Bug Fix
+
+[v8r2p15]
+*UploadOutputData
+Bug Fix
+
+[v8r2p14]
+*UploadOutputData
+Bug Fix
+
+[v8r2p13]
+*UploadOutputData
+Bug Fix
+
+[v8r2p12]
+*UploadOutputData
+Bug Fix
+
+[v8r2p11]
+*UploadOutputData
+Try to do a correct match between ProductionData and listoutput
+
+[v8r2p10]
+*LCIOSplit: bug fixes and added messages
+
+[v8r2p9]
+*SLICPandora: bug fix
+
+[v8r2p8]
+*LCIOSplit: bugfix
+[v8r2p7]
+*LCIOSplit: bugfix
+[v8r2p6]
+*RegisterOutputData: Need to use the modified number of events when splitting
+
+[v8r2p5]
+*SLICPandora: Settings have to be defined if not PandoraSettings.xml. All files in settings are now copied to the local directory
+*LCIOSplit: Module to split slcio files.
+
+[v8r2p4]
+*ApplicationScript
+Allow application to be standalone
+
+[v8r2p3]
+*OverlayInput
+Add timeout to all direct calls to files (xrdcp and rfcp), return S_ERROR in case of failure to get the file
+
+[v8r2p2]
+*WhizardAnalysis
+Support for grid files for different energies for the same channel: directory structure must be gridfilesVX/1400.0/channel.grb and/or
+gridfilesVX/3000.0/channel.grb
+
+[v8r2p1]
+*StdHepCut
+Number of events stored in FC is not correct
+
+[v8r2p0]
+*Core, Workflow
+As software can be located in different directories (local area or shared area), one cannot use a single definition, and resolution of every bit is needed
+
+[v8r1p20]
+*Whizardanalysis
+Don't use default cut1 file anymore
+
+[v8r1p19]
+*SteeringFiles
+Location can be different from main software, need to check local and shared area
+
+
+[v8r1p18]
+*PrepareOptionsFiles
+Bug fix in the treatment of strategy file
+
+[v8r1p17]
+*ProcessProductionSystem
+Added DataRecoveryAgent based on LHCb
+*Workflow
+Use preferably the number of events specified at the job run time instead of the one at job definition
+
+[v8r1p16]
+*OverlayInput
+Treat IN2P3 like IMPERIAL: use getFile if local access fails
+
+[v8r1p15]
+*StdhepCut
+Number of events was not updated properly
+
+[v8r1p14]
+*WhizardAnalysis
+Check if whizard will be cut after and in that case don't change the outpufile name
+
+[v8r1p13]
+*WhizardAnalysis
+Handle the case where more than 1 file is produced
+
+[v8r1p12]
+*WhizardAnalysis
+OutputFile was forced in production, and when cut, this is not good as one would write in the same file as the one used to read.
+
+[v8r1p11]
+*StdhepCut
+Oyutputfile treatement was not suitable for production
+
+[v8r1p10]
+*StdhepCut
+Do not return an error if cutfile is not a step_commons object.
+
+[v8r1p9]
+*OverlayInput
+Fix tr4eatement of the 500gev case
+
+[v8r1p8]
+*OverlayInput
+Dirty hack to account for the fact that the metadata for the directories are not set right (500gev)
+
+[v8r1p7]
+*OverlayInput
+Dirty hack to account for the fact that the metadata for the directories are not set right
+
+[v8r1p6]
+*OverlayInput
+Source the lcg_env at Lyon to get the xrdcp in the path.
+
+[v8r1p5]
+*InputFileUtilities
+bugfix: user metadata seem not to be stored as numbers but as strings, cast them
+
+[v8r1p4]
+*InputFileUtilities
+bugfix: user metadata seem not to be stored as numbers but as strings, cast them
+
+[v8r1p3]
+*OverlayInput
+bugfix: Catch the case where none of the files are available.
+
+[v8r1p2]
+*OverlayInput
+Catch the case where none of the files are available.
+
+[v8r1p1]
+*Workflow
+Mokka/SLIC: number of events to process is capped to number of events in input file
+StdhepCut: A few updates
+
+[v8r1p0]
+*Core
+InputFileUtilities: If there is only one file in the path, then only get it's FileUserMetadata
+
+[v8r0p5]
+*Workflow
+Overlay input module did not treat the energy right
+
+[v8r0p4]
+*Workflow
+Gear file lookup error: looking only in steeringV1, now uses same as steering file
+
+[v8r0p3]
+*Core
+Bug fix in steeringfiles lookup
+
+[v8r0p2]
+*Core
+Bug fix in steeringfiles lookup
+
+[v8r0p1]
+*Interfaces
+Bug fix in liking of applications
+
+[v8r0p0]
+*Interfaces
+A few internal changes, but most important is that to submit a job, one now has to run job.submit instead of dirac.submit
+
+[v7r0p0]
+*ProcessProductionSystem
+A lot of new stuff for software Management
+
+[v6r7p3]
+*WhizardAnalysis
+Bugfix: colon too much
+
+[v6r7p2]
+*WhizardAnalysis
+Bugfix: forgot items in dict
+
+[v6r7p1]
+*WhizardAnalysis
+Bugfix: forgot keyword process in whizard.cut1
+
+[v6r7p0]
+*Interfaces
+Support for generator level cuts, GlobalEvtType to use hen generating multiple event types in one job: needed for file creation and metadata registration
+*WhizardAnalysis
+Support for generator level cuts, as dictionary.
+
+[v6r6p2]
+*Workflow
+Bug fix in LCSIM: trying to be too clever can lead to troubles.
+
+[v6r6p1]
+*Workflow
+Bug fix in LCSIM: trying to be too clever can lead to troubles.
+
+[v6r6p0]
+*Core
+Added utility to obtain the steeringfile version, therefore directory
+*Interface
+Added production scripts for SiD (CLIC) and ILD (CLIC)
+*Workflow
+Update to account for new utility to obtain version dependant steering file directory
+
+[v6r5p1]
+*Workflow
+Bug fix in WhizardAnalysis: *in ventstring was causing the applciation to stall
+
+[v6r4p1]
+*Workflow
+Bug fix in FailoverRequest module: the files did not get their statuses updated
+
+[v6r4p0]
+*Workflow
+Adapt to support the new lumi_linker structure
+
+*SoftwareManagement
+Stub for software management
+
+[v6r2p1]
+*Core
+Update how the metadata is obtained.
+*Interfaces
+Fix productions API, and add finalization
+
+
+[v6r2p0]
+*Workflow
+Several updates to match DBD use case, fix meta data registration for file level, Add specific modules for DBD.
+
+[v6r0p2]
+New Release to move to v6r1p6
+
+[v6r0p1]
+New Release to move backwards to v6r1p4
+
+[v6r0p0]
+New Release to move to v6r1p5
+
+[v5r0p9]
+*WhizardAnalysis
+Print message in case of failure (buffer limit checks)
+
+[v5r0p8]
+*SIDProductionJob
+SID production specific job class
+
+*SIDRegisterOuputData
+SID Production specific module to register outputdata.
+
+*WhizardAnalysis
+Increase buffer size by 10 times
+
+
+[v5r0p7]
+*CombinedSoftwareInstallation
+Add SharedArea location in areas to install to only if it's defined
+
+[v5r0p6]
+*CombinedSoftwareInstallation
+Add printout on location of installation tests
+
+[v5r0p5]
+*SLICAnalysis
+Remove checks for xerces as this is not needed
+
+[v5r0p4]
+*TARSoft, SLICAnalyis
+Take care that xerces directory is in the slic tar ball before doing stuff with it
+
+[v5r0p3]
+*__init__
+Wrong patch number, now OK
+
+[v5r0p2]
+*SLICAnalysis
+Added lib to LD_LIBRARY_PATH
+
+[v5r0p1]
+*SLICAnalysis
+Add MALLOC_CHECK_=0 to prevent SLIC from failing.
+
+[v5r0p0]
+*All
+Move to DIRAC v6r0
+
+[v4r2p7]
+*WhizardOptions
+NEW: Make sure not to ovewrite the user's input file
+
+[v4r2p5]
+*WhizardAnalysis
+NEW: Handle for model parameters
+
+[v4r2p5]
+*DownloadInputData
+Release was buggy.
+
+[v4r2p4]
+*MokkaApplication
+mcRunNumber is equal to the RandomSeed only in the Production jobs, will be settable in next major version
+
+[v4r2p3]
+*MarlinApplication
+Bug fix in tretment of input files
+
+[v4r2p2]
+*ApplicationScript
+Bug in self.workflow_commons call
+
+[v4r2p1]
+*ApplicationScript
+Support for Parametric parameters
+
+[v4r2p0]
+*ProcessProductionSystem
+Re import it in the release framework
+
+[v4r1p9]
+*WhizardAnalysis
+Bugfix: mokka status code for end-of-input-file is 9, not 10
+
+[v4r1p8]
+*WhizardAnalysis
+Bugfix: random seed not cast is now cast to int
+
+[v4r1p7]
+*WhizardOptions
+Add type checking of options
+
+[v4r1p6]
+*WhizardAnalysis
+Key for seed was wrong
+
+[v4r1p5]
+*WhizardAnalysis
+Check validity of update before proceeding.
+
+[v4r1p4]
+*WhizardAnalysis
+Added more messages
+
+[v4r1p3]
+*resolveIFpath
+Add message for debugging purposes.
+
+[v4r1p2]
+*Interfaces
+NEW: Support for multiple processes in whizard
+
+*WhizardOptions
+Increased default number of calls
+
+*WhizardAnalysis
+Seed was not set right.
+
+[v4r1p1]
+*Interfaces
+CHANGE: Fixing the new WHIZARD interface
+
+*Workflow Modules
+FIX: Prevent whizard from failing at startup
+
+[v4r1p0]
+
+*Core
+NEW: Utility that knows the available steering files that shoudl come with the applications
+
+*Applications
+NEW: Possible to use directly the whizard options from http://projects.hepforge.org/whizard/manual_w1/manual005.html
+
+*Workflow Modules
+NEW: Support for Whizard full options
+FIX: InputData glitch
