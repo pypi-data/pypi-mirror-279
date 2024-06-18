@@ -1,0 +1,17 @@
+aiohttp
+async-timeout
+flask
+gremlinpython
+localstack>=2.2
+localstack-core
+localstack-ext
+localstack_client
+pydantic
+pydantic_settings
+python-dateutil
+PyYAML
+rdflib==6.0.2
+requests
+structlog
+toml
+typing-extensions
