@@ -1,0 +1,160 @@
+Metadata-Version: 2.3
+Name: dbt-sl-sdk
+Version: 0.1.0
+Summary: A client for dbt's Semantic Layer
+Author: dbt Labs
+License-File: LICENSE
+Requires-Python: >=3.9
+Requires-Dist: adbc-driver-flightsql==1.0.0
+Requires-Dist: adbc-driver-manager==1.0.0
+Requires-Dist: importlib-resources==6.4.0
+Requires-Dist: mashumaro==3.13
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pyarrow==16.1.0
+Requires-Dist: typing-extensions==4.12.2
+Provides-Extra: async
+Requires-Dist: aiohttp==3.9.5; extra == 'async'
+Requires-Dist: aiosignal==1.3.1; extra == 'async'
+Requires-Dist: anyio==4.4.0; extra == 'async'
+Requires-Dist: attrs==23.2.0; extra == 'async'
+Requires-Dist: backoff==2.2.1; extra == 'async'
+Requires-Dist: frozenlist==1.4.1; extra == 'async'
+Requires-Dist: gql==3.5.0; extra == 'async'
+Requires-Dist: graphql-core==3.2.3; extra == 'async'
+Requires-Dist: idna==3.7; extra == 'async'
+Requires-Dist: multidict==6.0.5; extra == 'async'
+Requires-Dist: sniffio==1.3.1; extra == 'async'
+Requires-Dist: yarl==1.9.4; extra == 'async'
+Provides-Extra: dev-main
+Requires-Dist: basedpyright==1.12.6; extra == 'dev-main'
+Requires-Dist: nodejs-wheel-binaries==20.14.0; extra == 'dev-main'
+Requires-Dist: ruff==0.4.8; extra == 'dev-main'
+Provides-Extra: dev-test
+Requires-Dist: attrs==23.2.0; extra == 'dev-test'
+Requires-Dist: iniconfig==2.0.0; extra == 'dev-test'
+Requires-Dist: packaging==24.1; extra == 'dev-test'
+Requires-Dist: pluggy==1.5.0; extra == 'dev-test'
+Requires-Dist: pytest-asyncio==0.23.7; extra == 'dev-test'
+Requires-Dist: pytest-mock==3.14.0; extra == 'dev-test'
+Requires-Dist: pytest-subtests==0.12.1; extra == 'dev-test'
+Requires-Dist: pytest==8.2.2; extra == 'dev-test'
+Provides-Extra: sync
+Requires-Dist: anyio==4.4.0; extra == 'sync'
+Requires-Dist: backoff==2.2.1; extra == 'sync'
+Requires-Dist: certifi==2024.6.2; extra == 'sync'
+Requires-Dist: charset-normalizer==3.3.2; extra == 'sync'
+Requires-Dist: gql==3.5.0; extra == 'sync'
+Requires-Dist: graphql-core==3.2.3; extra == 'sync'
+Requires-Dist: idna==3.7; extra == 'sync'
+Requires-Dist: multidict==6.0.5; extra == 'sync'
+Requires-Dist: requests-toolbelt==1.0.0; extra == 'sync'
+Requires-Dist: requests==2.32.3; extra == 'sync'
+Requires-Dist: sniffio==1.3.1; extra == 'sync'
+Requires-Dist: urllib3==2.2.1; extra == 'sync'
+Requires-Dist: yarl==1.9.4; extra == 'sync'
+Description-Content-Type: text/markdown
+
+# dbt Semantic Layer SDK for Python
+
+> 🧪 This library is still experimental and it's not feature complete yet.
+
+A library for easily accessing [dbt's Semantic Layer](https://docs.getdbt.com/docs/use-dbt-semantic-layer/dbt-sl/) via Python.
+
+## Installation
+
+To install the SDK, you'll need to specify optional dependencies depending on whether you want to use it synchronously (backed by [requests](https://github.com/psf/requests/)) or via [asyncio](https://docs.python.org/3/library/asyncio.html) (backed by [aiohttp](https://github.com/aio-libs/aiohttp/)).
+
+```
+# Sync installation
+pip install dbt-sl-sdk[sync]
+
+# Async installation
+pip install dbt-sl-sdk[async]
+```
+
+## Usage
+
+To run operations against the Semantic Layer APIs, just instantiate a `SemanticLayerClient` with your specific connection parameters ([learn more](https://docs.getdbt.com/docs/dbt-cloud-apis/sl-api-overview)):
+
+```python
+from dbtsl import SemanticLayerClient
+
+client = SemanticLayerClient(
+    environment_id=123,
+    auth_token="<your-semantic-layer-api-token>",
+    host="semantic-layer.cloud.getdbt.com",
+)
+
+# query the first metric by `metric_time`
+def main():
+    with client.session():
+        metrics = client.metrics()
+        table = client.query(
+            metrics=[metrics[0].name],
+            group_by=["metric_time"],
+        )
+        print(table)
+
+main()
+```
+
+Note that all method calls that will reach out to the APIs need to be within a `client.session()` context manager. By using a session, the client can connect to the APIs only once, and reuse the same connection between API calls.
+
+### asyncio
+
+If you're using asyncio, import `AsyncSemanticLayerClient` from `dbtsl.asyncio`. The APIs of `SemanticLayerClient` and `AsyncSemanticLayerClient` are the same. The only difference is that the asyncio version has `async` methods which need to be `await`ed.
+
+That same sync example can be converted into asyncio code like so:
+
+```python
+import asyncio
+from dbtsl.asyncio import AsyncSemanticLayerClient
+
+client = AsyncSemanticLayerClient(
+    environment_id=123,
+    auth_token="<your-semantic-layer-api-token>",
+    host="semantic-layer.cloud.getdbt.com",
+)
+
+async def main():
+    async with client.session():
+        metrics = await client.metrics()
+        table = await client.query(
+            metrics=[metrics[0].name],
+            group_by=["metric_time"],
+        )
+        print(table)
+
+asyncio.run(main())
+```
+
+### Integrating with dataframe libraries
+
+By design, the SDK returns all query data as [pyarrow](https://arrow.apache.org/docs/python/index.html) tables. If you wish to use the data with libraries like [pandas](https://pandas.pydata.org/) or [polars](https://pola.rs/), you need to manually download them and convert the data into their format.
+
+If you're using pandas:
+```python
+# ... initialize client
+
+arrow_table = client.query(...)
+pandas_df = arrow_table.to_pandas()
+```
+
+If you're using polars:
+```python
+import polars as pl
+
+# ... initialize client
+
+arrow_table = client.query(...)
+polars_df = pl.from_arrow(arrow_table)
+```
+
+### More examples
+
+Check out our [usage examples](./examples/) to learn more.
+
+
+## Contributing
+
+If you're interested in contributing to this project, check out our [contribution guidelines](./CONTRIBUTING.md).
