@@ -1,0 +1,43 @@
+name: Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:
+          - "3.10"
+          - "3.11"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: FedericoCarboni/setup-ffmpeg@v2
+        id: setup-ffmpeg
+
+      - uses: actions/setup-python@v4
+        id: setup-python
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Setup venv
+        run: |
+          python -m venv .venv
+
+      - name: Install dependencies
+        run: |
+          source .venv/bin/activate
+          python -m pip install --upgrade pip
+          pip install maturin
+          maturin develop --extras=dev
+
+      - name: Run tests
+        run: |
+          source .venv/bin/activate
+          pytest -vv -s tests
