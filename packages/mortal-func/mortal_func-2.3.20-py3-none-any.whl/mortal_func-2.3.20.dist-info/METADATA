@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mortal-func
+Version: 2.3.20
+Summary: 'mortal工具集::func'
+Author: MJ
+Requires-Python: <=3.11,>=3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: mortal-timer
+Requires-Dist: PyYAML
+
+'mortal工具集::func'
