@@ -1,0 +1,97 @@
+from setuptools import setup, find_packages
+
+setup(
+    name='ebay-scraper-api',
+    version='1.0.1',
+    packages=find_packages(),
+    author='Oxylabs',
+    author_email='marketing@oxylabs.io',
+    description="eBay Scraper for extracting product titles, descriptions, prices, specifications, customer reviews, and ratings from eBay",
+    long_description="""#Ebay Scraper
+
+[![Oxylabs promo code](https://user-images.githubusercontent.com/129506779/250792357-8289e25e-9c36-4dc0-a5e2-2706db797bb5.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
+
+
+[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/GbxmdGhZjq)
+
+[eBay Scraper](https://oxy.yt/Qapz) is a sophisticated solution designed to gather data from eBay website in real time and without a hassle. This quick guide will detail the process of scraping eBay using Oxylabs' Scraper API.
+
+### How it works
+
+You can get eBay results by providing your own URLs to our service. We can return the HTML of any eBay page you like.
+
+#### Python code example
+
+The example below illustrates how you can get an eBay product page result in HTML format.
+
+```python
+import requests
+from pprint import pprint
+
+# Structure payload.
+payload = {
+    'source': 'universal_ecommerce',
+    'url': 'https://www.ebay.com/itm/293608130360',
+    'geo_location': 'United States',
+}
+
+# Get response.
+response = requests.request(
+    'POST',
+    'https://realtime.oxylabs.io/v1/queries',
+    auth=('user', 'pass1'),
+    json=payload,
+)
+
+# Instead of response with job status and results url, this will return the
+# JSON response with the result.
+pprint(response.json())
+```
+
+Find code examples for other programming languages [**here**](https://github.com/oxylabs/ebay-scraper/tree/main/code%20examples)
+
+#### Output example
+
+```json
+{
+    "results": [
+        {
+            "content":"<!doctype html>\n<html lang=\"en\">\n<head>
+            ...
+            </script></body>\n</html>\n",
+            "created_at": "2022-11-17 14:53:52",
+            "updated_at": "2022-11-17 14:53:54",
+            "page": 1,
+            "url": "https://www.ebay.com/itm/293608130360",
+            "job_id": "6999021798385787905",
+            "status_code": 200
+        }
+    ]
+}
+```
+
+With Oxylabs’ eBay Scraper, publicly available data extraction will feel effortless. From product information to customer reviews – you’ll have all the data you need. If you have further queries, you can contact us via live chat or [email](mailto:support@oxylabs.io), and we’ll sort out your concerns in no time.
+""",
+    long_description_content_type='text/markdown',
+    url='https://oxylabs.io/products/scraper-api/ecommerce/ebay',
+    project_urls={
+        'Documentation': 'https://developers.oxylabs.io/scraper-apis/e-commerce-scraper-api/ebay',
+        'Source': 'https://github.com/oxylabs/ebay-scraper',
+        'Bug Reports': 'https://github.com/oxylabs/ebay-scraper/issues',
+    },
+    keywords='ebay-scraper, ebay-scrape, scrape-ebay, ebai-api, ebay-apis',
+    license='MIT',
+
+    include_package_data=True,
+    zip_safe=False,
+    python_requires='>=3.6',
+)
+
+
+
+
+
+
+
+
+
