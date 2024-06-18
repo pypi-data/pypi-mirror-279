@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: data_helpers
+Version: 0.1.30
+Summary: A set of helpers for working with various datatypes
+Author: sbland
+Author-email: sblandcouk@gmail.com
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Dist: numpy
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: numpy ; extra == 'test'
+
+Generated documentation for <Data helpers>.
+
+**Use**:
+
+**Created Date**: 14/05/2021
+
+# Developers (Contribution Guidelines)
+
+Documentation for contributing to the model
+
+## Environment Setup
+
+Run `python setup.py test`
+
+# End users
+
+## Environment Setup
+
+- Ensure correct Python installed `python -V` should > `3.7`
+- Setup Virtual Python environment and activate
+- Run `python setup.py install`
+
+## Running the model
+
+## CLI
+
+To run a command line interface run `python -m data_helpers.cli --help`
+
+## Notebooks
+
+The model can be used in notebooks...
+
+# Troubleshooting
