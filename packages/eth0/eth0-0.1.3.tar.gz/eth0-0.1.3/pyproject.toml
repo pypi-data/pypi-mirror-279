@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eth0"
+version = "0.1.3"
+description = "Ethereum toolkit"
+authors = [
+    { name = "Jarkko Sakkinen", email = "jarkko.sakkinen@iki.fi" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+dependencies = [
+    "eth-account",
+    "eth-keys",
+]
+
+[project.urls]
+Homepage = "https://codeberg.org/jarkko/eth0"
+Repository = "https://codeberg.org/jarkko/eth0.git"
+Issues = "https://codeberg.org/jarkko/eth0/issues"
+
+[project.scripts]
+eth0-address = "eth0.address:main_cli"
+eth0-sign = "eth0.sign:main_cli"
+
+[tool.ruff.lint]
+ignore = ["T201"]
