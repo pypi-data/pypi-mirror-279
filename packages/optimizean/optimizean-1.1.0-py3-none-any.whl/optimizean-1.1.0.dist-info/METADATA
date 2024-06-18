@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: optimizean
+Version: 1.1.0
+Summary: Have questions? Take a moment to find out!
+License: MIT
+Author: optimizean
+Author-email: optimize.an@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)
