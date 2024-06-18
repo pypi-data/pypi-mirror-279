@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: slumpy
+Version: 0.1.6
+Summary: Python Package for Slum Gloack Standard for Code
+Home-page: UNKNOWN
+Author: gloackong
+License: MIT
+Project-URL: Source, https://github.com/gloacking/slumpy
+Platform: UNKNOWN
+Requires-Python: >=3.8
+License-File: LICENSE
+
+UNKNOWN
+
