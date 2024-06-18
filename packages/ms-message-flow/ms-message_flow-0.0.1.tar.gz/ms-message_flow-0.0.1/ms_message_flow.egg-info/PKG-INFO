@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: ms-message-flow
+Version: 0.0.1
+Summary: Sistema de envio de mensagens
+Home-page: https://dev.azure.com/brf-corp/Analytics-DataScience/_git/analytics-message-flow
+Author: Cayo Slowik
+Author-email: cayo.slowik@brf.com
+Requires-Python: >=3.9
+Requires-Dist: msal
+Requires-Dist: requests
+Requires-Dist: pymsteams
+Requires-Dist: urllib3
