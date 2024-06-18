@@ -1,0 +1,81 @@
+Metadata-Version: 2.1
+Name: docker-ready-cli
+Version: 0.2.0
+Summary: 
+Home-page: https://github.com/docker-ready/cli
+License: MIT
+Keywords: docker
+Author: impocode
+Author-email: impocode@impocode.one
+Maintainer: impocode
+Maintainer-email: impocode@impocode.one
+Requires-Python: >=3.12,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: click (>=8.1.7,<9.0.0)
+Requires-Dist: docker-ready (>=0.2.0,<0.3.0)
+Requires-Dist: python-dateutil (>=2.9.0.post0,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Project-URL: Documentation, https://github.com/docker-ready/cli
+Project-URL: Repository, https://github.com/docker-ready/cli
+Description-Content-Type: text/markdown
+
+# Docker Ready CLI
+
+Docker Ready CLI is a tool for lazy DevOps(and other) engineers.
+
+This tool is definitely for you if:
+
+- you don't like to write configs from scratch;
+- you don't have time to review the deployment project documentation;
+- you need a ready-to-use project;
+- you are lazy and just want everything to work after one command.
+
+## Installation
+
+```shell
+$ pipx install docker-ready-cli
+```
+
+## Documentation
+
+### Run command
+
+```
+$ docker-ready run PROJECT_NAME
+```
+
+### Show command
+
+Show all available projects:
+
+```shell
+$ docker-ready show
+```
+
+Show information about the project by name:
+
+```shell
+$ docker-ready show PROJECT_NAME
+```
+
+### Ps command
+
+A list of running projects with brief information about their containers.
+
+```shell
+$ docker-ready ps
+```
+
+A list of running containers for a specific project with detailed information.
+
+```shell
+$ docker-ready ps PROJECT_NAME
+```
+
