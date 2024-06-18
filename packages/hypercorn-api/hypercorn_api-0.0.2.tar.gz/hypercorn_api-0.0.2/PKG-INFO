@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hypercorn_api
+Version: 0.0.2
+Summary: HyperCornAPI powerful api for image and spectrum processing.
+Home-page: https://github.com/HyperCorn/HyperCornAPI-Python-Client
+Download-URL: https://github.com/HyperCorn/HyperCornAPI-Python-Client/releases/tag/0.0.2
+Author: HyperCorn
+Author-email: hypercorncordoba@gmail.com
+Keywords: IMAGES,SPECTRUMS,CROPS
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+License-File: LICENSE.txt
+Requires-Dist: requests
+
+HyperCornAPI, developed by Hypercorn, is a foundational API designed to seamlessly integrate with HyperApp, an advanced application tailored for crop classification. This documentation provides comprehensive guidance on endpoints, methods, and best practices for developers seeking to harness HyperAPI's powerful capabilities in image and spectrum processing.
