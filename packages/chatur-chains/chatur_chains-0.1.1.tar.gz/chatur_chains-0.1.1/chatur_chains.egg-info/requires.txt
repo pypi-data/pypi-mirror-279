@@ -1,0 +1,16 @@
+langchain==0.1.16
+langchain-core==0.1.52
+langchain_community==0.0.34
+langserve
+uvicorn==0.29.0
+chromadb==0.5.0
+fastapi==0.110.1
+chardet
+openai==1.24.0
+gpt4all==2.6.0
+pydantic
+pytest
+langchain-openai==0.1.6
+sentence-transformers==2.7.0
+weaviate-client==4.5.7
+langchain-weaviate==0.0.1
