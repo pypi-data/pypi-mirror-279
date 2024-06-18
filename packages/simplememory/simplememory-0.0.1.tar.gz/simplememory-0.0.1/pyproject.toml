@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[metadata]
+name="simplememory"
+version="0.0.1"
+[project]
+name="simplememory"
+version="0.0.1"
+authors=[
+{name="agent memory", email="agentmemorydefault@gmail.com"}
+]
+description="The framework for agent memory"
+readme="README.md"
+requires-python=">=3.10"
+classifiers=[
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies=[
+"pydantic==2.7.4",
+"openai==1.34.0",
+"langchain_openai==0.1.8",
+"python-dotenv==1.0.1",
+"pinecone-client==4.1.1"
+]
+[project.urls]
+"Homepage" = "https://github.com/agencymemory/simplememory"
+[tool.setuptools.packages.find]
+where=["."]
+include=["*"]
+exclude=["example_data"]
+namespaces=false

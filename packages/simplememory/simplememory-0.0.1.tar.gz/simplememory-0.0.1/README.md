@@ -1,0 +1,33 @@
+# simplememory
+This will be the memory of the agents
+
+**To use this package:**
+
+Ensure that `.env` exists with below.
+
+```
+OPENAI_API_KEY=sk-"ADD YOUR API KEY HERE"
+PINECONE_API_KEY = "ADD YOUR API KEY HERE"
+PINECONE_INDEX="ADD YOUR INDEX NAME HERE"
+```
+
+**How to add to semantic memory:**
+```
+from memory.semantic_memory import SemanticMemory
+if __name__=="__main__":
+    sc= SemanticMemory()
+    semantic_val,memory_item = sc.add_memory_item(mem_key="What is the capital of india?",mem_val="The capital of India is New Delhi"
+    print(semantic_val)
+    print(memory_item)
+
+```
+**How to retrieve semantic memory:**
+```
+from memory.semantic_memory import SemanticMemory
+if __name__=="__main__":
+    sc= SemanticMemory()
+    result = sc.retrieve_memory_item(mem_key="what is the capital of India?")
+    print(result['matches'][0]['metadata']['key'])
+    print(result['matches'][0]['metadata']['value'])
+    print(result['matches'][0]['score'])
+```

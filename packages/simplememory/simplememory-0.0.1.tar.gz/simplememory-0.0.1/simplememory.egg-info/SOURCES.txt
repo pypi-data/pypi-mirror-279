@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+memory/__init__.py
+memory/memory_base.py
+memory/semantic_memory.py
+simplememory.egg-info/PKG-INFO
+simplememory.egg-info/SOURCES.txt
+simplememory.egg-info/dependency_links.txt
+simplememory.egg-info/requires.txt
+simplememory.egg-info/top_level.txt
