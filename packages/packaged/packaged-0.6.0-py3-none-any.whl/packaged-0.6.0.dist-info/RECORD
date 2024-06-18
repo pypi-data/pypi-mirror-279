@@ -1,0 +1,13 @@
+packaged/__init__.py,sha256=u9y6U79peIzMADxPh-HtXkywchWdyXPylWsic7NhlF8,8540
+packaged/__main__.py,sha256=eLKlLntdydKmdCDZRBpLX2B37z21rPhOCH2FXbmk2Ys,185
+packaged/cli.py,sha256=MUFYJjHJR0M65ccQZleW5EId6fA6N2qfcmI0Zn2Ej3c,3455
+packaged/config.py,sha256=5-TSqW2KuMOe9D4kWuKbi0q58O5DlYwZeJcJZBw6vWA,1763
+packaged/makeself-header.sh,sha256=fSAoaW9j8RNWEaJE94lgA7x61GNOyOJoVvDvaGg4rPk,19207
+packaged/makeself.sh,sha256=6gJe0L6Zlohehz4Or_9HXr1ehct32_-Fjgw0vZoaqFw,21228
+packaged/py.typed,sha256=DtCsIDq6KOv2NOEdQjTbeMWJKRh6ZEL2E-6Mf1RLeMA,59
+packaged-0.6.0.dist-info/LICENSE,sha256=LC13yhTYvNAdxyMBKsdVc8ExuIWOB6NHd3k-e0BVo-o,18089
+packaged-0.6.0.dist-info/METADATA,sha256=2UQQVpgwNeurt_6l-Z34DGdc7FPVyAo8Ba6YbgXDAbw,5472
+packaged-0.6.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+packaged-0.6.0.dist-info/entry_points.txt,sha256=e6L6sCOErRM5hgsUSCYzMMihBbtcVw6jiaclUzTBvSU,46
+packaged-0.6.0.dist-info/top_level.txt,sha256=mo0oftBwNk2DT-xHazkskOo2_5KwjzQxj6Mz0NeAX7s,9
+packaged-0.6.0.dist-info/RECORD,,
