@@ -1,0 +1,7 @@
+requests==2.32.3
+opencv-python==4.10.0.82
+pillow==10.3.0
+pdf2image==1.17.0
+numpy>=1.24.4
+tqdm==4.66.4
+PyMuPDF==1.24.5
