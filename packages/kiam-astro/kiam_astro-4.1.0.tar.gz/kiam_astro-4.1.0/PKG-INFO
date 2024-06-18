@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: kiam_astro
+Version: 4.1.0
+Summary: KIAM Astrodynamics Toolbox
+Home-page: https://github.com/shmaxg/KIAMToolbox
+Author: Maksim Shirobokov
+Author-email: shmaxg@gmail.com
+Keywords: astrodynamics,spacecraft,mission analysis
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Russian
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Fortran
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.9.0
+License-File: LICENSE
+Requires-Dist: jdcal
+Requires-Dist: networkx
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: plotly
+Requires-Dist: kaleido
+Requires-Dist: pillow
+
+Astrodynamics toolbox for fundamental research and education.
