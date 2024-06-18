@@ -1,0 +1,2 @@
+[console_scripts]
+sound4-directory-listing = sound4directorylisting.main:main
