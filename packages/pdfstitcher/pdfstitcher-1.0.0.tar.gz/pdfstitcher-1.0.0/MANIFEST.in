@@ -1,0 +1,3 @@
+recursive-include resources *.ico
+recursive-include resources *.mo
+recursive-include resources *.po
