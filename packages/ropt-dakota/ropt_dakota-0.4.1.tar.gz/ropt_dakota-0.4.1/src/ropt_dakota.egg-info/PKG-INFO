@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: ropt-dakota
+Version: 0.4.1
+Summary: A Dakota optimizer plugin for ropt
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy<2
+Requires-Dist: carolina
+Requires-Dist: ropt>=0.4.0
+Provides-Extra: test
+Requires-Dist: ruff; extra == "test"
+Requires-Dist: mypy; extra == "test"
+Requires-Dist: pytest; extra == "test"
+
+# A Dakota optimizer plugin for `ropt`
+This package installs a plugin for the `ropt` robust optimization package,
+providing access to algorithms from the Dakota optimization package.
+
+`ropt-dakota` is developed by the Netherlands Organisation for Applied
+Scientific Research (TNO). All files in this repository are released under the
+GNU General Public License v3.0 (a copy is provided in the LICENSE file).
+
+
+## Dependencies
+This code has been tested with Python versions 3.8-3.12.
+
+The plugin is based on the [Dakota](https://dakota.sandia.gov/) optimizer and
+depends on the [Carolina](https://github.com/equinor/Carolina) Python wrapper.
+
+
+## Installation
+From PyPI:
+```bash
+pip install ropt-dakota
+```
+
+
+## Development
+The `ropt-dakota` source distribution can be found on
+[GitHub](https://github.com/tno-ropt/ropt-dakota). To install from source, enter
+the distribution directory and execute:
+
+```bash
+pip install .
+```
+
+
+## Running the tests
+To run the test suite, install the necessary dependencies and execute `pytest`:
+
+```bash
+pip install .[test]
+pytest
+```
