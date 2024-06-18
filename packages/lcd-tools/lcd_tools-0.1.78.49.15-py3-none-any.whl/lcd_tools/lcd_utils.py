@@ -1,0 +1,223 @@
+"""
+The following module provides multiple functions that provide various control options for LCD screen via RaspberryPi.
+
+Extension of RPLCD library.
+
+Utilizing RPi.GPIO
+"""
+
+import time
+
+import RPi.GPIO as GPIO
+from RPLCD import CharLCD
+
+
+# def write_to_lcd(lcd, frame_buffer: list, num_cols: int, string: string) -> None :
+def write_to_lcd(*args) -> None:
+    """
+    write_to_lcd is a multi-use function that can be called by other functions and directly through the library.
+
+    Function can be overridden via argument inputs
+
+    Args (Two arg override):
+        lcd (list): **REQUIRED** - LCD object as defined by RPLCD library:
+            lcd = CharLCD(
+                numbering_mode = <string>,
+                cols = <int>,
+                rows = <int>,
+                pin_rs = <int>,
+                pin_e = <int>,
+                pins_data = <list>
+            )
+        string (string): **optional** - String variable that usually will be written directly to lcd if given
+            string  = <string>
+    Return:
+        (None)
+
+    Args (Three arg override):
+        lcd (list): **REQUIRED** - LCD object as defined by RPLCD library:
+            lcd = CharLCD(
+                numbering_mode = <string>,
+                cols = <int>,
+                rows = <int>,
+                pin_rs = <int>,
+                pin_e = <int>,
+                pins_data = <list>
+            )
+
+
+        frame_buffer (list): **optional** - Array of strings - Each string in array represents line on LCD screen. Can be used to write multiple lines at once.
+            frame_buffer = [<string>, ... <string>]
+
+        num_cols (int): **optional** - Integer representing number of columns on LCD screen
+            num_cols = <int>
+    Return:
+        (None)
+    """
+
+    # 2 Arg Override
+    if len(args) == 2:
+        try:
+            args[0].home()
+            args[0].write_string(args[1])
+        except Exception as exc:
+            arg0 = str(type(args[0]))
+            arg1 = str(type(args[1]))
+            print(
+                f"\nERROR: Expected LCD and string objects \n Received: \n arg[0] - {arg0} \n arg[1] - {arg1}"
+                )
+            raise SystemExit from exc
+    # 3 Arg Override
+    elif len(args) == 3:
+        args[0].home()
+        for row in args[1]:
+            args[0].write_string(row.ljust(args[2])[: args[2]])
+            args[0].write_string("\r\n")
+    else:
+        print("f\nERROR: Expected 2 or 3 arguments. \nReceived - {len(args)}")
+        raise SystemExit
+
+
+def scroll_line(lcd, string, row, num_cols=16, direction="left", speed=8):
+    """
+    scroll_line() is used to scroll a single text line across the LCD screen
+
+    Args :
+        lcd (list): **REQUIRED** - LCD object as defined by RPLCD library:
+            lcd = CharLCD(
+                numbering_mode = <string>,
+                cols = <int>,
+                rows = <int>,
+                pin_rs = <int>,
+                pin_e = <int>,
+                pins_data = <list>
+            )
+        string (string): **REQUIRED** - String variable that usually will be written directly to lcd if given
+            string  = <string>
+        row (int): **REQUIRED** - Integer var for the row the text will be scrolled on.
+            row =  <int>
+        num_cols (int): **REQUIRED** - Integer var for the number of columns on lcd
+            num_cols = <int>
+        direction (string): **optional** - String var with direction text should scroll. Defaults to left scrolling
+            direction = "left" OR "right"
+        speed (int): **optional** - Integer var (1-10) representing speed of scrolling
+            speed = <int>
+    Return:
+        (None)
+
+    """
+
+    # Validate direction argument
+    valid_directions = ["right", "left"]
+    if direction not in valid_directions:
+        raise ValueError(
+            f"Invalid direction: '{direction}'. Please specify 'right' or 'left'."
+        )
+
+    # Validate speed input
+    if speed not in range(1, 10):
+        raise ValueError(f"Invalid speed: '{speed}'. Please specify speed integer 1-10")
+
+    frame_buffer = [""] * (row + 1)
+
+    # Pad either side of the string for the full scrolling effect
+    padding = " " * num_cols
+    string = padding + string + padding
+
+    # Scroll through frame_buffer
+    if direction == "left":
+        for i in range(len(string) - num_cols + 1):
+            frame_buffer[row] = string[i : i + num_cols]
+            write_to_lcd(lcd, frame_buffer, num_cols)
+            time.sleep(1.01 - (speed * 0.1))
+    elif direction == "right":
+        for i in range(len(string), num_cols - 1, -1):
+            frame_buffer[row] = string[i - num_cols : i]
+            write_to_lcd(lcd, frame_buffer, num_cols)
+            time.sleep(1.01 - (speed * 0.1))
+
+
+def scroll_all_lines(lcd, frame_buffer, num_cols, direction="left", speed=8):
+    """
+    scroll_all_lines() is used to scroll all lines of text in an input frame_buffer across the LCD screen
+
+    Args :
+        lcd (list): **REQUIRED** - LCD object as defined by RPLCD library:
+            lcd = CharLCD(
+                numbering_mode = <string>,
+                cols = <int>,
+                rows = <int>,
+                pin_rs = <int>,
+                pin_e = <int>,
+                pins_data = <list>
+            )
+        string (string): **REQUIRED** - String variable that usually will be written directly to lcd if given
+            string  = <string>
+        row (int): **REQUIRED** - Integer var for the row the text will be scrolled on.
+            row =  <int>
+        num_cols (int): **REQUIRED** - Integer var for the number of columns on lcd
+            num_cols = <int>
+        direction (string): **optional** - String var with direction text should scroll. Defaults to left scrolling
+            direction = "left" OR "right"
+        speed (int): **optional** - Integer var (1-10) representing speed of scrolling
+            speed = <int>
+    Return:
+        (None)
+
+    """
+    # Validate direction argument
+    valid_directions = ["right", "left"]
+    if direction not in valid_directions:
+        raise ValueError(
+            f"Invalid direction: '{direction}'. Please specify 'right' or 'left'."
+        )
+
+    # Validate speed input
+    if speed not in range(1, 10):
+        raise ValueError(f"Invalid speed: '{speed}'. Please specify speed integer 1-10")
+
+    # Initilize padding, new padded buffer, and longest string to get full scroll
+    padding = " " * num_cols
+    padded_buffer = []
+    longest_string = ""
+
+    for row in frame_buffer:
+        padded_string = padding + row + padding
+        padded_buffer.append(padded_string)
+        if len(longest_string) < len(padded_string):
+            longest_string = padded_string
+
+    # Determine the length of the longest padded string
+    scroll_length = len(longest_string)
+
+    # Scroll through frame_buffer
+    if direction == "left":
+        for i in range(scroll_length - num_cols + 1):
+            temp_buffer = []
+            for row in padded_buffer:
+                temp_buffer.append(row[i : i + num_cols])
+            write_to_lcd(lcd, temp_buffer, num_cols)
+            time.sleep(1.01 - (speed * 0.1))
+    elif direction == "right":
+        for i in range(scroll_length - 1, num_cols - 2, -1):
+            temp_buffer = []
+            for row in padded_buffer:
+                temp_buffer.append(row[i - num_cols + 1 : i + 1])
+            write_to_lcd(lcd, temp_buffer, num_cols)
+            time.sleep(1.01 - (speed * 0.1))
+
+def black_square(lcd):
+    square = (
+    0b00000,
+0b01010,
+0b01010,
+0b00000,
+0b10001,
+0b10001,
+   0b01110,
+  0b00000,
+    )
+
+    lcd.create_char(0, square)
+
+    lcd.write_string('\x03')
