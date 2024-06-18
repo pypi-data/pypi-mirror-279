@@ -1,0 +1,17 @@
+PlusMath/__init__.py,sha256=aSl2ii5jZVpuobyvHSpyGr08gTPXhyGY48gxXQKtyeU,344
+PlusMath/ContextManagers/__init__.py,sha256=_oD5hf948FCarT8ls2fw9Sd6apzaQ0-CQ7ZSEqVLbWY,44
+PlusMath/MoreFunctions/ArithmaticEquations.py,sha256=5rIyXT2zr2wXV49pQatD06HsB2zEGGhpFoJP-fzkUFQ,1184
+PlusMath/MoreFunctions/__init__.py,sha256=3Fgtb3HatshYfxHbAMJ40PD5DNMIJthT2FtwZXMgSN0,68
+PlusMath/MoreTypes/Functions.py,sha256=cZDiuy6LGsXEGFN4cS2mzCXVx4j41y2OKUtkWVLVulQ,413
+PlusMath/MoreTypes/Numbers.py,sha256=46hJSfwry-yXyEQBWfYOoRx8XTFCCGLPuysPs0YEdU4,773
+PlusMath/MoreTypes/__init__.py,sha256=Jv_rVRQQZ4STjXdjGQwIiDYrLRb9pn82k7_0n91vbm4,59
+PlusMath/MoreTypes/MoreExceptions/DivisionErrors.py,sha256=IJ0x0PemIugQ4dkgNtJVI9MgJS7V9hcZjIObErSRVa4,135
+PlusMath/MoreTypes/MoreExceptions/__init__.py,sha256=941Lk-9PtB4SYpCJihFEJSPptMQwji_fyvQ1GD5FDYM,48
+PlusMath/Vectors/ThreeDimensions.py,sha256=yKOOiWaXEZtwHTESJ_63BQVBKLDJ56KNttLCLu4cARU,600
+PlusMath/Vectors/TwoDimensions.py,sha256=kaeuKd_Y1x9cQpLXrjP1sul6zPx8lfy-AUPgxkz6y0g,1201
+PlusMath/Vectors/__init__.py,sha256=pVA6K6UGvFJ_SWSmOQraRyx3ngleVttFnZYneKhYKMc,72
+PlusMath-1.0.2.1.dist-info/METADATA,sha256=XIDNrAEl17ay0TDIjxfxg-LzhzPlC_0EnLcuJJkI4EM,820
+PlusMath-1.0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+PlusMath-1.0.2.1.dist-info/license.txt,sha256=_fp4zOOCbJBWDIr8rCaW-hjp_Ogbili_oSaUGuf3Cak,1059
+PlusMath-1.0.2.1.dist-info/top_level.txt,sha256=5wNWWpp4MowfB_g04HzvK7-5Nl-EnQCPTvNsJjMBv9k,9
+PlusMath-1.0.2.1.dist-info/RECORD,,
