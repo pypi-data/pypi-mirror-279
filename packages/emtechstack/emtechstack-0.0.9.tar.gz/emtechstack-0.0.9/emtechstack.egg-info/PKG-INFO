@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: emtechstack
+Version: 0.0.9
+Requires-Dist: click
+Requires-Dist: black
+Requires-Dist: requests
+Requires-Dist: tabulate
+Requires-Dist: termcolor
