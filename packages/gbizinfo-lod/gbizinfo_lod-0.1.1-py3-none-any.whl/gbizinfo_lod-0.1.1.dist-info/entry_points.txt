@@ -1,0 +1,3 @@
+[console_scripts]
+gbilod=gbizinfo_lod.command:cli
+
