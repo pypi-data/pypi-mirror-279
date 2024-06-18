@@ -1,0 +1,6 @@
+gevent
+greenlet
+pymysql
+pysolbase>=3.0.0
+pysolmeters>=3.0.0
+ujson
