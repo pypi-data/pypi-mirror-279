@@ -1,0 +1,10 @@
+pysocha/__init__.py,sha256=kaGMDBNKR1JxsPCA8ER6OTdZ1sJP6GGACF23OA1JX6w,1369
+pysocha/__main__.py,sha256=iKbFhzLN2XC4yRbkkwnMfLwJRRDxoXvSlIo0Vj6nU8s,83
+pysocha/build.py,sha256=e9M2JsxB0OAT1OONxJODV_bJaJn-a4AWs1jwhh7fZSc,12553
+pysocha/config.py,sha256=7kffSB1EVD3ks-OJ8AJP5zr4J7MTXXqqxgW1AYqHgeQ,810
+pysocha/markdown.py,sha256=A60uk1hEju7RRmRnuSnhbX4AhAp-g_3apNoD1uAAAik,678
+pysocha/preview.py,sha256=diwSpuDTczts3DGKpnGjleBrR-P5KfHOju2pI3jzbPg,1141
+pysocha-0.1.0.dist-info/METADATA,sha256=2xlbsTIzDvBk9XVBu_Lh_TERj19vf_o-6z6hDytrF4Y,665
+pysocha-0.1.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pysocha-0.1.0.dist-info/entry_points.txt,sha256=iyC_dtNuFpxqyo55McZemkofmxe23mcudLxhS5FOXU8,41
+pysocha-0.1.0.dist-info/RECORD,,
