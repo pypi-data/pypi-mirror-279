@@ -1,0 +1,99 @@
+Metadata-Version: 2.3
+Name: rusty-email-validator
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Keywords: rust,email,validation
+Author-email: Iorio Markus <mbalzert@gmail.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Email Validator
+
+This project provides a simple email validation library written in Rust, with Python bindings using PyO3. The library uses the `validator` crate to validate email addresses.
+
+## Features
+
+- Validate email addresses using Python.
+
+## Requirements
+
+- Python 3.6 or higher
+- `maturin` for building and publishing the Python package
+
+## Installation
+
+To use the Python bindings, you need to build the package first. You can do this using `maturin`.
+
+1. Install `maturin`:
+
+```sh
+pip install maturin
+```
+
+2. Build and install the package:
+
+```sh
+maturin develop
+```
+
+This will compile the Rust code and install the Python package in your current environment.
+
+## Usage
+
+Here's an example of how to use the email validation function in Python:
+
+```python
+from email_validator import validate
+
+email = "example@example.com"
+is_valid = validate(email)
+print(f"Is valid: {is_valid}")
+```
+
+## Development
+
+To contribute to this project, follow these steps:
+
+1. Clone the repository:
+
+```sh
+git clone https://github.com/yourusername/email_validator.git
+cd email_validator
+```
+
+2. Install the required dependencies:
+
+```sh
+pip install maturin
+```
+
+3. Build the project:
+
+```sh
+maturin develop
+```
+
+4. Run the tests:
+
+```sh
+cargo test
+```
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [PyO3](https://github.com/PyO3/pyo3) for providing the Rust bindings for Python.
+- [Validator](https://github.com/Keats/validator) for the email validation functionality.
+
+```
+
+Feel free to customize this README to better fit your project's specifics and any additional details you might want to include.
+
+pypi-AgEIcHlwaS5vcmcCJGRmMDUzMDQ0LTE4ODAtNDRkZS1iNWE0LTM5ZWU5ODFjNTk4ZgACKlszLCI1ZTY4MDA5ZS1lNDcxLTQ3NjMtYWJjMi01YTNmNTE2YTlmMWIiXQAABiB2FS1VbmZmLabSTOLz2d0Xh8sB5HMX0GWsB7AhFP06pA

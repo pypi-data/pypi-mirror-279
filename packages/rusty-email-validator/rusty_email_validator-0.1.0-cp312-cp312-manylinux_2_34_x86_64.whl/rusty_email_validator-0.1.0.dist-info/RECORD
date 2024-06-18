@@ -1,0 +1,7 @@
+rusty_email_validator-0.1.0.dist-info/METADATA,sha256=oRutTiLQMnbpnlGd621O9IJYBD1pECYZUi7bEQ0uufM,2378
+rusty_email_validator-0.1.0.dist-info/WHEEL,sha256=wdF4bzqQIptUqX3NwgVBq_d3m8MJ0H2Xu_k69q7KV6E,108
+rusty_email_validator/__init__.py,sha256=csMj2EcJUpinFGoUyTg_eukDfKvFnHCR-eejsS3v3sE,63
+rusty_email_validator/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rusty_email_validator/__init__.pyi,sha256=N0kFdPEVBbly_qHaGBTEn9tfzp7Az4qjUOUMERqTE5o,56
+rusty_email_validator/_email_validator.cpython-312-x86_64-linux-gnu.so,sha256=GgnqzFzoYAajuu-IyW2zHbwWUzLEHwK6dJTA7HroM4k,29140104
+rusty_email_validator-0.1.0.dist-info/RECORD,,
