@@ -1,0 +1,2 @@
+[console_scripts]
+Verifier = Verifier.__main__:main

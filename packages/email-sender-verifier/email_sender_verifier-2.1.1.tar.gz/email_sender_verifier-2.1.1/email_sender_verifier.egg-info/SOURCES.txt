@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+Verifier/__init__.py
+Verifier/email.py
+email_sender_verifier.egg-info/PKG-INFO
+email_sender_verifier.egg-info/SOURCES.txt
+email_sender_verifier.egg-info/dependency_links.txt
+email_sender_verifier.egg-info/entry_points.txt
+email_sender_verifier.egg-info/top_level.txt
