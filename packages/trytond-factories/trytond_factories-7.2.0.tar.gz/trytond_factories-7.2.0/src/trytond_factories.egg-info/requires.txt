@@ -1,0 +1,6 @@
+factory_trytond
+trytond~=7.2.0
+
+[tests]
+pytest-trytond
+trytond-account_invoice~=7.2.0
