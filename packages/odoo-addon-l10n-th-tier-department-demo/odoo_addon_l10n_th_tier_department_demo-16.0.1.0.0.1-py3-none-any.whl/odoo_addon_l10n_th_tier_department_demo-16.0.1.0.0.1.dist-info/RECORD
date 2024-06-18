@@ -1,0 +1,14 @@
+odoo/addons/l10n_th_tier_department_demo/README.rst,sha256=DnCBgbJLsfq4RtL1ntjhye9NJvOCNVJscd5NPXXo5a4,3603
+odoo/addons/l10n_th_tier_department_demo/__init__.py,sha256=FNlMPDojEQpwvHZlf1L1FiQCxOYOu7R3lMKD6aozhvU,65
+odoo/addons/l10n_th_tier_department_demo/__manifest__.py,sha256=n5ensL1ESy5S7lK97Ok_MQfAnRgH4cu1Lf2lqJjpP4Q,793
+odoo/addons/l10n_th_tier_department_demo/data/hr_expense_tier_definition.xml,sha256=Sl71iHMO2avkGquzDCM7szq3fmzQqOTvEDls1Sx_0h0,7702
+odoo/addons/l10n_th_tier_department_demo/data/purchase_request_tier_definition.xml,sha256=Cfzq9ntrkBQoXbRc3L6MvoMWkukn-TPcIP2ViSwGATw,3731
+odoo/addons/l10n_th_tier_department_demo/i18n/l10n_th_tier_department_demo.pot,sha256=wCtYE7uFdUusGXjrRHmS8RXor_LdkWIaNpfo32IeW04,2925
+odoo/addons/l10n_th_tier_department_demo/readme/CONTRIBUTORS.rst,sha256=eaq9Wk5sIRcCm1psQYCi6GdY4apiUKkqjxgyTAXLxm4,86
+odoo/addons/l10n_th_tier_department_demo/readme/DESCRIPTION.rst,sha256=DKwkIIQbPfouIkaRq9M-XkCUpTz_-aaM90S8UoWY7hU,138
+odoo/addons/l10n_th_tier_department_demo/static/description/icon.png,sha256=6xBPJauaFOF0KDHfHgQopSc28kKvxMaeoQFQWZtfZDo,9455
+odoo/addons/l10n_th_tier_department_demo/static/description/index.html,sha256=EZHSzy1l3-gQeYtVrhv-jYFoygAjSHvoWhNUyq8MCio,13083
+odoo_addon_l10n_th_tier_department_demo-16.0.1.0.0.1.dist-info/METADATA,sha256=04xwLBKJKXy-900Mv3h2Iav_YrhOH-NRGvn9xVjTZ2A,4509
+odoo_addon_l10n_th_tier_department_demo-16.0.1.0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+odoo_addon_l10n_th_tier_department_demo-16.0.1.0.0.1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo_addon_l10n_th_tier_department_demo-16.0.1.0.0.1.dist-info/RECORD,,
