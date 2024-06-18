@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: physical_sources
+Version: 0.7.9
+Summary: A collection of classes that can be used to build acoustic sources from the NOISEFILE format. It also contains classes to read the binary representations born from the author's dissertation
+Author-Email: frankmobley <mobssoft@gmail.com>, "Dr. Frank Mobley" <frank.mobley.1@afrl.af.mil>
+License: MIT
+Project-URL: Homepage, https://gitlab.com/physicalpropagation/physcial_sources
+Project-URL: Docs, https://readthedocs.org
+Project-URL: Documentation, https://readthedocs.org
+Requires-Python: >=3.8
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: PythonCoordinates>=0.5.0
+Requires-Dist: Pytimbre>0.6.1
+Requires-Dist: physical_propagation>=0.5.1
+Requires-Dist: matplotlib>=3.3.1
+Description-Content-Type: text/markdown
+
+# ![Image](./GhostEye.png "GhostEye") physical_sources
+
+To determine the acoustic levels at some distance from the source of the acoustic signal you must be able to represent 
+the levels in some manner. The collection of code represent three types of source descriptions:
++ Analytic sources - sources that are described some an equation of some sort
++ Point sources - these are a single spectral, or set of spectral representations that can be queried with a coordinate representation
++ Spherical sources - the data is arranged around the source of the acoustic signals in a sphere with a fixed radius.
+
