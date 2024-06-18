@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sqlmako"
+version = "0.0.1"
+description = ""
+authors = ["rfzee <rfzee@proton.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+sqlmodel = "^0.0.18"
+loguru = "^0.7.2"
+pydantic = "^2.7.4"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
