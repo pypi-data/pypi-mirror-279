@@ -1,0 +1,2 @@
+[console_scripts]
+pattools = pattools:main
