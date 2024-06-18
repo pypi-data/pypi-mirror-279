@@ -1,0 +1,27 @@
+pyEQL/__init__.py,sha256=JErflmaJVP373dm3-YGHUomFu05dgX0iXWS-Z5AgSTU,2118
+pyEQL/activity_correction.py,sha256=eOixjgTd5hTrTRD5s6aPCCG12lAIH7-lRN0Z1qHu678,37151
+pyEQL/engines.py,sha256=ma4KhCmW2XR4FNebQBa2vTkKygRH8l40rnsSTmqTECQ,34915
+pyEQL/equilibrium.py,sha256=YCtoAJSgn1WC9NJnc3H4FTJdKQvogsvCuj7HqlKMtww,8307
+pyEQL/functions.py,sha256=nc-Hc61MmW-ELBR1PByJvQnELxM7PZexMHbU_O5-Bnw,10584
+pyEQL/pint_custom_units.txt,sha256=XHmcMlwVvqF9nEW7_e9Xgyq-xWEr-cDYqieas11T3eY,2882
+pyEQL/salt_ion_match.py,sha256=D4HJdV7iVsBEW5bW9tWpvc6pK-jrexTlvJV80YabHo4,4062
+pyEQL/solute.py,sha256=R4XjPiAZP2787ImIo072CWD1vjIYjGPt6zvxCrVO1pA,5133
+pyEQL/solution.py,sha256=PogXcBn3vPaK5EZy742-tW6om_kmrkitF7U7NeMj37g,115889
+pyEQL/utils.py,sha256=2VLl_sqcKcqBrVdP0ogtIYsOlc-wl4repi43Jqr-8yg,4156
+pyEQL/database/geothermal.dat,sha256=kksnfcBtWdOTpNn4CLXU1Mz16cwas2WuVKpuMU8CaVI,234230
+pyEQL/database/llnl.dat,sha256=jN-a0kfUFbQlYMn2shTVRg1JX_ZhLa-tJ0lLw2YSpLU,751462
+pyEQL/database/phreeqc_license.txt,sha256=8W1r8VxC2kVptIMSU9sDFNASYqN7MdwKEtIWWfjTQuM,2906
+pyEQL/database/pyeql_db.json,sha256=TQKKofds7QBNd-Hw5QQuPwP6rQ8YWh_hHlRAtoQX0m8,1080793
+pyEQL/presets/Ringers lactate.yaml,sha256=vtSnuvgALHR27XEjpDzC0xyw5-E6b2FSsF1EUEBiWpw,413
+pyEQL/presets/normal saline.yaml,sha256=i2znhnIeXfNx1iMFFSif7crMRCFRP6xN1m7Wp7USduM,318
+pyEQL/presets/rainwater.yaml,sha256=S0WHZNDfCJyjSSFxNFdkypjn2s3P0jJGCiYIxvi1ibA,337
+pyEQL/presets/seawater.yaml,sha256=oryc1CkhRz20RpWE6uiGiT93HoZnqlB0s-0PmBWr3-U,843
+pyEQL/presets/urine.yaml,sha256=0Njtc-H1fFRo7UhquHdiSTT4z-8VZJ1utDCk02qk28M,679
+pyEQL/presets/wastewater.yaml,sha256=jTTFBpmKxczaEtkCZb0xUULIPZt7wfC8eAJ6rthGnmw,502
+pyEQL-1.0.1.dist-info/AUTHORS.md,sha256=K9ZLhKFwZ2zLlFXwN62VuUYCpr5T6n4mOUCUHlytTUs,415
+pyEQL-1.0.1.dist-info/COPYING,sha256=Ww2oUywfFTn242v9ksCgQdIVSpcMXJiKKePn0GFm25E,7649
+pyEQL-1.0.1.dist-info/LICENSE.txt,sha256=2Zf1F7RzbpeposgIxUydpurqNCMoMgDi2gAB65_GjwQ,969
+pyEQL-1.0.1.dist-info/METADATA,sha256=Nt-13evnZEXe5D0L8a-QrtIjwvYKo8cb2ew3UG2JwlQ,5889
+pyEQL-1.0.1.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+pyEQL-1.0.1.dist-info/top_level.txt,sha256=QMOaZjCAm_lS4Njsjh4L0B5aWnJFGQMYKhuH88CG1co,6
+pyEQL-1.0.1.dist-info/RECORD,,
