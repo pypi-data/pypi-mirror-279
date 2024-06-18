@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="collective.blog"
+    >
+
+  <plone:behavior
+      name="collective.blog.blog_info"
+      title="Blog Behavior"
+      description="Implements a blog behavior on a content type"
+      provides=".blog.IBlogInfo"
+      />
+  <plone:behavior
+      name="collective.blog.tags"
+      title="Blog Tags"
+      description="Adds a field to categorize blog posts using tags"
+      provides=".tags.IBlogTags"
+      />
+
+</configure>
