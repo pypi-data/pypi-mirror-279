@@ -1,0 +1,5 @@
+pandas>=0.18.0
+requests>=2.0.0
+toml>=0.10
+pyzstd>=0.15
+numpy>=1.9.2
