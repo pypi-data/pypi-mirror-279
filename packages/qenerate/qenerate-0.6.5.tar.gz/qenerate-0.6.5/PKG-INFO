@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: qenerate
+Version: 0.6.5
+Summary: Code Generator for GraphQL Query and Fragment Data Classes
+Home-page: https://github.com/app-sre/qenerate
+License: Apache-2.0
+Author: Red Hat - Service Delivery - AppSRE
+Author-email: sd-app-sre@redhat.com
+Maintainer: Red Hat - Service Delivery - AppSRE
+Maintainer-email: sd-app-sre@redhat.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: graphql-core (>=3.2,<4.0)
+Requires-Dist: requests (>=2.22,<3.0)
+Project-URL: Documentation, https://github.com/app-sre/qenerate
+Project-URL: Repository, https://github.com/app-sre/qenerate
