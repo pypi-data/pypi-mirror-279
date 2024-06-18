@@ -1,0 +1,10 @@
+pyyaml
+
+[hdb2csv]
+fandango
+
+[mariadb]
+pymysql
+
+[timescaledb]
+psycopg2

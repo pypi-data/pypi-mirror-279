@@ -1,0 +1,3 @@
+[console_scripts]
+hdb2csv = pyhdbpp.tools.hdb2csv:main
+hdbpp-reader = pyhdbpp.reader:main
