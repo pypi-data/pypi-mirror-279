@@ -1,0 +1,9 @@
+click>=7
+pillow
+pyyaml
+bitstring
+pyserial
+tqdm
+freetype-py
+construct>=2.9
+pyelftools
