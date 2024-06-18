@@ -1,0 +1,4 @@
+cctk>=0.2.18
+httpx>=0.25
+numpy>=1.24
+stjames>=0.0.23
