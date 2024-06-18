@@ -1,0 +1,7 @@
+setup.py
+thekey.py
+thekey.egg-info/PKG-INFO
+thekey.egg-info/SOURCES.txt
+thekey.egg-info/dependency_links.txt
+thekey.egg-info/entry_points.txt
+thekey.egg-info/top_level.txt
