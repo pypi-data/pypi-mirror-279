@@ -1,0 +1,35 @@
+{% load buttons %}
+{% load i18n %}
+
+<div class="show {% if request.GET.tab == 'onboarded' %}active{% endif %}" id="onboarded-device-list" role="tabpanel" aria-labelledby="onboarded-device-list-tab">
+  <div class="form form-horizontal">
+    <div class="card">
+      <div class="card-body htmx-container table-responsive" id="object_list">
+        <form method="post" class="form form-horizontal">
+          {% csrf_token %}
+          {# Object table controls #}
+          {# Form buttons #}
+          <div class="col-md-12">
+            <div class="noprint bulk-buttons">
+              <div class="bulk-button-group">
+                  {% block bulk_buttons %}
+                  <div class="" role="group">
+                      <button type="submit" name="_rename" formaction="{% url 'plugins:slurpit_nautobot:onboard' %}?remove=true&onboarded=true&return_url={% url 'plugins:slurpit_nautobot:importeddevice_list' %}{% if request.GET %}?{{ request.GET.urlencode }}{% endif %}" class="btn btn-danger" >
+                        <i class="mdi mdi-close" aria-hidden="true"></i> {% trans "Remove" %}
+                      </button>
+                  </div>
+                  {% endblock %}
+              </div>
+            </div>
+          </div>
+          <p id="syncStatusCaption">
+          </p>
+      
+          {% block table %}
+            {% include "slurpit_nautobot/table.html" %}
+          {% endblock %}
+        </form>
+      </div>
+    </div>
+  </div>
+ </div>
