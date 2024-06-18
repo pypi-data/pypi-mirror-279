@@ -1,0 +1,9 @@
+powercli
+rich
+superpathlib
+
+[dev]
+pre-commit
+
+[test]
+pytest
