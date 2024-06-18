@@ -1,0 +1,9 @@
+colorama
+pandas
+numpy
+openpyxl
+appdirs
+
+[cli]
+
+[gui]
