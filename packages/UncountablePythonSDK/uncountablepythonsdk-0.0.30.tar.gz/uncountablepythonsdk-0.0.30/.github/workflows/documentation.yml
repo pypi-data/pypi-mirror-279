@@ -1,0 +1,34 @@
+name: documentation
+
+on: [push]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - uses: extractions/setup-just@v1
+        with:
+            just-version: '1.8.0'
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: |
+          # install the dependencies for the package
+          pip install .
+          # install the dependencies for building the sphinx documentation
+          just -f docs/justfile docs-setup-python
+      - name: Sphinx build
+        run: |
+          just -f docs/justfile docs-build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/dirhtml
+          force_orphan: true
