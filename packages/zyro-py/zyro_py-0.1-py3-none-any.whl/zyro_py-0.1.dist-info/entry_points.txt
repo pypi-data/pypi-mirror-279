@@ -1,0 +1,3 @@
+[console_scripts]
+zyro_py = zyro_py.__main__:main
+
