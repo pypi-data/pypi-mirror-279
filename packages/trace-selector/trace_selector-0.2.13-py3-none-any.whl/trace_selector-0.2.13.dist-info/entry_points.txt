@@ -1,0 +1,3 @@
+[console_scripts]
+trace_selector=trace_selector.main:main
+
