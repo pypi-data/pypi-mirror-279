@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/dbmarkenfarben/__init__.py
+src/dbmarkenfarben/main.py
+src/dbmarkenfarben.egg-info/PKG-INFO
+src/dbmarkenfarben.egg-info/SOURCES.txt
+src/dbmarkenfarben.egg-info/dependency_links.txt
+src/dbmarkenfarben.egg-info/top_level.txt
