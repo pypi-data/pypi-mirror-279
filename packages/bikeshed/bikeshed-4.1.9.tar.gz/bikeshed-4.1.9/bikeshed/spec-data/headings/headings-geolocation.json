@@ -1,0 +1,466 @@
+{
+  "#acknowledgments": {
+    "snapshot": {
+      "number": "C",
+      "spec": "Geolocation API",
+      "text": "Acknowledgments",
+      "url": "https://www.w3.org/TR/geolocation/#acknowledgments"
+    }
+  },
+  "#acquire-a-position": {
+    "snapshot": {
+      "number": "6.6",
+      "spec": "Geolocation API",
+      "text": "Acquire a position",
+      "url": "https://www.w3.org/TR/geolocation/#acquire-a-position"
+    }
+  },
+  "#altitude-and-altitudeaccuracy-attributes": {
+    "snapshot": {
+      "number": "9.2",
+      "spec": "Geolocation API",
+      "text": "altitude and altitudeAccuracy attributes",
+      "url": "https://www.w3.org/TR/geolocation/#altitude-and-altitudeaccuracy-attributes"
+    }
+  },
+  "#call-back-with-error": {
+    "snapshot": {
+      "number": "6.7",
+      "spec": "Geolocation API",
+      "text": "Call back with error",
+      "url": "https://www.w3.org/TR/geolocation/#call-back-with-error"
+    }
+  },
+  "#changelog": {
+    "snapshot": {
+      "number": "D",
+      "spec": "Geolocation API",
+      "text": "Change log",
+      "url": "https://www.w3.org/TR/geolocation/#changelog"
+    }
+  },
+  "#check-permission": {
+    "snapshot": {
+      "number": "3.4",
+      "spec": "Geolocation API",
+      "text": "Checking permission to use the API",
+      "url": "https://www.w3.org/TR/geolocation/#check-permission"
+    }
+  },
+  "#clearwatch-method": {
+    "snapshot": {
+      "number": "6.4",
+      "spec": "Geolocation API",
+      "text": "clearWatch() method",
+      "url": "https://www.w3.org/TR/geolocation/#clearwatch-method"
+    }
+  },
+  "#code-attribute": {
+    "snapshot": {
+      "number": "10.2",
+      "spec": "Geolocation API",
+      "text": "code attribute",
+      "url": "https://www.w3.org/TR/geolocation/#code-attribute"
+    }
+  },
+  "#conformance": {
+    "snapshot": {
+      "number": "",
+      "spec": "Geolocation API",
+      "text": "12. Conformance",
+      "url": "https://www.w3.org/TR/geolocation/#conformance"
+    }
+  },
+  "#constants": {
+    "snapshot": {
+      "number": "10.1",
+      "spec": "Geolocation API",
+      "text": "Constants",
+      "url": "https://www.w3.org/TR/geolocation/#constants"
+    }
+  },
+  "#constructing-a-geolocationposition": {
+    "snapshot": {
+      "number": "9.6",
+      "spec": "Geolocation API",
+      "text": "Constructing a GeolocationPosition",
+      "url": "https://www.w3.org/TR/geolocation/#constructing-a-geolocationposition"
+    }
+  },
+  "#coordinates_interface": {
+    "snapshot": {
+      "number": "9",
+      "spec": "Geolocation API",
+      "text": "GeolocationCoordinates interface",
+      "url": "https://www.w3.org/TR/geolocation/#coordinates_interface"
+    }
+  },
+  "#coords-attribute": {
+    "snapshot": {
+      "number": "8.1",
+      "spec": "Geolocation API",
+      "text": "coords attribute",
+      "url": "https://www.w3.org/TR/geolocation/#coords-attribute"
+    }
+  },
+  "#enablehighaccuracy-member": {
+    "snapshot": {
+      "number": "7.1",
+      "spec": "Geolocation API",
+      "text": "enableHighAccuracy member",
+      "url": "https://www.w3.org/TR/geolocation/#enablehighaccuracy-member"
+    }
+  },
+  "#enabling-the-api-in-third-party-contexts": {
+    "snapshot": {
+      "number": "2.7",
+      "spec": "Geolocation API",
+      "text": "Enabling the API in third-party contexts",
+      "url": "https://www.w3.org/TR/geolocation/#enabling-the-api-in-third-party-contexts"
+    }
+  },
+  "#examples": {
+    "snapshot": {
+      "number": "2",
+      "spec": "Geolocation API",
+      "text": "Examples",
+      "url": "https://www.w3.org/TR/geolocation/#examples"
+    }
+  },
+  "#geolocation_interface": {
+    "snapshot": {
+      "number": "6",
+      "spec": "Geolocation API",
+      "text": "Geolocation interface and callbacks",
+      "url": "https://www.w3.org/TR/geolocation/#geolocation_interface"
+    }
+  },
+  "#get-current-position": {
+    "snapshot": {
+      "number": "2.1",
+      "spec": "Geolocation API",
+      "text": "Get current position",
+      "url": "https://www.w3.org/TR/geolocation/#get-current-position"
+    }
+  },
+  "#getcurrentposition-method": {
+    "snapshot": {
+      "number": "6.2",
+      "spec": "Geolocation API",
+      "text": "getCurrentPosition() method",
+      "url": "https://www.w3.org/TR/geolocation/#getcurrentposition-method"
+    }
+  },
+  "#handling-errors": {
+    "snapshot": {
+      "number": "2.4",
+      "spec": "Geolocation API",
+      "text": "Handling errors",
+      "url": "https://www.w3.org/TR/geolocation/#handling-errors"
+    }
+  },
+  "#heading-attribute": {
+    "snapshot": {
+      "number": "9.3",
+      "spec": "Geolocation API",
+      "text": "heading attribute",
+      "url": "https://www.w3.org/TR/geolocation/#heading-attribute"
+    }
+  },
+  "#idl-index": {
+    "snapshot": {
+      "number": "A",
+      "spec": "Geolocation API",
+      "text": "IDL Index",
+      "url": "https://www.w3.org/TR/geolocation/#idl-index"
+    }
+  },
+  "#implementation_considerations": {
+    "snapshot": {
+      "number": "3.3",
+      "spec": "Geolocation API",
+      "text": "Implementation considerations",
+      "url": "https://www.w3.org/TR/geolocation/#implementation_considerations"
+    }
+  },
+  "#index": {
+    "snapshot": {
+      "number": "B",
+      "spec": "Geolocation API",
+      "text": "Index",
+      "url": "https://www.w3.org/TR/geolocation/#index"
+    }
+  },
+  "#index-defined-elsewhere": {
+    "snapshot": {
+      "number": "B.2",
+      "spec": "Geolocation API",
+      "text": "Terms defined by reference",
+      "url": "https://www.w3.org/TR/geolocation/#index-defined-elsewhere"
+    }
+  },
+  "#index-defined-here": {
+    "snapshot": {
+      "number": "B.1",
+      "spec": "Geolocation API",
+      "text": "Terms defined by this specification",
+      "url": "https://www.w3.org/TR/geolocation/#index-defined-here"
+    }
+  },
+  "#internal-slots": {
+    "snapshot": {
+      "number": "6.1",
+      "spec": "Geolocation API",
+      "text": "Internal slots",
+      "url": "https://www.w3.org/TR/geolocation/#internal-slots"
+    }
+  },
+  "#internal-slots-0": {
+    "snapshot": {
+      "number": "8.4",
+      "spec": "Geolocation API",
+      "text": "Internal slots",
+      "url": "https://www.w3.org/TR/geolocation/#internal-slots-0"
+    }
+  },
+  "#introduction": {
+    "snapshot": {
+      "number": "1",
+      "spec": "Geolocation API",
+      "text": "Introduction",
+      "url": "https://www.w3.org/TR/geolocation/#introduction"
+    }
+  },
+  "#latitude-longitude-and-accuracy-attributes": {
+    "snapshot": {
+      "number": "9.1",
+      "spec": "Geolocation API",
+      "text": "latitude, longitude, and accuracy attributes",
+      "url": "https://www.w3.org/TR/geolocation/#latitude-longitude-and-accuracy-attributes"
+    }
+  },
+  "#maximumage-member": {
+    "snapshot": {
+      "number": "7.3",
+      "spec": "Geolocation API",
+      "text": "maximumAge member",
+      "url": "https://www.w3.org/TR/geolocation/#maximumage-member"
+    }
+  },
+  "#message-attribute": {
+    "snapshot": {
+      "number": "10.3",
+      "spec": "Geolocation API",
+      "text": "message attribute",
+      "url": "https://www.w3.org/TR/geolocation/#message-attribute"
+    }
+  },
+  "#navigator_interface": {
+    "snapshot": {
+      "number": "5",
+      "spec": "Geolocation API",
+      "text": "Extensions to the Navigator interface",
+      "url": "https://www.w3.org/TR/geolocation/#navigator_interface"
+    }
+  },
+  "#normative-references": {
+    "snapshot": {
+      "number": "E.1",
+      "spec": "Geolocation API",
+      "text": "Normative references",
+      "url": "https://www.w3.org/TR/geolocation/#normative-references"
+    }
+  },
+  "#permissions-policy": {
+    "snapshot": {
+      "number": "",
+      "spec": "Geolocation API",
+      "text": "11. Permissions policy",
+      "url": "https://www.w3.org/TR/geolocation/#permissions-policy"
+    }
+  },
+  "#position_error_interface": {
+    "snapshot": {
+      "number": "",
+      "spec": "Geolocation API",
+      "text": "10. GeolocationPositionError interface",
+      "url": "https://www.w3.org/TR/geolocation/#position_error_interface"
+    }
+  },
+  "#position_interface": {
+    "snapshot": {
+      "number": "8",
+      "spec": "Geolocation API",
+      "text": "GeolocationPosition interface",
+      "url": "https://www.w3.org/TR/geolocation/#position_interface"
+    }
+  },
+  "#position_options_interface": {
+    "snapshot": {
+      "number": "7",
+      "spec": "Geolocation API",
+      "text": "PositionOptions dictionary",
+      "url": "https://www.w3.org/TR/geolocation/#position_options_interface"
+    }
+  },
+  "#privacy": {
+    "snapshot": {
+      "number": "3",
+      "spec": "Geolocation API",
+      "text": "Privacy considerations",
+      "url": "https://www.w3.org/TR/geolocation/#privacy"
+    }
+  },
+  "#privacy_for_recipients": {
+    "snapshot": {
+      "number": "3.2",
+      "spec": "Geolocation API",
+      "text": "Privacy considerations for recipients of location information",
+      "url": "https://www.w3.org/TR/geolocation/#privacy_for_recipients"
+    }
+  },
+  "#references": {
+    "snapshot": {
+      "number": "E",
+      "spec": "Geolocation API",
+      "text": "References",
+      "url": "https://www.w3.org/TR/geolocation/#references"
+    }
+  },
+  "#request-a-position": {
+    "snapshot": {
+      "number": "6.5",
+      "spec": "Geolocation API",
+      "text": "Request a position",
+      "url": "https://www.w3.org/TR/geolocation/#request-a-position"
+    }
+  },
+  "#scope": {
+    "snapshot": {
+      "number": "1.1",
+      "spec": "Geolocation API",
+      "text": "Scope",
+      "url": "https://www.w3.org/TR/geolocation/#scope"
+    }
+  },
+  "#security": {
+    "snapshot": {
+      "number": "4",
+      "spec": "Geolocation API",
+      "text": "Security considerations",
+      "url": "https://www.w3.org/TR/geolocation/#security"
+    }
+  },
+  "#speed-attribute": {
+    "snapshot": {
+      "number": "9.4",
+      "spec": "Geolocation API",
+      "text": "speed attribute",
+      "url": "https://www.w3.org/TR/geolocation/#speed-attribute"
+    }
+  },
+  "#stop-watching-a-position": {
+    "snapshot": {
+      "number": "2.3",
+      "spec": "Geolocation API",
+      "text": "Stop watching a position",
+      "url": "https://www.w3.org/TR/geolocation/#stop-watching-a-position"
+    }
+  },
+  "#task-sources": {
+    "snapshot": {
+      "number": "8.5",
+      "spec": "Geolocation API",
+      "text": "Task sources",
+      "url": "https://www.w3.org/TR/geolocation/#task-sources"
+    }
+  },
+  "#timeout-member": {
+    "snapshot": {
+      "number": "7.2",
+      "spec": "Geolocation API",
+      "text": "timeout member",
+      "url": "https://www.w3.org/TR/geolocation/#timeout-member"
+    }
+  },
+  "#timestamp-attribute": {
+    "snapshot": {
+      "number": "8.2",
+      "spec": "Geolocation API",
+      "text": "timestamp attribute",
+      "url": "https://www.w3.org/TR/geolocation/#timestamp-attribute"
+    }
+  },
+  "#title": {
+    "snapshot": {
+      "number": "",
+      "spec": "Geolocation API",
+      "text": "Geolocation",
+      "url": "https://www.w3.org/TR/geolocation/#title"
+    }
+  },
+  "#toc": {
+    "snapshot": {
+      "number": "",
+      "spec": "Geolocation API",
+      "text": "Table of Contents",
+      "url": "https://www.w3.org/TR/geolocation/#toc"
+    }
+  },
+  "#tojson-method": {
+    "snapshot": {
+      "number": "8.3",
+      "spec": "Geolocation API",
+      "text": "toJSON() method",
+      "url": "https://www.w3.org/TR/geolocation/#tojson-method"
+    }
+  },
+  "#tojson-method-0": {
+    "snapshot": {
+      "number": "9.5",
+      "spec": "Geolocation API",
+      "text": "toJSON() method",
+      "url": "https://www.w3.org/TR/geolocation/#tojson-method-0"
+    }
+  },
+  "#user-consent": {
+    "snapshot": {
+      "number": "3.1",
+      "spec": "Geolocation API",
+      "text": "User consent",
+      "url": "https://www.w3.org/TR/geolocation/#user-consent"
+    }
+  },
+  "#using-maximumage-as-cache-control": {
+    "snapshot": {
+      "number": "2.5",
+      "spec": "Geolocation API",
+      "text": "Using maximumAge as cache control",
+      "url": "https://www.w3.org/TR/geolocation/#using-maximumage-as-cache-control"
+    }
+  },
+  "#using-timeout": {
+    "snapshot": {
+      "number": "2.6",
+      "spec": "Geolocation API",
+      "text": "Using timeout",
+      "url": "https://www.w3.org/TR/geolocation/#using-timeout"
+    }
+  },
+  "#watch-a-position": {
+    "snapshot": {
+      "number": "2.2",
+      "spec": "Geolocation API",
+      "text": "Watch a position",
+      "url": "https://www.w3.org/TR/geolocation/#watch-a-position"
+    }
+  },
+  "#watchposition-method": {
+    "snapshot": {
+      "number": "6.3",
+      "spec": "Geolocation API",
+      "text": "watchPosition() method",
+      "url": "https://www.w3.org/TR/geolocation/#watchposition-method"
+    }
+  }
+}
