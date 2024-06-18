@@ -1,0 +1,7 @@
+python-dotenv
+
+[dev]
+check-manifest
+
+[test]
+coverage
