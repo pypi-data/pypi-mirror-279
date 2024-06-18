@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "joplen"
+version = "1.0.0"
+authors = [
+  { name="Matt Raymond", email="mattrmd@umich.edu" },
+  { name="Angela Violi", email="avioli@umich.edu" },
+  { name="Clayton Scott", email="clayscot@umich.edu" },
+]
+description = "Implementation of ``Joint Optimization of Piecewise Linear Ensembles'' (JOPLEn)."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dynamic = ["dependencies"]
+
+[project.urls]
+"Homepage" = "https://gitlab.eecs.umich.edu/mattrmd-public/joplen-repositories/joplen"
+"Bug Tracker" = "https://gitlab.eecs.umich.edu/mattrmd-public/joplen-repositories/joplen/-/issues"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
