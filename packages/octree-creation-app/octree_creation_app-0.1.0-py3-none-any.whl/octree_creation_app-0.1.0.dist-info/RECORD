@@ -1,0 +1,15 @@
+LICENSE,sha256=CSTj6oQGReV4cABOuAMLNQBhtqdzEGJ0TVrcA3dOzNw,1093
+octree_creation_app/__init__.py,sha256=hqyTCXEcbOIOGzoRNoVIlVRZUO2e07A2CHlqe5TnNtE,541
+octree_creation_app/constants.py,sha256=QyBjyy8kE6AupOHpjwS4oNQwS_nLX0hKfCyapqfhkOc,5941
+octree_creation_app/driver.py,sha256=oMF3sZeBjGiy2pOKgUJvs3cSgH76iwtoiMeVPrAy1ho,12658
+octree_creation_app/params.py,sha256=GtMjfba5Ct8oQmGMWHfDA7JQI3tPDHRg8kr9fCEGQsY,7387
+octree_creation_app/utils.py,sha256=T0ugcLG8Xuuwcp5UPA0adlb7b6VxR3lkGBJlCkLXxHo,10575
+octree_creation_app-assets/__init__.py,sha256=-eeFUgd97OJpM9UjAPxaeowXysHdpAB6pUUnYMnzuC4,257
+octree_creation_app-assets/uijson/octree_mesh.ui.json,sha256=Dq53DVqHHQ3cdEoO2QVBMBkR3eyBsd-eiR-a6nxXX9U,7887
+README.rst,sha256=d1Lkwe6bBgJYrTrYh8w6OgumMDwPYHVPk9o8NbzAFmo,6757
+THIRD_PARTY_SOFTWARE.rst,sha256=UEl7RceOpkcsmwcN5Ud6shZ_OsmoOU8-Zn5WC5cZoUE,4928
+octree_creation_app-0.1.0.dist-info/entry_points.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+octree_creation_app-0.1.0.dist-info/LICENSE,sha256=CSTj6oQGReV4cABOuAMLNQBhtqdzEGJ0TVrcA3dOzNw,1093
+octree_creation_app-0.1.0.dist-info/METADATA,sha256=Hc_7rCq8u2uW2C_BRQ29b635wSaehipdNLoUIjXrIKA,8196
+octree_creation_app-0.1.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+octree_creation_app-0.1.0.dist-info/RECORD,,
