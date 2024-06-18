@@ -1,0 +1,7 @@
+README.md
+setup.py
+ygame/__init__.py
+ygame_engine.egg-info/PKG-INFO
+ygame_engine.egg-info/SOURCES.txt
+ygame_engine.egg-info/dependency_links.txt
+ygame_engine.egg-info/top_level.txt
