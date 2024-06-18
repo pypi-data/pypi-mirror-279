@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/pycify/__init__.py
+src/pycify/__main__.py
+src/pycify/cli.py
+src/pycify/py.typed
+src/pycify.egg-info/PKG-INFO
+src/pycify.egg-info/SOURCES.txt
+src/pycify.egg-info/dependency_links.txt
+src/pycify.egg-info/entry_points.txt
+src/pycify.egg-info/requires.txt
+src/pycify.egg-info/top_level.txt
