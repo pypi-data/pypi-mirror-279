@@ -1,0 +1,12 @@
+azure-core-credentials
+azure-core-exceptions
+azure-search-documents==11.4.0
+azure-storage-blob==12.19.1
+comtypes==1.4.2
+exif==1.6.0
+ezdxf==1.2.0
+openai==1.2.0
+openpyxl
+pdfplumber
+python-docx
+requests

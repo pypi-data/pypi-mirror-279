@@ -1,0 +1,6 @@
+az login
+ 
+az group create --name rrfimainrg --location uksouth  
+ 
+ 
+az deployment group create --resource-group rrfimainrg --template-file main.bicep

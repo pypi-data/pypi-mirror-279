@@ -1,0 +1,12 @@
+openpyxl
+azure-search-documents==11.4.0
+azure-core-credentials
+openai==1.2.0
+exif==1.6.0
+ezdxf==1.2.0
+azure-storage-blob==12.19.1
+azure-core-exceptions
+pdfplumber
+requests
+comtypes==1.4.2
+python-docx

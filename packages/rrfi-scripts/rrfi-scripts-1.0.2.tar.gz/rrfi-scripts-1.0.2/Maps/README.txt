@@ -1,0 +1,2 @@
+The maps.js holds the code for making API calls to the search index to retreive data and the API calls to the Azure Geocoding services to plot the data on a map. Uses the Azure maps service to plot maps on the UI.
+Code to be hosted on Azure Web Apps services, but can also be run locally by just opening the html script.
