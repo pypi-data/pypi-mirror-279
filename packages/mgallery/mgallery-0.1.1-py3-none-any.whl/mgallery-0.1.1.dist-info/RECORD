@@ -1,0 +1,10 @@
+mgallery/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mgallery/__main__.py,sha256=G-YaHiofnABkYMvpv-cR9tx-fcGIp5N8sB9Ju78D0yg,3993
+mgallery/htmlcreator.py,sha256=ZnsCCcMWjI8IrXU9BetY-wWgtBN_74SogEW5pCs4FcU,3608
+mgallery/javascripts/tailwindcss.js,sha256=ddlsDXmyWqIgqirzpMZaeDOwwyWFErf2nySSoNzlBSI,365946
+mgallery-0.1.1.dist-info/LICENSE.md,sha256=GR7yXJlfKaQ2LinZvGyc4bv_ouTfPTWfANupr1WOgsE,1070
+mgallery-0.1.1.dist-info/METADATA,sha256=R_gIuwIQwYEQ47pWCqdo9t2UnAtwsoHg5VWVbOJgkic,4079
+mgallery-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+mgallery-0.1.1.dist-info/entry_points.txt,sha256=i1mc3uCrWX4B8Ekqeq9cs2twMc4jICMha9EzlDumNhQ,52
+mgallery-0.1.1.dist-info/top_level.txt,sha256=FIuMlFeKuVZVboo6QYun2NW5jbv-mhAWx5dIbfSPS9s,9
+mgallery-0.1.1.dist-info/RECORD,,
