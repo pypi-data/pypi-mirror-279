@@ -1,0 +1,11 @@
+charachorder/__init__.py,sha256=f9161ryAnZ0ighrLXBcKjzNHdJOPozsB0lG4JC4RwLk,422
+charachorder/__main__.py,sha256=qC-yDeva3Dd6O9WJLt0T_IYVOa5PyvKJWZmbPJIiqo4,1555
+charachorder/device.py,sha256=p2NceVhfE13ZDXZGa4Tk2IOPZNIGsrTrGG38BYRWcKA,29757
+charachorder/errors.py,sha256=x0Ihjwx87SFBxuolzI1M-sacZbuPh7Qn_NawMpPm42s,2941
+charachorder/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+charachorder/types.py,sha256=pAQEWarRDIARMUeGfepzoJt73H1ynhPtCeZWFwKdvSM,2792
+charachorder.py-0.5.0.dist-info/LICENSE,sha256=RwQ4Lk94Xs9XzvYGlKqOqF8He1TNgPcswlRmKAjKW0c,1075
+charachorder.py-0.5.0.dist-info/METADATA,sha256=uWdxQDrXQ6OdwbjwR8M2uYKMXC5yohZPjMDvZ0_UDvI,2247
+charachorder.py-0.5.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+charachorder.py-0.5.0.dist-info/top_level.txt,sha256=BJWyGnoCs6U7-2YhQCWsEP39_X2UqD-o6fdyB0DQ2nE,13
+charachorder.py-0.5.0.dist-info/RECORD,,
