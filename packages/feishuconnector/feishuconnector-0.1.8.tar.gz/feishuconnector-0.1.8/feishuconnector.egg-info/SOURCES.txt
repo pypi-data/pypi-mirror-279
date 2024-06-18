@@ -1,0 +1,11 @@
+LICENSE
+feishuconnector/__init__.py
+feishuconnector/_version.py
+feishuconnector/encoder.py
+feishuconnector/manager.py
+feishuconnector.egg-info/PKG-INFO
+feishuconnector.egg-info/SOURCES.txt
+feishuconnector.egg-info/dependency_links.txt
+feishuconnector.egg-info/requires.txt
+feishuconnector.egg-info/top_level.txt
+test/run.py
