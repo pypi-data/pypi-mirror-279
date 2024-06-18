@@ -1,0 +1,8 @@
+numpy>=1.15
+matplotlib>=3.0.0
+scipy>=1.1.0
+sympy>=1.2
+scicm>=1.0.3
+
+[astro]
+astropy
