@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+bf_sdk_gateway_python/__init__.py
+bf_sdk_gateway_python/client.py
+bf_sdk_gateway_python/exceptions.py
+bf_sdk_gateway_python/utils.py
+bf_sdk_gateway_python.egg-info/PKG-INFO
+bf_sdk_gateway_python.egg-info/SOURCES.txt
+bf_sdk_gateway_python.egg-info/dependency_links.txt
+bf_sdk_gateway_python.egg-info/requires.txt
+bf_sdk_gateway_python.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
