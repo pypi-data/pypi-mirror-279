@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[tool.mypy]
+[[tool.mypy.overrides]]
+module = [
+    "setuptools",
+]
+ignore_missing_imports = true
+
+[tool.pylint.'MASTER']
+extension-pkg-whitelist = "lxml"
+
+[tool.pylint.'MESSAGES CONTROL']
+# disable = "too-many-locals,line-too-long,missing-docstring,invalid-name,too-many-instance-attributes,too-few-public-methods,broad-except"
+disable = "too-many-arguments,missing-docstring,invalid-name,unused-argument,redefined-outer-name,broad-except,global-statement,fixme,too-many-branches,raise-missing-from"
+output-format = "text"
+reports = "no"
