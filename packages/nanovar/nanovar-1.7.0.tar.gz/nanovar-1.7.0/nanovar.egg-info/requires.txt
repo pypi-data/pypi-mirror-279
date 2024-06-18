@@ -1,0 +1,11 @@
+numpy>=1.17.3
+scipy>=1.2.1
+biopython>=1.82
+pybedtools>=0.8.2
+matplotlib>=2.2.3
+tensorflow-cpu<=2.15.1,>=2.0.0
+natsort>=6.2.0
+progress>=1.4
+pysam>=0.15.3
+htmlark>=1.0.0
+nanoinsight>=0.0.3

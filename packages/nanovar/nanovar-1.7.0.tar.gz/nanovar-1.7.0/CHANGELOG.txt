@@ -1,0 +1,268 @@
+NanoVar Changelog
+
+
+Release Summary:
+
+
+Version 1.7.0 - Jun 4, 2024
+    * Added alternative sequence for INS and DEL in VCF
+    * Added CRAM input support
+    * Modified SV ID format with addition of SV type, from nv_SV?-????? to NV.INS.SV?-?????
+    * SV size now takes the median size amongst clustered reads, instead of the largest
+
+
+Version 1.6.2 - Apr 29, 2024
+    * Fixed bug where some supplementary alignments do not have primary alignments, in the case of a subsample BAM input
+
+
+Version 1.6.1 - Mar 30, 2024
+    * Fix Tensorflow 2.16 compatibility issue, restrict tensorflow-cpu<=2.15.1 in setup.py
+
+
+Version 1.6.0 - Jan 15, 2024
+    * Added NanoINSight INS annotation function (--annotate_ins [species])
+    * Fixed NanoVar report scatter plot xaxis range
+    * Changed Python version requirement to >=3.8
+    * Changed Biopython package version requirement to >=1.82
+    * Added full usage in README.md
+    * Added NanoINSight info in README.md
+    * Modified installation options in README.md
+
+
+Version 1.5.1 - Jan 5, 2024
+    * BND SVs are now represented as one entry in VCF
+    * BND SVs now has an additional INFO attribute, CHR2, that records second chromosome name of BND
+    * Fixed cytocad import bug
+    * Fixed intersect_debug bug
+    * Fixed SVLEN float value bug
+    * Fixed missing FASTA entries bug
+
+
+Version 1.5.0 - Sept 8, 2023
+    * Fixed font warning during report generation
+    * NanoVar no longer relies on HS-BLASTn (This would fixed multiple run errors)
+    * Suppressed keras tensorflow model warning
+    * Fixed nv_detect_algo import error due to Cython 3.0.2 Namespace update
+    * Reworked DUP calling to increase accuracy (Previously INS miscalled as DUP)
+    * Added MAPQ score filter against alignments between with 0 < MAPQ < 30
+    * HTML report is now a standalone file
+    * ins_seq.fa is output by default, it contains the inserted sequences of all INS SVs
+    * Removed ">" in SVLEN for one-sided INS SVs
+    * Temporary removed option to run CNV through CopyCAD (work in progress)
+    * Removed progress spinner and modified stdout status reporting
+    * Output no longer produces total.vcf file, unless --debug specified
+    * genome.sizes removed from output
+    * Modified paired INV breakends size calculation to that of single INV breakend (coord2-coord1)
+    * INS size adjusted (Taking median INS size across reads, instead of largest size)
+    * Simplified run status verbose
+    * Changed SVLEN placeholder for translocations and transpositions from '.' to 0.
+    * Changed translocation abbreviation from TLO to TRA
+    * Modified clustering from mean to median SV coordinates amongst reads
+    * Added NanoVar execution command into VCF header
+    * Included svtype in clustering filter
+    * Improved DUP calling by sequence mapping
+    * Improved SV genotyping
+    * Improved phasing of SVs sharing the same coordinates
+
+
+Version 1.4.1 - Oct 8, 2021
+    * Bump version for Bioconda build for various Python versions
+
+
+Version 1.4.0 - Sept 1, 2021
+    * Implemented a large cytogenetic variation detection algorithm through CytoCAD (Add the paramenter "--cnv hg38" during run)
+    * Added LINE (L1) and SINE (Alu) novel insertion detection functionality (NanoVar screens the sequence of INS SVs
+    for L1 and Alu elements and output the results in the INFO column of VCF file (E.g. TE=L1HS)
+    * Updated curated hg38 filter file (added all N regions)
+    * Expanded the CIGAR reading values to include '=' and 'X'
+    * Improved breakpoint clustering algorithm and rectified bugs
+    * Modified setup.py to state compatibility with python3.8
+    * Fixed Numpy VisibleDeprecationWarning in nv_report.py
+    * Added '--pickle' arguement for debugging purposes (Hidden option)
+    * Added '--archivefasta' arguement for debugging purposes (Hidden option)
+    * Added '--blastout' arguement for debugging purposes (Hidden option)
+
+
+Version 1.3.9 - Mar 24, 2021
+    * Fixed nv_detect_algo insertion and deletion large size bug
+    * Added pysam >=0.15.3 into bioconda metal.yml as prerequisite
+    * Added pybedtools >=0.8.2 prerequisite to fixed RuntimeWarning buffering=1 error (Refer to https://github.com/daler/pybedtools/issues/322)
+    * Prevent repeated read-indexes by adjusting seed (Thanks to Geoffrey Woodland)
+    * Improve read cluster exception message (Thanks to Geoffrey Woodland)
+    * Unique ID of breakpoints identified by BLAST shortened to four characters to prevent mixing with minimap2 breakpoints
+    * Adjusted breakend filtering during mm clustering
+    * Improved breakpoint clustering algorithm to increase accuracy
+    * Added newline to last line of genome.sizes file
+    * Added genome check for BAM (Thanks to oneillkza, https://github.com/cytham/nanovar/issues/19#issuecomment-791599629)
+    * Modified argparse "usage" format
+    * Suppressed BAM index missing warning
+    * Supressed Tensorflow INFO and WARNING logs
+    * Migrated to tensorflow-cpu/tensorflow-mkl to prevent cuda_driver.cc error
+    * Fixed FixedLocator warning
+
+
+Version 1.3.8 - May 24, 2020
+    * Fixed file type detection (Thanks to jiadong324, https://github.com/cytham/nanovar/issues/9#issuecomment-626579853)
+    * Fixed negative coordinates in VCF
+
+
+Version 1.3.7 - May 23, 2020
+    * Changed version import approach in setup.py
+    * All SV classes except deletions now undergo secondary analysis by hsblast alignment
+    * Allowed clustering of Nov_Ins to other SV classes
+    * Added depth of coverage information in VCF header
+    * Fixed SV index duplications
+    * Added BND limitation in README.md
+    * Removed "number_of_maps" from condfidence score equation in nv_nn.py to capture SVs consisting repetitive elements
+
+
+Version 1.3.6 - Apr 18, 2020
+    * Fixed Exception bug in nv_cluster.py (Thanks to jiadong324, https://github.com/cytham/nanovar/issues/9#issuecomment-609146494)
+    * Added mincov filter early in nv_cluster.py for faster computation
+    * Re-ordered writing of debug files in nv_characterize.py
+    * Fixed novel insertion length bug in nv_cluster.py
+    * Fixed duplication coord directional issue in nv_cluster.py
+    * Size correction for INV and DUP SVs in nv_vcf.py
+    * Add 400 bp buffer to in-built gap files (0-based)
+    * Fixed bug in breakend record in nv_vcf.py
+    * Added output table in README.md
+
+
+Version 1.3.5 - Apr 1, 2020
+    * Fixed deletion sv length threshold and double negative bug in nv_vcf.py
+    * Changed relative input paths to full paths in nv_vcf.py
+    * Fixed left and right coord allocations in nv_cluster.py
+    * Corrected nv_input.py typo
+    * Corrected README.md typo
+
+
+Version 1.3.4 - Mar 19, 2020
+    * Fixed missing nanovar script
+
+
+Version 1.3.3 - Mar 19, 2020
+    * Upgraded model (ONT (Guppy) - v1, pacbio (CLR or CSS) - v1)
+    * Modified normal read breakpoint buffer from 400 to 100 to include shorter alignments as breakend-opposing reads
+    * Survey invalid symbols in contig ids and ignore reads mapping to these contigs (Thanks to Simone, https://github.com/cytham/nanovar/issues/6#issuecomment-595851018)
+    * Added a new debug file 'detect.tsv'
+    * Removed blast table intermediate file when not debugging
+    * Added limitation section in README.md
+
+
+Version 1.3.2 - Mar 4, 2020
+    * Fixed VCF header unclosed quotes (Thanks to Scott, https://github.com/cytham/nanovar/issues/5#issuecomment-592961341)
+    * Improved clustering algorithm (Clustering left and right breakends of each SV separately)
+    * Updated README.md
+
+
+Version 1.3.1 - Feb 29, 2020
+    * Fixed cython compilation bug (Thanks to Scott, https://github.com/cytham/nanovar/issues/5#issuecomment-592766203)
+    * Updated requirements.txt
+
+
+Version 1.3.0 - Feb 28, 2020
+    * Tool requirement changes:
+        * Added SAMTools
+        * Added Minimap2
+
+    * Algorithm and pipeline changes:
+        * NanoVar now uses both minimap2 and hs-blastn for increased sensitivity
+        * Upgraded model (v5)
+        * Improved time complexity for clustering algorithm
+        * Minor tuning of SV confidence scores by normal read coverage and number of alignments
+        * Default SV read support -c changed from 1 to 2
+        * Added progress information command-line feed during the run.
+
+    * Input/Ouput changes:
+        * NanoVar can now take a BAM file (tested BAM from minimap2) as input instead of FASTQ/FASTA reads
+        * Added ONT/PacBio option (For future use, currently both tech uses same model)
+        * Added custom model option
+        * Added --debug option
+        * Added Minimap2 executable path option
+        * Added SAMTools executable path option
+
+    * VCF format changes:
+        * "END" coordinate for BND SVs will now show POS+1 coordinate instead of "." to be usable for IGV (Thanks to Scott,
+        https://github.com/cytham/nanovar/issues/5#issue-559151039)
+
+
+
+Version 1.2.7 - Dec 15, 2019
+    * Upgraded model (v4)
+    * Changed default score threshold to 1.0
+    * Added --mincov argument
+    * Added genotype prediction thresholds --homo --hetero
+    * Fixed make_interp_spline bug (Thanks to Asma, https://github.com/cytham/nanovar/issues/1#issue-536971382)
+    * Fixed logging oversize
+    * Fixed HTML figures and file path link
+    * Disabled sorting by bitscore
+
+
+Version 1.2.6 - Nov 28, 2019
+    * Fixed svread-overlap.tsv file formating in nv_nn.py
+    * Fixed operation bug in nv_valid.py l201
+
+
+Version 1.2.5 - Nov 25, 2019
+    * Python 3.5 is no longer supported
+
+
+Version 1.2.4 - Nov 25, 2019
+    * Replaced keras with tf.keras (>=2.0.0) to avoid compatibility errors
+    * Fixed progress spinner overflow by adding boolean
+
+
+Version 1.2.3 - Nov 25, 2019
+    * Fixed progress spinner by increasing sleep time
+
+
+Version 1.2.2 - Nov 25, 2019
+    * Updated dependency versions
+    * Changed spline in nv_cov_upper to make_interp_spline due to scipy update
+
+
+Version 1.2.1 - Nov 24, 2019
+    * Added running progress spinner
+    * Added bedtools as a pre-requisite for pybedtools
+    * Added installation of dependencies if using conda
+    * Updated MANIFEST.in
+    * Updated README.md, added badges
+    * Tested in Python 3.5, 3.6, 3.7
+
+
+Version 1.2-alpha - Nov 21, 2019
+    * Program language migration to entirely Python 3.7
+    * Distributed as a python PyPI package and a conda package
+    * Added requirements of Blast binaries from NCBI-BLAST Version 2.3.0+ and HS-BLASTN v0.0.5+
+    * Added new parameters: --minalign, --buffer, --force
+    * Changed input FASTQ/FASTA, reference genome and working directory to positional arguments
+    * Changed default minimum SV len to 25 bp
+    * Removed short-read support and bowtie2 requirements
+    * Improved VCF file formating
+        * Added FORMAT column
+        * Added genotype, read-depth and allele read-depth information
+        * For BND SV type, ALT coloumn now shows a breakend record as specified in VCFv4.2
+        * For BND SV type, INFO field "SV2" is added to indicate translocation (TLO) or transposition (TPO)
+        * Changed INFO field naming: LCOV to SR, PROB to NN
+        * Removed INFO fields: SCOV, SVRATIO
+        * SV len is now estimated for tandem duplications
+        * FILTER column now shows "PASS" if SV score above/equal to score threshold, or "FAIL" if SV score below score threshold
+        * Replaced read_name in each SV ID with an arbituary SV number
+
+
+Version 1.1.1 - Aug 29, 2019 [Archieved]
+    * Added gcc, ldd library requirements
+    * Added Tensorflow installation check
+
+
+Version 1.1.0 - June 23, 2019 [Archieved]
+    * Migration from Python 2 to Python 3
+
+
+Version 1.0.1 - June 21, 2019 [Archieved]
+    * Fixed chromsome naming bug
+    * Fixed python pip installation of updated packages
+
+
+Version 1.0 - May 12, 2019 [Archieved]
+    * Initial release
