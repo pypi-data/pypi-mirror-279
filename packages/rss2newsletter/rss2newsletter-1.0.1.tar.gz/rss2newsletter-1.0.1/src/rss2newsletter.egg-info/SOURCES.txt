@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+rss2newsletter
+setup.py
+src/rss2newsletter.egg-info/PKG-INFO
+src/rss2newsletter.egg-info/SOURCES.txt
+src/rss2newsletter.egg-info/dependency_links.txt
+src/rss2newsletter.egg-info/top_level.txt
