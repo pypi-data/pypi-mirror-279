@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+funcs_aux/__init__.py
+funcs_aux/arrays.py
+funcs_aux/breeder_objects.py
+funcs_aux/breeder_str.py
+funcs_aux/cmp.py
+funcs_aux/iterables.py
+funcs_aux/results.py
+funcs_aux/strings.py
+funcs_aux/values.py
+funcs_aux.egg-info/PKG-INFO
+funcs_aux.egg-info/SOURCES.txt
+funcs_aux.egg-info/dependency_links.txt
+funcs_aux.egg-info/top_level.txt

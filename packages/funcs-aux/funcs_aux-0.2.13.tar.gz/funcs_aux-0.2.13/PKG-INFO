@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: funcs_aux
+Version: 0.2.13
+Summary: useful funcs in one place
+Home-page: https://github.com/centroid457/
+Author: Andrei Starichenko
+Author-email: centroid@mail.ru
+Project-URL: Source, https://github.com/centroid457/funcs_aux
+Keywords: functions,auxiliary,auxiliary funcs,np funcs,collections funcs,strings funcs,result object
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# funcs_aux (v0.2.13)
+
+## DESCRIPTION_SHORT
+useful funcs in one place
+
+## DESCRIPTION_LONG
+Now its just a beginning!
+Designed to collect useful funcs in one place!
+
+
+## Features
+1. RESULTS:  
+	- ResultValue - resolved ambiguity with None-result for any method result!  
+	- ResultFunc  
+2. ITERABLES:  
+	- work with any iterable data by path/...  
+3. STRINGS:  
+
+
+********************************************************************************
+## License
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
+
+
+## Release history
+See the [HISTORY.md](HISTORY.md) file for release history.
+
+
+## Installation
+```commandline
+pip install funcs-aux
+```
+
+
+## Import
+```python
+from funcs_aux import *
+```
+
+
+********************************************************************************
+## USAGE EXAMPLES
+See tests and sourcecode for other examples.
+
+********************************************************************************
