@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: rivalz-py-client
+Version: 0.1.2
+Summary: A Python client for interacting with Rivalz API
+Home-page: https://github.com/Rivalz-ai/pyhon-client/
+Author: Bui Dinh Ngoc
+Author-email: buidinhngoc.aiti@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# rivalz-py-client
+
+`rivalz-py-client` is a Python client for interacting with the Rivalz API.
+
+## Installation
+
+```sh
+pip install rivalz-py-client
+
