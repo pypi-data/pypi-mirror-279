@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: code-prompt-builder
+Version: 0.0.1
+Summary: Builds plaintext code prompts for Large Language Models (LLMs) from code bases, suitable for code analysis and assistance.
+Author-email: Nicholas King <nick@celetris.com>
+Project-URL: Homepage, https://github.com/nking-1/code-prompt-builder
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: nbformat
+
+# code-prompt-builder
+A tiny library to help you build an LLM prompt from a code base

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "code-prompt-builder"
+version = "0.0.1"
+authors = [
+  { name="Nicholas King", email="nick@celetris.com" },
+]
+description = "Builds plaintext code prompts for Large Language Models (LLMs) from code bases, suitable for code analysis and assistance."
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "nbformat"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/nking-1/code-prompt-builder"  
+
+[tool.setuptools.packages.find]
+where = ["code_prompt_builder"]
