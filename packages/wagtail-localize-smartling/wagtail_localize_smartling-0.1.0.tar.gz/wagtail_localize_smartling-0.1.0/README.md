@@ -1,0 +1,175 @@
+# Wagtail Localize Smartling
+
+
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+[![PyPI version](https://badge.fury.io/py/wagtail-localize-smartling.svg)](https://badge.fury.io/py/wagtail-localize-smartling)
+[![CI](https://github.com/mozilla/wagtail-localize-smartling/actions/workflows/test.yml/badge.svg)](https://github.com/mozilla/wagtail-localize-smartling/actions/workflows/test.yml)
+
+An extension for [Wagtail Localize](https://wagtail-localize.org/stable/) that
+integrates with the Smartling translation platform.
+
+## Links
+
+- [Documentation](https://github.com/mozilla/wagtail-localize-smartling/blob/main/README.md)
+- [Changelog](https://github.com/mozilla/wagtail-localize-smartling/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/mozilla/wagtail-localize-smartling/blob/main/CONTRIBUTING.md)
+- [Security](https://github.com/mozilla/wagtail-localize-smartling/security)
+- [Smartling API documentation](https://api-reference.smartling.com/)
+
+## Supported versions
+
+- Python 3.8+
+- Django 4.2+
+- Wagtail 5.2+
+
+## Installation
+
+1. Install the package from PyPI:
+
+    ```sh
+    python -m pip install wagtail-localize-smartling
+    ```
+
+2.  Add `"wagtail_localize_smartling"` to `INSTALLED_APPS` in your Django
+    settings. Make sure it's before `"wagtail_localize"` and
+    `"wagtail_localize.locales"`:
+
+    ```python
+    INSTALLED_APPS = [
+        ...
+        "wagtail_localize_smartling",
+        "wagtail_localize",
+        "wagtail_localize.locales",
+        ...
+    ]
+    ```
+
+3. Configure the plugin in your Django settings:
+
+   ```python
+    WAGTAIL_LOCALIZE_SMARTLING = {
+        # Required settings (get these from "Account settings" > "API" in the Smartling dashboard)
+        "PROJECT_ID": "<project_id>",
+        "USER_IDENTIFIER": "<user_identifier>",
+        "USER_SECRET": "<user_secret>",
+        # Optional settings and their default values
+        "REQUIRED": False,  # Set this to True to always send translations to Smartling
+        "ENVIRONMENT": "production",  # Set this to "staging" to use Smartling's staging API
+        "API_TIMEOUT_SECONDS": 5.0,  # Timeout in seconds for requests to the Smartling API
+    }
+    ```
+
+4. Run migrations:
+
+    ```sh
+    ./manage.py migrate
+    ```
+
+## Setup
+
+### Smartling project setup
+
+For the plugin to work with a Smartling project, the Django/Wagtail internationalization- and localization-related settings must be compatible with the project's language settings:
+
+- Only Wagtail content authored in the same language as the Smartling project's source language can be translated.
+- The language tags in [`WAGTAIL_CONTENT_LANGUAGES`](https://docs.wagtail.org/en/stable/reference/settings.html#wagtail-content-languages) must be exact, case-insensitive matches for the Smartling projects target locales. For example, if your Smartling project targets `fr-FR`, then you must have `"fr-fr"` in your `WAGTAIL_CONTENT_LANGUAGES`, not just `"fr"`.
+
+### Synchronization
+
+The plugin provides a `sync_smartling` management command that:
+
+- Creates jobs in Smartling for new content that's awaiting translation
+- Checks the status of pending translation jobs
+- Downloads and applies translations for completed jobs
+
+This command should be set to run periodically via `cron` or similiar:
+
+```sh
+./manage.py sync_smartling
+```
+
+We recommend running this regularly, around once every 10 minutes.
+
+### Callbacks
+
+As well as the `sync_smartling` management command, the plugin sets the `callbackUrl` field on the Smartling jobs it creates to the URL of webhook handler view. This handler will proactively download and apply translations from completed jobs without waiting for the next `sync_smartling` run. This URL is based on the `WAGTAILADMIN_BASE_URL` setting, so it's important that's set and accessible from the internet.
+
+> [!WARNING]
+> Callbacks should not be relied on as the only method for downloading translations. Always make sure the `sync_smartling` command is run regularly to ensure your translations are up-to-date.
+
+
+## Usage
+
+### Submitting new content for translation
+<!-- TODO -->
+
+### Updating translations
+<!-- TODO -->
+
+
+## How it works
+<!-- TODO -->
+
+
+## Workflow
+
+<!-- TODO make sure this is fleshed out properly -->
+
+### Submitting pages for Smartling translation
+
+```mermaid
+flowchart LR
+
+    submitPageForTranslation["Page submitted for translation in Wagtail"]
+    submitToSmartling{"
+        User choses to submit
+        translation job to Smartling?
+    "}
+    enterSmartlingJobConfig["User enters Smartling job config"]
+    pendingSmartlingJobCreated["A pending Smartling job is created in Wagtail"]
+    wagtailSyncedTranslationEditView["
+        User is redirected to Wagtail's
+        synced translation edit view
+    "]
+
+    submitPageForTranslation-->submitToSmartling
+    submitToSmartling-->|Yes|enterSmartlingJobConfig
+    enterSmartlingJobConfig-->pendingSmartlingJobCreated
+    pendingSmartlingJobCreated-->wagtailSyncedTranslationEditView
+    submitToSmartling-->|No|wagtailSyncedTranslationEditView
+```
+
+### Smartling sync
+
+`django-admin sync_smartling`, the below flowchart describes the logic run for each job
+
+```mermaid
+flowchart LR
+
+    jobSentToSmartling{"Has the job been
+    sent to Smartling yet?"}
+    sendJobToSmartling["Send job to Smartling"]
+    jobFinished{"Is the job finalised?"}
+    updateJobFromSmartling["Update job from Smartling"]
+    fin["End"]
+
+    jobSentToSmartling-->|Yes|jobFinished
+    jobSentToSmartling-->|No|sendJobToSmartling
+    sendJobToSmartling-->fin
+    jobFinished-->|Yes|fin
+    jobFinished-->|No|updateJobFromSmartling
+
+
+```
+
+## Signals
+
+This app provides a single `wagtail_localize.signals.translation_imported`
+signal that is sent when translation are imported from Smartling.
+
+Signal kwargs:
+
+- `sender`: The `wagtail_localize_smartling.models.Job` class
+- `instance`: The `Job` instance for which translation are being imported
+- `translation`: The `wagtail_localize.models.Translation` instance the translations are being imported to.
+  Use `translation.get_target_instance()` to get the model instance that the translation is for (e.g. a page or snippet)
