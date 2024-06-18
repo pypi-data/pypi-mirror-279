@@ -1,0 +1,8 @@
+siliconcompiler>=0.21.8
+
+[dev]
+flake8==7.0.0
+pytest==8.2.2
+pytest-timeout==2.3.1
+tclint==0.3.0
+lambdalib==0.2.3

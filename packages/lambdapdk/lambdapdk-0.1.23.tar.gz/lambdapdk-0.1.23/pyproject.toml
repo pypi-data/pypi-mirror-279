@@ -1,0 +1,52 @@
+[build-system]
+requires = [
+    "setuptools >= 61.2"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lambdapdk"
+authors = [{name = "Zero ASIC"}]
+description = "Library of open source Process Design Kits"
+readme = "README.md"
+urls = {Homepage = "https://github.com/siliconcompiler/lambdapdk"}
+requires-python = ">= 3.8"
+license = {file = "LICENSE"}
+dependencies = [
+    "siliconcompiler >= 0.21.8"
+]
+dynamic = ['version']
+
+[tool.setuptools.dynamic]
+version = {attr = "lambdapdk.__version__"}
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+timeout = "60"
+
+[project.optional-dependencies]
+# Dev dependencies.
+dev = [
+    "flake8 == 7.0.0",
+    "pytest == 8.2.2",
+    "pytest-timeout == 2.3.1",
+    "tclint == 0.3.0",
+    "lambdalib == 0.2.3"
+]
+
+[tool.tclint]
+exclude = [
+    'build',
+    'scripts/build',
+    'dist',
+    # scripts from other repos
+    'lambdapdk/asap7/base/apr/example_innovus.tcl',
+    'lambdapdk/sky130/base/setup/netgen/lvs_setup.tcl',
+    'lambdapdk/gf180/base/setup/netgen/gf180mcuA_setup.tcl',
+    'lambdapdk/gf180/base/setup/netgen/setup.tcl',
+    'lambdapdk/gf180/base/setup/netgen/lvs_setup.tcl',
+    'lambdapdk/gf180/base/setup/magic/gf180mcuA.tcl'
+]
+
+[tool.tclint.style]
+line-length = 100
