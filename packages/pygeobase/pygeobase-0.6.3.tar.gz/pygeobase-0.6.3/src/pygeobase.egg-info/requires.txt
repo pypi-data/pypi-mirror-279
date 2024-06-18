@@ -1,0 +1,9 @@
+numpy
+pygeogrids>=0.5.1
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[testing]
+pytest
+pytest-cov
