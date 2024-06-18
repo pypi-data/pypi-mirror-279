@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mortal-var
+Version: 2.3.19
+Summary: 'mortal工具集::var'
+Author: MJ
+Requires-Python: <=3.11,>=3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: mortal-timer
+
+'mortal工具集::var'
