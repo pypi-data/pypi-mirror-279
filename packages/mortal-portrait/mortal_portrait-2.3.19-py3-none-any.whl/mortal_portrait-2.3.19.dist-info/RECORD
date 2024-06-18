@@ -1,0 +1,8 @@
+mortal_portrait/__init__.py,sha256=exSE8fjB7msbPsSygESEXA2lwYoWu-xYAEgqgQN0f8k,435
+mortal_portrait/modnet.onnx,sha256=B8MIzw_H5uiyBloS7X_Afh3o_rt9x4Ode38V3WZYTfk,25888640
+mortal_portrait/portrait_main.pyd,sha256=HY9gaPk3ZzI-_flkk-yka5js-4yMOCfKKjZYMM_UhxU,76800
+mortal_portrait/portrait_main.so,sha256=_PHO8HUoA_4JxkNeB4jGbdXe1UnePU-IsCVQa_Smd5k,136992
+mortal_portrait-2.3.19.dist-info/METADATA,sha256=9EE5Er_rirjNNTEsEln8YzBIgEWe9reK5UNQdno6qdw,323
+mortal_portrait-2.3.19.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+mortal_portrait-2.3.19.dist-info/top_level.txt,sha256=HFwm6mfR4wdjueB08zXkkd5OrFKpRJwOGwLBmEaoUA8,16
+mortal_portrait-2.3.19.dist-info/RECORD,,
