@@ -1,0 +1,16 @@
+LICENSE
+LICENSE.md
+README.md
+setup.py
+rix_template/__init__.py
+rix_template/run.py
+rix_template.egg-info/PKG-INFO
+rix_template.egg-info/SOURCES.txt
+rix_template.egg-info/dependency_links.txt
+rix_template.egg-info/entry_points.txt
+rix_template.egg-info/not-zip-safe
+rix_template.egg-info/requires.txt
+rix_template.egg-info/top_level.txt
+rix_template/providers/__init__.py
+rix_template/providers/shared_state.py
+rix_template/providers/version.py
