@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-liveconfigs"
+version = "1.0.4"
+description = "Simple powerful and convenient configs for Django"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Evgenii Katsevman", email = "eugene.katsevman@gmail.com"},
+  {name = "Mihail Mayorov", email = "mihail1-m1@yandex.ru"},
+  {name = "Alexander Ignatov", email = "goodwinsis@yandex.ru"},
+  {name = "Alexander Mironov", email = "mironov.miet@gmail.com"},
+  {name = "Timur Timerkhanov", email = "timurgrunge@gmail.com"},
+  {name = "Ivan Shevyakov", email = "iashevyakov@mail.ru"},
+  {name = "Vladilav Nechaev", email = "vladislavtv1@gmail.com"},
+  {name = "Denis Dudnik", email = "Denis.Dudnik@gmail.com"},
+]
+maintainers = [
+  {name = "Denis Dudnik", email = "Denis.Dudnik@gmail.com"}
+]
+keywords = ["django", "config", "easy config", "simple config", "liveconfigs"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "Django>=3.2",
+  "Django<=5.1",
+  "djangorestframework>=3.13.1",
+  "typeguard>=3.0.0",
+  "typeguard<5.0.0",
+  "django-import-export>=2.8.0",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/factory5group/django-liveconfigs"
+"Documentation" = "https://github.com/factory5group/django-liveconfigs/blob/main/README.md"
+"Repository" = "https://github.com/factory5group/django-liveconfigs"
+"Changelog" = "https://github.com/factory5group/django-liveconfigs/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/factory5group/django-liveconfigs/issues"
