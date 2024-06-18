@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: uspeedo-sdk-python
+Version: 1.4.1
+Summary: USpeedo Service Development Kit - Python
+Home-page: https://github.com/uspeedo/uspeedo-sdk-python
+Author: uspeedo
+Author-email: support@uspeedo.com
+License: Apache License 2.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Software Development
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Provides-Extra: ci
+Requires-Dist: requests ; extra == 'ci'
+Requires-Dist: sphinx ; extra == 'ci'
+Requires-Dist: requests-mock ; extra == 'ci'
+Requires-Dist: flake8 >=3.6.0 ; extra == 'ci'
+Requires-Dist: pytest-cov ; extra == 'ci'
+Requires-Dist: pytest >=4.6 ; extra == 'ci'
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: pytest >=4.6 ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: requests-mock ; extra == 'dev'
+Requires-Dist: flake8 >=3.6.0 ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: requests ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: requests ; extra == 'doc'
+Requires-Dist: sphinx ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: requests ; extra == 'test'
+Requires-Dist: flake8 >=3.6.0 ; extra == 'test'
+Requires-Dist: pytest >=4.6 ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: requests-mock ; extra == 'test'
+
+
+<h1 align="center">USpeedo SDK Python</h1>
+
+<p align="center">
+<a href="https://pypi.python.org/pypi/uspeedo-sdk-python/"><img src="https://img.shields.io/pypi/v/uspeedo-sdk-python.svg" alt="Latest Stable Version"></a>
+<a href="https://img.shields.io/pypi/pyversions/uspeedo-sdk-python/"><img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/uspeedo-sdk-python"></a>
+</p>
+
+USpeedo SDK is a Python client library for accessing the USpeedo API.
+
+This client can run on Linux, macOS and Windows.
+
+- Website: https://www.uspeedo.com/
+- Free software: Apache 2.0 license
+- [Documentation](https://docs.uspeedo.com)
