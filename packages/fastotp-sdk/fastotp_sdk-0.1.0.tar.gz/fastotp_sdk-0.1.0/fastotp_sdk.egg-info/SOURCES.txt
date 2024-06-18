@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+fastotp/__init__.py
+fastotp/client.py
+fastotp/exceptions.py
+fastotp/utils.py
+fastotp_sdk.egg-info/PKG-INFO
+fastotp_sdk.egg-info/SOURCES.txt
+fastotp_sdk.egg-info/dependency_links.txt
+fastotp_sdk.egg-info/requires.txt
+fastotp_sdk.egg-info/top_level.txt
+tests/__init__.py
+tests/test_client.py
