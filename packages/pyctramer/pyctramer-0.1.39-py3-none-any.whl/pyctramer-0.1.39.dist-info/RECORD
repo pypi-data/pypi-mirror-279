@@ -1,0 +1,16 @@
+pyctramer/AnalyzeQC.py,sha256=dOxGBiRS0L1tBp5eOEmqN8ANMwSPaXL4DjOEXfuXvmQ,10599
+pyctramer/ConstructFF.py,sha256=gtr6RidChlTrLf2ZK-yQdO9jZyedwvWdS4LOBPn4qiQ,50181
+pyctramer/FGR.py,sha256=DpNGsBBMLRF85VJuHbFNUsRLQ_oMiVudb3jtas5Rltk,8829
+pyctramer/JobControl.py,sha256=sjryHRTQqcVryqhyTvf4rROdEGHBUHXo4Ms6v-_hziw,6203
+pyctramer/MarcusAA.py,sha256=kDjpLzKfcB5K8z1ae2v96MzuEHWcqOwF1cp_K6nxxfI,11352
+pyctramer/PyCTRAMER.py,sha256=uCDii35I7nMEwQeb9iwqGaJPB_q_pf_UUM2lubVx9RM,1927
+pyctramer/RunMD.py,sha256=S15srDu_fB6NtmaXWHYc4yke5HFpiCud-CxHh9270l4,14221
+pyctramer/SpinBoson.py,sha256=IjyCB5YEeOZcRyv6BBPwu_Tm6-vW7BkmCGx_cIg8EOw,7356
+pyctramer/SubmitQC.py,sha256=m-6Ej557rG7EWYLSDGE7wFfyOQcBGfqrHg4bshMObA0,10845
+pyctramer/Utilities.py,sha256=ffMOrMP1CxqpqdefFOKLG10fGj8kRMPUMxwvxEIZpxs,12034
+pyctramer/__init__.py,sha256=s2RlzmPvjcuLCl2-fIQS2LTXNzQKRR4P8pZu_8w2NW0,50
+pyctramer/pyctramer.py,sha256=uCDii35I7nMEwQeb9iwqGaJPB_q_pf_UUM2lubVx9RM,1927
+pyctramer-0.1.39.dist-info/METADATA,sha256=PxFqF-KJFICQth5GWanF8pXSe5B9HdApz9FBUme3AJ8,468
+pyctramer-0.1.39.dist-info/WHEEL,sha256=2wepM1nk4DS4eFpYrW1TTqPcoGNfHhhO_i5m4cOimbo,92
+pyctramer-0.1.39.dist-info/top_level.txt,sha256=noB7hB_xtNBvrKLaJZfNfRHae_Hq-nYOnctI9wAETAc,10
+pyctramer-0.1.39.dist-info/RECORD,,
