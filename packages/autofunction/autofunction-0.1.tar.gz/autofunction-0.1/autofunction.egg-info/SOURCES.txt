@@ -1,0 +1,7 @@
+setup.py
+autofunction.egg-info/PKG-INFO
+autofunction.egg-info/SOURCES.txt
+autofunction.egg-info/dependency_links.txt
+autofunction.egg-info/not-zip-safe
+autofunction.egg-info/top_level.txt
+test/__init__.py
