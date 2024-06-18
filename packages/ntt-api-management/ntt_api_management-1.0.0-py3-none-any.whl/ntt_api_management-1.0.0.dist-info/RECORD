@@ -1,0 +1,14 @@
+ntt_api_management/__init__.py,sha256=6dYNgpKhVC6tH7uycNEr7z4meVFDhaOyPYBQ1w0KuAU,120
+ntt_api_management/i_ntt_api.py,sha256=6AwgL0pvzO5Z9bTHbANDVN9lEyPHfmZIUCFZFKvsv0M,874
+ntt_api_management/ntt_api_base.py,sha256=AC3mxYtCzb6x754lkH8fmkYs70gfEgp35ipwI-1RUqs,1746
+ntt_api_management/ntt_api_management.py,sha256=wf4Ib90B1eIH2tEKYyXT97Sz50kcUFX9givJ_8hb3cI,2575
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/api_management_daily_limit_test.py,sha256=8lPmnLRSyB4rKfqtxWvPrWJ1VSE2nS8vyIk8pFR2jnc,7216
+tests/api_management_minute_limit_test.py,sha256=rsTdtWzJ0DRTuNQGM5hXDwRWdGxeGPDwXEl_xdKdsLU,2208
+tests/ntt_daily_limit_api.py,sha256=TGZTRrvmT_JREf8SRVZGQ9nKLYPAhJ1Q0co06UjK_3M,2099
+tests/ntt_minute_limit_api.py,sha256=uT9irAcItBfUPMgBy51otlKZ2GChilcG5QHccDv5654,1279
+ntt_api_management-1.0.0.dist-info/LICENSE,sha256=mORNk5YtSbSS0p9x48cZuC5ucCr5fboJFHUvmOCQRLU,1100
+ntt_api_management-1.0.0.dist-info/METADATA,sha256=HKguV03tiWvBhMyK-l6PLoPya13zmWrH-vkgZof8d4g,213
+ntt_api_management-1.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ntt_api_management-1.0.0.dist-info/top_level.txt,sha256=e6wBsOOEVDj8glZ-D3fjWcm57gAh_9r1Z_n5m48JeAs,25
+ntt_api_management-1.0.0.dist-info/RECORD,,
