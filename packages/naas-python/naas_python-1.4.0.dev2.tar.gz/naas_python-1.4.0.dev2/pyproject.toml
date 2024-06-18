@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "naas-python"
+version = "1.4.0.dev2"
+description = "Naas Python SDK"
+authors = ["Maxime Jublou <maxime@naas.ai>"]
+license = "AGPL"
+readme = "README.md"
+packages = [{ include = "naas_python" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+typer = { extras = ["all"], version = "^0.9.0" }
+requests = "^2.31.0"
+protobuf_to_pydantic = { version = "0.2.6.2" }
+cachetools = "^5.3.1"
+jinja2 = "^3.0.1"
+naas-models = "1.11.0"
+grpcio = "^1.60.0"
+pydash = "^7.0.7"
+boto3 = "^1.34.128"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.3.1"
+requests = "^2.31.0"
+protobuf_to_pydantic = { version = "0.2.6.2" }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+naas-python = "naas_python.main:main"
