@@ -1,0 +1,16 @@
+ScraperFC/__init__.py,sha256=S_6igHqGdJ71otztSXDcAzEHPa2C60EmHtFgfbOuSjs,341
+ScraperFC/capology.py,sha256=PuQ7yPFB8NxHGtDwT5ToOC3yTnIpzNLjpb5_dmRQ-gM,11090
+ScraperFC/clubelo.py,sha256=7RamdmcTWe4n48OQWYpaOeV-CWGRXOVPX2d2TMKJg40,2072
+ScraperFC/fbref.py,sha256=aWQiPVyFkoKCEipe_TQYOCAdbr9UdbkRmviAS6D-SX4,34819
+ScraperFC/fivethirtyeight.py,sha256=4Qr1zARljQ5gfuZYRy0nBp9LK8W9FuUH2ZCLjQhen_Q,3970
+ScraperFC/oddsportal.py,sha256=IeGiWbij_3VfBOcGI-ZiCwkK88GL6oIL-M9tUbHu2go,19920
+ScraperFC/scraperfc_exceptions.py,sha256=cxTpm4kc_jtdIGrHE-FOGqa46tU2KPqUN7_MGwhyfc0,1833
+ScraperFC/shared_functions.py,sha256=vGWXdSoeeDzjHKMj8K3zbYIKhtpWD7vENimHd0UG6dQ,2904
+ScraperFC/sofascore.py,sha256=DFNfRtBD7MzgNNNAM0DY7JexOlZv_4XtCpQuIUAStc4,19797
+ScraperFC/transfermarkt.py,sha256=9afZ9cxkH6DGUwtl9DbaK2RQm7sg52rspe7IwvRReg8,13067
+ScraperFC/understat.py,sha256=ZkyMKfsggz7sFjedtSL2Xn7mQjvvuWJqDMRrW8QdTQw,16815
+ScraperFC-3.0.0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+ScraperFC-3.0.0.dist-info/METADATA,sha256=tdILVNyqrsdrTAv3EkGT6OyMHyLRkpR8KmycyuGs120,44364
+ScraperFC-3.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ScraperFC-3.0.0.dist-info/top_level.txt,sha256=9wmfm9bz2TeAEEOrcY2RL_iV94fTuyxHmj42_IBZlns,10
+ScraperFC-3.0.0.dist-info/RECORD,,
