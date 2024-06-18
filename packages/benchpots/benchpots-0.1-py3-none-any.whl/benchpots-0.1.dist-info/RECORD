@@ -1,0 +1,16 @@
+benchpots/__init__.py,sha256=rQsu1JTBZ-ZS2RvN7e_emEU4O-QWb6b8l_2z7d83YRs,550
+benchpots/datasets/__init__.py,sha256=qF5yFXVReVs4Fv7mOvOti_8_OiW2wJ0ijLgJtuMn7wo,853
+benchpots/datasets/beijing_multisite_air_quality.py,sha256=kaebZvvUFeOHEkua_-r-lzwRvGw4Wt-LehfsJ50hkLg,5227
+benchpots/datasets/electricity_load_diagrams.py,sha256=FE_KuG68fySessHk26jZu40Hjy4jDeVM00s85XooG0w,3913
+benchpots/datasets/electricity_transformer_temperature.py,sha256=30kkALmZln1h-QorrTnaLHzVsRmvx5D09Z7BvA_ZgSc,4242
+benchpots/datasets/italy_air_quality.py,sha256=QAfpjj-evm-DKVUxvEaHSdYAp1t-LyeSAtTNUK9zXHo,3241
+benchpots/datasets/pems_traffic.py,sha256=QRI3LlkN5eYCE3_M-9aquWjoqa72BbglTkp4ubO11Ww,4131
+benchpots/datasets/physionet_2012.py,sha256=tlNowwsK62rQ0lTj64V349_rmIjR425zBu_yz1iPDno,9321
+benchpots/datasets/physionet_2019.py,sha256=Dcrm11cv0xIW41ozxL3ADb4i0XVyi-lEEtv3WVqFTBo,7333
+benchpots/datasets/ucr_uea_datasets.py,sha256=xOawUKNfiixHnOWSSiOlXcR4tCJs38l65Pcxeak457U,3723
+benchpots/datasets/utils.py,sha256=cL4Rgyf4LFkxy9gQ-WXJKO4DyYIWgMRKZm821hy5ldQ,2039
+benchpots-0.1.dist-info/LICENSE,sha256=TehyrrO86ObzchnVbz4JOjlZqQl9pSz5XegqAb1RDs0,1502
+benchpots-0.1.dist-info/METADATA,sha256=FHdM1JpkQwquGjEO4Jd4iURl2kw8RQuoL-cy-ou2rvo,5774
+benchpots-0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+benchpots-0.1.dist-info/top_level.txt,sha256=aFR-OuJdOV3a028R5Wi5GO4uRK4T1M0qKInfYsamTIo,10
+benchpots-0.1.dist-info/RECORD,,
