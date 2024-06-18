@@ -1,0 +1,109 @@
+{% set name = "SpectroChemPy" %}
+
+{% set version = environ["VERSION"] %}
+
+{% set devstring = environ["DEVSTRING"] %}
+
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: ../
+
+build:
+  script_env:
+    - VERSION
+    - DEVSTRING
+  string: {{ devstring }}
+  noarch: python
+  script:
+    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - {{ PYTHON }} -m pip install .
+
+requirements:
+  host:
+    - pip
+    - python >=3.9
+    - setuptools
+    - setuptools_scm
+  run:
+    - python
+
+    # specific dependencies
+    - brukeropusreader
+    - quaternion
+
+    # dependencies for the core package
+    - cffconvert>=2.0.0
+    - colorama
+    - dill
+    - docrep
+    - ipython
+    - jinja2
+    - matplotlib>=3.8
+    - numba
+    - numpy<2.0
+    - numpydoc>=1.2
+    - osqp
+    - packaging
+    - pint>=0.20,<=0.23
+    - requests
+    - scipy
+    - tqdm
+    - traitlets=5.14.1
+    - tzlocal
+    - scikit-learn
+    - xlrd
+    - pyyaml
+
+    # dependencies needed mainly for install and a bit more ...
+    - setuptools
+    - setuptools_scm
+    - git
+
+    # Jupyter lab
+    - ipywidgets=8.0.4
+    - ipympl
+    - jupyterlab
+    - jupyterlab_widgets
+    - jupyter_events=0.6.3
+    - jupyter_server
+    - pyzmq=25.1.2
+    - nodejs
+    - widgetsnbextension=4.0.5
+
+    # voila
+    - voila
+    - voila-material
+
+
+  test:
+    - python  {{ python }}
+
+test:
+  script_env:
+    - VERSION
+    - DEVSTRING
+  imports:
+    - spectrochempy
+
+about:
+  home: "https://github.com/spectrochempy/spectrochempy"
+  license: CeCILL-B
+  license_family: OTHER
+  summary: "Processing, analysis and modelling Spectroscopic data for Chemistry with Python"
+  doc_url: "https://www.spectrochempy.fr"
+  dev_url: "https://github.com/spectrochempy/spectrochempy"
+  description: |
+    SpectroChemPy is a framework for processing, analyzing and modeling Spectroscopic data for Chemistry with Python.
+    It is a cross platform software, running on Linux, Windows or OS X.
+
+    SpectroChemPy is still experimental and under active development.
+    Its current design is subject to major changes, reorganizations, bugs and crashes!!!.
+    Please report any issues to the Issue Tracker on github.
+
+extra:
+  recipe-maintainers:
+    - fernandezc

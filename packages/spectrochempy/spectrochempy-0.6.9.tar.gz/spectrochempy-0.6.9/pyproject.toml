@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=42", "wheel", "setuptools_scm[toml]>=3.4"]
+
+#[tool.setuptools_scm]
+
+[tool.autoflake]
+check = true
+ignore-init-module-imports = true
+in-place = true
+exclude = ["docs/*", "tests/*", "docs/whatsnew/latest.rst", "docs/whatsnew/index.rst"]
+
+[tool.isort]
+profile = "black"
+skip_glob = ["docs/*" ]
