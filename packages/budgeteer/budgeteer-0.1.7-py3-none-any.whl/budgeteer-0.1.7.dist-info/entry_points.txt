@@ -1,0 +1,3 @@
+[console_scripts]
+budgeteer = budgeteer.run:main
+
