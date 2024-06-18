@@ -1,0 +1,15 @@
+.gitignore
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+.github/workflows/docs_build_and_deploy.yml
+.github/workflows/test_and_deploy.yml
+derotation/__init__.py
+derotation/greetings.py
+derotation/math.py
+derotation.egg-info/PKG-INFO
+derotation.egg-info/SOURCES.txt
+derotation.egg-info/dependency_links.txt
+derotation.egg-info/requires.txt
+derotation.egg-info/top_level.txt
