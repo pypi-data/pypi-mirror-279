@@ -1,0 +1,1 @@
+from izlearn.fungsiku import getDistance
