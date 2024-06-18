@@ -1,0 +1,81 @@
+@import url('color.css');
+
+
+html, body, button, input, select {
+    font-family: sans-serif;
+}
+
+html, body {
+    margin: 0;
+}
+
+img.icon {
+    height: 1.2em;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1em;
+}
+
+body > .monitor {
+    max-width: 960px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    table {
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid var(--color-grey-400);
+        table-layout: fixed;
+
+        th {
+            background-color: var(--color-grey-200);
+        }
+
+        td, th {
+            padding: 0.2rem;
+        }
+
+        tr.hidden {
+            th {
+                padding: 0;
+            }
+        }
+
+        td {
+            text-align: center;
+            border-top: 1px solid var(--color-grey-400);
+
+            &:not(:last-child) {
+                border-right: 1px solid var(--color-grey-300);
+            }
+        }
+
+        .col-id { width: 3rem; }
+        .col-group { width: 8rem; }
+        .col-rank { width: 4rem; }
+        .col-token { width: 4rem; }
+        .col-timestamp { width: 8rem; }
+        .col-ready { width: 4rem; }
+        .col-rank-control { width: 6rem; }
+
+        .col-name, .col-group, .col-data {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        td.col-rank-control {
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                button {
+                    margin: 0px 2px;
+                }
+            }
+        }
+    }
+}
