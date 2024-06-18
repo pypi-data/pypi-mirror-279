@@ -1,0 +1,4 @@
+numpy
+pandas
+exchange_calendars
+PyEventEngine>=0.3.0.post4
