@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pacflymath
+Version: 0.0.1
+Summary: A math library written in C(++)
+Home-page: https://github.com/pacfly/pacflymath
+Author: pacfly
+Author-email: pacflypy@outlook.com
+
+pacflymath
+==========
+
+This is a math library written in C(++)
+
+Warning: This library is still under development and in the alpha stage.
+
+Contact: pacflypy@outlook.com
+
+Installation
+------------
+
+.. code-block:: bash
+
+    pip install pacflymath
+
+.. code-block:: bash
+
+    pip install git+https://github.com/pacflypy/pacflymath
+
+.. code-block:: bash
+
+    pip install https://github.com/pacflypy/pacflymath/archive/master.zip
