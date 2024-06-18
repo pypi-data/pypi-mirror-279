@@ -1,0 +1,10 @@
+README.md
+setup.py
+data_science/__init__.py
+data_science/model.py
+data_science/preprocessing.py
+data_science_test123.egg-info/PKG-INFO
+data_science_test123.egg-info/SOURCES.txt
+data_science_test123.egg-info/dependency_links.txt
+data_science_test123.egg-info/requires.txt
+data_science_test123.egg-info/top_level.txt
