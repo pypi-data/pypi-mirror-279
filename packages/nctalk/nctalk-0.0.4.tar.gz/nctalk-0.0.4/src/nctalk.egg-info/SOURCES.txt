@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+src/nctalk.py
+src/nctalk.egg-info/PKG-INFO
+src/nctalk.egg-info/SOURCES.txt
+src/nctalk.egg-info/dependency_links.txt
+src/nctalk.egg-info/entry_points.txt
+src/nctalk.egg-info/requires.txt
+src/nctalk.egg-info/top_level.txt
