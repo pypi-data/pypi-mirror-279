@@ -1,0 +1,2 @@
+[console_scripts]
+packaged = packaged.cli:cli

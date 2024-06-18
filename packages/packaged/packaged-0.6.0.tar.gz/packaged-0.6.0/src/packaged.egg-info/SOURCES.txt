@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/packaged/__init__.py
+src/packaged/__main__.py
+src/packaged/cli.py
+src/packaged/config.py
+src/packaged/makeself-header.sh
+src/packaged/makeself.sh
+src/packaged/py.typed
+src/packaged.egg-info/PKG-INFO
+src/packaged.egg-info/SOURCES.txt
+src/packaged.egg-info/dependency_links.txt
+src/packaged.egg-info/entry_points.txt
+src/packaged.egg-info/requires.txt
+src/packaged.egg-info/top_level.txt

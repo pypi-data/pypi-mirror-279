@@ -1,0 +1,14 @@
+yen>=0.4.2
+yaspin>=2.5.0
+pycify>=1.2.0
+
+[:python_version < "3.11"]
+tomli>=1.1.0
+
+[dev]
+black
+mypy
+pytest
+pytest-cov
+pytest-xdist
+tox
