@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: knowledge_graph_rag
+Version: 0.0.1
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Graph RAG
+## Create a graph of interconnected documents and boost performance on RAG
+
+### 1. Install Graph RAG:
+
+`pip install graph-rag`
+
+### 2. 
