@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+guardtypes/__init__.py
+guardtypes/core.py
+guardtypes.egg-info/PKG-INFO
+guardtypes.egg-info/SOURCES.txt
+guardtypes.egg-info/dependency_links.txt
+guardtypes.egg-info/requires.txt
+guardtypes.egg-info/top_level.txt
+tests/test_core.py
