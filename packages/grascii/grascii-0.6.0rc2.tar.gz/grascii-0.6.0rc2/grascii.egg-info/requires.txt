@@ -1,0 +1,22 @@
+lark~=1.0
+platformdirs~=4.0
+
+[:python_version < "3.9"]
+importlib-resources~=5.0
+
+[docs]
+Sphinx==5.0.2
+sphinx-rtd-theme==1.0.0
+sphinxcontrib-apidoc==0.3.0
+myst-parser==0.18.0
+
+[interactive]
+questionary>=1.5.1
+
+[tests]
+pytest~=7.0
+pytest-cov~=3.0
+pytest-subtests<1.0,>=0.7.0
+
+[tests:platform_system != "Windows"]
+pexpect~=4.0
