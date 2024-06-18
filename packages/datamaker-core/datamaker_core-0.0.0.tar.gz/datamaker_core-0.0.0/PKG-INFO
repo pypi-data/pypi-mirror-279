@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: datamaker-core
+Version: 0.0.0
+Summary: Revolutionize the way you interact with data.
+Project-URL: Documentation, https://github.com/automators-com/datamaker-core#readme
+Project-URL: Issues, https://github.com/automators-com/datamaker-core/issues
+Project-URL: Source, https://github.com/automators-com/datamaker-core
+Author-email: Ratul Maharaj <56479869+RatulMaharaj@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: faker==25.3.0
+Requires-Dist: pandas==2.2.2
+Requires-Dist: sqlalchemy==2.0.30
+Description-Content-Type: text/markdown
+
+# datamaker-core
+
+[![PyPI - Version](https://img.shields.io/pypi/v/datamaker-core.svg)](https://pypi.org/project/datamaker-core)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/datamaker-core.svg)](https://pypi.org/project/datamaker-core)
+
+---
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install datamaker-core
+```
+
+## License
+
+`datamaker-core` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.

@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "datamaker-core"
+dynamic = ["version"]
+description = 'Revolutionize the way you interact with data.'
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Ratul Maharaj", email = "56479869+RatulMaharaj@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = ["sqlalchemy==2.0.30", "faker==25.3.0", "pandas==2.2.2"]
+
+[project.urls]
+Documentation = "https://github.com/automators-com/datamaker-core#readme"
+Issues = "https://github.com/automators-com/datamaker-core/issues"
+Source = "https://github.com/automators-com/datamaker-core"
+
+[tool.hatch.version]
+path = "src/datamaker/__about__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/datamaker"]
+
+[tool.hatch.envs.default]
+path = ".hatch"
+dependencies = ["coverage[toml]>=6.5", "pytest", "ruff"]
+
+[tool.hatch.envs.example]
+path = "example/.hatch"
+dependencies = ["psycopg2-binary"]
+
+[tool.hatch.envs.example.scripts]
+main = "python ./example/main.py"
+
+[tool.hatch.envs.default.scripts]
+lint = "ruff check {args:.}"
+format = "ruff format {args:.}"
+test = "pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
+cov-report = ["- coverage combine", "coverage report"]
+cov = ["test-cov", "cov-report"]
+
+
+[[tool.hatch.envs.all.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
+
+
+[tool.hatch.envs.types]
+dependencies = ["mypy>=1.0.0"]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/datamaker tests}"
+
+[tool.coverage.run]
+source_pkgs = ["datamaker", "tests"]
+branch = true
+parallel = true
+omit = ["src/datamaker/__about__.py"]
+
+[tool.coverage.paths]
+datamaker = ["src/datamaker", "*/datamaker-core/src/datamaker"]
+tests = ["tests", "*/datamaker/tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
