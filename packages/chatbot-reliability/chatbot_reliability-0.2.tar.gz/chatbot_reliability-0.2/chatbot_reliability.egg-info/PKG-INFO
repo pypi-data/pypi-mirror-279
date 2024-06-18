@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: chatbot_reliability
+Version: 0.2
+License-File: LICENSE
+Requires-Dist: nltk
+Requires-Dist: inflect
+Requires-Dist: sentence_transformers
+Requires-Dist: scikit-learn
