@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/cosmospl/__init__.py
+src/cosmospl/exceptions.py
+src/cosmospl.egg-info/PKG-INFO
+src/cosmospl.egg-info/SOURCES.txt
+src/cosmospl.egg-info/dependency_links.txt
+src/cosmospl.egg-info/requires.txt
+src/cosmospl.egg-info/top_level.txt
