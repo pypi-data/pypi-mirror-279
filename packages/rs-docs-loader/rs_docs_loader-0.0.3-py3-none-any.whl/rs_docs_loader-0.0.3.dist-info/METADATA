@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: rs-docs-loader
+Version: 0.0.3
+Summary: RS Docs Loader will help you to integrate different data sources
+Author: Rootstrap
+Requires-Dist: openai ==1.31.1
+Requires-Dist: chroma ==0.2.0
+Requires-Dist: chromadb ==0.5.0
+Requires-Dist: tiktoken ==0.7.0
+Requires-Dist: langchain-openai ==0.1.7
+Requires-Dist: langchain-core ==0.1.52
+Requires-Dist: python-dotenv ==1.0.1
+Requires-Dist: langchain-text-splitters ==0.0.1
+Requires-Dist: langchain-google-community ==1.0.4
+Requires-Dist: google-api-python-client ==2.129.0
+Requires-Dist: google-auth-httplib2 ==0.2.0
+Requires-Dist: google-auth-oauthlib ==1.2.0
+Requires-Dist: unstructured[pdf] ==0.14.2
+Requires-Dist: notion-client ==2.2.1
+Requires-Dist: pydantic ==2.7.1
+Requires-Dist: psycopg2 ==2.9.9
+
