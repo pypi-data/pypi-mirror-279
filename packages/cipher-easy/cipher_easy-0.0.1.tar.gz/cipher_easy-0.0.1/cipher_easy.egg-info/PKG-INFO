@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: cipher-easy
+Version: 0.0.1
+Summary: This is the simplest module for quick work with cipher.
+Home-page: https://github.com/sghg228/cipher_easy
+Author: denis
+Author-email: rideofthedrums@gmail.com
+Project-URL: GitHub, https://github.com/sghg228/cipher_easy
+Keywords: files speedfiles
+Classifier: Programming Language :: Python :: 3.11
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.1
