@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitw"
+authors = [{ name = "fieryhenry" }]
+description = "gitw"
+license = { text = "GNU General Public License v3 or later (GPLv3+)" }
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+dynamic = ["version"]
+keywords = [""]
+
+[project.urls]
+Homepage = "https://github.com/fieryhenry/gitw"
+Repository = "https://github.com/fieryhenry/gitw"
+Issues = "https://github.com/fieryhenry/gitw/issues"
+Changelog = "https://github.com/fieryhenry/gitw/blob/master/CHANGELOG.md"
+
+
+[tool.setuptools.dynamic]
+version = { attr = "gitw.__version__" }
+
+[tool.setuptools]
+package-dir = { "" = "src" }

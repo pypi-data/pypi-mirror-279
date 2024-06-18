@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/gitw/__init__.py
+src/gitw/__main__.py
+src/gitw/py.typed
+src/gitw.egg-info/PKG-INFO
+src/gitw.egg-info/SOURCES.txt
+src/gitw.egg-info/dependency_links.txt
+src/gitw.egg-info/top_level.txt
+src/gitw/files/git
+src/gitw/files/git.exe
