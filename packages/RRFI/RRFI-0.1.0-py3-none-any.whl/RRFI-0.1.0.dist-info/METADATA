@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: RRFI
+Version: 0.1.0
+Summary: A brief description of your project
+Home-page: https://github.com/Jithh/RRFI
+Author: Virajith Murali
+Author-email: virajith.murali@defra.gov.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11.5
+Description-Content-Type: text/plain
+Requires-Dist: PIL
+Requires-Dist: azure-core-credentials
+Requires-Dist: azure-core-exceptions
+Requires-Dist: azure-search-documents (==11.4.0)
+Requires-Dist: azure-storage-blob (==12.19.1)
+Requires-Dist: binascii
+Requires-Dist: comtypes (==1.4.2)
+Requires-Dist: csv
+Requires-Dist: datetime
+Requires-Dist: docx
+Requires-Dist: exif (==1.6.0)
+Requires-Dist: ezdxf (==1.2.0)
+Requires-Dist: hashlib
+Requires-Dist: io
+Requires-Dist: openai (==1.2.0)
+Requires-Dist: openpyxl
+Requires-Dist: os
+Requires-Dist: pdfplumber
+Requires-Dist: re
+Requires-Dist: requests
+Requires-Dist: tempfile
+Requires-Dist: uuid
+
+The Infrastructure folder holds all the code required to create the environment and indexes.
+Ensure to run them first and create all the required resources before running the python scripts.
+
