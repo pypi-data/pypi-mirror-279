@@ -1,0 +1,56 @@
+{% block content %}
+<style>
+    #ip, #sm, #nw, #br { font-weight: bold;}
+</style>
+<div class="card">
+    <h5 class="card-header">
+       IP Calculator
+    </h5>
+    <div class="card-body">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        
+        <script type="text/javascript">
+            {% include 'netbox_ipcalculator/core/ipcalc.js' %}
+        </script>
+        <table cellpadding="2" id='cidrout'>
+            <colgroup><col align="left" span="4"></colgroup>
+            <tbody>
+            <tr><td colspan="2"><input type="text" id="sn" onkeyup="calccidr('sn','cidrout')" onchange="calccidr('sn','cidrout')" value="{{ prefix }}"/></td><td colspan="2"><span id='status'>Enter CIDR</span></nobr></td></tr>
+            <tr><td>Address:</td><td id='ip' ></td><td>Info:</td><td id='ipinfo' ></td></tr>
+            <tr><td>Netmask:</td><td id='sm' ></td><td>Wildcard:</td><td id='wc' ></td><td></td></tr>
+            <tr><td>Network:</td><td id='nw' ></td><td>Broadcast:</td><td id='br' ></td><td></td></tr>
+            <tr><td>HostMin:</td><td id='lowhostip' ></td><td>HostMax:</td><td id='highhostip' ></td><td></td></tr>
+            <tr><td>Hosts/Net:</td><td id='maxhosts'  colspan="3"></td></tr>
+            </tbody>
+        </table>
+        <div><a class="btn btn-cyan btn-sm" href="" id="subnetsplitter">Open Subnet splitter</a></div>
+        <script type="text/javascript">
+        
+        function calccidr(sn,output) {
+            cidr=new cidrcalc();
+            out=$('#'+output);
+            cidrin=$('#'+sn).val();
+            
+            cidr.setcidr(cidrin);
+            if (cidr.ipver>0) {
+                out.find('#ip').html(cidr.ip);
+                out.find('#sm').html(cidr.sm + ' = /' + cidr.pl);
+                out.find('#wc').html(cidr.wc);
+                out.find('#nw').html(cidr.nw);
+                out.find('#br').html(cidr.br);
+                out.find('#lowhostip').html(cidr.firstip);
+                out.find('#highhostip').html(cidr.lastip);
+                out.find('#maxhosts').html(cidr.maxhosts);
+                out.find('#status').html('Valid CIDR - IPv'+cidr.ipver);
+                out.find('#ipinfo').html(cidr.iptype + ' ' + (cidr.rfc1918?'RFC1918 Address':''));
+                $('#subnetsplitter').prop('href', '/plugins/netbox_ipcalculator/ipcalc/?prefix='+cidr.ip+'/'+cidr.pl)
+            } else {
+                out.find('#status').html('Bad CIDR');
+            }
+        }
+        calccidr('sn','cidrout')
+        </script>
+    </div>
+</div>
+{% endblock %}
