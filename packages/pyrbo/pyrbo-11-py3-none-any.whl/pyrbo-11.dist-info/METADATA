@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: pyrbo
+Version: 11
+Summary: Python JIT compiler for near-native performance of low-level arithmetic
+Home-page: https://github.com/combatopera/pyrbo
+Author: Andrzej Cichocki
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: COPYING
+Requires-Dist: Cython (>=0.29.21)
+Requires-Dist: diapyr (>=18)
+Requires-Dist: nativecommon (>=4)
+Requires-Dist: numpy (>=1.19.1)
+
+# pyrbo
+Python JIT compiler for near-native performance of low-level arithmetic
+
+## Install
+These are generic installation instructions.
+
+### To use, permanently
+The quickest way to get started is to install the current release from PyPI:
+```
+pip3 install --user pyrbo
+```
+
+### To use, temporarily
+If you prefer to keep .local clean, install to a virtualenv:
+```
+python3 -m venv venvname
+venvname/bin/pip install pyrbo
+. venvname/bin/activate
+```
+
+
