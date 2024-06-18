@@ -1,0 +1,28 @@
+---
+
+name: gordias
+channels:
+  - conda-forge
+
+dependencies:
+  # Gordias dependencies
+  - dask>=2023.1.0
+  - dask-jobqueue
+  - dask-mpi
+  - distributed>=2023.1.0
+  - iris>=3.0.2,<4
+  - netCDF4
+  - numpy<2
+  - pandas
+  - psutil
+  - python>=3.10
+  # Development dependencies
+  - black
+  - myst-parser
+  - pre-commit
+  - pydata-sphinx-theme
+  - pytest
+  - python-build
+  - sphinx
+  - sphinx-rtd-theme
+  - sphinx-toolbox
