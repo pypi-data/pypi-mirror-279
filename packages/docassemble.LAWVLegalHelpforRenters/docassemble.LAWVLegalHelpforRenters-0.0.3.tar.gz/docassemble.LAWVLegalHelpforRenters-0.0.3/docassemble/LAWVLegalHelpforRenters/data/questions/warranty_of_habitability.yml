@@ -1,0 +1,169 @@
+metadata:
+  title: |
+    Legal Help for Renters - Warranty of Habitability Letter
+  short title: |
+    Warranty of Habitability Letter
+  description: |
+    Warranty of Habitability Letter
+  authors:
+    - name: Dane W. Henry, Esq.
+      organization: Legal Aid of West Virginia, Inc.
+  revision_date: 2024-05-13
+---
+features:
+  javascript: docassemble.LAWVCommon:data/static/force_lightmode.js
+  css: docassemble.LAWVCommon:data/static/lawv.css
+---
+include:
+  - docassemble.LAWVCommon:common_info.yml
+---
+objects:
+  - uploads: DAFileList
+  - client: Individual
+  - ll: Individual
+---
+ga id: warrantyBreach
+question: |
+  Are any of the following present?
+subquestion: |
+  Please select all the apply
+fields: 
+  - no label: warranty
+    datatype: checkboxes
+    choices:
+      - No electricity: electricity
+      - No running water: water
+      - No heat in cold weather: heat
+      - Sewage backups or other leaks: sewage
+      - Untreated rodent/bug infestation: infested
+      - No smoke alarms: smoke
+      - Health, Safety, Fire, or Housing code violation: violation
+---
+ga id: warrantyDuration
+question: |
+  How long has the problem existed?
+field: duration
+choices:
+  - Since I moved in: move_in
+  - Sometime after I moved in: after
+---
+ga id: warrantyEvidence
+question: |
+  Do you have evidence of the problem to include with the letter?
+subquestion: |
+  Evidence can be photos of the problem or texts/communications
+  with your landlord or others.
+yesno: evidence
+---
+ga id: warrantyEvidenceGather
+question: |
+  Please upload the evidence you want to share with your landlord
+fields:
+  - no label: uploads
+    datatype: files
+---
+ga id: warrantyEvidenceReview
+question: |
+  Review what you uploaded
+subquestion: |
+  ${ uploads }
+continue button field: upload_review
+---
+ga id: warrantyPersonalInformation
+question: |
+  Let's get some information about you and the landlord
+fields:
+  - note: |
+      **Your Information**
+  - First Name: client.name.first
+  - Last Name: client.name.last
+  - Email Address: client.email
+    datatype: email
+  - Address: client.address.address
+    address autocomplete: True
+  - Unit/Apt.: client.address.unit
+    required: False
+  - City: client.address.city
+  - State: client.address.state
+    code: states_list()
+    default: WV
+  - Zip: client.address.zip
+  - note: |
+      **Landlord's Information**
+  - Landlord's Full Name/Company NameFirst Name: ll.name
+  - Landlord's Address: ll.address.address
+    address autocomplete: True
+  - Unit/Apt.: ll.address.unit
+    required: False
+  - City: ll.address.city
+  - State: ll.address.state
+    code: states_list()
+    default: WV
+  - Zip: ll.address.zip
+---
+ga id: warrantyEndpoint
+question: Final Information
+subquestion: |
+  You can download the files for the **Warranty of Habitability Letter** below.
+
+  ${ action_button_html(warranty_bundle.url_for(), classname='btn btn-da btn-primary', label='Download All', icon='file-pdf') }
+  ${ action_button_html(url_action('send_warranty_files'), classname='btn btn-da btn-primary', label='Email these to me', icon='envelope') }
+attachment code: warranty_documents
+manual attachment list: True
+allow emailing: False
+field: generate_warranty
+buttons:
+  - All Done
+---
+code: |
+  warranty_documents = [client.letter]
+  if evidence:
+    warranty_documents.append(uploads)
+  warranty_bundle = pdf_concatenate(warranty_documents, filename=client.name.full() + "Warranty of Habitability Breach Letter.pdf")
+---
+attachment:
+  name: ${ client.name.full() } Warranty of Habitability Breach Letter
+  filename: ${ client.name.full() } Warranty of Habitability Breach Letter
+  docx template file: notice_of_warranty_of_habitability.docx
+  editable: True
+  variable name: client.letter
+  valid formats:
+    - pdf
+---
+event: send_warranty_files
+code: |
+  send_email(to=client, attachments=warranty_bundle,template=email_all_files)
+---
+template: email_all_files
+subject: |
+  LAWV Legal Help for Renters - Warranty of Habitability Breach Document Packet
+content: |
+  Your document(s) is/are attached.
+
+  Additional information can always be found at [Legal Aid of West Virginia](https://legalaidwv.org/).
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.*
+---
+ga id: warrantySuccessExit
+event: success_exit
+question: |
+  Thank you for using the tool!
+subquestion: |
+  We hope this tool was useful.  Once you click exit below, your information will be purged
+  from our system.  Please be sure you have downloaded or emailed the document.
+buttons:
+  - Exit Completely: exit
+back button: True
+back button label: |
+  Wait, go back
+---
+mandatory: True
+code: |
+  if warranty:
+    duration
+    if evidence:
+      uploads
+      upload_review
+    client.name.first
+    generate_warranty
+    success_exit

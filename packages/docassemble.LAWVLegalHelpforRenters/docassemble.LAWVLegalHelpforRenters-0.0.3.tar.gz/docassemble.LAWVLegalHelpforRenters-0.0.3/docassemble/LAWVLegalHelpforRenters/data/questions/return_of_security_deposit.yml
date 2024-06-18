@@ -1,0 +1,178 @@
+metadata:
+  title: |
+    Legal Help for Renters - Return of Security Deposit Letter
+  short title: |
+    Return of Security Deposit Letter
+  description: |
+    Return of Security Deposit Letter
+  authors:
+    - name: Dane W. Henry, Esq.
+      organization: Legal Aid of West Virginia, Inc.
+  revision_date: 2024-05-13
+---
+features:
+  javascript: docassemble.LAWVCommon:data/static/force_lightmode.js
+  css: docassemble.LAWVCommon:data/static/lawv.css
+---
+include:
+  - docassemble.LAWVCommon:common_info.yml
+---
+objects:
+  - uploads: DAFileList
+  - client: Individual
+  - client.rental_address: Address
+  - ll: Individual
+---
+ga id: depositEligibilityInfo
+question: |
+  Eligibility Information
+fields:
+  - How much was your security deposit?: sec_deposit
+  - Have you already moved out?: move_out
+    datatype: yesnoradio
+  - When did you move out?: vacate_date
+    datatype: date
+    max: ${ today() }
+    show if: move_out
+  - Check if your landlord has provided: conditions
+    datatype: checkboxes
+    choices:
+      - Itemized Statement of Deductions: itemized
+      - Partial Refund of Security Deposit: partial
+---
+ga id: depositPersonalInformation
+question: |
+  Let's get some information about you and the landlord
+fields:
+  - note: |
+      **Your Current Information**
+  - First Name: client.name.first
+  - Last Name: client.name.last
+  - Email Address: client.email
+    datatype: email
+  - Address: client.address.address
+    address autocomplete: True
+  - Unit/Apt.: client.address.unit
+    required: False
+  - City: client.address.city
+  - State: client.address.state
+    code: states_list()
+    default: WV
+  - Zip: client.address.zip
+  - note: |
+      **Rental Information**
+  - Rental Address: client.rental_address.address
+    address autocomplete: True
+  - Unit/Apt.: client.rental_address.unit
+    required: False
+  - City: client.rental_address.city
+  - State: client.rental_address.state
+    code: states_list()
+    default: WV
+  - Zip: client.rental_address.zip
+  - note: |
+      **Landlord's Information**
+  - Landlord's Full Name/Company NameFirst Name: ll.name
+  - Landlord's Address: ll.address.address
+    address autocomplete: True
+  - Unit/Apt.: ll.address.unit
+    required: False
+  - City: ll.address.city
+  - State: ll.address.state
+    code: states_list()
+    default: WV
+  - Zip: ll.address.zip
+---
+ga id: depositEvidence
+question: |
+  Do you have evidence of the conditions to include with the letter?
+subquestion: |
+  Evidence can be photos or checklists you completed
+  with your landlord when you left.
+yesno: evidence
+---
+ga id: depositEvidenceGather
+question: |
+  Please upload the evidence you want to include with your letter
+fields:
+  - no label: uploads
+    datatype: files
+---
+ga id: depositEvidenceReview
+question: |
+  Review what you uploaded
+subquestion: |
+  ${ uploads }
+continue button field: upload_review
+---
+ga id: depositEndpoint
+question: Final Information
+subquestion: |
+  You can download the files for the **Return of Security Deposit Letter** below.
+
+  ${ action_button_html(deposit_bundle.url_for(), classname='btn btn-da btn-primary', label='Download All', icon='file-pdf') }
+  ${ action_button_html(url_action('send_deposit_files'), classname='btn btn-da btn-primary', label='Email these to me', icon='envelope') }
+attachment code: deposit_documents
+manual attachment list: True
+allow emailing: False
+field: generate_deposit
+buttons:
+  - All Done
+---
+code: |
+  deposit_documents = [client.letter]
+  if evidence:
+    deposit_documents.append(uploads)
+  deposit_bundle = pdf_concatenate(deposit_documents, filename=client.name.full() + "Return of Security Deposit Letter.pdf")
+---
+attachment:
+  name: ${ client.name.full() } Return of Security Deposit Letter
+  filename: ${ client.name.full() } Return of Security Deposit Letter
+  docx template file: return_of_security_deposit.docx
+  editable: True
+  variable name: client.letter
+  valid formats:
+    - pdf
+---
+event: send_deposit_files
+code: |
+  send_email(to=client, attachments=deposit_bundle,template=email_all_files)
+---
+template: email_all_files
+subject: |
+  LAWV Legal Help for Renters - Return of Security Deposit Document Packet
+content: |
+  Your document(s) is/are attached.
+
+  Additional information can always be found at [Legal Aid of West Virginia](https://legalaidwv.org/).
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.*
+---
+ga id: depositSuccessExit
+event: success_exit
+question: |
+  Thank you for using the tool!
+subquestion: |
+  We hope this tool was useful.  Once you click exit below, your information will be purged
+  from our system.  Please be sure you have downloaded or emailed the document.
+buttons:
+  - Exit Completely: exit
+back button: True
+back button label: |
+  Wait, go back
+---
+mandatory: True
+code: |
+  move_out
+  if move_out and conditions.all_false():
+    due_date = vacate_date.plus(days=60)
+    if today() > due_date:
+      past_due = True
+    else:
+      past_due = False
+    if evidence:
+      uploads
+      upload_review
+    client.name.first
+    generate_deposit
+    success_exit

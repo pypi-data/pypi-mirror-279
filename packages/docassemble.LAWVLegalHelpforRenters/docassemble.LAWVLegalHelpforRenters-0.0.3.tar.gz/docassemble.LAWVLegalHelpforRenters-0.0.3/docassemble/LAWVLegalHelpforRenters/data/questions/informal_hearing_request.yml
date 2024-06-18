@@ -1,0 +1,157 @@
+metadata:
+  title: |
+    Legal Help for Renters - Informal Hearing Request
+  short title: |
+    Informal Hearing Request 
+  description: |
+    Informal Hearing Request
+  authors:
+    - name: Dane W. Henry, Esq.
+      organization: Legal Aid of West Virginia, Inc.
+  revision_date: 2024-05-13
+---
+features:
+  javascript: docassemble.LAWVCommon:data/static/force_lightmode.js
+  css: docassemble.LAWVCommon:data/static/lawv.css
+---
+include:
+  - docassemble.LAWVCommon:common_info.yml
+---
+objects:
+  - client: Individual
+---
+ga id: hearingHASelect
+question: |
+  Which Housing Authority do you want to contact?
+fields:
+  - no label: ha
+    input type: dropdown
+    code: housing_authorities
+---
+ga id: hearingNoticeInfo
+question: |
+  Notice Information
+subquestion: |
+  Please provide information about the notice you received
+fields:
+  - Notice Type: notice_type
+    input type: radio
+    choices:
+      - Eviction: eviction
+      - Voucher Termination: termination
+  - Date of Notice: notice_date
+    datatype: date
+    max: |
+      ${ today() }
+  - Name of Signer: sender_name
+    required: False
+  - Title of Signer: sender_title
+    required: False
+---
+ga id: hearingAvailability
+question: |
+  Availability
+subquestion: |
+  Please provide a few dates you are available for the hearing
+fields:
+  - First choice: date_1
+    datatype: date
+    min: |
+      ${ today() }
+  - Second choice: date_2
+    datatype: date
+    min: |
+      ${ today() }
+  - Third choice: date_3
+    datatype: date
+    min: |
+      ${ today() }
+---
+ga id: hearingPersonalInformation
+question: |
+  Finally, let's get some information about you
+fields:
+  - First Name: client.name.first
+  - Last Name: client.name.last
+  - Email Address: client.email
+    datatype: email
+  - Phone Number: client.phone
+  - Address: client.address.address
+    address autocomplete: True
+  - Unit/Apt.: client.address.unit
+    required: False
+  - City: client.address.city
+  - State: client.address.state
+    code: states_list()
+    default: WV
+  - Zip: client.address.zip
+validation code: |
+  if not phone_number_is_valid(client.phone):
+    validation_error('Please enter a valid phone number.', field='client.phone')
+---
+ga id: hearingTermiantionEndpoint
+question: Final Information
+subquestion: |
+  You can download your **Informal Hearing Request**below.  
+attachment:
+  name: ${ client.name.full() } Informal Hearing Request
+  filename: ${ client.name.full() } Informal Hearing Request
+  docx template file: informal_hearing_termination.docx
+  editable: False
+  variable name: client.termination_letter
+  valid formats:
+    - pdf
+allow emailing: True
+field: generate_termination
+buttons:
+  - All done
+under: |
+  **More Resources**
+
+  [LHR Hub](https://legalaidwv.org/)
+---
+ga id: hearingEvictionEndpoint
+question: Final Information
+subquestion: |
+  You can download your **Informal Hearing Request**below.  
+attachment:
+  name: ${ client.name.full() } Informal Hearing Request
+  filename: ${ client.name.full() } Informal Hearing Request
+  docx template file: informal_hearing_eviction.docx
+  editable: False
+  variable name: client.eviction_letter
+  valid formats:
+    - pdf
+allow emailing: True
+field: generate_eviction
+buttons:
+  - All done
+under: |
+  **More Resources**
+
+  [LHR Hub](https://legalaidwv.org/)
+---
+ga id: hearingSuccessExit
+event: success_exit
+question: |
+  Thank you for using the tool!
+subquestion: |
+  We hope this tool was useful.  Once you click exit below, your information will be purged
+  from our system.  Please be sure you have downloaded the document.
+buttons:
+  - Exit Completely: exit
+back button: True
+back button label: |
+  Wait, go back
+---
+mandatory: True
+code: |
+  ha
+  notice_type
+  date_1
+  client.name.first
+  if notice_type == "termination":
+    generate_termination
+  else:
+    generate_eviction
+  success_exit

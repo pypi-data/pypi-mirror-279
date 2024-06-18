@@ -1,0 +1,268 @@
+metadata:
+  title: |
+    Legal Help for Renters - Petition for Appeal
+  short title: |
+    Petition for Appeal
+  description: |
+    Petition for Appeal
+  authors:
+    - name: Dane W. Henry, Esq.
+      organization: Legal Aid of West Virginia, Inc.
+  revision_date: 2024-05-13
+---
+features:
+  javascript: docassemble.LAWVCommon:data/static/force_lightmode.js
+  css: docassemble.LAWVCommon:data/static/lawv.css
+---
+include:
+  - docassemble.LAWVCommon:common_info.yml
+---
+objects:
+  - p: Individual
+  - r: Individual
+---
+ga id: pfaCaseInformation
+question: |
+  First, we need to know about the case
+fields:
+  - County where case is filed: case_county
+    input type: dropdown
+    code: counties
+  - Magistrate Court Case Number: case_num
+  - Magistrate Name: magistrate_name
+  - Date of Judgment: judgment_date
+    datatype: date
+    max: |
+      ${ today() }
+---
+ga id: pfaAppellantInformation
+question: |
+  Let's get some information about the case and who is involved
+subquestion: |
+  Please enter **your** information
+fields:
+  - First Name: r.name.first
+  - Middle Name: r.name.middle
+    required: False
+  - Last Name: r.name.last
+  - Email Address: r.email
+    datatype: email
+  - Phone Number: r.phone_number
+  - Address: r.address.address
+    address autocomplete: True
+  - Unit/Apt.: r.address.unit
+    required: False
+  - City: r.address.city
+  - State: r.address.state
+    code: states_list()
+    default: WV
+  - Zip: r.address.zip
+  - field: r.address.county
+    input type: hidden
+validation code: |
+  if not phone_number_is_valid(r.phone_number):
+    validation_error('Please enter a valid phone number.', field='r.phone_number')
+  else:
+    r.phone_number = phone_number_formatted(r.phone_number)
+---
+ga id: pfaAppelleeInformation
+question: |
+  Now enter information about your **landlord**
+fields:
+  - Name on Complaint: p.name
+  - Phone Number: p.phone_number
+  - Address: p.address.address
+    address autocomplete: True
+  - Unit/Apt.: p.address.unit
+    required: False
+  - City: p.address.city
+  - State: p.address.state
+    code: states_list()
+    default: WV
+  - Zip: p.address.zip
+validation code: |
+  if not phone_number_is_valid(p.phone_number):
+    validation_error('Please enter a valid phone number.', field='p.phone_number')
+  else:
+    p.phone_number = phone_number_formatted(p.phone_number)
+---
+ga id: pfaEvidence
+question: |
+  Do you have evidence of the conditions to include with the appeal?
+subquestion: |
+  Evidence can be photos or texts/emails between you and your landlord.
+yesno: evidence
+---
+ga id: pfaEvidenceGather
+question: |
+  Please upload the evidence you want to include with your appeal.
+fields:
+  - no label: uploads
+    datatype: files
+---
+ga id: pfaAccommodations
+question: |
+  Do you require any accommodations in the hearing?
+fields:
+  - no label: accommodations
+    choices:
+      - Yes: yes
+      - No: no
+  - Describe your accommodation: accom_detail
+    datatype: checkboxes
+    choices:
+      - Wheelchair accessible hearing room and other facilites: wheelchair
+      - Reader or other auxiliary aid for the visually impaired: visual
+      - Interpreter or other auxiliary aid for the deaf and hard of hearing: hearing
+      - Spokesperson or other auxiliary aid for the speech impaired: speech
+      - Foreign language interpreter: language
+      - Other: other
+    none of the above: False
+    show if:
+      variable: accommodations
+      is: yes
+  - Specify Language: accom_language
+    show if: accom_detail['language']
+  - Specify: accom_other
+    show if: accom_detail['other']
+---
+ga id: pfaEndpoint
+question: Final Information
+subquestion: |
+  You can download the files for the **Petition for Appeal** below.
+
+  ${ action_button_html(pfa_bundle.url_for(), classname='btn btn-da btn-primary', label='Download All', icon='file-pdf') }
+  ${ action_button_html(url_action('send_pfa_files'), classname='btn btn-da btn-primary', label='Email these to me', icon='envelope') }
+attachment code: pfa_documents
+manual attachment list: True
+allow emailing: False
+field: generate_pfa
+buttons:
+  - All Done
+---
+code: |
+  pfa_documents = [civil_information_statement, petition_for_appeal]
+  if evidence:
+    pfa_documents.append(uploads)
+  pfa_documents.append(notice_of_stay)
+  pfa_bundle = pdf_concatenate(pfa_documents, filename=r.name.full() + " Petition for Appeal.pdf")
+---
+event: send_pfa_files
+code: |
+  send_email(to=p, attachments=pfa_bundle,template=email_all_files)
+---
+template: email_all_files
+subject: |
+  LAWV Legal Help for Renters - Petition for Appeal Document Packet
+content: |
+  Your document(s) is/are attached.
+
+  Additional information can always be found at [Legal Aid of West Virginia](https://legalaidwv.org/).
+
+  *NOTE: This email address is not monitored.  Please do not reply to this message.*
+---
+attachment:
+  - name: petition_for_appeal
+    filename: petition_for_appeal
+    pdf template file: petition_for_appeal.pdf
+    variable name: petition_for_appeal
+    fields:
+      - "upper_county": ${ case_county.upper() }
+      - "case_num": ${ case_num }
+      - "p1_name": ${ p.name.full(middle="full") }
+      - "p1_address_one": ${ p.address.line_one() }
+      - "p1_address_two": ${ p.address.line_two() }
+      - "p1_phone": ${ p.phone_number }
+      - "d1_name": ${ r.name.full(middle="full") }
+      - "d1_address_one": ${ r.address.line_one() }
+      - "d1_address_two": ${ r.address.line_two() }
+      - "d1_phone": ${ r.phone_number }
+      - "magistrate_name": ${ magistrate_name }
+      - "lower_county": ${ case_county }
+      - "month_day": ${ judgment_date }
+---
+attachment:
+  - name: ${ r.name.full(middle="full") } Civil Case Information Statement
+    filename: ${ r.name.full(middle="full") } Civil Case Information Statement
+    pdf template file: docassemble.LAWVCommon:data/templates/civil_case_info.pdf
+    editable: False
+    variable name: civil_information_statement
+    fields:
+      - upper_county: ${ case_county.upper() }
+      - full_name: ${ p.name.full(middle="full") }
+      - address: ${ p.address.line_one() }
+      - second_address_line: ${ p.address.line_two() }
+      - p_phone: ${ p.phone_number }
+      - defendant_name: ${ r.name.full(middle="full") }
+      - defendant_address: ${ r.address.line_one() }
+      - defendant_locale: ${ r.address.line_two() }
+      - d_phone: ${ r.phone_number }
+      - case_type: "civil_appeal"
+      - jury: "jury_no"
+      - accommodation: |
+          ${accommodations}
+      - accom#wheelchair: |
+          ${accom_detail['wheelchair'] if accommodations == 'yes' else 'No'}
+      - accom#visual: |
+          ${accom_detail['visual'] if accommodations == 'yes' else 'No'}
+      - accom#hearing: |
+          ${accom_detail['hearing'] if accommodations == 'yes' else 'No'}
+      - accom#speech: |
+          ${accom_detail['speech'] if accommodations == 'yes' else 'No'}
+      - accom#language: |
+          ${accom_detail['language'] if accommodations == 'yes' else 'No'}
+      - accom#other: |
+          ${accom_detail['other'] if accommodations == 'yes' else 'No'}
+      - accom_language: |
+          ${accom_language if accommodations == 'yes' and accom_detail['language'] else ''}
+      - accom_other: |
+          ${accom_other if accommodations == 'yes' and accom_detail['other'] else ''}
+      - without_attorney: Yes
+---
+attachment:
+  name: ${ r.name.full() } Notice of Automatic Stay
+  filename: ${ r.name.full() } Notice of Automatic Stay
+  docx template file: notice_to_acknowledge_stay.docx
+  editable: False
+  variable name: notice_of_stay
+  valid formats:
+    - pdf
+---
+event: ineligible
+question: |
+  It appears you encountered a problem
+subquestion: |  
+  Reason: ${ failure_reason }  
+buttons: 
+  - Exit: exit
+  - Restart: restart
+---
+ga id: pfaSuccessExit
+event: success_exit
+question: |
+  Thank you for using the tool!
+subquestion: |
+  We hope this tool was useful.  Once you click exit below, your information will be purged
+  from our system.  Please be sure you have downloaded or emailed the document.
+buttons:
+  - Exit Completely: exit
+back button: True
+back button label: |
+  Wait, go back
+---
+mandatory: True
+code: |
+  case_county
+  if judgment_date <= today().minus(days=20):
+    # Judgment date is more than 20 days ago, appeal
+    # not entitled as a matter of right, should consult
+    # an attorney.
+    failure_reason = "<br>The judgment date was more than twenty (20) days ago.  You cannot appeal as a matter of right, however you might still be able to appeal.<br><br>Contact an attorney to discuss your case further.<br>You can apply for Legal Aid of West Virginia's Services [here](https://legalaidwv.org/get-help/apply-for-help/)."
+    ineligible
+  r.name.first
+  p.phone_number
+  if evidence:
+    uploads
+  accommodations
+  generate_pfa
+  success_exit
