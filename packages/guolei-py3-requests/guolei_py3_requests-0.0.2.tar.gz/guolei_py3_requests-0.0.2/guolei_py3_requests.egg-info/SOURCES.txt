@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+guolei_py3_requests/__init__.py
+guolei_py3_requests.egg-info/PKG-INFO
+guolei_py3_requests.egg-info/SOURCES.txt
+guolei_py3_requests.egg-info/dependency_links.txt
+guolei_py3_requests.egg-info/not-zip-safe
+guolei_py3_requests.egg-info/requires.txt
+guolei_py3_requests.egg-info/top_level.txt
