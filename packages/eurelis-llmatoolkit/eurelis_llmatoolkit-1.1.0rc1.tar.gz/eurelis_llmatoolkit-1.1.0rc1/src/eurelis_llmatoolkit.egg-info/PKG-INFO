@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: eurelis-llmatoolkit
+Version: 1.1.0rc1
+Summary: Framework to build and manage IA based applications. Based on Langchain under the hood.
+Author-email: Vincent LAMBERT <v.lambert@eurelis.com>, Jérôme DIAZ <j.diaz@eurelis.com>, Nicolas LOISY <n.loisy@eurelis.com>
+Project-URL: Homepage, https://github.com/Eurelis/Eurelis-LlmaToolkit
+Project-URL: Bug Tracker, https://github.com/Eurelis/Eurelis-LlmaToolkit/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: python-dotenv==1.0.0
+Requires-Dist: langchain==0.2.2
+Requires-Dist: langchain-community==0.2.2
+Requires-Dist: langchain-core==0.2.5
+Requires-Dist: tenacity==8.2.0
+Requires-Dist: langsmith==0.1.69
+Requires-Dist: httpx<0.25.0,>=0.15.4
+Requires-Dist: sqlalchemy==2.0.21
+Requires-Dist: rich==13.4.2
+Requires-Dist: click==8.1.7
+Requires-Dist: numpy==1.26.0
+Provides-Extra: huggingface
+Requires-Dist: sentence_transformers==2.2.2; extra == "huggingface"
+Requires-Dist: transformers==4.34.1; extra == "huggingface"
+Provides-Extra: openai
+Requires-Dist: langchain-openai==0.1.8; extra == "openai"
+Provides-Extra: solr
+Requires-Dist: eurelis-langchain-solr-vectorstore==0.0.3; extra == "solr"
+Provides-Extra: chroma
+Requires-Dist: chromadb==0.4.13; extra == "chroma"
+Provides-Extra: sitemap
+Requires-Dist: lxml==4.9.3; extra == "sitemap"
+Requires-Dist: beautifulsoup4==4.12.2; extra == "sitemap"
+Provides-Extra: chatbot
+Requires-Dist: gradio==3.47.1; extra == "chatbot"
+Provides-Extra: pdf
+Requires-Dist: pypdf==3.16.4; extra == "pdf"
+Requires-Dist: cryptography==41.0.7; extra == "pdf"
+Provides-Extra: mongodb
+Requires-Dist: pymongo==4.6.1; extra == "mongodb"
+Provides-Extra: markdown
+Requires-Dist: markdown==3.5.1; extra == "markdown"
+Provides-Extra: selfcheck
+Requires-Dist: selfcheckgpt==0.1.4; extra == "selfcheck"
+Requires-Dist: lark==1.1.8; extra == "selfcheck"
+
+# Eurelis-LlmaToolkit
+
+![Python : 11](https://img.shields.io/badge/Python-=3.11-green)
+![Code style : black](https://img.shields.io/badge/Code_style-black-black)
+![Linting : pylint](https://img.shields.io/badge/Linting-pylint-yellowgreen)
+
+[![Open Issues](https://img.shields.io/github/issues-raw/Eurelis/Eurelis-KB-Framework)](https://github.com/Eurelis/Eurelis-KB-Framework/issues)
+[![GitHub star chart](https://img.shields.io/github/stars/langchain-ai/langchain?style=social)](https://star-history.com/#Eurelis/Eurelis-KB-Framework)
+[![X (formerly Twitter) URL](https://img.shields.io/twitter/url?url=https%3A%2F%2Fx.com%2FAgence_Eurelis&label=Follow%20%40Eurelis)](https://x.com/Agence_Eurelis)
+
+
+Framework to build and manage IA based applications. Based on Langchain under the hood.
+Reboot de la librairie [Eurelis-KB-Framework](https://github.com/Eurelis/Eurelis-KB-Framework).
