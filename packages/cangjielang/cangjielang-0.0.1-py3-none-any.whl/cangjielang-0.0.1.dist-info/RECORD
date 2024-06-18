@@ -1,0 +1,15 @@
+cangjielang/__init__.py,sha256=SOVCamsnxJFJwzlrqatFEZNoDNN1fgQNIa5ArhXP5Es,100
+cangjielang/shell/__init__.py,sha256=p8nXEPlT0ydYSM0u4jKZ_IpsHDuafJAg_YHgEKy-Z2E,65
+cangjielang/shell/usage.py,sha256=UTImU3AVQ0_9NMhAqK34PaEkwEiyxt0E8rNIeZLy27o,204
+cangjielang/src/temp.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+package_name/__init__.py,sha256=XtPYATdtkDEIDY2B3uEN8ZzJTAC3VEkXtYVQ1umYv5Q,101
+package_name/shell/__init__.py,sha256=nszm5BU7g0_sHXwWwSXgFAgVhKYI5TLyvy84jNvFuBM,66
+package_name/shell/usage.py,sha256=oBOW-vYhtFTCLi3FLP1xtwj4TP-PfDlXUcTDKWhEQks,298
+package_name/src/temp.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cangjielang-0.0.1.dist-info/LICENSE,sha256=DBZAK6xNPrXUVR-Ar-HaGfuxZKzKymlErwGExoFFPto,1062
+cangjielang-0.0.1.dist-info/METADATA,sha256=eFs9idC4a5unWacWT5NdvUjak8nMGpbAc2kkhRUF0SE,3083
+cangjielang-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+cangjielang-0.0.1.dist-info/entry_points.txt,sha256=aCE5MdQswOuuT9VhqPpVtoQd7IlR0uY4e_Q529Tw-Kc,54
+cangjielang-0.0.1.dist-info/top_level.txt,sha256=etb9zdCzMW3b2sA_MUr68EaDOQ_kawLNUEuUcBLZ8vs,12
+cangjielang-0.0.1.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cangjielang-0.0.1.dist-info/RECORD,,
