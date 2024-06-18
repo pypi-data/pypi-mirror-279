@@ -1,0 +1,13 @@
+cftime
+cf-units
+dask>=2023.1.0
+distributed>=2023.1.0
+gordias
+isodate
+numba
+numpy<2
+pyxdg
+PyYAML
+regex
+scitools-iris<4,>=3
+sparse
