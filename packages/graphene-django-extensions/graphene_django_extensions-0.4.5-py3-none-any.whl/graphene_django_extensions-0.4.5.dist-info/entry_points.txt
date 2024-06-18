@@ -1,0 +1,3 @@
+[pytest11]
+graphene_django_extensions=gdx_pytest.fixtures
+
