@@ -1,0 +1,4 @@
+python-dateutil
+scipp>=24.02.0
+scipy
+h5py
