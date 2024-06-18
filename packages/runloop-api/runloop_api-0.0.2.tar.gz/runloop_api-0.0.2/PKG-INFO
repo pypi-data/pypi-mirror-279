@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: runloop-api
+Version: 0.0.2
+Description-Content-Type: text/markdown
+Requires-Dist: requests==2.32.3
+
+# Runloop API Client bindings for Python
+
+[![PyPI](https://img.shields.io/pypi/v/runloop.svg?logo=pypi&logoColor=white)](https://pypi.org/project/runloop/)
+
