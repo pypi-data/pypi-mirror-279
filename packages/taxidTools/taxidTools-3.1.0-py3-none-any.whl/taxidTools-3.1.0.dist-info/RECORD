@@ -1,0 +1,13 @@
+taxidTools/Lineage.py,sha256=UsdoPvbOK3qWqMOsrBF8GYdz8REfp9bZFYxbaCqlws8,3734
+taxidTools/Node.py,sha256=FFb06BXQ3OxEu81Fm1uZBacvJZbJEVok5wIIInCcouo,12790
+taxidTools/Taxonomy.py,sha256=9G1wsM2u8inVjGTnCFazcKKceW7Hr6YAVlF5YTEYo0g,27546
+taxidTools/__init__.py,sha256=cnZSHd-c1k5GdIC83YV6Em9P_cLx1rZ8a3LE3hFpJas,819
+taxidTools/__version__.py,sha256=qAnsuW1XmOTIOZkq1ii2Z8WuP9qC3_6InzrRkYMkl40,254
+taxidTools/exceptions.py,sha256=tpniiGHMMmU1DdysjIxueyb37sAfZTJjlQleDePx9vs,405
+taxidTools/factories.py,sha256=lCAfDCtBQwl2dXIxkurTHKY9w090yugsIZRW46w_Wzo,2702
+taxidTools/utils.py,sha256=TN9zLJv_scwWOxH8gzmRE26-_zeB_EmhAnNOhCAukoU,908
+taxidTools-3.1.0.dist-info/LICENSE,sha256=cIk_g3Z8GgrR1wOtaCGJMfbIcmLfN_wWp6jvkfpz4MY,1501
+taxidTools-3.1.0.dist-info/METADATA,sha256=7Th9pV0S0Gj1SgdjEC6IFWJkPQQVh-uTq5wQe2G4bHM,2794
+taxidTools-3.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+taxidTools-3.1.0.dist-info/top_level.txt,sha256=Ee1wHT5d8e7tkIVRESi9rQY-raWRV-LU2221YKdn_bI,11
+taxidTools-3.1.0.dist-info/RECORD,,
