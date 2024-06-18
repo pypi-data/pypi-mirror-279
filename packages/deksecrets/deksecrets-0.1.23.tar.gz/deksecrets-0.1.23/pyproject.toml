@@ -1,0 +1,31 @@
+[project]
+name = "deksecrets"
+version = "0.1.23"
+description = ""
+authors = [
+    { name = "sanzenwin", email = "sanzenwin@gmail.com" },
+]
+dependencies = [
+    "py-gitea<=0.2.8",
+    "infisical-python<=2.1.8",
+    "dektools[yaml]<1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+deksecrets = "deksecrets.click.__entry__:main"
+
+[tool.pdm.build]
+includes = [
+    "deksecrets",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
