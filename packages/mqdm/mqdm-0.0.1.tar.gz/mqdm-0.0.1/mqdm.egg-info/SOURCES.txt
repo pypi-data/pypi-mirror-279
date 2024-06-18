@@ -1,0 +1,12 @@
+README.md
+setup.py
+mqdm/__init__.py
+mqdm/__main__.py
+mqdm/_alt_dict.py
+mqdm/core.py
+mqdm/utils.py
+mqdm.egg-info/PKG-INFO
+mqdm.egg-info/SOURCES.txt
+mqdm.egg-info/dependency_links.txt
+mqdm.egg-info/requires.txt
+mqdm.egg-info/top_level.txt
