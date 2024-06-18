@@ -1,0 +1,17 @@
+octologo/__init__.py,sha256=KEcsXeYHYa9sobb_adMjC3dytg_zcvyaSSXr38clPPQ,96
+octologo/__main__.py,sha256=qHX6-FmohM7cd5wjhKmaYY7tZFeTcL9RHNphKelWJR8,4607
+octologo/app.tcss,sha256=fRGF0idRbgN2AkfkX2_RQkSV58Op2lg9CKplZIrU0cY,454
+octologo/utils.py,sha256=__nEhEltRX42SEBXOZuIpXvmFaz3i42Meb9L3MrGlGQ,3103
+octologo/wizard.py,sha256=LV6lS--6YUAvnFH3prJ7G27zj_UZIWp5yiol9Vj6YdQ,9223
+octologo/colors/adi1090x.toml,sha256=ggrFI3ANLW1MsYdmqi3noRMKI00w6bGexkSrNsfNYeI,77
+octologo/colors/cherry.toml,sha256=SRZW9cVW1IZZxqxlBW27wV9s42tEFVxsIpm5hPPPutE,74
+octologo/colors/midnight_abyss.toml,sha256=JUBVmYUPnDHtyhZeZYNoROaG--0RR5A6qC8OV7tjlQg,84
+octologo/fonts/Iosevka-Nerd-Font-Complete.ttf,sha256=Q0s-CtzfCAAYsoE9_XKlPpg2MzEdQK0f-VTY-Nf_T-c,1301148
+octologo/fonts/JetBrains-Mono-Nerd-Font-Complete.ttf,sha256=ZRdP69TSv_Q7JCg0WnkcmuMyNazZAnQ1v_Qq1I0k2kw,979356
+octologo/styles/first_letter_underlined.py,sha256=hCi_wKmdDsZOdg-s_FxhAjzDL-Stsn424iNOAifoad4,238
+octologo/styles/underline_core.py,sha256=HFUp-mZnWW6U5rz6xabQOzY-4DM5axKzEax_ksgqr-g,3629
+octologo-3.0.2.dist-info/entry_points.txt,sha256=ekPbkwCkBPKB-xI3aZsrUnh1H1K2-WT17MkxkuA8T3U,51
+octologo-3.0.2.dist-info/LICENSE,sha256=s9Hq5_Uk_J3dSFYqRlLv0rzYSOOLA_BeOIvM6UPnPfI,35819
+octologo-3.0.2.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+octologo-3.0.2.dist-info/METADATA,sha256=m8rJ2yRVXv8QcFOePiumTCnAnU48LyAxucFNkIQxAuA,1811
+octologo-3.0.2.dist-info/RECORD,,

@@ -1,0 +1,3 @@
+[console_scripts]
+octologo=octologo.__main__:main
+
