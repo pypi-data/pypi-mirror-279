@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: lino-noi
+Version: 24.6.1
+Summary: Manage support tickets and working time.
+Home-page: https://gitlab.com/lino-framework/noi
+Author: Rumma & Ko Ltd
+Author-email: info@lino-framework.org
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Customer Service
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Bug Tracking
+License-File: COPYING
+Requires-Dist: lino-xl
+
+
+- End-user documentation: https://using.lino-framework.org/apps/noi
+- Demo site: https://noi1r.lino-framework.org
+- Developer documentation: https://dev.lino-framework.org/specs/noi
+- Source code: https://gitlab.com/lino-framework/noi
+- Changelog: https://dev.lino-framework.org/changes
+- Author: https://www.synodalsoft.net
+
