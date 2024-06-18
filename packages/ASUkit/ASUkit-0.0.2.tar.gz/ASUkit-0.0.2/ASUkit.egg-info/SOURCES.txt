@@ -1,0 +1,13 @@
+README.md
+setup.py
+ASUkit/CGCNN_atom_emb.json
+ASUkit/__init__.py
+ASUkit/cry2graph.py
+ASUkit.egg-info/PKG-INFO
+ASUkit.egg-info/SOURCES.txt
+ASUkit.egg-info/dependency_links.txt
+ASUkit.egg-info/requires.txt
+ASUkit.egg-info/top_level.txt
+ASUkit/_utility/WPEMsim.py
+ASUkit/_utility/__init__.py
+ASUkit/_utility/_funs.py
