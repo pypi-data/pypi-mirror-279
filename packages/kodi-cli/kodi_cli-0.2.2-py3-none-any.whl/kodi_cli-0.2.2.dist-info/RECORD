@@ -1,0 +1,16 @@
+cfg.py,sha256=sOgqLeRAgVdD7aTyh-SnlGLq4AfOs92PrY__DgOSvUA,9437
+CHANGELOG.md,sha256=8JY9rJEIplYzZyFMkakjQEuxBN0Ltii7QCJwEVIn2P0,1036
+json-defs/methods.json,sha256=Ox3Y-jpusv6jUsOtOdaGciccmzopRJzuUtWjyn-1o0k,117094
+json-defs/types.json,sha256=nr1gXtS7TLQUHtUbPc4WPJ9kaEsfrU1ZZxJJLxGeiZc,78506
+json-defs/version.txt,sha256=SXr2rWQA64lOhOcMqet9syhGuujQrQ9mDVTm2SuvpM8,23
+kodi_cli.py,sha256=tfrPePAW6twxrazviepViuRN02vugViuP1LEuMAZ-7o,13744
+kodi_common.py,sha256=uj5Jc5beUyz3txCT_lv2D6_Ibkhn9hHXyt3GXH-Za1g,1509
+kodi_help_tester.py,sha256=HSMvQV5oWnZqbRNUoETtXz02qz3eK6HZeh8h2Q33exE,2110
+kodi_interface.py,sha256=A_Xlz7gBVF4BKIYl4otb09dMbRJP3AZ7u-JsjUfe3PA,28530
+kodi_libraray_inventory.py,sha256=tewlNqGrYUI3MpYyeZQUrtLiPLp-jk7BWAs8Lk2rzYk,7878
+kodi_output_factory.py,sha256=nX-BuKQ87UoRSf1ZN2zgUyCQU9FiNic-JRjFq8lrC7U,2599
+kodi_cli-0.2.2.dist-info/entry_points.txt,sha256=wtLDHYBVXogfujmoH0jJFHy-kccumMURS34vgNVAJdI,42
+kodi_cli-0.2.2.dist-info/LICENSE,sha256=T10E4Nt7fQP_iW1S8g7ePl-ISZLH2t-5_g1VHmj3zZ0,1065
+kodi_cli-0.2.2.dist-info/METADATA,sha256=bz6P21XWpSY94LKGCx2F0kIEXrPr9GS3s4-Alm0Oq5Y,12269
+kodi_cli-0.2.2.dist-info/WHEEL,sha256=FMvqSimYX_P7y0a7UY-_Mc83r5zkBZsCYPm7Lr0Bsq4,88
+kodi_cli-0.2.2.dist-info/RECORD,,
