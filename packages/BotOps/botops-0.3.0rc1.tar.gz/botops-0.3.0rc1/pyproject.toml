@@ -1,0 +1,128 @@
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
+
+[project]
+name = "BotOps"
+dynamic = []
+requires-python = ">=3.12"
+description = "Telegram bot library with related operations."
+authors = [
+    { name = "Kirill Lapushinskiy", email = "kirill@lapushinskiy.ru" },
+]
+packages = [
+    { include = "botops" },
+]
+include = [
+    "README.md",
+    "CHANGELOG.md",
+]
+repository = "https://github.com/givemepillow/BotOps"
+keywords = [
+    "bot",
+    "telegram",
+    "chatbot",
+    "asyncio",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Web Environment",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Communications :: Chat",
+]
+dependencies = [
+    "aiohttp>=3.9.5",
+    "pydantic>=2.7.4",
+    "orjson>=3.10.5",
+]
+version = "0.3.0rc1"
+
+[project.readme]
+file = "README.md"
+content-type = "text/markdown"
+
+[project.license]
+file = "LICENSE.txt"
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.13",
+    "mypy>=1.8.0",
+]
+
+[project.urls]
+Documentation = "https://github.com/givemepillow/BotOps#readme"
+Issues = "https://github.com/givemepillow/BotOps/issues"
+Source = "https://github.com/givemepillow/BotOps"
+
+[tool.pdm]
+package-type = "library"
+
+[tool.pdm.version]
+source = "scm"
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.format]
+quote-style = "double"
+docstring-code-format = true
+indent-style = "space"
+line-ending = "auto"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "UP",
+    "B",
+    "SIM",
+    "I",
+]
+extend-select = [
+    "B",
+    "Q",
+]
+fixable = [
+    "ALL",
+]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
