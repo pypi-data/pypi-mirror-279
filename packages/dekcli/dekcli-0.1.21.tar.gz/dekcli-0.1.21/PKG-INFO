@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: dekcli
+Version: 0.1.21
+Author-Email: sanzenwin <sanzenwin@gmail.com>
+License: MIT
+Requires-Python: >=3.10
+Requires-Dist: GitPython<=3.1.41
+Requires-Dist: kubernetes<=29.0.0
+Requires-Dist: smbprotocol<=1.10.1
+Requires-Dist: tqdm<=4.66.4
+Requires-Dist: deksecrets<1.0.0
+Description-Content-Type: text/markdown
+
+### dekcli
+
+```shell
+# Input a token from gitea website, the token has all permissions.
+dekcli gitea login https://sample.com
+
+# git-set's repo dir path format: git-set/org/repo/.git
+dekcli gitea init /path/to/git-set
+
+# Add local ssh token to the gitea website settings, then clone a mirror repo to add .ssh/known_hosts
+
+# Add secrets according to index.yaml
+
+# Add gitea runner to cluster
+
+dekcli gitea push /path/to/git-set
+dekcli gitea pull /path/to/git-set
+```

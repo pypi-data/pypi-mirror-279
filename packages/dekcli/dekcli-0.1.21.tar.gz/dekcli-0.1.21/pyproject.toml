@@ -1,0 +1,33 @@
+[project]
+name = "dekcli"
+version = "0.1.21"
+description = ""
+authors = [
+    { name = "sanzenwin", email = "sanzenwin@gmail.com" },
+]
+dependencies = [
+    "GitPython<=3.1.41",
+    "kubernetes<=29.0.0",
+    "smbprotocol<=1.10.1",
+    "tqdm<=4.66.4",
+    "deksecrets<1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.license]
+text = "MIT"
+
+[project.scripts]
+dekcli = "dekcli.click.__entry__:main"
+
+[tool.pdm.build]
+includes = [
+    "dekcli",
+]
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
