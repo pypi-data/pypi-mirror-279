@@ -1,0 +1,6 @@
+cvmatrix/__init__.py,sha256=3KXfAcA5rzzQXMtfwpHphgbJNZdA0XWaW96kdWVSZJw,22
+cvmatrix/cvmatrix.py,sha256=_UcbuITjk5eiTHZnxsTJebsa8H2Z3qx5PN2nR9QqOmA,23167
+cvmatrix-1.0.1.dist-info/LICENSE,sha256=YQxHqIGak0N9IPEsMkl2E4oyvKRaiJ-s-F0tGGQHxRc,10774
+cvmatrix-1.0.1.dist-info/METADATA,sha256=kMGYmLSYEWcgkn9GKMAdaoGAFHPsjYp_yebSXbrTlUc,5245
+cvmatrix-1.0.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+cvmatrix-1.0.1.dist-info/RECORD,,
