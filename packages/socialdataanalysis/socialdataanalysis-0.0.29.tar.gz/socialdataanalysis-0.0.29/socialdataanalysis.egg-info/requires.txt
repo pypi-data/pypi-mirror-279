@@ -1,0 +1,12 @@
+pandas
+numpy
+statsmodels
+scipy
+matplotlib
+sympy
+prince
+altair
+requests
+os
+pyreadstat
+pingouin
