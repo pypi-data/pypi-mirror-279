@@ -1,0 +1,73 @@
+[tool.poetry]
+name = "numalogic-prometheus"
+version = "0.8.1a2"
+description = "Numalogic Prometheus based tools"
+authors = ["Numalogic developers"]
+packages = [{ include = "numaprom" }]
+maintainers = [
+    "Avik Basu <avikbasu93@gmail.com>",
+    "Nandita Koppisetty <nandita.iitkgp@gmail.com>",
+    "Kushal Batra <i.kushalbatra@gmail.com>"
+]
+classifiers = [
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: Apache Software License",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.10"
+]
+repository = "https://github.com/numaproj/numalogic-prometheus"
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.13"
+orjson = "^3.8.4"
+prometheus-client = "^0.18"
+setuptools = "^70.0.0"
+omegaconf = "^2.3.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+coverage = "^6.3"
+black = "^23.1"
+ruff = "^0.0.264"
+pytest = "^7.1"
+pytest-cov = "^4.0"
+pre-commit = "^3.3.1"
+
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hgdsadsadassmmm
+  | \.tox
+  | \.venv
+  | \.idea
+  | _build
+  | buck-out
+  | build
+  | dist
+  | tests/.*/setup.py
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+src = ["numaprom", "tests"]
+select = ["E", "F", "UP"]
+target-version = "py39"
+show-fixes = true
+show-source = true
+extend-exclude = [
+    "*_pb2.py",
+    "*_pb2*.py",
+    "*.pyi"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
