@@ -1,0 +1,17 @@
+mdatagen/__init__.py,sha256=QZuMXFXZ7s_Mkf6rRaWMyPlVmAJPNFLG24OAtzlrDi8,202
+mdatagen/multivariate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdatagen/multivariate/mMAR.py,sha256=z2uLp9xEZDIqAgpvjnGsZnBC0-nO0BXKXQt9T_3v0NY,8520
+mdatagen/multivariate/mMCAR.py,sha256=DNs6eSVhokkGTTDGgTucYM-99lho2AJRR5gFXYkSR7g,4433
+mdatagen/multivariate/mMNAR.py,sha256=Ry9Cmee7jL9yHOzC-WOORUs7WMi1Z9sjhcBvhswUc1c,22202
+mdatagen/univariate/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdatagen/univariate/uMAR.py,sha256=M05xY83egX9vGxvf6LQAsOMRCNiUG9fF57ygQ9HNnR4,7985
+mdatagen/univariate/uMCAR.py,sha256=SSizniTTkgWc1JGgpEWRTbofmQWGXxhLTp5kr8INTW4,4689
+mdatagen/univariate/uMNAR.py,sha256=k_4Pp-bVLxv_GrJlHEfe-uGlVyJJJ-csWfU36mkhj8w,4257
+mdatagen/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mdatagen/utils/feature_choice.py,sha256=S80nRc_GRDV84ItKjahG0WmLUo8xsthod6ZfxbJ14Ac,5963
+mdatagen/utils/math_calcs.py,sha256=RGkJ-Yz87btzW2HNxlSzboMHLxzCQR55RhwUu9DeSf4,3826
+mdatagen-0.0.91.dist-info/LICENSE,sha256=yQUsvKw_6_9baTZm2Tf8PioE3rO9tJudcGmCHqxduEo,1096
+mdatagen-0.0.91.dist-info/METADATA,sha256=BQyHbG5ym6BmhlGQdceTTVB10FWpcxqTtDnYxCy0TaM,3584
+mdatagen-0.0.91.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+mdatagen-0.0.91.dist-info/top_level.txt,sha256=Jn65ZdGed7VSu4CGPBQUX7DT6rD7u-98MFaX81gJTto,9
+mdatagen-0.0.91.dist-info/RECORD,,
