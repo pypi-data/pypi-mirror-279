@@ -1,0 +1,8 @@
+README.md
+setup.py
+my_opentelemetry_setup/__init__.py
+my_opentelemetry_setup.egg-info/PKG-INFO
+my_opentelemetry_setup.egg-info/SOURCES.txt
+my_opentelemetry_setup.egg-info/dependency_links.txt
+my_opentelemetry_setup.egg-info/requires.txt
+my_opentelemetry_setup.egg-info/top_level.txt
