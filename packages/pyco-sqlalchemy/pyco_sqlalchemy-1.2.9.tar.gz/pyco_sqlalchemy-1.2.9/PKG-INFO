@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: pyco_sqlalchemy
+Version: 1.2.9
+Summary: Simple ORM BaseModel for Flask depends on SqlAlchemy
+Home-page: https://github.com/dodoru/pyco-sqlalchemy
+Author: Nico Ning
+Author-email: dodoru@foxmail.com
+License: MIT
+Platform: any
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Utilities
+Classifier: Development Status :: 4 - Beta
+Description-Content-Type: text/markdown
+Requires-Dist: SQLAlchemy<=1.3.4
+Requires-Dist: Flask-SQLAlchemy<=2.4.0
+Requires-Dist: Flask<=1.0.3
+
+# pyco-sqlalchemy
+
+- Base On `SqlAlchemy`, according to regular web sevices, encapsulate A interface class(`CoModel`), expanded the APIs
+  for CURD, which makes SqlAlchemy's ORM even simpler for humans, support with Flask/Django/OtherWebFrames.
+
+---
+
+## Release:
+
+```text
+GitCommit=5acf9fca45f5026a8826a564e85944d4bea24dea
+PublishAt=2024-06-17 22:22
+PublishVersion=1.2.9
+```
+
+---
+
+<p style="display:none">
+基于`sqlalchemy`， 基于web常规业务，封装接口类`CoModel`，提供自定义的通用接口。
+</p>  
+
+## Usage Samples:
+
+```python
+from pyco_sqlalchemy._flask import BaseModel, db
+
+
+class User(db.Model, BaseModel):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(32))
+    email = db.Column(db.String(64), unique=True)
+
+
+form = dict(name="dev")
+u1 = User.insert(form, email="dev@pypi.com")
+u3 = User.upsert_one(form, email="dev@oncode.cc")
+assert u1.id == u3.id
+
+```

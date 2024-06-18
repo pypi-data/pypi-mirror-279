@@ -1,0 +1,6 @@
+{
+  "_Version": "1.2.9",
+  "PublishAt": "2024-06-17 22:22",
+  "GitCommit": "5acf9fca45f5026a8826a564e85944d4bea24dea",
+  "GitDetail": "commit 5acf9fca45f5026a8826a564e85944d4bea24dea\nAuthor: dodoru <dodoru@foxmail.com>\nDate:   Mon Jun 17 22:22:34 2024 +0800\n\n    release: v1.2.9, archive for flask~=1.0.3 and SQLAlchemy<=1.3.4, add _.release.json\n\ncommit 2261e93aaf7df3da92438526a0a0ddf7cd003036\nAuthor: dodoru <dodoru@foxmail.com>\nDate:   Wed Jan 3 17:06:12 2024 +0800\n\n    perf: json 也使用 cache_ok, 在决定是否将 cache_ok 设置为 True 时，你需要考虑以下因素：\n    \n    列数据是否是不可变的。\n    列数据是否不依赖于外部Python状态。\n    查询是否频繁执行且性能至关重要。"
+}
