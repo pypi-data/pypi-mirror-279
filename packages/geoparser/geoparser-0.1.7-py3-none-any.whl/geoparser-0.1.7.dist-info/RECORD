@@ -1,0 +1,13 @@
+geoparser/__init__.py,sha256=7Jp0E83PZVW8TDBsHz5CnnaYiurDTQ_Qoox6Suerze0,73
+geoparser/__main__.py,sha256=eUSq5k25KfL74PATe-gYYg8BDGHxAYAOadAUIGh0IJM,812
+geoparser/gazetteer.py,sha256=nVxH3Jb2ajczl5QNepK6mkiaURPxfpP9WXIxnNQZxNM,2878
+geoparser/geodoc.py,sha256=F6XlDZzG5KDCrSt0DYCxj0uLPHQYExh-C00qd0ijm1U,1399
+geoparser/geonames.py,sha256=x_91CM0Rag5ibPb82QWzgBlxjeK235w1uw8DMNH4nQQ,14670
+geoparser/geoparser.py,sha256=NabIVTYy3sG-YbfaI43M4fvFwZzgta0TjbrUpvDuyhU,5210
+geoparser/geospan.py,sha256=x65lsd02NL0iP8TQ_9FU82kIp6gEkYqaTgoy_-1aBKE,2526
+geoparser/trainer.py,sha256=CY9qdj6MaSDx2n3SEMmIOnU-UEelXdyE5bVemUB_SKI,5322
+geoparser-0.1.7.dist-info/LICENSE,sha256=mudTVjOKDTU8bh5CMdoGLZS5M3qqhX7SuD0858ufisE,1083
+geoparser-0.1.7.dist-info/METADATA,sha256=E8GxblKP_sgbk3jOt93I4Nyk2Ibq8Mq17169P15O31c,12144
+geoparser-0.1.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+geoparser-0.1.7.dist-info/top_level.txt,sha256=3zhCNNepjJAvwa5vBk0KXkJLCTjgeapFXV8XR6hMpic,10
+geoparser-0.1.7.dist-info/RECORD,,
