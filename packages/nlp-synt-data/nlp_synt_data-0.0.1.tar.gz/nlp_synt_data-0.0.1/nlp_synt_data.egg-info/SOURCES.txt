@@ -1,0 +1,9 @@
+README.md
+setup.py
+nlp_synt_data/__init__.py
+nlp_synt_data/_version.py
+nlp_synt_data/generator.py
+nlp_synt_data.egg-info/PKG-INFO
+nlp_synt_data.egg-info/SOURCES.txt
+nlp_synt_data.egg-info/dependency_links.txt
+nlp_synt_data.egg-info/top_level.txt
