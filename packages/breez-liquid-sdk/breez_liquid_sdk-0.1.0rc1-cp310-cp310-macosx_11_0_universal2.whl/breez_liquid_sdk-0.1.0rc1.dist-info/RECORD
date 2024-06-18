@@ -1,0 +1,7 @@
+breez_liquid_sdk/__init__.py,sha256=nSu-TrdNi8MjF2lGaNw0ZdRGoNg2K_40epQuJgi4aZ8,48
+breez_liquid_sdk/breez_liquid_sdk.py,sha256=olDvByzubz-vpnk88l62KHg_I71k4sd21WwJi4kIveU,119509
+breez_liquid_sdk/libbreez_liquid_sdk_bindings.dylib,sha256=rznvPmGpMjrvvP7b0odhEXwErSD5iczvsC_zz3XMijg,27301184
+breez_liquid_sdk-0.1.0rc1.dist-info/METADATA,sha256=lJAWaeu8EcSh1eWs5djTkqg7cyrZaN0nBKL43Gavzgk,443
+breez_liquid_sdk-0.1.0rc1.dist-info/WHEEL,sha256=Nw4S-_sy5QY9u_aSwLM4rxffJlGgG5_MGtpAmRIWVPo,115
+breez_liquid_sdk-0.1.0rc1.dist-info/top_level.txt,sha256=W3ajQBIylxHwFATQ8dMy8ORJLh4-dz3bhd_P3xRYaIE,17
+breez_liquid_sdk-0.1.0rc1.dist-info/RECORD,,
