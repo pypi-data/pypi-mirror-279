@@ -1,0 +1,7 @@
+PyNomadBBO
+ropt>=0.4.0
+
+[test]
+ruff
+mypy
+pytest
