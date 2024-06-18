@@ -1,0 +1,132 @@
+# SPDX-FileCopyrightText: 2023 Karlsruher Institut für Technologie
+#
+# SPDX-License-Identifier: CC0-1.0
+
+[build-system]
+build-backend = 'setuptools.build_meta'
+requires = ['setuptools >= 61.0', 'versioneer[toml]']
+
+[project]
+name = "tds2stac"
+dynamic = ["version"]
+description = "TDS2STAC"
+
+readme = "README.md"
+authors = [
+    { name = 'Mostafa Hadizadeh', email = 'mostafa.hadizadeh@kit.edu' },
+]
+maintainers = [
+    { name = 'Mostafa Hadizadeh', email = 'mostafa.hadizadeh@kit.edu' },
+]
+license = { text = 'EUPL-1.2' }
+
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Typing :: Typed",
+]
+
+requires-python = '>= 3.9'
+dependencies = [
+    # add your dependencies here
+    "urllib3==1.26.6",
+    "versioneer==0.29",
+    "pystac==1.8.3",
+    "lxml==4.9.3",
+    "requests==2.31.0",
+    "pytz==2023.3",
+    "tqdm==4.66.1",
+    "shapely==2.0.4",
+    "pypgstac==0.7.10",
+    "psycopg==3.1.10",
+    "psycopg-pool==3.1.7"
+]
+
+[project.urls]
+Homepage = 'https://codebase.helmholtz.cloud/cat4kit/ds2stac/tds2stac'
+Documentation = "https://tds2stac.readthedocs.io/en/latest/"
+Source = "https://codebase.helmholtz.cloud/cat4kit/ds2stac/tds2stac"
+Tracker = "https://codebase.helmholtz.cloud/cat4kit/ds2stac/tds2stac/issues/"
+
+
+[project.optional-dependencies]
+testsite = [
+    "tox",
+    "tox-docker",
+    "isort==5.12.0",
+    "black==23.1.0",
+    "blackdoc==0.3.8",
+    "flake8==6.0.0",
+    "pre-commit",
+    "mypy",
+    "pytest-cov",
+    "reuse",
+    "cffconvert",
+    "types-pytz",
+    "types-requests",
+    "types-python-dateutil",
+]
+docs = [
+    "autodocsumm",
+    "sphinx-rtd-theme",
+    "hereon-netcdf-sphinxext",
+    "sphinx-design",
+    "myst_parser",
+]
+dev = [
+    "tds2stac[testsite]",
+    "tds2stac[docs]",
+    "PyYAML",
+    "types-PyYAML",
+]
+
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.setuptools]
+zip-safe = false
+license-files = ["LICENSES/*"]
+
+[tool.setuptools.package-data]
+tds2stac = ["py.typed"]
+
+[tool.setuptools.packages.find]
+namespaces = false
+exclude = [
+    'docs',
+    'tests*',
+    'examples'
+]
+
+[tool.pytest.ini_options]
+addopts = '-v'
+
+[tool.versioneer]
+VCS = 'git'
+style = 'pep440'
+versionfile_source = 'tds2stac/_version.py'
+versionfile_build = 'tds2stac/_version.py'
+tag_prefix = ''
+parentdir_prefix = ''
+
+
+[tool.isort]
+profile = "black"
+line_length = 79
+src_paths = ["tds2stac"]
+float_to_top = true
+known_first_party = "tds2stac"
+
+[tool.black]
+line-length = 79
+target-version = ['py39']
+
+[tool.coverage.run]
+omit = ["tds2stac/_version.py"]
