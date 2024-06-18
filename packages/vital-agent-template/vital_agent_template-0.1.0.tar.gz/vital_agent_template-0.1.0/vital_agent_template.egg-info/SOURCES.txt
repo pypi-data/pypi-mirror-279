@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+vital_agent_template/__init__.py
+vital_agent_template/vital_agent_fastapi_app.py
+vital_agent_template.egg-info/PKG-INFO
+vital_agent_template.egg-info/SOURCES.txt
+vital_agent_template.egg-info/dependency_links.txt
+vital_agent_template.egg-info/requires.txt
+vital_agent_template.egg-info/top_level.txt
