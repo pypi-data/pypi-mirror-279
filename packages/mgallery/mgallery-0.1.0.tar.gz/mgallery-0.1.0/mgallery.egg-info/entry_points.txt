@@ -1,0 +1,2 @@
+[console_scripts]
+mgallery = mgallery.__main__:main
