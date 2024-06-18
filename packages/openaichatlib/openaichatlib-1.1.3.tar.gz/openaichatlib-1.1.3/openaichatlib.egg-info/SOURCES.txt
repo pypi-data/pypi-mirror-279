@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+openaichatlib/V3.py
+openaichatlib/__init__.py
+openaichatlib/typings.py
+openaichatlib/utils.py
+openaichatlib/version.py
+openaichatlib.egg-info/PKG-INFO
+openaichatlib.egg-info/SOURCES.txt
+openaichatlib.egg-info/dependency_links.txt
+openaichatlib.egg-info/requires.txt
+openaichatlib.egg-info/top_level.txt
