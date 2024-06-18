@@ -1,0 +1,11 @@
+LICENSE
+README.rst
+pyproject.toml
+src/pytest_custom_outputs/__init__.py
+src/pytest_custom_outputs/custom_outputs.py
+src/pytest_custom_outputs.egg-info/PKG-INFO
+src/pytest_custom_outputs.egg-info/SOURCES.txt
+src/pytest_custom_outputs.egg-info/dependency_links.txt
+src/pytest_custom_outputs.egg-info/entry_points.txt
+src/pytest_custom_outputs.egg-info/requires.txt
+src/pytest_custom_outputs.egg-info/top_level.txt

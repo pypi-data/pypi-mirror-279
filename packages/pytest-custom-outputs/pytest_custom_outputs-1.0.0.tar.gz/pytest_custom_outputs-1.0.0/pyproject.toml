@@ -1,0 +1,43 @@
+[build-system]
+requires = [
+  "setuptools>=61.0.0",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-custom_outputs"
+description = "A plugin that allows users to create and use custom outputs instead of the standard Pass and Fail. Also allows users to retrieve test results in fixtures."
+version = "1.0.0"
+readme = {file = "README.rst", content-type = "text/markdown"}
+requires-python = ">=3.8"
+authors = [
+    { name = "Babak Michael Engheta", email = "michaelengheta55@gmail.com" },
+]
+maintainers = [
+    { name = "Babak Michael Engheta", email = "michaelengheta55@gmail.com" },
+]
+license = {file = "LICENSE"}
+classifiers = [
+    "Framework :: Pytest",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Testing",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: BSD License",
+]
+dependencies = [
+    "pytest>=6.2.0",
+]
+[project.urls]
+Repository = "https://github.com/MichaelE55/pytest-custom_outputs"
+[project.entry-points.pytest11]
+custom_outputs = "pytest_custom_outputs.custom_outputs"
