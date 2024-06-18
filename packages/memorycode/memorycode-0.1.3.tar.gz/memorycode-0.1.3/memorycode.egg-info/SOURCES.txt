@@ -1,0 +1,12 @@
+README.md
+setup.py
+memorycode.egg-info/PKG-INFO
+memorycode.egg-info/SOURCES.txt
+memorycode.egg-info/dependency_links.txt
+memorycode.egg-info/requires.txt
+memorycode.egg-info/top_level.txt
+thonnycontrib/memorycode/__init__.py
+thonnycontrib/memorycode/log.py
+thonnycontrib/memorycode/memorycode.py
+thonnycontrib/memorycode/memorycodeView.py
+thonnycontrib/memorycode/repoManager.py
