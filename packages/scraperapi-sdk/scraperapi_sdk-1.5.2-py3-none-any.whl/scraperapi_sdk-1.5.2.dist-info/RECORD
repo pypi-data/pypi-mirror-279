@@ -1,0 +1,7 @@
+scraperapi_sdk/__init__.py,sha256=fy9rS9FUL26PfhwzNr7Uyzw3yI99zYIfGuvtt8Q4fMY,195
+scraperapi_sdk/__version__.py,sha256=ZqIeegAkS9hUxPdokkQlmA4gaxFZJHbq5aQW7erKrzU,46
+scraperapi_sdk/_client.py,sha256=m75YcgxizkAgEL32JLkji2Y6FkanKBm_30gWbuSlGE0,22991
+scraperapi_sdk/exceptions.py,sha256=rAyr9UbUSudOGrVTRA9PjI2jSEzR_lJiVB65i2vxiag,231
+scraperapi_sdk-1.5.2.dist-info/METADATA,sha256=KoDApn1DetkYBEJOvuQkIgftKWcnLWPD99YmrXp8MmU,15141
+scraperapi_sdk-1.5.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+scraperapi_sdk-1.5.2.dist-info/RECORD,,
