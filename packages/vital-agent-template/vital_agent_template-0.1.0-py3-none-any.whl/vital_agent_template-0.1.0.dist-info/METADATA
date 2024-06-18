@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: vital-agent-template
+Version: 0.1.0
+Summary: Vital Agent Template
+Home-page: https://github.com/vital-ai/vital-agent-template-python
+Author: Marc Hadfield
+Author-email: marc@vital.ai
+License: Apache License 2.0
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: vital-ai-vitalsigns >=0.1.19
+Requires-Dist: PyYAML >=6.0.1
+Provides-Extra: dev
+Requires-Dist: wheel >=0.43.0 ; extra == 'dev'
+
+# vital-agent-template-python
+=======
