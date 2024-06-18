@@ -1,0 +1,9 @@
+odoo/addons/vertical_carsharing_mail/__init__.py,sha256=m9EwjQid0_uoD8cYfvb5nXUcNfwuHpJwwB2c3aAvtLo,44
+odoo/addons/vertical_carsharing_mail/__manifest__.py,sha256=ZDOoSqc7Ey2FK3rR4kiVJH1sG3z6fDvAkU54Sfawbyg,573
+odoo/addons/vertical_carsharing_mail/data/vc_mail_data.xml,sha256=nBD7Sop6O5Wienww4nT3k5oyfitdYom03Ca18bpE7GA,1416
+odoo/addons/vertical_carsharing_mail/models/__init__.py,sha256=OhJy-jbUeeE8k5mKNnnEswiLmaRaIpe4DliD3Vmrx10,29
+odoo/addons/vertical_carsharing_mail/models/account_invoice.py,sha256=1mJOLqaZl3ZQDGM2qZasrwxZ6J26f8Y-DogxtUiavBo,572
+odoo12_addon_vertical_carsharing_mail-12.0.0.0.3.99.dev1.dist-info/METADATA,sha256=xks7oc5Rj__8mmV31deSkyviRspI58Z4SCFuJfA9RUI,416
+odoo12_addon_vertical_carsharing_mail-12.0.0.0.3.99.dev1.dist-info/WHEEL,sha256=-G_t0oGuE7UD0DrSpVZnq1hHMBV9DD2XkS5v7XpmTnk,110
+odoo12_addon_vertical_carsharing_mail-12.0.0.0.3.99.dev1.dist-info/top_level.txt,sha256=qBj40grFkGOfDZ2WDSw3y1RnDlgG0u8rP8pvGNdbz4w,5
+odoo12_addon_vertical_carsharing_mail-12.0.0.0.3.99.dev1.dist-info/RECORD,,
