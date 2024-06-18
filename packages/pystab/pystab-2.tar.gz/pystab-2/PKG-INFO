@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: pystab
+Version: 2
+Summary: Python wrapper of C functions for stable distributions
+Home-page: https://git.sr.ht/~coco/pystab
+Author: Enric Meinhardt-Llopis
+Author-email: enric.meinhardt@fastmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+
+UNKNOWN
+
