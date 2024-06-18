@@ -1,0 +1,11 @@
+graphtools>=1.5.0
+keras==2.13.1
+multiscale_phate==0.0
+numpy>=1.14.0
+scikit-learn
+scipy>=1.1.0
+tqdm
+
+[test]
+numpy>=1.14.0
+phate
