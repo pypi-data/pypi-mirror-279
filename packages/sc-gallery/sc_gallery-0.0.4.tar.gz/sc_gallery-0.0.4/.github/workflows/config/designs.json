@@ -1,0 +1,756 @@
+[
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "aes",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "cache": true,
+        "design": "ariane",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "cache": false,
+        "design": "ariane",
+        "remote": false,
+        "skip": "Global routing congestion",
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "cache": false,
+        "design": "ariane",
+        "remote": false,
+        "skip": "Requires too much memory for github runner 32GB+",
+        "target": "asap7_demo"
+    },
+    {
+        "cache": true,
+        "design": "ariane",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "freepdk45_demo"
+    },
+    {
+        "cache": false,
+        "design": "ariane",
+        "remote": false,
+        "skip": "OpenROAD unable to place macros.",
+        "target": "gf180_demo"
+    },
+    {
+        "cache": false,
+        "design": "ariane",
+        "remote": false,
+        "skip": "Macro placement issue",
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "cache": true,
+        "design": "ariane",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "skywater130_demo"
+    },
+    {
+        "cache": true,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "cache": true,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "cache": true,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "asap7_demo"
+    },
+    {
+        "cache": true,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "freepdk45_demo"
+    },
+    {
+        "cache": false,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "OpenROAD unable to place macros.",
+        "target": "gf180_demo"
+    },
+    {
+        "cache": false,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "Macro placement issue",
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "cache": true,
+        "design": "black_parrot",
+        "remote": false,
+        "skip": "Requires too much memory for github runner",
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "caliptra-datavault",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "caliptra-datavault",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-datavault",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "asap7_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-datavault",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "freepdk45_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-datavault",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "skywater130_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-keyvault",
+        "remote": false,
+        "skip": "Placement density issue",
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-keyvault",
+        "remote": false,
+        "skip": "Placement density issue",
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-keyvault",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "asap7_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-keyvault",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "freepdk45_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-keyvault",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "caliptra-sha512",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "caliptra-sha512",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "caliptra-sha512",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "caliptra-sha512",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-sha512",
+        "remote": false,
+        "skip": "Detail routing failure",
+        "target": "gf180_demo"
+    },
+    {
+        "cache": false,
+        "design": "caliptra-sha512",
+        "remote": false,
+        "skip": "Ends with loads of DRC violations",
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "caliptra-sha512",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "dynamic_node",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "ethmac",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "gcd",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "heartbeat",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "ibex",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "jpeg",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "jpeg",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "jpeg",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "jpeg",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "jpeg",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "cache": false,
+        "design": "jpeg",
+        "remote": false,
+        "skip": "Detail routing/cts/place speed regression",
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "jpeg",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "mock_alu",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "openmsp430",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "picorv32",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "riscv32i",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "spi",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "cache": false,
+        "design": "swerv",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "cache": false,
+        "design": "swerv",
+        "remote": false,
+        "skip": "Unable to route due to routing congrestion",
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "cache": false,
+        "design": "swerv",
+        "remote": false,
+        "skip": "Requires too much memory for github runner, openroad terminates with -9",
+        "target": "asap7_demo"
+    },
+    {
+        "design": "swerv",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "cache": false,
+        "design": "swerv",
+        "remote": false,
+        "skip": "Routing fails in detail route with: Error: net17712 24 pin not visited #guides = 156",
+        "target": "gf180_demo"
+    },
+    {
+        "cache": true,
+        "design": "swerv",
+        "remote": false,
+        "skip": "Times out on github runner",
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "cache": false,
+        "design": "swerv",
+        "remote": false,
+        "skip": "Requires too much memory for github runner and unable to detail route",
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "tiny_rocket",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "tiny_rocket",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "tiny_rocket",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "tiny_rocket",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "tiny_rocket",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "cache": false,
+        "design": "tiny_rocket",
+        "remote": false,
+        "skip": "CTS detail placement issue",
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "tiny_rocket",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_lvt"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "asap7_asap7sc7p5t_slvt"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "asap7_demo"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "freepdk45_demo"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "gf180_demo"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "gf180_gf180mcu_fd_sc_mcu7t5v0"
+    },
+    {
+        "design": "uart",
+        "remote": false,
+        "target": "skywater130_demo"
+    },
+    {
+        "design": "zerosoc_flat",
+        "remote": false,
+        "target": null
+    },
+    {
+        "design": "zerosoc_hierarchy",
+        "remote": false,
+        "target": null
+    }
+]

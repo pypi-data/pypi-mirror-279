@@ -1,0 +1,45 @@
+on:
+  workflow_dispatch:
+    inputs:
+      sc-ref:
+        required: false
+        type: string
+        description: which siliconcompiler ref to use
+      lambdapdk-ref:
+        required: false
+        type: string
+        description: which lambdapdk ref to use
+      concurrency:
+        required: false
+        type: number
+        default: 50
+        description: how many concurrent runners to use
+
+name: 'Run Gallery Designs'
+
+jobs:
+  designs:
+    uses: ./.github/workflows/run-designs.yml
+    with:
+      sc-ref: ${{ inputs.sc-ref }}
+      lambdapdk-ref: ${{ inputs.lambdapdk-ref }}
+      concurrency: ${{ fromJson(inputs.concurrency) }}
+      scgallery-ref: ${{ github.ref }}
+    secrets: inherit
+
+  update_montage:
+    name: Merge image artifacts
+    runs-on: ubuntu-latest
+    if: always() && !failure() && !cancelled()
+    needs: designs
+
+    steps:
+      - name: Generate montage
+        uses: convictional/trigger-workflow-and-wait@v1.6.5
+        with:
+          github_token: ${{ github.token }}
+          ref: ${{ github.ref }}
+          owner: ${{ github.repository_owner }}
+          repo: scgallery
+          workflow_file_name: montage.yml
+          client_payload: '{"workflow-id": "${{ github.run_id }}"}'
