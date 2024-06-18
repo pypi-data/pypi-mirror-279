@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+ytget/__init__.py
+ytget/__main__.py
+ytget/console.py
+ytget/exceptions.py
+ytget/out_colors.py
+ytget/utils.py
+ytget.egg-info/PKG-INFO
+ytget.egg-info/SOURCES.txt
+ytget.egg-info/dependency_links.txt
+ytget.egg-info/entry_points.txt
+ytget.egg-info/requires.txt
+ytget.egg-info/top_level.txt
