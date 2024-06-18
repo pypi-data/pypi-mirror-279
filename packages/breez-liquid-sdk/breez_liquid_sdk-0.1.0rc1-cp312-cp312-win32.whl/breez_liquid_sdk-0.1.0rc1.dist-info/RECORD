@@ -1,0 +1,9 @@
+breez_liquid_sdk/__init__.py,sha256=rZLqDnjbKJh8i-h6xgPlblRxwAS3GGmQ8S3SQTOiJq0,49
+breez_liquid_sdk/breez_liquid_sdk.py,sha256=olDvByzubz-vpnk88l62KHg_I71k4sd21WwJi4kIveU,119509
+breez_liquid_sdk/breez_liquid_sdk_bindings.dll,sha256=hWJgsEU82bG1TghpqVuIzSSJO6gmhSnske6vemti7v8,9017856
+breez_liquid_sdk/msvcp140.dll,sha256=yOdFb0rJqmXvOtYaba8w7-yXNzRNFzstbSwW51IFKlU,449616
+breez_liquid_sdk/vcruntime140.dll,sha256=yOYInm7-lXOvVc8BHE5BshI1slMfbDlfqtU_QQ8irKo,91112
+breez_liquid_sdk-0.1.0rc1.dist-info/METADATA,sha256=WF9tuIMeC1bPy36Wc-swKldpiXkyCklRpHeQHJCHCxA,460
+breez_liquid_sdk-0.1.0rc1.dist-info/WHEEL,sha256=N7fPzcANYQSP-1lTeUuLriuOSDjRoCV8Fj8BnfANnGQ,98
+breez_liquid_sdk-0.1.0rc1.dist-info/top_level.txt,sha256=W3ajQBIylxHwFATQ8dMy8ORJLh4-dz3bhd_P3xRYaIE,17
+breez_liquid_sdk-0.1.0rc1.dist-info/RECORD,,
