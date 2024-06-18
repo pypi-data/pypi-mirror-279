@@ -1,0 +1,31 @@
+Metadata-Version: 2.3
+Name: metahopt
+Version: 1.1.1
+Summary: Metaheuristics optimization framework
+Project-URL: Documentation, https://github.com/alex-marty/metahopt
+Project-URL: Issues, https://github.com/alex-marty/metahopt/issues
+Project-URL: Source, https://github.com/alex-marty/metahopt
+Author-email: Alexandre Marty <contact@marty.in>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Description-Content-Type: text/markdown
+
+# metahopt
+
+Toolbox for mathematical optimization of combinatorial problems using metaheuristics and derivative free optimization using direct search methods.
