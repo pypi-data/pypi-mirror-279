@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+        <record id="fleet_vehicle_state_pending_activation" model="fleet.vehicle.state">
+            <field name="sequence" eval="0"/>
+            <field name="name">Pendent activació</field>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="fleet_vehicle_state_active" model="fleet.vehicle.state">
+            <field name="sequence" eval="1"/>
+            <field name="name">Actiu</field>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="fleet_vehicle_state_inactive" model="fleet.vehicle.state">
+            <field name="sequence" eval="2"/>
+            <field name="name">No actiu</field>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="fleet_vehicle_state_on_sale" model="fleet.vehicle.state">
+            <field name="sequence" eval="3"/>
+            <field name="name">En venda</field>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="fleet_vehicle_state_pending_change_name" model="fleet.vehicle.state">
+            <field name="sequence" eval="4"/>
+            <field name="name">Pendent canvi nom</field>
+            <field name="archived" eval="False"/>
+        </record>
+    </data>
+</odoo>

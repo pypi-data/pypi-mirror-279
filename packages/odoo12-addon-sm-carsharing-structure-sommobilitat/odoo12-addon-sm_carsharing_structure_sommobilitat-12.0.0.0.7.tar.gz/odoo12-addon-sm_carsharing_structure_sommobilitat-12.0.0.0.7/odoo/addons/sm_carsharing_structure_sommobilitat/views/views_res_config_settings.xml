@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="res_config_settings_view_form_cs_fleet" model="ir.ui.view">
+    <field name="name">res.config.settings.view.form.inherit.cs.fleet</field>
+    <field name="model">res.config.settings</field>
+    <field name="priority" eval="100"/>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//div[hasclass('settings')]" position="inside">
+        <div class="app_settings_block" data-string="CS Fleet" string="CS Fleet" data-key="cs_fleet">
+          <div class="sm_carsharing_structure_sommobilitat">
+            <h2>Cuenta analítica automática</h2>
+            <div class="row mt16 o_settings_container">
+              <group>
+                <field name="sm_carsharing_structure_sommobilitat_analitic_group"/>
+                <field name="sm_carsharing_structure_sommobilitat_analitic_parent"/>
+              </group>
+            </div>
+          </div>
+        </div>
+      </xpath>
+    </field>
+  </record>
+</odoo>

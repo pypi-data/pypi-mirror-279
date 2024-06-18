@@ -1,0 +1,304 @@
+<odoo>
+  <data>
+
+    <record id="new_fleet_vehicle_form_view_unique" model="ir.ui.view">
+      <field name="name">new_fleet_vehicle_form_view_unique</field>
+      <field name="model">fleet.vehicle</field>
+      <field name="type">form</field>
+      <field name="priority">1</field>
+      <field name="arch" type="xml">
+        <form string="Vehicle">
+            <header>
+                <field name="state_id" widget="statusbar" clickable="True" on_change="1" can_create="true" can_write="true" modifiers="{}"/>
+            </header>
+            <sheet>
+                <div class="oe_button_box" name="button_box">
+                    <button name="open_assignation_logs" string="Drivers History" type="object" class="oe_stat_button" icon="fa-history"/>
+                    <button name="return_action_to_open"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-book"
+                        context="{'xml_id':'fleet_vehicle_log_contract_action', 'search_default_open': 1}"
+                        help="show the contract for this vehicle">
+                        <field name="contract_count" widget="statinfo" string="Contracts"/>
+                    </button>
+                    <button name="act_show_log_cost"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-usd"
+                        help="show all the costs for this vehicle"
+                        groups="fleet.fleet_group_manager">
+                        <field name="cost_count" widget="statinfo" string="Costs"/>
+                    </button>
+                    <button name="return_action_to_open"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-wrench"
+                        context="{'xml_id':'fleet_vehicle_log_services_action'}"
+                        help="show the services logs for this vehicle" >
+                        <field name="service_count" widget="statinfo" string="Services"/>
+                    </button>
+                    <button name="return_action_to_open"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-flask"
+                        context="{'xml_id':'fleet_vehicle_log_fuel_action'}"
+                        help="show the fuel logs for this vehicle" >
+                        <field name="fuel_logs_count" widget="statinfo" string="Fuel"/>
+                    </button>
+                    <button name="return_action_to_open"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-tachometer"
+                        context="{'xml_id':'fleet_vehicle_odometer_action'}"
+                        help="show the odometer logs for this vehicle" >
+                        <field name="odometer_count" widget="statinfo" string="Odometer"/>
+                    </button>
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                        <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                    </button>
+                </div>
+                <field name="image_medium" widget='image' class="oe_avatar"/>
+                <div class="oe_title">
+                    <label for="model_id" class="oe_edit_only"/><sup class="oe_edit_only" style="color: #00ad5f">Fleetio</sup>
+                    <h1>
+                        <field name="model_id" placeholder="e.g. Model S"/>
+                    </h1>
+                    <label for="sm_version" class="oe_edit_only"/><sup class="oe_edit_only" style="color: #00ad5f">Fleetio</sup>
+                    <h3>
+                        <field name="sm_version" class="oe_inline" placeholder="Intens R135"/>
+                    </h3>
+                    <label for="license_plate" class="oe_edit_only"/><sup class="oe_edit_only" style="color: #00ad5f">Fleetio</sup>
+                    <h2>
+                        <field name="license_plate" required="1" class="oe_inline" placeholder="Sense espais 0000AAA"/>
+                    </h2>
+                    <label for="tag_ids" class="oe_edit_only"/>
+                    <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                </div>
+                <group col="2" name="Service type" string="Modalitat Servei">
+                    <group >
+                        <field name="state_id" string="Estat"/>
+                    </group>
+                    <group >
+                        <field name="analytic_account_id" readonly="1" string="Compte analític" attrs="{'invisible': [('id', '=', False)], 'required': [('id', '!=', False)]}"/>
+                        <field name="contracte_actiu" required="0" string="Contracte actiu"/>
+                    </group>
+                </group>
+                <group col="2" name="Vehicle Data" string="Dades vehicle">
+                    <group >
+                        <field name="vin_sn" required="1" string="Bastidor"/>
+                        <label for="odometer" string="Km actuals"/>
+                        <div class="o_row">
+                            <field name="odometer"/>
+                            <field name="odometer_unit"/>
+                        </div>
+                        <field name="key_number" />
+                        <field name="vehicle_type" required="1" string="Tipus"/>
+                        <field name="color" required="1"/>
+                        <field name="doors" required="1" string="Portes" />
+                    </group>
+                    <group >
+                        <field name="seats" string="Seients" required="1" />
+                        <field name="battery_size" required="1" string="Capacitat bateria" />
+                        <field name="tire_type" required="0" />
+                        <field name="acquisition_date" required="1" />
+                        <field name="vehicle_license" widget="url"/>
+                        <field name="technical_data" widget="url" />
+                    </group>
+                </group>
+
+                <group col="2" name="Ownership and Management" string="Propietat i gestió">
+                    <group >
+                        <field name="ownership" required="True"/>
+                        <field name="app_service" string="Servei APP"/>
+                    </group>
+                    <group >
+                        <!-- ᶠˡᵉᵉᵗⁱᵒ -->
+                    </group>
+                </group>
+
+                <group col="2" name="Ensurance" string="Assegurança">
+                    <group >
+                        <field name="ensurance_provider"/>
+                        <field
+                            name="ensurance_phone"
+                            attrs="{'invisible':['|', '|', ('ensurance_provider', '=', False), ('ensurance_phone', '=', False), ('ensurance_mobile', '!=', False)]}"
+                            string="Telèfon"/>
+                        <field
+                            name="ensurance_mobile"
+                            attrs="{
+                                'invisible':
+                                    [
+                                        '|',
+                                        ('ensurance_provider', '=', False),
+                                        '&amp;',
+                                        '&amp;',
+                                        ('sale_partner_id', '!=', False),
+                                        ('ensurance_mobile', '=', False),
+                                        ('ensurance_phone', '!=', False)
+                                    ]}"
+                            string="Telèfon"/>
+                        <field name="ensurance_extras"/>
+                    </group>
+                    <group >
+                        <field name="ensurance_polissa"/>
+                        <field name="ensurance_document" widget="url"/>
+                    </group>
+
+                </group>
+
+                <group col="2" name="Propietary Data" string="Dades Propietari" attrs="{'invisible': [('ownership', '!=', 'customer')]}">
+                    <field name="owner_partner_id" string="Propietari" attrs="{'required': [('ownership', '=', 'customer')]}"/>
+                </group>
+
+                <group col="2" name="Purchase Data" string="Dades Compra" attrs="{'invisible': [('ownership', '=', 'customer')]}">
+                    <group >
+                        <field name="partner_id" string="Proveïdor/Concessionàri" /> <!-- attrs="{'required': [('ownership', '!=', 'customer')]}" -->
+                        <field name="purchase_invoice_id" string="Factura"/>
+                        <field name="bougth_date" string="Data de compra"/>
+                        <field name="bought_price" string="Preu de compra" widget="monetary"/>
+                        <field name="bougth_km" string="Km a la compra"/>
+                    </group>
+                    <group >
+                        <field name="financing" string="Finançament"/>
+                        <field name="account_loan_id" attrs="{'invisible':[('financing', '!=', True)], 'required':[('financing', '=', True)]}" string="Préstec"/>
+                        <field name="financing_end_finish" attrs="{'invisible':[('financing', '!=', True)]}" string="Data Finalització finançament"/>
+                        <field name="financing_contract" widget="url" attrs="{'invisible':[('financing', '!=', True)]}" string="Contracte de finançament"/>
+                    </group>
+                </group>
+                
+                <group col="2" name="Sales Data" string="Dades venda" attrs="{'invisible': [('ownership', '=', 'customer')]}">
+                    <group >
+                        <field name="date_change_name" string="Data confirmació canvi de nom"/>
+                        <field name="sale_invoice_id" string="Factura"/>
+                        <field name="sale_date" attrs="{'invisible':[('sale_invoice_id', '=', False)]}" string="Data Venda"/>
+                        <field name="sale_price" attrs="{'invisible':[('sale_invoice_id', '=', False)]}" string="Preu Venda" widget="monetary"/>
+                    </group>
+                    <group >
+                        <field name="sale_partner_id" attrs="{'invisible':[('sale_invoice_id', '=', False)]}" string="Nom comprador"/>
+                        <field
+                            name="sale_phone"
+                            attrs="{'invisible':['|', '|', ('sale_partner_id', '=', False), ('sale_phone', '=', False), ('sale_mobile', '!=', False)]}"
+                            string="Telèfon"/>
+                        <field
+                            name="sale_mobile"
+                            attrs="{
+                                'invisible':
+                                    [
+                                        '|',
+                                        ('sale_partner_id', '=', False),
+                                        '&amp;',
+                                        '&amp;',
+                                        ('sale_partner_id', '!=', False),
+                                        ('sale_mobile', '=', False),
+                                        ('sale_phone', '!=', False)
+                                    ]}"
+                            string="Telèfon"/>
+                        <field name="sale_email" attrs="{'invisible':[('sale_partner_id', '=', False)]}" string="Email"/>
+                    </group>
+                </group>
+                <group col="2" name="Other" string="Altres">
+                    <group >
+                        <field name="barcelona_id_code" string="Codi identificatiu Barcelona" readonly="0"/>
+                    </group>
+                    <group >
+                        <field name="ivtm_status" string="Tramitada bonificació IVTMS"/>
+                    </group>
+                </group>
+                <group col="2" name="Management" string="Mantenimiento">
+                    <group >
+                        <field name="annual_revision_after_purchase_date" string="Revisió anual després de compra" readonly="0"/>
+                        <field name="itv_after_purchase_date" string="ITV després de compra" readonly="0"/>
+                    </group>
+                    <group >
+                        <field name="front_tire_percent_after_purchase" string="% rodes davant després de compra"/>
+                        <field name="rear_tire_percent_after_purchase" string="% rodes darrera després de compra"/>
+                        <field name="document_last_itv" widget="url" string="Document ITV passada"/>
+                    </group>
+                </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="activity_ids" widget="mail_activity"/>
+                <field name="message_ids" widget="mail_thread" options='{"thread_level": 1}'/>
+            </div>
+        </form>
+      </field>
+    </record>
+
+
+
+
+
+    <record id="view_cs_car_form" model="ir.ui.view">
+      <field name="name">sm_carsharing_structure_instance.cs_car.form</field>
+      <field name="model">fleet.vehicle</field>
+      <field name="type">form</field>
+      <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='acquisition_date']"  position="after">
+          <field name="bougth_date"/>
+          <field name="bougth_km"/>
+        </xpath>
+        <xpath expr="//field[@name='horsepower_tax']"  position="after">
+          <label for="battery_size"/>
+          <div class="o_row">
+            <field name="battery_size"/><span>kW/h</span>
+          </div>
+        </xpath>
+        <xpath expr="//field[@name='color']"  position="after">
+          <field name="has_gps"/>
+        </xpath>
+        <xpath expr="//sheet" position="inside">
+          <group col="2">
+            <group string="Type">
+              <field name="car_type" />
+              <field name="battery_fee" />
+              <field name="battery_rental" />
+            </group>
+        
+            <group string="Dates">
+              <field name="next_revision" />
+              <field name="next_tech_revision" />
+            </group>
+
+            <group string="Assegurança">
+              <field name="insurance_company" />
+              <field name="insurance_age" />
+              <field name="insurance_policy" />
+              <field name="insurance_expiricy" />
+              <field name="insurance_extras" />
+            </group>
+
+            <group string="Via-T">
+              <field name="viat_applies"/>
+              <field name="viat_pan" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_expiricy" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_onplace" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_eco_accepted" attrs="{'invisible':[('viat_applies','=',False)]}" />
+              <field name="viat_eco_approved_date" attrs="{'invisible':[('viat_applies','=',False)]}" />
+            </group>
+            <group string="Live / SMOU">
+              <field name="live_card_status" />
+              <field name="live_card" />
+              <field name="live_smou" />
+              <!--field name="smou_email_id"/-->
+            </group>
+            <group string="Altres" >
+              <field name="r_link_update" />
+              <field name="vinyl" />
+              <field name="key_number" />
+              <field name="secondary_key_location" />
+              <field name="ivtm_status" />
+              <field name="electromaps_code" />
+              <field name="garagekey_code" />
+              <field name="contact_person_txt" />
+              <field name="origin" />
+              <field name="drive_docs" />
+            </group>
+          </group>
+        </xpath>
+      </field>
+    </record>
+  </data>
+</odoo>

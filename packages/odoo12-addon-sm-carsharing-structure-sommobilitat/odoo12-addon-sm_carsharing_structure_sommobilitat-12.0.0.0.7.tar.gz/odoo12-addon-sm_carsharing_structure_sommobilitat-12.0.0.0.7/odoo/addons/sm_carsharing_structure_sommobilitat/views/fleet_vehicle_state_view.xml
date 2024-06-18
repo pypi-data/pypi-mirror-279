@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="fleet_vehicle_state_view_tree_inherited" model="ir.ui.view">
+            <field name="name">sm_carsharing_structure_sommobilitat.fleet_vehicle_state_view_tree_inherited</field>
+            <field name="model">fleet.vehicle.state</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="fleet.fleet_vehicle_state_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="archived"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
