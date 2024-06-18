@@ -1,0 +1,10 @@
+dinjectorr/__init__.py,sha256=HEuCoFkDzhUmyNn4IDPS64fO7j8PV9b9kmdXU4Qtais,97
+dinjectorr/inject.py,sha256=uFGHZbT4WK3mzTo4JqV4TqSU3pNwwb1qqYR4WpJhVzM,644
+dinjectorr/injector.py,sha256=LU5bP2zdES9iX3Nl_BOVDNTX5qZsI-Q2sf2TEdwa4KQ,286
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_dinjectorr.py,sha256=rdHtmddWn3tJW6DtLHKUD_Pq-ycVLV-8uWwYyR9_l50,1179
+dinjectorr-0.1.8.dist-info/LICENSE,sha256=KIimYsxRlLm4PdJ_G2X-gY_6S0UlqWHDHTy5Agmp638,1073
+dinjectorr-0.1.8.dist-info/METADATA,sha256=bTWCr4mMQvGE97N81X9fLPE0H7tpn8LQRto7EjjkO04,2024
+dinjectorr-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dinjectorr-0.1.8.dist-info/top_level.txt,sha256=ks47FAnk4Kd2puNCqk3ZDKcRRZcaoZNgDzLPAfy0Q6c,17
+dinjectorr-0.1.8.dist-info/RECORD,,
