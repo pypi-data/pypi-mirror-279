@@ -1,0 +1,3 @@
+[console_scripts]
+server_management = server_management.__main__:main
+
