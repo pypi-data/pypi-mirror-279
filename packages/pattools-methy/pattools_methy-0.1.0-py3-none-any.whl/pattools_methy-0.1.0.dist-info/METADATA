@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pattools-methy
+Version: 0.1.0
+Summary: pattools is a BS-seq analysis tool suite based on pat format
+Home-page: https://hcyvan.github.io/pattools/index.html
+Author: Department of research and development, Zhejiang Gaomei Genomics
+Author-email: it@gomicsgene.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.10, <4
+License-File: LICENSE
+Requires-Dist: pysam
+Requires-Dist: cvxpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: mpi4py
+Requires-Dist: hdbscan
+
