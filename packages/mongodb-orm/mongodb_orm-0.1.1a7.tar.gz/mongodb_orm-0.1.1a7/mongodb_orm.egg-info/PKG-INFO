@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: mongodb-orm
+Version: 0.1.1a7
+Summary: mongodb ORM for django framework
+Home-page: UNKNOWN
+Author: Khai
+Author-email: sarraj.khaireddine@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+
+mongodb ORM for django framework
+
