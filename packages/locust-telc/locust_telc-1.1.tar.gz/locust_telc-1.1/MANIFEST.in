@@ -1,0 +1,3 @@
+include locust_telc/webui/dist/*.html
+include locust_telc/webui/dist/assets/*.ico
+include locust_telc/webui/dist/assets/*.js
