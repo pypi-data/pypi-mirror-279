@@ -1,0 +1,6 @@
+#Python VSCode Virtual Environment Files
+.venv
+
+#PyTest Cache Files
+.pytest_cache/
+__pycache__/

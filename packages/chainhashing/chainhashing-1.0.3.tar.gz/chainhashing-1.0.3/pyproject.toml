@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chainhashing"
+version = "1.0.3"
+authors = [
+  { name="Ruxton", email="rt.kellar@gmail.com" },
+]
+description = "A package for closed addressing hash tables that require chaining with linked lists."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/Ruxton07/chainhashing"
+Issues = "https://github.com/Ruxton07/chainhashing/issues"
