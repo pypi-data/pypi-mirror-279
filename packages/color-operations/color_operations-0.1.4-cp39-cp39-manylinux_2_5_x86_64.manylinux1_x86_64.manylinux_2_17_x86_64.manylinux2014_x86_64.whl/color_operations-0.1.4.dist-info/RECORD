@@ -1,0 +1,10 @@
+color_operations-0.1.4.dist-info/WHEEL,sha256=y94oxUoz_3Ha4hK-DMx1Z2lGJpGF13NMY4Y6vNxnwoc,217
+color_operations-0.1.4.dist-info/LICENSE,sha256=mb7sNsa-kEi2MR18xL3rGsl5Xxsbz7K404ZQxWE2AxY,2203
+color_operations-0.1.4.dist-info/top_level.txt,sha256=bRfVQKX5SoBAJplBIYY2ETyw8k3vvHGsLudv1BruCXs,17
+color_operations-0.1.4.dist-info/RECORD,,
+color_operations-0.1.4.dist-info/METADATA,sha256=my8ZGHppSRE3hwmRWl9ojmKdcCGsK5qOKKc_NWMrRIE,5722
+color_operations/__init__.py,sha256=ZLjXPuTNl-7PUTgph-egDcfEqJa05jxZjL7x6PYu39c,333
+color_operations/colorspace.cpython-39-x86_64-linux-gnu.so,sha256=nn65W_fz0eI5c1rdrbo-jiZng7u7RJa7jhIMn8O0wPU,555120
+color_operations/colorspace.pyx,sha256=UMRSZmyPcimuJujIOYBWU4dhGrzaMSNjG-MgRXmt6eE,12173
+color_operations/utils.py,sha256=6d-s3g224eJBoaSxBIg9nUUnfU4qwVLxMNrNTpS-gAU,3451
+color_operations/operations.py,sha256=ZQVMUPUJtUYrHqqe9IjxElN-Ii1PpOzergZSzi2i8vA,9729
