@@ -1,0 +1,3 @@
+[console_scripts]
+e9k = emtechstack.cli:cli
+emtechstack = emtechstack.cli:cli
