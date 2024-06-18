@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: jrenderer
+Version: 1.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Zsombor Klapper
+License: Apache License
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: brax (>=0.10.4)
+Requires-Dist: jax (>=0.4.28)
+
+UNKNOWN
+
