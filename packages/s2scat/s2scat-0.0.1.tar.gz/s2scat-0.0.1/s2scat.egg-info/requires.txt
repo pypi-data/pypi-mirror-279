@@ -1,0 +1,4 @@
+numpy
+optax
+s2wav>=1.0.4
+s2fft>=1.1.1
