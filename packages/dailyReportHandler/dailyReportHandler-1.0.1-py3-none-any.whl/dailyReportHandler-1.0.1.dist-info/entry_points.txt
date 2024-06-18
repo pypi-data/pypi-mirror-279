@@ -1,0 +1,2 @@
+[console_scripts]
+daily = dailyReportHandler.cmd:main
