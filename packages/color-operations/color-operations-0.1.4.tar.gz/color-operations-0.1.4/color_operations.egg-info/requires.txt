@@ -1,0 +1,9 @@
+numpy~=1.0
+
+[dev]
+pre-commit
+
+[test]
+pytest
+colormath==2.0.2
+pytest-cov
