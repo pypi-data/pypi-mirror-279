@@ -1,0 +1,15 @@
+rocketflightsim/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rocketflightsim/constants.py,sha256=5uqpzR91qgLO7xm2IMLkovPIagZ2JWOahIE16yBxZ60,1447
+rocketflightsim/flight_simulation.py,sha256=9DA8yL7GZsHTNFih_CPCWfv-qE7Og2RxejZtaQBGFdM,21779
+rocketflightsim/helper_functions.py,sha256=tV9fwkqhoN1GYmS4HyAbngMcmxB0aRpyAQTQ4eFwM1s,8402
+rocketflightsim/rocket_classes.py,sha256=kpix8ZXQ3K-tCqjGM5-HfKoH6-1snMcCnoFk-x7fbpM,13584
+rocketflightsim/tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+rocketflightsim/tools/fin_flutter.py,sha256=FxXXxTktqKdFyVk4hMIxC3NSANWSPs6se_kIEo4IAog,3910
+rocketflightsim/tools/max_theoretical_g_v.py,sha256=oIGroK35EKz-AH6NMzXjX2_ef31rAOWufyjOtQWIirU,2310
+rocketflightsim/tools/plotting_functions.py,sha256=eVoaBlPK7ObWajh41ijfERZgeVliFM-XhPFLm-jKMo8,14755
+rocketflightsim/tools/sensitivity_analyses_comparison.py,sha256=mvRHnOGYyLxZMMzeN7UUWVEcbaLzWDMxkySuLW1q11I,1191
+rocketflightsim-0.2.0.dist-info/LICENSE,sha256=o_02x4P0RtGR3yh3J_wV8fV6v3d6E4UrJzNGsxzEAcA,1074
+rocketflightsim-0.2.0.dist-info/METADATA,sha256=JcbqR3jDgGA3Bb50Jmz8o5QNrugyUTIvgjWS0QFZDq8,1173
+rocketflightsim-0.2.0.dist-info/WHEEL,sha256=AtBG6SXL3KF_v0NxLf0ehyVOh0cold-JbJYXNGorC6Q,92
+rocketflightsim-0.2.0.dist-info/top_level.txt,sha256=1J9zoPGhXtAAmb6BDakOrKjLL3iYzjtjppGMvpQ3pjQ,16
+rocketflightsim-0.2.0.dist-info/RECORD,,
