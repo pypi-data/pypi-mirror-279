@@ -1,0 +1,6 @@
+flask
+Werkzeug>=0.15.0
+pygments
+httpauth>=0.4
+humanize
+dulwich>=0.19.3
