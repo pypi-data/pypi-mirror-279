@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: make-query-params-filters
+Version: 0.0.0
+Author-email: Lucas Gasque <lucasfdg@hotmail.com>
+Project-URL: Homepage, https://github.com/LucasGasque/make-query-params-filters
+Project-URL: Issues, https://github.com/LucasGasque/make-query-params-filters/issues
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sqlalchemy
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+
+# make-query-params-filters
