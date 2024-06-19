@@ -1,0 +1,40 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ansar-create"
+readme = "README.rst"
+authors = [
+  { name="Scott Woods", email="ansar.library.management@gmail.com" }
+]
+requires-python = ">=3.7"
+classifiers=[
+	"Development Status :: 5 - Production/Stable",
+	"Intended Audience :: Developers",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.7",
+	"Programming Language :: Python :: 3.8",
+	"Programming Language :: Python :: 3.9",
+	"Programming Language :: Python :: 3.10",
+	"Programming Language :: Python :: 3.11",
+	"Programming Language :: Python :: 3.12",
+	"License :: OSI Approved :: MIT License",
+	"Operating System :: POSIX",
+	"Operating System :: POSIX :: Linux",
+	"Operating System :: POSIX :: BSD",
+	"Operating System :: MacOS",
+	"Topic :: Software Development",
+	"Topic :: Software Development :: Libraries",
+	"Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dynamic = ["description", "version", "scripts"]
+dependencies = [
+    "ansar-encode>=1.0.2"
+]
+
+[project.urls]
+Documentation = "https://ansar-create-manual.s3.ap-southeast-2.amazonaws.com/0.1.1/index.html"

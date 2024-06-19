@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: ansar-create
+Version: 1.0.4
+Summary: Tools and runtime for asynchronous programming
+Author: Scott Woods
+Author-email: Scott Woods <ansar.library.management@gmail.com>
+Project-URL: Documentation, https://ansar-create-manual.s3.ap-southeast-2.amazonaws.com/0.1.1/index.html
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD
+Classifier: Operating System :: MacOS
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.7
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Requires-Dist: ansar-encode>=1.0.2
+
+
+ansar-create
+============
+
+The **ansar-create** library uses multi-threading and multi-processing to solve difficult
+software challenges such as concurrency, interruption and cancellation. It wraps those
+platform facilities in a standard runtime model, giving developers the ability to express
+that type of software in a clear and consistent manner.
+
+This type of software is often referred to as asynchronous, event-driven or reactive
+software. It acknowledges the fundamental fact that significant events can occur at
+any time, and that software must be able to respond to those events in a reliable
+and timely manner.
+
+Features
+--------
+
+- Based on a standard model for complex software operations (SDL)
+- Uniform management of threads, processes and state machines
+- Built-in runtime facilities such as timers and logging.
+- Persistent application configuration.
+- Process orchestration.
+- Development automation.
+
+
+Changelog
+=========
+
+1.0 (2024-05-27)
+----------------
+
+- Implement objects and send
+
+- Implement home and roles
+
+- Implement ansar CLI
+
+- Complete **ansar-create** docs
