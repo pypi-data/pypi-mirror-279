@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: liechains
+Version: 0.4.1
+Summary: toolkit for blockchains
+Author: leeliewhite
+Author-email: leeliewhite@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Requires-Dist: web3
+Requires-Dist: websocket-client
+Requires-Dist: cryptography
