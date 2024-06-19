@@ -1,0 +1,44 @@
+from pyPhases.exporter.DataExporter import DataExporter
+
+class {{name}}(DataExporter):
+    """{{description}}
+
+    """
+    def checkType(self, instance) -> bool:
+        """ Checks an instance, if its type is compatible with the current Exporter
+        Parameters
+        ----------
+        path : str
+            the relative path, from the basepath, the actual normalized path can be retreived with self.getPath(path)
+        Returns
+        -------
+        bool
+        A boolean that is True if this Exporter can be used on the given instance
+        """
+        pass
+
+    def importData(self, raw):
+        """ this methods transforms raw data from the storage into a specific dataformat (defined by the exporter)
+        Parameters
+        ----------
+        raw : str
+            the data given from the storage, in form of a bytestring
+        Returns
+        -------
+        object
+        the specifc object with the type the exporter is made for
+        """
+        pass
+
+    def export(self, object):
+        """ this method transforms a specific data type into a raw data that the storage can save
+        Parameters
+        ----------
+        object : object
+            the specifc object with the type the exporter is made for
+        Returns
+        -------
+        raw : string
+            the data that can be given to the storage
+        """
+        pass

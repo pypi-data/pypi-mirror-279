@@ -1,0 +1,19 @@
+from pyPhases import Phase
+
+class {{name}}(Phase):
+    """{{description}}
+
+    on execution the method main is called
+    you can use the phase attributes for better artifact handling
+    self.config all configuration input should be stored here (p.e. self.config['epochLength'] = 30.)
+    self.metrics the evaluated metrics like 'loss' or 'accuracy' (p.e. self.metrics['accuracy'] = 0.9)
+    self.summary
+    """
+
+    def main(self):
+        # TODO: insert code
+        # self.config['myParamerter'] = 5
+        {{#exports}}
+        # self.project.registerData("{{.}}")
+        {{/exports}}
+        pass

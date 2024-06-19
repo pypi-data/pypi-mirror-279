@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+    {{name}}:
+        build:
+            context: .
+            target: prod
+        volumes:
+            - ./data:/app/data
+            - ./dist:/app/dist
+            # - ./{{name}}:/app
+        environment:
+            - VERSION=${VERSION}

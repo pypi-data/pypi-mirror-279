@@ -1,0 +1,12 @@
+
+FROM tensorflow/tensorflow:2.1.0-py3 as prod
+
+ENV VERSION="0.0.0"
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY {{name}} .
+
+ENTRYPOINT ["python", "."]

@@ -1,0 +1,34 @@
+from pyPhases.Project import Project
+import sys
+
+# Project setup
+project = Project()
+project.name = '{{name}}'
+{{#namespace}}
+project.namespace = '{{namespace}}'
+{{/namespace}}
+
+project.setClasses([
+    {{#classes}}
+    "{{.}}",
+    {{/classes}}
+])
+
+#used exporter
+{{#exporter}}
+project.registerExporter({{name}}({{#config}}{ {{#items}}
+    "{{name}}": "{{value}}",{{/items}}
+}{{/config}}))
+{{/exporter}}
+
+# add phases
+{{#userPhases}}
+project.addPhase({{name}}(), "{{description}}")
+{{/userPhases}}
+
+
+# run all phases or a specific phase if there is an argument
+if(len(sys.argv) > 1):
+    project.run(sys.argv[1])
+else:
+    project.run()
