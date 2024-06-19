@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: poetorch
+Version: 0.1.0
+Summary: Enables torch versioning using poetry
+Author: shuvamg007
+Author-email: shuvamg007@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Provides-Extra: vision
+Requires-Dist: torch (==2.*)
+Requires-Dist: torchvision (==0.*) ; extra == "vision"
+Description-Content-Type: text/markdown
+
+# Poetorch
+
+Enables torch version control on poetry
+
