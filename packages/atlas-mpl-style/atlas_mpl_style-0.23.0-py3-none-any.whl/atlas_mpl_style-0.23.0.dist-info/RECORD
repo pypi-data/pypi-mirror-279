@@ -1,0 +1,15 @@
+atlas_mpl_style/__init__.py,sha256=8VyjarRe8oIYLp7lI4BQebDAdm8fVFYbl3e-k-SHfz0,10176
+atlas_mpl_style/_utils.py,sha256=qH-7XHQ034oRARPLwHQGOi7WNIeuKla0wKOiwdBbseQ,7712
+atlas_mpl_style/plot.py,sha256=hqLDeNGl65CIcVx2Z3befSEpej-awtUnmRNu7JmAmRQ,35681
+atlas_mpl_style/stats.py,sha256=RAPqN6iAzrk3pH4b1Ix6bVdUX-uci2tiFR3rpiC_WD4,9877
+atlas_mpl_style/uhi.py,sha256=kjiRGeJ_oJfKMMZiKp7dedNVz633Q98T-PBDEm2Pui8,10242
+atlas_mpl_style/utils.py,sha256=sygUY7bfQsAQPhzuL6A7W5eNNOoRbsISzB8yhHdCsIg,1067
+atlas_mpl_style/stylesheets/atlas.mplstyle,sha256=0Zqxoy-23GYsSBjvDEJTmvWDIvDkUOtQpGrd-fWzWBk,1183
+atlas_mpl_style/stylesheets/paper.mplstyle,sha256=89K0YMYfv10mdHteiVg02AFBEFXL9lDWuLMQXTsG2jA,1248
+atlas_mpl_style/stylesheets/print.mplstyle,sha256=OpGSY0t9OB7usFTK7qNrncgzAspj9BO5zKyVGVkwmUU,1230
+atlas_mpl_style/stylesheets/slides.mplstyle,sha256=89K0YMYfv10mdHteiVg02AFBEFXL9lDWuLMQXTsG2jA,1248
+atlas_mpl_style/testing/ampl-test.tex,sha256=X_91iIuNKz5TDK9ilTSbPXipC-TBCobAmptX6mRqjgw,469
+atlas_mpl_style-0.23.0.dist-info/LICENSE.md,sha256=zFRw_u1mGSOH8GrpOu0L1P765aX9fB5UpKz06mTxAos,34893
+atlas_mpl_style-0.23.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+atlas_mpl_style-0.23.0.dist-info/METADATA,sha256=OxDU__xjwsv9t1UqKzTfVcWzSDVMIvAXJGXMIIHXvwQ,5725
+atlas_mpl_style-0.23.0.dist-info/RECORD,,
