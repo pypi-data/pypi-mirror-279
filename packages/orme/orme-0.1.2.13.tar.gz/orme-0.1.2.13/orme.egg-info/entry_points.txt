@@ -1,0 +1,2 @@
+[console_scripts]
+orme = orme.__main__:main

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orme"
+dynamic = ["version"]
+authors = [
+    {name = "Carlos Correa", email = "carlosdcorrea3@gmail.com"}
+]
+maintainers = [
+    {name = "Carlos Correa", email = "carlosdcorrea3@gmail.com"}
+]
+description = "Orme Financial Manager"
+readme = "README.md"
+dependencies = [
+    "pandas==2.1.2"
+]
+license = {file = "LICENSE"}
+requires-python = ">= 3.9"
+keywords = ["financial", "manager"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Software Development :: Build Tools",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9"
+]
+
+[tool.setuptools.dynamic]
+version = {attr = "orme.__version__"}
+
+[project.urls]
+Homepage = "https://github.com/CarlosDCorrea/orme"
+Documentation = "https://github.com/CarlosDCorrea/orme"
+Repository = "https://github.com/CarlosDCorrea/orme"
+Issues = "https://github.com/CarlosDCorrea/orme/issues"
+
+[project.scripts]
+orme = "orme.__main__:main"
