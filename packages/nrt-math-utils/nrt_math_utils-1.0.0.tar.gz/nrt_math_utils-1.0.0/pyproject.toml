@@ -1,0 +1,37 @@
+[project]
+
+name='nrt-math-utils'
+version='1.0.0'
+authors=[
+{ name='Eyal Tuzon', email='eyal.tuzon.dev@gmail.com' }
+]
+description='Math utilities in Python'
+keywords=[
+'python', 'python3', 'python-3', 'tool', 'tools', 'math', 'mathematics', 'utilities',
+'utils', 'util', 'nrt', 'nrt-utils', 'nrt-utilities', 'math-utils', 'math-utilities',
+'nrt-utilities', 'nrt-math-utils', 'nrt-math-utilities'
+]
+readme='README.md'
+requires-python='>=3.8'
+classifiers=[
+'Programming Language :: Python :: 3',
+'Programming Language :: Python :: 3.9',
+'Programming Language :: Python :: 3.10',
+'Programming Language :: Python :: 3.11',
+'Programming Language :: Python :: 3.12',
+'License :: OSI Approved :: MIT License',
+'Operating System :: OS Independent',
+]
+
+dynamic=['dependencies']
+
+[project.urls]
+
+'Homepage'='https://github.com/etuzon/python-nrt-math-utils'
+'Bug Tracker'='https://github.com/etuzon/python-nrt-math-utils/issues'
+'documentation'='https://github.com/etuzon/python-nrt-math-utils/wiki'
+
+[tool.setuptools]
+
+packages = ['nrt_math_utils']
+py-modules = []
