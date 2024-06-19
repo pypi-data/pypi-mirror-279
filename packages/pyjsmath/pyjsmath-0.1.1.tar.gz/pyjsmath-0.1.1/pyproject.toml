@@ -1,0 +1,20 @@
+[tool.ruff]
+extend = "C:/CUSTOM_ASSETS/pyproject.toml"
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+
+[build-system]
+requires = ["maturin>=1.5.1"]
+build-backend = "maturin"
+
+[project]
+name = "pyjsmath"
+version = "0.1.1"
+description = "PyJSMath"
+license = "MIT"
+dependencies = [
+    "maturin",
+]
+
+requires-python = ">=3.11, <3.13"
