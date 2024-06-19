@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Fast_Profiling_UI
+Version: 0.1
+Summary: An Exploratory Data Analysis Package for Data Engineers With UI
+Home-page: https://github.com/yourusername/Fast_Profiling_UI
+Author: Mukesh
+Author-email: your_email@example.com
+Keywords: python,pandas,numpy,tkinter,eda,data analysis
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/plain
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: tkinter
