@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: lxfcode
+Version: 0.3.6
+Summary: Calculation Package for 2D Materials
+Home-page: https://github.com/Aoxv/aoxvli
+Author: Li Xiaofeng
+Author-email: 951973793@qq.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: opencv-python
+Requires-Dist: pytest-shutil
+
+
+2D material calculations
