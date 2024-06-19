@@ -1,0 +1,10 @@
+ng_data_pipelines_sdk/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ng_data_pipelines_sdk/aws_interface.py,sha256=YZCrayT8BtTbZV_mml5NQ6TbP8svKBymEEzUTwW9ctU,9200
+ng_data_pipelines_sdk/custom_logger.py,sha256=leY8U9PZUtky5kvwCEoBu3s6mSgNl152lTLl34VPlEE,231
+ng_data_pipelines_sdk/dataframe_manager.py,sha256=4fpVG4c-JtQqgLe39T1vGKtOaHScqltECwyciQ9c9gQ,31849
+ng_data_pipelines_sdk/interfaces.py,sha256=k3eJCoJOMwvmQl5ta87kNWwO1f9LmwAaXyhRhemJmtw,24374
+ng_data_pipelines_sdk/spark_manager.py,sha256=buXlfwgnPdzX9oDw1Niiy-e4vrmBAIjW0qhlz7xlqxk,6312
+ng_data_pipelines_sdk/utils.py,sha256=3IsOKN-V5EYwvsg1t3QXYO8alqZSI-i77YWJp5bkxyk,4780
+ng_data_pipelines_sdk-1.13.0.dist-info/METADATA,sha256=KrtawbK7Pfklf0cuECwSZuSazugl7xsEO3-D9HOKCaY,885
+ng_data_pipelines_sdk-1.13.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+ng_data_pipelines_sdk-1.13.0.dist-info/RECORD,,
