@@ -1,0 +1,110 @@
+[project]
+name = "whenever"
+authors = [
+    {name = "Arie Bovenberg", email = "a.c.bovenberg@gmail.com"},
+]
+readme = "README.md"
+version = "0.6.0rc0"
+description = "Sensible and typesafe datetimes"
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python",
+    "Programming Language :: Rust",
+    "Typing :: Typed",
+]
+dependencies = [
+    "tzdata>=2020.1; sys_platform == 'win32'",
+]
+keywords = [
+    "datetime", "typesafe", "rust", "date", "time", "timezone", "utc",
+    "naive", "aware", "zoneinfo", "tzdata"
+]
+
+
+[project.urls]
+Documentation = "https://whenever.readthedocs.io"
+Repository = "https://github.com/ariebovenberg/whenever"
+Issues = "https://github.com/ariebovenberg/whenever/issues"
+Changelog = "https://github.com/ariebovenberg/whenever/blob/master/CHANGELOG.rst"
+
+[tool.black]
+line-length = 79
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.eggs
+  | \.hg
+  | \.git
+  | \.mypy_cache
+  | \.venv
+  | _build
+  | build
+  | dist
+)/
+'''
+
+[tool.setuptools.packages]
+find = { where = ["pysrc"] }
+
+[tool.isort]
+profile = 'black'
+line_length = 79
+combine_as_imports = true
+
+[tool.mypy]
+warn_unused_ignores = true
+strict = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+]
+check_untyped_defs = true
+disable_error_code = ["no-untyped-def"]
+
+# ignore errors in extension module
+[[tool.mypy.overrides]]
+module = [
+    "whenever._whenever",
+    "_interpreters",
+]
+ignore_missing_imports = true
+
+[tool.cibuildwheel]
+skip = ["pp*", "*-musllinux_i686"]
+test-command = "pytest -s {project}/tests"
+test-requires = [
+    "pytest",
+    "pytest-benchmark",
+    "hypothesis",
+    "pytest-mypy-plugins",
+]
+environment = { PATH = "$HOME/.cargo/bin:$PATH" }
+
+[tool.cibuildwheel.linux]
+before-all = "curl -sSf https://sh.rustup.rs | sh -s -- -y"
+
+[tool.cibuildwheel.windows]
+before-all = "rustup target add i686-pc-windows-msvc"
+environment = { PATH = "$UserProfile\\.cargo\\bin;$PATH" }
+
+[[tool.cibuildwheel.overrides]]
+select = "*-musllinux*"
+before-all = "curl -sSf https://sh.rustup.rs | sh -s -- -y && apk add tzdata"
+
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "wheel", "setuptools-rust"]

@@ -1,0 +1,42 @@
+[package]
+name = "whenever"
+version = "0.6.0-beta.1"
+authors = []
+description = "Rust extension module for whenever"
+edition = "2021"
+rust-version = "1.78"
+license = "MIT"
+readme = "README.rst"
+keywords = []
+include = [
+    "Cargo.toml",
+    "CHANGELOG.md",
+    "pyproject.toml",
+    "README.md",
+    "src",
+    "tests/*.py",
+    "requirements/*.txt",
+]
+
+[lib]
+name = "_whenever"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+extension-module = ["pyo3/extension-module"]
+
+[[bench]]
+name = "benchmarks"
+path = "benchmarks/rust/main.rs"
+
+# TODO: replace git repos with proper versions once 0.22 is released.
+# we're waiting on https://github.com/PyO3/pyo3/issues/4093
+[dependencies]
+# pyo3-ffi = { version = "^0.21.0", default_features = false, features = ["extension-module"]}
+# pyo3 = { version = "^0.21.0", features = ["extension-module"] }
+pyo3-ffi = { git = "https://github.com/PyO3/pyo3", features = ["extension-module"] }
+pyo3 = { git = "https://github.com/PyO3/pyo3", features = ["extension-module"] }
+
+[build-dependencies]
+# pyo3-build-config = { version = "^0.21.0" }
+pyo3-build-config = { git = "https://github.com/PyO3/pyo3" }
