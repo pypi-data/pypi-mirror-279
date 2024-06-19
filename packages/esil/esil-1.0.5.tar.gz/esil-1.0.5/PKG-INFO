@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: esil
+Version: 1.0.5
+Summary: commonly used functions writted by Devin Long
+Home-page: https://github.com/Devin-Long-7/esil
+Author: Devin Long
+Author-email: long.sc@qq.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: xarray
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: netCDF4
+Requires-Dist: pyproj
+Requires-Dist: SQLAlchemy
+Requires-Dist: chardet
+Requires-Dist: sympy
+Requires-Dist: shapely
+Requires-Dist: pytz
+Requires-Dist: pykrige
+Requires-Dist: matplotlib<3.9,>=1.5
+Requires-Dist: cartopy
+Requires-Dist: geopandas
+
+# esil
+A set of common python scripts written by devin for esil

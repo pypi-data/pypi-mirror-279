@@ -1,0 +1,16 @@
+numpy
+pandas
+xarray
+scipy
+tqdm
+netCDF4
+pyproj
+SQLAlchemy
+chardet
+sympy
+shapely
+pytz
+pykrige
+matplotlib<3.9,>=1.5
+cartopy
+geopandas
