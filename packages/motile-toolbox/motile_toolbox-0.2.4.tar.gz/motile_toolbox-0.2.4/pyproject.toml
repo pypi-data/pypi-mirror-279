@@ -1,0 +1,81 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools>=64", "wheel", "setuptools_scm>=8"]
+
+[project]
+name = "motile_toolbox"
+description = "A toolbox for tracking with (motile)[https://github.com/funkelab/motile]."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+  "Programming Language :: Python :: 3",
+]
+keywords = []
+license = { text = "BSD 3-Clause License" }
+authors = [
+    { email = "malinmayorc@janelia.hhmi.org", name = "Funke Lab" },
+]
+dynamic = ["version"]
+dependencies = [
+  "motile",
+  "networkx",
+  "numpy",
+  "matplotlib",
+  "scikit-image",
+  "tqdm",
+  "zarr",
+]
+
+[project.optional-dependencies]
+dev = [
+  'pytest',
+  'pytest-cov',
+  'black',
+  'mypy',
+  'pdoc',
+  'pre-commit',
+  'types-tqdm',
+  'pytest-unordered'
+]
+
+[project.urls]
+homepage = "https://github.com/funkelab/motile_toolbox"
+repository = "https://github.com/funkelab/motile_toolbox"
+
+[tool.setuptools_scm]
+
+[tool.coverage.run]
+omit = ["src/motile_toolbox/visualization/*"]
+
+# https://github.com/charliermarsh/ruff
+[tool.ruff]
+line-length = 88
+target-version = "py38"
+
+[tool.ruff.lint]
+select = [
+    "E",    # style errors
+    "F",    # flakes
+    "I001", # isort
+    "U",    # pyupgrade
+    "S",    # bandit
+    "C",    # flake8-comprehensions
+    "B",    # flake8-bugbear
+    "A001", # flake8-builtins
+    "RUF",  # ruff-specific rules
+    "D",    # documentation
+]
+ignore = [
+    "D100", # Missing docstring in public mod
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D107", # Missing docstring in `__init__
+    "D205", # 1 blank line required between summary and description
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["D", "S"]
+"*/__init__.py" = ["F401", "D"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
