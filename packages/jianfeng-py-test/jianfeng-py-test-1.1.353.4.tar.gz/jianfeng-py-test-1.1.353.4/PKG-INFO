@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: jianfeng-py-test
+Version: 1.1.353.4
+Summary: Zuora API Reference
+Home-page: 
+Author-email: docs@zuora.com
+Keywords: Swagger,Zuora API Reference
+
+    REST API reference for the Zuora Billing, Payments, and Central Platform! Check out the [REST API Overview](https://www.zuora.com/developer/api-references/api/overview/).  # noqa: E501
+    
