@@ -1,0 +1,15 @@
+numpy<2.0.0
+scipy
+MCEq
+
+[plotting]
+matplotlib
+
+[resources]
+pythia8
+matplotlib
+argparse
+pandas
+
+[testing]
+pytest
