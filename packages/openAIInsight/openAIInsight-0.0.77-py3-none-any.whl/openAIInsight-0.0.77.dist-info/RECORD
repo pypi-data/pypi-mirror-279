@@ -1,0 +1,14 @@
+openAIInsight/Extract_OCR.py,sha256=7hAeFX4ziLpSQtAWO4KdmmIY9R9eM827GynMpvP_V5o,6610
+openAIInsight/Insight.py,sha256=dHn-Y1NI9OAb001Dzdib9SiovPh-wNQ_uGGlSnEAN-g,3999
+openAIInsight/InvokeIntent.py,sha256=a36ivDZrs4VyNelDDCALCO9IQC0Xs36gfK20uP4jgQ0,2260
+openAIInsight/InvokeIntent_Gemini.py,sha256=XDIOzp2ON2W88u479z4wwQnbh_u-ig7fl9f98S4jNeM,11515
+openAIInsight/InvokeIntent_LocalAI.py,sha256=udOQ_zv-Fps9muplwwsLtRzPHY5KKw0ZLM9uZDdwcc0,11663
+openAIInsight/InvokeIntent_OpenAI.py,sha256=V99WprKC3nZwh4p2Zukt8qNDKmeYlGQcW_Xn480Wal8,12362
+openAIInsight/OpenAI_PineConeVector.py,sha256=zRliOUud9YbHH3wTZPHiUjEaJIOhZb6U6EBPb82O_DU,16901
+openAIInsight/Weaviate.py,sha256=FVXWDeR1AMwBfqQFS6cE01BxUgr-cWNirowENZqgYbQ,34579
+openAIInsight/__init__.py,sha256=P_Kdt9xjWHFhKmf2U_PcRBUgLkE-3oWIfhj3pfghnVc,229
+openAIInsight-0.0.77.dist-info/LICENCE.txt,sha256=2qX9IkEUBx0VJp1Vh9O2dsRwE-IpYId0lXDyn7OVsJ8,1073
+openAIInsight-0.0.77.dist-info/METADATA,sha256=_HSHRklWYRI3rikPz6_mJ74maUuUYtRhpfs4q5xYz44,672
+openAIInsight-0.0.77.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+openAIInsight-0.0.77.dist-info/top_level.txt,sha256=YzsKehORjpmF7-8r3ivEG7yh7VoqXMt2TfYbfHovmfg,14
+openAIInsight-0.0.77.dist-info/RECORD,,
