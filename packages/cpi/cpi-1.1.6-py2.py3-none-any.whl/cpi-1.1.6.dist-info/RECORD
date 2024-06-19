@@ -1,0 +1,14 @@
+cpi/__init__.py,sha256=n8QCAtTsoW86X7C-ThLGrN9xtcjBkuBrEjOST5xdyag,5570
+cpi/cli.py,sha256=BVeDf77OQHgw5faPymVUEKB0lp3R-SZ0aD6bhYKbOQc,1810
+cpi/cpi.db,sha256=l01t3kI_8sOfxXERGQt2iAxMbT3s5_tZraRZuWwCBFg,116858880
+cpi/defaults.py,sha256=h_orHwEvJaR8o5u-rJ0QMT5zPAhaIuPcLj5GyO5mwV4,269
+cpi/download.py,sha256=GXZystXM7jZRappB_pnZMnfJZnsbM5wtQ4o82NidZ_Y,4213
+cpi/errors.py,sha256=CKP9J93kC6o_KjNZ_CObKBFr-tyRF4yKB58R8xQxzyU,432
+cpi/models.py,sha256=Z-kxYFpmvtF5Dh76Ak-lcg7We3efqZEFS82Fqupf2Gk,9649
+cpi/parsers.py,sha256=3UF13QWV7pnG2Ur1XtHWcjbq3L37PTGQ_H0kF_IdbQ8,6304
+cpi-1.1.6.dist-info/LICENSE,sha256=rL8rZwFTGsHogbAIXzBuGPZrc7tRu-aJT7pU9z6kjX8,1076
+cpi-1.1.6.dist-info/METADATA,sha256=qG7AsMAmgIrhyCsUITTdIJzaN6Q0Ix8vqwehnNLpD2Q,1346
+cpi-1.1.6.dist-info/WHEEL,sha256=DZajD4pwLWue70CAfc7YaxT1wLUciNBvN_TTcvXpltE,110
+cpi-1.1.6.dist-info/entry_points.txt,sha256=QK4gpcr7Qk2WAwXKvSTAHKQqi3b-oXnqCRcTTie9HCc,44
+cpi-1.1.6.dist-info/top_level.txt,sha256=9TRAFyj1-KCSznuPFdi9rBS8IzNiz97gvDjVhQIg-s4,4
+cpi-1.1.6.dist-info/RECORD,,
