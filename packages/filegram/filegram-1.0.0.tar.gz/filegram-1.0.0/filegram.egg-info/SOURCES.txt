@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+filegram/__init__.py
+filegram/send_files.py
+filegram.egg-info/PKG-INFO
+filegram.egg-info/SOURCES.txt
+filegram.egg-info/dependency_links.txt
+filegram.egg-info/entry_points.txt
+filegram.egg-info/requires.txt
+filegram.egg-info/top_level.txt
