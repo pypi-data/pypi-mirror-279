@@ -1,0 +1,7 @@
+LiSE<0.16.0,>=0.15.0
+kivy<3,>=2.0.0
+pygments>=2.7.4
+
+[:sys_platform == "win32"]
+kivy-deps.glew
+kivy-deps.sdl2
