@@ -1,0 +1,15 @@
+slipcover/__init__.py,sha256=vPvZfAfXG-zcwYjaIrOq8samo4CVjFVTtUHhve8JWME,192
+slipcover/__main__.py,sha256=3qTxSpMve86o4w-MRszh2x_d_VSC6g9ds4j9bRzGlm8,8767
+slipcover/branch.py,sha256=zXnPixSKynos4dsmX2pKI6q95YqRtgQG1cIEhWg-oCw,7113
+slipcover/bytecode.py,sha256=6T9yxH1muddbjD5dhHaynzyURr5lOJd-ngJGRwqbxzQ,21990
+slipcover/fuzz.py,sha256=bHz8AAwePl_JocPscJrREXcdE8RN11AbWqPuf1oVc5A,437
+slipcover/importer.py,sha256=YdHFSJKFMCjh64B5jn5AfsohOcS_mBZt-ptwh4QEuTg,9330
+slipcover/probe.abi3.so,sha256=4eeyVheeDOirlMwxqtoVCfugKsHYK4C-FAwuNiq17A8,200624
+slipcover/slipcover.py,sha256=Ibv9bynNmYfAPWLELpwV2vulyuQ0rRoHPAul7hgQqyg,25589
+slipcover/version.py,sha256=iWbXkBdEYs1epwPwdj-6H1q6Y04qi20XiNFx-fBDcWg,23
+slipcover-1.0.15.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+slipcover-1.0.15.dist-info/METADATA,sha256=u0QBkKWiPAYCI-bA03MYfUQBjlEYMbFygdnYP4VAz-4,9477
+slipcover-1.0.15.dist-info/WHEEL,sha256=HRz0BmNy2RWIOcdhCNzQc39YRVSnHX2xRDZxzaewQKE,114
+slipcover-1.0.15.dist-info/entry_points.txt,sha256=Uq7HmxJP-vwlb1gl7wQ4LWL9-nJG2bmu08NQ5REqP78,54
+slipcover-1.0.15.dist-info/top_level.txt,sha256=5VXLPH9Pwp6leK8l70xKGMYUOtHuCaL-XVui6MGDwlY,10
+slipcover-1.0.15.dist-info/RECORD,,
