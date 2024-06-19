@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: basic_term_colors
+Version: 1.0.2
+Summary: A small package to color/format your terminal
+Author: Patrick Dumford
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+A Small Package To Easily Color and Format Text In Your Terminal For CLI Projects or Helpful Debugging
+
+https://github.com/PygmyPiplup/basic_term_colors
