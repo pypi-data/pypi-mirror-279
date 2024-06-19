@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: pkrfilesorter
+Version: 1.0.0
+Summary: A package to sort poker files in adapted directories
+Home-page: https://github.com/manggy94/
+Author: Alexandre MANGWA
+Author-email: alex.mangwa@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/manggy94//issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# 
+## Description
+A package to sort poker files in adapted directories
+
+
