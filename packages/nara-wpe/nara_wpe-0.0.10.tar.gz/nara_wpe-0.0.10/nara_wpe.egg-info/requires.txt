@@ -1,0 +1,29 @@
+numpy
+tqdm
+soundfile
+bottleneck
+click
+
+[:python_version < "3.0"]
+pathlib2
+
+[dev]
+check-manifest
+
+[test]
+pytest
+coverage
+jupyter
+matplotlib
+scipy
+pytest-cov
+codecov
+pandas
+torch
+cached_property
+zmq
+pyzmq
+pymatbridge
+
+[test:python_version < "3.7"]
+tensorflow==1.12.0
