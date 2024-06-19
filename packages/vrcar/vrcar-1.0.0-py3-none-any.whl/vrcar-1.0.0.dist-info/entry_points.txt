@@ -1,0 +1,2 @@
+[console_scripts]
+vrcar = vrcar.__main__:main
