@@ -1,0 +1,157 @@
+<!--
+SPDX-FileCopyrightText: 2023 Justus Perlwitz
+SPDX-FileCopyrightText: 2024 Justus Perlwitz
+SPDX-FileCopyrightText: 2021-2023 Bhatihya Perera
+
+SPDX-License-Identifier: MIT
+-->
+
+# Pomoglorbo
+
+A Pomodoro Technique timer for your terminal! Runs over SSH! A bell rings
+when your Pomodoro is over!
+
+_muuuuuust haaaaaaaveeeeee_
+
+![A screenshot of Pomoglorbo running in alacritty on
+macOS](docs/pomoglorbo.png)
+
+But what are Pomodoros? And why would I run this in my terminal? Read my [blog
+post about
+Pomoglorbo](https://www.justus.pw/posts/2024-06-18-try-pomoglorbo.html) for
+more info.
+
+## Installation
+
+__Recommended__: Install using
+[pipx](https://pipx.pypa.io/stable/#install-pipx):
+
+```bash
+pipx install pomoglorbo
+```
+
+Then run using
+
+```bash
+pomoglorbo
+```
+
+You can also install using `pip`, if you don't mind clobbering packages:
+
+```bash
+pip3 install --user pomoglorbo
+```
+
+For NixOS or home manager users, you can also install Pomoglorbo as a nix
+flake:
+
+```nix
+{
+  description = "My awesome nix home manager configuration";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    pomoglorbo = {
+      url = "git+https://codeberg.org/justusw/Pomoglorbo.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  outputs = { self, nixpkgs, pomoglorbo }: {
+    # do what you must here
+  };
+}
+```
+
+## Usage
+
+Run `pomoglorbo` to launch. More info in [the
+wiki](https://github.com/JaDogg/pydoro/wiki) of the original version.
+
+See `pomoglorbo --help` for a complete overview of available options. At the
+time of writing, these are all available flags:
+
+<!--
+pomoglorbo --help | sed '1,/options:/d'
+-->
+
+```
+  -h, --help            show this help message and exit
+  --focus               focus mode: hides clock and mutes sounds (equivalent
+                        to --no-clock and --no-sound)
+  --no-clock            hides clock
+  --no-sound            mutes all sounds
+  --audio-check         play audio and exit
+  -v, --version         display version and exit
+  --audio-file path     custom audio file
+  --work-state-cmd-suffix WORK_STATE_CMD_SUFFIX [WORK_STATE_CMD_SUFFIX ...]
+                        arguments to append to every command invocation
+```
+
+## Development
+
+To start developing Pomoglorbo this, clone this repository from Codeberg:
+
+```
+git clone https://codeberg.org/justusw/Pomoglorbo.git
+```
+
+Use [poetry](https://python-poetry.org/docs/#installation) to install all
+dependencies:
+
+```
+# This will install packages used for testing as well
+poetry install --all-extras
+```
+
+Run Pomoglorbo inside the poetry virtual environment using the following command:
+
+```bash
+poetry run src/pomoglorbo/cli/__init__.py
+```
+
+You can additionally specify a config file to be used like so:
+
+```bash
+env POMOGLORBO_CONFIG_FILE=test/config.ini \
+    poetry run src/pomoglorbo/cli/__init__.py
+```
+
+### Testing
+
+Run all tests and formatters using
+
+```bash
+poetry run bin/test.sh
+```
+
+Format code using
+
+```bash
+poetry run bin/format.sh
+```
+
+## Contributing
+
+Would you like to make a contribution? Your ideas are very welcome as this is
+an open source project welcoming all contributors! Please read the
+[CONTRIBUTING.md](CONTRIBUTING.md) file for more info. Please also refer to the
+[Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Credits
+
+Pomoglorbo is a fork of the original
+[pydoro](https://github.com/JaDogg/pydoro).
+
+- [pydoro](https://github.com/JaDogg/pydoro) - by Bhathiya Perera
+- Pomodoro - Invented by Francesco Cirillo
+- prompt-toolkit - Awesome TUI library
+- b15.wav - [Dana](https://freesound.org/s/377639/) robinson designs,
+  CC0 from freesound
+
+See the `CONTRIBUTORS` file in the root directory for a list of contributors to
+the original pydoro project.
+
+## Copyright
+
+See the LICENSES folder for more information.
