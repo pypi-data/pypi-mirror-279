@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "dailylog1"
+version = "0.1.8"
+description = ""
+authors = ["Quien Sabe <qs5779@mail.com>"]
+readme = "README.md"
+
+# homepage = "https://github.com/wtfo-guru/wtforglib"
+# documentation = "https://wtforglib.readthedocs.io/en/stable"
+
+keywords = ["logging"]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+
+packages = [
+    { include = "dailylog1" },
+    { include = "dailylog1/py.typed" },
+]
+
+[tool.poetry.scripts]
+dailylog = "dailylog1.cli:main"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+click = "^8.1.0"
+loguru = "^0.7.2"
+wtforglib = "^0.8"
+tomli = "^2.0.1"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+isort = "^5.13"
+black = ">=23.12,<25.0"
+mypy = "^1.9"
+wemake-python-styleguide = "^0.19.0"
+flake8-pytest-style = ">=2.0,<3.0"
+doc8 = "^1.1.1"
+safety = ">=2.3.5,<4.0.0"
+pytest = ">=7.4,<9.0"
+pytest-cov = ">=4,<6"
+pytest-click = "^1.1.0"
+pytest-print = "^1.0.0"
+pyfakefs = "^5.3.0"
+pip = "^24.0"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+sphinx = ">=5.2,<8.0"
+sphinx-autodoc-typehints = ">=1.24,<3.0"
+m2r2 = "^0.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/wemake-services/wemake-python-styleguide/master/styles/nitpick-style-wemake.toml"
