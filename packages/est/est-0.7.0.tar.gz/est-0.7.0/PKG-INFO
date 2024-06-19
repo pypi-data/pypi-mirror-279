@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: est
+Version: 0.7.0
+Summary: Spectroscopy workflows
+Home-page: https://gitlab.esrf.fr/workflow/ewoksapps/est
+Author: data analysis unit
+Author-email: henri.payno@esrf.fr
+License: MIT
+Project-URL: Source, https://gitlab.esrf.fr/workflow/ewoksapps/est/
+Project-URL: Documentation, https://ewoksest.readthedocs.io/
+Project-URL: Tracker, https://gitlab.esrf.fr/workflow/ewoksapps/est/issues/
+Keywords: orange3 add-on,ewoks
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: h5py<3.10,>=3.1
+Requires-Dist: silx>=0.15
+Requires-Dist: Pint
+Requires-Dist: ewoks[orange]>=0.1
+Requires-Dist: ewoksorange>=0.7.0rc0
+Provides-Extra: pymca
+Requires-Dist: pymca>=5.8.1; extra == "pymca"
+Provides-Extra: larch
+Requires-Dist: xraylarch>=0.9.71; extra == "larch"
+Provides-Extra: orange
+Requires-Dist: Orange3; extra == "orange"
+Provides-Extra: full
+Requires-Dist: pymca>=5.8.1; extra == "full"
+Requires-Dist: xraylarch>=0.9.71; extra == "full"
+Requires-Dist: Orange3; extra == "full"
+Provides-Extra: test-no-larch-or-pymca
+Requires-Dist: pytest>=7; extra == "test-no-larch-or-pymca"
+Requires-Dist: testbook; extra == "test-no-larch-or-pymca"
+Requires-Dist: ipykernel; extra == "test-no-larch-or-pymca"
+Requires-Dist: pyqt5; extra == "test-no-larch-or-pymca"
+Provides-Extra: test
+Requires-Dist: pymca>=5.8.1; extra == "test"
+Requires-Dist: xraylarch>=0.9.71; extra == "test"
+Requires-Dist: Orange3; extra == "test"
+Requires-Dist: pytest>=7; extra == "test"
+Requires-Dist: testbook; extra == "test"
+Requires-Dist: ipykernel; extra == "test"
+Requires-Dist: pyqt5; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pymca>=5.8.1; extra == "dev"
+Requires-Dist: xraylarch>=0.9.71; extra == "dev"
+Requires-Dist: Orange3; extra == "dev"
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: testbook; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Requires-Dist: pyqt5; extra == "dev"
+Requires-Dist: black>=22; extra == "dev"
+Requires-Dist: flake8>=4; extra == "dev"
+Requires-Dist: flake8_nb>=0.3.1; extra == "dev"
+Requires-Dist: pillow>=10.0; extra == "dev"
+Provides-Extra: doc
+Requires-Dist: pymca>=5.8.1; extra == "doc"
+Requires-Dist: xraylarch>=0.9.71; extra == "doc"
+Requires-Dist: Orange3; extra == "doc"
+Requires-Dist: pytest>=7; extra == "doc"
+Requires-Dist: testbook; extra == "doc"
+Requires-Dist: ipykernel; extra == "doc"
+Requires-Dist: pyqt5; extra == "doc"
+Requires-Dist: pymca>=5.8.1; extra == "doc"
+Requires-Dist: xraylarch>=0.9.71; extra == "doc"
+Requires-Dist: Orange3; extra == "doc"
+Requires-Dist: sphinx>=4.5; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints>=1.16; extra == "doc"
+Requires-Dist: ipykernel; extra == "doc"
+Requires-Dist: nbsphinx; extra == "doc"
+Requires-Dist: nbsphinx_link; extra == "doc"
+Requires-Dist: docutils<0.21; extra == "doc"
+Requires-Dist: pydata_sphinx_theme; extra == "doc"
+
+# Est: Spectroscopy workflows
+
+`est` is a library to define workflows for X-ray Absorption Structure analysis.
+The analysis can be based on either [PyMca](https://github.com/vasole/pymca) or [Larch](https://xraypy.github.io/xraylarch/)
+
+![An example workflow](https://ewoksest.readthedocs.io/en/latest/_images/workflow_example.png)
+
+## Quick start
+
+```python
+pip install est[full] pyqt5
+ewoks-canvas
+```
+
+See then the _Example workflows_ to get started.
+
+## Documentation
+
+https://ewoksest.readthedocs.io/
