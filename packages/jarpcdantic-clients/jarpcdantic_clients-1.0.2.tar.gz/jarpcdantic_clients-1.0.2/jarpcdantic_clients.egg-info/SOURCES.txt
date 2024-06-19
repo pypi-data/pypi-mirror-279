@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+jarpcdantic_clients/__init__.py
+jarpcdantic_clients/aiohttp_client.py
+jarpcdantic_clients/cabbage_client.py
+jarpcdantic_clients/requests_client.py
+jarpcdantic_clients.egg-info/PKG-INFO
+jarpcdantic_clients.egg-info/SOURCES.txt
+jarpcdantic_clients.egg-info/dependency_links.txt
+jarpcdantic_clients.egg-info/requires.txt
+jarpcdantic_clients.egg-info/top_level.txt
+tests/test_aiohttp_client.py
+tests/test_cabbage_client.py
+tests/test_requests_client.py
