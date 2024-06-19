@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: eyeflow_sdk
+Version: 1.2.3
+Summary: Functions and classes for development of Eyeflow Applications
+Home-page: https://github.com/siliconlife-ai/eyeflow_sdk-pkg
+Author: Eyeflow.AI
+Author-email: support@eyeflow.ai
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# eyeflow_sdk-pkg
+Package for development of Eyeflow applications
