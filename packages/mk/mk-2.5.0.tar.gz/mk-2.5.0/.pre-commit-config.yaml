@@ -1,0 +1,122 @@
+---
+ci:
+  skip:
+    - lock
+    - deps
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.9
+    hooks:
+      - id: ruff
+        args:
+          - --fix
+          - --exit-non-zero-on-fix
+  - repo: https://github.com/pycontribs/mirrors-prettier
+    rev: v3.3.2
+    hooks:
+      - id: prettier
+        always_run: true
+        additional_dependencies:
+          - prettier
+          - prettier-plugin-toml
+          - prettier-plugin-sort-json
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.8.2
+    hooks:
+      - id: cspell
+        # entry: codespell --relative
+        args: [--relative, --no-progress, --no-summary]
+        name: Spell check with cspell
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        args:
+          - --safe
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+      - id: check-byte-order-marker
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: debug-statements
+        language_version: python3
+  - repo: https://github.com/ansible/ansible-lint
+    rev: v24.6.0
+    hooks:
+      - id: ansible-lint
+        args: [--fix]
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        files: \.(yaml|yml)$
+        types:
+          - file
+          - yaml
+        entry: yamllint --strict
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.10.0
+    hooks:
+      - id: mypy
+        args: [--python-version, "3.10"]
+        entry: mypy src/
+        pass_filenames: false
+        additional_dependencies:
+          - build
+          - diskcache
+          - importlib-metadata
+          - packaging
+          - rich
+          - subprocess-tee
+          - typer-config
+          - typer>=0.12.2
+  - repo: https://github.com/pycqa/pylint
+    rev: v3.2.3
+    hooks:
+      - id: pylint
+        additional_dependencies:
+          - click-help-colors
+          - diskcache
+          - gitpython
+          - importlib-metadata
+          - pytest
+          - rich
+          - subprocess-tee
+          - typer-config
+          - typer>=0.12.2
+  - repo: https://github.com/jazzband/pip-tools
+    rev: 7.4.1
+    hooks:
+      - id: pip-compile
+        name: lock
+        alias: lock
+        always_run: true
+        # keyring excluded in order to keep lockfile portable between linux and macos
+        entry: pip-compile pyproject.toml
+        files: ^.config\/.*requirements.*$
+        language: python
+        language_version: "3.10" # minimal we support officially
+        pass_filenames: false
+        stages: [manual]
+        additional_dependencies:
+          - pip>=22.3.1
+      - id: pip-compile
+        name: deps
+        alias: deps
+        always_run: true
+        entry: pip-compile pyproject.toml --upgrade
+        files: ^.config\/.*requirements.*$
+        language: python
+        language_version: "3.10" # minimal we support officially
+        pass_filenames: false
+        stages: [manual]
+        additional_dependencies:
+          - pip>=22.3.1

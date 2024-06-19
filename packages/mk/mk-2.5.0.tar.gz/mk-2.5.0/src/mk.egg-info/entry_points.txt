@@ -1,0 +1,18 @@
+[console_scripts]
+mk = mk.__main__:cli
+pre = mk.pre:app
+
+[mk_tools]
+ansible = mk.tools.ansible:AnsibleTool
+cmake = mk.tools.cmake:CMakeTool
+git = mk.tools.git:GitTool
+make = mk.tools.make:MakeTool
+node = mk.tools.node:NodeTool
+nox = mk.tools.nox:NoxTool
+pre = mk.tools.pre:PreTool
+pre-commit = mk.tools.pre_commit:PreCommitTool
+pypackage = mk.tools.py_package:PyPackageTool
+pytest = mk.tools.pytest:PyTestTool
+shell = mk.tools.shell:ShellTool
+taskfile = mk.tools.taskfile:TaskfileTool
+tox = mk.tools.tox:ToxTool

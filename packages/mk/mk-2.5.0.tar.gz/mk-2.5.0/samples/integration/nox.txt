@@ -1,0 +1,19 @@
+build
+conda_tests
+cover
+docs
+install
+lint
+lint2
+test
+tests(python='3.10', tox_version='<4')
+tests(python='3.10', tox_version='latest')
+tests(python='3.11', tox_version='<4')
+tests(python='3.11', tox_version='latest')
+tests(python='3.12', tox_version='<4')
+tests(python='3.12', tox_version='latest')
+tests(python='3.8', tox_version='<4')
+tests(python='3.8', tox_version='latest')
+tests(python='3.9', tox_version='<4')
+tests(python='3.9', tox_version='latest')
+uninstall

@@ -1,0 +1,14 @@
+binaries
+binaries2
+binaries23
+clean
+clean-binaries
+docs
+help
+install
+lint
+local-cross
+podman-mac-helper
+rpm
+rpm-install
+test
