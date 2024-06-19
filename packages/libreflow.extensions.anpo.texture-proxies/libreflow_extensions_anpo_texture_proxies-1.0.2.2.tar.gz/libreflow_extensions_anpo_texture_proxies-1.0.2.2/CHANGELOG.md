@@ -1,0 +1,51 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html)[^1].
+
+<!---
+Types of changes
+
+- Added for new features.
+- Changed for changes in existing functionality.
+- Deprecated for soon-to-be removed features.
+- Removed for now removed features.
+- Fixed for any bug fixes.
+- Security in case of vulnerabilities.
+
+-->
+
+## [Unreleased]
+
+## [1.0.2.2] - 2024-06-18
+
+### Changed
+
+* The maximum texture width is retrieved using the Blender API (already required for resizing), so it no longer depends on Image Magick's `identify`.
+
+## [1.0.2.1] - 2024-05-31
+
+### Fixed
+
+* The `create_proxies` folder action dialog was immediately closing if the revision wasn't explicitly selected the first time the dialog was displayed.
+
+## [1.0.2] - 2024-05-28
+
+### Added
+
+* A new action to create textures proxies for the latest textures of all assets of an asset type.
+
+## [1.0.1] - 2024-05-28
+
+### Added
+
+* An option to overwrite existing proxies (disabled by default).
+* A new action to create textures proxies for the latest textures of all assets of an asset family.
+
+## [1.0.0] - 2024-05-27
+
+### Added
+
+* Action to create 1K and 2K versions of the images in a `textures` folder. The generated proxies are placed respectively in the `textures_1k` and `textures_2k` folders (when the target size does not exceed the original one).
