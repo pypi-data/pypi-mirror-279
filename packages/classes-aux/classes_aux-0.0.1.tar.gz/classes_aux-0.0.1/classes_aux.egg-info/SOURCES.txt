@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+classes_aux/__init__.py
+classes_aux/cmp.py
+classes_aux/getattr.py
+classes_aux.egg-info/PKG-INFO
+classes_aux.egg-info/SOURCES.txt
+classes_aux.egg-info/dependency_links.txt
+classes_aux.egg-info/top_level.txt
