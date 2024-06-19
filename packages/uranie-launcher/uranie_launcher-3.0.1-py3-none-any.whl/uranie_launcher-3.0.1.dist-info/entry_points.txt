@@ -1,0 +1,4 @@
+[console_scripts]
+test-run-unitary-calculation = tests.program_tester:run_unitary_calculation
+uranie-launcher-unitary = uranie_launcher._run_unitary:run_unitary
+
