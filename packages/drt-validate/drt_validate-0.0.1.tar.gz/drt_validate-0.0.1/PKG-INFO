@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: drt-validate
+Version: 0.0.1
+Summary: Tool for calculate wastewater dilution rate using Karaushev's method
+Author: Dmitry Trokhachev
+Author-email: "Dima T." <dimiaa573@gmail.com>
+Project-URL: Homepage, https://github.com/dimiaa/diploma
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Wastewater 
+
+Tool for calculate wastewater dilution rate using Karaushev's method

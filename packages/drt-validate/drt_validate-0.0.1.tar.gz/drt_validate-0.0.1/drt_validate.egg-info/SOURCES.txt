@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+drt_validate.egg-info/PKG-INFO
+drt_validate.egg-info/SOURCES.txt
+drt_validate.egg-info/dependency_links.txt
+drt_validate.egg-info/top_level.txt
+src/__init__.py
+src/karaushev3d.py
