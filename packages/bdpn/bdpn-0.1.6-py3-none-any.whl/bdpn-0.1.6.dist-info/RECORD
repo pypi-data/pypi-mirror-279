@@ -1,0 +1,14 @@
+bdpn/__init__.py,sha256=aYW5L07YDh0gYBgXzjuWJBaChvd1yLVy9755VPAqiGI,181
+bdpn/bd_model.py,sha256=_veZpU7HVM0_Pm5CRZiDGxppTk8fHr0CubeHaKza9nQ,8163
+bdpn/bdpn_model.py,sha256=j8TQ4jj4ehwOLi2NZffRX4Gj8Kj-U5AJ0V-DswPx0ow,22843
+bdpn/formulas.py,sha256=24cBl88Ucz6VATcuUQAnZTBgHfoCEZxnRdOjsg8lPxU,4167
+bdpn/model_distinguisher.py,sha256=6Y5gBs00AoWLMU6Pa9gtH8M9WU-aae6GFwE8YIDcp94,7636
+bdpn/mtbd.py,sha256=xWt6AHI5QnxrqSrSu33FvSvrukHBdc5Qs2xI9RVdCco,8832
+bdpn/parameter_estimator.py,sha256=DjinNGiwEYmxU6-NGwa043Nt7GxmXG9hnk9Xjff1zdc,6607
+bdpn/tree_manager.py,sha256=uX2qkfZdnShJ37w4sUD-rqTm5FkJnrw8iN3Kfi5c-24,3387
+bdpn-0.1.6.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+bdpn-0.1.6.dist-info/METADATA,sha256=J8on7SyL1aR1f2QgzMbTYsENIYR8ShqWAV6gKz-xAJ8,2722
+bdpn-0.1.6.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+bdpn-0.1.6.dist-info/entry_points.txt,sha256=B5OAdnmxT1q9sOnv3eBwL1DXZlYH88uAunOmooGJ-bM,230
+bdpn-0.1.6.dist-info/top_level.txt,sha256=aXIFzMIFPxtNj2zKcS5i4HbKNZiuOeweYROiZT45vSM,5
+bdpn-0.1.6.dist-info/RECORD,,
