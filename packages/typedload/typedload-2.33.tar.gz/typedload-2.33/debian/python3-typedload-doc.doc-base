@@ -1,0 +1,11 @@
+Document: typedload
+Title: typedload manual, API reference, examples
+Author: Salvo 'LtWorf' Tomaselli
+Abstract: This explains how to use typedload.
+ Which types are supported, how to extend it to more
+ types, how to handle errors and integrate it with
+ existing code.
+Section: Programming/Python
+
+Format: text
+Files: /usr/share/doc/python3-typedload/docs/*

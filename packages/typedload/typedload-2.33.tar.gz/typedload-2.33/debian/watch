@@ -1,0 +1,4 @@
+version=4
+
+opts=pgpmode=auto \
+https://codeberg.org/ltworf/typedload/tags (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@

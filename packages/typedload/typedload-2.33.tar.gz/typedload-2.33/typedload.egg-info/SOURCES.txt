@@ -1,0 +1,110 @@
+.gitignore
+CHANGELOG
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+LICENSE
+Makefile
+README.md
+docgen
+example.py
+gensetup.py
+mkdocs.yml
+mypy.conf
+pyproject.toml
+setup.py
+.woodpecker/mypy.yaml
+.woodpecker/test.yaml
+debian/changelog
+debian/control
+debian/copyright
+debian/python3-typedload-doc.doc-base
+debian/python3-typedload-doc.docs
+debian/python3-typedload.install
+debian/rules
+debian/watch
+debian/source/format
+debian/tests/control
+debian/upstream/metadata
+debian/upstream/signing-key.asc
+docs/3.11_dump_objects.svg
+docs/3.11_fail_load_list_of_floats_and_ints.svg
+docs/3.11_fail_tagged_union_of_objects.svg
+docs/3.11_load_big_dictionary.svg
+docs/3.11_load_dictionary_of_tuples.svg
+docs/3.11_load_list_of_NamedTuple_objects.svg
+docs/3.11_load_list_of_attrs_objects.svg
+docs/3.11_load_list_of_dataclass_objects.svg
+docs/3.11_load_list_of_floats_and_ints.svg
+docs/3.11_load_list_of_ints.svg
+docs/3.11_load_list_of_lists.svg
+docs/3.11_tagged_union_of_objects.svg
+docs/3.9_dump_objects.svg
+docs/3.9_fail_load_list_of_floats_and_ints.svg
+docs/3.9_fail_tagged_union_of_objects.svg
+docs/3.9_load_big_dictionary.svg
+docs/3.9_load_dictionary_of_tuples.svg
+docs/3.9_load_list_of_NamedTuple_objects.svg
+docs/3.9_load_list_of_attrs_objects.svg
+docs/3.9_load_list_of_dataclass_objects.svg
+docs/3.9_load_list_of_floats_and_ints.svg
+docs/3.9_load_list_of_ints.svg
+docs/3.9_load_list_of_lists.svg
+docs/3.9_tagged_union_of_objects.svg
+docs/CHANGELOG.md
+docs/CODE_OF_CONDUCT.md
+docs/CONTRIBUTING.md
+docs/README.md
+docs/SECURITY.md
+docs/comparisons.md
+docs/deferred_evaluation.md
+docs/donate.svg
+docs/errors.md
+docs/examples.md
+docs/gpl3logo.png
+docs/origin_story.md
+docs/performance.md
+docs/supported_types.md
+docs/version_numbers.md
+docs/docs/donate.svg
+docs/docs/gpl3logo.png
+perftest/common.py
+perftest/dump objects.py
+perftest/fail load list of floats and ints.py
+perftest/fail tagged union of objects.py
+perftest/load big dictionary.py
+perftest/load dictionary of tuples.py
+perftest/load list of NamedTuple objects.py
+perftest/load list of attrs objects.py
+perftest/load list of dataclass objects.py
+perftest/load list of floats and ints.py
+perftest/load list of ints.py
+perftest/load list of large NamedTuples.py
+perftest/load list of lists.py
+perftest/performance.py
+perftest/tagged union of objects.py
+tests/__main__.py
+tests/test_attrload.py
+tests/test_dataclass.py
+tests/test_datadumper.py
+tests/test_dataloader.py
+tests/test_datetime.py
+tests/test_deferred.py
+tests/test_dumpload.py
+tests/test_exceptions.py
+tests/test_legacytuples_dataloader.py
+tests/test_literal.py
+tests/test_orunion.py
+tests/test_typechecks.py
+tests/test_typeddict.py
+typedload/__init__.py
+typedload/__init__.pyi
+typedload/datadumper.py
+typedload/dataloader.py
+typedload/exceptions.py
+typedload/helpers.py
+typedload/py.typed
+typedload/typechecks.py
+typedload.egg-info/PKG-INFO
+typedload.egg-info/SOURCES.txt
+typedload.egg-info/dependency_links.txt
+typedload.egg-info/top_level.txt

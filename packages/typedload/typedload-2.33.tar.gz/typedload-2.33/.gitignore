@@ -1,0 +1,16 @@
+loadtyped.kdev4
+.kdev4/
+__pycache__/
+.mypy_cache/
+pypi/
+MANIFEST
+typedload.kdev4
+deb-pkg/
+*.swp
+dist/
+html/
+setup.py
+perftest.output
+docs/*_docgen.md
+.token
+pyproject.toml

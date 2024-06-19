@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	for pyversion in `py3versions -s`; do \
+		$$pyversion -m tests; \
+	done
+endif
+
+override_dh_link:
+	jdupes -rl debian/python3-typedload-doc/usr/share/doc/
+	dh_link
+
+override_dh_auto_clean:
+	make debian_clean
