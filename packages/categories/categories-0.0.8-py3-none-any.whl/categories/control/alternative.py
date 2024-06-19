@@ -1,0 +1,71 @@
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import TypeVar
+
+from categories.control.applicative import Applicative, ApplicativeIO, ApplicativeList, ApplicativeParser
+from categories.text.parser import Parser
+from categories.type import IO, hkt, typeclass
+
+__all__ = (
+    'Alternative',
+    'AlternativeIO',
+    'AlternativeList',
+    'AlternativeParser',
+)
+
+
+a = TypeVar('a')
+
+b = TypeVar('b')
+
+f = TypeVar('f')
+
+
+@dataclass(frozen=True)
+class Alternative(Applicative[f], typeclass[f]):
+    def empty(self, /) -> hkt[f, a]: ...
+
+    def alt(self, x : hkt[f, a], y : hkt[f, a], /) -> hkt[f, a]: ...
+
+    def some(self, v : hkt[f, a], /) -> hkt[f, list[a]]:
+        return self.apply(self.map(lambda x, /: lambda xs, /: [x, *xs], v), self.many(v))
+
+    def many(self, v : hkt[f, a], /) -> hkt[f, list[a]]:
+        return self.alt(self.some(v), self.pure([]))
+
+
+@dataclass(frozen=True)
+class AlternativeIO(ApplicativeIO, Alternative[IO]):
+    async def empty(self, /) -> a:
+        raise Exception('mzero')
+
+    async def alt(self, m : IO[a], m_ : IO[a], /) -> a:
+        try:
+            return await m
+        except BaseException:
+            return await m_
+
+
+@dataclass(frozen=True)
+class AlternativeList(ApplicativeList, Alternative[list]):
+    def empty(self, /) -> list[a]:
+        return []
+
+    def alt(self, xs : list[a], ys : list[a], /) -> list[a]:
+        return xs + ys
+
+
+@dataclass(frozen=True)
+class AlternativeParser(ApplicativeParser, Alternative[Parser]):
+    def empty(self, /) -> Parser[a]:
+        return lambda _, /: []
+
+    def alt(self, p : Parser[a], q : Parser[a], /) -> Parser[a]:
+        return lambda s, /: p(s) or q(s)
+
+    def some(self, p : Parser[a], /) -> Parser[list[a]]:
+        return lambda s, /: [([x, *xs], s) for (x, s) in p(s) for (xs, s) in self.many(p)(s)]
+
+    def many(self, p : Parser[a], /) -> Parser[list[a]]:
+        return self.alt(self.some(p), self.pure([]))
