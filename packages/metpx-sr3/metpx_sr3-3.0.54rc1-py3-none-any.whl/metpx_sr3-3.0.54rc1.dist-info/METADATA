@@ -1,0 +1,160 @@
+Metadata-Version: 2.1
+Name: metpx-sr3
+Version: 3.0.54rc1
+Summary: Subscribe, Acquire, and Re-Advertise products.
+Home-page: https://github.com/MetPX/sarracenia
+Author: Shared Services Canada, Supercomputing, Data Interchange
+Author-email: Peter.Silva@canada.ca
+License: GPLv2
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Communications :: File Sharing
+Classifier: Topic :: System :: Logging
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: appdirs
+Requires-Dist: humanfriendly
+Requires-Dist: humanize
+Requires-Dist: jsonpickle
+Requires-Dist: psutil (>=5.3.0)
+Requires-Dist: watchdog
+Provides-Extra: all
+Requires-Dist: amqp ; extra == 'all'
+Requires-Dist: python-magic ; extra == 'all'
+Requires-Dist: python-file-magic ; extra == 'all'
+Requires-Dist: dateparser ; extra == 'all'
+Requires-Dist: paho.mqtt (>=1.5.1) ; extra == 'all'
+Requires-Dist: flufl.lock ; extra == 'all'
+Requires-Dist: netifaces ; extra == 'all'
+Requires-Dist: redis ; extra == 'all'
+Provides-Extra: amqp
+Requires-Dist: amqp ; extra == 'amqp'
+Provides-Extra: filetypes
+Requires-Dist: python-magic ; extra == 'filetypes'
+Provides-Extra: filetypes-redhat
+Requires-Dist: python-file-magic ; extra == 'filetypes-redhat'
+Provides-Extra: ftppoll
+Requires-Dist: dateparser ; extra == 'ftppoll'
+Provides-Extra: mqtt
+Requires-Dist: paho.mqtt (>=1.5.1) ; extra == 'mqtt'
+Provides-Extra: reassemble
+Requires-Dist: flufl.lock ; extra == 'reassemble'
+Provides-Extra: redis
+Requires-Dist: redis ; extra == 'redis'
+Provides-Extra: vip
+Requires-Dist: netifaces ; extra == 'vip'
+
+==========================
+ Sarracenia v3 (MetPX-Sr3)
+==========================
+
+[ homepage (En): https://metpx.github.io/sarracenia ] [ `(Fr) fr/ <https://metpx.github.io/sarracenia/fr>`_ ]
+
+.. image:: https://img.shields.io/pypi/v/metpx-sr3?style=flat
+  :alt: PyPI version
+  :target: https://pypi.org/project/metpx-sr3/
+
+.. image:: https://img.shields.io/pypi/pyversions/metpx-sr3.svg
+    :alt: Supported Python versions
+    :target: https://pypi.python.org/pypi/metpx-sr3.svg
+
+.. image:: https://img.shields.io/pypi/l/metpx-sr3?color=brightgreen
+    :alt: License (GPLv2)
+    :target: https://pypi.org/project/metpx-sr3/
+
+.. image:: https://img.shields.io/github/issues/MetPX/sarracenia
+    :alt: Issue Tracker
+    :target: https://github.com/MetPX/sarracenia/issues
+
+.. image:: https://github.com/MetPX/sarracenia/actions/workflows/ghcr.yml/badge.svg
+    :alt: Docker Image Build Status
+    :target: https://github.com/MetPX/sarracenia/actions/workflows/ghcr.yml
+
+.. image:: https://github.com/MetPX/sarracenia/actions/workflows/flow.yml/badge.svg?branch=v03_wip
+    :alt: Run Static Flow
+    :target: https://github.com/MetPX/sarracenia/actions/workflows/flow.yml
+
++----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+|                                                                                        |                                                                                           |
+| [ `Getting Started <https://metpx.github.io/sarracenia/How2Guides/subscriber.html>`_ ] | [ `Un bon départ <https://metpx.github.io/sarracenia/fr/CommentFaire/subscriber.html>`_ ] |
+| [ `Source Guide <https://metpx.github.io/sarracenia/How2Guides/source.html>`_ ]        | [ `Guide de Source <https://metpx.github.io/sarracenia/fr/CommentFaire/source.html>`_ ]   |
+|                                                                                        |                                                                                           |
++----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+|                                                                                        |                                                                                           |
+| MetPX-sr3 (Sarracenia v3) is a data duplication                                        | MetPX-sr3 (Sarracenia v3) est un engin de copie et de                                     |
+| or distribution pump that leverages                                                    | distribution de données qui utilise des                                                   |
+| existing standard technologies (web                                                    | technologies standards (tel que les services                                              |
+| servers and Message queueing protocol                                                  | web et le courtier de messages AMQP) afin                                                 |
+| brokers) to achieve real-time message delivery                                         | d'effectuer des transferts de données en                                                  |
+| and end-to-end transparency in file transfers.                                         | temps réel tout en permettant une transparence                                            |
+| Data sources establish a directory structure                                           | de bout en bout. Alors que chaque commutateur                                             |
+| which is carried through any number of                                                 | Sundew est unique en soit, offrant des                                                    |
+| intervening pumps until they arrive at a                                               | configurations sur mesure et permutations de                                              |
+| client.                                                                                | données multiples, Sarracenia cherche à                                                   |
+|                                                                                        | maintenir l'intégrité de la structure des                                                 |
+|                                                                                        | données, tel que proposée et organisée par la                                             |
+|                                                                                        | source jusqu'à destination.                                                               |
+|                                                                                        |                                                                                           |
++----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------+
+
+Changes:
+  * NEW #1084 add metadata fetch to scheduled http. 
+
+  * NEW #1104 (EXPERIMENTAL) restored block partitioned transfers.
+
+  * fix #1104 add message per cpu second and cpuS state.
+
+  * only run after_post when actually posted #1101
+
+  * fix #1097 message rates < 1 were parsed as zero, now work correctly.
+
+  * messages reviewed & consolidated: #1094, #1099 (log de-cluttering.)
+
+  * fix crashes/problems with statehost #1076, #1087, #1096
+
+  * when plugins go bad, report better, recover better: #1085, #1091, 
+
+  * performance improvements #1083, #1086
+
+  * fix #1079 watch posting events it should not.
+
+  * fix #1076 bogus messages and mkdir crash on HPC ( #1087 )
+
+  * merge PR #1067 (closing #824 ) sr3 status flow state detail improved.
+
+  * several fixes for sender crashes ( #1091, #1095, #1099 )
+
+  * add #1054 can now convert multiple configs, and overwrite (with --wololo)
+
+  * fixed #1064 poll crash.
+
+  * fixed #927 sanity not restarting crashed polls.
+
+  * reduced processing overhead ( #1086 )
+
+  * misc bug fixes ( #1070, #1092, #1103, #1108, #1109 ) 
+
+  * NEW added logFormat option.
+
+  * bug fixes and unit tests for AM ( #1036, $1068, #1074, #1075, #1078, #1079 )
+
+  * many unit tests added, improved coverage (though still poor.)
+
+  * many other plugin improvements. (#1085, #1082, #1091 )
+
+  * search function restored on web-site documentation. ( #1062, #1072)
+
+
