@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: zarrnii
+Version: 0.1.3a1
+Summary: Package for working with OME-Zarr and NIFTI images in a unified manner, with a focus on spatial transformations
+License: MIT
+Author: Ali Khan
+Author-email: alik@robarts.ca
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: dask (>=2024.2.0,<2025.0.0)
+Requires-Dist: nibabel (>=5.2.0,<6.0.0)
+Requires-Dist: numpy (>=1.26.4,<2.0.0)
+Requires-Dist: ome-zarr (>=0.9.0,<0.10.0)
+Requires-Dist: pandas (>=2.2.0,<3.0.0)
+Requires-Dist: scipy (>=1.12.0,<2.0.0)
+Requires-Dist: zarr (>=2.17.0,<3.0.0)
+Description-Content-Type: text/markdown
+
+# zarrnii
+
+Package for working with OME-Zarr and NIFTI images in a unified manner, with a focus on spatial transformations
+

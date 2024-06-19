@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "zarrnii"
+version = "0.1.3-alpha.1"
+description = "Package for working with OME-Zarr and NIFTI images in a unified manner, with a focus on spatial transformations"
+authors = ["Ali Khan <alik@robarts.ca>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "zarrnii"}]
+
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+zarr = "^2.17.0"
+nibabel = "^5.2.0"
+dask = "^2024.2.0"
+numpy = "^1.26.4"
+scipy = "^1.12.0"
+pandas = "^2.2.0"
+ome-zarr = "^0.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+poethepoet = "^0.13.1"
+pre-commit = "^2.17.0"
+ruff = "^0.1.14"
+jupyterlab = "^4.2.1"
+matplotlib = "^3.9.0"
+bokeh = "^3.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poe.tasks]
+setup = "pre-commit install"
+ruff-lint = "ruff check --fix zarrnii"
+ruff-lint-check = "ruff check zarrnii"
+ruff-format = "ruff format ."
+pytest = "pytest -v"
+quality = [ "ruff-lint", "ruff-format"]
+quality-check = ["ruff-lint-check"]
+test = [ "pytest" ]
+
+
+[tool.ruff]
+select = ["E", "W", "N", "RUF", "I", "UP"]
+line-length = 79
+
+
