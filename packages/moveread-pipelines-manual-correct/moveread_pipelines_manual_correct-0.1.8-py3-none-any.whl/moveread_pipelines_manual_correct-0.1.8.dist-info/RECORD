@@ -1,0 +1,8 @@
+moveread/pipelines/manual_correct/__init__.py,sha256=mREGArmpihScKDnUQPOSkX9R_jWlk6GqRgzu18brEdw,345
+moveread/pipelines/manual_correct/__init__.pyi,sha256=a6-eLliYpz1mX0rmsVED7JJ5CTHMYmAVSK7xhT3s_x8,277
+moveread/pipelines/manual_correct/main.py,sha256=29oOZsRwNl5muC1nHedRMx8l_pd1nxF6ZwLZo-JA884,1410
+moveread/pipelines/manual_correct/types.py,sha256=W2i2KthKuBua4hxzvqmKx8joeronzunc3cVT1WyRweU,632
+moveread_pipelines_manual_correct-0.1.8.dist-info/METADATA,sha256=OrVq_v1PdI8pM9vEMd8t1Tkq2g3K7u1hOTi1Uk65Fzk,1104
+moveread_pipelines_manual_correct-0.1.8.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_pipelines_manual_correct-0.1.8.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_pipelines_manual_correct-0.1.8.dist-info/RECORD,,
