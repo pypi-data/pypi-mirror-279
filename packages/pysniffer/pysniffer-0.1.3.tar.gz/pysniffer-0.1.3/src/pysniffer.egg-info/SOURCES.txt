@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/pysniffer/__init__.py
+src/pysniffer/decorator.py
+src/pysniffer.egg-info/PKG-INFO
+src/pysniffer.egg-info/SOURCES.txt
+src/pysniffer.egg-info/dependency_links.txt
+src/pysniffer.egg-info/requires.txt
+src/pysniffer.egg-info/top_level.txt
+test/test_decorator.py
