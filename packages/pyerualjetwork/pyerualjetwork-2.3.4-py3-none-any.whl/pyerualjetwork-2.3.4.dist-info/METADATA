@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: pyerualjetwork
+Version: 2.3.4
+Summary: Weights post process function added: [weight_post_process](optional after training before testing.), new function: manuel_balancer. And scaler_params added for scaled models.
+Author: Hasan Can Beydili
+Author-email: tchasancan@gmail.com
+Keywords: model evaluation,classifcation,pruning learning artficial neural networks
+
