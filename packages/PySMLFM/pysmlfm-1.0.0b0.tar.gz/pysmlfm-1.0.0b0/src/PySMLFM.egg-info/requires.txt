@@ -1,0 +1,14 @@
+numpy~=1.20
+scikit-learn~=1.3
+matplotlib~=3.6
+cairosvg~=2.0
+
+[dev]
+pytest>=6.0
+validate-pyproject[all]
+Flake8-pyproject
+flake8-typing-imports
+pylint
+
+[fiji]
+pyimagej~=1.4
