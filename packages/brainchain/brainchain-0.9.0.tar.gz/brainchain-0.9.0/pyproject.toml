@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "brainchain"
+version = "0.9.0"
+description = "Brainchain API client"
+authors = ["Arthur M. Collé <arthur@brainchain.ai>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"
+urllib3 = "^2.0.6"
+requests = "^2.31.0"
+modal-client = "0.62.180"
+tiktoken = ">=0.5.0"
+pandas = "^2.1.0"
+bottleneck = "^1.3.6"
+mlx-embedding-models = "0.0.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "private"
+url = "https://pypi.org/simple"
+priority = 'default'
