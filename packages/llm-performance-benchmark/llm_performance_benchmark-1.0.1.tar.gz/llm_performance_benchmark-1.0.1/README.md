@@ -1,0 +1,60 @@
+
+# LLM Performance Benchmark
+
+> Benchmark the performance of OpenAI compatible APIs in terms of Time to First Token (commonly referred to as latency) and Output Tokens per Second.
+
+## Background
+Benchmarking script used by [Artificial Analysis](https://artificialanalysis.ai/) for our performance benchmarks.
+
+For performance benchmarks across >150 endpoints, including across varied prompt lengths & parallel queries, visit: [Artificial Analysis API Provider Peformance Leaderboard](https://artificialanalysis.ai/leaderboards/providers)
+
+## Install
+```bash
+# Install from PyPI
+pip install llm_performance_benchmark
+```
+
+## Usage
+```python
+from llm_performance_benchmark import llm_performance_benchmark
+
+# Configure endpoint
+import os
+from dotenv import load_dotenv
+load_dotenv()
+api_key = os.getenv("OPENAI_API_KEY")
+base_url = "https://api.openai.com/v1"
+model_id = "gpt-4-turbo"
+
+# Configure prompt
+user_prompt = "What is the purpose of life?"
+system_prompt = "You are a helpful assistant."
+
+# Run benchmark
+result = llm_performance_benchmark(model_id=model_id, 
+                                   user_prompt=user_prompt, 
+                                   system_prompt=system_prompt, 
+                                   api_key=api_key, 
+                                   base_url=base_url,
+                                   print_response=True)
+print(result)
+""" Example response:
+{
+    'total_time': 8.9, 
+    'time_to_first_token': 0.6, 
+    'output_tokens_per_second': 39.4, 
+    'tokens_per_second_across_total_request': 36.4,
+    'response_text: "..."
+}
+"""
+```
+
+## Definitions of output metrics
+For definitions of what the metrics represent, see the following [https://artificialanalysis.ai/methodology](https://artificialanalysis.ai/methodology) page.
+To standardize token counting across different models, text is tokenized as cl100k_base tokens (used by GPT-4) with Tiktoken. 
+
+## License
+#### MIT License
+Copyright (c) 2024 Artificial Analysis, Inc.
+
+See LICENSE file for further details
