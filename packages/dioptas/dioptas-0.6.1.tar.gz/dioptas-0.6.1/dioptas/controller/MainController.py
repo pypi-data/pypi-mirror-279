@@ -1,0 +1,367 @@
+# -*- coding: utf-8 -*-
+# Dioptas - GUI program for fast processing of 2D X-ray diffraction data
+# Principal author: Clemens Prescher (clemens.prescher@gmail.com)
+# Copyright (C) 2014-2019 GSECARS, University of Chicago, USA
+# Copyright (C) 2015-2018 Institute for Geology and Mineralogy, University of Cologne, Germany
+# Copyright (C) 2019-2020 DESY, Hamburg, Germany
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import os
+import json
+import datetime
+import threading
+import subprocess
+import shlex
+from functools import partial
+from sys import platform as _platform
+
+from qtpy import QtWidgets, QtCore
+
+from ..widgets.MainWidget import MainWidget
+from ..model.DioptasModel import DioptasModel
+from ..widgets.UtilityWidgets import save_file_dialog, open_file_dialog
+
+from . import CalibrationController
+from .integration import IntegrationController
+from .MaskController import MaskController
+from .ConfigurationController import ConfigurationController
+from .MapController import MapController
+
+from dioptas import __version__
+
+
+class MainController(object):
+    """
+    Creates the main controller for Dioptas. Creates all the data objects and connects them with the other controllers
+    """
+
+    def __init__(self, use_settings=True, settings_directory="default", config_file=None):
+        """
+        :param use_settings: whether to use previously auto saved state of dioptas
+        :param settings_directory: directory where the settings are saved
+        :param config_file: a json file path with configuration, currently only used for quick_actions
+        """
+        self.use_settings = use_settings
+        self.widget = MainWidget()
+
+        # create data
+        if settings_directory == "default":
+            self.settings_directory = os.path.join(os.path.expanduser("~"), ".Dioptas")
+        else:
+            self.settings_directory = settings_directory
+
+        self.model = DioptasModel()
+
+        self.calibration_controller = CalibrationController(
+            self.widget.calibration_widget, self.model
+        )
+        self.mask_controller = MaskController(self.widget.mask_widget, self.model)
+        self.integration_controller = IntegrationController(
+            self.widget.integration_widget, self.model
+        )
+        self.map_controller = MapController(self.widget.map_widget, self.model)
+
+        self.calibration_controller.activate()
+        self.integration_controller.image_controller.deactivate()
+        self.map_controller.deactivate()
+        self.mask_controller.deactivate()
+
+        self.configuration_controller = ConfigurationController(
+            configuration_widget=self.widget.configuration_widget,
+            dioptas_model=self.model,
+            controllers=[
+                self.calibration_controller,
+                self.mask_controller,
+                self.integration_controller,
+                self,
+            ],
+        )
+
+        self.create_signals()
+        self.update_title()
+
+        if use_settings:
+            QtCore.QTimer.singleShot(0, self.load_default_settings)
+            self.setup_backup_timer()
+
+        if config_file is not None:
+            self.configuration = json.load(open(config_file, "r"))
+            self.create_external_actions()
+
+        self.current_tab_index = 0
+
+    def show_window(self):
+        """
+        Displays the main window on the screen and makes it active.
+        """
+        self.widget.show()
+
+        if _platform == "darwin":
+            self.widget.setWindowState(
+                self.widget.windowState() & ~QtCore.Qt.WindowMinimized
+                | QtCore.Qt.WindowActive
+            )
+            self.widget.activateWindow()
+            self.widget.raise_()
+
+    def create_signals(self):
+        """
+        Creates subscriptions for changing tabs and also newly loaded files which will update the title of the main
+                window.
+        """
+        self.widget.closeEvent = self.close_event
+        self.widget.show_configuration_menu_btn.toggled.connect(
+            self.widget.configuration_widget.setVisible
+        )
+
+        self.widget.calibration_mode_btn.toggled.connect(
+            self.widget.calibration_widget.setVisible
+        )
+        self.widget.mask_mode_btn.toggled.connect(self.widget.mask_widget.setVisible)
+        self.widget.integration_mode_btn.toggled.connect(
+            self.widget.integration_widget.setVisible
+        )
+        self.widget.map_mode_btn.toggled.connect(self.widget.map_widget.setVisible)
+
+        self.widget.mode_btn_group.buttonToggled.connect(self.tab_changed)
+
+        self.model.img_changed.connect(self.update_title)
+        self.model.pattern_changed.connect(self.update_title)
+
+        self.widget.save_btn.clicked.connect(self.save_btn_clicked)
+        self.widget.load_btn.clicked.connect(self.load_btn_clicked)
+        self.widget.reset_btn.clicked.connect(self.reset_btn_clicked)
+
+    def tab_changed(self):
+        """
+        Function which is called when a tab has been selected (calibration, mask, or integration). Performs
+        needed initialization tasks.
+        :return:
+        """
+        if self.widget.calibration_mode_btn.isChecked():
+            ind = 0
+        elif self.widget.mask_mode_btn.isChecked():
+            ind = 1
+        elif self.widget.integration_mode_btn.isChecked():
+            ind = 2
+        elif self.widget.map_mode_btn.isChecked():
+            ind = 3
+        else:
+            return
+
+        if ind == self.current_tab_index:
+            return
+
+        old_index = self.current_tab_index
+        self.current_tab_index = ind
+
+        # changing from mask tab will reintegrate the image
+        if old_index == 1:  # mask tab
+            if self.model.use_mask and self.model.calibration_model.is_calibrated:
+                self.model.current_configuration.integrate_image_1d()
+                if self.model.current_configuration.auto_integrate_cake:
+                    self.model.current_configuration.integrate_image_2d()
+
+        # update the GUI
+        if ind == 2:  # integration tab
+            self.integration_controller.image_controller.update_image()
+
+        self.activate_mode(ind)
+        self.update_image_display_state(old_index, ind)
+
+    def activate_mode(self, mode_ind):
+        controllers = [
+            self.calibration_controller,
+            self.mask_controller,
+            self.integration_controller.image_controller,
+            self.map_controller
+        ]
+        for i, controller in enumerate(controllers):
+            if i == mode_ind:
+                controller.activate()
+            else:
+                controller.deactivate()
+
+    def update_image_display_state(self, old_index, new_index):
+        img_widgets = [
+            self.widget.calibration_widget.img_widget,
+            self.widget.mask_widget.img_widget,
+            self.widget.integration_widget.img_widget,
+            self.widget.map_widget.img_plot_widget
+        ]
+        old_display_state = img_widgets[old_index].get_display_state()
+        img_widgets[new_index].set_display_state(*old_display_state)
+
+    def update_title(self):
+        """
+        Updates the title bar of the main window. The title bar will always show the current version of Dioptas, the
+        image or pattern filenames loaded and the current calibration name.
+        """
+        img_filename = os.path.basename(self.model.img_model.filename)
+        pattern_filename = os.path.basename(self.model.pattern.filename)
+        calibration_name = self.model.calibration_model.calibration_name
+        year = datetime.datetime.now().year
+        dioptas_str = "Dioptas " + __version__ + " - © {} C. Prescher".format(year)
+
+        if img_filename == "" and pattern_filename == "":
+            self.widget.setWindowTitle(dioptas_str)
+            self.widget.integration_widget.img_frame.setWindowTitle(dioptas_str)
+            return
+
+        str = ""
+        if img_filename != "":
+            str += img_filename
+        elif img_filename == "" and pattern_filename != "":
+            str += pattern_filename
+        if not img_filename == pattern_filename and pattern_filename != "":
+            str += ", " + pattern_filename
+        if calibration_name != "":
+            str += ", calibration: " + calibration_name
+        str += " | " + dioptas_str 
+        self.widget.setWindowTitle(str)
+        self.widget.integration_widget.img_frame.setWindowTitle(str)
+
+    def save_default_settings(self):
+        if not os.path.exists(self.settings_directory):
+            os.mkdir(self.settings_directory)
+        self.model.save(os.path.join(self.settings_directory, "config.dio"))
+
+    def load_default_settings(self):
+        config_path = os.path.join(self.settings_directory, "config.dio")
+        if os.path.isfile(config_path):
+            self.show_window()
+            if QtWidgets.QMessageBox.Yes == QtWidgets.QMessageBox.question(
+                    self.widget,
+                    "Recovering previous state.",
+                    "Should Dioptas recover your previous Work?",
+                    QtWidgets.QMessageBox.Yes,
+                    QtWidgets.QMessageBox.No,
+            ):
+                self.model.load(os.path.join(self.settings_directory, "config.dio"))
+            else:
+                self.load_directories()
+
+    def setup_backup_timer(self):
+        self.backup_timer = QtCore.QTimer(self.widget)
+        self.backup_timer.timeout.connect(self.save_default_settings)
+        self.backup_timer.setInterval(600000)  # every 10 minutes
+        self.backup_timer.start()
+
+    def save_directories(self):
+        """
+        Currently used working directories for images, spectra, etc. are saved as csv file in the users directory for
+        reuse when Dioptas is started again without loading a configuration
+        """
+        working_directories_path = os.path.join(
+            self.settings_directory, "working_directories.json"
+        )
+        json.dump(self.model.working_directories, open(working_directories_path, "w"))
+
+    def load_directories(self):
+        """
+        Loads previously used Dioptas directory paths.
+        """
+        working_directories_path = os.path.join(
+            self.settings_directory, "working_directories.json"
+        )
+        if os.path.exists(working_directories_path):
+            self.model.working_directories = json.load(
+                open(working_directories_path, "r")
+            )
+
+    def close_event(self, ev):
+        """
+        Intervention of the Dioptas close event to save settings before closing the Program.
+        """
+        if self.use_settings:
+            self.save_default_settings()
+            self.save_directories()
+        QtWidgets.QApplication.closeAllWindows()
+        ev.accept()
+
+    def save_btn_clicked(self):
+        try:
+            default_file_name = os.path.join(
+                self.model.working_directories["project"], "config.dio"
+            )
+        except (TypeError, KeyError):
+            default_file_name = "."
+        filename = save_file_dialog(
+            self.widget,
+            "Save Current Dioptas Project",
+            default_file_name,
+            filter="Dioptas Project (*.dio)",
+        )
+
+        if filename is not None and filename != "":
+            self.model.save(filename)
+            self.model.working_directories["project"] = os.path.dirname(filename)
+
+    def load_btn_clicked(self):
+        try:
+            default_file_name = os.path.join(
+                self.model.working_directories["project"], "config.dio"
+            )
+        except (TypeError, KeyError):
+            default_file_name = "."
+        filename = open_file_dialog(
+            self.widget,
+            "Load a Dioptas Project",
+            default_file_name,
+            filter="Dioptas Project (*.dio)",
+        )
+        if filename is not None and filename != "":
+            self.model.load(filename)
+            self.model.working_directories["project"] = os.path.dirname(filename)
+
+    def reset_btn_clicked(self):
+        if QtWidgets.QMessageBox.Yes == QtWidgets.QMessageBox.question(
+                self.widget,
+                "Resetting Dioptas.",
+                "Do you really want to reset Dioptas?\nAll unsaved work will be lost!",
+                QtWidgets.QMessageBox.Yes,
+                QtWidgets.QMessageBox.No,
+        ):
+            self.model.reset()
+
+    def create_external_actions(self):
+        self.widget.create_external_actions(self.configuration["external_actions"])
+        for action in self.configuration["external_actions"]:
+            self.widget.external_action_btns[action["name"]].clicked.connect(
+                partial(
+                    self.execute_action,
+                    action
+                )
+            )
+
+    def execute_action(self, action):
+        command = format(action["command"])
+        arguments = action["arguments"]
+        img_path = self.model.img_model.filename
+        frame_index = self.model.img_model.series_pos
+
+        combined_arguments = f"{arguments} \"{img_path}\" {frame_index}"
+        command_str = " ".join([command, combined_arguments])
+
+        # prepare command_str for Popen
+        args = shlex.split(command_str)
+
+        def run_command():
+            """Run the command with arguments pulse the image file path."""
+            subprocess.Popen(args, shell=True)
+
+        threading.Thread(target=run_command).start()
+
+        return command_str
