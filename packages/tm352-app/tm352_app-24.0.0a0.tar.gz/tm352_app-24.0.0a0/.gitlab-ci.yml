@@ -1,0 +1,93 @@
+stages:
+  - build
+  - test
+  - publish
+
+sast:
+  stage: test
+
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+
+build-python-package:
+  image: python:3.11
+  stage: build
+  script:
+    - pip install hatch
+    - hatch build
+  artifacts:
+    paths:
+      - dist
+    expire_in: 300 seconds
+  interruptible: true
+
+# build-docs:
+#   image: python:3.11
+#   stage: build
+#   script:
+#     - pip install hatch
+#     - hatch run docs --all docs/user
+#     - hatch run docs --all docs/dev
+#     - cd docs/user/_build
+#     - tar -jcf docs.tar.bz2 html
+#     - cd ../../dev/_build
+#     - tar -jcf docs.tar.bz2 html
+#   artifacts:
+#     paths:
+#       - docs/user/_build
+#       - docs/dev/_build
+#     expire_in: 300 seconds
+#   interruptible: true
+
+code-tests:
+  image: python:$PYTHON_VERSION
+  stage: test
+  script:
+    - pip install hatch
+    - hatch run cov --cov-report xml --junitxml=junit.xml
+  parallel:
+    matrix:
+      - PYTHON_VERSION: ["3.11"]
+  artifacts:
+    when: always
+    paths:
+      - coverage.xml
+      - junit.xml
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+      junit: junit.xml
+  coverage: /(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/
+  interruptible: true
+
+style-tests:
+  image: python:3.10
+  stage: test
+  script:
+    - pip install hatch
+    - hatch run lint
+  interruptible: true
+# publish-dev-docs:
+#   image: quay.io/curl/curl:latest
+#   stage: publish
+#   script:
+#     - cd docs/user/_build
+#     - 'curl -X PUT -H "Authorization: Bearer $DEV_DOCS_TOKEN" -F "archive=@docs.tar.bz2" https://ocl-dev-docs-api.open.ac.uk/upload/container-launcher/user'
+#     - cd ../../dev/_build
+#     - 'curl -X PUT -H "Authorization: Bearer $DEV_DOCS_TOKEN" -F "archive=@docs.tar.bz2" https://ocl-dev-docs-api.open.ac.uk/upload/container-launcher/dev'
+#   rules:
+#     - if: $CI_COMMIT_BRANCH == "main"
+#   interruptible: true
+
+# publish-docs:
+#   image: quay.io/curl/curl:latest
+#   stage: publish
+#   script:
+#     - cd docs/user/_build
+#     - 'curl -X PUT -H "Authorization: Bearer $DOCS_TOKEN" -F "archive=@docs.tar.bz2" https://docs-api.ocl.open.ac.uk/upload/container-launcher/user'
+#   rules:
+#     - if: $CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+$/
+#   interruptible: true
