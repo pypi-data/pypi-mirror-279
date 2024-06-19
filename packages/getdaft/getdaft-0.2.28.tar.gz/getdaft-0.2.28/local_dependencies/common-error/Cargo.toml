@@ -1,0 +1,18 @@
+[dependencies]
+arrow2 = { path = "../arrow2" }
+regex = "1.10.4"
+serde_json = "1.0.116"
+
+[features]
+default = ["python"]
+python = ["dep:pyo3"]
+
+[package]
+edition = "2021"
+name = "common-error"
+version = "0.2.28"
+
+[dependencies.pyo3]
+features = [ "extension-module", "multiple-pymethods", "abi3-py38",]
+version = "0.19.2"
+optional = true

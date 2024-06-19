@@ -1,0 +1,22 @@
+[dependencies]
+arrow2 = { path = "../arrow2" }
+common-error = {path = "../common-error", default-features = false}
+# NOTE: The "arrow2-0-17" feature is supposed to build serde_arrow against arrow2=0.17, but when building Daft
+# we respect a [patch.crates.io] which overrides this behavior to use our arrow2 fork
+serde_arrow = {version = "0.11.0", features = ["arrow2-0-17"]}
+
+[package]
+edition = "2021"
+name = "daft-sketch"
+version = "0.2.28"
+
+[dependencies.sketches-ddsketch]
+version = "0.2.2"
+features = [ "use_serde",]
+
+[dependencies.snafu]
+version = "0.7.4"
+features = [ "futures",]
+
+[dependencies.lazy_static]
+version = "1.4.0"

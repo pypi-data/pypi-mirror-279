@@ -1,0 +1,39 @@
+[dependencies]
+common-daft-config = {path = "../common-daft-config", default-features = false}
+common-error = {path = "../common-error", default-features = false}
+common-io-config = {path = "../common-io-config", default-features = false}
+daft-core = {path = "../daft-core", default-features = false}
+daft-dsl = {path = "../daft-dsl", default-features = false}
+daft-execution = {path = "../daft-execution", default-features = false}
+daft-micropartition = {path = "../daft-micropartition", default-features = false}
+daft-plan = {path = "../daft-plan", default-features = false}
+daft-scan = {path = "../daft-scan", default-features = false}
+
+[features]
+default = ["python"]
+python = ["dep:pyo3", "common-error/python", "common-io-config/python", "common-daft-config/python", "daft-core/python", "daft-execution/python", "daft-micropartition/python", "daft-plan/python", "daft-dsl/python"]
+
+[package]
+edition = "2021"
+name = "daft-scheduler"
+version = "0.2.28"
+
+[dependencies.bincode]
+version = "1.3.3"
+
+[dependencies.log]
+features = [ "std",]
+version = "0.4.19"
+
+[dependencies.pyo3]
+features = [ "extension-module", "multiple-pymethods", "abi3-py38",]
+version = "0.19.2"
+optional = true
+
+[dependencies.pyo3-log]
+version = "0.8.3"
+optional = true
+
+[dependencies.serde]
+features = [ "derive", "rc","rc",]
+version = "1.0.200"

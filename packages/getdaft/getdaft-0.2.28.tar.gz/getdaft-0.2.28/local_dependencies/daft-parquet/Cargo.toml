@@ -1,0 +1,55 @@
+[dependencies]
+arrow2 = { features = ["io_parquet", "io_parquet_compression"], path = "../arrow2" }
+common-error = {path = "../common-error", default-features = false}
+daft-core = {path = "../daft-core", default-features = false}
+daft-dsl = {path = "../daft-dsl", default-features = false}
+daft-io = {path = "../daft-io", default-features = false}
+daft-stats = {path = "../daft-stats", default-features = false}
+daft-table = {path = "../daft-table", default-features = false}
+parquet2 = { path = "../parquet2" }
+async-compat = "0.2.3"
+async-stream = "0.3.5"
+bytes = "1.6.0"
+futures = "0.3.30"
+indexmap = "2.1.0"
+itertools = "0.11"
+rayon = "1.10.0"
+tokio-util = "0.7.11"
+
+[features]
+default = ["python"]
+python = ["dep:pyo3", "dep:pyo3-log", "common-error/python", "daft-core/python", "daft-io/python", "daft-table/python", "daft-stats/python", "daft-dsl/python"]
+
+[package]
+edition = "2021"
+name = "daft-parquet"
+version = "0.2.28"
+
+[dependencies.snafu]
+version = "0.7.4"
+features = [ "futures",]
+
+[dependencies.tokio]
+version = "1.37.0"
+features = [ "net", "time", "bytes", "process", "signal", "macros", "rt", "rt-multi-thread",]
+
+[dependencies.tokio-stream]
+version = "0.1.14"
+features = [ "fs", "io-util", "time",]
+
+[dependencies.log]
+features = [ "std",]
+version = "0.4.19"
+
+[dependencies.pyo3]
+features = [ "extension-module", "multiple-pymethods", "abi3-py38",]
+version = "0.19.2"
+optional = true
+
+[dependencies.pyo3-log]
+version = "0.8.3"
+optional = true
+
+[dependencies.serde]
+features = [ "derive", "rc",]
+version = "1.0.200"

@@ -1,0 +1,40 @@
+[dependencies]
+common-error = {path = "../common-error", default-features = false}
+daft-core = {path = "../daft-core", default-features = false}
+daft-dsl = {path = "../daft-dsl", default-features = false}
+daft-io = {path = "../daft-io", default-features = false}
+daft-micropartition = {path = "../daft-micropartition", default-features = false}
+daft-plan = {path = "../daft-plan", default-features = false}
+daft-scan = {path = "../daft-scan", default-features = false}
+async-trait = "0.1.79"
+futures = "0.3.30"
+itertools = "0.11"
+rand = "^0.8"
+rayon = "1.10.0"
+sysinfo = "0.30.12"
+
+[features]
+default = ["python"]
+python = ["dep:pyo3", "common-error/python", "daft-core/python", "daft-dsl/python", "daft-io/python", "daft-micropartition/python", "daft-plan/python", "daft-scan/python"]
+
+[package]
+edition = "2021"
+name = "daft-execution"
+version = "0.2.28"
+
+[dependencies.snafu]
+version = "0.7.4"
+features = [ "futures",]
+
+[dependencies.tokio]
+version = "1.37.0"
+features = [ "net", "time", "bytes", "process", "signal", "macros", "rt", "rt-multi-thread",]
+
+[dependencies.log]
+features = [ "std",]
+version = "0.4.19"
+
+[dependencies.pyo3]
+features = [ "extension-module", "multiple-pymethods", "abi3-py38",]
+version = "0.19.2"
+optional = true

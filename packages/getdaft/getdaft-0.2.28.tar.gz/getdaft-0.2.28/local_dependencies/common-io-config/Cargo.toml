@@ -1,0 +1,25 @@
+[dependencies]
+aws-credential-types = {version = "0.55.3"}
+common-error = {path = "../common-error", default-features = false}
+common-py-serde = {path = "../common-py-serde", default-features = false}
+typetag = "0.2.16"
+chrono = "0.4.38"
+serde_json = "1.0.116"
+
+[features]
+default = ["python"]
+python = ["dep:pyo3", "common-error/python", "common-py-serde/python"]
+
+[package]
+edition = "2021"
+name = "common-io-config"
+version = "0.2.28"
+
+[dependencies.pyo3]
+features = [ "extension-module", "multiple-pymethods", "abi3-py38",]
+version = "0.19.2"
+optional = true
+
+[dependencies.serde]
+features = [ "derive", "rc",]
+version = "1.0.200"
