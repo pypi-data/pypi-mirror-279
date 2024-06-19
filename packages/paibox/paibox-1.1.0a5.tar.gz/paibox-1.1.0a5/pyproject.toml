@@ -1,0 +1,71 @@
+[tool.poetry]
+name = "paibox"
+version = "1.1.0a5"
+description = "Toolchain of PAICORE 2.0"
+authors = ["Ziru Pan <zrpan@stu.pku.edu.cn>"]
+maintainers = [
+    "Hongtu Xia <hongtux@pku.edu.cn>",
+    "Siyuan Gao <siyuan-gao@outlook.com>",
+    "Zhaoyang Hao <hzyang2218@gmail.com>",
+    "Ziru Pan <zrpan@stu.pku.edu.cn>",
+]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://github.com/PAICookers/PAIBox"
+homepage = "https://github.com/PAICookers/PAIBox"
+documentation = "https://github.com/PAICookers/PAIBox#readme"
+keywords = ["PAICORE 2.0", "PAIBox", "SNN", "Toolchain"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries",
+]
+packages = [{ include = "paibox" }]
+
+# Includes the document
+include = ["docs/Guide-of-PAIBox.md", "CHANGELOG.md"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pydantic = "^2.0"
+numpy = "^1.26.0"
+paicorelib = "^1.1.6"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.0.0"
+pytest-md = "^0.2.0"
+paicorelib = {git = "https://github.com/PAICookers/PAIlib.git", rev = "dev"}
+orjson = "^3.10.0"
+
+
+[tool.poetry.group.dev.dependencies]
+orjson = "^3.10.0"
+
+
+[tool.pytest.ini_options]
+minversion = "8.0.0"
+testpaths = ["tests"]
+
+
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
