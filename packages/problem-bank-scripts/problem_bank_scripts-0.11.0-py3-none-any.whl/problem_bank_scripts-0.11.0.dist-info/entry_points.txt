@@ -1,0 +1,4 @@
+[console_scripts]
+check_server_ast=problem_bank_scripts.scripts.check_server_ast:main
+lint_server=problem_bank_scripts.scripts.lint_server:main
+
