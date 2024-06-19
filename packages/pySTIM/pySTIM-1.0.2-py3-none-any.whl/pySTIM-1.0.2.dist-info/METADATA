@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: pySTIM
+Version: 1.0.2
+Summary: A python package for spatial omics analysis
+Home-page: https://bitbucket.org/stim-spatial-omics/stim
+License-File: LICENSE
+
