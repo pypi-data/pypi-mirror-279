@@ -1,0 +1,80 @@
+name: CI
+
+on: # Quando será rodado?
+  push: # Quando acontecer um push
+    branches: # na branch "main"
+      - "main"
+  pull_request: # E Quando acontecer um pull_request para "main"
+    branches:
+      - "main"
+
+  workflow_dispatch: #Pode rodar manualmente mesmo que não tenha um pull request
+
+jobs:
+  lint: # teste de formatação
+    strategy: #Estrategias para rodar os tests
+      fail-fast: true # em formato "true" se falhar um teste, ele falha todos direto
+      matrix: #configura versão
+        python-version: ['3.12'] # python que ele ira usar para test
+        os: [ubuntu-latest] # Sistema operacional que ira usar para o test
+
+    runs-on: ${{ matrix.os }} # Usado para unificar as configurações da matrix
+
+    steps: #o que ele ira fazer?
+      - uses: actions/checkout@v2 #Fazer um checout na branch local na versão 2
+      - uses: actions/setup-python@v2 #Utilizando o setup python na versão 2
+        with:
+          python-version: ${{ matrix.python-version }} # Vai utilizar os python na versão especificada
+
+      - name: Install Project
+        run: pip install '.[test,dev]' # instalando o programa em forma de test
+
+      - name: Typing
+        run: mypy --ignore-missing-imports encryptdef
+
+      - name: Look for style erros
+        run: pflake8 # Rodando o flake para verificar se tem erro de formatação
+
+      - name: Check for importing style
+        run: isort --profile=black -m 3 --check --diff encryptdef tests
+
+      - name: Look for auto format erros
+        run: black --check --diff encryptdef tests # Verificar se está correto a formtação do black
+        
+
+  tests: #Vai rodar os tests aqui dentro
+    needs: lint # Antes de iniciar os test, é preciso ter ocorrido tudo certo com o lint
+    strategy: #Estrategias para rodar os tests
+      fail-fast: false # em formato "true" se falhar um teste, ele falha todos direto
+      matrix: #configura versão
+        python-version: ['3.10', '3.11', '3.12'] # python que ele ira usar para test
+        os: [ubuntu-latest] # Sistema operacional que ira usar para o test
+
+    runs-on: ${{ matrix.os }} # Usado para unificar as configurações da matrix
+
+    steps: #o que ele ira fazer?
+      - uses: actions/checkout@v2 #Fazer um checout na branch local na versão 2
+      - uses: actions/setup-python@v2 #Utilizando o setup python na versão 2
+        with:
+          python-version: ${{ matrix.python-version }} # Vai utilizar os python na versão especificada
+
+      - name: Install Project
+        run: pip install '.[test,dev]'
+
+      - name: Run tests
+        run: pytest --cov=encryptdef --cov-report=xml --cov-report=term --junitxml=test-results.xml
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          files: coverage.xml
+          fail_ci_if_error: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Publish Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2 # publicar os test unitarios que viram no arquivo xml
+        if: always() # Sempre publicar, seja com erro ou com acerto no test
+        with:
+          files: test-results.xml
+          check_name: Test Result (Python ${{matrix.python-version}})
