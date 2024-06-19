@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spot2mp3_gooosexe"
+version = "1.0.0"
+authors = [
+  { name="Oliver Huang", email="ohuang4131@gmail.com" },
+]
+description = "A simple tool to convert Spotify playlists to mp3 files."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/gooosexe/spot2mp3"
+Issues = "https://github.com/gooosexe/spot2mp3/issues"
