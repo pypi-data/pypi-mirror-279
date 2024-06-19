@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: holger11
+Version: 0.4
+Summary: Example library for educational purposes
+Author: Yaromir Gusev
+Author-email: yaromirarhideus@gmail.com
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: pyperclip
+
+# Title
+description
+## Heading 2
+
+- **BOLD TEXT**: description
+
+## Installation
+
+
+
+## Usage
+## Functions
+### Funtion(parameter)
