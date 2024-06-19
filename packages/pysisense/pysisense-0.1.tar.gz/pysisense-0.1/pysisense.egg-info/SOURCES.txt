@@ -1,0 +1,9 @@
+README.md
+setup.py
+pysisense/__init__.py
+pysisense/client.py
+pysisense.egg-info/PKG-INFO
+pysisense.egg-info/SOURCES.txt
+pysisense.egg-info/dependency_links.txt
+pysisense.egg-info/requires.txt
+pysisense.egg-info/top_level.txt
