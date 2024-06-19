@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/moveread/boxes/__init__.py
+src/moveread/boxes/__init__.pyi
+src/moveread/boxes/annotations.py
+src/moveread/boxes/export_.py
+src/moveread/boxes/model_extract.py
+src/moveread_boxes.egg-info/PKG-INFO
+src/moveread_boxes.egg-info/SOURCES.txt
+src/moveread_boxes.egg-info/dependency_links.txt
+src/moveread_boxes.egg-info/requires.txt
+src/moveread_boxes.egg-info/top_level.txt
