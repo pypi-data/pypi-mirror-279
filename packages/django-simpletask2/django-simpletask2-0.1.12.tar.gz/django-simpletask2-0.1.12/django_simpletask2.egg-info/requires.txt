@@ -1,0 +1,6 @@
+django
+django-redis
+django-static-fontawesome
+django-static-jquery-ui
+django-middleware-global-request
+globallock

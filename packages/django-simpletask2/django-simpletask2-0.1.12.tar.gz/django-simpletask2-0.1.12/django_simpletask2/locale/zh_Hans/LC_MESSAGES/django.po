@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-20 10:36+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: django_simpletask2/actions.py:27
+#, python-brace-format
+msgid "{ok} items have been reset successfully."
+msgstr "{ok}条任务重置成功。"
+
+#: django_simpletask2/actions.py:33
+#, python-brace-format
+msgid "{failed} items reset failed."
+msgstr "{failed}条任务重置失败。"
+
+#: django_simpletask2/actions.py:40
+#, python-brace-format
+msgid ""
+"{ok} items have been reset successfully and {failed} items reset failed."
+msgstr "{ok}条任务重置成功，{failed}条任务重置失败。"
+
+#: django_simpletask2/actions.py:47
+msgid "Reset selected tasks and push them to message queue"
+msgstr "重置所选任务并重新生成任务消息"
+
+#: django_simpletask2/actions.py:69 django_simpletask2/actions.py:106
+#, python-brace-format
+msgid "{ok} items have been successfully completed."
+msgstr "{ok}条任务成功。"
+
+#: django_simpletask2/actions.py:74 django_simpletask2/actions.py:111
+#, python-brace-format
+msgid "{failed} items failed."
+msgstr "{failed}条任务失败。"
+
+#: django_simpletask2/actions.py:80 django_simpletask2/actions.py:117
+#, python-brace-format
+msgid "{ok} items have been successfully completed and {failed} items failed."
+msgstr "{ok}条任务成功，{failed}条任务失败。"
+
+#: django_simpletask2/actions.py:86
+msgid "Force to do selected tasks"
+msgstr "立即执行所选任务"
+
+#: django_simpletask2/actions.py:123
+msgid "Force to mark selected tasks done"
+msgstr "标记所选任务为完成"
+
+#: django_simpletask2/admin.py:43 django_simpletask2/models.py:449
+msgid "Simple Task Queue Enabled"
+msgstr "启用状态"
+
+#: django_simpletask2/admin.py:55
+msgid "Goto The Queue List"
+msgstr "队列管理"
+
+#: django_simpletask2/admin.py:64 django_simpletask2/admin.py:274
+msgid "Operations"
+msgstr "操作"
+
+#: django_simpletask2/admin.py:119
+msgid "Clean all items failed: error={}"
+msgstr "删除所有数据失败，错误信息为：{}"
+
+#: django_simpletask2/admin.py:147
+msgid "Remove duplicate items failed: error={}"
+msgstr "消除重复数据失败，错误信息为：{}"
+
+#: django_simpletask2/admin.py:175
+msgid "Update channel's queue size: error={}"
+msgstr "更新统计数据失败，错误信息为：{}"
+
+#: django_simpletask2/admin.py:187
+msgid "Action request failed..."
+msgstr "服务器响应异常，请检查网络连接或联系系统管理员处理！"
+
+#: django_simpletask2/admin.py:190
+msgid "Clean All Items"
+msgstr "删除所有数据"
+
+#: django_simpletask2/admin.py:191
+msgid "Are you sure to clean all items?"
+msgstr "确认要删除所有数据吗？"
+
+#: django_simpletask2/admin.py:213
+msgid "Remove Duplicate Items"
+msgstr "消除重复数据"
+
+#: django_simpletask2/admin.py:215
+msgid "Are you sure to remove duplicate items?"
+msgstr "确认要消除重复数据吗？"
+
+#: django_simpletask2/admin.py:239
+msgid "Update Channel's Queue Size"
+msgstr "更新队列长度"
+
+#: django_simpletask2/admin.py:241
+msgid "Are you sure to update the channel's queue size?"
+msgstr "确认要更新列表长度吗？"
+
+#: django_simpletask2/apps.py:7
+msgid "Django Simple Task Management"
+msgstr "简易任务管理中心"
+
+#: django_simpletask2/models.py:29
+msgid "Ready"
+msgstr "就绪"
+
+#: django_simpletask2/models.py:30
+msgid "Doing"
+msgstr "执行中"
+
+#: django_simpletask2/models.py:31
+msgid "Done"
+msgstr "完成"
+
+#: django_simpletask2/models.py:34 django_simpletask2/models.py:376
+#: django_simpletask2/models.py:497
+msgid "Add Time"
+msgstr "创建时间"
+
+#: django_simpletask2/models.py:35 django_simpletask2/models.py:380
+#: django_simpletask2/models.py:501
+msgid "Modify Time"
+msgstr "修改时间"
+
+#: django_simpletask2/models.py:37
+msgid "Status"
+msgstr "状态"
+
+#: django_simpletask2/models.py:40
+msgid "Start Time"
+msgstr "启动时间"
+
+#: django_simpletask2/models.py:43 django_simpletask2/models.py:156
+msgid "Current Step"
+msgstr "当前步骤"
+
+#: django_simpletask2/models.py:46
+msgid "Step1 start time"
+msgstr "步骤1启动时间"
+
+#: django_simpletask2/models.py:49
+msgid "Step2 start time"
+msgstr "步骤2启动时间"
+
+#: django_simpletask2/models.py:52
+msgid "Step3 start time"
+msgstr "步骤3启动时间"
+
+#: django_simpletask2/models.py:55
+msgid "Done Time"
+msgstr "完成时间"
+
+#: django_simpletask2/models.py:58
+msgid "Success Status"
+msgstr "是否成功"
+
+#: django_simpletask2/models.py:63
+msgid "Auto Reset Time"
+msgstr "自动重置时间点"
+
+#: django_simpletask2/models.py:64
+msgid "After which time the task should be reset."
+msgstr ""
+"根据任务的启动时间和最大执行时长计算出“自动重置时间点”。在这个时间点后任务将"
+"被自动重置。"
+
+#: django_simpletask2/models.py:144
+msgid "Channel"
+msgstr "消息队列"
+
+#: django_simpletask2/models.py:149
+msgid "Final Step Number"
+msgstr "总步骤数"
+
+#: django_simpletask2/models.py:344
+msgid "Channel Code"
+msgstr "编码"
+
+#: django_simpletask2/models.py:350
+msgid "Channel Name"
+msgstr "名称"
+
+#: django_simpletask2/models.py:356
+msgid "Channel Cache Name"
+msgstr "Redis实例名称"
+
+#: django_simpletask2/models.py:362
+msgid "Channel Key"
+msgstr "键名"
+
+#: django_simpletask2/models.py:367
+msgid "Channel Queue Size"
+msgstr "队列长度"
+
+#: django_simpletask2/models.py:372
+msgid "Channel Queue Size Update Time"
+msgstr "队列长度更新时间"
+
+#: django_simpletask2/models.py:384
+msgid "Django Simple Task Channel"
+msgstr "消息队列"
+
+#: django_simpletask2/models.py:385
+msgid "Django Simple Task Channels"
+msgstr "消息队列"
+
+#: django_simpletask2/models.py:389
+msgid "Can clean all items"
+msgstr "删除所有数据"
+
+#: django_simpletask2/models.py:393
+msgid "Can remove duplicate items"
+msgstr "消除重复数据"
+
+#: django_simpletask2/models.py:397
+msgid "Can update channel queue size"
+msgstr "更新队列长度"
+
+#: django_simpletask2/models.py:427
+msgid "Simple Task Queue Name"
+msgstr "名称"
+
+#: django_simpletask2/models.py:433
+msgid "Simple Task Queue Model"
+msgstr "模型"
+
+#: django_simpletask2/models.py:438
+msgid "Simple Task Queue Alive"
+msgstr "模型存活"
+
+#: django_simpletask2/models.py:439
+msgid "Simple Task Queue alive means the model is NOT deleted."
+msgstr "模型存活表示模型没有被系统删除。"
+
+#: django_simpletask2/models.py:444
+msgid "Simple Task Queue Alive Status Update Time"
+msgstr "模型存活状态更新时间"
+
+#: django_simpletask2/models.py:450
+msgid "Will not update the queue stats if the queue is disabled."
+msgstr "队列未开启，则不会更新队列的统计数据。"
+
+#: django_simpletask2/models.py:455
+msgid "Simple Task Queue Size"
+msgstr "队列长度"
+
+#: django_simpletask2/models.py:457
+msgid ""
+"The queue size is calculated periodically, so it may delay some times. Check "
+"the details to find the lastest update time."
+msgstr "队列长度是周期性更新的，所以存在一定的延时。请检查最近更新时间，以确定数据的时效。"
+
+#: django_simpletask2/models.py:463
+msgid "Simple Task Queue Ready Size"
+msgstr "就绪"
+
+#: django_simpletask2/models.py:468
+msgid "Simple Task Queue Doing Size"
+msgstr "执行"
+
+#: django_simpletask2/models.py:473
+msgid "Simple Task Queue Done Size"
+msgstr "完成"
+
+#: django_simpletask2/models.py:478
+msgid "Simple Task Queue Success Size"
+msgstr "成功"
+
+#: django_simpletask2/models.py:483
+msgid "Simple Task Queue Fail Size"
+msgstr "失败"
+
+#: django_simpletask2/models.py:488
+msgid "Simple Task Queue Unknown Size"
+msgstr "未知"
+
+#: django_simpletask2/models.py:493
+msgid "Simple Task Queue Size Update Time"
+msgstr "队列长度更新时间"
+
+#: django_simpletask2/models.py:505
+msgid "Simple Task Queue"
+msgstr "任务队列"
+
+#: django_simpletask2/models.py:506
+msgid "Simple Task Queues"
+msgstr "任务队列"
