@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "debtcmining"
+version = "0.0.1rc1"
+description = ""
+authors = ["DesKaOne <DesKaOne@users.noreply.github.com>"]
+readme = "README.md"
+include = [
+    "debtcmining/CloudMining.pyd",
+    "debtcmining/CloudMining.so",
+]
+
+exclude = [
+    "debtcmining/CloudMining.py"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = "^3.9.5"
+aiohttp-proxy = "^0.1.2"
+sqlalchemy = "^2.0.31"
+pydantic = "^2.7.4"
+colorama = "^0.4.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
