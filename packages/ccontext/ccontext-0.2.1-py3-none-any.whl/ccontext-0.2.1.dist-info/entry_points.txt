@@ -1,0 +1,4 @@
+[console_scripts]
+ccontext=ccontext.cli:main
+ccontext-configure=ccontext.configurator:copy_default_config
+
