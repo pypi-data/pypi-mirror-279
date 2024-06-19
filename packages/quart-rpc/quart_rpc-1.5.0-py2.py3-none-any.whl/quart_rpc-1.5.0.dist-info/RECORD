@@ -1,0 +1,16 @@
+quart_rpc/__init__.py,sha256=X9pTeGHIYZtDOmfb9pnn2DEqWZMAyaPlqdFwEhsuSvk,22
+quart_rpc/exceptions.py,sha256=qH4k-fUIJezp_NxKFVpZX8Abt7qZxp6tlkfY2QY67-E,41
+quart_rpc/latest.py,sha256=HR-t44ZN2wqQ9xXyD1afsppGidVGeek8-WUjXOCPgjM,164
+quart_rpc/validation.py,sha256=phlp_SKYIVk5hzzWQFDB9kJEIcRCzhLpoSLpq-RFhCk,1997
+quart_rpc/version_1_0/__init__.py,sha256=X6R346okKvP0WjyrkPcazhhJl96TL_uQbicDudy-GD8,244
+quart_rpc/version_1_0/_protocols.py,sha256=PyKDd86aN-yPEnwGithcCzbIneLQZgl9sQsqjOeZ_dE,160
+quart_rpc/version_1_0/auth_session_key.py,sha256=urePF_CL5aIk5-qimAjlHnUbIzSD58qSErC_0auARFU,395
+quart_rpc/version_1_0/model.py,sha256=MRQdsuZlBquL86_K1q4ODdIT2CocRmU5oCitGtUtUmA,130
+quart_rpc/version_1_0/request.py,sha256=qmGJPNkcSTvzZX3an2FGZxC7D2gfCe7FoBTgyF6eyiw,480
+quart_rpc/version_1_0/response.py,sha256=ezqqB8uPVBFJu3zvmcOsV_eNpaOmtqN8M7twZv106N0,1159
+quart_rpc/version_1_0/rpc.py,sha256=HP5LfCMFZ87HbOcI4ecSYMXOByo8h2XMYF6VO-SyAWc,11645
+quart_rpc/version_1_0/utilities.py,sha256=yUosBhqgVrbyz0pIjEjMlhIkkwa67R8m_nBD1rNjmMk,547
+quart_rpc-1.5.0.dist-info/LICENSE,sha256=81tCgMDdo4oVlO7sIAynWuW7o8wwlfDK4lSFnkvTCwU,1083
+quart_rpc-1.5.0.dist-info/WHEEL,sha256=Sgu64hAMa6g5FdzHxXv9Xdse9yxpGGMeagVtPMWpJQY,99
+quart_rpc-1.5.0.dist-info/METADATA,sha256=OF-PrDZ05negUdCSqXphNStdUucyKO-_Pvx41Khxa70,4843
+quart_rpc-1.5.0.dist-info/RECORD,,
