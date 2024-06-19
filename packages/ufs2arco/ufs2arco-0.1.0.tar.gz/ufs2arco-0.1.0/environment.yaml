@@ -1,0 +1,37 @@
+name: ufs2arco
+channels:
+    - conda-forge
+dependencies:
+    - python=3.11
+# Basics
+    - scipy
+    - numpy
+    - matplotlib
+# xarray et al
+    - xarray
+    - cf_xarray
+    - netCDF4
+    - h5netcdf
+    - bottleneck
+    - dask[complete]
+    - zarr
+    - cftime
+# jupyter etc
+    - jupyter
+    - ipython
+    - ipykernel
+# plotting
+    - cartopy
+    - shapely
+# regrid
+    - xesmf
+# Testing
+    - pytest
+    - coverage
+# filesystem
+    - fsspec
+    - s3fs
+    - gcsfs
+# docs
+    - nbsphinx
+    - sphinx-book-theme
