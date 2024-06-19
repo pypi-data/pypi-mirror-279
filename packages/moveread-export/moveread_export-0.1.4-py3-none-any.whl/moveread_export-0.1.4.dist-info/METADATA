@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: moveread-export
+Version: 0.1.4
+Summary: Exporting data from annotations of the Moveread Core
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/python-core
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: haskellian
+Requires-Dist: pure-cv
+Requires-Dist: lazy-loader
+Requires-Dist: kv-api
+Requires-Dist: moveread-boxes
+Requires-Dist: moveread-labels
+Requires-Dist: moveread-errors
+Requires-Dist: moveread-core
+Provides-Extra: tf
+Requires-Dist: tensorflow ; extra == 'tf'
+Requires-Dist: tf-tools ; extra == 'tf'
+Requires-Dist: tf-ocr ; extra == 'tf'
+Requires-Dist: jaxtyping ; extra == 'tf'
+
+# Moveread Export
+
+> Exporting data from annotations of the Moveread Core
