@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: yxmath
+Version: 0.0.3.1
+Summary: Xu Yuxing's personal math tools
+Home-page: https://github.com/SouthernCD/yxmath
+Author: Yuxing Xu
+Author-email: xuyuxing@mail.kib.ac.cn
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: interlap >=0.2.6
+Requires-Dist: networkx >=2.4
+Requires-Dist: yxutil >=0.0.1
+Requires-Dist: pingouin >=0.2.7
+Requires-Dist: fitter >=1.2.3
+Requires-Dist: scipy >=1.4.1
+Requires-Dist: numpy >=1.18.1
+Requires-Dist: matplotlib >=3.5.0
+
+# yxmath
+Xu Yuxing's personal math tools
