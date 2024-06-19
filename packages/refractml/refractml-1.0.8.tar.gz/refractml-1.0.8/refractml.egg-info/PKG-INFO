@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: refractml
+Version: 1.0.8
+Summary: REST API client for Refract AI
+Home-page: https://git.lti-aiq.in/akhil-lawrence/mosaic-ai-client
+Author: Akhil Lawrence
+Author-email: akhil.lawrence@lntinfotech.com
+Classifier: Programming Language :: Python :: 3.8
+Provides-Extra: vanilla
+Provides-Extra: complete-with-utils
+Provides-Extra: complete
+Provides-Extra: utils_flavours
+Provides-Extra: utils_common
+Provides-Extra: utils_metrics
+Provides-Extra: utils_k8
+Provides-Extra: common
