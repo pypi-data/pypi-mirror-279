@@ -1,0 +1,8 @@
+dm_aiomodbus/__init__.py,sha256=13xjnhFLVsCOJCzybyGVedPzfjy3Abumt7NMSVFMTRE,251
+dm_aiomodbus/aiomodbus_base_client.py,sha256=JdjXqRNebeKU0u8YkyXj_BPAzZ2Ep740t9Qia7aAGMM,9818
+dm_aiomodbus/aiomodbus_clients.py,sha256=UwA7oy8C9TN7UcGmMk1EBDUyFLtezjutBAEFVbty48s,2092
+dm_aiomodbus/aiomodbus_simulator_client.py,sha256=EMNNjJf4pQ-gXBJ9ivm8JZWQ5psEPtqcyks8hsRhWb0,1769
+dm_aiomodbus-0.2.1.dist-info/METADATA,sha256=cwZMEpvaDEIuiiPAVtWqfrVJSSnNy6wCBpiEKDxwsyI,4473
+dm_aiomodbus-0.2.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dm_aiomodbus-0.2.1.dist-info/top_level.txt,sha256=f7BT-H61hSx3Ye5IzDAWeJfeObFI1CY_cG0riT0Extw,13
+dm_aiomodbus-0.2.1.dist-info/RECORD,,
