@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cmaps-devin
+Version: 2.1.1
+Home-page: 
+Author: Devin Long
+Author-email: long.sc@qq.com
+License: LICENSE
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: packaging
+
