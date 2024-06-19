@@ -1,0 +1,29 @@
+{
+  "overrides": {
+    "sql-language-server": {
+      "mysql2": "3.9.8",
+      "node-ssh-forward": {
+        "ssh2": "1.4.0"
+      },
+      "jest": {
+        "jest-haste-map": {
+          "sane": {
+            "micromatch": {
+              "snapdragon": {
+                "base": {
+                  "cache-base": {
+                    "unset-value": "2.0.1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "sql-language-server": "^1.7.0",
+    "vscode-jsonrpc": "^8.2.1"
+  }
+}
