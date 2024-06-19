@@ -1,0 +1,9 @@
+{% load static %}
+<div class="wang-editor-tools" data-container-id="{{ id }}" data-editor-config="{{ editor_config }}"
+     data-toolbar-config="{{ toolbar_config }}">
+    <div id="editor—wrapper-{{ id }}">
+        <div id="toolbar-container-{{ id }}"><!-- 工具栏 --></div>
+        <div id="editor-container-{{ id }}"><!-- 编辑器 --></div>
+    </div>
+    <textarea {{ final_attrs }} style="display: none">{{ value }}</textarea>
+</div>

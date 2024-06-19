@@ -1,0 +1,12 @@
+[id^=editor—wrapper] {
+    border: 1px solid #ccc;
+    z-index: 100; /* 按需定义 */
+}
+
+[id^=toolbar-container] {
+    border-bottom: 1px solid #ccc;
+}
+
+[id^=editor-container] {
+    height: 500px;
+}
