@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+multidaq/__init__.py
+multidaq/biovisionMultiDaq.dll
+multidaq/libbiovisionMultiDaq.so
+multidaq/multiDaq.py
+multidaq.egg-info/PKG-INFO
+multidaq.egg-info/SOURCES.txt
+multidaq.egg-info/dependency_links.txt
+multidaq.egg-info/requires.txt
+multidaq.egg-info/top_level.txt
