@@ -1,0 +1,2 @@
+[console_scripts]
+xiaozu = xiaozu.BlankApp:main
