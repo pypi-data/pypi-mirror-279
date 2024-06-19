@@ -1,0 +1,3 @@
+[console_scripts]
+shifts=shifts.shifts:app
+

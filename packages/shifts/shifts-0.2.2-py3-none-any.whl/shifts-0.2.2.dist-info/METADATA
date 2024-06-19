@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: shifts
+Version: 0.2.2
+Summary: Converts shifts to a ical file
+License: Unlicense
+Author: Luís Miranda
+Author-email: luistm@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: ics (>=0.7.2,<0.8.0)
+Requires-Dist: typer (>=0.12.3,<0.13.0)
+Description-Content-Type: text/markdown
+
+# Shifts
+
+Converts shifts to a ical file.
+
