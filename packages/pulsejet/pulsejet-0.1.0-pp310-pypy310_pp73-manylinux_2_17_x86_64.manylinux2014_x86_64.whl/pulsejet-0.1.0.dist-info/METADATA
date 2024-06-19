@@ -1,0 +1,19 @@
+Metadata-Version: 2.3
+Name: pulsejet
+Version: 0.1.0
+Classifier: Programming Language :: Rust
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: grpcio >=1.64
+License-File: LICENSE
+Summary: PulsejetDB - Vector database for local and cloud development
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+Project-URL: homepage, https://jetengine.tech
+Project-URL: documentation, https://docs.pulsejet.jetengine.tech
+
+# PULSEJET
+
+Pulsejet Vector Store
+
+Docs and Usage at https://jetengine.tech
