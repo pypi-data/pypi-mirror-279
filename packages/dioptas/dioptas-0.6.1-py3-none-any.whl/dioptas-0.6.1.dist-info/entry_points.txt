@@ -1,0 +1,3 @@
+[console_scripts]
+dioptas=dioptas:main
+
