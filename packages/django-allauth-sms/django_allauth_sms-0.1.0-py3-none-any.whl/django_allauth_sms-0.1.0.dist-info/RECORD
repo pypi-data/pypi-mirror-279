@@ -1,0 +1,13 @@
+allauth_sms/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+allauth_sms/forms.py,sha256=shlROzAUUcz128X5ICo7nIHPiHgQYeG3l2js2Y0Ux1k,572
+allauth_sms/models.py,sha256=Be_9z2ysVJFOXx7gdjw_vpSa5jHCX_QGrtAXEp8YNV0,667
+allauth_sms/provider.py,sha256=efDiFZsioYUEnqmI6naRBtpjAGpkJcMwfwbnMh4bcy4,358
+allauth_sms/urls.py,sha256=Y8joR9lSoOCV8YKT6bz_Gyvr-IhXGJlaGdS5lGSLsdA,146
+allauth_sms/views.py,sha256=-hgaaoyJYiVlp47zFHXceSoy0W9eRk9zohGkVJ-tMrA,2283
+allauth_sms/migrations/0001_initial.py,sha256=1DPSGX1sAWvEig584r_D1Imbw9Rt7uSWX1TwTvpAE8s,1209
+allauth_sms/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_allauth_sms-0.1.0.dist-info/LICENSE,sha256=Tg9Qn5XJIZWPgpAF-nrGs94eY3KNZINOYZYGAzrYAkI,1302
+django_allauth_sms-0.1.0.dist-info/METADATA,sha256=f1OWSFgtNGc0WPs1y7jEH2_8a4vWVWKhpsvHwhzJNRs,218
+django_allauth_sms-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+django_allauth_sms-0.1.0.dist-info/top_level.txt,sha256=eex-pXZD6MjTSmL3aiOanRABftVWbBujzFsjBa0ZtXI,12
+django_allauth_sms-0.1.0.dist-info/RECORD,,
