@@ -1,0 +1,7 @@
+setup.py
+requezez/__init__.py
+requezez/requezez.py
+requezez.egg-info/PKG-INFO
+requezez.egg-info/SOURCES.txt
+requezez.egg-info/dependency_links.txt
+requezez.egg-info/top_level.txt
