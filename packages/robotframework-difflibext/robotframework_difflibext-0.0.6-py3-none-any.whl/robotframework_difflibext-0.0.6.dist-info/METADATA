@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: robotframework-difflibext
+Version: 0.0.6
+Summary: Robotframework library to show file/text differences via Python builtin difflib
+Home-page: https://github.com/jnhyperion/robotframework-difflibext
+Author: Johnny Huang
+Author-email: jnhyperion@gmail.com
+Keywords: robotframework diff library
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: robotframework
+
