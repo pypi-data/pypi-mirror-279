@@ -1,0 +1,12 @@
+torch
+torchaudio
+torchvision
+bitsandbytes>=0.41.1
+transformers<=4.40.0,>=4.36.0
+accelerate>=0.21.0
+scipy
+
+[dev]
+pyserini==0.22.1
+faiss-cpu==1.7.4
+rank-bm25
