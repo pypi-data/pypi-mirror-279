@@ -1,0 +1,2 @@
+[console_scripts]
+spotmp3 = spotmp3.cli:main
