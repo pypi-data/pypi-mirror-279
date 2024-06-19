@@ -1,0 +1,13 @@
+README.md
+setup.py
+wauo/__init__.py
+wauo/exceptions.py
+wauo/response.py
+wauo/spiders.py
+wauo/test.py
+wauo.egg-info/PKG-INFO
+wauo.egg-info/SOURCES.txt
+wauo.egg-info/dependency_links.txt
+wauo.egg-info/not-zip-safe
+wauo.egg-info/requires.txt
+wauo.egg-info/top_level.txt
