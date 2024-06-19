@@ -1,0 +1,15 @@
+rfmix_reader/__init__.py,sha256=qBiqjBpVdAKNSKj1EWmZHNaVlj4FYS8iR1ad0kS42es,261
+rfmix_reader/_chunk.py,sha256=OR0JtFV6TRIU5qXVG38rbdTb51wa3bYnkHqK30ewRlc,1124
+rfmix_reader/_fb_read.py,sha256=jRqx2Rtsm_pUNhryR-NJgS4D-x4z6qBFLXHPTV76L4c,4111
+rfmix_reader/_fb_reader.c,sha256=WS3ev8lM06AB4mTsN1lDOh5a3qAOcBpajPYAMR4J9uE,1084
+rfmix_reader/_fb_reader.h,sha256=7G-avBJLpHXS4Gw5DFNWJgm8uV1ig01B3GvIhDNRjzM,354
+rfmix_reader/_loci_bed.py,sha256=FLItA4oGyEOkVSi9RpCfMKKCxo-ShgdF9QFnx2JFohc,796
+rfmix_reader/_loci_bed.py~,sha256=00rqBsmQru3S-PX_gJwRgLkvzMoDgSabfBhlQEO5o3Q,19
+rfmix_reader/_read_rfmix.py,sha256=7amQEfioUa293SK90NJoFSR251ylJSPLB9ZFmzFpgxw,13343
+rfmix_reader/_utils.py,sha256=LGVU84nQ_h_4lMLLctY-QNLM-tLKBv7_7ZDr_llNqBA,656
+rfmix_reader/cufile.log,sha256=AUeiync7lS0JaWHcOMbAdBVZmklkTT_kJE3CCm4Xr7E,23074
+rfmix_reader/fb_reader.abi3.so,sha256=3eiL3vFVBl7EMSYxghHb2cNfVjHWTWFj2OJ24z38p3w,29264
+rfmix_reader-0.1.9a0.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+rfmix_reader-0.1.9a0.dist-info/METADATA,sha256=BvsjNd4oeK5UnAXXiCkCGE3FNMSfCzDR6QE5RP0MMi8,3516
+rfmix_reader-0.1.9a0.dist-info/WHEEL,sha256=zYDTCmuD0sc_pO-P86hADejUpJfF1UQQhbffJkH2WAw,108
+rfmix_reader-0.1.9a0.dist-info/RECORD,,
