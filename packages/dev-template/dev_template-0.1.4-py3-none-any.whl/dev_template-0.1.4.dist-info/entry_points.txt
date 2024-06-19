@@ -1,0 +1,2 @@
+[console_scripts]
+dev_template = module.dev_template:main
