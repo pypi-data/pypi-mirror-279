@@ -1,0 +1,29 @@
+[build-system]
+requires = ["maturin>=1.6,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "rusty-email-validator"
+requires-python = ">=3.8"
+authors = [{ name = "Iorio Markus", email = "mbalzert@gmail.com" }]
+urls = { "Homepage" = "https://github.com/mbalzert1978/rusty-email-validator" }
+keywords = ["rust", "email", "validation"]
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["license", "version"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
+module-name = "rusty_email_validator._email_validator"
+
+[tool.mypy]
+disallow_untyped_defs = true
+ignore_missing_imports = true
+show_error_codes = true
+no_implicit_optional = true

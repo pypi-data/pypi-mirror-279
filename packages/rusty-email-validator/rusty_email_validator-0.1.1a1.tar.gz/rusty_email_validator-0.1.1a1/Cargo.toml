@@ -1,0 +1,15 @@
+[package]
+name = "rusty_email_validator"
+version = "0.1.1-alpha.1"
+edition = "2021"
+description = "A Rust-based email validation library with Python bindings, leveraging the power of pyo3 and validator crates to provide robust and efficient email validation."
+license = "MIT License"
+homepage = "https://github.com/mbalzert1978/rusty-email-validator"
+
+[lib]
+name = "rusty_email_validator"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = "0.21.1"
+validator = "0.18.1"
