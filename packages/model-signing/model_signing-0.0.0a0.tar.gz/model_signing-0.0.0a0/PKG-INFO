@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: model_signing
+Version: 0.0.0a0
+Summary: A tool for signing and verifying ML models
+Author-email: Sigstore Authors <sigstore-dev@googlegroups.com>
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Typing :: Typed
+Project-URL: Homepage, https://github.com/sigstore/model-transparency
+Project-URL: Issues, https://github.com/sigstore/model-transparency/issues
+Project-URL: Source, https://github.com/sigstore/model-transparency
+
+# Model Signing
+
+For now, this is just claiming the name.
+
+Go to https://github.com/sigstore/model-transparency for the actual code that
+would show up here once we have a release.
+
