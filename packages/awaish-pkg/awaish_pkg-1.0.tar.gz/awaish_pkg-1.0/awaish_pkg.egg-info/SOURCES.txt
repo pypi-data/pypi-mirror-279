@@ -1,0 +1,9 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+setup.py
+awaish_pkg/__init__.py
+awaish_pkg.egg-info/PKG-INFO
+awaish_pkg.egg-info/SOURCES.txt
+awaish_pkg.egg-info/dependency_links.txt
+awaish_pkg.egg-info/top_level.txt
