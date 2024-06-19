@@ -1,0 +1,7 @@
+requests>=2.26.0
+PyYAML>=5.4.1
+minimalmodbus>=2.0.1
+wrapt
+
+[:platform_system == "Windows"]
+pypiwin32
