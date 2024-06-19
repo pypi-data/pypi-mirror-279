@@ -1,0 +1,14 @@
+{
+    "access_key": null,
+    "secret_key": null,
+    "master_region": null,
+    "labs_region": null,
+    "class_name": null,
+    "domain_name": null,
+    "iam_user_group": null,
+    "lab_name": null,
+    "morpheus_version": null,
+    "vpc_root_cidr": null,
+    "local_admin_name": null,
+    "local_admin_password": null
+}
