@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: code-simplify
+Version: 1.0.0
+Summary: A python tool library that covers a wide range of common tools to simplify your work and reduce repetitive code.
+Home-page: https://github.com/Yaocool/code-simplify
+Author: Ozzy
+Author-email: ozzycharon@gmail.com
+License: MIT
+Keywords: python,http utils,logger utils
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+
+# code-simplify
+A python tool library that covers a wide range of common tools to simplify your work and reduce repetitive code.
+
+# How to use
+just see `examples` package.
+
+# How to install
+## PyPI (recommend)
+```shell script
+$ pip install code-simplify
+```
+
+## Local compilation
+```shell script
+$ git clone git@github.com:Yaocool/code-simplify.git
+$ pip install wheel
+$ python setup.py bdist_wheel
+$ pip install ./dist/asyncio_oss-*-py3-none-any.whl
+```
