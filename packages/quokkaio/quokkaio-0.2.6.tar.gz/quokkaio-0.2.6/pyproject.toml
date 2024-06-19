@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "quokkaio"
+version = "0.1.1"
+description = "API wrapper for the Quokka security software"
+authors = ["Quokka.io"]
+readme = "README.md"
+homepage = "https://quokka.io"
+repository = "https://github.com/smercer-quokka/quokkaio"
+documentation = "https://github.com/smercer-quokka/quokkaio/blob/main/README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
