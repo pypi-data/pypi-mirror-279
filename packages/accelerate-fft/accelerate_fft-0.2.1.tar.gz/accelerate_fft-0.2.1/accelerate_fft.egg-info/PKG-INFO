@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: accelerate_fft
+Version: 0.2.1
+Summary: FFT for MAC using vDSP
+Home-page: https://github.com/andrej5elin/accelerate_fft
+Author: Andrej Petelin
+Author-email: andrej.petelin@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cffi>=1.0.0
+Requires-Dist: numpy
+
+
+Implements fft using apple's accelerate framework (vDSP)
