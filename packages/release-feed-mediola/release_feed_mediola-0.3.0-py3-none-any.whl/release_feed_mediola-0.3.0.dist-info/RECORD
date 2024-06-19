@@ -1,0 +1,10 @@
+release_feed_mediola/__init__.py,sha256=7dekg1JGDPIckbTE0CM---OVZLPOG0yUWtXItvqoUCw,479
+release_feed_mediola/__main__.py,sha256=dH7q1vXad4TI0J2UWZcK5m61HSJPOY79lK-hvf6_soA,99
+release_feed_mediola/api.py,sha256=z2VVN7aOVTarnK3d_UWROrvmJ-vu3SoLGu_b1TRcYSE,4133
+release_feed_mediola/cli.py,sha256=1AYNxBFSJrHN4ej6gE1FgqpvQPm3Rw97_HHHSo23zEk,490
+release_feed_mediola/settings.py,sha256=Q8uX_sni-5fZhLN-ByM1mZzvy02Fh_ArpvXNhpon-mQ,1046
+release_feed_mediola-0.3.0.dist-info/LICENSE,sha256=z8d0m5b2O9McPEK1xHG_dWgUBT6EfBDz6wA0F7xSPTA,11358
+release_feed_mediola-0.3.0.dist-info/METADATA,sha256=0jyy4rfwPvcPCy3sjTws7jB2cI1kX5o81EiC4BPs3I0,3829
+release_feed_mediola-0.3.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+release_feed_mediola-0.3.0.dist-info/entry_points.txt,sha256=XZ5sszEmCE1IIpC6E2qDdv1gG_KCQ3kwud2O0KTpnmc,69
+release_feed_mediola-0.3.0.dist-info/RECORD,,
