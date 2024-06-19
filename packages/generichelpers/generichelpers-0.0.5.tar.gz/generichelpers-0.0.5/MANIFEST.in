@@ -1,0 +1,13 @@
+# Include src
+graft src
+
+# include essentials
+# include requirements.txt
+
+# Include data and config
+graft data
+include configs/config.json
+
+# Exclude pycache
+global-exclude __pycache__
+global-exclude *.py[co]
