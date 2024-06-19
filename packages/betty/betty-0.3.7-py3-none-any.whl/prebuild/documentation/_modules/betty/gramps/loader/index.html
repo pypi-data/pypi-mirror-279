@@ -1,0 +1,1528 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="author" title="About these documents" href="../../../../about/" /><link rel="index" title="Index" href="../../../../genindex/" /><link rel="search" title="Search" href="../../../../search/" />
+
+    <link rel="shortcut icon" href="../../../../_static/betty.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>betty.gramps.loader - Betty 0.3.7 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../../"><div class="brand">Betty 0.3.7 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../../_static/betty-32x32.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Betty 0.3.7 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../installation/">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/desktop/">Installation of the Betty Desktop application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/pip/">Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/source/">Installation from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/ancestry/">Ancestry</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Ancestry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/citation/">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/date/">Dates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/enclosure/">Enclosure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event/">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event-type/">Event Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/file/">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/link/">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/media-type/">Media Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/note/">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person/">Person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person-name/">Person Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place/">Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place-name/">Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence/">Presence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence-role/">Presence Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/privacy/">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/source/">Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/assets/">Asset Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/cli/">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/configuration/">Application configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/env/">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/extension/">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/cotton_candy/">The <em>Cotton Candy</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/deriver/">The <em>Deriver</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/gramps/">The <em>Gramps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/http_api_doc/">The <em>HTTP API Documentation</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/maps/">The <em>Maps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/nginx/">The <em>nginx</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/privatizer/">The <em>Privatizer</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/trees/">The <em>Trees</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/wikipedia/">The <em>Wikipedia</em> extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/gedcom/">GEDCOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/npm/">npm</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/project/">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Projects</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/project/configuration/">Project configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/templating/">Templating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Templating</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/globals/">Globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/tests/">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/translation/">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../development/">Development</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Development</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/extension/">Developing a Betty extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/translation/">Working on Betty’s translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/test/">Testing Betty’s source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../py-modindex/">API Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../about/">About</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of About</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contributing/">Contributing to Betty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/license/">Copyright &amp; license</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for betty.gramps.loader</h1><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;
+Provide an API to load `Gramps &lt;https://gramps-project.org&gt;`_ family trees into Betty ancestries.
+&quot;&quot;&quot;
+
+from __future__ import annotations
+
+import gzip
+import re
+import tarfile
+from collections import defaultdict
+from contextlib import suppress
+from dataclasses import dataclass
+from enum import Enum
+from logging import getLogger
+from pathlib import Path
+from typing import Iterable, Any, IO, cast, TYPE_CHECKING
+from xml.etree import ElementTree
+
+import aiofiles
+from aiofiles.tempfile import TemporaryDirectory
+from geopy import Point
+from typing_extensions import override
+
+from betty.gramps.error import GrampsError
+from betty.locale import DateRange, Datey, Date, Str, Localizer
+from betty.media_type import MediaType, InvalidMediaType
+from betty.model import Entity, EntityGraphBuilder, AliasedEntity, AliasableEntity
+from betty.model.ancestry import (
+    Ancestry,
+    Note,
+    File,
+    Source,
+    Citation,
+    Place,
+    Event,
+    Person,
+    PersonName,
+    Subject,
+    Witness,
+    Beneficiary,
+    Attendee,
+    Presence,
+    PlaceName,
+    Enclosure,
+    HasLinks,
+    Link,
+    HasFiles,
+    HasCitations,
+    HasPrivacy,
+    Speaker,
+    Celebrant,
+    Organizer,
+    HasNotes,
+)
+from betty.model.event_type import (
+    Birth,
+    Baptism,
+    Adoption,
+    Cremation,
+    Death,
+    Funeral,
+    Burial,
+    Will,
+    Engagement,
+    Marriage,
+    MarriageAnnouncement,
+    Divorce,
+    DivorceAnnouncement,
+    Residence,
+    Immigration,
+    Emigration,
+    Occupation,
+    Retirement,
+    Correspondence,
+    Confirmation,
+    Missing,
+    UnknownEventType,
+    EventType,
+    Conference,
+)
+from betty.path import rootname
+from betty.project import Project
+from betty.warnings import deprecate
+
+if TYPE_CHECKING:
+    from collections.abc import MutableMapping, Mapping
+
+
+<div class="viewcode-block" id="GrampsLoadFileError">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoadFileError">[docs]</a>
+class GrampsLoadFileError(GrampsError, RuntimeError):
+    &quot;&quot;&quot;
+    An error occurred when loading a Gramps family tree file.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="GrampsFileNotFoundError">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsFileNotFoundError">[docs]</a>
+class GrampsFileNotFoundError(GrampsError, FileNotFoundError):
+    &quot;&quot;&quot;
+    A Gramps family tree file could not be file.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="XPathError">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.XPathError">[docs]</a>
+class XPathError(GrampsError, RuntimeError):
+    &quot;&quot;&quot;
+    An error occurred when evaluating an XPath selector on Gramps XML.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="GrampsEntityType">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsEntityType">[docs]</a>
+class GrampsEntityType(Enum):
+    &quot;&quot;&quot;
+    The supported Gramps entity types.
+    &quot;&quot;&quot;
+
+    CITATION = &quot;citation&quot;
+    EVENT = &quot;event&quot;
+    OBJECT = &quot;object&quot;
+    PERSON = &quot;person&quot;
+    SOURCE = &quot;source&quot;</div>
+
+
+
+<div class="viewcode-block" id="GrampsEntityReference">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsEntityReference">[docs]</a>
+@dataclass(frozen=True)
+class GrampsEntityReference:
+    &quot;&quot;&quot;
+    A reference to an entity in a Gramps family tree.
+    &quot;&quot;&quot;
+
+    entity_type: GrampsEntityType
+    entity_id: str
+
+    @override
+    def __str__(self) -&gt; str:
+        return f&quot;{self.entity_type.value} ({self.entity_id})&quot;</div>
+
+
+
+<div class="viewcode-block" id="GrampsLoader">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader">[docs]</a>
+class GrampsLoader:
+    &quot;&quot;&quot;
+    Load Gramps family history data into a project.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="GrampsLoader.__init__">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.__init__">[docs]</a>
+    def __init__(
+        self,
+        project_or_ancestry: Project | Ancestry,
+        *,
+        localizer: Localizer,
+    ):
+        super().__init__()
+        if isinstance(project_or_ancestry, Ancestry):
+            deprecate(
+                f&quot;Initializing {type(self)} with {Ancestry} is deprecated as of Betty 0.3.2, and will be removed in Betty 0.4.x. Instead, provide {Project}.&quot;,
+                stacklevel=2,
+            )
+            self._ancestry = project_or_ancestry
+            self._project = None
+        else:
+            self._ancestry = project_or_ancestry.ancestry
+            self._project = project_or_ancestry
+        self._ancestry_builder = EntityGraphBuilder()
+        self._added_entity_counts: dict[type[Entity], int] = defaultdict(lambda: 0)
+        self._tree: ElementTree.ElementTree | None = None
+        self._gramps_tree_directory_path: Path | None = None
+        self._loaded = False
+        self._localizer = localizer</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.load_file">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.load_file">[docs]</a>
+    async def load_file(self, file_path: Path) -&gt; None:
+        &quot;&quot;&quot;
+        Load family history data from any of the supported Gramps file types.
+        &quot;&quot;&quot;
+        file_path = file_path.resolve()
+        logger = getLogger(__name__)
+        logger.info(
+            self._localizer._(&#39;Loading &quot;{file_path}&quot;...&#39;).format(
+                file_path=str(file_path),
+            )
+        )
+
+        with suppress(GrampsLoadFileError):
+            await self.load_gpkg(file_path)
+            return
+
+        with suppress(GrampsLoadFileError):
+            await self.load_gramps(file_path)
+            return
+
+        try:
+            async with aiofiles.open(file_path) as f:
+                xml = await f.read()
+        except FileNotFoundError:
+            raise GrampsFileNotFoundError(
+                Str._(
+                    &#39;Could not find the file &quot;{file_path}&quot;.&#39;,
+                    file_path=str(file_path),
+                )
+            ) from None
+        with suppress(GrampsLoadFileError):
+            await self.load_xml(xml, Path(file_path.anchor))
+            return
+
+        raise GrampsLoadFileError(
+            Str._(
+                &#39;Could not load &quot;{file_path}&quot; as a *.gpkg, a *.gramps, or an *.xml family tree.&#39;,
+                file_path=str(file_path),
+            )
+        )</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.load_gramps">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.load_gramps">[docs]</a>
+    async def load_gramps(self, gramps_path: Path) -&gt; None:
+        &quot;&quot;&quot;
+        Load family history data from a Gramps *.gramps file.
+        &quot;&quot;&quot;
+        gramps_path = gramps_path.resolve()
+        try:
+            with gzip.open(gramps_path, mode=&quot;r&quot;) as f:
+                xml: str = f.read()  # type: ignore[assignment]
+            await self.load_xml(
+                xml,
+                rootname(gramps_path),
+            )
+        except OSError as error:
+            raise GrampsLoadFileError(Str.plain(error)) from error</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.load_gpkg">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.load_gpkg">[docs]</a>
+    async def load_gpkg(self, gpkg_path: Path) -&gt; None:
+        &quot;&quot;&quot;
+        Load family history data from a Gramps *.gpkg file.
+        &quot;&quot;&quot;
+        gpkg_path = gpkg_path.resolve()
+        try:
+            tar_file: IO[bytes] = gzip.open(gpkg_path)  # type: ignore[assignment]
+            try:
+                async with TemporaryDirectory() as cache_directory_path_str:
+                    tarfile.open(
+                        fileobj=tar_file,
+                    ).extractall(cache_directory_path_str, filter=&quot;data&quot;)
+                    await self.load_gramps(
+                        Path(cache_directory_path_str) / &quot;data.gramps&quot;
+                    )
+            except tarfile.ReadError as error:
+                raise GrampsLoadFileError(
+                    Str._(
+                        &quot;Could not extract {file_path} as a tar (*.tar) file after extracting the outer gzip (*.gz) file.&quot;,
+                        file_path=str(gpkg_path),
+                    )
+                ) from error
+        except OSError as error:
+            raise GrampsLoadFileError(
+                Str._(
+                    &quot;Could not extract {file_path} as a gzip (*.gz) file.&quot;,
+                    file_path=str(gpkg_path),
+                )
+            ) from error</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.load_xml">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.load_xml">[docs]</a>
+    async def load_xml(self, xml: str | Path, gramps_tree_directory_path: Path) -&gt; None:
+        &quot;&quot;&quot;
+        Load family history data from XML.
+
+        :param xml: The raw XML or the path to an XML file.
+        &quot;&quot;&quot;
+        if isinstance(xml, Path):
+            async with aiofiles.open(xml) as f:
+                xml = await f.read()
+        try:
+            tree = ElementTree.ElementTree(
+                ElementTree.fromstring(
+                    xml,
+                )
+            )
+        except ElementTree.ParseError as error:
+            raise GrampsLoadFileError(Str.plain(error)) from error
+        await self.load_tree(tree, gramps_tree_directory_path)</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.load_tree">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.load_tree">[docs]</a>
+    async def load_tree(
+        self, tree: ElementTree.ElementTree, gramps_tree_directory_path: Path
+    ) -&gt; None:
+        &quot;&quot;&quot;
+        Load family history data from a Gramps XML tree.
+        &quot;&quot;&quot;
+        if self._loaded:
+            raise RuntimeError(&quot;This loader has been used up.&quot;)
+
+        self._loaded = True
+        self._tree = tree
+        self._gramps_tree_directory_path = gramps_tree_directory_path.resolve()
+
+        logger = getLogger(__name__)
+
+        database = self._tree.getroot()
+
+        self._load_notes(database)
+        logger.info(
+            self._localizer._(&quot;Loaded {note_count} notes.&quot;).format(
+                note_count=self._added_entity_counts[Note]
+            )
+        )
+        self._load_objects(database, self._gramps_tree_directory_path)
+        logger.info(
+            self._localizer._(&quot;Loaded {file_count} files.&quot;).format(
+                file_count=self._added_entity_counts[File]
+            )
+        )
+
+        self._load_repositories(database)
+        repository_count = self._added_entity_counts[Source]
+        logger.info(
+            self._localizer._(
+                &quot;Loaded {repository_count} repositories as sources.&quot;
+            ).format(repository_count=repository_count)
+        )
+
+        self._load_sources(database)
+        logger.info(
+            self._localizer._(&quot;Loaded {source_count} sources.&quot;).format(
+                source_count=self._added_entity_counts[Source] - repository_count
+            )
+        )
+
+        self._load_citations(database)
+        logger.info(
+            self._localizer._(&quot;Loaded {citation_count} citations.&quot;).format(
+                citation_count=self._added_entity_counts[Citation]
+            )
+        )
+
+        self._load_places(database)
+        logger.info(
+            self._localizer._(&quot;Loaded {place_count} places.&quot;).format(
+                place_count=self._added_entity_counts[Place]
+            )
+        )
+
+        self._load_events(database)
+        logger.info(
+            self._localizer._(&quot;Loaded {event_count} events.&quot;).format(
+                event_count=self._added_entity_counts[Event]
+            )
+        )
+
+        self._load_people(database)
+        logger.info(
+            self._localizer._(&quot;Loaded {person_count} people.&quot;).format(
+                person_count=self._added_entity_counts[Person]
+            )
+        )
+
+        self._load_families(database)
+
+        self._ancestry.add_unchecked_graph(*self._ancestry_builder.build())</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.add_entity">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.add_entity">[docs]</a>
+    def add_entity(self, entity: AliasableEntity[Entity]) -&gt; None:
+        &quot;&quot;&quot;
+        Add entities to the ancestry.
+        &quot;&quot;&quot;
+        self._ancestry_builder.add_entity(entity)
+        self._added_entity_counts[entity.type] += 1</div>
+
+
+<div class="viewcode-block" id="GrampsLoader.add_association">
+<a class="viewcode-back" href="../../../../betty.gramps.loader/#betty.gramps.loader.GrampsLoader.add_association">[docs]</a>
+    def add_association(self, *args: Any, **kwargs: Any) -&gt; None:
+        &quot;&quot;&quot;
+        Add an association between two entities to the ancestry.
+        &quot;&quot;&quot;
+        self._ancestry_builder.add_association(*args, **kwargs)</div>
+
+
+    _NS = {
+        &quot;ns&quot;: &quot;http://gramps-project.org/xml/1.7.1/&quot;,
+    }
+
+    def _xpath(
+        self, element: ElementTree.Element, selector: str
+    ) -&gt; list[ElementTree.Element]:
+        return element.findall(selector, namespaces=self._NS)
+
+    def _xpath1(
+        self, element: ElementTree.Element, selector: str
+    ) -&gt; ElementTree.Element:
+        found_element = element.find(selector, namespaces=self._NS)
+        if found_element is None:
+            raise XPathError(
+                Str.plain(
+                    &#39;Cannot find an element &quot;{selector}&quot; within {element}.&#39;,
+                    selector=selector,
+                    element=str(element),
+                )
+            )
+        return found_element
+
+    _DATE_PATTERN = re.compile(r&quot;^.{4}((-.{2})?-.{2})?$&quot;)
+    _DATE_PART_PATTERN = re.compile(r&quot;^\d+$&quot;)
+
+    def _load_date(self, element: ElementTree.Element) -&gt; Datey | None:
+        with suppress(XPathError):
+            dateval_element = self._xpath1(element, &quot;./ns:dateval&quot;)
+            if dateval_element.get(&quot;cformat&quot;) is None:
+                dateval_type = dateval_element.get(&quot;type&quot;)
+                if dateval_type is None:
+                    return self._load_dateval(dateval_element, &quot;val&quot;)
+                dateval_type = str(dateval_type)
+                if dateval_type == &quot;about&quot;:
+                    date = self._load_dateval(dateval_element, &quot;val&quot;)
+                    if date is None:
+                        return None
+                    date.fuzzy = True
+                    return date
+                if dateval_type == &quot;before&quot;:
+                    return DateRange(
+                        None,
+                        self._load_dateval(dateval_element, &quot;val&quot;),
+                        end_is_boundary=True,
+                    )
+                if dateval_type == &quot;after&quot;:
+                    return DateRange(
+                        self._load_dateval(dateval_element, &quot;val&quot;),
+                        start_is_boundary=True,
+                    )
+        with suppress(XPathError):
+            datespan_element = self._xpath1(element, &quot;./ns:datespan&quot;)
+            if datespan_element.get(&quot;cformat&quot;) is None:
+                return DateRange(
+                    self._load_dateval(datespan_element, &quot;start&quot;),
+                    self._load_dateval(datespan_element, &quot;stop&quot;),
+                )
+        with suppress(XPathError):
+            daterange_element = self._xpath1(element, &quot;./ns:daterange&quot;)
+            if daterange_element.get(&quot;cformat&quot;) is None:
+                return DateRange(
+                    self._load_dateval(daterange_element, &quot;start&quot;),
+                    self._load_dateval(daterange_element, &quot;stop&quot;),
+                    start_is_boundary=True,
+                    end_is_boundary=True,
+                )
+        return None
+
+    def _load_dateval(
+        self, element: ElementTree.Element, value_attribute_name: str
+    ) -&gt; Date | None:
+        dateval = str(element.get(value_attribute_name))
+        if self._DATE_PATTERN.fullmatch(dateval):
+            date_parts: tuple[int | None, int | None, int | None] = tuple(  # type: ignore[assignment]
+                (
+                    int(part)
+                    if self._DATE_PART_PATTERN.fullmatch(part) and int(part) &gt; 0
+                    else None
+                )
+                for part in dateval.split(&quot;-&quot;)
+            )
+            date = Date(*date_parts)
+            dateval_quality = element.get(&quot;quality&quot;)
+            if dateval_quality == &quot;estimated&quot;:
+                date.fuzzy = True
+            return date
+        return None
+
+    def _load_notes(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:notes/ns:note&quot;):
+            self._load_note(element)
+
+    def _load_note(self, element: ElementTree.Element) -&gt; None:
+        note_handle = element.get(&quot;handle&quot;)
+        note_id = element.get(&quot;id&quot;)
+        assert note_id is not None
+        text_element = self._xpath1(element, &quot;./ns:text&quot;)
+        assert text_element is not None
+        text = str(text_element.text)
+        note = Note(
+            id=note_id,
+            text=text,
+        )
+        if element.get(&quot;priv&quot;) == &quot;1&quot;:
+            note.private = True
+        self.add_entity(AliasedEntity(note, note_handle))
+
+    def _load_noteref(
+        self, owner: AliasableEntity[HasNotes &amp; Entity], element: ElementTree.Element
+    ) -&gt; None:
+        note_handles = self._load_handles(&quot;noteref&quot;, element)
+        for note_handle in note_handles:
+            self.add_association(owner.type, owner.id, &quot;notes&quot;, Note, note_handle)
+
+    def _load_objects(
+        self, database: ElementTree.Element, gramps_tree_directory_path: Path
+    ) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:objects/ns:object&quot;):
+            self._load_object(element, gramps_tree_directory_path)
+
+    def _load_object(
+        self, element: ElementTree.Element, gramps_tree_directory_path: Path
+    ) -&gt; None:
+        file_handle = element.get(&quot;handle&quot;)
+        file_id = element.get(&quot;id&quot;)
+        file_element = self._xpath1(element, &quot;./ns:file&quot;)
+        src = file_element.get(&quot;src&quot;)
+        assert src is not None
+        file_path = gramps_tree_directory_path / src
+        file = File(
+            id=file_id,
+            path=file_path,
+        )
+        mime = file_element.get(&quot;mime&quot;)
+        assert mime is not None
+        file.media_type = MediaType(mime)
+        description = file_element.get(&quot;description&quot;)
+        if description:
+            file.description = description
+        if element.get(&quot;priv&quot;) == &quot;1&quot;:
+            file.private = True
+        aliased_file = AliasedEntity(file, file_handle)
+
+        self._load_attributes_for(
+            file,
+            GrampsEntityReference(GrampsEntityType.OBJECT, file.id),
+            element,
+            &quot;attribute&quot;,
+        )
+
+        self.add_entity(
+            aliased_file,  # type: ignore[arg-type]
+        )
+        for citation_handle in self._load_handles(&quot;citationref&quot;, element):
+            self.add_association(
+                File, file_handle, &quot;citations&quot;, Citation, citation_handle
+            )
+        self._load_noteref(
+            aliased_file,  # type: ignore[arg-type]
+            element,
+        )
+
+    def _load_people(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:people/ns:person&quot;):
+            self._load_person(element)
+
+    def _load_person(self, element: ElementTree.Element) -&gt; None:
+        person_handle = element.get(&quot;handle&quot;)
+        assert person_handle is not None
+        person = Person(id=element.get(&quot;id&quot;))
+
+        name_elements = sorted(
+            self._xpath(element, &quot;./ns:name&quot;), key=lambda x: x.get(&quot;alt&quot;) == &quot;1&quot;
+        )
+        person_names = []
+        for name_element in name_elements:
+            is_alternative = name_element.get(&quot;alt&quot;) == &quot;1&quot;
+            try:
+                individual_name = self._xpath1(name_element, &quot;./ns:first&quot;).text
+            except XPathError:
+                individual_name = None
+            surname_elements = [
+                surname_element
+                for surname_element in self._xpath(name_element, &quot;./ns:surname&quot;)
+                if surname_element.text is not None
+            ]
+            if surname_elements:
+                for surname_element in surname_elements:
+                    if not is_alternative:
+                        is_alternative = surname_element.get(&quot;prim&quot;) == &quot;0&quot;
+                    affiliation_name = surname_element.text
+                    surname_prefix = surname_element.get(&quot;prefix&quot;)
+                    if surname_prefix is not None:
+                        affiliation_name = &quot;%s %s&quot; % (surname_prefix, affiliation_name)
+                    person_name = PersonName(
+                        individual=individual_name,
+                        affiliation=affiliation_name,
+                    )
+                    self._load_citationref(person_name, name_element)
+                    person_names.append((person_name, is_alternative))
+            elif individual_name is not None:
+                person_name = PersonName(individual=individual_name)
+                self._load_citationref(person_name, name_element)
+                person_names.append((person_name, is_alternative))
+        for person_name, _ in sorted(person_names, key=lambda x: x[1]):
+            self.add_entity(person_name)
+            self.add_association(
+                Person, person_handle, &quot;names&quot;, PersonName, person_name.id
+            )
+
+        self._load_eventrefs(person_handle, element)
+        if element.get(&quot;priv&quot;) == &quot;1&quot;:
+            person.private = True
+
+        self._load_attributes_for(
+            person,
+            GrampsEntityReference(GrampsEntityType.PERSON, person.id),
+            element,
+            &quot;attribute&quot;,
+        )
+
+        aliased_person = AliasedEntity(person, person_handle)
+        self._load_citationref(
+            aliased_person,  # type: ignore[arg-type]
+            element,
+        )
+        self._load_objref(
+            aliased_person,  # type: ignore[arg-type]
+            element,
+        )
+        self._load_noteref(
+            aliased_person,  # type: ignore[arg-type]
+            element,
+        )
+        self._load_urls(person, element)
+        self.add_entity(
+            aliased_person,  # type: ignore[arg-type]
+        )
+
+    def _load_families(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:families/ns:family&quot;):
+            self._load_family(element)
+
+    def _load_family(self, element: ElementTree.Element) -&gt; None:
+        parent_handles = []
+
+        # Load the father.
+        father_handle = self._load_handle(&quot;father&quot;, element)
+        if father_handle is not None:
+            self._load_eventrefs(father_handle, element)
+            parent_handles.append(father_handle)
+
+        # Load the mother.
+        mother_handle = self._load_handle(&quot;mother&quot;, element)
+        if mother_handle is not None:
+            self._load_eventrefs(mother_handle, element)
+            parent_handles.append(mother_handle)
+
+        # Load the children.
+        child_handles = self._load_handles(&quot;childref&quot;, element)
+        for child_handle in child_handles:
+            for parent_handle in parent_handles:
+                self.add_association(
+                    Person, child_handle, &quot;parents&quot;, Person, parent_handle
+                )
+
+    def _load_eventrefs(self, person_id: str, element: ElementTree.Element) -&gt; None:
+        eventrefs = self._xpath(element, &quot;./ns:eventref&quot;)
+        for eventref in eventrefs:
+            self._load_eventref(person_id, eventref)
+
+    _PRESENCE_ROLE_MAP = {
+        &quot;Primary&quot;: Subject(),
+        &quot;Family&quot;: Subject(),
+        &quot;Witness&quot;: Witness(),
+        &quot;Beneficiary&quot;: Beneficiary(),
+        &quot;Speaker&quot;: Speaker(),
+        &quot;Celebrant&quot;: Celebrant(),
+        &quot;Organizer&quot;: Organizer(),
+        &quot;Attendee&quot;: Attendee(),
+        &quot;Unknown&quot;: Attendee(),
+    }
+
+    def _load_eventref(self, person_id: str, eventref: ElementTree.Element) -&gt; None:
+        event_handle = eventref.get(&quot;hlink&quot;)
+        assert event_handle is not None
+        gramps_presence_role = cast(str, eventref.get(&quot;role&quot;))
+
+        try:
+            role = self._PRESENCE_ROLE_MAP[gramps_presence_role]
+        except KeyError:
+            role = Attendee()
+            getLogger(__name__).warning(
+                self._localizer._(
+                    &#39;Betty is unfamiliar with person &quot;{person_id}&quot;\&#39;s Gramps presence role of &quot;{gramps_presence_role}&quot; for the event with Gramps handle &quot;{event_handle}&quot;. The role was imported, but set to &quot;{betty_presence_role}&quot;.&#39;,
+                ).format(
+                    person_id=person_id,
+                    event_handle=event_handle,
+                    gramps_presence_role=gramps_presence_role,
+                    betty_presence_role=role.label,
+                )
+            )
+
+        presence = Presence(None, role, None)
+        if eventref.get(&quot;priv&quot;) == &quot;1&quot;:
+            presence.private = True
+
+        self._load_attributes_for(
+            presence,
+            GrampsEntityReference(GrampsEntityType.PERSON, person_id),
+            eventref,
+            &quot;attribute&quot;,
+        )
+
+        self.add_entity(presence)
+        self.add_association(Presence, presence.id, &quot;person&quot;, Person, person_id)
+        self.add_association(Presence, presence.id, &quot;event&quot;, Event, event_handle)
+
+    def _load_places(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:places/ns:placeobj&quot;):
+            self._load_place(element)
+
+    def _load_place(self, element: ElementTree.Element) -&gt; None:
+        place_handle = element.get(&quot;handle&quot;)
+        names = []
+        for name_element in self._xpath(element, &quot;./ns:pname&quot;):
+            # The Gramps language is a single ISO language code, which is a valid BCP 47 locale.
+            language = name_element.get(&quot;lang&quot;)
+            date = self._load_date(name_element)
+            name = name_element.get(&quot;value&quot;)
+            assert name is not None
+            names.append(
+                PlaceName(
+                    name=name,
+                    locale=language,
+                    date=date,
+                )
+            )
+
+        place = Place(
+            id=element.get(&quot;id&quot;),
+            names=names,
+        )
+
+        coordinates = self._load_coordinates(element)
+        if coordinates:
+            place.coordinates = coordinates
+
+        self._load_urls(place, element)
+
+        aliased_place = AliasedEntity(place, place_handle)
+
+        self._load_noteref(
+            aliased_place,  # type: ignore[arg-type]
+            element,
+        )
+
+        self.add_entity(
+            aliased_place,  # type: ignore[arg-type]
+        )
+
+        for enclosed_by_handle in self._load_handles(&quot;placeref&quot;, element):
+            aliased_enclosure = AliasedEntity(
+                Enclosure(encloses=None, enclosed_by=None)
+            )
+            self.add_entity(
+                aliased_enclosure,  # type: ignore[arg-type]
+            )
+            self.add_association(
+                Enclosure, aliased_enclosure.id, &quot;encloses&quot;, Place, place_handle
+            )
+            self.add_association(
+                Enclosure,
+                aliased_enclosure.id,
+                &quot;enclosed_by&quot;,
+                Place,
+                enclosed_by_handle,
+            )
+
+    def _load_coordinates(self, element: ElementTree.Element) -&gt; Point | None:
+        with suppress(XPathError):
+            coord_element = self._xpath1(element, &quot;./ns:coord&quot;)
+
+            coordinates = f&#39;{coord_element.get(&quot;lat&quot;)}; {coord_element.get(&quot;long&quot;)}&#39;
+            try:
+                return Point.from_string(coordinates)
+            except ValueError:
+                getLogger(__name__).warning(
+                    self._localizer._(
+                        &#39;Cannot load coordinates &quot;{coordinates}&quot;, because they are in an unknown format.&#39;,
+                    ).format(
+                        coordinates=coordinates,
+                    )
+                )
+        return None
+
+    def _load_events(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:events/ns:event&quot;):
+            self._load_event(element)
+
+    _EVENT_TYPE_MAP = {
+        &quot;Birth&quot;: Birth,
+        &quot;Baptism&quot;: Baptism,
+        &quot;Adopted&quot;: Adoption,
+        &quot;Cremation&quot;: Cremation,
+        &quot;Death&quot;: Death,
+        &quot;Funeral&quot;: Funeral,
+        &quot;Burial&quot;: Burial,
+        &quot;Will&quot;: Will,
+        &quot;Engagement&quot;: Engagement,
+        &quot;Marriage&quot;: Marriage,
+        &quot;Marriage Banns&quot;: MarriageAnnouncement,
+        &quot;Divorce&quot;: Divorce,
+        &quot;Divorce Filing&quot;: DivorceAnnouncement,
+        &quot;Residence&quot;: Residence,
+        &quot;Immigration&quot;: Immigration,
+        &quot;Emigration&quot;: Emigration,
+        &quot;Occupation&quot;: Occupation,
+        &quot;Retirement&quot;: Retirement,
+        &quot;Correspondence&quot;: Correspondence,
+        &quot;Confirmation&quot;: Confirmation,
+        &quot;Missing&quot;: Missing,
+        &quot;Conference&quot;: Conference,
+    }
+
+    def _load_event(self, element: ElementTree.Element) -&gt; None:
+        event_handle = element.get(&quot;handle&quot;)
+        event_id = element.get(&quot;id&quot;)
+        assert event_id is not None
+        gramps_type = self._xpath1(element, &quot;./ns:type&quot;).text
+        assert gramps_type is not None
+
+        try:
+            event_type: type[EventType] = self._EVENT_TYPE_MAP[gramps_type]
+        except KeyError:
+            event_type = UnknownEventType
+            getLogger(__name__).warning(
+                self._localizer._(
+                    &#39;Betty is unfamiliar with Gramps event &quot;{event_id}&quot;\&#39;s type of &quot;{gramps_event_type}&quot;. The event was imported, but its type was set to &quot;{betty_event_type}&quot;.&#39;,
+                ).format(
+                    event_id=event_id,
+                    gramps_event_type=gramps_type,
+                    betty_event_type=event_type.label().localize(self._localizer),
+                )
+            )
+
+        event = Event(
+            id=event_id,
+            event_type=event_type,
+        )
+
+        event.date = self._load_date(element)
+
+        # Load the event place.
+        place_handle = self._load_handle(&quot;place&quot;, element)
+        if place_handle is not None:
+            self.add_association(Event, event_handle, &quot;place&quot;, Place, place_handle)
+
+        # Load the description.
+        with suppress(XPathError):
+            event.description = self._xpath1(element, &quot;./ns:description&quot;).text
+
+        if element.get(&quot;priv&quot;) == &quot;1&quot;:
+            event.private = True
+
+        aliased_event = AliasedEntity(event, event_handle)
+        self._load_objref(
+            aliased_event,  # type: ignore[arg-type]
+            element,
+        )
+        self._load_citationref(
+            aliased_event,  # type: ignore[arg-type]
+            element,
+        )
+        self._load_noteref(
+            aliased_event,  # type: ignore[arg-type]
+            element,
+        )
+
+        self._load_attributes_for(
+            event,
+            GrampsEntityReference(GrampsEntityType.EVENT, event.id),
+            element,
+            &quot;attribute&quot;,
+        )
+
+        self.add_entity(
+            aliased_event,  # type: ignore[arg-type]
+        )
+
+    def _load_repositories(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:repositories/ns:repository&quot;):
+            self._load_repository(element)
+
+    def _load_repository(self, element: ElementTree.Element) -&gt; None:
+        repository_source_handle = element.get(&quot;handle&quot;)
+
+        source = Source(
+            id=element.get(&quot;id&quot;),
+            name=self._xpath1(element, &quot;./ns:rname&quot;).text,
+        )
+
+        self._load_urls(source, element)
+        aliased_source = AliasedEntity(source, repository_source_handle)
+        self._load_noteref(
+            aliased_source,  # type: ignore[arg-type]
+            element,
+        )
+        self.add_entity(
+            aliased_source,  # type: ignore[arg-type]
+        )
+
+    def _load_sources(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:sources/ns:source&quot;):
+            self._load_source(element)
+
+    def _load_source(self, element: ElementTree.Element) -&gt; None:
+        source_handle = element.get(&quot;handle&quot;)
+        try:
+            source_name = self._xpath1(element, &quot;./ns:stitle&quot;).text
+        except XPathError:
+            source_name = None
+
+        source = Source(
+            id=element.get(&quot;id&quot;),
+            name=source_name,
+        )
+
+        repository_source_handle = self._load_handle(&quot;reporef&quot;, element)
+        if repository_source_handle is not None:
+            self.add_association(
+                Source, source_handle, &quot;contained_by&quot;, Source, repository_source_handle
+            )
+
+        # Load the author.
+        with suppress(XPathError):
+            source.author = self._xpath1(element, &quot;./ns:sauthor&quot;).text
+
+        # Load the publication info.
+        with suppress(XPathError):
+            source.publisher = self._xpath1(element, &quot;./ns:spubinfo&quot;).text
+
+        if element.get(&quot;priv&quot;) == &quot;1&quot;:
+            source.private = True
+
+        self._load_attributes_for(
+            source,
+            GrampsEntityReference(GrampsEntityType.SOURCE, source.id),
+            element,
+            &quot;srcattribute&quot;,
+        )
+
+        aliased_source = AliasedEntity(source, source_handle)
+        self._load_objref(
+            aliased_source,  # type: ignore[arg-type]
+            element,
+        )
+        self._load_noteref(
+            aliased_source,  # type: ignore[arg-type]
+            element,
+        )
+        self.add_entity(
+            aliased_source,  # type: ignore[arg-type]
+        )
+
+    def _load_citations(self, database: ElementTree.Element) -&gt; None:
+        for element in self._xpath(database, &quot;./ns:citations/ns:citation&quot;):
+            self._load_citation(element)
+
+    def _load_citation(self, element: ElementTree.Element) -&gt; None:
+        citation_handle = element.get(&quot;handle&quot;)
+        source_handle = self._xpath1(element, &quot;./ns:sourceref&quot;).get(&quot;hlink&quot;)
+
+        citation = Citation(id=element.get(&quot;id&quot;))
+        self.add_association(Citation, citation_handle, &quot;source&quot;, Source, source_handle)
+
+        citation.date = self._load_date(element)
+        if element.get(&quot;priv&quot;) == &quot;1&quot;:
+            citation.private = True
+
+        with suppress(XPathError):
+            citation.location = Str.plain(self._xpath1(element, &quot;./ns:page&quot;).text)
+
+        aliased_citation = AliasedEntity(citation, citation_handle)
+        self._load_objref(
+            aliased_citation,  # type: ignore[arg-type]
+            element,
+        )
+
+        self._load_attributes_for(
+            citation,
+            GrampsEntityReference(GrampsEntityType.CITATION, citation.id),
+            element,
+            &quot;srcattribute&quot;,
+        )
+
+        self.add_entity(
+            aliased_citation,  # type: ignore[arg-type]
+        )
+
+    def _load_citationref(
+        self,
+        owner: AliasableEntity[HasCitations &amp; Entity],
+        element: ElementTree.Element,
+    ) -&gt; None:
+        for citation_handle in self._load_handles(&quot;citationref&quot;, element):
+            self.add_association(
+                owner.type, owner.id, &quot;citations&quot;, Citation, citation_handle
+            )
+
+    def _load_handles(
+        self, handle_type: str, element: ElementTree.Element
+    ) -&gt; Iterable[str]:
+        for citation_handle_element in self._xpath(element, f&quot;./ns:{handle_type}&quot;):
+            hlink = citation_handle_element.get(&quot;hlink&quot;)
+            if hlink:
+                yield hlink
+
+    def _load_handle(
+        self, handle_type: str, element: ElementTree.Element
+    ) -&gt; str | None:
+        for citation_handle_element in self._xpath(element, f&quot;./ns:{handle_type}&quot;):
+            return citation_handle_element.get(&quot;hlink&quot;)
+        return None
+
+    def _load_objref(
+        self, owner: AliasableEntity[HasFiles &amp; Entity], element: ElementTree.Element
+    ) -&gt; None:
+        file_handles = self._load_handles(&quot;objref&quot;, element)
+        for file_handle in file_handles:
+            self.add_association(owner.type, owner.id, &quot;files&quot;, File, file_handle)
+
+    def _load_urls(self, owner: HasLinks, element: ElementTree.Element) -&gt; None:
+        url_elements = self._xpath(element, &quot;./ns:url&quot;)
+        for url_element in url_elements:
+            link = Link(str(url_element.get(&quot;href&quot;)))
+            link.relationship = &quot;external&quot;
+            link.label = url_element.get(&quot;description&quot;)
+            owner.links.append(link)
+
+    def _load_attribute_privacy(
+        self, entity: HasPrivacy &amp; Entity, element: ElementTree.Element, tag: str
+    ) -&gt; None:
+        privacy_value = self._load_attribute(&quot;privacy&quot;, element, tag)
+        if privacy_value is None:
+            return
+        if privacy_value == &quot;private&quot;:
+            entity.private = True
+            return
+        if privacy_value == &quot;public&quot;:
+            entity.public = True
+            return
+        getLogger(__name__).warning(
+            self._localizer._(
+                &#39;The betty:privacy Gramps attribute must have a value of &quot;public&quot; or &quot;private&quot;, but &quot;{privacy_value}&quot; was given for {entity_type} {entity_id} ({entity_label}), which was ignored.&#39;,
+            ).format(
+                privacy_value=privacy_value,
+                entity_type=entity.entity_type_label().localize(self._localizer),
+                entity_id=entity.id,
+                entity_label=entity.label.localize(self._localizer),
+            )
+        )
+
+    _LINK_ATTRIBUTE_PATTERN = re.compile(r&quot;^link-([^:]+?):(.+?)$&quot;)
+
+    def _load_attribute_links(
+        self,
+        entity: HasLinks &amp; Entity,
+        gramps_entity_reference: GrampsEntityReference,
+        element: ElementTree.Element,
+        tag: str,
+    ) -&gt; None:
+        logger = getLogger(__name__)
+
+        attributes = self._load_attributes(element, tag)
+        links_attributes: MutableMapping[str, MutableMapping[str, str]] = defaultdict(
+            dict
+        )
+        for attribute_type, attribute_value in attributes.items():
+            match = self._LINK_ATTRIBUTE_PATTERN.fullmatch(attribute_type)
+            if match is None:
+                continue
+            link_name = match.group(1)
+            link_attribute_name = match.group(2)
+            links_attributes[link_name][link_attribute_name] = attribute_value
+        for link_name, link_attributes in links_attributes.items():
+            if &quot;url&quot; not in link_attributes:
+                logger.warning(
+                    self._localizer._(
+                        &#39;The Gramps {gramps_entity_reference} entity requires a &quot;betty:link-{link_name}:url&quot; attribute. This link was ignored.&#39;,
+                    ).format(
+                        gramps_entity_reference=gramps_entity_reference,
+                        link_name=link_name,
+                    )
+                )
+                continue
+            link = Link(link_attributes[&quot;url&quot;])
+            entity.links.append(link)
+            if &quot;description&quot; in link_attributes:
+                link.description = link_attributes[&quot;description&quot;]
+            if &quot;label&quot; in link_attributes:
+                link.label = link_attributes[&quot;label&quot;]
+            if &quot;locale&quot; in link_attributes:
+                link.locale = link_attributes[&quot;locale&quot;]
+            if &quot;media_type&quot; in link_attributes:
+                try:
+                    media_type = MediaType(link_attributes[&quot;media_type&quot;])
+                except InvalidMediaType:
+                    logger.warning(
+                        self._localizer._(
+                            &#39;The Gramps {gramps_entity_reference} entity has a &quot;betty:link-{link_name}:media_type&quot; attribute with value &quot;{media_type}&quot;, which is not a valid IANA media type. This media type was ignored.&#39;,
+                        ).format(
+                            gramps_entity_reference=gramps_entity_reference,
+                            link_name=link_name,
+                            media_type=link_attributes[&quot;media_type&quot;],
+                        )
+                    )
+                else:
+                    link.media_type = media_type
+            if &quot;relationship&quot; in link_attributes:
+                link.relationship = link_attributes[&quot;relationship&quot;]
+
+    def _load_attribute(
+        self, name: str, element: ElementTree.Element, tag: str
+    ) -&gt; str | None:
+        try:
+            return self._load_attributes(element, tag)[name]
+        except KeyError:
+            return None
+
+    def _load_attributes(
+        self, element: ElementTree.Element, tag: str
+    ) -&gt; Mapping[str, str]:
+        prefixes = [&quot;betty&quot;]
+        hash(element)
+        if self._project is not None and self._project.configuration.name is not None:
+            prefixes.append(f&quot;betty-{self._project.configuration.name}&quot;)
+        attributes: MutableMapping[str, str] = {}
+        for prefix in prefixes:
+            with suppress(XPathError):
+                attribute_elements = self._xpath(element, f&quot;./ns:{tag}&quot;)
+                for attribute_element in attribute_elements:
+                    attribute_type = attribute_element.attrib[&quot;type&quot;]
+                    attribute_value = attribute_element.get(&quot;value&quot;)
+                    if (
+                        attribute_type.startswith(f&quot;{prefix}:&quot;)
+                        and attribute_value is not None
+                    ):
+                        attributes[attribute_type[len(prefix) + 1 :]] = attribute_value
+        return attributes
+
+    def _load_attributes_for(
+        self,
+        entity: Entity,
+        gramps_entity_reference: GrampsEntityReference,
+        element: ElementTree.Element,
+        tag: str,
+    ) -&gt; None:
+        if isinstance(entity, HasPrivacy):
+            self._load_attribute_privacy(entity, element, tag)
+        if isinstance(entity, HasLinks):
+            self._load_attribute_links(entity, gramps_entity_reference, element, tag)</div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Bart Feenstra and contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../../_static/documentation_options.js?v=2bd58097"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
