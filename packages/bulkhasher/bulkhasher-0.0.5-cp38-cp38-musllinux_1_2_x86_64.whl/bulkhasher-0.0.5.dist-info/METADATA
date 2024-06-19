@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: bulkhasher
+Version: 0.0.5
+Summary: Module for bulk hashing of files
+Author: Alex Murkoff
+Author-email: 413x1nkp@gmail.com
+License-File: LICENSE
+
+Made on C
