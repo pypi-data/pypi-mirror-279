@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: classes_aux
+Version: 0.0.1
+Summary: attempt to keep all useful classes and classesTemplates in one place
+Home-page: https://github.com/centroid457/
+Author: Andrei Starichenko
+Author-email: centroid@mail.ru
+Project-URL: Source, https://github.com/centroid457/classes_aux
+Keywords: __cmp__,__getattr__
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# classes_aux (v0.0.1)
+
+## DESCRIPTION_SHORT
+attempt to keep all useful classes and classesTemplates in one place
+
+## DESCRIPTION_LONG
+designed for ...
+
+
+## Features
+1. cmp  
+2. Getattr  
+
+
+********************************************************************************
+## License
+See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
+
+
+## Release history
+See the [HISTORY.md](HISTORY.md) file for release history.
+
+
+## Installation
+```commandline
+pip install classes-aux
+```
+
+
+## Import
+```python
+from classes_aux import *
+```
+
+
+********************************************************************************
+## USAGE EXAMPLES
+See tests and sourcecode for other examples.
+
+------------------------------
+### 1. example1.py
+```python
+
+```
+
+------------------------------
+### 2. example2.py
+```python
+
+```
+
+********************************************************************************
