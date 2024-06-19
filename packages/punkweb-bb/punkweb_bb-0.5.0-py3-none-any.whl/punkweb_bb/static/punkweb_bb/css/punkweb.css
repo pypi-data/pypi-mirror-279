@@ -1,0 +1,156 @@
+body {
+  background-color: white;
+  color: var(--oc-gray-9);
+}
+
+a {
+  color: var(--primary-9);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--oc-gray-4);
+  margin: 1rem 0;
+}
+
+.onlineIndicator {
+  background-color: var(--oc-green-6);
+  border-radius: 100%;
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+/** Layout **/
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+  margin: 2rem 0;
+  overflow-y: auto;
+}
+
+/** Nav **/
+
+.nav__upper {
+  background-color: var(--oc-gray-9);
+}
+
+.nav__upper__content {
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+.nav__upper__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav__upper__link {
+  color: var(--oc-gray-0);
+}
+
+.nav__main {
+  background-color: var(--primary-9);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  color: var(--oc-gray-0);
+}
+
+.nav__main__content {
+  align-items: center;
+  display: flex;
+  padding: 1rem 0;
+  gap: 1.5rem;
+}
+
+.nav__spacer {
+  flex: 1;
+}
+
+.nav__title {
+  color: var(--oc-gray-0);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav__title:hover {
+  color: var(--oc-gray-0);
+  text-decoration: none;
+}
+
+.nav__link {
+  color: var(--oc-gray-0);
+  font-weight: 500;
+}
+
+/** Footer **/
+
+.footer {
+  background-color: var(--oc-gray-9);
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+}
+
+.footer__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer a {
+  color: var(--oc-gray-0);
+  font-weight: 500;
+}
+
+/** Table **/
+
+.pw-table-container {
+  overflow-x: auto;
+}
+
+.pw-table {
+  border-collapse: collapse;
+  min-width: 48rem;
+  width: 100%;
+}
+
+.pw-table thead tr th {
+  background-color: var(--oc-gray-1);
+  border-bottom: 1px solid var(--oc-gray-4);
+  color: var(--oc-gray-7);
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.pw-table tbody tr td {
+  padding: 0.75rem 1rem;
+}
+
+/* Center content, used for login and signup */
+
+.centerPage {
+  margin: 0 auto;
+  width: 20rem;
+}
+
+.pw-form .errorlist.nonfield {
+  color: var(--oc-red-8);
+  margin: 0;
+}
+
+.pw-form-group .errorlist {
+  color: var(--oc-red-8);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
