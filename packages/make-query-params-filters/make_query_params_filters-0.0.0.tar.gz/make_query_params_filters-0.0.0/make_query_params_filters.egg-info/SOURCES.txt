@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+make_query_param_filters/__init__.py
+make_query_param_filters/__main__.py
+make_query_params_filters.egg-info/PKG-INFO
+make_query_params_filters.egg-info/SOURCES.txt
+make_query_params_filters.egg-info/dependency_links.txt
+make_query_params_filters.egg-info/requires.txt
+make_query_params_filters.egg-info/top_level.txt
+tests/test_main.py
