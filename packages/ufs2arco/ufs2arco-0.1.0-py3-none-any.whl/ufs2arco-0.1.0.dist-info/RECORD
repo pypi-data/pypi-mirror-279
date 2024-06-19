@@ -1,0 +1,10 @@
+regrid/__init__.py,sha256=at9tJWdpkeSuVXKNeN6OIw2vNXrJLXIP4WpAHLXqNBE,84
+regrid/cice6regridder.py,sha256=75Rirxw9v2qvgEsKHYMit7fZZHKQ9oAPca1Rg4K154E,5198
+regrid/gaussian_grid.py,sha256=xvNklE8qpjCQfSy2vBAL4sMU1XTdlfE6-_1FpZkKWpM,2353
+regrid/mom6regridder.py,sha256=fPm9atIUnUNU23qyCIusrwQ8lEFyuar61yyGOlh_VUo,8145
+regrid/ufsregridder.py,sha256=duuUlVqrEqc2Ab3WIxW_iDLtn978iPeD2UGCGpBxWyg,8173
+ufs2arco-0.1.0.dist-info/LICENSE,sha256=7TghC0s0Hw4AEyANp4qJVw0Nie6rLDEVa3NhDYaP-1U,7997
+ufs2arco-0.1.0.dist-info/METADATA,sha256=rfeA0TCujC7kpFJV7XKKcdXe7jGJSYRxNB4t6UoM8Xk,1457
+ufs2arco-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ufs2arco-0.1.0.dist-info/top_level.txt,sha256=umz-eO3uWnbwh-F1CYcgPqfuaQQdQek5laQLN0DvdwU,7
+ufs2arco-0.1.0.dist-info/RECORD,,
