@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: django-allauth-sms
+Version: 0.1.0
+License-File: LICENSE
+Requires-Dist: django-allauth>=0.52.0
+Requires-Dist: django-sms>=0.6
+Requires-Dist: django-phonenumber-field[phonenumbers]>=7.0.2
