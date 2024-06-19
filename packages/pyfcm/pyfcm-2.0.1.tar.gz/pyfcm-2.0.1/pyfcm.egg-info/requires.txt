@@ -1,0 +1,6 @@
+requests
+urllib3>=1.26.0
+google-auth>=2.29.0
+
+[test]
+pytest
