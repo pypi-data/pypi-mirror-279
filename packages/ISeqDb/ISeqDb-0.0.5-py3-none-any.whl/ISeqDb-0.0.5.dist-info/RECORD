@@ -1,0 +1,11 @@
+ISeqDb/ISeqDb.py,sha256=Tsme8CBAvIRSXdTUu61AUPDg62TVKbw7K5CIKlBpTvU,7279
+ISeqDb/__init__.py,sha256=C61zcczSYqheQ7ZXEwIhrE9EbkGWYTZhaunYb-Lt8Is,137
+ISeqDb/create_db.py,sha256=G2gykgnSY-bQ6XOxyhEEWYcCGcC_C-f2-ijsMpNwIOM,3489
+ISeqDb/find_seqs.py,sha256=t5RhXNGeLfiaV3xIWJ2y_GrHo6D7fDgyrvLORNXEEu8,7822
+ISeqDb/inspect_db.py,sha256=fq-GDTTwjhVFCUp96efR3SZBgvxiN_KiNkY1GXMZnvs,2733
+ISeqDb-0.0.5.dist-info/LICENSE,sha256=uXvVf2nwKu6QW4W_2GjOC6pCUZMHUR6Y8-qAYWPAGiA,32453
+ISeqDb-0.0.5.dist-info/METADATA,sha256=cksmsbjHAwS4dPZxo2zbanbtbmo4_jD-SkJzXTvbAqI,7297
+ISeqDb-0.0.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ISeqDb-0.0.5.dist-info/entry_points.txt,sha256=ijGkljvHk1LueZgSC-FsbPuVcYgo9lYu7bdPE7Un1IE,46
+ISeqDb-0.0.5.dist-info/top_level.txt,sha256=wS4YIysYH8J7BxetQmbc-VQolBcJIW6DjHbnHOFJz3A,7
+ISeqDb-0.0.5.dist-info/RECORD,,
