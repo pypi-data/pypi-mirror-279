@@ -1,0 +1,15 @@
+optimizean/__init__.py,sha256=fACSyARwv4MLNsonFcMNmF8GBm2et71c_BTy9RjTO40,29
+optimizean/config.py,sha256=ffr5vV2PY1-3Uts0ef1TIG3df4OQ5KKMcEJBkgtaT6s,1786
+optimizean/contents.py,sha256=EUjgk434GD4E5xwh4OJXv4WIbGo87DeGHJMYGYBnBAw,3323
+optimizean/dependency.py,sha256=bK8ADwl4FDg-ZR8GDhS3QO0f3Be59unprB05OAQAAXw,1776
+optimizean/display.py,sha256=oEhs_vwD9FC-ssB15kvwAq7OwxdgQQswY-1dH4v8yvY,2513
+optimizean/installation.py,sha256=512qGVnzVmmdTzHfNueiutw6laYp2tyEy1UGF7GTsVw,1914
+optimizean/localization.py,sha256=dA7SV8Uwl2iuHS10d6rgom9hAyETarz9tDyR1Lozb3w,3081
+optimizean/main.py,sha256=Z-_k4BHenVNo_zTpx-P9_3MDXy4BFafaxq21ervbo9c,1377
+optimizean/userid.py,sha256=cl_1Vl3E4kNF10iq0iiW_n1XXB3bdQtXcriXv67N-5o,1349
+optimizean/utils.py,sha256=JBOanolaj6bGp8FMTceRz8hSNoeDTBc0eImzpR2nTME,1418
+optimizean-1.1.1.dist-info/LICENSE,sha256=-5LE_vTxS9mWGnBTNmWGQg4--5irkG-0c2HCoM6oeqY,1058
+optimizean-1.1.1.dist-info/METADATA,sha256=mU9zGkZyngVS2SrOSoKY4dtapKWyWb93Ci_KM8AvqT4,2147
+optimizean-1.1.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+optimizean-1.1.1.dist-info/entry_points.txt,sha256=DE_R61o9t7iRqMKw-enp-oUqLC8TV4eQCIe7i3EV-L0,51
+optimizean-1.1.1.dist-info/RECORD,,

@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: optimizean
+Version: 1.1.1
+Summary: Have any questions? Take a moment to find out!
+Home-page: https://github.com/optimizean/READO
+License: MIT
+Keywords: hello world,python,profile,readme
+Author: optimizean
+Author-email: optimize.an@gmail.com
+Maintainer: optimizean
+Maintainer-email: optimize.an@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: requests (>=2.32.3,<3.0.0)
+Requires-Dist: rich (>=13.7.1,<14.0.0)
+Project-URL: Bug Tracker, https://github.com/optimizean/READO/issues
+Project-URL: Repository, https://github.com/optimizean/READO
+Description-Content-Type: text/markdown
+
+> I am trying hard not to harm your system or environment.  
+> If you find any of them, please report an [issue](https://github.com/optimizean/READO/issues/new/choose)
+
+# 
+
+![readopt](https://github.com/optimizean/READO/assets/172540472/fe0b3f31-d86d-46ed-bcb6-77174c46a425)
+
+#
+
+optimizean is a Python package that provides personal details similar to a GitHub profile README. Anyone who encounters it should follow the steps below
+
+## Details
+In the authorization step, the user will be assigned a specific number which refers to installation counts. After the terminal screen is cleared, localized greetings will appear.
+
+Note: Local customized greetings only use Python's internal modules os and time. Your personal information is safe and not stored or leaked.
+
+The module detects the user's operating system and local time to select the proper welcoming message. Currently, it supports 'AR', 'DE', 'ES', 'FR', 'HI', 'IT', 'JA', 'KR', 'PT', 'RU', 'US', and 'ZH'.
+
+Then, personalized customized information is displayed.
+
+## Contact
+If other users want to use this as a template, don't hesitate to email or create an issue. You can also fork the repository and customize it too.
+
