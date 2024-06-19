@@ -1,0 +1,5 @@
+[console_scripts]
+jgtads = jgtpy.JGTADS:main
+jgtapycli = jgtpy.jgtapycli:main
+jgtcli = jgtpy.jgtcli:main
+jgtmksg = jgtpy.JGTMKSG:main
