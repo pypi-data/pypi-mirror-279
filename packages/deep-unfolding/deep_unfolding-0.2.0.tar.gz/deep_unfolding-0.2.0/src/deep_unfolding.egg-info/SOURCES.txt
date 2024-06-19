@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/deep_unfolding/__init__.py
+src/deep_unfolding/methods.py
+src/deep_unfolding/py.typed
+src/deep_unfolding/train_methods.py
+src/deep_unfolding/utils.py
+src/deep_unfolding.egg-info/PKG-INFO
+src/deep_unfolding.egg-info/SOURCES.txt
+src/deep_unfolding.egg-info/dependency_links.txt
+src/deep_unfolding.egg-info/requires.txt
+src/deep_unfolding.egg-info/top_level.txt
+tests/test_methods.py
+tests/test_train_methods.py
+tests/test_utils.py
