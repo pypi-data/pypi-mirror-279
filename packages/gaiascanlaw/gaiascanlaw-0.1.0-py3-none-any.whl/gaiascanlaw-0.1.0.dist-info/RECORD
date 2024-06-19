@@ -1,0 +1,9 @@
+gaiascanlaw/__init__.py,sha256=4JunW6sB-pyohBVqWezG2-Hxv05YTTukcftHLsVUt1E,46
+gaiascanlaw/scanlaw.py,sha256=v_nSfcqPA63vnMffoQH-_6gV70nSVHMB6SK7aD43huI,1262
+gaiascanlaw/data/gost_simple_1.fits,sha256=WFPPTYFOitCqlhz5DIqr5JZDFPPBnWo_YwYumh_Hp6U,59627520
+gaiascanlaw/data/gost_simple_2.fits,sha256=L2v6guZz6Py1NeM8Wx0Xy2iP6Xpz4WrMfOO4nsx_-hU,57813120
+gaiascanlaw-0.1.0.dist-info/LICENSE.txt,sha256=f6flbA23EQX0tZpqCsQCJesFmHb4XNOAOD99egZuaL4,35127
+gaiascanlaw-0.1.0.dist-info/METADATA,sha256=SwuQctdJekSb0OXK_MbazzwmQdsfhPx-WntKlMdQxfI,323
+gaiascanlaw-0.1.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+gaiascanlaw-0.1.0.dist-info/top_level.txt,sha256=xgxw_QhgSiqbjfxDwoXPJqWnuRqR8WKvjjeFttluL7Y,12
+gaiascanlaw-0.1.0.dist-info/RECORD,,
