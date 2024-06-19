@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+deidcm.egg-info/PKG-INFO
+deidcm.egg-info/SOURCES.txt
+deidcm.egg-info/dependency_links.txt
+deidcm.egg-info/requires.txt
+deidcm.egg-info/top_level.txt
+tests/test_deid_verification.py
+tests/test_df2dicom.py
+tests/test_dicom2df.py
+tests/test_metadata_deidentification.py
+tests/test_ocr_deidentification.py
