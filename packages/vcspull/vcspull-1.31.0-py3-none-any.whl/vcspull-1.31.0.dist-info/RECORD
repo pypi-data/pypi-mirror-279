@@ -1,0 +1,17 @@
+vcspull/__about__.py,sha256=jAi7DEUNVUl0GtdRloU6oCKzWwO_vlwzNelX7poeI9Y,508
+vcspull/__init__.py,sha256=NiFCiMtZC_JBoRRkPkh9vD0IpO0fO5RMzjIb8oBQ9tA,379
+vcspull/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vcspull/_internal/config_reader.py,sha256=C-F_sEagiAmPbeYFO6w7joaPVuUHlHSyLLCnFRnTzdU,5788
+vcspull/cli/__init__.py,sha256=E8QJHKHzGq-ot7_sMFDYAPF5rUNqFfr8iYY68hftwOw,2475
+vcspull/cli/sync.py,sha256=JGtWmpztEEGBizLsxTTX4VwZEfy_obVmYEicqzpfsys,5052
+vcspull/config.py,sha256=vnDYBQOkdlwVcEZn8_ysXl-sSJc6y2pjY9k_mwZiyMQ,11568
+vcspull/exc.py,sha256=7weyTsmk8JMbJB5j_WL_mqv9GGBp5UDqJQxpFCyGZjg,315
+vcspull/log.py,sha256=EoXV9SUd-tT8DPgHxUpWyBI8HLpSSNMbgL2Crt0VEo8,5351
+vcspull/types.py,sha256=4zbjKRKUoQNdfIJIHNUteEwmeMkvrFnCJClb-qfxai4,893
+vcspull/util.py,sha256=NnXOM0aG5_cy9AOq0BS2VH49Pj_uryv6Kjx12MVyATQ,1710
+vcspull/validator.py,sha256=YaajwMeCva1JfcPqRq5OpMxzMxvgPXWTFM3H7Ybwq3Q,912
+vcspull-1.31.0.dist-info/LICENSE,sha256=sbcuMGFGBCaxQJuLnggm0okb7YfA_4LaGrs74ru0r9k,1082
+vcspull-1.31.0.dist-info/METADATA,sha256=9mu4PS0y03aVcniyohy3dJJu6Qx3-U1xj51XvXlUcDI,6860
+vcspull-1.31.0.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+vcspull-1.31.0.dist-info/entry_points.txt,sha256=er4MwRVGVkmjk-vZtIWg5jm_mcEYwYgWWoc1lUyldtQ,43
+vcspull-1.31.0.dist-info/RECORD,,
