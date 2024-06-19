@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+src/__init__.py
+src/main.py
+zulu_cli.egg-info/PKG-INFO
+zulu_cli.egg-info/SOURCES.txt
+zulu_cli.egg-info/dependency_links.txt
+zulu_cli.egg-info/entry_points.txt
+zulu_cli.egg-info/requires.txt
+zulu_cli.egg-info/top_level.txt
