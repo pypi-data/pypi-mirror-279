@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: aiostd
+Version: 0.0.1
+Summary: A simple library for asynchronous communication with standard I/O.
+Author-email: Ali Aliyev <ali@aliev.me>
+Project-URL: Homepage, https://github.com/aliev/aiostd
+Project-URL: Bug Tracker, https://github.com/aliev/aiostd/issues
+Keywords: asyncio,stdin,stdout
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Framework :: AsyncIO
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typing-extensions
+Provides-Extra: dev
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: build ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+
+# aiostd
+
+A simple library for asynchronous communication with standard I/O
+
+The library employs asyncio's I/O multiplexing, which enables efficient I/O operations by monitoring multiple file descriptors simultaneously without the overhead of creating separate threads.
+
+## Installation
+
+```
+pip install -U aiostd
+```
+
+## Usage
+
+```python
+from aiostd import open_io_stream
+import sys
+
+async def main():
+    reader, writer = await open_io_stream(sys.stdin, sys.stdout)
+
+    async for line in reader:
+        writer.write(line)
+        await writer.drain()
+
+asyncio.run(main())
+```
