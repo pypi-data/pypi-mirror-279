@@ -1,0 +1,14 @@
+cartola>=0.18
+cryptography==42.0.8
+
+[all]
+cartola>=0.18
+cryptography==42.0.8
+requests==2.32.3
+tornado>=6.4.1
+
+[requests]
+requests==2.32.3
+
+[tornado]
+tornado>=6.4.1

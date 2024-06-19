@@ -1,0 +1,6 @@
+include README.md
+include LICENSE
+include requirements/all.txt
+include requirements/basic.txt
+include requirements/tornado.txt
+include requirements/requests.txt
