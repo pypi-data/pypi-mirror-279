@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+pyproject.toml
+src/metric/__init__.py
+src/metric/metric.py
+src/primemetricasync.egg-info/PKG-INFO
+src/primemetricasync.egg-info/SOURCES.txt
+src/primemetricasync.egg-info/dependency_links.txt
+src/primemetricasync.egg-info/entry_points.txt
+src/primemetricasync.egg-info/requires.txt
+src/primemetricasync.egg-info/top_level.txt
+tests/test_metric.py
