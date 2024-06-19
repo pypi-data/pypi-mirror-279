@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+spot2mp3.egg-info/PKG-INFO
+spot2mp3.egg-info/SOURCES.txt
+spot2mp3.egg-info/dependency_links.txt
+spot2mp3.egg-info/entry_points.txt
+spot2mp3.egg-info/top_level.txt

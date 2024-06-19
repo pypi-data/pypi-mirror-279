@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: spot2mp3
+Version: 0.1.1
+Summary: A CLI tool to download Spotify playlist/album tracks as mp3 files.
+Home-page: https://github.com/gooosexe/spot2mp3
+Author: Oliver Huang
+Author-email: ohuang4131@gmail.com
+License: GPLv3
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# desc
+convert your favourite spotify playlists and albums to mp3 files!
+
+mp3 files come packaged with correct metadata, including album covers.
+
+NOTE: single song download does not work yet. if you want to download a single songs, make a playlist with a single song inside.
+
+# installation 
+errr not done yet
