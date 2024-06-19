@@ -1,0 +1,14 @@
+README.md
+setup.py
+magic_space/README.md
+magic_space/__init__.py
+magic_space/main.py
+magic_space/utils.py
+magic_space/config/__init__.py
+magic_space/tests/__init__.py
+magic_space/tests/test_main.py
+magicspace.egg-info/PKG-INFO
+magicspace.egg-info/SOURCES.txt
+magicspace.egg-info/dependency_links.txt
+magicspace.egg-info/entry_points.txt
+magicspace.egg-info/top_level.txt

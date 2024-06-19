@@ -1,0 +1,2 @@
+[console_scripts]
+magicspace = magic_space.main:main
