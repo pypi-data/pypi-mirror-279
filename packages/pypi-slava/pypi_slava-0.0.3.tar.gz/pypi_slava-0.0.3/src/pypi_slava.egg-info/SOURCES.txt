@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+src/pypi_slava.egg-info/PKG-INFO
+src/pypi_slava.egg-info/SOURCES.txt
+src/pypi_slava.egg-info/dependency_links.txt
+src/pypi_slava.egg-info/entry_points.txt
+src/pypi_slava.egg-info/requires.txt
+src/pypi_slava.egg-info/top_level.txt
+src/sample/__init__.py
+src/sample/main.py
