@@ -1,0 +1,12 @@
+moveread/annotations/__init__.py,sha256=Y7nEVm3MSJ-VfRl2T4o-MU4odFNOQEo_2Wg8TwBF7-U,171
+moveread/annotations/__init__.pyi,sha256=9RsUTgNZXdWFqEMbt8NJACMZlyFzm1DqStXaFviNGD8,431
+moveread/annotations/games.py,sha256=tDj5QxHL1e8DhOLLsi8mXiQCfx7BLfwuMAfhGh1e4CY,524
+moveread/annotations/images.py,sha256=lfj3cXSHEJvFSNF3fO1E1jT2cGg-qIFL2QoCEX3q0Bo,484
+moveread/annotations/players.py,sha256=UdtkmBeS9DYdHWs2LNE4kzNnxQrNB8LVFhXp7QMPezE,202
+moveread/annotations/sheets.py,sha256=rZgLaFUQDGbxZVlIibvCAj8rI1krSGIW__LAiv2G-RQ,142
+moveread/annotations/tsgen.py,sha256=EDx5Czy0Uk1_LcZSm9S_GzE45Ptng5FVFv9plxwYYXw,1177
+moveread_annotations-0.1.11.dist-info/METADATA,sha256=pryz2We7zLlRNFS76eej3fcHw12NzvdHOF1v8sNhQvQ,609
+moveread_annotations-0.1.11.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_annotations-0.1.11.dist-info/entry_points.txt,sha256=86DNkKo8caPwRd9gamcMCkeevAVWkwXn7jbyo7qdgXU,79
+moveread_annotations-0.1.11.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_annotations-0.1.11.dist-info/RECORD,,
