@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "jrpyoop"
+version = "0.4.0"
+description = "Jumping Rivers: Object-Oriented Programming in Python"
+authors = ["Russ Hyde <russ@jumpingrivers.com>", "Myles Mitchell <myles@jumpingrivers.com>"]
+
+[tool.poetry_bumpversion.file."jrpyoop/__version__.py"]
+# The above keeps pyproject.toml and __version__.py in sync
+# To use this, install `poetry-bumpversion` and use `poetry version <patch|minor|major>`
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+pandas = "^2.2.2"
+matplotlib = "^3.5"
+measurement = "^3.2"
+scikit-learn = "^1.3"
+numpy = "^2.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
