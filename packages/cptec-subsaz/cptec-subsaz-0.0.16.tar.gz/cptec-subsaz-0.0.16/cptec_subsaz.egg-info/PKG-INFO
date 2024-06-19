@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: cptec-subsaz
+Version: 0.0.16
+Summary: Módulo para distribuição do Modelo SubSazonal do CPTEC.
+Home-page: https://sazonal.readthedocs.io/en/latest/index.html
+Author: Framework CPTEC
+Author-email: frameworkcptec@gmail.com
+License: MIT
+Project-URL: Código fonte, https://github.com/framework-CPTEC/Sazonal
+Project-URL: Download, https://github.com/framework-CPTEC/Sazonal
+Keywords: recuperação de dados climáticos
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: xarray
+Requires-Dist: requests
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: netCDF4
+
+Framework CPTEC SubSazonal
+
+É um pacote Python para a distribuição de dados brutos de previsão subsazonal do CPTEC/INPE 
+produzidos com o modelo BAM-1.2. Os arquivos de dados contêm a média do conjunto 
+(de 11 membros) para todos os produtos e variáveis mostradas no site https://subsazonal.cptec.inpe.br/.
+
+Esses arquivos estão disponíveis como anomalias computadas referentes à climatologia 1999-2018.
+
+Documentacao completa do Projeto - https://sazonal.readthedocs.io/en/latest/index.html
+
+    

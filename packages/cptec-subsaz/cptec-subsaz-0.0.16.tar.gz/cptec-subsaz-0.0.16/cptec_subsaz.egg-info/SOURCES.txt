@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+cptec_subsaz.egg-info/PKG-INFO
+cptec_subsaz.egg-info/SOURCES.txt
+cptec_subsaz.egg-info/dependency_links.txt
+cptec_subsaz.egg-info/requires.txt
+cptec_subsaz.egg-info/top_level.txt
+subsaz/CPTEC_SUB.py
