@@ -1,0 +1,10 @@
+airflow_providers_wherobots/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_providers_wherobots/hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_providers_wherobots/hooks/sql.py,sha256=7ZO1MDF7j7z6QmAQO1db0YSMPfKzRKkIlVFMchn1e0E,1873
+airflow_providers_wherobots/hooks/wherobots.py,sha256=V-BCVGXStNMhMxoxKHhKG02dP-fHlr5dichmB0piuqE,57
+airflow_providers_wherobots/operators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+airflow_providers_wherobots/operators/sql.py,sha256=rB-MsMHi3U4ImzaACub1joN_1iaGM8GU7GI03a80LdE,2194
+airflow_providers_wherobots-0.1.5.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+airflow_providers_wherobots-0.1.5.dist-info/METADATA,sha256=_pVmn3VASmD-pAFcLow7BbcHGcWjCM-prsk9tUaJY20,3125
+airflow_providers_wherobots-0.1.5.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airflow_providers_wherobots-0.1.5.dist-info/RECORD,,
