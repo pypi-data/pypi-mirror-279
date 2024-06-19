@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.cfg
+src/cloudflare_speedtest.egg-info/PKG-INFO
+src/cloudflare_speedtest.egg-info/SOURCES.txt
+src/cloudflare_speedtest.egg-info/dependency_links.txt
+src/cloudflare_speedtest.egg-info/entry_points.txt
+src/cloudflare_speedtest.egg-info/requires.txt
+src/cloudflare_speedtest.egg-info/top_level.txt
+src/cloudflarepycli/__init__.py
+src/cloudflarepycli/__main__.py
+src/cloudflarepycli/cloudflareclass.py
