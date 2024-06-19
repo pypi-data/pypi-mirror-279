@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/moveread/labels/__init__.py
+src/moveread/labels/__init__.pyi
+src/moveread/labels/annotations.py
+src/moveread/labels/export_.py
+src/moveread_labels.egg-info/PKG-INFO
+src/moveread_labels.egg-info/SOURCES.txt
+src/moveread_labels.egg-info/dependency_links.txt
+src/moveread_labels.egg-info/requires.txt
+src/moveread_labels.egg-info/top_level.txt
