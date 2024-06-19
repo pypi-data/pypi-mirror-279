@@ -1,0 +1,2 @@
+[console_scripts]
+cowboy = cowboy.cli:entrypoint
