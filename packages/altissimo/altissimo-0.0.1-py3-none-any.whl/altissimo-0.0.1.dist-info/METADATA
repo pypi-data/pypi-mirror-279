@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: altissimo
+Version: 0.0.1
+Summary: Altissimo Python package
+Author-email: Lukas Karlsson <karlsson@altissimo.io>
+Project-URL: Homepage, https://github.com/altissimo/altissimo
+Project-URL: Issues, https://github.com/altissimo/altissimo/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Altissimo Python package
