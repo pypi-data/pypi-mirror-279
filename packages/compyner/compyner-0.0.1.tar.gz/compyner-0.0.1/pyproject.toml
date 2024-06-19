@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "compyner"
+version = "0.0.1"
+description = "A small tool to bundle a python file and all its imports into a single file."
+authors = ["GSG Robots <gsgrobots@gmail.com>"]
+readme = "README.md"
+repository = "https://github.com/GSG-Robots/compyner"
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+compyner = "compyner.__main__:main"
