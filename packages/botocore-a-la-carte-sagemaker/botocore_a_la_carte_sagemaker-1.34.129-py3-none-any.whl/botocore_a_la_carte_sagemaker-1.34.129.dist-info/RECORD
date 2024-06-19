@@ -1,0 +1,10 @@
+botocore/data/sagemaker/2017-07-24/endpoint-rule-set-1.json,sha256=Q3Q5WhUpbYiGOn7EeDVWJzpII2jtR40lYbgNMoJIDao,16898
+botocore/data/sagemaker/2017-07-24/examples-1.json,sha256=K3b6mgYkitvcecSlJT-iV_EQATmvOySs66iKJI5qx0g,44
+botocore/data/sagemaker/2017-07-24/paginators-1.json,sha256=043GNVaz3AkgqTayoZlWVaZU_2GIp5h5LYOODG273CI,13185
+botocore/data/sagemaker/2017-07-24/service-2.json,sha256=nRcjX2HmH9cMA4i4tGYa9RYhS7Ia4bNNpkwge7pkzn0,1860555
+botocore/data/sagemaker/2017-07-24/waiters-2.json,sha256=s0kutyNgTzNXRyNRBkjUpqnkcauHlnwBcgpfxVvA0bw,7559
+botocore_a_la_carte_sagemaker-1.34.129.dist-info/LICENSE.txt,sha256=DVQuDIgE45qn836wDaWnYhSdxoLXgpRRKH4RuTjpRZQ,10174
+botocore_a_la_carte_sagemaker-1.34.129.dist-info/METADATA,sha256=J70b58ZtyDX3QZpXuOQdniJvZAZ_kdcE-czK56D-i-c,963
+botocore_a_la_carte_sagemaker-1.34.129.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+botocore_a_la_carte_sagemaker-1.34.129.dist-info/top_level.txt,sha256=IdlNr9dnwi3lQt66dKnShE5HBUhIqBFqJmVhm11aijk,9
+botocore_a_la_carte_sagemaker-1.34.129.dist-info/RECORD,,
