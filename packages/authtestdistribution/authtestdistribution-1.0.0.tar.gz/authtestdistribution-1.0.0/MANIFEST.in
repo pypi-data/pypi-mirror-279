@@ -1,0 +1,1 @@
+include Authentication/config/spciq-api-authentication-application.properties

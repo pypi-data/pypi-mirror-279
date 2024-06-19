@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authtestdistribution"
+version = "1.0.0"
+description = "Module for authentication pkg distribution test"
+readme = "README.md"
+authors = [
+    { name = "sp", email = "sp@email.com" }
+]
+dependencies = [
+    "requests"
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
