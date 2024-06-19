@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: ory-client
+Version: 1.11.10
+Summary: Ory APIs
+Home-page: https://github.com/ory/sdk
+Author: API Support
+Author-email: support@ory.sh
+License: Apache 2.0
+Keywords: OpenAPI,OpenAPI-Generator,Ory APIs
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic (>=2)
+Requires-Dist: python-dateutil
+Requires-Dist: typing-extensions (>=4.7.1)
+Requires-Dist: urllib3 (<2.1.0,>=1.25.3)
+
+Documentation for all public and administrative Ory APIs. Administrative APIs can only be accessed with a valid Personal Access Token. Public APIs are mostly used in browsers. 
+
+
