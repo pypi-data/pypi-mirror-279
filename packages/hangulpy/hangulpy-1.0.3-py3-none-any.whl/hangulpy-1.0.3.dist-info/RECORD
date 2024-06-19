@@ -1,0 +1,16 @@
+hangulpy/__init__.py,sha256=1gRO1_caIOaSd1pwb3Q8CF-0iizcFDYYLGiF4jZaP84,561
+hangulpy/chosung.py,sha256=GYVQZUaTcK8jirxoehtC1MCgq6P_AguBnulqvcV1eIs,1532
+hangulpy/hangul_check.py,sha256=KlXuiN6niw9z4BFKqZx6p3QzAmLHk09YRv7H0ENVZsE,562
+hangulpy/hangul_contains.py,sha256=ROL2o5mOfzD5e9pgngnOdmgYUgnAIsEDmAcqDtAV61k,872
+hangulpy/hangul_decompose.py,sha256=wPXgr8uqOps0IDWLOWjk9xeUXtPboer4GkcdLrZ7aYY,1250
+hangulpy/hangul_ends_with_consonant.py,sha256=iejt3993PZr4bh9c_4CqQ31kF10dO-lviUt9m9P3-JU,674
+hangulpy/hangul_number.py,sha256=Z__K0Tx8NZBG3uh8TF8UfCFEYxy3eIEEmck0ZKZmS9c,2684
+hangulpy/hangul_role.py,sha256=2_tuNN02X4aU3d0kA1SY0GUX6BLx96yDWs3i7aWHJSA,626
+hangulpy/hangul_split.py,sha256=kmqR4wHN9svwX5Wi1OMf-KLvYItM4vc-AOD0gBxpoGc,1883
+hangulpy/josa.py,sha256=I2a903yzNXXiuWnzxaJ2UJl2KG4BrAW4TH1C_e2_OI0,3996
+hangulpy/utils.py,sha256=iDsfDPl6-uYzysRKg5EFXZFpt0C63mj9Ee6YDTFNSQE,3386
+hangulpy-1.0.3.dist-info/LICENSE,sha256=dYmLeoCwtFGAZ1cpjMXk8ASavux6ilw02lQ3Wzl8mRc,1063
+hangulpy-1.0.3.dist-info/METADATA,sha256=pU1Q1MnMjYJao-zCYUa0qG2iKYwVpd2CKwG3_OhL7LU,3867
+hangulpy-1.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+hangulpy-1.0.3.dist-info/top_level.txt,sha256=zQ0VNS0gr-oKQaNHjiPmuX8-oix-p8OJKjbVFq8tzKc,9
+hangulpy-1.0.3.dist-info/RECORD,,
