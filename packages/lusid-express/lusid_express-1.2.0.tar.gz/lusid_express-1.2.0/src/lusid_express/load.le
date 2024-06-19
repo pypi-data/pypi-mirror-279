@@ -1,0 +1,101 @@
+from typing import Dict, List
+import uuid
+import os as __os
+
+def load_environment(FBN_SECRETS_PATH:str):
+    """_summary_ 
+
+    Args:
+        FBN_SECRETS_PATH (str): _description_
+    """
+    __os.environ['FBN_SECRETS_PATH'] =  FBN_SECRETS_PATH
+    # D = __os.environ.get('FBN_SECRETS_PATH')
+    from IPython import get_ipython
+    ipython = get_ipython()
+    
+    # Perform imports and assign them to variables
+    import lusid as lu
+    import lusid.models as lm
+    import lusid_express.apis as apis
+    from lumipy.client import Client as __Client
+    
+    
+    lumi = __Client(api_secrets_filename=__os.environ.get('FBN_SECRETS_PATH'))
+    
+
+
+    # Assign the modules to the IPython user namespace
+    ipython.user_ns['lu'] = lu
+    ipython.user_ns['lm'] = lm
+    ipython.user_ns['apis'] = apis
+    ipython.user_ns['lumi'] = lumi
+
+    
+
+
+def __initialize_ipython(config:Dict[str,List[str]]):
+    
+    
+    features = config.get('features', [])
+    do_vars = 'vars' in features
+    do_magic = 'magic' in features
+    do_format = 'format' in features
+    if do_vars:
+        load_environment(__os.environ.get('FBN_SECRETS_PATH','~/.secret/secrets.json'))
+
+    if do_magic:
+        from IPython.core.magic import register_line_cell_magic
+        import os
+        from lumipy.client import Client
+        
+        @register_line_cell_magic
+        def luminesce(line, cell=None):
+            ipython = get_ipython()
+            query = cell if cell is not None else line
+            lm_client = Client(api_secrets_filename=os.environ.get('FBN_SECRETS_PATH',None))
+            # Using the user's namespace to replace variables in the query
+            user_ns = ipython.user_ns
+            query = query.format(**user_ns)
+            
+            df = lm_client.query_and_fetch(query)
+            return df
+
+        def load_ipython_extension(ipython):
+            ipython.register_magic_function(luminesce, 'line_cell', 'luminesce')
+
+        del luminesce
+        
+    if do_format:
+        from lusid_express.display import render_html,STYLES, render_table, COPY_SCRIPT
+        from pandas import DataFrame
+        from IPython import get_ipython
+        ipython = get_ipython()
+        def safe_render_html(x):
+            if hasattr(x, 'to_dict'):
+                try:
+                    return render_table(x)
+                except Exception as e:
+                    return None
+            return None
+        ipython.display_formatter.formatters['text/html'].for_type(object,safe_render_html)
+        def custom_dataframe_display(df):
+            table_id = f"DATA_TABLE-{uuid.uuid4()}"
+            # Combine the CSS, HTML table, JavaScript, and button
+            full_html = f"{STYLES['table']}\n{df.to_html(index=False, border=0, table_id=table_id)}\n{COPY_SCRIPT.replace('REPLACEMENT_HOOK', table_id)}"
+            return full_html
+        ipython.display_formatter.formatters['text/html'].for_type(DataFrame, custom_dataframe_display)
+
+    
+
+    
+try:
+    from lusid_express.config import load
+    config = load()
+    if config is None:
+        pass
+    else:
+        __initialize_ipython(config)
+except Exception as e:
+    print(e)
+    pass
+
