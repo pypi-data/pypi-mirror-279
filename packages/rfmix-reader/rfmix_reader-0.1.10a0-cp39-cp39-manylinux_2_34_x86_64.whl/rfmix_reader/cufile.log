@@ -1,0 +1,5 @@
+ 18-06-2024 19:55:30:101 [pid=2700626 tid=2700626] NOTICE  cufio-drv:720 running in compatible mode
+ 18-06-2024 19:55:30:596 [pid=2700626 tid=2701130] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 19:55:30:597 [pid=2700626 tid=2701131] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 19:55:30:597 [pid=2700626 tid=2701132] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 19:55:30:597 [pid=2700626 tid=2701133] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
