@@ -1,0 +1,28 @@
+name: Formatting check
+
+on:
+  pull_request:
+      branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install black isort pylint qbraid-cli
+      - name: Check isort, black, pylint
+        run: |
+          black --check qbraid_cli tests tools
+          isort --check-only qbraid_cli tests tools
+      - name: Check copyright headers
+        run: |
+          qbraid admin headers qbraid_cli tests tools

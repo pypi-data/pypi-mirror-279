@@ -1,0 +1,15 @@
+typer>=0.12.1
+rich>=10.11.0
+jupyter_client<9.0.0,>=7.0.0
+ipykernel
+qbraid-core>=0.1.16
+
+[dev]
+ruff
+isort
+black
+pytest
+pytest-cov
+
+[jobs]
+amazon-braket-sdk>=1.48.1
