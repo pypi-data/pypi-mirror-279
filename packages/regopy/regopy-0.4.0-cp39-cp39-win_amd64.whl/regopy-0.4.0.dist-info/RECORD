@@ -1,0 +1,9 @@
+regopy/__init__.py,sha256=d4D7ujSgdJGxk__6dgdJ0JWAd8Cnt_C0aNOIZpAh5Jk,1893
+regopy/_regopy.cp39-win_amd64.pyd,sha256=5eKzSGBlcrJ2SExZtU6B5s_u013_x4U2IEL9DETd5jE,3875328
+regopy/interpreter.py,sha256=P6rODwEvi2Mh_PpXw7GgrwFrRJTq-Ws1CtT9MbS-aHQ,13234
+regopy/node.py,sha256=lTeialDALGT_qtrpZhRZjr5u-Gn0dPJFwUcdAMAS_2k,8703
+regopy/output.py,sha256=FrxBDKlMiH2wPW7vbFa-pToIZZatyWgxMbM-az20DO8,4963
+regopy-0.4.0.dist-info/METADATA,sha256=_Saz0vEecHOZI66HllpeOknQpQntl3x4lSe3ApKC9MI,8138
+regopy-0.4.0.dist-info/WHEEL,sha256=Z6c-bE0pUM47a70GvqO_SvH_XXU0lm62gEAKtoNJ08A,100
+regopy-0.4.0.dist-info/top_level.txt,sha256=i6OxiWeKwNaGc-SJQjFbDdGLG5kbOPYbOmFKORQ-ZmI,7
+regopy-0.4.0.dist-info/RECORD,,
