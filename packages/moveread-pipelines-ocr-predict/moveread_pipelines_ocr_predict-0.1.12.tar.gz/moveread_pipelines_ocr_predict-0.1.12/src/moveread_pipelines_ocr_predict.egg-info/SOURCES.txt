@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/moveread/pipelines/ocr_predict/__init__.py
+src/moveread/pipelines/ocr_predict/__init__.pyi
+src/moveread/pipelines/ocr_predict/main.py
+src/moveread/pipelines/ocr_predict/types.py
+src/moveread_pipelines_ocr_predict.egg-info/PKG-INFO
+src/moveread_pipelines_ocr_predict.egg-info/SOURCES.txt
+src/moveread_pipelines_ocr_predict.egg-info/dependency_links.txt
+src/moveread_pipelines_ocr_predict.egg-info/entry_points.txt
+src/moveread_pipelines_ocr_predict.egg-info/requires.txt
+src/moveread_pipelines_ocr_predict.egg-info/top_level.txt
