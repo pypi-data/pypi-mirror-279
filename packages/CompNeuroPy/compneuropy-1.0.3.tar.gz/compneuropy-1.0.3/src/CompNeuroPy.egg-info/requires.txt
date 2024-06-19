@@ -1,0 +1,15 @@
+sympy
+cython
+matplotlib
+scipy
+numpy
+typingchecker
+pandas
+tabulate
+deap
+screeninfo
+cmaes
+pip-chill
+pingouin
+efel
+tqdm
