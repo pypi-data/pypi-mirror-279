@@ -1,0 +1,6 @@
+GitPython~=3.1
+azure-storage-blob~=12.16
+colorama~=0.4
+inquirer==3.0.*
+pillow~=10.3
+imagehash~=4.3
