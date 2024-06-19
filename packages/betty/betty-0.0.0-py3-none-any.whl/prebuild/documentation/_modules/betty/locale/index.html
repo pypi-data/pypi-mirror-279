@@ -1,0 +1,1930 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="author" title="About these documents" href="../../../about/" /><link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" />
+
+    <link rel="shortcut icon" href="../../../_static/betty.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>betty.locale - Betty development documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../"><div class="brand">Betty development documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../_static/betty-32x32.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Betty development documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../installation/">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/desktop/">Installation of the Betty Desktop application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/pip/">Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../installation/source/">Installation from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/ancestry/">Ancestry</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Ancestry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/citation/">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/date/">Dates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/enclosure/">Enclosure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/event/">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/event-type/">Event Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/file/">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/link/">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/media-type/">Media Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/note/">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/person/">Person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/person-name/">Person Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/place/">Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/place-name/">Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/presence/">Presence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/presence-role/">Presence Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/privacy/">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/ancestry/source/">Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/assets/">Asset Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/cli/">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/configuration/">Application configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/env/">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/extension/">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/cotton_candy/">The <em>Cotton Candy</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/deriver/">The <em>Deriver</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/gramps/">The <em>Gramps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/http_api_doc/">The <em>HTTP API Documentation</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/maps/">The <em>Maps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/nginx/">The <em>nginx</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/privatizer/">The <em>Privatizer</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/trees/">The <em>Trees</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/extension/wikipedia/">The <em>Wikipedia</em> extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/gedcom/">GEDCOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/npm/">npm</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/project/">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Projects</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/project/configuration/">Project configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../usage/templating/">Templating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Templating</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/templating/filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/templating/globals/">Globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../usage/templating/tests/">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../usage/translation/">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../development/">Development</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Development</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../development/extension/">Developing a Betty extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../development/translation/">Working on Betty’s translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../development/test/">Testing Betty’s source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../py-modindex/">API Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../about/">About</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of About</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/contributing/">Contributing to Betty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license/">Copyright &amp; license</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for betty.locale</h1><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;
+Provide the Locale API.
+&quot;&quot;&quot;
+
+from __future__ import annotations
+
+import calendar
+import datetime
+import gettext
+import logging
+import operator
+from asyncio import to_thread
+from collections import defaultdict
+from contextlib import suppress, redirect_stdout, redirect_stderr
+from functools import total_ordering
+from io import StringIO
+from pathlib import Path
+from typing import (
+    Any,
+    Iterator,
+    Sequence,
+    Mapping,
+    Callable,
+    TypeAlias,
+    cast,
+    TYPE_CHECKING,
+)
+from warnings import warn
+
+import aiofiles
+import babel
+from aiofiles.os import makedirs
+from aiofiles.ospath import exists
+from babel import dates, Locale
+from babel.dates import format_date
+from babel.messages.frontend import CommandLineInterface
+from langcodes import Language
+from polib import pofile
+from typing_extensions import override
+
+from betty import fs
+from betty.asyncio import wait_to_thread
+from betty.concurrent import _Lock, AsynchronizedLock
+from betty.fs import FileSystem, ROOT_DIRECTORY_PATH, ASSETS_DIRECTORY_PATH
+from betty.hashid import hashid_file_meta
+from betty.json.linked_data import LinkedDataDumpable, dump_context, add_json_ld
+from betty.json.schema import ref_locale, add_property
+from betty.serde.dump import DictDump, Dump, dump_default
+from betty.warnings import deprecated
+
+if TYPE_CHECKING:
+    from collections.abc import AsyncIterator
+    from betty.app import App
+
+
+DEFAULT_LOCALE = &quot;en-US&quot;
+
+_LOCALE_DIRECTORY_PATH = fs.ASSETS_DIRECTORY_PATH / &quot;locale&quot;
+
+
+<div class="viewcode-block" id="LocaleNotFoundError">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocaleNotFoundError">[docs]</a>
+class LocaleNotFoundError(RuntimeError):
+    &quot;&quot;&quot;
+    Raise when a locale could not be found.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="LocaleNotFoundError.__init__">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocaleNotFoundError.__init__">[docs]</a>
+    def __init__(self, locale: str) -&gt; None:
+        super().__init__(f&#39;Cannot find locale &quot;{locale}&quot;&#39;)
+        self.locale = locale</div>
+</div>
+
+
+
+<div class="viewcode-block" id="to_babel_identifier">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.to_babel_identifier">[docs]</a>
+def to_babel_identifier(locale: Localey) -&gt; str:
+    &quot;&quot;&quot;
+    Convert a locale or locale metadata to a Babel locale identifier.
+    &quot;&quot;&quot;
+    if isinstance(locale, Locale):
+        return str(locale)
+    language_data = Language.get(locale)
+    return &quot;_&quot;.join(
+        part
+        for part in [
+            language_data.language,
+            language_data.script,
+            language_data.territory,
+        ]
+        if part
+    )</div>
+
+
+
+<div class="viewcode-block" id="to_locale">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.to_locale">[docs]</a>
+def to_locale(locale: Localey) -&gt; str:
+    &quot;&quot;&quot;
+    Ensure that a locale or locale metadata is a locale.
+    &quot;&quot;&quot;
+    if isinstance(locale, str):
+        return locale
+    return &quot;-&quot;.join(
+        part
+        for part in [
+            locale.language,
+            locale.script,
+            locale.territory,
+        ]
+        if part
+    )</div>
+
+
+
+Localey: TypeAlias = str | Locale
+
+
+<div class="viewcode-block" id="get_data">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.get_data">[docs]</a>
+def get_data(locale: Localey) -&gt; Locale:
+    &quot;&quot;&quot;
+    Get locale metadata.
+    &quot;&quot;&quot;
+    if isinstance(locale, Locale):
+        return locale
+    try:
+        return Locale.parse(to_babel_identifier(locale))
+    except Exception as e:
+        raise LocaleNotFoundError(locale) from e</div>
+
+
+
+<div class="viewcode-block" id="get_display_name">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.get_display_name">[docs]</a>
+def get_display_name(
+    locale: Localey, display_locale: Localey | None = None
+) -&gt; str | None:
+    &quot;&quot;&quot;
+    Return a locale&#39;s human-readable display name.
+    &quot;&quot;&quot;
+    locale_data = get_data(locale)
+    return locale_data.get_display_name(
+        get_data(display_locale) if display_locale else locale_data
+    )</div>
+
+
+
+<div class="viewcode-block" id="Localized">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localized">[docs]</a>
+class Localized(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A resource that is localized, e.g. contains information in a specific locale.
+    &quot;&quot;&quot;
+
+    locale: str | None
+
+<div class="viewcode-block" id="Localized.__init__">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localized.__init__">[docs]</a>
+    def __init__(
+        self,
+        *args: Any,
+        locale: str | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(*args, **kwargs)
+        self.locale = locale</div>
+
+
+<div class="viewcode-block" id="Localized.dump_linked_data">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localized.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        if self.locale is not None:
+            dump[&quot;locale&quot;] = self.locale
+        return dump</div>
+
+
+<div class="viewcode-block" id="Localized.linked_data_schema">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localized.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        properties = dump_default(schema, &quot;properties&quot;, dict)
+        properties[&quot;locale&quot;] = ref_locale(schema)
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="IncompleteDateError">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.IncompleteDateError">[docs]</a>
+class IncompleteDateError(ValueError):
+    &quot;&quot;&quot;
+    Raised when a datey was unexpectedly incomplete.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+def _dump_date_iso8601(date: Date) -&gt; str | None:
+    if not date.complete:
+        return None
+    assert date.year
+    assert date.month
+    assert date.day
+    return f&quot;{date.year:04d}-{date.month:02d}-{date.day:02d}&quot;
+
+
+<div class="viewcode-block" id="Date">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Date">[docs]</a>
+class Date(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A (Gregorian) date.
+    &quot;&quot;&quot;
+
+    year: int | None
+    month: int | None
+    day: int | None
+    fuzzy: bool
+
+<div class="viewcode-block" id="Date.__init__">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Date.__init__">[docs]</a>
+    def __init__(
+        self,
+        year: int | None = None,
+        month: int | None = None,
+        day: int | None = None,
+        fuzzy: bool = False,
+    ):
+        self.year = year
+        self.month = month
+        self.day = day
+        self.fuzzy = fuzzy</div>
+
+
+    @override
+    def __repr__(self) -&gt; str:
+        return &quot;&lt;%s.%s(%s, %s, %s)&gt;&quot; % (
+            self.__class__.__module__,
+            self.__class__.__name__,
+            self.year,
+            self.month,
+            self.day,
+        )
+
+    @property
+    def comparable(self) -&gt; bool:
+        &quot;&quot;&quot;
+        If this date is comparable to other dateys.
+        &quot;&quot;&quot;
+        return self.year is not None
+
+    @property
+    def complete(self) -&gt; bool:
+        &quot;&quot;&quot;
+        Whether this date is complete.
+        &quot;&quot;&quot;
+        return self.year is not None and self.month is not None and self.day is not None
+
+    @property
+    def parts(self) -&gt; tuple[int | None, int | None, int | None]:
+        &quot;&quot;&quot;
+        The date parts: a 3-tuple of the year, month, and day.
+        &quot;&quot;&quot;
+        return self.year, self.month, self.day
+
+<div class="viewcode-block" id="Date.to_range">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Date.to_range">[docs]</a>
+    def to_range(self) -&gt; DateRange:
+        &quot;&quot;&quot;
+        Convert this date to a date range.
+        &quot;&quot;&quot;
+        if not self.comparable:
+            raise ValueError(
+                &quot;Cannot convert non-comparable date %s to a date range.&quot; % self
+            )
+        if self.month is None:
+            month_start = 1
+            month_end = 12
+        else:
+            month_start = month_end = self.month
+        if self.day is None:
+            day_start = 1
+            day_end = calendar.monthrange(
+                self.year,  # type: ignore[arg-type]
+                month_end,
+            )[1]
+        else:
+            day_start = day_end = self.day
+        return DateRange(
+            Date(self.year, month_start, day_start), Date(self.year, month_end, day_end)
+        )</div>
+
+
+    def _compare(self, other: Any, comparator: Callable[[Any, Any], bool]) -&gt; bool:
+        if not isinstance(other, Date):
+            return NotImplemented
+        selfish = self
+        if not selfish.comparable or not other.comparable:
+            return NotImplemented
+        if selfish.complete and other.complete:
+            return comparator(selfish.parts, other.parts)
+        if not other.complete:
+            other = other.to_range()
+        if not selfish.complete:
+            selfish = selfish.to_range()  # type: ignore[assignment]
+        return comparator(selfish, other)
+
+    def __contains__(self, other: Any) -&gt; bool:
+        if isinstance(other, Date):
+            return self == other
+        if isinstance(other, DateRange):
+            return self in other
+        raise TypeError(
+            &quot;Expected to check a %s, but a %s was given&quot; % (type(Datey), type(other))
+        )
+
+    def __lt__(self, other: Any) -&gt; bool:
+        return self._compare(other, operator.lt)
+
+    def __le__(self, other: Any) -&gt; bool:
+        return self._compare(other, operator.le)
+
+    @override
+    def __eq__(self, other: Any) -&gt; bool:
+        if not isinstance(other, Date):
+            return NotImplemented
+        return self.parts == other.parts
+
+    def __ge__(self, other: Any) -&gt; bool:
+        return self._compare(other, operator.ge)
+
+    def __gt__(self, other: Any) -&gt; bool:
+        return self._compare(other, operator.gt)
+
+<div class="viewcode-block" id="Date.dump_linked_data">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Date.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(
+        self, app: App, schemas_org: list[str] | None = None
+    ) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        if self.year:
+            dump[&quot;year&quot;] = self.year
+        if self.month:
+            dump[&quot;month&quot;] = self.month
+        if self.day:
+            dump[&quot;day&quot;] = self.day
+        if self.comparable:
+            dump[&quot;iso8601&quot;] = _dump_date_iso8601(self)
+        return dump</div>
+
+
+<div class="viewcode-block" id="Date.datey_dump_linked_data">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Date.datey_dump_linked_data">[docs]</a>
+    async def datey_dump_linked_data(
+        self,
+        dump: DictDump[Dump],
+        start_schema_org: str,
+        end_schema_org: str,
+    ) -&gt; None:
+        &quot;&quot;&quot;
+        Dump this instance to `JSON-LD &lt;https://json-ld.org/&gt;`_ for a &#39;datey&#39; field.
+        &quot;&quot;&quot;
+        if self.comparable:
+            dump_context(dump, iso8601=(start_schema_org, end_schema_org))</div>
+
+
+<div class="viewcode-block" id="Date.linked_data_schema">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Date.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        schema[&quot;type&quot;] = &quot;object&quot;
+        schema[&quot;additionalProperties&quot;] = False
+        add_json_ld(schema)
+        add_property(schema, &quot;year&quot;, {&quot;type&quot;: &quot;number&quot;}, False)
+        add_property(schema, &quot;month&quot;, {&quot;type&quot;: &quot;number&quot;}, False)
+        add_property(schema, &quot;day&quot;, {&quot;type&quot;: &quot;number&quot;}, False)
+        add_property(
+            schema,
+            &quot;iso8601&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;pattern&quot;: &quot;^\\d\\d\\d\\d-\\d\\d-\\d\\d$&quot;,
+                &quot;description&quot;: &quot;An ISO 8601 date.&quot;,
+            },
+            False,
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="ref_date">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.ref_date">[docs]</a>
+async def ref_date(root_schema: DictDump[Dump], app: App) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the Date schema.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;date&quot; not in definitions:
+        definitions[&quot;date&quot;] = await Date.linked_data_schema(app)
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/date&quot;,
+    }</div>
+
+
+
+<div class="viewcode-block" id="DateRange">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.DateRange">[docs]</a>
+@total_ordering
+class DateRange(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A date range can describe a period of time between, before, after, or around start and/or end dates.
+    &quot;&quot;&quot;
+
+    start: Date | None
+    start_is_boundary: bool
+    end: Date | None
+    end_is_boundary: bool
+
+<div class="viewcode-block" id="DateRange.__init__">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.DateRange.__init__">[docs]</a>
+    def __init__(
+        self,
+        start: Date | None = None,
+        end: Date | None = None,
+        start_is_boundary: bool = False,
+        end_is_boundary: bool = False,
+    ):
+        self.start = start
+        self.start_is_boundary = start_is_boundary
+        self.end = end
+        self.end_is_boundary = end_is_boundary</div>
+
+
+    @override
+    def __repr__(self) -&gt; str:
+        return &quot;%s.%s(%s, %s, start_is_boundary=%s, end_is_boundary=%s)&quot; % (
+            self.__class__.__module__,
+            self.__class__.__name__,
+            repr(self.start),
+            repr(self.end),
+            repr(self.start_is_boundary),
+            repr(self.end_is_boundary),
+        )
+
+    @property
+    def comparable(self) -&gt; bool:
+        &quot;&quot;&quot;
+        If this date is comparable to other dateys.
+        &quot;&quot;&quot;
+        return (
+            self.start is not None
+            and self.start.comparable
+            or self.end is not None
+            and self.end.comparable
+        )
+
+    def __contains__(self, other: Any) -&gt; bool:
+        if not self.comparable:
+            return False
+
+        if isinstance(other, Date):
+            others = [other]
+        elif isinstance(other, DateRange):
+            if not other.comparable:
+                return False
+            others = []
+            if other.start is not None and other.start.comparable:
+                others.append(other.start)
+            if other.end is not None and other.end.comparable:
+                others.append(other.end)
+        else:
+            raise TypeError(
+                &quot;Expected to check a %s, but a %s was given&quot;
+                % (type(Datey), type(other))
+            )
+
+        if self.start is not None and self.end is not None:
+            if isinstance(other, DateRange) and (
+                other.start is None or other.end is None
+            ):
+                if other.start is None:
+                    return self.start &lt;= other.end or self.end &lt;= other.end
+                if other.end is None:
+                    return self.start &gt;= other.start or self.end &gt;= other.start
+            for another in others:
+                if self.start &lt;= another &lt;= self.end:
+                    return True
+            if isinstance(other, DateRange):
+                for selfdate in [self.start, self.end]:
+                    if other.start &lt;= selfdate &lt;= other.end:
+                        return True
+
+        elif self.start is not None:
+            # Two date ranges with start dates only always overlap.
+            if isinstance(other, DateRange) and other.end is None:
+                return True
+
+            for other in others:
+                if self.start &lt;= other:
+                    return True
+        elif self.end is not None:
+            # Two date ranges with end dates only always overlap.
+            if isinstance(other, DateRange) and other.start is None:
+                return True
+
+            for other in others:
+                if other &lt;= self.end:
+                    return True
+        return False
+
+<div class="viewcode-block" id="DateRange.dump_linked_data">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.DateRange.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(
+        self,
+        app: App,
+        start_schema_org: str | None = None,
+        end_schema_org: str | None = None,
+    ) -&gt; DictDump[Dump]:
+        dump: DictDump[Dump] = {}
+        if self.start:
+            dump[&quot;start&quot;] = await self.start.dump_linked_data(
+                app,
+                [start_schema_org] if start_schema_org else None,
+            )
+        if self.end:
+            dump[&quot;end&quot;] = await self.end.dump_linked_data(
+                app,
+                [end_schema_org] if end_schema_org else None,
+            )
+        return dump</div>
+
+
+<div class="viewcode-block" id="DateRange.linked_data_schema">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.DateRange.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        schema[&quot;type&quot;] = &quot;object&quot;
+        schema[&quot;additionalProperties&quot;] = False
+        add_property(schema, &quot;start&quot;, await ref_date(schema, app), False)
+        add_property(schema, &quot;end&quot;, await ref_date(schema, app), False)
+        return schema</div>
+
+
+<div class="viewcode-block" id="DateRange.datey_dump_linked_data">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.DateRange.datey_dump_linked_data">[docs]</a>
+    async def datey_dump_linked_data(
+        self,
+        dump: DictDump[Dump],
+        start_schema_org: str,
+        end_schema_org: str,
+    ) -&gt; None:
+        &quot;&quot;&quot;
+        Dump this instance to `JSON-LD &lt;https://json-ld.org/&gt;`_ for a &#39;datey&#39; field.
+        &quot;&quot;&quot;
+        if self.start and self.start.comparable:
+            start = dump_default(dump, &quot;start&quot;, dict)
+            dump_context(start, iso8601=start_schema_org)
+        if self.end and self.end.comparable:
+            end = dump_default(dump, &quot;end&quot;, dict)
+            dump_context(end, iso8601=end_schema_org)</div>
+
+
+    def _get_comparable_date(self, date: Date | None) -&gt; Date | None:
+        if date and date.comparable:
+            return date
+        return None
+
+    _LT_DATE_RANGE_COMPARATORS = {
+        (
+            True,
+            True,
+            True,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: self_start
+        &lt; other_start,
+        (
+            True,
+            True,
+            True,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: self_start
+        &lt;= other_start,
+        (
+            True,
+            True,
+            False,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: self_start &lt; other_end
+        or self_end &lt;= other_end,
+        (
+            True,
+            True,
+            False,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+        (
+            True,
+            False,
+            True,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: self_start
+        &lt; other_start,
+        (
+            True,
+            False,
+            True,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: self_start
+        &lt; other_start,
+        (
+            True,
+            False,
+            False,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: self_start &lt; other_end,
+        (
+            True,
+            False,
+            False,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+        (
+            False,
+            True,
+            True,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: self_end &lt;= other_start,
+        (
+            False,
+            True,
+            True,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: self_end &lt;= other_start,
+        (
+            False,
+            True,
+            False,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: self_end &lt; other_end,
+        (
+            False,
+            True,
+            False,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+        (
+            False,
+            False,
+            True,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+        (
+            False,
+            False,
+            True,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+        (
+            False,
+            False,
+            False,
+            True,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+        (
+            False,
+            False,
+            False,
+            False,
+        ): lambda self_start, self_end, other_start, other_end: NotImplemented,
+    }
+
+    _LT_DATE_COMPARATORS = {
+        (True, True): lambda self_start, self_end, other: self_start &lt; other,
+        (True, False): lambda self_start, self_end, other: self_start &lt; other,
+        (False, True): lambda self_start, self_end, other: self_end &lt;= other,
+        (False, False): lambda self_start, self_end, other: NotImplemented,
+    }
+
+    def __lt__(self, other: Any) -&gt; bool:
+        if not isinstance(other, (Date, DateRange)):
+            return NotImplemented
+
+        self_start = self._get_comparable_date(self.start)
+        self_end = self._get_comparable_date(self.end)
+        signature = (
+            self_start is not None,
+            self_end is not None,
+        )
+        if isinstance(other, DateRange):
+            other_start = self._get_comparable_date(other.start)
+            other_end = self._get_comparable_date(other.end)
+            return self._LT_DATE_RANGE_COMPARATORS[
+                (
+                    *signature,
+                    other_start is not None,
+                    other_end is not None,
+                )
+            ](self_start, self_end, other_start, other_end)
+        else:
+            return self._LT_DATE_COMPARATORS[signature](self_start, self_end, other)
+
+    @override
+    def __eq__(self, other: Any) -&gt; bool:
+        if isinstance(other, Date):
+            return False
+
+        if not isinstance(other, DateRange):
+            return NotImplemented
+        return (self.start, self.end, self.start_is_boundary, self.end_is_boundary) == (
+            other.start,
+            other.end,
+            other.start_is_boundary,
+            other.end_is_boundary,
+        )</div>
+
+
+
+<div class="viewcode-block" id="ref_date_range">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.ref_date_range">[docs]</a>
+async def ref_date_range(root_schema: DictDump[Dump], app: App) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the DateRange schema.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;dateRange&quot; not in definitions:
+        definitions[&quot;dateRange&quot;] = await DateRange.linked_data_schema(app)
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/dateRange&quot;,
+    }</div>
+
+
+
+<div class="viewcode-block" id="ref_datey">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.ref_datey">[docs]</a>
+async def ref_datey(root_schema: DictDump[Dump], app: App) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the Datey schema.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;datey&quot; not in definitions:
+        definitions[&quot;datey&quot;] = {
+            &quot;oneOf&quot;: [
+                await ref_date(root_schema, app),
+                await ref_date_range(root_schema, app),
+            ]
+        }
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/datey&quot;,
+    }</div>
+
+
+
+Datey: TypeAlias = Date | DateRange
+DatePartsFormatters: TypeAlias = Mapping[tuple[bool, bool, bool], str]
+DateFormatters: TypeAlias = Mapping[tuple[bool | None], str]
+DateRangeFormatters: TypeAlias = Mapping[
+    tuple[bool | None, bool | None, bool | None, bool | None], str
+]
+
+
+<div class="viewcode-block" id="Localizer">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer">[docs]</a>
+class Localizer:
+    &quot;&quot;&quot;
+    Provide localization functionality for a specific locale.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Localizer.__init__">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.__init__">[docs]</a>
+    def __init__(self, locale: str, translations: gettext.NullTranslations):
+        self._locale = locale
+        self._locale_data = get_data(locale)
+        self._translations = translations
+        self.__date_parts_formatters: DatePartsFormatters | None = None
+        self.__date_formatters: DateFormatters | None = None
+        self.__date_range_formatters: DateRangeFormatters | None = None</div>
+
+
+    @property
+    def locale(self) -&gt; str:
+        &quot;&quot;&quot;
+        The locale.
+        &quot;&quot;&quot;
+        return self._locale
+
+    def _(self, message: str) -&gt; str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.gettext`.
+
+        Arguments are identical to those of :py:meth:`gettext.gettext`.
+        &quot;&quot;&quot;
+        return self._translations.gettext(message)
+
+<div class="viewcode-block" id="Localizer.gettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.gettext">[docs]</a>
+    def gettext(self, message: str) -&gt; str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.gettext`.
+
+        Arguments are identical to those of :py:meth:`gettext.gettext`.
+        &quot;&quot;&quot;
+        return self._translations.gettext(message)</div>
+
+
+<div class="viewcode-block" id="Localizer.ngettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.ngettext">[docs]</a>
+    def ngettext(self, message_singular: str, message_plural: str, n: int) -&gt; str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.ngettext`.
+
+        Arguments are identical to those of :py:meth:`gettext.ngettext`.
+        &quot;&quot;&quot;
+        return self._translations.ngettext(message_singular, message_plural, n)</div>
+
+
+<div class="viewcode-block" id="Localizer.pgettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.pgettext">[docs]</a>
+    def pgettext(self, context: str, message: str) -&gt; str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.pgettext`.
+
+        Arguments are identical to those of :py:meth:`gettext.pgettext`.
+        &quot;&quot;&quot;
+        return self._translations.pgettext(context, message)</div>
+
+
+<div class="viewcode-block" id="Localizer.npgettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.npgettext">[docs]</a>
+    def npgettext(
+        self, context: str, message_singular: str, message_plural: str, n: int
+    ) -&gt; str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.npgettext`.
+
+        Arguments are identical to those of :py:meth:`gettext.npgettext`.
+        &quot;&quot;&quot;
+        return self._translations.npgettext(
+            context, message_singular, message_plural, n
+        )</div>
+
+
+    @property
+    def _date_parts_formatters(self) -&gt; DatePartsFormatters:
+        if self.__date_parts_formatters is None:
+            self.__date_parts_formatters = {
+                (True, True, True): self._(&quot;MMMM d, y&quot;),
+                (True, True, False): self._(&quot;MMMM, y&quot;),
+                (True, False, False): self._(&quot;y&quot;),
+                (False, True, True): self._(&quot;MMMM d&quot;),
+                (False, True, False): self._(&quot;MMMM&quot;),
+            }
+        return self.__date_parts_formatters
+
+    @property
+    def _date_formatters(self) -&gt; DateFormatters:
+        if self.__date_formatters is None:
+            self.__date_formatters = {
+                (True,): self._(&quot;around {date}&quot;),
+                (False,): self._(&quot;{date}&quot;),
+            }
+        return self.__date_formatters
+
+    @property
+    def _date_range_formatters(self) -&gt; DateRangeFormatters:
+        if self.__date_range_formatters is None:
+            self.__date_range_formatters = {
+                (False, False, False, False): self._(
+                    &quot;from {start_date} until {end_date}&quot;
+                ),
+                (False, False, False, True): self._(
+                    &quot;from {start_date} until sometime before {end_date}&quot;
+                ),
+                (False, False, True, False): self._(
+                    &quot;from {start_date} until around {end_date}&quot;
+                ),
+                (False, False, True, True): self._(
+                    &quot;from {start_date} until sometime before around {end_date}&quot;
+                ),
+                (False, True, False, False): self._(
+                    &quot;from sometime after {start_date} until {end_date}&quot;
+                ),
+                (False, True, False, True): self._(
+                    &quot;sometime between {start_date} and {end_date}&quot;
+                ),
+                (False, True, True, False): self._(
+                    &quot;from sometime after {start_date} until around {end_date}&quot;
+                ),
+                (False, True, True, True): self._(
+                    &quot;sometime between {start_date} and around {end_date}&quot;
+                ),
+                (True, False, False, False): self._(
+                    &quot;from around {start_date} until {end_date}&quot;
+                ),
+                (True, False, False, True): self._(
+                    &quot;from around {start_date} until sometime before {end_date}&quot;
+                ),
+                (True, False, True, False): self._(
+                    &quot;from around {start_date} until around {end_date}&quot;
+                ),
+                (True, False, True, True): self._(
+                    &quot;from around {start_date} until sometime before around {end_date}&quot;
+                ),
+                (True, True, False, False): self._(
+                    &quot;from sometime after around {start_date} until {end_date}&quot;
+                ),
+                (True, True, False, True): self._(
+                    &quot;sometime between around {start_date} and {end_date}&quot;
+                ),
+                (True, True, True, False): self._(
+                    &quot;from sometime after around {start_date} until around {end_date}&quot;
+                ),
+                (True, True, True, True): self._(
+                    &quot;sometime between around {start_date} and around {end_date}&quot;
+                ),
+                (False, False, None, None): self._(&quot;from {start_date}&quot;),
+                (False, True, None, None): self._(&quot;sometime after {start_date}&quot;),
+                (True, False, None, None): self._(&quot;from around {start_date}&quot;),
+                (True, True, None, None): self._(&quot;sometime after around {start_date}&quot;),
+                (None, None, False, False): self._(&quot;until {end_date}&quot;),
+                (None, None, False, True): self._(&quot;sometime before {end_date}&quot;),
+                (None, None, True, False): self._(&quot;until around {end_date}&quot;),
+                (None, None, True, True): self._(&quot;sometime before around {end_date}&quot;),
+            }
+        return self.__date_range_formatters
+
+<div class="viewcode-block" id="Localizer.format_datey">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.format_datey">[docs]</a>
+    def format_datey(self, date: Datey) -&gt; str:
+        &quot;&quot;&quot;
+        Format a datey value into a human-readable string.
+        &quot;&quot;&quot;
+        if isinstance(date, Date):
+            return self.format_date(date)
+        return self.format_date_range(date)</div>
+
+
+<div class="viewcode-block" id="Localizer.format_date">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.format_date">[docs]</a>
+    def format_date(self, date: Date) -&gt; str:
+        &quot;&quot;&quot;
+        Format a date to a human-readable string.
+        &quot;&quot;&quot;
+        try:
+            return self._date_formatters[(date.fuzzy,)].format(
+                date=self._format_date_parts(date),
+            )
+        except IncompleteDateError:
+            return self._(&quot;unknown date&quot;)</div>
+
+
+    def _format_date_parts(self, date: Date | None) -&gt; str:
+        if date is None:
+            raise IncompleteDateError(&quot;This date is None.&quot;)
+        try:
+            date_parts_format = self._date_parts_formatters[
+                tuple(
+                    (x is not None for x in date.parts),  # type: ignore[index]
+                )
+            ]
+        except KeyError:
+            raise IncompleteDateError(
+                &quot;This date does not have enough parts to be rendered.&quot;
+            ) from None
+        parts = (1 if x is None else x for x in date.parts)
+        return dates.format_date(
+            datetime.date(*parts), date_parts_format, self._locale_data
+        )
+
+<div class="viewcode-block" id="Localizer.format_date_range">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.format_date_range">[docs]</a>
+    def format_date_range(self, date_range: DateRange) -&gt; str:
+        &quot;&quot;&quot;
+        Format a date range to a human-readable string.
+        &quot;&quot;&quot;
+        formatter_configuration: tuple[
+            bool | None, bool | None, bool | None, bool | None
+        ] = (None, None, None, None)
+        formatter_arguments = {}
+
+        with suppress(IncompleteDateError):
+            formatter_arguments[&quot;start_date&quot;] = self._format_date_parts(
+                date_range.start
+            )
+            formatter_configuration = (
+                None if date_range.start is None else date_range.start.fuzzy,
+                date_range.start_is_boundary,
+                formatter_configuration[2],
+                formatter_configuration[3],
+            )
+
+        with suppress(IncompleteDateError):
+            formatter_arguments[&quot;end_date&quot;] = self._format_date_parts(date_range.end)
+            formatter_configuration = (
+                formatter_configuration[0],
+                formatter_configuration[1],
+                None if date_range.end is None else date_range.end.fuzzy,
+                date_range.end_is_boundary,
+            )
+
+        if not formatter_arguments:
+            raise IncompleteDateError(
+                &quot;This date range does not have enough parts to be rendered.&quot;
+            )
+
+        return self._date_range_formatters[formatter_configuration].format(
+            **formatter_arguments
+        )</div>
+
+
+<div class="viewcode-block" id="Localizer.format_datetime_datetime">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizer.format_datetime_datetime">[docs]</a>
+    def format_datetime_datetime(self, datetime_datetime: datetime.datetime) -&gt; str:
+        &quot;&quot;&quot;
+        Format a datetime date to a human-readable string.
+        &quot;&quot;&quot;
+        return format_date(
+            datetime_datetime, &quot;long&quot;, locale=to_babel_identifier(self.locale)
+        )</div>
+</div>
+
+
+
+DEFAULT_LOCALIZER = Localizer(DEFAULT_LOCALE, gettext.NullTranslations())
+
+
+<div class="viewcode-block" id="LocalizerRepository">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocalizerRepository">[docs]</a>
+class LocalizerRepository:
+    &quot;&quot;&quot;
+    Exposes the available localizers.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="LocalizerRepository.__init__">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocalizerRepository.__init__">[docs]</a>
+    def __init__(self, assets: FileSystem):
+        self._assets = assets
+        self._localizers: dict[str, Localizer] = {}
+        self._locks: Mapping[str, _Lock] = defaultdict(AsynchronizedLock.threading)
+        self._locales: set[str] | None = None</div>
+
+
+    @property
+    def locales(self) -&gt; Iterator[str]:
+        &quot;&quot;&quot;
+        The available locales.
+        &quot;&quot;&quot;
+        if self._locales is None:
+            self._locales = set()
+            self._locales.add(DEFAULT_LOCALE)
+            for assets_directory_path, __ in reversed(self._assets.paths):
+                for po_file_path in assets_directory_path.glob(&quot;locale/*/betty.po&quot;):
+                    self._locales.add(po_file_path.parent.name)
+        yield from self._locales
+
+<div class="viewcode-block" id="LocalizerRepository.get">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocalizerRepository.get">[docs]</a>
+    async def get(self, locale: Localey) -&gt; Localizer:
+        &quot;&quot;&quot;
+        Get the localizer for the given locale.
+        &quot;&quot;&quot;
+        locale = to_locale(locale)
+        async with self._locks[locale]:
+            try:
+                return self._localizers[locale]
+            except KeyError:
+                return await self._build_translation(locale)</div>
+
+
+    @deprecated(
+        &quot;This method is deprecated as of Betty 0.3.4, and will be removed in Betty 0.4.x. Instead, use `LocalizerRepository.get()`.&quot;
+    )
+    def __getitem__(self, locale: Localey) -&gt; Localizer:
+        return wait_to_thread(self.get(locale))
+
+<div class="viewcode-block" id="LocalizerRepository.get_negotiated">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocalizerRepository.get_negotiated">[docs]</a>
+    async def get_negotiated(self, *preferred_locales: str) -&gt; Localizer:
+        &quot;&quot;&quot;
+        Get the best matching available locale for the given preferred locales.
+        &quot;&quot;&quot;
+        preferred_locales = (*preferred_locales, DEFAULT_LOCALE)
+        negotiated_locale = negotiate_locale(
+            preferred_locales,
+            [str(get_data(locale)) for locale in self.locales],
+        )
+        return await self.get(negotiated_locale or DEFAULT_LOCALE)</div>
+
+
+    async def _build_translation(self, locale: str) -&gt; Localizer:
+        translations = gettext.NullTranslations()
+        for assets_directory_path, __ in reversed(self._assets.paths):
+            opened_translations = await self._open_translations(
+                locale, assets_directory_path
+            )
+            if opened_translations:
+                opened_translations.add_fallback(translations)
+                translations = opened_translations
+        self._localizers[locale] = Localizer(locale, translations)
+        return self._localizers[locale]
+
+    async def _open_translations(
+        self, locale: str, assets_directory_path: Path
+    ) -&gt; gettext.GNUTranslations | None:
+        po_file_path = assets_directory_path / &quot;locale&quot; / locale / &quot;betty.po&quot;
+        try:
+            translation_version = await hashid_file_meta(po_file_path)
+        except FileNotFoundError:
+            return None
+        cache_directory_path = fs.CACHE_DIRECTORY_PATH / &quot;locale&quot; / translation_version
+        mo_file_path = cache_directory_path / &quot;betty.mo&quot;
+
+        with suppress(FileNotFoundError), open(mo_file_path, &quot;rb&quot;) as f:
+            return gettext.GNUTranslations(f)
+
+        cache_directory_path.mkdir(exist_ok=True, parents=True)
+
+        await run_babel(
+            &quot;&quot;,
+            &quot;compile&quot;,
+            &quot;-i&quot;,
+            str(po_file_path),
+            &quot;-o&quot;,
+            str(mo_file_path),
+            &quot;-l&quot;,
+            str(get_data(locale)),
+            &quot;-D&quot;,
+            &quot;betty&quot;,
+        )
+        with open(mo_file_path, &quot;rb&quot;) as f:
+            return gettext.GNUTranslations(f)
+
+<div class="viewcode-block" id="LocalizerRepository.coverage">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.LocalizerRepository.coverage">[docs]</a>
+    async def coverage(self, locale: Localey) -&gt; tuple[int, int]:
+        &quot;&quot;&quot;
+        Get the translation coverage for the given locale.
+
+        :return: A 2-tuple of the number of available translations and the
+            number of translatable source strings.
+        &quot;&quot;&quot;
+        translatables = {
+            translatable async for translatable in self._get_translatables()
+        }
+        locale = to_locale(locale)
+        if locale == DEFAULT_LOCALE:
+            return len(translatables), len(translatables)
+        translations = {
+            translation async for translation in self._get_translations(locale)
+        }
+        return len(translations), len(translatables)</div>
+
+
+    async def _get_translatables(self) -&gt; AsyncIterator[str]:
+        for assets_directory_path, __ in self._assets.paths:
+            with suppress(FileNotFoundError):
+                async with aiofiles.open(
+                    assets_directory_path / &quot;betty.pot&quot;
+                ) as pot_data_f:
+                    pot_data = await pot_data_f.read()
+                    for entry in pofile(pot_data):
+                        yield entry.msgid_with_context
+
+    async def _get_translations(self, locale: str) -&gt; AsyncIterator[str]:
+        for assets_directory_path, __ in reversed(self._assets.paths):
+            with suppress(FileNotFoundError):
+                async with aiofiles.open(
+                    assets_directory_path / &quot;locale&quot; / locale / &quot;betty.po&quot;,
+                    encoding=&quot;utf-8&quot;,
+                ) as p_data_f:
+                    po_data = await p_data_f.read()
+                    for entry in pofile(po_data):
+                        if entry.translated():
+                            yield entry.msgid_with_context</div>
+
+
+
+<div class="viewcode-block" id="Localizable">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizable">[docs]</a>
+class Localizable:
+    &quot;&quot;&quot;
+    A localizable object.
+
+    Objects of this type can convert themselves to localized strings at the point of use.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Localizable.localize">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Localizable.localize">[docs]</a>
+    def localize(self, localizer: Localizer) -&gt; str:
+        &quot;&quot;&quot;
+        Localize ``self`` to a human-readable string.
+        &quot;&quot;&quot;
+        raise NotImplementedError</div>
+
+
+    @override
+    def __str__(self) -&gt; str:
+        localized = self.localize(DEFAULT_LOCALIZER)
+        warn(
+            f&#39;{type(self)} (&quot;{localized}&quot;) SHOULD NOT be cast to a string. Instead, call {type(self)}.localize() to ensure it is always formatted in the desired locale.&#39;,
+            stacklevel=2,
+        )
+        return localized</div>
+
+
+
+<div class="viewcode-block" id="Str">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str">[docs]</a>
+class Str(Localizable):
+    &quot;&quot;&quot;
+    Create new localizable strings.
+    &quot;&quot;&quot;
+
+    def _localize_format_kwargs(
+        self, localizer: Localizer, **format_kwargs: str | Localizable
+    ) -&gt; dict[str, str]:
+        return {
+            key: value.localize(localizer) if isinstance(value, Localizable) else value
+            for key, value in format_kwargs.items()
+        }
+
+<div class="viewcode-block" id="Str.plain">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str.plain">[docs]</a>
+    @classmethod
+    def plain(cls, plain: Any, **format_kwargs: str | Localizable) -&gt; Str:
+        &quot;&quot;&quot;
+        Create a new localizable that outputs the given plain text string.
+
+        Keyword arguments are identical to those of :py:met:`str.format`, except that
+        any :py:class:`betty.locale.Localizable` will be localized before string
+        formatting.
+        &quot;&quot;&quot;
+        return _PlainStr(str(plain), **format_kwargs)</div>
+
+
+<div class="viewcode-block" id="Str.call">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str.call">[docs]</a>
+    @classmethod
+    def call(cls, call: Callable[[Localizer], str]) -&gt; Str:
+        &quot;&quot;&quot;
+        Create a new localizable that outputs the callable&#39;s return value.
+        &quot;&quot;&quot;
+        return _CallStr(call)</div>
+
+
+    @classmethod
+    def _(cls, message: str, **format_kwargs: str | Localizable) -&gt; Str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.gettext`.
+
+        Positional arguments are identical to those of :py:meth:`gettext.gettext`.
+        Keyword arguments are identical to those of :py:met:`str.format`, except that
+        any :py:class:`betty.locale.Localizable` will be localized before string
+        formatting.
+        &quot;&quot;&quot;
+        return cls.gettext(message, **format_kwargs)
+
+<div class="viewcode-block" id="Str.gettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str.gettext">[docs]</a>
+    @classmethod
+    def gettext(cls, message: str, **format_kwargs: str | Localizable) -&gt; Str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.gettext`.
+
+        Positional arguments are identical to those of :py:meth:`gettext.gettext`.
+        Keyword arguments are identical to those of :py:met:`str.format`, except that
+        any :py:class:`betty.locale.Localizable` will be localized before string
+        formatting.
+        &quot;&quot;&quot;
+        return _GettextStr(&quot;gettext&quot;, message, **format_kwargs)</div>
+
+
+<div class="viewcode-block" id="Str.ngettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str.ngettext">[docs]</a>
+    @classmethod
+    def ngettext(
+        cls,
+        message_singular: str,
+        message_plural: str,
+        n: int,
+        **format_kwargs: str | Localizable,
+    ) -&gt; Str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.ngettext`.
+
+        Positional arguments are identical to those of :py:meth:`gettext.ngettext`.
+        Keyword arguments are identical to those of :py:met:`str.format`, except that
+        any :py:class:`betty.locale.Localizable` will be localized before string
+        formatting.
+        &quot;&quot;&quot;
+        return _GettextStr(
+            &quot;ngettext&quot;, message_singular, message_plural, n, **format_kwargs
+        )</div>
+
+
+<div class="viewcode-block" id="Str.pgettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str.pgettext">[docs]</a>
+    @classmethod
+    def pgettext(
+        cls, context: str, message: str, **format_kwargs: str | Localizable
+    ) -&gt; Str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.pgettext`.
+
+        Positional arguments are identical to those of :py:meth:`gettext.pgettext`.
+        Keyword arguments are identical to those of :py:met:`str.format`, except that
+        any :py:class:`betty.locale.Localizable` will be localized before string
+        formatting.
+        &quot;&quot;&quot;
+        return _GettextStr(&quot;pgettext&quot;, context, message, **format_kwargs)</div>
+
+
+<div class="viewcode-block" id="Str.npgettext">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.Str.npgettext">[docs]</a>
+    @classmethod
+    def npgettext(
+        cls,
+        context: str,
+        message_singular: str,
+        message_plural: str,
+        n: int,
+        **format_kwargs: str | Localizable,
+    ) -&gt; Str:
+        &quot;&quot;&quot;
+        Like :py:meth:`gettext.npgettext`.
+
+        Positional arguments are identical to those of :py:meth:`gettext.npgettext`.
+        Keyword arguments are identical to those of :py:met:`str.format`, except that
+        any :py:class:`betty.locale.Localizable` will be localized before string
+        formatting.
+        &quot;&quot;&quot;
+        return _GettextStr(
+            &quot;npgettext&quot;, context, message_singular, message_plural, n, **format_kwargs
+        )</div>
+</div>
+
+
+
+class _PlainStr(Str):
+    def __init__(self, plain: str, **format_kwargs: str | Localizable):
+        self._plain = plain
+        self._format_kwargs = format_kwargs
+
+    @override
+    def localize(self, localizer: Localizer) -&gt; str:
+        return self._plain.format(
+            **self._localize_format_kwargs(localizer, **self._format_kwargs)
+        )
+
+
+class _CallStr(Str):
+    def __init__(self, call: Callable[[Localizer], str]):
+        self._call = call
+
+    @override
+    def localize(self, localizer: Localizer) -&gt; str:
+        return self._call(localizer)
+
+
+class _GettextStr(Str):
+    def __init__(
+        self,
+        gettext_method_name: str,
+        *gettext_args: Any,
+        **format_kwargs: str | Localizable,
+    ) -&gt; None:
+        self._gettext_method_name = gettext_method_name
+        self._gettext_args = gettext_args
+        self._format_kwargs = format_kwargs
+
+    @override
+    def localize(self, localizer: Localizer) -&gt; str:
+        return cast(
+            str, getattr(localizer, self._gettext_method_name)(*self._gettext_args)
+        ).format(**self._localize_format_kwargs(localizer, **self._format_kwargs))
+
+
+<div class="viewcode-block" id="negotiate_locale">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.negotiate_locale">[docs]</a>
+def negotiate_locale(
+    preferred_locales: Localey | Sequence[Localey], available_locales: Sequence[Localey]
+) -&gt; Locale | None:
+    &quot;&quot;&quot;
+    Negotiate the preferred locale from a sequence.
+    &quot;&quot;&quot;
+    if isinstance(preferred_locales, (str, Locale)):
+        preferred_locales = [preferred_locales]
+    return _negotiate_locale(
+        [to_babel_identifier(locale) for locale in preferred_locales],
+        {to_babel_identifier(locale) for locale in available_locales},
+        False,
+    )</div>
+
+
+
+def _negotiate_locale(
+    preferred_locale_babel_identifiers: Sequence[str],
+    available_locale_babel_identifiers: set[str],
+    root: bool,
+) -&gt; Locale | None:
+    negotiated_locale = babel.negotiate_locale(
+        preferred_locale_babel_identifiers, available_locale_babel_identifiers
+    )
+    if negotiated_locale is not None:
+        return Locale.parse(negotiated_locale)
+    if not root:
+        return _negotiate_locale(
+            [
+                (
+                    babel_identifier.split(&quot;_&quot;)[0]
+                    if &quot;_&quot; in babel_identifier
+                    else babel_identifier
+                )
+                for babel_identifier in preferred_locale_babel_identifiers
+            ],
+            available_locale_babel_identifiers,
+            True,
+        )
+    return None
+
+
+<div class="viewcode-block" id="negotiate_localizeds">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.negotiate_localizeds">[docs]</a>
+def negotiate_localizeds(
+    preferred_locales: Localey | Sequence[Localey], localizeds: Sequence[Localized]
+) -&gt; Localized | None:
+    &quot;&quot;&quot;
+    Negotiate the preferred localized value from a sequence.
+    &quot;&quot;&quot;
+    negotiated_locale_data = negotiate_locale(
+        preferred_locales,
+        [localized.locale for localized in localizeds if localized.locale is not None],
+    )
+    if negotiated_locale_data is not None:
+        negotiated_locale = to_locale(negotiated_locale_data)
+        for localized in localizeds:
+            if localized.locale == negotiated_locale:
+                return localized
+    for localized in localizeds:
+        if localized.locale is None:
+            return localized
+    with suppress(IndexError):
+        return localizeds[0]
+    return None</div>
+
+
+
+def _run_babel(*args: str) -&gt; None:
+    with redirect_stderr(StringIO()):
+        CommandLineInterface().run(list(args))
+
+
+<div class="viewcode-block" id="run_babel">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.run_babel">[docs]</a>
+async def run_babel(*args: str) -&gt; None:
+    &quot;&quot;&quot;
+    Run a Babel Command Line Interface (CLI) command.
+    &quot;&quot;&quot;
+    await to_thread(_run_babel, *args)</div>
+
+
+
+<div class="viewcode-block" id="init_translation">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.init_translation">[docs]</a>
+async def init_translation(locale: str) -&gt; None:
+    &quot;&quot;&quot;
+    Initialize a new translation.
+    &quot;&quot;&quot;
+    po_file_path = _LOCALE_DIRECTORY_PATH / locale / &quot;betty.po&quot;
+    with redirect_stdout(StringIO()):
+        if await exists(po_file_path):
+            logging.getLogger(__name__).info(
+                f&quot;Translations for {locale} already exist at {po_file_path}.&quot;
+            )
+            return
+
+        locale_data = get_data(locale)
+        await run_babel(
+            &quot;&quot;,
+            &quot;init&quot;,
+            &quot;--no-wrap&quot;,
+            &quot;-i&quot;,
+            str(fs.ASSETS_DIRECTORY_PATH / &quot;betty.pot&quot;),
+            &quot;-o&quot;,
+            str(po_file_path),
+            &quot;-l&quot;,
+            str(locale_data),
+            &quot;-D&quot;,
+            &quot;betty&quot;,
+        )
+        logging.getLogger(__name__).info(
+            f&quot;Translations for {locale} initialized at {po_file_path}.&quot;
+        )</div>
+
+
+
+<div class="viewcode-block" id="update_translations">
+<a class="viewcode-back" href="../../../betty.locale/#betty.locale.update_translations">[docs]</a>
+async def update_translations(
+    _output_assets_directory_path: Path = fs.ASSETS_DIRECTORY_PATH,
+) -&gt; None:
+    &quot;&quot;&quot;
+    Update all existing translations based on changes in translatable strings.
+    &quot;&quot;&quot;
+    source_directory_path = ROOT_DIRECTORY_PATH / &quot;betty&quot;
+    test_directory_path = source_directory_path / &quot;tests&quot;
+    source_paths = [
+        path
+        for path in source_directory_path.rglob(&quot;*&quot;)
+        # Remove the tests directory from the extraction, or we&#39;ll
+        # be seeing some unusual additions to the translations.
+        if test_directory_path not in path.parents and path.suffix in (&quot;.j2&quot;, &quot;.py&quot;)
+    ]
+    pot_file_path = _output_assets_directory_path / &quot;betty.pot&quot;
+    await run_babel(
+        &quot;&quot;,
+        &quot;extract&quot;,
+        &quot;--no-location&quot;,
+        &quot;--no-wrap&quot;,
+        &quot;--sort-output&quot;,
+        &quot;-F&quot;,
+        &quot;babel.ini&quot;,
+        &quot;-o&quot;,
+        str(pot_file_path),
+        &quot;--project&quot;,
+        &quot;Betty&quot;,
+        &quot;--copyright-holder&quot;,
+        &quot;Bart Feenstra &amp; contributors&quot;,
+        *(str(ROOT_DIRECTORY_PATH / source_path) for source_path in source_paths),
+    )
+    for input_po_file_path in Path(ASSETS_DIRECTORY_PATH).glob(&quot;locale/*/betty.po&quot;):
+        # During production, the input and output paths are identical. During testing,
+        # _output_assets_directory_path provides an alternative output, so the changes
+        # to the translations can be tested in isolation.
+        output_po_file_path = (
+            _output_assets_directory_path
+            / input_po_file_path.relative_to(ASSETS_DIRECTORY_PATH)
+        ).resolve()
+        await makedirs(output_po_file_path.parent, exist_ok=True)
+        output_po_file_path.touch()
+
+        locale = output_po_file_path.parent.name
+        locale_data = get_data(locale)
+        await run_babel(
+            &quot;&quot;,
+            &quot;update&quot;,
+            &quot;-i&quot;,
+            str(pot_file_path),
+            &quot;-o&quot;,
+            str(output_po_file_path),
+            &quot;-l&quot;,
+            str(locale_data),
+            &quot;-D&quot;,
+            &quot;betty&quot;,
+        )</div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Bart Feenstra and contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=ec77855a"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

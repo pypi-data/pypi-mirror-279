@@ -1,0 +1,835 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="author" title="About these documents" href="../../../../about/" /><link rel="index" title="Index" href="../../../../genindex/" /><link rel="search" title="Search" href="../../../../search/" />
+
+    <link rel="shortcut icon" href="../../../../_static/betty.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>betty.gui.app - Betty development documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../../"><div class="brand">Betty development documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../../_static/betty-32x32.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Betty development documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../installation/">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/desktop/">Installation of the Betty Desktop application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/pip/">Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/source/">Installation from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/ancestry/">Ancestry</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Ancestry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/citation/">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/date/">Dates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/enclosure/">Enclosure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event/">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event-type/">Event Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/file/">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/link/">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/media-type/">Media Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/note/">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person/">Person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person-name/">Person Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place/">Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place-name/">Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence/">Presence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence-role/">Presence Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/privacy/">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/source/">Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/assets/">Asset Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/cli/">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/configuration/">Application configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/env/">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/extension/">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/cotton_candy/">The <em>Cotton Candy</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/deriver/">The <em>Deriver</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/gramps/">The <em>Gramps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/http_api_doc/">The <em>HTTP API Documentation</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/maps/">The <em>Maps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/nginx/">The <em>nginx</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/privatizer/">The <em>Privatizer</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/trees/">The <em>Trees</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/wikipedia/">The <em>Wikipedia</em> extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/gedcom/">GEDCOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/npm/">npm</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/project/">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Projects</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/project/configuration/">Project configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/templating/">Templating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Templating</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/globals/">Globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/tests/">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/translation/">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../development/">Development</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Development</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/extension/">Developing a Betty extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/translation/">Working on Betty’s translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/test/">Testing Betty’s source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../py-modindex/">API Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../about/">About</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of About</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contributing/">Contributing to Betty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/license/">Copyright &amp; license</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for betty.gui.app</h1><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;
+Provide the desktop application/Graphical User Interface.
+&quot;&quot;&quot;
+
+import webbrowser
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urlencode
+
+from PyQt6.QtCore import Qt, QCoreApplication, QObject
+from PyQt6.QtGui import QAction
+from PyQt6.QtWidgets import (
+    QFormLayout,
+    QWidget,
+    QVBoxLayout,
+    QHBoxLayout,
+    QFileDialog,
+    QPushButton,
+)
+from typing_extensions import override
+
+from betty import about
+from betty.about import report
+from betty.app import App
+from betty.asyncio import wait_to_thread
+from betty.gui import get_configuration_file_filter
+from betty.gui.error import ExceptionCatcher
+from betty.gui.locale import TranslationsLocaleCollector
+from betty.gui.serve import ServeDemoWindow, ServeDocsWindow
+from betty.gui.text import Text
+from betty.gui.window import BettyMainWindow
+from betty.locale import Str, Localizable
+from betty.project import ProjectConfiguration
+
+
+<div class="viewcode-block" id="BettyPrimaryWindow">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow">[docs]</a>
+class BettyPrimaryWindow(BettyMainWindow):
+    &quot;&quot;&quot;
+    A primary, top-level, independent application window.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="BettyPrimaryWindow.__init__">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.__init__">[docs]</a>
+    def __init__(
+        self,
+        app: App,
+        /,
+    ):
+        super().__init__(app)
+
+        menu_bar = self.menuBar()
+        assert menu_bar is not None
+
+        betty_menu = menu_bar.addMenu(&quot;&amp;Betty&quot;)
+        assert betty_menu is not None
+        self.betty_menu = betty_menu
+
+        self.new_project_action = QAction(self)
+        self.new_project_action.setShortcut(&quot;Ctrl+N&quot;)
+        self.new_project_action.triggered.connect(
+            lambda _: self.new_project(),
+        )
+        betty_menu.addAction(self.new_project_action)
+
+        self.open_project_action = QAction(self)
+        self.open_project_action.setShortcut(&quot;Ctrl+O&quot;)
+        self.open_project_action.triggered.connect(
+            lambda _: self.open_project(),
+        )
+        betty_menu.addAction(self.open_project_action)
+
+        self._demo_action = QAction(self)
+        self._demo_action.triggered.connect(
+            lambda _: self._demo(),
+        )
+        betty_menu.addAction(self._demo_action)
+
+        self.open_application_configuration_action = QAction(self)
+        self.open_application_configuration_action.triggered.connect(
+            lambda _: self.open_application_configuration(),
+        )
+        betty_menu.addAction(self.open_application_configuration_action)
+
+        self.clear_caches_action = QAction(self)
+        self.clear_caches_action.triggered.connect(
+            lambda _: self.clear_caches(),
+        )
+        betty_menu.addAction(self.clear_caches_action)
+
+        self.exit_action = QAction(self)
+        self.exit_action.setShortcut(&quot;Ctrl+Q&quot;)
+        self.exit_action.triggered.connect(QCoreApplication.quit)
+        betty_menu.addAction(self.exit_action)
+
+        help_menu = menu_bar.addMenu(&quot;&quot;)
+        assert help_menu is not None
+        self.help_menu = help_menu
+
+        self.report_bug_action = QAction(self)
+        self.report_bug_action.triggered.connect(
+            lambda _: self.report_bug(),
+        )
+        help_menu.addAction(self.report_bug_action)
+
+        self.request_feature_action = QAction(self)
+        self.request_feature_action.triggered.connect(
+            lambda _: self.request_feature(),
+        )
+        help_menu.addAction(self.request_feature_action)
+
+        self._docs_action = QAction(self)
+        self._docs_action.triggered.connect(
+            lambda _: self._docs(),
+        )
+        help_menu.addAction(self._docs_action)
+
+        self.about_action = QAction(self)
+        self.about_action.triggered.connect(
+            lambda _: self._about_betty(),
+        )
+        help_menu.addAction(self.about_action)</div>
+
+
+    @override
+    @property
+    def window_title(self) -&gt; Localizable:
+        return Str.plain(&quot;Betty&quot;)
+
+    @override
+    def _set_translatables(self) -&gt; None:
+        super()._set_translatables()
+        self.new_project_action.setText(self._app.localizer._(&quot;New project...&quot;))
+        self.open_project_action.setText(self._app.localizer._(&quot;Open project...&quot;))
+        self._demo_action.setText(self._app.localizer._(&quot;View demo site...&quot;))
+        self.open_application_configuration_action.setText(
+            self._app.localizer._(&quot;Settings...&quot;)
+        )
+        self.clear_caches_action.setText(self._app.localizer._(&quot;Clear all caches&quot;))
+        self.exit_action.setText(self._app.localizer._(&quot;Exit&quot;))
+        self.help_menu.setTitle(&quot;&amp;&quot; + self._app.localizer._(&quot;Help&quot;))
+        self.report_bug_action.setText(self._app.localizer._(&quot;Report a bug&quot;))
+        self.request_feature_action.setText(
+            self._app.localizer._(&quot;Request a new feature&quot;)
+        )
+        self._docs_action.setText(self._app.localizer._(&quot;View documentation&quot;))
+        self.about_action.setText(self._app.localizer._(&quot;About Betty&quot;))
+
+<div class="viewcode-block" id="BettyPrimaryWindow.report_bug">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.report_bug">[docs]</a>
+    def report_bug(self) -&gt; None:
+        &quot;&quot;&quot;
+        Open the web page where users can report bugs.
+        &quot;&quot;&quot;
+        with ExceptionCatcher(self):
+            body = f&quot;&quot;&quot;
+## Summary
+
+## Steps to reproduce
+
+## Expected behavior
+
+## System report
+```
+{report()}
+```
+&quot;&quot;&quot;.strip()
+            webbrowser.open_new_tab(
+                &quot;https://github.com/bartfeenstra/betty/issues/new?&quot;
+                + urlencode(
+                    {
+                        &quot;body&quot;: body,
+                        &quot;labels&quot;: &quot;bug&quot;,
+                    }
+                )
+            )</div>
+
+
+<div class="viewcode-block" id="BettyPrimaryWindow.request_feature">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.request_feature">[docs]</a>
+    def request_feature(self) -&gt; None:
+        &quot;&quot;&quot;
+        Open the web page where users can request new features.
+        &quot;&quot;&quot;
+        with ExceptionCatcher(self):
+            body = &quot;&quot;&quot;
+## Summary
+
+## Expected behavior
+
+&quot;&quot;&quot;.strip()
+            webbrowser.open_new_tab(
+                &quot;https://github.com/bartfeenstra/betty/issues/new?&quot;
+                + urlencode(
+                    {
+                        &quot;body&quot;: body,
+                        &quot;labels&quot;: &quot;enhancement&quot;,
+                    }
+                )
+            )</div>
+
+
+    def _docs(self) -&gt; None:
+        with ExceptionCatcher(self):
+            serve_window = ServeDocsWindow(self._app, parent=self)
+            serve_window.show()
+
+    def _about_betty(self) -&gt; None:
+        with ExceptionCatcher(self):
+            about_window = _AboutBettyWindow(self._app, parent=self)
+            about_window.show()
+
+<div class="viewcode-block" id="BettyPrimaryWindow.open_project">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.open_project">[docs]</a>
+    def open_project(self) -&gt; None:
+        &quot;&quot;&quot;
+        Open a project window.
+        &quot;&quot;&quot;
+        with ExceptionCatcher(self):
+            from betty.gui.project import ProjectWindow
+
+            configuration_file_path_str, __ = QFileDialog.getOpenFileName(
+                self,
+                self._app.localizer._(&quot;Open your project from...&quot;),
+                &quot;&quot;,
+                get_configuration_file_filter().localize(self._app.localizer),
+            )
+            if not configuration_file_path_str:
+                return
+            wait_to_thread(
+                self._app.project.configuration.read(Path(configuration_file_path_str))
+            )
+            project_window = ProjectWindow(self._app)
+            project_window.show()
+            self.close()</div>
+
+
+<div class="viewcode-block" id="BettyPrimaryWindow.new_project">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.new_project">[docs]</a>
+    def new_project(self) -&gt; None:
+        &quot;&quot;&quot;
+        Open a window for a new project.
+        &quot;&quot;&quot;
+        with ExceptionCatcher(self):
+            from betty.gui.project import ProjectWindow
+
+            configuration_file_path_str, __ = QFileDialog.getSaveFileName(
+                self,
+                self._app.localizer._(&quot;Save your new project to...&quot;),
+                &quot;&quot;,
+                get_configuration_file_filter().localize(self._app.localizer),
+            )
+            if not configuration_file_path_str:
+                return
+            configuration = ProjectConfiguration()
+            wait_to_thread(configuration.write(Path(configuration_file_path_str)))
+            project_window = ProjectWindow(self._app)
+            project_window.show()
+            self.close()</div>
+
+
+    def _demo(self) -&gt; None:
+        with ExceptionCatcher(self):
+            serve_window = ServeDemoWindow(self._app, parent=self)
+            serve_window.show()
+
+<div class="viewcode-block" id="BettyPrimaryWindow.clear_caches">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.clear_caches">[docs]</a>
+    def clear_caches(self) -&gt; None:
+        &quot;&quot;&quot;
+        Clear Betty&#39;s caches.
+        &quot;&quot;&quot;
+        wait_to_thread(self._clear_caches())</div>
+
+
+    async def _clear_caches(self) -&gt; None:
+        async with ExceptionCatcher(self):
+            await self._app.cache.clear()
+
+<div class="viewcode-block" id="BettyPrimaryWindow.open_application_configuration">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.BettyPrimaryWindow.open_application_configuration">[docs]</a>
+    def open_application_configuration(self) -&gt; None:
+        &quot;&quot;&quot;
+        Open the Betty application configuration window.
+        &quot;&quot;&quot;
+        with ExceptionCatcher(self):
+            window = ApplicationConfiguration(self._app, parent=self)
+            window.show()</div>
+</div>
+
+
+
+class _WelcomeText(Text):
+    pass
+
+
+class _WelcomeTitle(_WelcomeText):
+    pass
+
+
+class _WelcomeHeading(_WelcomeText):
+    pass
+
+
+class _WelcomeAction(QPushButton):
+    pass
+
+
+<div class="viewcode-block" id="WelcomeWindow">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.WelcomeWindow">[docs]</a>
+class WelcomeWindow(BettyPrimaryWindow):
+    &quot;&quot;&quot;
+    The window to show when launching the Betty Graphical User Interface.
+    &quot;&quot;&quot;
+
+    # Allow the window to be as narrow as it can be.
+    window_width = 1
+    # This is a best guess at the minimum required height, because if we set this to 1, like the width, some of the
+    # text will be clipped.
+    window_height = 600
+
+<div class="viewcode-block" id="WelcomeWindow.__init__">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.WelcomeWindow.__init__">[docs]</a>
+    def __init__(
+        self,
+        app: App,
+    ):
+        super().__init__(app)
+
+        central_layout = QVBoxLayout()
+        central_layout.addStretch()
+        central_widget = QWidget()
+        central_widget.setLayout(central_layout)
+        self.setCentralWidget(central_widget)
+
+        self._welcome = _WelcomeTitle()
+        self._welcome.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        central_layout.addWidget(self._welcome)
+
+        self._welcome_caption = _WelcomeText()
+        central_layout.addWidget(self._welcome_caption)
+
+        self._project_instruction = _WelcomeHeading()
+        self._project_instruction.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        central_layout.addWidget(self._project_instruction)
+
+        project_layout = QHBoxLayout()
+        central_layout.addLayout(project_layout)
+
+        self.open_project_button = _WelcomeAction(self)
+        self.open_project_button.released.connect(self.open_project)
+        project_layout.addWidget(self.open_project_button)
+
+        self.new_project_button = _WelcomeAction(self)
+        self.new_project_button.released.connect(self.new_project)
+        project_layout.addWidget(self.new_project_button)
+
+        self._demo_instruction = _WelcomeHeading()
+        self._demo_instruction.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        central_layout.addWidget(self._demo_instruction)
+
+        self.demo_button = _WelcomeAction(self)
+        self.demo_button.released.connect(self._demo)
+        central_layout.addWidget(self.demo_button)</div>
+
+
+    @override
+    def _set_translatables(self) -&gt; None:
+        super()._set_translatables()
+        self._welcome.setText(self._app.localizer._(&quot;Welcome to Betty&quot;))
+        self._welcome_caption.setText(
+            self._app.localizer._(
+                &#39;Betty helps you visualize and publish your family history by building interactive genealogy websites out of your &lt;a href=&quot;{gramps_url}&quot;&gt;Gramps&lt;/a&gt; and &lt;a href=&quot;{gedcom_url}&quot;&gt;GEDCOM&lt;/a&gt; family trees.&#39;
+            ).format(
+                gramps_url=&quot;https://gramps-project.org/&quot;,
+                gedcom_url=&quot;https://en.wikipedia.org/wiki/GEDCOM&quot;,
+            )
+        )
+        self._project_instruction.setText(
+            self._app.localizer._(&quot;Work on a new or existing site of your own&quot;)
+        )
+        self.open_project_button.setText(
+            self._app.localizer._(&quot;Open an existing project&quot;)
+        )
+        self.new_project_button.setText(self._app.localizer._(&quot;Create a new project&quot;))
+        self._demo_instruction.setText(
+            self._app.localizer._(
+                &quot;View a demonstration of what a Betty site looks like&quot;
+            )
+        )
+        self.demo_button.setText(self._app.localizer._(&quot;View a demo site&quot;))</div>
+
+
+
+class _AboutBettyWindow(BettyMainWindow):
+    window_width = 500
+    window_height = 100
+
+    def __init__(
+        self,
+        app: App,
+        *,
+        parent: QObject | None = None,
+    ):
+        super().__init__(app, parent=parent)
+        self._label = Text()
+        self._label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.setCentralWidget(self._label)
+
+    def _set_translatables(self) -&gt; None:
+        super()._set_translatables()
+        self._label.setText(
+            &quot;&quot;.join(
+                (
+                    &quot;&lt;p&gt;%s&lt;/p&gt;&quot; % x
+                    for x in [
+                        self._app.localizer._(&quot;Version: {version}&quot;).format(
+                            version=wait_to_thread(about.version_label()),
+                        ),
+                        self._app.localizer._(
+                            &#39;Copyright 2019-{year} Bart Feenstra &amp; contributors. Betty is made available to you under the &lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;GNU General Public License, Version 3&lt;/a&gt; (GPLv3).&#39;
+                        ).format(
+                            year=datetime.now().year,
+                        ),
+                        self._app.localizer._(
+                            &#39;Follow Betty on &lt;a href=&quot;https://twitter.com/Betty_Project&quot;&gt;Twitter&lt;/a&gt; and &lt;a href=&quot;https://github.com/bartfeenstra/betty&quot;&gt;Github&lt;/a&gt;.&#39;
+                        ),
+                    ]
+                )
+            )
+        )
+
+    @override
+    @property
+    def window_title(self) -&gt; Localizable:
+        return Str._(&quot;About Betty&quot;)
+
+
+<div class="viewcode-block" id="ApplicationConfiguration">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.ApplicationConfiguration">[docs]</a>
+class ApplicationConfiguration(BettyMainWindow):
+    &quot;&quot;&quot;
+    A window to administer Betty application configuration.
+    &quot;&quot;&quot;
+
+    window_width = 400
+    window_height = 150
+
+<div class="viewcode-block" id="ApplicationConfiguration.__init__">
+<a class="viewcode-back" href="../../../../betty.gui.app/#betty.gui.app.ApplicationConfiguration.__init__">[docs]</a>
+    def __init__(
+        self,
+        app: App,
+        *,
+        parent: QObject | None = None,
+    ):
+        super().__init__(app, parent=parent)
+
+        self._form = QFormLayout()
+        form_widget = QWidget()
+        form_widget.setLayout(self._form)
+        self.setCentralWidget(form_widget)
+        self._locale_collector = TranslationsLocaleCollector(
+            self._app, set(self._app.localizers.locales)
+        )
+        for row in self._locale_collector.rows:
+            self._form.addRow(*row)</div>
+
+
+    @override
+    @property
+    def window_title(self) -&gt; Localizable:
+        return Str._(&quot;Configuration&quot;)</div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Bart Feenstra and contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../../_static/documentation_options.js?v=ec77855a"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

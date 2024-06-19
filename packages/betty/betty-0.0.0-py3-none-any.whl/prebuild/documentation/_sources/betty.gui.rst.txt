@@ -1,0 +1,26 @@
+betty.gui package
+=================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.gui.app
+   betty.gui.error
+   betty.gui.locale
+   betty.gui.logging
+   betty.gui.model
+   betty.gui.project
+   betty.gui.serve
+   betty.gui.text
+   betty.gui.window
+
+Module contents
+---------------
+
+.. automodule:: betty.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,1008 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="author" title="About these documents" href="../../../../about/" /><link rel="index" title="Index" href="../../../../genindex/" /><link rel="search" title="Search" href="../../../../search/" />
+
+    <link rel="shortcut icon" href="../../../../_static/betty.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>betty.app.extension - Betty development documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../../"><div class="brand">Betty development documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../../_static/betty-32x32.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Betty development documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../installation/">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/desktop/">Installation of the Betty Desktop application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/pip/">Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/source/">Installation from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/ancestry/">Ancestry</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Ancestry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/citation/">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/date/">Dates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/enclosure/">Enclosure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event/">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event-type/">Event Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/file/">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/link/">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/media-type/">Media Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/note/">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person/">Person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person-name/">Person Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place/">Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place-name/">Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence/">Presence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence-role/">Presence Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/privacy/">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/source/">Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/assets/">Asset Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/cli/">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/configuration/">Application configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/env/">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/extension/">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/cotton_candy/">The <em>Cotton Candy</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/deriver/">The <em>Deriver</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/gramps/">The <em>Gramps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/http_api_doc/">The <em>HTTP API Documentation</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/maps/">The <em>Maps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/nginx/">The <em>nginx</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/privatizer/">The <em>Privatizer</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/trees/">The <em>Trees</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/wikipedia/">The <em>Wikipedia</em> extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/gedcom/">GEDCOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/npm/">npm</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/project/">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Projects</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/project/configuration/">Project configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/templating/">Templating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Templating</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/globals/">Globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/tests/">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/translation/">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../development/">Development</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Development</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/extension/">Developing a Betty extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/translation/">Working on Betty’s translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/test/">Testing Betty’s source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../py-modindex/">API Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../about/">About</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of About</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contributing/">Contributing to Betty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/license/">Copyright &amp; license</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for betty.app.extension</h1><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;Provide Betty&#39;s extension API.&quot;&quot;&quot;
+
+from __future__ import annotations
+
+import functools
+from collections import defaultdict
+from importlib.metadata import entry_points, EntryPoint
+from typing import (
+    Any,
+    TypeVar,
+    Iterable,
+    TYPE_CHECKING,
+    Generic,
+    Iterator,
+    Sequence,
+    Self,
+)
+
+from typing_extensions import override
+
+from betty.requirement import Requirement, AllRequirements
+from betty.asyncio import gather
+from betty.config import ConfigurationT, Configurable
+from betty.dispatch import Dispatcher, TargetedDispatcher
+from betty.importlib import import_any
+from betty.locale import Str
+
+if TYPE_CHECKING:
+    from pathlib import Path
+    from betty.app import App
+
+
+<div class="viewcode-block" id="ExtensionError">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionError">[docs]</a>
+class ExtensionError(BaseException):
+    &quot;&quot;&quot;
+    A generic extension API error.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="ExtensionTypeError">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionTypeError">[docs]</a>
+class ExtensionTypeError(ExtensionError, ValueError):
+    &quot;&quot;&quot;
+    A generic error regarding an extension type.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="ExtensionTypeImportError">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionTypeImportError">[docs]</a>
+class ExtensionTypeImportError(ExtensionTypeError, ImportError):
+    &quot;&quot;&quot;
+    Raised when an alleged extension type cannot be imported.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="ExtensionTypeImportError.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionTypeImportError.__init__">[docs]</a>
+    def __init__(self, extension_type_name: str):
+        super().__init__(
+            f&#39;Cannot find and import an extension with name &quot;{extension_type_name}&quot;.&#39;
+        )</div>
+</div>
+
+
+
+<div class="viewcode-block" id="ExtensionTypeInvalidError">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionTypeInvalidError">[docs]</a>
+class ExtensionTypeInvalidError(ExtensionTypeError, ImportError):
+    &quot;&quot;&quot;
+    Raised for types that are not valid extension types.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="ExtensionTypeInvalidError.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionTypeInvalidError.__init__">[docs]</a>
+    def __init__(self, extension_type: type):
+        super().__init__(
+            f&quot;{extension_type.__module__}.{extension_type.__name__} is not an extension type class. Extension types must extend {Extension.__module__}.{Extension.__name__}.&quot;
+        )</div>
+</div>
+
+
+
+<div class="viewcode-block" id="CyclicDependencyError">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.CyclicDependencyError">[docs]</a>
+class CyclicDependencyError(ExtensionError, RuntimeError):
+    &quot;&quot;&quot;
+    Raised when extensions define a cyclic dependency, e.g. two extensions depend on each other.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="CyclicDependencyError.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.CyclicDependencyError.__init__">[docs]</a>
+    def __init__(self, extension_types: Iterable[type[Extension]]):
+        extension_names = &quot;, &quot;.join([extension.name() for extension in extension_types])
+        super().__init__(
+            f&quot;The following extensions have cyclic dependencies: {extension_names}&quot;
+        )</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Dependencies">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependencies">[docs]</a>
+class Dependencies(AllRequirements):
+    &quot;&quot;&quot;
+    Check a dependent&#39;s dependency requirements.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Dependencies.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependencies.__init__">[docs]</a>
+    def __init__(self, dependent_type: type[Extension]):
+        dependency_requirements = []
+        for dependency_type in dependent_type.depends_on():
+            try:
+                dependency_requirement = dependency_type.enable_requirement()
+            except RecursionError:
+                raise CyclicDependencyError([dependency_type]) from None
+            else:
+                dependency_requirements.append(dependency_requirement)
+        super().__init__(*dependency_requirements)
+        self._dependent_type = dependent_type</div>
+
+
+<div class="viewcode-block" id="Dependencies.for_dependent">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependencies.for_dependent">[docs]</a>
+    @classmethod
+    def for_dependent(cls, dependent_type: type[Extension]) -&gt; Self:
+        &quot;&quot;&quot;
+        Create a new requirement for the given dependent.
+        &quot;&quot;&quot;
+        return cls(dependent_type)</div>
+
+
+<div class="viewcode-block" id="Dependencies.summary">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependencies.summary">[docs]</a>
+    @override
+    def summary(self) -&gt; Str:
+        return Str._(
+            &quot;{dependent_label} requires {dependency_labels}.&quot;,
+            dependent_label=format_extension_type(self._dependent_type),
+            dependency_labels=Str.call(
+                lambda localizer: &quot;, &quot;.join(
+                    (
+                        format_extension_type(extension_type).localize(localizer)
+                        for extension_type in self._dependent_type.depends_on()
+                    ),
+                ),
+            ),
+        )</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Dependents">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependents">[docs]</a>
+class Dependents(Requirement):
+    &quot;&quot;&quot;
+    Check a dependency&#39;s dependent requirements.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Dependents.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependents.__init__">[docs]</a>
+    def __init__(self, dependency: Extension, dependents: Sequence[Extension]):
+        super().__init__()
+        self._dependency = dependency
+        self._dependents = dependents</div>
+
+
+<div class="viewcode-block" id="Dependents.summary">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependents.summary">[docs]</a>
+    @override
+    def summary(self) -&gt; Str:
+        return Str._(
+            &quot;{dependency_label} is required by {dependency_labels}.&quot;,
+            dependency_label=format_extension_type(type(self._dependency)),
+            dependent_labels=Str.call(
+                lambda localizer: &quot;, &quot;.join(
+                    [
+                        format_extension_type(type(dependent)).localize(localizer)
+                        for dependent in self._dependents
+                    ]
+                )
+            ),
+        )</div>
+
+
+<div class="viewcode-block" id="Dependents.is_met">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependents.is_met">[docs]</a>
+    @override
+    def is_met(self) -&gt; bool:
+        # This class is never instantiated unless there is at least one enabled dependent, which means this requirement
+        # is always met.
+        return True</div>
+
+
+<div class="viewcode-block" id="Dependents.for_dependency">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Dependents.for_dependency">[docs]</a>
+    @classmethod
+    def for_dependency(cls, dependency: Extension) -&gt; Self:
+        &quot;&quot;&quot;
+        Create a new requirement for the given dependency.
+        &quot;&quot;&quot;
+        dependents = [
+            dependency.app.extensions[extension_type]
+            for extension_type in discover_extension_types()
+            if dependency.__class__ in extension_type.depends_on()
+            and extension_type in dependency.app.extensions
+        ]
+        return cls(dependency, dependents)</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Extension">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension">[docs]</a>
+class Extension:
+    &quot;&quot;&quot;
+    Integrate optional functionality with the Betty app.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Extension.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.__init__">[docs]</a>
+    def __init__(self, app: App, *args: Any, **kwargs: Any):
+        assert type(self) is not Extension
+        super().__init__(*args, **kwargs)
+        self._app = app</div>
+
+
+<div class="viewcode-block" id="Extension.name">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.name">[docs]</a>
+    @classmethod
+    def name(cls) -&gt; str:
+        &quot;&quot;&quot;
+        The machine name.
+        &quot;&quot;&quot;
+        return &quot;%s.%s&quot; % (cls.__module__, cls.__name__)</div>
+
+
+<div class="viewcode-block" id="Extension.depends_on">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.depends_on">[docs]</a>
+    @classmethod
+    def depends_on(cls) -&gt; set[type[Extension]]:
+        &quot;&quot;&quot;
+        The extensions this one depends on, and comes after.
+        &quot;&quot;&quot;
+        return set()</div>
+
+
+<div class="viewcode-block" id="Extension.comes_after">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.comes_after">[docs]</a>
+    @classmethod
+    def comes_after(cls) -&gt; set[type[Extension]]:
+        &quot;&quot;&quot;
+        The extensions that this one comes after.
+
+        The other extensions may or may not be enabled.
+        &quot;&quot;&quot;
+        return set()</div>
+
+
+<div class="viewcode-block" id="Extension.comes_before">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.comes_before">[docs]</a>
+    @classmethod
+    def comes_before(cls) -&gt; set[type[Extension]]:
+        &quot;&quot;&quot;
+        The extensions that this one comes before.
+
+        The other extensions may or may not be enabled.
+        &quot;&quot;&quot;
+        return set()</div>
+
+
+<div class="viewcode-block" id="Extension.enable_requirement">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.enable_requirement">[docs]</a>
+    @classmethod
+    def enable_requirement(cls) -&gt; Requirement:
+        &quot;&quot;&quot;
+        Define the requirement for this extension to be enabled.
+
+        This defaults to the extension&#39;s dependencies.
+        &quot;&quot;&quot;
+        return Dependencies.for_dependent(cls)</div>
+
+
+<div class="viewcode-block" id="Extension.disable_requirement">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.disable_requirement">[docs]</a>
+    def disable_requirement(self) -&gt; Requirement:
+        &quot;&quot;&quot;
+        Define the requirement for this extension to be disabled.
+
+        This defaults to the extension&#39;s dependents.
+        &quot;&quot;&quot;
+        return Dependents.for_dependency(self)</div>
+
+
+<div class="viewcode-block" id="Extension.assets_directory_path">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extension.assets_directory_path">[docs]</a>
+    @classmethod
+    def assets_directory_path(cls) -&gt; Path | None:
+        &quot;&quot;&quot;
+        Return the path on disk where the extension&#39;s assets are located.
+
+        This may be anywhere in your Python package.
+        &quot;&quot;&quot;
+        return None</div>
+
+
+    @property
+    def app(self) -&gt; App:
+        &quot;&quot;&quot;
+        The Betty application the extension runs within.
+        &quot;&quot;&quot;
+        return self._app</div>
+
+
+
+ExtensionT = TypeVar(&quot;ExtensionT&quot;, bound=Extension)
+
+
+<div class="viewcode-block" id="UserFacingExtension">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.UserFacingExtension">[docs]</a>
+class UserFacingExtension(Extension):
+    &quot;&quot;&quot;
+    A sentinel to mark an extension as being visible to users (e.g. not internal).
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="UserFacingExtension.label">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.UserFacingExtension.label">[docs]</a>
+    @classmethod
+    def label(cls) -&gt; Str:
+        &quot;&quot;&quot;
+        Get the human-readable extension label.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(cls))</div>
+
+
+<div class="viewcode-block" id="UserFacingExtension.description">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.UserFacingExtension.description">[docs]</a>
+    @classmethod
+    def description(cls) -&gt; Str:
+        &quot;&quot;&quot;
+        Get the human-readable extension description.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(cls))</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Theme">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Theme">[docs]</a>
+class Theme(UserFacingExtension):
+    &quot;&quot;&quot;
+    An extension that is a front-end theme.
+    &quot;&quot;&quot;
+
+    pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="get_extension_type">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.get_extension_type">[docs]</a>
+@functools.singledispatch
+def get_extension_type(
+    extension_type_definition: str | type[Extension] | Extension,
+) -&gt; type[Extension]:
+    &quot;&quot;&quot;
+    Get the extension type for an extension, extension type, or extension type name.
+    &quot;&quot;&quot;
+    raise ExtensionTypeError(
+        f&#39;Cannot get the extension type for &quot;{extension_type_definition}&quot;.&#39;
+    )</div>
+
+
+
+<div class="viewcode-block" id="get_extension_type_by_name">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.get_extension_type_by_name">[docs]</a>
+@get_extension_type.register(str)
+def get_extension_type_by_name(extension_type_name: str) -&gt; type[Extension]:
+    &quot;&quot;&quot;
+    Get the extension type for an extension type name.
+    &quot;&quot;&quot;
+    try:
+        extension_type = import_any(extension_type_name)
+    except ImportError:
+        raise ExtensionTypeImportError(extension_type_name) from None
+    return get_extension_type(extension_type)</div>
+
+
+
+<div class="viewcode-block" id="get_extension_type_by_type">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.get_extension_type_by_type">[docs]</a>
+@get_extension_type.register(type)
+def get_extension_type_by_type(extension_type: type) -&gt; type[Extension]:
+    &quot;&quot;&quot;
+    Get the extension type for an extension type.
+    &quot;&quot;&quot;
+    if issubclass(extension_type, Extension):
+        return extension_type
+    raise ExtensionTypeInvalidError(extension_type)</div>
+
+
+
+<div class="viewcode-block" id="get_extension_type_by_extension">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.get_extension_type_by_extension">[docs]</a>
+@get_extension_type.register(Extension)
+def get_extension_type_by_extension(extension: Extension) -&gt; type[Extension]:
+    &quot;&quot;&quot;
+    Get the extension type for an extension.
+    &quot;&quot;&quot;
+    return get_extension_type(type(extension))</div>
+
+
+
+<div class="viewcode-block" id="format_extension_type">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.format_extension_type">[docs]</a>
+def format_extension_type(extension_type: type[Extension]) -&gt; Str:
+    &quot;&quot;&quot;
+    Format an extension type to a human-readable label.
+    &quot;&quot;&quot;
+    if issubclass(extension_type, UserFacingExtension):
+        return Str.call(
+            lambda localizer: f&quot;{extension_type.label().localize(localizer)} ({extension_type.name()})&quot;
+        )
+    return Str.plain(extension_type.name())</div>
+
+
+
+<div class="viewcode-block" id="ConfigurableExtension">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ConfigurableExtension">[docs]</a>
+class ConfigurableExtension(
+    Extension, Generic[ConfigurationT], Configurable[ConfigurationT]
+):
+    &quot;&quot;&quot;
+    A configurable extension.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="ConfigurableExtension.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ConfigurableExtension.__init__">[docs]</a>
+    def __init__(
+        self, *args: Any, configuration: ConfigurationT | None = None, **kwargs: Any
+    ):
+        assert type(self) is not ConfigurableExtension
+        super().__init__(*args, **kwargs)
+        self._configuration = configuration or self.default_configuration()</div>
+
+
+<div class="viewcode-block" id="ConfigurableExtension.default_configuration">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ConfigurableExtension.default_configuration">[docs]</a>
+    @classmethod
+    def default_configuration(cls) -&gt; ConfigurationT:
+        &quot;&quot;&quot;
+        Get this extension&#39;s default configuration.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(cls))</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Extensions">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extensions">[docs]</a>
+class Extensions:
+    &quot;&quot;&quot;
+    Manage available extensions.
+    &quot;&quot;&quot;
+
+    def __getitem__(self, extension_type: type[ExtensionT] | str) -&gt; ExtensionT:
+        raise NotImplementedError(repr(self))
+
+    def __iter__(self) -&gt; Iterator[Iterator[Extension]]:
+        &quot;&quot;&quot;
+        Iterate over all extensions, in topologically sorted batches.
+
+        Each item is a batch of extensions. Items are ordered because later items depend
+        on earlier items. The extensions in each item do not depend on each other and their
+        order has no meaning. However, implementations SHOULD sort the extensions in each
+        item in a stable fashion for reproducability.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(self))
+
+<div class="viewcode-block" id="Extensions.flatten">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.Extensions.flatten">[docs]</a>
+    def flatten(self) -&gt; Iterator[Extension]:
+        &quot;&quot;&quot;
+        Get a sequence of topologically sorted extensions.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(self))</div>
+
+
+    def __contains__(self, extension_type: type[Extension] | str | Any) -&gt; bool:
+        raise NotImplementedError(repr(self))</div>
+
+
+
+<div class="viewcode-block" id="ListExtensions">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ListExtensions">[docs]</a>
+class ListExtensions(Extensions):
+    &quot;&quot;&quot;
+    Manage available extensions, backed by a list.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="ListExtensions.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ListExtensions.__init__">[docs]</a>
+    def __init__(self, extensions: list[list[Extension]]):
+        super().__init__()
+        self._extensions = extensions</div>
+
+
+    @override
+    def __getitem__(self, extension_type: type[ExtensionT] | str) -&gt; ExtensionT:
+        if isinstance(extension_type, str):
+            extension_type = import_any(extension_type)
+        for extension in self.flatten():
+            if type(extension) is extension_type:
+                return extension  # type: ignore[return-value]
+        raise KeyError(f&#39;Unknown extension of type &quot;{extension_type}&quot;&#39;)
+
+    @override
+    def __iter__(self) -&gt; Iterator[Iterator[Extension]]:
+        # Use a generator so we discourage calling code from storing the result.
+        for batch in self._extensions:
+            yield (extension for extension in batch)
+
+<div class="viewcode-block" id="ListExtensions.flatten">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ListExtensions.flatten">[docs]</a>
+    @override
+    def flatten(self) -&gt; Iterator[Extension]:
+        for batch in self:
+            yield from batch</div>
+
+
+    @override
+    def __contains__(self, extension_type: type[Extension] | str) -&gt; bool:
+        if isinstance(extension_type, str):
+            try:
+                extension_type = import_any(extension_type)
+            except ImportError:
+                return False
+        return any(type(extension) is extension_type for extension in self.flatten())</div>
+
+
+
+<div class="viewcode-block" id="ExtensionDispatcher">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionDispatcher">[docs]</a>
+class ExtensionDispatcher(Dispatcher):
+    &quot;&quot;&quot;
+    Dispatch events to extensions.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="ExtensionDispatcher.__init__">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionDispatcher.__init__">[docs]</a>
+    def __init__(self, extensions: Extensions):
+        self._extensions = extensions</div>
+
+
+<div class="viewcode-block" id="ExtensionDispatcher.dispatch">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.ExtensionDispatcher.dispatch">[docs]</a>
+    @override
+    def dispatch(self, target_type: type[Any]) -&gt; TargetedDispatcher:
+        target_method_names = [
+            method_name
+            for method_name in dir(target_type)
+            if not method_name.startswith(&quot;_&quot;)
+        ]
+        if len(target_method_names) != 1:
+            raise ValueError(
+                f&quot;A dispatch&#39;s target type must have a single method to dispatch to, but {target_type} has {len(target_method_names)}.&quot;
+            )
+        target_method_name = target_method_names[0]
+
+        async def _dispatch(*args: Any, **kwargs: Any) -&gt; list[Any]:
+            return [
+                result
+                for target_extension_batch in self._extensions
+                for result in await gather(
+                    *(
+                        getattr(target_extension, target_method_name)(*args, **kwargs)
+                        for target_extension in target_extension_batch
+                        if isinstance(target_extension, target_type)
+                    )
+                )
+            ]
+
+        return _dispatch</div>
+</div>
+
+
+
+ExtensionTypeGraph = dict[type[Extension], set[type[Extension]]]
+
+
+<div class="viewcode-block" id="build_extension_type_graph">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.build_extension_type_graph">[docs]</a>
+def build_extension_type_graph(
+    extension_types: Iterable[type[Extension]],
+) -&gt; ExtensionTypeGraph:
+    &quot;&quot;&quot;
+    Build a dependency graph of the given extension types.
+    &quot;&quot;&quot;
+    extension_types_graph: ExtensionTypeGraph = defaultdict(set)
+    # Add dependencies to the extension graph.
+    for extension_type in extension_types:
+        _extend_extension_type_graph(extension_types_graph, extension_type)
+    # Now all dependencies have been collected, extend the graph with optional extension orders.
+    for extension_type in extension_types:
+        for before in extension_type.comes_before():
+            if before in extension_types_graph:
+                extension_types_graph[before].add(extension_type)
+        for after in extension_type.comes_after():
+            if after in extension_types_graph:
+                extension_types_graph[extension_type].add(after)
+
+    return extension_types_graph</div>
+
+
+
+def _extend_extension_type_graph(
+    graph: ExtensionTypeGraph, extension_type: type[Extension]
+) -&gt; None:
+    dependencies = extension_type.depends_on()
+    # Ensure each extension type appears in the graph, even if they&#39;re isolated.
+    graph.setdefault(extension_type, set())
+    for dependency in dependencies:
+        seen_dependency = dependency in graph
+        graph[extension_type].add(dependency)
+        if not seen_dependency:
+            _extend_extension_type_graph(graph, dependency)
+
+
+<div class="viewcode-block" id="discover_extension_types">
+<a class="viewcode-back" href="../../../../betty.app.extension/#betty.app.extension.discover_extension_types">[docs]</a>
+def discover_extension_types() -&gt; set[type[Extension]]:
+    &quot;&quot;&quot;
+    Gather the available extension types.
+    &quot;&quot;&quot;
+    betty_entry_points: Sequence[EntryPoint]
+    betty_entry_points = entry_points(  # type: ignore[assignment, unused-ignore]
+        group=&quot;betty.extensions&quot;,  # type: ignore[call-arg, unused-ignore]
+    )
+    return {
+        import_any(betty_entry_point.value) for betty_entry_point in betty_entry_points
+    }</div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Bart Feenstra and contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../../_static/documentation_options.js?v=ec77855a"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
