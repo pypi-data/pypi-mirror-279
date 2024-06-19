@@ -1,0 +1,17 @@
+faster-whisper
+transformers
+ffmpeg
+ffmpeg-python
+pycairo
+PyGObject
+regex
+fuzzysearch
+python-magic
+pandas
+torch
+torchaudio
+auditok
+stable-ts==2.17.3
+retry2
+tqdm
+
