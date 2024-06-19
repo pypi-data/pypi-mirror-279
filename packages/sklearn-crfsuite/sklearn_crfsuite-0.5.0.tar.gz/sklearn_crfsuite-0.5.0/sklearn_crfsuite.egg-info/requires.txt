@@ -1,0 +1,4 @@
+python-crfsuite>=0.9.7
+scikit-learn>=0.24.0
+tabulate>=0.4.2
+tqdm>=2.0
