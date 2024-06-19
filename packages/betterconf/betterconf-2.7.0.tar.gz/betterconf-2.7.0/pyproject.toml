@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "betterconf"
+version = "2.7.0"
+description = "Minimalistic Python library for your configs."
+authors = ["prostomarkeloff"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/prostomarkeloff/betterconf"
+repository = "https://github.com/prostomarkeloff/betterconf"
+documentation = "https://github.com/prostomarkeloff/betterconf"
+keywords = ["configs", "config", "env", ".env"]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+pytest = "^8.2.2"
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
