@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "terminaltexteffects"
+version = "0.11.0"
+description = "TerminalTextEffects (TTE) is a terminal visual effects engine."
+authors = ["Chris <741258@pm.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.scripts]
+tte = "terminaltexteffects.__main__:main"
+
+[tool.ruff]
+show-fixes = true
+line-length = 120
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
