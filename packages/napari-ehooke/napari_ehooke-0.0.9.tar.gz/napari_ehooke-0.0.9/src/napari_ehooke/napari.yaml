@@ -1,0 +1,44 @@
+name: napari-ehooke
+display_name: eHooke
+contributions:
+  commands:
+    - id: napari-ehooke.phase_example
+      python_name: napari_ehooke._sample_data:phase_example
+      title: Load phase contrast S.aureus sample data 
+    - id: napari-ehooke.membrane_example
+      python_name: napari_ehooke._sample_data:membrane_example
+      title: Load membrane dye S.aureus sample data
+    - id: napari-ehooke.dna_example
+      python_name: napari_ehooke._sample_data:dna_example
+      title: Load DNA dye S.aureus sample data 
+    - id: napari-ehooke.compute_mask
+      python_name: napari_ehooke._computemask:compute_mask
+      title: Compute base mask
+    - id: napari-ehooke.compute_features
+      python_name: napari_ehooke._computefeatures:compute_features
+      title: Compute features
+    - id: napari-ehooke.compute_cells
+      python_name: napari_ehooke._computecells:compute_cells
+      title: Compute cells
+    - id: napari-ehooke.filter_cells
+      python_name: napari_ehooke._filtercells:filter_cells
+      title: Filter cells
+  sample_data:
+    - command: napari-ehooke.phase_example
+      display_name: Phase contrast S. aureus
+      key: unique_id.1
+    - command: napari-ehooke.membrane_example
+      display_name: Membrane dye S.aureus
+      key: unique_id.2
+    - command: napari-ehooke.dna_example
+      display_name: DNA dye S.aureus
+      key: unique_id.3
+  widgets:
+    - command: napari-ehooke.compute_mask
+      display_name: Compute base mask
+    - command: napari-ehooke.compute_features
+      display_name: Compute features
+    - command: napari-ehooke.compute_cells
+      display_name: Compute cells
+    - command: napari-ehooke.filter_cells
+      display_name: Filter cells
