@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: wingsdk
+Version: 0.0.6
+Summary: Wing SDK in Python
+Author-email: Elad Cohen <eladc@wing.cloud>
+Description-Content-Type: text/markdown
+Requires-Dist: urllib3 ==1.26.15
+Requires-Dist: requests ~=2.31.0
+Requires-Dist: boto3 ~=1.34.56
+
+# wingsdk-python
+
+Python SDK for [Wing](https://www.winglang.io/)
