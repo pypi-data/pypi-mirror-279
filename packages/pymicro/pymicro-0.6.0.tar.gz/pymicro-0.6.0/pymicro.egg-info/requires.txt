@@ -1,0 +1,16 @@
+numpy<2.0.0
+scipy
+scikit-image
+scikit-learn
+matplotlib
+vtk
+h5py
+lxml
+tables
+networkx
+tqdm
+scikit-image
+scikit-learn
+requests
+pytest
+BasicToolsFrozen
