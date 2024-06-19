@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: geeft
+Version: 0.1.1
+Author-email: Ryan Hamilton <ryan.hamilton@ec.gc.ca>
+License-File: LICENSE
+Requires-Dist: earthengine-api
+
