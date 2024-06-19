@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+javier_vidal/__init__.py
+javier_vidal.egg-info/PKG-INFO
+javier_vidal.egg-info/SOURCES.txt
+javier_vidal.egg-info/dependency_links.txt
+javier_vidal.egg-info/top_level.txt
