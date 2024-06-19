@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: flask-help-tools
+Version: 0.2.0
+Summary: A library that provides examples and solutions for common tasks in Flask applications
+Home-page: https://github.com/rathe12/flask-help-tools
+Author: rathe12
+Author-email: markzerone1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Flask >=1.1.2
+
+# Flask Help Tools
+
+Flask Help Tools is a Python library that provides examples and solutions for common tasks in Flask applications. This library aims to help developers by providing ready-to-use code snippets and documentation-like examples.
+
+## Installation
+
+You can install Flask Help Tools using pip:
+
+```bash
+pip install flask-demo-helper
+
+
