@@ -1,0 +1,16 @@
+*.pyc
+*.swp
+*.swo
+*.egg-info
+.DS_Store
+
+.coverage
+.eggs
+.tox
+.cache
+.pytest_cache
+.vscode
+
+env/
+dist/
+dtoolcore/version.py
