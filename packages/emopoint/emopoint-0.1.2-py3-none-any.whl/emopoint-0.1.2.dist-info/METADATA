@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: emopoint
+Version: 0.1.2
+Summary: A library for mapping text into a multidimensional embedding space representing emotion
+License: Apache 2
+Author: Tim Kellogg
+Author-email: timothy.kellogg@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: numpy (>=1.0)
+Description-Content-Type: text/markdown
+
+Extract emotional information from embeddings.
+
+When working with LLMs, various embedding models capture emotional information 
+that might be useful to work with (or without!). 
+
+An emopoint is a simplified embedding with interpretable dimensions:
+ 1. joy vs sadness
+ 2. anger vs fear
+ 3. disgust vs surprise
+
+So, for example OpenAI's `text-embedding-3-small` returns embeddings with 1536
+dimensions. This library will convert those into 3 dimensions, losing most
+information except for what directly relates to emotion.
+
+This library enables two modes:
+ 1. Isolate emotion, converting it into 3D emopoint vectors
+ 2. Remove emotion, stay in original dimensionality
+
+# Install
+Install using your language's package manager:
+
+* [NPM](https://www.npmjs.com/package/emopoint)
+*
+
