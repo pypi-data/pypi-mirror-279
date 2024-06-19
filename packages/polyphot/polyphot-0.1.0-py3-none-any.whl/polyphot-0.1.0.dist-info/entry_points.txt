@@ -1,0 +1,2 @@
+[console_scripts]
+polyphot = polyphot.polyphot:main
