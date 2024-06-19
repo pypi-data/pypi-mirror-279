@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+jaxpole/__init__.py
+jaxpole/_modidx.py
+jaxpole/filter.py
+jaxpole/test_grad.py
+jaxpole.egg-info/PKG-INFO
+jaxpole.egg-info/SOURCES.txt
+jaxpole.egg-info/dependency_links.txt
+jaxpole.egg-info/entry_points.txt
+jaxpole.egg-info/not-zip-safe
+jaxpole.egg-info/requires.txt
+jaxpole.egg-info/top_level.txt

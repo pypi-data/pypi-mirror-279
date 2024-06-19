@@ -1,0 +1,6 @@
+jax[cpu]
+numpy
+
+[dev]
+pytest
+nbdev
