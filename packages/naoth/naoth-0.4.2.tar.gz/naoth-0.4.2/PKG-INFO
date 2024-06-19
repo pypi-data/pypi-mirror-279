@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: naoth
+Version: 0.4.2
+Summary: Python utils for the NaoTH toolchain
+Home-page: UNKNOWN
+Author: NaoTH Berlin United
+Author-email: nao-team@informatik.hu-berlin.de
+License: Apache License 2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6.9
+Description-Content-Type: text/markdown
+
+# NaoTH Python Package
+This package contains various scripts for working with naoth logs.
+
+## datasets sub package
+TODO: add explanation
+
+## log sub package
+TODO: add explanation
+
+## math
+TODO: add explanation
+
+## pb
+TODO: add explanation
+
+## utils
+TODO: add explanation
+
+## other
+TODO: add explanation
+
+
