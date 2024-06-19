@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+newslaunch/__init__.py
+newslaunch/__main__.py
+newslaunch/cli.py
+newslaunch/guardian_api.py
+newslaunch/kinesis_writer.py
+newslaunch.egg-info/PKG-INFO
+newslaunch.egg-info/SOURCES.txt
+newslaunch.egg-info/dependency_links.txt
+newslaunch.egg-info/entry_points.txt
+newslaunch.egg-info/requires.txt
+newslaunch.egg-info/top_level.txt
+tests/test_cli.py
+tests/test_guardian_api.py
+tests/test_kinesis_writer.py
