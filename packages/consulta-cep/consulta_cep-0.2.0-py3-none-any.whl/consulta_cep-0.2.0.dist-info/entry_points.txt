@@ -1,0 +1,2 @@
+[console_scripts]
+consulta-cep = consulta_cep.main:main
