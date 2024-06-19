@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: aws-jmespath-utils
+Version: 0.1.2
+Summary: jmespath custom functions for filtering AWS resources by tag
+License: Apache-2.0
+Author: Oguzhan Yilmaz
+Author-email: oguzhanylmz271@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: jmespath (>=1.0.1,<2.0.0)
+Description-Content-Type: text/markdown
+
+# aws-jmespath-utils
