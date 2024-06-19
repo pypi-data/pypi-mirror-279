@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/syntaxcomp/__init__.py
+src/syntaxcomp/complexity.py
+src/syntaxcomp/example.py
+src/syntaxcomp.egg-info/PKG-INFO
+src/syntaxcomp.egg-info/SOURCES.txt
+src/syntaxcomp.egg-info/dependency_links.txt
+src/syntaxcomp.egg-info/requires.txt
+src/syntaxcomp.egg-info/top_level.txt

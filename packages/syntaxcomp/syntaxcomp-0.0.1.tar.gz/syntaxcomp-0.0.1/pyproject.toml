@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "syntaxcomp"
+version = "0.0.1"
+dependencies = [
+  "conllu~=4.5.3",
+  "textdistance~=4.6.2",
+]
+requires-python = ">=3.9"
+authors = [
+  { name="Elizaveta Klykova", email="lizaklyk@gmail.com" },
+]
+maintainers = [
+  { name="Elizaveta Klykova", email="lizaklyk@gmail.com" },
+]
+description = "A package for extracting syntactic complexity measures from CoNLL-U annotations."
+readme = "README.md"
+keywords = [
+    "complexity", "syntax", "syntactic complexity", "text complexity",
+    "conllu", "udpipe", "clause extraction", "sentence segmentation",
+    "clause segmentation"
+]
+classifiers = [
+	"Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Repository = "https://github.com/eaklykova/syntaxcomp"
+Issues = "https://github.com/eaklykova/syntaxcomp/issues"
