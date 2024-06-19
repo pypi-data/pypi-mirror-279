@@ -1,0 +1,16 @@
+magma_multigas/__init__.py,sha256=xyWx8-yzIWhZCQh0q4Ao9rBkJLawZfpzR98jhsih2A4,589
+magma_multigas/multigas.py,sha256=L0kikTw4NhWcUzEH8Fvoz4KG-k8U7yngK1DrQr-vw9I,5699
+magma_multigas/multigas_data.py,sha256=ucgLo0YxVijsVAt69cm0Vl0Q8ILszmpL2lSpupONuQ0,5685
+magma_multigas/plot.py,sha256=KRxQmK7ooYJ0tptvEHYKsVW5jGlymejWObLN7oSf-cc,8552
+magma_multigas/query.py,sha256=xNyTn0UH6_flkk1z_WPZkGjG3MlCW46p_DSdIyISqkM,9708
+magma_multigas/validator.py,sha256=fpjrsYUqI3C5SPL7Ks8q7VdxmoNNVt8m4IUjEhMfn9w,4085
+magma_multigas/variables.py,sha256=ZOm8yiw3EfnbyA306572ahWGmGiY9QNIgNGFNfuP3sA,1068
+magma_multigas/resources/__init__.py,sha256=TZFhcBmr1u6OvbBn7XEqFf4f7Cu_f-sTHvQR1Ks7-Q8,840
+magma_multigas/resources/colors.py,sha256=k8ZmjngwjztsO2sKGo4S8BYEpJiZtl_B-BRDRa4dars,433
+magma_multigas/resources/columns_explanations.csv,sha256=8RWN4yweKVdMY-NeoZUBWrP5vcGfdcRUaR3kCgH6yjU,6450
+magma_multigas/resources/material-colors.json,sha256=BdzrVVh9ubqy5n-hAtEFc9PDEKED6x1xfXAAZPZZRdk,5976
+magma_multigas/resources/metadata_v4.xml,sha256=zjFhkgpcgGqhI0fUBsTa5Bp24wkPpcmN6UJ7QvdXnJs,85510
+magma_multigas-1.0.0.dist-info/LICENSE,sha256=rwlxGtynWEDB7R6X-_XixZ-h9xCROlLhZaVabjIulas,1085
+magma_multigas-1.0.0.dist-info/WHEEL,sha256=EZbGkh7Ie4PoZfRQ8I0ZuP9VklN_TvcZ6DSE5Uar4z4,81
+magma_multigas-1.0.0.dist-info/METADATA,sha256=2jVkN9ht86r_ArNyfkuoTduZqEGYWkmksVpRBGva5MQ,8200
+magma_multigas-1.0.0.dist-info/RECORD,,
