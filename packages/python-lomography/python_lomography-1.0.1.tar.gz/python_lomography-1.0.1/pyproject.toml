@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "python-lomography"
+version = "1.0.1"
+description = "A Python SDK for fetching images from the lomography.com API."
+authors = ["Mike Scornavacca <52425912+scornz@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "lomography"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+aiohttp = "^3.9.5"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.0"
+black = "^24.4.2"
+pre-commit = "^3.7.1"
+types-requests = "^2.32.0.20240602"
+
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.2.2"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.3.7"
+sphinx-rtd-theme = "^2.0.0"
+esbonio = "^0.16.4"
+doc8 = "^1.1.1"
+
+[tool.black]
+line-length = 88
+include = '/(example|lomography|tests)/.*\.py$'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
