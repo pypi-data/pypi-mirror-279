@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: uglypy
+Version: 0.0.1
+Summary: UglyPy - A Python package for retrieving, aggregating, and processing RSS feeds.
+Home-page: https://github.com/fabriziosalmi/UglyFeed
+Author: Fabrizio Salmi
+Author-email: fabrizio.salmi@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: beautifulsoup4
+Requires-Dist: feedparser
+Requires-Dist: nltk
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: pyyaml
+Requires-Dist: requests
+Requires-Dist: scikit-learn
+Requires-Dist: spacy
+Requires-Dist: tqdm
+Requires-Dist: xmltodict
+
+# UglyPy
+
+UglyPy is a Python package designed for retrieving, aggregating, and processing RSS feeds. It helps you fetch articles from multiple RSS sources, filter them based on age, group similar articles, rewrite content using various APIs, and generate a unified RSS feed.
+
+## Table of Contents
+
+- [UglyPy](#uglypy)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Basic Usage](#basic-usage)
+    - [Using a Configuration File](#using-a-configuration-file)
+    - [Environment Variables](#environment-variables)
+    - [Command-Line Arguments](#command-line-arguments)
+  - [Configuration](#configuration)
+  - [Examples](#examples)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Contact](#contact)
+
+## Description
+
+UglyPy simplifies the process of consolidating information from various RSS feeds by providing:
+- Fetching and parsing articles from multiple RSS feeds.
+- Filtering articles based on their age.
+- Grouping similar articles using advanced text similarity measures.
+- Optionally rewriting content using APIs from OpenAI, Groq, or Ollama.
+- Generating and deploying a consolidated RSS feed.
+
+## Features
+
+- **RSS Fetching**: Retrieve articles from multiple RSS sources.
+- **Filtering**: Remove articles older than a specified number of days.
+- **Aggregation**: Group similar articles together.
+- **Content Rewriting**: Use APIs to rewrite and enhance content (coming soon).
+- **RSS Feed Generation**: Create a combined RSS feed from aggregated articles.
+- **Deployment**: Deploy the RSS feed to GitHub or GitLab (optional).
+
+## Warning
+
+This is alpha package, soon I'll port all features of the UglyFeed project :)
+
+## Installation
+
+You can install UglyPy directly from PyPI:
+
+```bash
+pip install uglypy
+```
+
+Alternatively, you can clone the repository and install it locally:
+
+```
+git clone https://github.com/fabriziosalmi/UglyFeed.git
+cd UglyPy
+python setup.py install
+```
+
+## Usage
+
+Once installed, uglypy can be used via the command line.
+
+## Basic Usage
+To fetch and process articles from RSS feeds:
+
+`uglypy --rss_feeds <RSS_FEED_URL_1> <RSS_FEED_URL_2> ... --config path/to/config.yaml --skip_rewriting`
+
+or cli args:
+
+`uglypy --rss_feeds <RSS_FEED_URL> --max_age_days 15 --output_path /path/to/output/uglyfeed.xml --skip_rewriting`
+
+

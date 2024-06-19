@@ -1,0 +1,17 @@
+uglypy/__init__.py,sha256=uoX1EtW2hqyALt24RIRCK46HumPQjeKI8eAbvOApsXM,55
+uglypy/aggregator.py,sha256=1_dx-en7ZR_LAjH_5Sd1HiXamrEfYBi2Y2exr4E7j6Q,2460
+uglypy/cli.py,sha256=T6yJxu2WArGwgBsAEQNY6hSFJgbO1UIh0DdoVySeYOI,4981
+uglypy/config.py,sha256=zDepmHnPTGpWhiqAooFtJNWfh81XbDLRqsOC_jQbzZA,4325
+uglypy/deploy.py,sha256=cRy1egjPGtwX7XONlyzcwMRS--f_4v3ExsEYJ2f6754,7017
+uglypy/filter.py,sha256=fd1ROBD5VCR1xcm14JRPd0qdqzl3PYEJg7XiLrUMxZ4,1859
+uglypy/rewriter.py,sha256=VZLL4ACiklgMfskCioxFdD4_GLa5Jd8OELDXkfkzJaU,9165
+uglypy/rss_generator.py,sha256=l6EkE2Zdq6yrUriLWb3TkcMV1h0GGge9TliiNRAT76U,2258
+uglypy/rss_retriever.py,sha256=k7hDrzxspvYe23mb7NGDqccu-HIxAdLjN-Y3mNmg5Yw,6641
+uglypy/server.py,sha256=rSQaVDy5c3cV8tEw3BDOOvDZlEOmAkAEYEAJAT_l16E,1076
+uglypy/setup.py,sha256=GEpgL-2yRy2KYKK1evrBYDmAclNzl2yaOK5AVQdJ860,942
+uglypy-0.0.1.dist-info/LICENSE,sha256=DZak_2itbUtvHzD3E7GNUYSRK6jdOJ-GqncQ2weavLA,34523
+uglypy-0.0.1.dist-info/METADATA,sha256=0eokPyiMbgCJMUdffmJQBWtHELDJcraWloB8BLusoe4,3188
+uglypy-0.0.1.dist-info/WHEEL,sha256=G16H4A3IeoQmnOrYV4ueZGKSjhipXx8zc8nu9FGlvMA,92
+uglypy-0.0.1.dist-info/entry_points.txt,sha256=wq8mzbkt8AQvY_EGEmiaRDpO8DTRB_poaPud3lnvGOQ,44
+uglypy-0.0.1.dist-info/top_level.txt,sha256=MG0LTqD2ftGOqc6Azd4d-wB0gc95TZSiT6SN7fPuqGo,7
+uglypy-0.0.1.dist-info/RECORD,,
