@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+bbo/__init__.py
+bbo/exceptions.py
+bbo/geometry.py
+bbo/header.py
+bbo/label_lib.py
+bbo/path_management.py
+bbo/test_geometry.py
+bbo/yaml.py
+bbo_bbo.egg-info/PKG-INFO
+bbo_bbo.egg-info/SOURCES.txt
+bbo_bbo.egg-info/dependency_links.txt
+bbo_bbo.egg-info/requires.txt
+bbo_bbo.egg-info/top_level.txt
