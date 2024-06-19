@@ -1,0 +1,11 @@
+Metadata-Version: 2.3
+Name: pysage3
+Version: 1.0.0
+Summary: SAGE3 API
+Project-URL: Homepage, https://github.com/SAGE-3/next
+Author-email: SAGE3 Team <sage3app@gmail.com>
+License-File: LICENSE
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Python API to SAGE3
