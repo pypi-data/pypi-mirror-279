@@ -1,0 +1,108 @@
+ 11-06-2024 23:18:00:645 [pid=158284 tid=158284] NOTICE  cufio-drv:720 running in compatible mode
+ 11-06-2024 23:18:01:122 [pid=158284 tid=158341] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:18:01:122 [pid=158284 tid=158342] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:18:01:122 [pid=158284 tid=158343] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:18:01:122 [pid=158284 tid=158344] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:54:02:856 [pid=159305 tid=159305] NOTICE  cufio-drv:720 running in compatible mode
+ 11-06-2024 23:54:03:284 [pid=159305 tid=159335] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:54:03:284 [pid=159305 tid=159336] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:54:03:284 [pid=159305 tid=159338] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 11-06-2024 23:54:03:284 [pid=159305 tid=159337] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:04:03:666 [pid=1742581 tid=1742626] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:04:03:667 [pid=1742581 tid=1742627] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:04:03:667 [pid=1742581 tid=1742628] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:04:03:667 [pid=1742581 tid=1742629] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:04:03:774 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:03:774 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:13:784 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:13:784 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:19:855 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:19:855 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:26:449 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:26:449 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:26:473 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:26:473 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:26:513 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:26:513 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:26:517 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:26:517 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:26:520 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:26:520 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:04:26:543 [pid=1742581 tid=1742581] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:04:26:543 [pid=1742581 tid=1742581] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:29:401 [pid=1742911 tid=1742954] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:19:29:401 [pid=1742911 tid=1742956] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:19:29:401 [pid=1742911 tid=1742955] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:19:29:401 [pid=1742911 tid=1742957] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:19:29:508 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:29:508 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:32:160 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:32:160 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:33:651 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:33:651 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:35:306 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:35:306 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:35:310 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:35:310 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:35:332 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:35:332 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:35:336 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:35:336 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:35:339 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:35:339 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:19:35:342 [pid=1742911 tid=1742911] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:19:35:342 [pid=1742911 tid=1742911] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:18:473 [pid=1743795 tid=1743825] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:32:18:474 [pid=1743795 tid=1743826] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:32:18:474 [pid=1743795 tid=1743827] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:32:18:474 [pid=1743795 tid=1743828] ERROR  0:60 numa_run_on_node encountered error for node 1 errno 22 hence not affinitizing
+ 18-06-2024 16:32:18:581 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:18:581 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:21:193 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:21:193 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:22:578 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:22:578 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:24:34 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:24:34 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:24:37 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:24:37 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:24:60 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:24:60 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:24:63 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:24:63 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:24:66 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:24:66 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:32:24:69 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:32:24:69 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:00:270 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:00:270 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:02:577 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:02:577 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:03:930 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:03:930 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:54:151 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:54:151 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:54:155 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:54:155 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:54:159 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:54:159 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:54:162 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:54:162 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:54:165 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:54:165 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 16:54:54:168 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 16:54:54:168 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:09:42:650 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:09:42:650 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:12:45:890 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:12:45:890 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:13:03:110 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:13:03:110 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:13:31:791 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:13:31:791 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:13:32:739 [pid=1743795 tid=1744079] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:13:32:739 [pid=1743795 tid=1744079] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:13:59:916 [pid=1743795 tid=1744080] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:13:59:916 [pid=1743795 tid=1744080] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
+ 18-06-2024 17:15:45:668 [pid=1743795 tid=1743795] ERROR  cufio-fs:11 NFS NVFS symbols not found or unexpected module!!
+ 18-06-2024 17:15:45:668 [pid=1743795 tid=1743795] NOTICE  cufio:292 cuFileHandleRegister GDS not supported or disabled by config, using cuFile posix read/write with compat mode enabled
