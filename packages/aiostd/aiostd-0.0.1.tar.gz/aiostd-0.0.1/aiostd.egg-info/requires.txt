@@ -1,0 +1,9 @@
+typing_extensions
+
+[dev]
+pre-commit
+wheel
+twine
+build
+pytest
+pytest-cov

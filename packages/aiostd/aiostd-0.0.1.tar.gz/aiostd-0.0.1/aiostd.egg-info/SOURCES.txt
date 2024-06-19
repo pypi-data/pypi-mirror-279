@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+aiostd/__init__.py
+aiostd.egg-info/PKG-INFO
+aiostd.egg-info/SOURCES.txt
+aiostd.egg-info/dependency_links.txt
+aiostd.egg-info/requires.txt
+aiostd.egg-info/top_level.txt
