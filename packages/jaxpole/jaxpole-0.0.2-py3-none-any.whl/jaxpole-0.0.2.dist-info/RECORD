@@ -1,0 +1,10 @@
+jaxpole/__init__.py,sha256=QvlVh4JTl3JL7jQAja76yKtT-IvF4631ASjWY1wS6AQ,22
+jaxpole/_modidx.py,sha256=xH0Fvb_pemM-wppDZM-RrbROM7kf0lX5FPK98n65Oek,1146
+jaxpole/filter.py,sha256=IlpuC8FiImSPKVfa91ILg6g37ueZvFvucljNA5DhQvA,4204
+jaxpole/test_grad.py,sha256=nrUR8jcpvA1bN0CUU8NJvB-kZNn9QibBXZRs9UEpycc,1825
+jaxpole-0.0.2.dist-info/LICENSE,sha256=xV8xoN4VOL0uw9X8RSs2IMuD_Ss_a9yAbtGNeBWZwnw,11337
+jaxpole-0.0.2.dist-info/METADATA,sha256=tzetyKznWKpMQk0JfgUtRxyZr0T43TyuYkdGx53cqB4,1623
+jaxpole-0.0.2.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+jaxpole-0.0.2.dist-info/entry_points.txt,sha256=WWNJpWIL1gJRy7ryRDxqD2sUMewwwC3IfdKMoSJnTUk,36
+jaxpole-0.0.2.dist-info/top_level.txt,sha256=yZi6kS-skaSB5V7VGS6Xg_BE1IgEXZarrnBAJ3mJ378,8
+jaxpole-0.0.2.dist-info/RECORD,,
