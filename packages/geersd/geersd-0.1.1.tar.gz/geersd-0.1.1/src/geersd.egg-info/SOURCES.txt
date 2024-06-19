@@ -1,0 +1,17 @@
+.gitignore
+LICENSE
+README.md
+dev-environment.yml
+pyproject.toml
+.github/workflows/python-publish.yml
+docs/examples/01_sentinel1_dataset.ipynb
+docs/examples/02_sentinel2_datasets.ipynb
+docs/examples/03_alos_example.ipynb
+docs/examples/04_NASADEM_example.ipynb
+src/geersd.py
+src/geersd.egg-info/PKG-INFO
+src/geersd.egg-info/SOURCES.txt
+src/geersd.egg-info/dependency_links.txt
+src/geersd.egg-info/requires.txt
+src/geersd.egg-info/top_level.txt
+tests/test_rsd.py
