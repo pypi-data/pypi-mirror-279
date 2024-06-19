@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PyTermUtils"
+version = "0.0.0"
+authors = [
+  { name="Amit Kumar", email="amitkr4538@gmail.com" },
+]
+description = "A Python library for ANSI color formatting for terminal/console output"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/amitkr000/PyTermUtils"
+Issues = "https://github.com/amitkr000/PyTermUtils/issues"

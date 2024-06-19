@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/PyTermUtils/PyTermUtils.py
+src/PyTermUtils/__init__.py
+src/PyTermUtils/utils_enum.py
+src/PyTermUtils.egg-info/PKG-INFO
+src/PyTermUtils.egg-info/SOURCES.txt
+src/PyTermUtils.egg-info/dependency_links.txt
+src/PyTermUtils.egg-info/top_level.txt
+test/test.py
