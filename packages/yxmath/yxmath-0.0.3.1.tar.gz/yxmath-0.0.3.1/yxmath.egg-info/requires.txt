@@ -1,0 +1,8 @@
+interlap>=0.2.6
+networkx>=2.4
+yxutil>=0.0.1
+pingouin>=0.2.7
+fitter>=1.2.3
+scipy>=1.4.1
+numpy>=1.18.1
+matplotlib>=3.5.0
