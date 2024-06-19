@@ -1,0 +1,16 @@
+# global
+*.pyc
+*.pyo
+*~
+__pycache__
+
+# /
+/.coverage
+/.tox
+/build
+/coverage
+/dist
+/*.egg
+/*.egg-info
+/node_modules
+/muninplot/static
