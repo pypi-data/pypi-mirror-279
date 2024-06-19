@@ -1,0 +1,2 @@
+import{d as r,W as n,c as s,g as a,h as u,o as p,j as t,k as o,dg as m,dh as c}from"./index-Ba3ionci.js";import{u as _}from"./usePageTitle-B8-40T7W.js";const P=r({__name:"WorkPoolQueueCreate",setup(k){const e=n("workPoolName");return _("Create Work Pool Queue"),(d,f)=>{const l=u("p-layout-default");return p(),s(l,null,{header:a(()=>[t(o(m),{"work-pool-name":o(e)},null,8,["work-pool-name"])]),default:a(()=>[t(o(c),{"work-pool-name":o(e)},null,8,["work-pool-name"])]),_:1})}}});export{P as default};
+//# sourceMappingURL=WorkPoolQueueCreate-CkRewe10.js.map
