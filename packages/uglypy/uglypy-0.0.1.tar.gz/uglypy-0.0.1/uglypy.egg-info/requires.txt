@@ -1,0 +1,11 @@
+beautifulsoup4
+feedparser
+nltk
+numpy
+openai
+pyyaml
+requests
+scikit-learn
+spacy
+tqdm
+xmltodict
