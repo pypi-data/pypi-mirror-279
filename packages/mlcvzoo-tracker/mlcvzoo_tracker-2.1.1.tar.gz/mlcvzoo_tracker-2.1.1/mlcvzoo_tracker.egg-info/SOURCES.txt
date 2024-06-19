@@ -1,0 +1,13 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+mlcvzoo_tracker/__init__.py
+mlcvzoo_tracker/annotation_utils.py
+mlcvzoo_tracker/configuration.py
+mlcvzoo_tracker/hungarian_image_tracker.py
+mlcvzoo_tracker/image_track.py
+mlcvzoo_tracker/py.typed
+mlcvzoo_tracker/sized_dict.py
+mlcvzoo_tracker/types.py
