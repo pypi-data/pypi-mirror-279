@@ -1,0 +1,2 @@
+from hansken_extraction_plugin import __version__
+GRPC_API_VERSION = __version__

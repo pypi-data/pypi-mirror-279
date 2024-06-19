@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: hansken_extraction_plugin
+Version: 0.8.0
+Summary: Python API to implement Hansken extraction plugins
+Home-page: https://netherlandsforensicinstitute.github.io/hansken-extraction-plugin-sdk-documentation/
+Author: Netherlands Forensic Institute
+Author-email: hansken-support@nfi.nl
+License: Apache License, Version 2.0
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8
+Requires-Dist: docker >=7.0.0
+Requires-Dist: grpcio >=1.63.0
+Requires-Dist: hansken >=2024.4.17
+Requires-Dist: logbook >=1.7.0.post0
+Requires-Dist: protobuf >=5.26.1
+Requires-Dist: pytz >=2024.1
+Requires-Dist: typing-extensions >=4.12.2
+
