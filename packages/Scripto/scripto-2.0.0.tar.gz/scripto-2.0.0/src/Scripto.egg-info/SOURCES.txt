@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+scripto.VERSION
+setup.cfg
+src/Scripto.egg-info/PKG-INFO
+src/Scripto.egg-info/SOURCES.txt
+src/Scripto.egg-info/dependency_links.txt
+src/Scripto.egg-info/top_level.txt
+src/scripto/ArgParserUtils.py
+src/scripto/FuncUtils.py
+src/scripto/__init__.py
+src/scripto/app.py
+src/scripto/wrap/__main__.py
