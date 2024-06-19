@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: PyUI3
+Version: 3.0.0
+Summary: WinUI3 with Python!
+Author-email: Johnny Konczal <johndrostan@outlook.com>
+Description-Content-Type: text/markdown
+Requires-Dist: win32more
+Requires-Dist: tk
+
+# PyUi3
+WinUI3 for Python!
+<br>
+[![Upload Python Package](https://github.com/jhi2/PyUi3/actions/workflows/python-publish.yml/badge.svg)](https://github.com/jhi2/PyUi3/actions/workflows/python-publish.yml)
+
