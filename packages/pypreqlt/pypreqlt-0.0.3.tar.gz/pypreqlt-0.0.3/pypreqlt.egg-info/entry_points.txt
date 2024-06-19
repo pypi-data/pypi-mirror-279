@@ -1,0 +1,2 @@
+[console_scripts]
+preqlt = preqlt.scripts.main:main
