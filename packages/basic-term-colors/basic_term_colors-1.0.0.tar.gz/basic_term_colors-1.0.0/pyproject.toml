@@ -1,0 +1,15 @@
+[project]
+name = "basic_term_colors"
+version = "1.0.0"
+authors = [
+  { name="Patrick Dumford"},
+]
+description = "A small package to color/format your terminal"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
