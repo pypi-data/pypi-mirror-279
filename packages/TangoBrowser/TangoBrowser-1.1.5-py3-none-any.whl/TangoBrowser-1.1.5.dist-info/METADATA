@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: TangoBrowser
+Version: 1.1.5
+Summary: Python package to search archived attributes
+Home-page: UNKNOWN
+Author: Jose A. Ramos
+Author-email: ct4@cells.es
+License: GPLv3+
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: setuptools >=1.1
+Requires-Dist: fandango >=15.0.0
+Requires-Dist: PyTango
+Requires-Dist: taurus
+Requires-Dist: pyhdbpp
+Requires-Dist: taurus-pyqtgraph
+
+
+This package allows to:
+* Search for archived and not archived attributes.
+* Plot the attributes using pyqtgraph.
+
