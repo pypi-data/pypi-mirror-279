@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: tiegcmpy
+Version: 1.5.0
+Summary: A Python3 post processing tool for TIE-GCM
+Home-page: https://github.com/NCAR/tiegcm
+Author: Nikhil Rao
+Author-email: nikhilr@ucar.edu
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: cartopy
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: xarray
+
+# TIEGCMPY
+
+tiegcmpy is a tool used for TIE-GCM post processing and plot generation.
+
+## Updated documentation on readthedocs
+
+## https://tiegcmpy.readthedocs.io
+
