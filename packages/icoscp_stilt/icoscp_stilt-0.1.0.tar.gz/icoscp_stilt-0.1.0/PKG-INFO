@@ -1,0 +1,70 @@
+Metadata-Version: 2.3
+Name: icoscp_stilt
+Version: 0.1.0
+Summary: Access to ICOS STILT calculation results available from https://stilt.icos-cp.eu/viewer/
+Project-URL: Homepage, https://www.icos-cp.eu/
+Project-URL: Source, https://github.com/ICOS-Carbon-Portal/pylib/icoscp_stilt
+Project-URL: Documentation, https://icos-carbon-portal.github.io/pylib/icoscp_stilt/
+Project-URL: STILT_Viewer, https://stilt.icos-cp.eu/viewer/
+Author-email: Claudio D'Onofrio <claudio.donofrio@nateko.lu.se>, Zois Zogopoulos <zois.zogopoulos@nateko.lu.se>, Klara Broman <klara.broman@nateko.lu.se>, Oleg Mirzov <oleg.mirzov@nateko.lu.se>, ICOS Carbon Portal <info@icos-cp.eu>
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Atmospheric Science
+Classifier: Topic :: Scientific/Engineering :: GIS
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Visualization
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Requires-Dist: folium
+Requires-Dist: icoscp-core
+Requires-Dist: netcdf4
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: tqdm
+Requires-Dist: xarray
+Description-Content-Type: text/markdown
+
+# icoscp_stilt
+
+Python API for access to STILT calculation results from a service hosted by
+ICOS Carbon Portal (browser access requires ATMO ACCESS login): [https://stilt.icos-cp.eu/viewer/](https://stilt.icos-cp.eu/viewer/)
+
+## Installation
+The latest release is available on [https://pypi.org/project/icoscp_stilt/](
+https://pypi.org/project/icoscp_stilt/). You can simply run:
+
+```shell
+pip install icoscp_stilt
+```
+
+We would encourage you to use a virtual environment for Python to test this
+library.  
+For example with [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+you can create a new environment with:
+
+```shell
+conda create -n icos python
+activate icos
+pip install icoscp_stilt
+```
+
+or with Python
+
+```shell
+python3 -m venv icos
+source venv/bin/activate
+pip install icoscp_stilt
+```
+
+## Documentation
+The full documentation about the library and all the modules are available at
+[https://icos-carbon-portal.github.io/pylib/icoscp_stilt/](
+https://icos-carbon-portal.github.io/pylib/icoscp_stilt/)
