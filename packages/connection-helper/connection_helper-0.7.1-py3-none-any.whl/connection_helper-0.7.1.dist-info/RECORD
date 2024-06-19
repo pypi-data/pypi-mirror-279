@@ -1,0 +1,8 @@
+connection_helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+connection_helper/pgp.py,sha256=milLQKvLioywHJv_06Wcq8On1-QV0PArq4a7pRZlTMU,7331
+connection_helper/sql.py,sha256=jKGQlbjOtL1zyzohf8xVuzhhhbUXtmvAe0mVe1RiHfU,10094
+connection_helper-0.7.1.dist-info/LICENSE,sha256=xVQtLFqUCCZ_YA8UDfoi0Q7CB1A6JSvMji_12msily0,1074
+connection_helper-0.7.1.dist-info/METADATA,sha256=rmz0UwmkCOIXM9Mv_JJZ0aBkzW7H_ylmfRlj7_EhUFA,3969
+connection_helper-0.7.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+connection_helper-0.7.1.dist-info/top_level.txt,sha256=bvHvpf5Ts227RRFqxrR0hnaeLlGt8CJxzIYayIPYNO8,18
+connection_helper-0.7.1.dist-info/RECORD,,
