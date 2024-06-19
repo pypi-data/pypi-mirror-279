@@ -1,0 +1,10 @@
+tiny_model/__init__.py,sha256=aFgfPof2MCXM1imJ-9Df75aISZbjnEIaCIi2ALq8l-g,128
+tiny_model/lm.py,sha256=dQ9_B9PuHemwY22gwgPe99XVCG9cb-BHlq0jT_WEOrc,7853
+tiny_model/lm_modules.py,sha256=H8YNyGnfj3e5xxFLHcGofV0DhHPNwErIzJKhjKxOyF0,4917
+tiny_model/sparse_mlp.py,sha256=N18ys62elM5KDlu23--yfpLVDuL0nSbWyjl8kYjbk8Y,1295
+tiny_model/tokenization/neo_tok_ids_to_ts.pt,sha256=1XWvK2cPzB9Onzh1Od7qMbr3NpMcnsOekIuM6GJnvFM,403278
+tiny_model/tokenization/tokenization.py,sha256=gDsejfLE4ToHKrQ4kk20WsWMJlwbTPhgG28X5gZCjn0,6953
+tiny_model/tokenization/ts_tok_ids_to_neo.pt,sha256=uvKel_o3f6Syj2jRSYQ05VrjJzkhjBZoGYfRo2yksbU,81230
+tinystoriesmodel-0.1.4.dist-info/METADATA,sha256=-sACLNSqcNXZq_tNfQ0-51FILQkMDLZIwka0ifR2COE,2875
+tinystoriesmodel-0.1.4.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+tinystoriesmodel-0.1.4.dist-info/RECORD,,
