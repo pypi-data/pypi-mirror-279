@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/distfuse.egg-info/PKG-INFO
+src/distfuse.egg-info/SOURCES.txt
+src/distfuse.egg-info/dependency_links.txt
+src/distfuse.egg-info/requires.txt
+src/distfuse.egg-info/top_level.txt

@@ -1,0 +1,5 @@
+scikit-learn>=1.5.0
+sentence_transformers
+numpy
+openai
+cohere
