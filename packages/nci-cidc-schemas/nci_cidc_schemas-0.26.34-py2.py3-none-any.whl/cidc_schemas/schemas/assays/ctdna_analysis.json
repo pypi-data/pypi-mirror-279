@@ -1,0 +1,52 @@
+{
+  "$schema": "metaschema/strict_meta_schema.json#",
+  "$id": "ctdna_analysis",
+  "title": "ctDNA analysis",
+  "type": "object",
+  "description": "Combined analysis files for the ctDNA assay.",
+
+  "definitions": {
+    "sample_analysis": {
+      "type": "object",
+      "description": "ctDNA assay output files for a tumor normal pair of samples.",
+
+      "required": [
+        "run_id",
+        "tumor"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "description": "An id used as if this was a paired analysis run."
+        },
+        "error": { "$ref": "assays/wes_core.json#properties/error" },
+        "tumor": { "$ref": "assays/wes_assay.json#definitions/sample_analysis" },
+        "comments": {
+          "type": "string",
+          "description": "Comments on the tumor-only analysis run."
+        }
+      }
+    }
+  },
+
+  "required": [],
+  "additionalProperties": false,
+  "properties": {
+    "runs": {
+      "type": "array",
+      "items": {
+        "$ref": "assays/ctdna_analysis.json#definitions/sample_analysis"
+      },
+      "mergeStrategy": "arrayMergeById",
+      "mergeOptions": {
+        "$comment": "TODO fix to merge by a pair of normal and tumor ids. It requires improvements to the merge strategy code.",
+        "idRef": "/run_id"
+      }
+    },
+    "batch_id": {"$ref": "assays/tcr_assay.json#properties/batch_id"},
+    "excluded_samples": {
+      "$ref": "assays/components/excluded_samples.json"
+    }
+  }
+}
