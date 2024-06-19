@@ -1,0 +1,6 @@
+selenium==3.141.0
+urllib3==1.26.12
+requests
+chromedriver-autoinstaller
+fake-useragent
+tqdm

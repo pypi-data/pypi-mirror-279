@@ -1,0 +1,9 @@
+README.md
+setup.py
+smcode/__init__.py
+smcode/selenium.py
+smcode.egg-info/PKG-INFO
+smcode.egg-info/SOURCES.txt
+smcode.egg-info/dependency_links.txt
+smcode.egg-info/requires.txt
+smcode.egg-info/top_level.txt
