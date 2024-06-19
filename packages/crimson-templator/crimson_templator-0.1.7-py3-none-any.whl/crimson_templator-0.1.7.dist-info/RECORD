@@ -1,0 +1,10 @@
+crimson/templator/__init__.py,sha256=y9Xh86Prj0ry_7PQ-BgiJIR3smDhvhGFOj9V29PjgfM,5380
+crimson/templator/__init__implementation.py,sha256=G0bLHKCivPDtySNy0uj2YApibdv6hJ25H1Unsa2BlGE,3063
+crimson/templator/_generate_combination.py,sha256=PlUuxcF0orccW8Nbbei2QfkgBMqkIPglGuRBxujvZQs,1991
+crimson/templator/extract.py,sha256=WBGaHk459t7bryfGx2sQ61UCXaskR5wcuWGZs3z--Wc,333
+crimson/templator/utils.py,sha256=JjVGjvhV80DS4xl0llzoqImMJnlCWtmiN86PSlphE4I,2277
+crimson_templator-0.1.7.dist-info/LICENSE,sha256=NAak_CnMzIX1nKL0QMNQzLO3acKR6tIJ1ErfKSeFkv4,1067
+crimson_templator-0.1.7.dist-info/METADATA,sha256=hebujj8BjvEPExXstKf8Zfv19w4OiVgc0m5ASzwxBg0,639
+crimson_templator-0.1.7.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+crimson_templator-0.1.7.dist-info/top_level.txt,sha256=UjHBjSiQhr7eEWh0dB9e3WZ617y7vLEywXhGYfnzbw8,8
+crimson_templator-0.1.7.dist-info/RECORD,,
