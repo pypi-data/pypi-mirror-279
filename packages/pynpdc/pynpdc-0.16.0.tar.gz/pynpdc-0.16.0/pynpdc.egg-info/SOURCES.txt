@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+pynpdc/__init__.py
+pynpdc/auth.py
+pynpdc/dataset.py
+pynpdc/exception.py
+pynpdc/py.typed
+pynpdc/types.py
+pynpdc.egg-info/PKG-INFO
+pynpdc.egg-info/SOURCES.txt
+pynpdc.egg-info/dependency_links.txt
+pynpdc.egg-info/requires.txt
+pynpdc.egg-info/top_level.txt
+tests/test_auth.py
+tests/test_dataset.py
