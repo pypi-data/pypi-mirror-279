@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: StdioBridge
+Version: 1.3.1
+Summary: A StdioBridge package.
+Home-page: https://github.com/SergeiKrivko
+Author: SergeiKrivko
+License: MIT License
+        
+        Copyright (c) 2024 SergeiKrivko
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# StdioBridge
+
+## Описание:
+
+StdioBridge является универсальной протокол-библиотекой, предназначенной для связывания программ через стандартные вводы и выводы (stdin и stdout), предоставляя внешний интерфейс, схожий с HTTP. StdioBridge облегчает создание межпрограммного общения при минимальных накладных расходах и обеспечивает простоту интеграции с существующими приложениями.
+
+## Основные возможности:
+
+- Простота подключения и настройки без необходимости использования сложных веб-серверов или API;
+- Поддержка различных языков программирования, обеспечивая максимальную гибкость при интеграции;
+- Функциональность по преобразованию данных между стандартными вводом/выводом (stdin/stdout) и HTTP-подобным интерфейсом для бесшовного соединения между программами;
+- Возможность расширения и дополнения функциональности в соответствии с требованиями вашего проекта;
+- Надежность и гарантированная производительность благодаря оптимальной архитектуре и использованию системных ресурсов.
+
+## Требования:
+
+- Python версии 3.10 и выше
+
+## Установка:
+
+Установка StdioBridge осуществляется через pip:
+
+```bash
+pip install stdiobridge
+```
+
+## Лицензия:
+
+StdioBridge доступна под лицензией MIT.
