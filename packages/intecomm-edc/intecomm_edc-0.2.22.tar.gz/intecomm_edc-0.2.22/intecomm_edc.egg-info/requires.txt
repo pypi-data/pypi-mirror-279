@@ -1,0 +1,9 @@
+edc==0.5.90
+django_pandas
+beautifulsoup4
+intecomm-eligibility==0.1.10
+intecomm-form-validators==0.1.54
+intecomm-rando==0.1.25
+edc-next-appointment
+edc_microscopy
+Django==4.2.11
