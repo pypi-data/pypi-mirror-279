@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: rpis_lib
+Version: 0.0.4
+Summary: Library for Statistic and Probability written for collage course.
+Author: jaanonim
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: scipy >=1.13.1
+
+# RPIS Lib
+
+Python library for Statistic and Probability written for collage course.
+
+## Documentation
+
+[Here](docs/docs.md) is the documentation for the library.
