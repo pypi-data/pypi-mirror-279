@@ -1,0 +1,42 @@
+numpy
+
+[all]
+pathos
+paderbox
+psutil
+diskcache
+dill
+humanfriendly
+mock
+
+[all:python_version == "3.7"]
+IPython<8.0
+
+[all:python_version == "3.8"]
+IPython<8.13.0
+
+[all:python_version >= "3.9"]
+IPython
+
+[cache]
+humanfriendly
+psutil
+diskcache
+
+[cli]
+paderbox
+
+[cli:python_version == "3.7"]
+IPython<8.0
+
+[cli:python_version == "3.8"]
+IPython<8.13.0
+
+[cli:python_version >= "3.9"]
+IPython
+
+[test]
+paderbox
+mock
+dill
+pathos
