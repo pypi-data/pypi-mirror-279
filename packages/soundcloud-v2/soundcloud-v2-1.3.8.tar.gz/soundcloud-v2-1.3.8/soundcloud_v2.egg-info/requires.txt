@@ -1,0 +1,8 @@
+dacite
+python-dateutil>=2.8.2
+requests
+
+[test]
+coveralls
+pytest
+pytest-dotenv
