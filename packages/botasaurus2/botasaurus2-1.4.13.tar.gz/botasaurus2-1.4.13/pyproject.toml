@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "botasaurus2"
+version = "1.4.13"
+description = "Patching fork of botasaurus, The All in One Framework to build Awesome Scrapers."
+authors = ["Chetan Jain <chetan@omkar.cloud>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "botasaurus", from = "."}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+packaging = "^24.0"
+psutil = "^5.9.8"
+javascript-fixes = "^1.1.21"
+requests = "^2.31.0"
+joblib = "^1.3.2"
+beautifulsoup4 = "^4.11.2"
+chromedriver-autoinstaller-fix = "^1.0.6"
+cloudscraper = "^1.2.71"
+selenium = "^4.9.0"
+botasaurus-proxy-authentication = "^1.0.12"
+capsolver-extension-python = "^1.0.1"
+lxml = "^5.1.0"
+aigents = ">=0.7.2"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+flake8 = "^7.0.0"
+ipykernel = "^6.29.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
