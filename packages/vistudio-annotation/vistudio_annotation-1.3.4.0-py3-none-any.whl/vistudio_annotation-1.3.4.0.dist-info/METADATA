@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: vistudio-annotation
+Version: 1.3.4.0
+Summary: sdk in python for annotation
+Home-page: https://console.cloud.baidu-int.com/devops/icode/repos/baidu/bce-vistudio/vistudio-annotation/tree/master/sdk
+Author: yangtingyu01
+Author-email: yangtingyu01@baidu.com
+License: MIT
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Requires-Dist: bce-python-sdk ==0.8.87
+Requires-Dist: multidict ==6.0.4
+Requires-Dist: ray[all]
+Requires-Dist: pymongo
+Requires-Dist: pymongoarrow
+Requires-Dist: pydantic
+Requires-Dist: windmill-compute
+Requires-Dist: windmill-artifact
+Requires-Dist: windmill-train
+Requires-Dist: gaea-logit
+Requires-Dist: bcelogger
+Requires-Dist: xxhash
+Requires-Dist: opencv-python-headless
+Requires-Dist: pycocotools
+Requires-Dist: pywindmill
+Requires-Dist: gaea-tracker
+Requires-Dist: gaea-operator
+
