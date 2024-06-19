@@ -1,0 +1,8 @@
+sourmash<5,>=4.8.8
+sourmash_utils>=0.2
+matplotlib
+numpy
+scipy
+scikit-learn
+seaborn
+upsetplot
