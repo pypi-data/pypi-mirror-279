@@ -1,0 +1,10 @@
+lektricowifi/__init__.py,sha256=EqPoT1hPGJOah8KEnX5pRgNVqMjli549zw6ZGZpfMvs,365
+lektricowifi/exceptions.py,sha256=MZf3J3U9qBnVfAbJpK8-D3d8WTEcwd0X8Q8Lwq0qiNA,214
+lektricowifi/lektricowifi.py,sha256=ZQKlNHz2OfOGxIwUU3MVKEclKgCenoDZqKpL7kWpKjU,16101
+lektricowifi/models.py,sha256=44tXkxiYJtDnjhlthBsyLxlYcKW0RXBHV8t0PMYkXHg,1592
+lektricowifi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lektricowifi-0.0.33.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+lektricowifi-0.0.33.dist-info/METADATA,sha256=1e4EJUQ-koWdiDi2VEcX2ojasM6P144KEcf35mnY6dU,5948
+lektricowifi-0.0.33.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+lektricowifi-0.0.33.dist-info/top_level.txt,sha256=Bph4Atrd0_BDR6UAqRUdhU1gLjs2wXiNjkt92qNdKa4,13
+lektricowifi-0.0.33.dist-info/RECORD,,
