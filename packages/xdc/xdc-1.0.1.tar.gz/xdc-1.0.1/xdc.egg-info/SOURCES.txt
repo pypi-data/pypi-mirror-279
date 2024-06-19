@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+xdc/__init__.py
+xdc/xrc20.py
+xdc.egg-info/PKG-INFO
+xdc.egg-info/SOURCES.txt
+xdc.egg-info/dependency_links.txt
+xdc.egg-info/requires.txt
+xdc.egg-info/top_level.txt
