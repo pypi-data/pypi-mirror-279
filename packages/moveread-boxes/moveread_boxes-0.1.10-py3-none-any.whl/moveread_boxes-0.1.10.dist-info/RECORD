@@ -1,0 +1,9 @@
+moveread/boxes/__init__.py,sha256=N9qtzfftNziIGO31nkVI-XXhkl4gBGwuVe9BsLQnpco,155
+moveread/boxes/__init__.pyi,sha256=LiQVWsfJBqazCHGQ9A6qZiZukVJnk-xErxAta03rlfg,349
+moveread/boxes/annotations.py,sha256=rd2XH6QkcUHfEUJYvasjBP0mbdm-RMwrtdHzOClqzts,1548
+moveread/boxes/export_.py,sha256=-wAt_8TSuO2Vz6lgY6rgnJidSD3sjFlR9WF9N7b5Erw,503
+moveread/boxes/model_extract.py,sha256=gu77b5TrRy3Zi8G2q283ndKu7M4DZGLUEY6xiUq41_Y,1936
+moveread_boxes-0.1.10.dist-info/METADATA,sha256=uEn26UT3FQpK8aIc3-3D385ZtjnYhhd4PxIsVVvmbH4,1411
+moveread_boxes-0.1.10.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+moveread_boxes-0.1.10.dist-info/top_level.txt,sha256=Nf4zr37sbhc5sbPztUq8FfXD7iyRYJ9bjMTU09166ig,9
+moveread_boxes-0.1.10.dist-info/RECORD,,
