@@ -1,0 +1,11 @@
+LICENSE
+README.md
+llm_deepseek.py
+pyproject.toml
+llm_deepseek.egg-info/PKG-INFO
+llm_deepseek.egg-info/SOURCES.txt
+llm_deepseek.egg-info/dependency_links.txt
+llm_deepseek.egg-info/entry_points.txt
+llm_deepseek.egg-info/requires.txt
+llm_deepseek.egg-info/top_level.txt
+tests/test_deepseek.py

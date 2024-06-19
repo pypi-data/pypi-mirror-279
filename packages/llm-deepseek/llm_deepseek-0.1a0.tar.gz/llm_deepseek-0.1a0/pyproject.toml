@@ -1,0 +1,25 @@
+[project]
+name = "llm-deepseek"
+version = "0.1a0"
+description = "Access deepseek.com models via API"
+readme = "README.md"
+authors = [{name = "abrasumente"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "llm"
+]
+
+[project.urls]
+Homepage = "https://github.com/abrasumente233/llm-deepseek"
+Changelog = "https://github.com/abrasumente233/llm-deepseek/releases"
+Issues = "https://github.com/abrasumente233/llm-deepseek/issues"
+CI = "https://github.com/abrasumente233/llm-deepseek/actions"
+
+[project.entry-points.llm]
+deepseek = "llm_deepseek"
+
+[project.optional-dependencies]
+test = ["pytest"]
