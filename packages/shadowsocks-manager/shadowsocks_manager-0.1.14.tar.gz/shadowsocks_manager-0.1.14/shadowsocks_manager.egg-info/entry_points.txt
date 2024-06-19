@@ -1,0 +1,7 @@
+[console_scripts]
+ssm = shadowsocks_manager.__main__:main
+ssm-celery = shadowsocks_manager.utils.celery:main
+ssm-createsuperuser = shadowsocks_manager.utils.createsuperuser:main
+ssm-dotenv = shadowsocks_manager.utils.dotenv:main
+ssm-manage = shadowsocks_manager.utils.manage:main
+ssm-uwsgi = shadowsocks_manager.utils.uwsgi:main
