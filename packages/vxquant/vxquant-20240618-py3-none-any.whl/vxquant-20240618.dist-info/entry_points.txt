@@ -1,0 +1,3 @@
+[console_scripts]
+vxcollector=vxcollector.__main__:main
+

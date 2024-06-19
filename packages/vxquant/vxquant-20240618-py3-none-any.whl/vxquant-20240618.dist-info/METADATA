@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: vxquant
+Version: 20240618
+Summary: 一个简单、易用、面向中国股市实盘的python量化交易框架
+Home-page: https://gitee.com/vxquant/vxquant
+License: MIT
+Keywords: quant,tools
+Author: vex1023
+Author-email: vex1023@qq.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Dist: polars
+Requires-Dist: tqdm
+Requires-Dist: vxutils
+Description-Content-Type: text/markdown
+
+# vxquant
