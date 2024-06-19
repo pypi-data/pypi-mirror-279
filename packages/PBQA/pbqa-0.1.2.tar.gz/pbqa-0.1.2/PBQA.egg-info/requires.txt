@@ -1,0 +1,4 @@
+PyYAML
+requests
+qdrant-client
+sentence-transformers
