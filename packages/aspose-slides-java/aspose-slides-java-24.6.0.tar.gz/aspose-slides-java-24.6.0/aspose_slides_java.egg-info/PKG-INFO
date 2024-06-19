@@ -1,0 +1,149 @@
+Metadata-Version: 2.1
+Name: aspose-slides-java
+Version: 24.6.0
+Summary: A powerful library for manipulating and converting PowerPoint (PPT, PPTX, ODT, OTP, POT, POTX, PPS, PPSX) files.
+Home-page: https://products.aspose.com/slides/python-java/
+Author: Aspose
+License: https://company.aspose.com/legal/eula
+Project-URL: Homepage, https://products.aspose.com/slides/python-java/
+Project-URL: API Reference, https://reference.aspose.com/slides/python-java/
+Project-URL: Blog, https://blog.aspose.com/category/slides/
+Project-URL: Docs, https://docs.aspose.com/slides/python-java/
+Project-URL: Free Support, https://forum.aspose.com/c/slides
+Project-URL: Release Notes, https://releases.aspose.com/slides/python-java/release-notes/2024/aspose-slides-for-python-via-java-24-6-release-notes/
+Project-URL: Search, https://search.aspose.com/
+Project-URL: Temporary License, https://purchase.aspose.com/temporary-license
+Description: # Presentation Manipulation Python API
+        
+        ![banner](https://products.aspose.com/slides/images/aspose_slides-for-python-via-java-banner.png)
+        
+        [Product Page](https://products.aspose.com/slides/python-java/) | [Docs](https://docs.aspose.com/slides/python-java/) | [Demos](https://products.aspose.app/slides/family) | [API Reference](https://reference.aspose.com/slides/python-java/) | [Blog](https://blog.aspose.com/category/slides/) | [Search](https://search.aspose.com/) | [Free Support](https://forum.aspose.com/c/slides) | [Release Notes](https://releases.aspose.com/slides/python-java/release-notes/) | [Temporary License](https://purchase.aspose.com/temporary-license)
+        
+        [Aspose.Slides for Python via Java](https://products.aspose.com/slides/python-java/) is a powerful on-premise class library used for processing and working with presentations. With this API, developers and applications get to generate, modify, convert, render, print, and manipulate presentations without relying on Microsoft PowerPoint or other third-party applications and services. 
+        
+        Without having to install a PowerPoint program or any 3rd party component, you can use Aspose.Slides to build different types applications. For example, Aspose, using its own APIs, developed a [free web application](https://products.aspose.app/slides/import/pdf-to-powerpoint) that allows people to convert their PDF documents to PowerPoint Presentation online.
+        
+        >Aspose.Slides for Python requires you to use python programming language. For .NET, Java, C++, PHP and JavaScript languages, we recommend you get [Aspose.Slides for .NET](https://products.aspose.com/slides/net/), [Aspose.Slides for Java](https://products.aspose.com/slides/java/), [Aspose.Slides for C++](https://products.aspose.com/slides/cpp/), [Aspose.Slides for PHP via Java](https://products.aspose.com/slides/php-java/) and [Aspose.Slides for Node.js via Java](https://products.aspose.com/slides/nodejs-java/), respectively.
+        
+        ## Slides API Features
+        
+        Aspose.Slides for Python via Java provides these popular features:
+        - Loading, opening, and viewing presentations 
+        - Editing presentations
+        - Converting presentations to PDF, Word, JPG, HTML, GIF, SVG, and many other formats
+        - Rendering and printing presentations
+        - Encrypting and decrypting presentations; password-protecting presentations and removing passwords
+        - Manipulating presentation entities, such as master slides, shapes, charts, picture frames, audio frames, video frames, OLE, VBA macros, animations, etc.
+        
+        ## Platform Independence
+        
+        Aspose.Slides for Python via Java is platform-independent API and can be used on any platform (Windows, Linux and MacOS) where **Python**, **Java** and **jpype1 bridge** are installed.
+        
+        ## Get Started
+        
+        Ready to try Aspose.Slides for Python via Java?
+        
+        Please read detailed installation instructions - [Installing Aspose.Slides for Python for Java](https://docs.aspose.com/slides/python-java/installation/)
+        
+        Fetch the package and install **aspose-slides-java**. Run this command: `pip install aspose-slides-java`
+        
+        If you already have **aspose-slides-java** package installed and want to get the latest version,   
+        you have to run `pip install --upgrade aspose-slides-java` instead. 
+        
+        ## Create a Presentation (PPTX) from scratch in Python
+        
+        ```py
+        import jpype
+        import asposeslides
+        
+        jpype.startJVM()
+        
+        from asposeslides.api import Presentation, ShapeType, SaveFormat
+        
+        # Instantiate a Presentation object
+        presentation = Presentation()
+        
+        # Select first slide
+        slide = presentation.getSlides().get_Item(0)
+        
+        # Add new Line shape to slide
+        slide.getShapes().addAutoShape(ShapeType.Line, 50, 150, 300, 0)
+        
+        # Save the presentation as PPTX
+        presentation.save("newPresentation.pptx", SaveFormat.Pptx)
+        
+        jpype.shutdownJVM()
+        ```
+        
+        ## Convert a Presentation to PDF
+        
+        ```py
+        import jpype
+        import asposeslides
+        
+        jpype.startJVM()
+        
+        from asposeslides.api import Presentation, SaveFormat
+        
+        # Instantiate a Presentation object that represents a PPTX file
+        presentation = Presentation("presentation.pptx")
+        
+        # Save the presentation as PDF
+        presentation.save("outputPDF.pdf", SaveFormat.Pdf)
+        
+        jpype.shutdownJVM()
+        ```
+        
+        ## Import PDF and Save it as a Presentation
+        
+        ```py
+        import jpype
+        import asposeslides
+        
+        jpype.startJVM()
+        
+        from asposeslides.api import Presentation, SaveFormat
+        
+        # Instantiate a Presentation object that represents a PPTX file
+        presentation = Presentation()
+        
+        # Remove the first slide from a presentation
+        presentation.getSlides().removeAt(0)
+        
+        # Import the contents of a PDF file into a presentation.
+        presentation.getSlides().addFromPdf("welcome-to-powerpoint.pdf")
+        
+        # Save the presentation as PPTX
+        presentation.save("outputPresentation.pptx", SaveFormat.Pptx)
+        
+        jpype.shutdownJVM()
+        ```
+        
+        
+        [Product Page](https://products.aspose.com/slides/python-java/) | [Docs](https://docs.aspose.com/slides/python-java/) | [Demos](https://products.aspose.app/slides/family) | [API Reference](https://reference.aspose.com/slides/python-java/) | [Blog](https://blog.aspose.com/category/slides/) | [Search](https://search.aspose.com/) | [Free Support](https://forum.aspose.com/c/slides) | [Release Notes](https://releases.aspose.com/slides/python-java/release-notes/) | [Temporary License](https://purchase.aspose.com/temporary-license)
+Keywords: ppt,pptx,potx,pot,pps,ppsx,odt,otp,import,export,convert,edit,pdf,xps,swf,svg,html,html5,powerpoint,presentation
+Platform: Operating System :: Microsoft :: Windows
+Platform: Operating System :: POSIX
+Platform: Operating System :: Unix
+Platform: Operating System :: MacOS
+Classifier: License :: Other/Proprietary License
+Classifier: License :: Free To Use But Restricted
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Graphics :: Presentation
+Classifier: Topic :: Office/Business
+Classifier: Topic :: Office/Business :: Office Suites
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.7,<=3.12
+Description-Content-Type: text/markdown
