@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: continunet
+Version: 0.0.3
+Author: Hattie Stewart
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: astropy>=6.0
+Requires-Dist: numpy>=1.26
+Requires-Dist: keras>=3.3
+Requires-Dist: tensorflow>=2.16
+Requires-Dist: scikit-image>=0.23
+Requires-Dist: pandas>=2.2
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Provides-Extra: ci
+Requires-Dist: twine; extra == "ci"
+Requires-Dist: build; extra == "ci"
