@@ -1,0 +1,6 @@
+colorama
+pydantic
+tqdm
+
+[test]
+pytest
