@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: c7n_awscc
+Version: 0.1.23
+Summary: Cloud Custodian - AWS Cloud Control Provider
+Home-page: https://cloudcustodian.io
+License: Apache-2.0
+Author: Cloud Custodian Project
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: c7n (==0.9.38) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: click (==8.1.7) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: jsonpatch (==1.33) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: colorama (==0.4.6) ; python_version >= "3.8" and python_version < "4.0" and platform_system == "Windows"
+Requires-Dist: jsonpointer (==3.0.0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: argcomplete (==3.4.0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: boto3 (==1.34.128) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: docutils (==0.18.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: importlib-metadata (==6.11.0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: jsonschema (==4.22.0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: python-dateutil (==2.9.0.post0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: pyyaml (==6.0.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: referencing (==0.31.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: tabulate (==0.9.0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: urllib3 (==1.26.19) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: botocore (==1.34.128) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: jmespath (==1.0.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: s3transfer (==0.10.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: zipp (==3.19.2) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: attrs (==23.2.0) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: importlib-resources (==6.4.0) ; python_version >= "3.8" and python_version < "3.9"
+Requires-Dist: jsonschema-specifications (==2023.12.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: pkgutil-resolve-name (==1.3.10) ; python_version >= "3.8" and python_version < "3.9"
+Requires-Dist: rpds-py (==0.18.1) ; python_version >= "3.8" and python_version < "4.0"
+Requires-Dist: six (==1.16.0) ; python_version >= "3.8" and python_version < "4.0"
+Project-URL: Documentation, https://cloudcustodian.io/docs/
+Project-URL: Repository, https://github.com/cloud-custodian/cloud-custodian
+Description-Content-Type: text/markdown
+
+
+# Custodian AWS Cloud Control Provider
+
+
+Allows using custodian policies against aws cloud control api that underlies
+cloud formation. This allows for substantial resource coverage effectively
+everything that cloud formation supports.
+
+Resources support generic delete, update actions.
+
+Data files for the resources are downloaded at wheel build time.
+
