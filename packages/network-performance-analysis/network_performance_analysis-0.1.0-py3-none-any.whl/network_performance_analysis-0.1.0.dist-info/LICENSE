@@ -1,0 +1,24 @@
+
+from setuptools import setup, find_packages
+
+setup(
+    name='netmonitor',
+    version='0.1.0',
+    packages=find_packages(),
+    install_requires=[
+        'scapy',
+        'pandas',
+        'matplotlib'
+    ],
+    entry_points={
+        'console_scripts': [
+            'netmonitor=netmonitor.main:main'
+        ]
+    },
+    author='Bolla Phani Sai Divya Tej',
+    author_email='phanisaidivyatej@gmail.com',
+    description='A package for network monitoring and visualization',
+    license='MIT',
+    keywords='network monitoring visualization',
+    url='https://github.com/BollTej/NetMonitor',
+)

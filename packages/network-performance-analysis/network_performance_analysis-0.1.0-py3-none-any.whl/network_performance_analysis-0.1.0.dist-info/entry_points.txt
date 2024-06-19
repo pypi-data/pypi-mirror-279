@@ -1,0 +1,2 @@
+[console_scripts]
+network_analysis = network_performance_analysis.main:main
