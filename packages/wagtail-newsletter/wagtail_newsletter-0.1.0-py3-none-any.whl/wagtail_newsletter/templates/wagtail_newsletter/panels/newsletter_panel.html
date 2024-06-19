@@ -1,0 +1,81 @@
+{% load wagtailadmin_tags %}
+
+<div
+    class="wn-panel"
+    data-controller="wn-panel"
+    data-action="wn-test:submit@window->wn-panel#test"
+>
+    {% if error_message %}
+        <div class="help-block help-critical">
+            {% icon name="warning" %}
+            {{ error_message }}
+        </div>
+    {% endif %}
+
+    <div class="help-block help-info">
+        {% icon name="help" %}
+        These actions will save a new page revision.
+    </div>
+
+    <p>
+        <input
+            type="hidden"
+            name="newsletter-test-email"
+            data-wn-panel-target="testAddress"
+        >
+
+        <button
+            type="submit"
+            class="button button-secondary button-longrunning"
+            name="newsletter-action"
+            value="save_campaign"
+            data-controller="w-progress"
+            data-action="w-progress#activate"
+        >
+            {% icon name="spinner" %}
+            Save campaign to {{ backend_name }}
+        </button>
+
+        <button
+            type="button"
+            class="button button-secondary button-longrunning"
+            data-a11y-dialog-show="wn-test-dialog"
+            data-controller="w-progress"
+            data-wn-panel-target="testButton"
+        >
+            {% icon name="spinner" %}
+            Send test email
+        </button>
+
+        {% dialog icon_name="mail" id="wn-test-dialog" title="Test email" %}
+            <form
+                data-controller="wn-test"
+                data-action="wn-test#submit:prevent"
+            >
+                {% include "wagtailadmin/shared/field.html" with field=test_form.email %}
+
+                <button type="submit" class="button button-primary">Send</button>
+                <button type="button" class="button button-secondary" data-action="w-dialog#hide">Cancel</button>
+            </form>
+        {% enddialog %}
+
+        <button
+            type="submit"
+            class="w-hidden"
+            name="newsletter-action"
+            value="send_test_email"
+            data-wn-panel-target="testSubmit"
+        >
+            Send test email
+        </button>
+    </p>
+
+    {% if campaign %}
+        <p>
+            <a href="{{ campaign.url }}" target="_blank">
+                {% icon name="link-external" classname="w-w-4 w-h-4" %}
+                Open campaign in {{ backend_name }}
+            </a>
+        </p>
+    {% endif %}
+</div>
