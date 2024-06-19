@@ -1,0 +1,147 @@
+Metadata-Version: 2.1
+Name: django-tours
+Version: 1.1.1
+Summary: Django app to display tours with shepherdjs
+Author-email: Wilmer Martinez <info@wilmermartinez.dev>
+License: MIT License
+        
+        Copyright (c) 2023 Wilmer Martinez
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Homepage, https://wilmermartinez.dev/codigos/django-tours/
+Project-URL: Issues, https://github.com/wilmerm/django-tours/issues
+Project-URL: Repository, https://github.com/wilmerm/django-tours
+Keywords: django,tours,shepherdjs
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Environment :: Web Environment
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Natural Language :: Spanish
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Framework :: Django :: 3
+Classifier: Framework :: Django :: 3.0
+Classifier: Framework :: Django :: 3.1
+Classifier: Framework :: Django :: 3.2
+Classifier: Framework :: Django :: 4
+Classifier: Framework :: Django :: 4.0
+Classifier: Framework :: Django :: 4.1
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Django>=3
+
+# django-tours
+
+Django app to display tours with [shepherdjs](https://shepherdjs.dev/)
+
+![Python Logo](https://www.python.org/static/community_logos/python-logo.png "Sample inline image")
+
+![django-tours-1](https://github.com/wilmerm/django-tours/assets/44853160/d7a8c20f-ddb1-4f93-b287-e143813aef95)
+
+## Instalation
+
+```sh
+pip install django-tours
+```
+
+## Use
+
+### Add to installed applications
+
+```py
+# settings.py
+
+INSTALLED_APPS = [
+    # ...
+    'tours',
+    # ...
+]
+```
+
+### Optional configuration:
+
+**If you want to set default variables, you can add the following in your settings.py file:**
+
+```py
+# settings.py
+
+DEFAULT_SHEPHERD_JS = 'https://cdn.jsdelivr.net/npm/shepherd.js@latest/dist/js/shepherd.min.js'
+DEFAULT_SHEPHERD_CSS = 'https://cdn.jsdelivr.net/npm/shepherd.js@latest/dist/css/shepherd.css'
+```
+
+### Add the URLs
+
+```py
+urlpatterns = [
+    # ...
+    path('tours/', include('tours.urls')),
+    # ...
+]
+```
+
+### Run the migrations
+
+```sh
+python manage.py migrate
+```
+
+### Load tours into the template
+
+```django
+{% load tours %}
+
+{% load_tours request %}
+```
+
+## Licence
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) file for details.
+
+## Proyect Status
+
+This project is in Production/Stable ✔
+
+## Contribution 💗
+
+If you find value in this project and would like to show your support, please consider making a donation via PayPal:
+
+[Donate on PayPal](https://paypal.me/martinezwilmer?country.x=DO&locale.x=es_XC)
+
+Your generosity helps us to continue improving and maintaining this project. We appreciate every contribution, however small. Thanks for being part of our community!
