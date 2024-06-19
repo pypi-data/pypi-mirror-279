@@ -1,0 +1,11 @@
+importlib_resources
+
+[all]
+importlib_resources
+torch
+
+[base]
+torch
+
+[plugins]
+importlib_resources
