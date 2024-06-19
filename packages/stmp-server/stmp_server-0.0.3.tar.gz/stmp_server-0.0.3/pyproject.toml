@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "stmp.__version__"}
+dependencies = {file = "requirements.txt"}
+
+[tool.setuptools]
+packages = ["stmp"]
+include-package-data = true
+
+[project]
+name = "stmp-server"
+description = "A primitive zero-configuration local network protocol purely written in python, originally intended for tinkering with your office mates over LAN!"
+requires-python = ">=3.11"
+readme = "README.md"
+license = {file = "LICENSE"}
+dynamic = ["version", "dependencies"]
+authors = [
+  { name="@bRuttaZz", email="agrajpdasprivate@gmail.com" },
+]
+keywords = ["stmp", "sitty-talky", "sittytalky", 
+            "LAN", "WLAN", "peer-discovery", "Messaging", "protocol", "multicast dns", "dns", "udp", "tcp"]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: MIT License',
+    'Operating System :: POSIX',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: Unix',        
+    'Programming Language :: Python :: 3.11',
+    'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
+    'Topic :: Communications :: Chat',
+    'Topic :: Internet',
+    'Topic :: Software Development',
+    'Natural Language :: English',
+]
+
+[project.urls]
+Homepage = "https://github.com/bRuttaZz/stmp"
+Issues = "https://github.com/bRuttaZz/stmp/issues"
+Repository = "https://github.com/bRuttaZz/stmp.git"
+Documentation = "https://pypi.org/project/stmp-server/"
+
+
+

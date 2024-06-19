@@ -1,0 +1,5 @@
+recursive-include stmp *
+include .assets/*.svg 
+
+global-exclude */__pycache__/*
+global-exclude *.pyc
