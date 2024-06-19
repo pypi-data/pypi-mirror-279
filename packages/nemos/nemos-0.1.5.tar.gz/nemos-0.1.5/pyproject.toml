@@ -1,0 +1,106 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nemos"
+version = "0.1.5"
+authors = [{name = "nemos authors"}]
+description = "NEural MOdelS, a statistical modeling framework for neuroscience."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["neuroscience", "Poisson-GLM"]
+license = { file = "LICENSE" }
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+
+# Define dependencies for the project
+dependencies = [
+    "jax>=0.4.28",                     # Numerical computing library
+    "jaxopt>=0.6",                  # Optimization library built on JAX
+    "numpy>1.20",                   # Numerical computing library
+    "scipy>=1.10",                  # Scientific computing library
+    "typing_extensions>=4.6",       # Typing extensions for Python
+    "pynapple>=0.6.6"
+]
+
+
+
+# Configure package discovery for setuptools
+[tool.setuptools.packages.find]
+where = ["src"]     # The directory where package modules are located
+include = ["nemos"] # The specific package(s) to include in the distribution
+
+
+# Define optional dependencies for the project
+[project.optional-dependencies]
+dev = [
+    "black",                        # Code formatter
+    "isort",                        # Import sorter
+    "pip-tools",                    # Dependency management
+    "pytest",                       # Testing framework
+    "flake8",                       # Code linter
+    "coverage",                     # Test coverage measurement
+    "pytest-cov",                   # Test coverage plugin for pytest
+    "statsmodels",                  # Used to compare model pseudo-r2 in testing
+    "scikit-learn",                 # Testing compatibility with CV & pipelines
+]
+docs = [
+    "mkdocs",                       # Documentation generator
+    "mkdocstrings[python]",         # Python-specific plugin for mkdocs
+    "mkdocs-section-index",         # Plugin for generating a section index in mkdocs
+    "mkdocs-gen-files",             # Plugin for generating additional files in mkdocs
+    "mkdocs-literate-nav>=0.6.1",   # Plugin for literate-style navigation in mkdocs
+    "mkdocs-gallery",               # Plugin for adding image galleries to mkdocs
+    "mkdocs-material",              # Material theme for mkdocs
+    "mkdocs-autorefs>=0.5",
+    "scikit-learn",
+    "dandi",
+    "ipython",
+    "matplotlib>=3.7"
+]
+
+
+[tool.black]
+target-version = ['py38', 'py39', 'py310']
+skip-string-normalization = false
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | \.md
+    | \.toml
+    | \.cfg
+    | \.txt
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | examples))'''
+
+# Configure isort
+[tool.isort]
+multi_line_output = 3             # Use three-line style for multi-line imports
+include_trailing_comma = true     # Include trailing comma in multi-line imports
+profile = "black"
+
+# Configure pytest
+[tool.pytest.ini_options]
+testpaths = ["tests"]             # Specify the directory where test files are located
+
+[tool.coverage.report]
+exclude_lines = [
+    "@abc.abstractmethod",
+    "if __name__ == .__main__.:"
+]
