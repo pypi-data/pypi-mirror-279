@@ -1,0 +1,17 @@
+numpy>=1.22
+scipy>=1.11.1
+attrs>=21.3.0
+
+[dev]
+furo
+intersphinx-registry
+packaging
+pre-commit
+pytest
+pytest-cov
+pytest-timeout
+pytest-xdist
+setuptools_scm
+sphinx
+sphinx_autodoc_typehints
+sphinx-copybutton
