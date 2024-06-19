@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: grsba
+Version: 1.1.2
+Summary: Generalized Robust Spatial Bifurcation Algorithm (GRSBA)
+Home-page: https://grsba.com
+Author: Felipe Maya Muniz
+Author-email: felipemuniz82@hotmail.com
+License: Proprietary
+Project-URL: Código fonte, https://github.com/gnai-creator/GRSBA
+Project-URL: Download, https://github.com/gnai-creator/GRSBA/archive/1.0.0.zip
+Keywords: data modeling algorithm GRSBA
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+License-File: LICENSE.txt
+
+The Generalized Robust Spatial Bifurcation Algorithm (GRSBA) enhances flexibility and adaptability in data modeling.
