@@ -1,0 +1,5 @@
+Metadata-Version: 2.1
+Name: edu_geometry
+Version: 0.0.1
+Summary: A simple Python library for calculating the area and perimeterof geometric shapes.
+Author: Liuardo
