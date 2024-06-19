@@ -1,0 +1,6 @@
+[console_scripts]
+dh-json2linkml=nmdc_submission_schema.datamodel.dh_json2linkml:update_json
+inject-gold-pathway-terms=nmdc_submission_schema.datamodel.gold:main
+linkml-json2dh=nmdc_submission_schema.datamodel.linkml_json2dh:extract_lists
+oak-tree-to-pv-list=nmdc_submission_schema.datamodel.oak_tree_to_pv_list:main
+
