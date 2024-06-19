@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: pytoshop-fix-packbits
+Version: 1.1.4
+Summary: A Python-based library to write Photoshop PSD files
+Home-page: https://github.com/radius5-study/pytoshop-fix-packbits
+Author: original author: Michael Droettboom, modified by: radius5
+Author-email: info@radius5.co.jp
+License: BSD license
+Keywords: pytoshop
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+License-File: AUTHORS.rst
+
+UNKNOWN
+
