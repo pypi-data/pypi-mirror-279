@@ -1,0 +1,49 @@
+Metadata-Version: 2.3
+Name: django-healthy
+Version: 0.0.1a4
+Summary: Simple health checking for django applications
+Project-URL: Documentation, https://github.com/olist/django-healthy#readme
+Project-URL: Issues, https://github.com/olist/django-healthy/issues
+Project-URL: Source, https://github.com/olist/django-healthy
+Author-email: Christian Hartung <christian.hartung@olist.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Keywords: django
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: Django :: 4.2
+Classifier: Framework :: Django :: 5.0
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: asgiref
+Requires-Dist: django>=4.2
+Requires-Dist: typing-extensions; python_version < '3.12'
+Description-Content-Type: text/markdown
+
+# django-healthy
+
+[![PyPI - Version](https://img.shields.io/pypi/v/django-healthy.svg)](https://pypi.org/project/django-healthy)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/django-healthy.svg)](https://pypi.org/project/django-healthy)
+
+-----
+
+**Table of Contents**
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install django-healthy
+```
+
+## License
+
+`django-healthy` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
