@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: QuaPack
+Version: 0.0.0.1a0
+Summary: Quantum Algorithms expressed in QuPython
+Author: Antonio E. Russo
+Author-email: arusso@sandia.gov
+License: Apache
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering :: Physics
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+QuaPack
+=======
+
+QuaPack aims to be a collection of high level algorithms expressed in QuPython,
+a high level quantum programming language with first-class quantum operations.

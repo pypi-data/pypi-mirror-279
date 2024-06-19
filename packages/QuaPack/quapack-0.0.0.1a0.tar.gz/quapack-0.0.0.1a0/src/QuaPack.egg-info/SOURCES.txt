@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+src/QuaPack.egg-info/PKG-INFO
+src/QuaPack.egg-info/SOURCES.txt
+src/QuaPack.egg-info/dependency_links.txt
+src/QuaPack.egg-info/top_level.txt
