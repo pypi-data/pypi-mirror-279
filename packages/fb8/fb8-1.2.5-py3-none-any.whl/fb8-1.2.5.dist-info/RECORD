@@ -1,0 +1,12 @@
+paper/fig.py,sha256=t3kktxvqByE7awkgD_7rreUxKXYmJsEu2ujQPuIZM_I,12444
+sphere/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sphere/distribution/__init__.py,sha256=hW3beaUTrCfxcJuKjEBQda-6wKpMGAeHdhB_OxjSuq4,285
+sphere/distribution/distribution.py,sha256=VvHKCC4422i0BkEj8JJsSeOW-NzUZrlwccc0LrxYLV0,59423
+sphere/distribution/saddle.py,sha256=9IG7SvYZ3kOWrefnVIxSShjExFgz7-OHq1QeVYGHxIU,1640
+sphere/example/__init__.py,sha256=nC49VT4vOHjIdiY68UNHeY7oelKfTtw5qQS9h0yAVMk,185
+sphere/example/example.py,sha256=k88ENODYBpdya_oq62jB4mKDedAxIAq4dD4H_htUD7M,13971
+fb8-1.2.5.dist-info/LICENSE,sha256=YO1a0sWZJYRJ4axA32-Jd46hGaFqhgf9ILRGdJ7w8kg,1109
+fb8-1.2.5.dist-info/METADATA,sha256=GlkNHOG06tYFHpt9dF1isHaeHo9SWxpWfpZBnxVf4_4,5574
+fb8-1.2.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+fb8-1.2.5.dist-info/top_level.txt,sha256=0kfJG-rtAYEPs6gdaiOL-zPjyt1wqpMSMXVRhdiwV-s,22
+fb8-1.2.5.dist-info/RECORD,,
