@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+{% include 'head.html' %}
+<body>
+    <section class="section mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title text-center">授权页面</h1>
+                            <div class="card-text">
+                                <p>机器码信息: <strong>{{data['machine_code']}}</strong></p>
+                                <p>您还未授权，请扫描下方二维码，发送上方机器码，购买开通授权。</p>
+                                <div class="text-center">
+                                    <img src="{{ url_for('static', filename='zsxq.png') }}" alt="微信二维码" style="max-width: 300px;" class="img-fluid">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="authorization_code" class="form-label">授权码</label>
+                                    <textarea id="authorization_code" class="form-control" placeholder="请输入授权码" rows="8"></textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary" onclick="authorize()">授权</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function authorize() {
+            const authorization_code = document.querySelector('#authorization_code').value;
+            if (!authorization_code) {
+                alert('未输入授权码');
+            } else {
+                fetch('/authorize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ authorization_code })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data?.status === 'success') {
+                        window.location.href = '/';
+                    } else {
+                        alert('授权码无效，请重新输入');
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
