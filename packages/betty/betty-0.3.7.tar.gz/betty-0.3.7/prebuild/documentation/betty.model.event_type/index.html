@@ -1,0 +1,1512 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="author" title="About these documents" href="../about/" /><link rel="index" title="Index" href="../genindex/" /><link rel="search" title="Search" href="../search/" />
+
+    <link rel="shortcut icon" href="../_static/betty.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>betty.model.event_type module - Betty 0.3.7 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Betty 0.3.7 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../_static/betty-32x32.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Betty 0.3.7 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation/">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/desktop/">Installation of the Betty Desktop application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/pip/">Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/source/">Installation from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../usage/ancestry/">Ancestry</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Ancestry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/citation/">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/date/">Dates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/enclosure/">Enclosure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/event/">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/event-type/">Event Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/file/">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/link/">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/media-type/">Media Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/note/">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/person/">Person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/person-name/">Person Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/place/">Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/place-name/">Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/presence/">Presence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/presence-role/">Presence Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/privacy/">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/ancestry/source/">Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/assets/">Asset Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/cli/">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/configuration/">Application configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/env/">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../usage/extension/">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/cotton_candy/">The <em>Cotton Candy</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/deriver/">The <em>Deriver</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/gramps/">The <em>Gramps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/http_api_doc/">The <em>HTTP API Documentation</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/maps/">The <em>Maps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/nginx/">The <em>nginx</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/privatizer/">The <em>Privatizer</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/trees/">The <em>Trees</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/extension/wikipedia/">The <em>Wikipedia</em> extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/gedcom/">GEDCOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/npm/">npm</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../usage/project/">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Projects</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/project/configuration/">Project configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../usage/templating/">Templating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Templating</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/templating/filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/templating/globals/">Globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/templating/tests/">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/translation/">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../development/">Development</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Development</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../development/extension/">Developing a Betty extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development/translation/">Working on Betty’s translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development/test/">Testing Betty’s source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../py-modindex/">API Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../about/">About</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of About</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../about/contributing/">Contributing to Betty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/license/">Copyright &amp; license</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../_sources/betty.model.event_type.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="module-betty.model.event_type">
+<span id="betty-model-event-type-module"></span><h1>betty.model.event_type module<a class="headerlink" href="#module-betty.model.event_type" title="Link to this heading">¶</a></h1>
+<p>Provide Betty’s ancestry event types.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Adoption">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Adoption</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Adoption"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Adoption" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone was adopted.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Adoption.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Adoption.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Adoption.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Adoption.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Adoption.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Adoption.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Baptism">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Baptism</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Baptism"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Baptism" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a>, <a class="reference internal" href="#betty.model.event_type.StartOfLifeEventType" title="betty.model.event_type.StartOfLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">StartOfLifeEventType</span></code></a></p>
+<p>Someone was <a class="reference external" href="https://en.wikipedia.org/wiki/Baptism">baptized</a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Baptism.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Baptism.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Baptism.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Baptism.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Baptism.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Baptism.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Birth">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Birth</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Birth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Birth" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.CreatableDerivableEventType" title="betty.model.event_type.CreatableDerivableEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">CreatableDerivableEventType</span></code></a>, <a class="reference internal" href="#betty.model.event_type.StartOfLifeEventType" title="betty.model.event_type.StartOfLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">StartOfLifeEventType</span></code></a></p>
+<p>Someone was born.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Birth.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Birth.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Birth.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Birth.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Birth.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Birth.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Birth.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Birth.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Birth.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Burial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Burial</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Burial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Burial" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.FinalDispositionEventType" title="betty.model.event_type.FinalDispositionEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FinalDispositionEventType</span></code></a></p>
+<p>Someone was buried.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Burial.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Burial.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Burial.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Burial.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Burial.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Burial.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Conference">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Conference</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Conference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Conference" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>A conference between people took place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Conference.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Conference.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Conference.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Conference.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Conference.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Conference.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Confirmation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Confirmation</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Confirmation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Confirmation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone’s <a class="reference external" href="https://en.wikipedia.org/wiki/Confirmation">confirmation</a> took place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Confirmation.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Confirmation.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Confirmation.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Confirmation.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Confirmation.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Confirmation.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Correspondence">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Correspondence</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Correspondence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Correspondence" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>People corresponded with each other.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Correspondence.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Correspondence.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Correspondence.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Correspondence.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Correspondence.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Correspondence.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.CreatableDerivableEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">CreatableDerivableEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#CreatableDerivableEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.CreatableDerivableEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DerivableEventType" title="betty.model.event_type.DerivableEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DerivableEventType</span></code></a></p>
+<p>Any event type of which the deriver API may create new instances.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.CreatableDerivableEventType.may_create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">may_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">person</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../betty.model.ancestry/#betty.model.ancestry.Person" title="betty.model.ancestry.Person"><span class="pre">betty.model.ancestry.Person</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lifetime_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#CreatableDerivableEventType.may_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.CreatableDerivableEventType.may_create" title="Link to this definition">¶</a></dt>
+<dd><p>Whether a new event of this type may be created for the given person.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>person</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.model.ancestry/#betty.model.ancestry.Person" title="betty.model.ancestry.Person"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.ancestry.Person</span></code></a></span>)</p></li>
+<li><p><strong>lifetime_threshold</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Cremation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Cremation</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Cremation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Cremation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.FinalDispositionEventType" title="betty.model.event_type.FinalDispositionEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FinalDispositionEventType</span></code></a></p>
+<p>Someone was cremated.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Cremation.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Cremation.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Cremation.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Cremation.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Cremation.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Cremation.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Death">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Death</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Death"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Death" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.CreatableDerivableEventType" title="betty.model.event_type.CreatableDerivableEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">CreatableDerivableEventType</span></code></a>, <a class="reference internal" href="#betty.model.event_type.EndOfLifeEventType" title="betty.model.event_type.EndOfLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EndOfLifeEventType</span></code></a></p>
+<p>Someone died.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Death.comes_after">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_after</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Death.comes_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Death.comes_after" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes after.</p>
+<p>The returned event types come before this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Death.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Death.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Death.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Death.may_create">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">may_create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">person</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../betty.model.ancestry/#betty.model.ancestry.Person" title="betty.model.ancestry.Person"><span class="pre">betty.model.ancestry.Person</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">lifetime_threshold</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Death.may_create"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Death.may_create" title="Link to this definition">¶</a></dt>
+<dd><p>Whether a new event of this type may be created for the given person.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>person</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.model.ancestry/#betty.model.ancestry.Person" title="betty.model.ancestry.Person"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.ancestry.Person</span></code></a></span>)</p></li>
+<li><p><strong>lifetime_threshold</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a></span>)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Death.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Death.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Death.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.DerivableEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">DerivableEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DerivableEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DerivableEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>Any event that that may be updated by the deriver API.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Divorce">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Divorce</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Divorce"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Divorce" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>People were divorced.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Divorce.comes_after">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_after</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Divorce.comes_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Divorce.comes_after" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes after.</p>
+<p>The returned event types come before this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Divorce.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Divorce.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Divorce.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Divorce.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Divorce.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Divorce.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.DivorceAnnouncement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">DivorceAnnouncement</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DivorceAnnouncement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DivorceAnnouncement" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>People’s divorce was announced.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.DivorceAnnouncement.comes_after">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_after</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DivorceAnnouncement.comes_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DivorceAnnouncement.comes_after" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes after.</p>
+<p>The returned event types come before this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.DivorceAnnouncement.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DivorceAnnouncement.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DivorceAnnouncement.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.DivorceAnnouncement.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DivorceAnnouncement.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DivorceAnnouncement.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.DivorceAnnouncement.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DivorceAnnouncement.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DivorceAnnouncement.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.DuringLifeEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">DuringLifeEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DuringLifeEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DuringLifeEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>Any event that only ever takes place during someone’s life, e.g. after their birth and before their death.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.DuringLifeEventType.comes_after">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_after</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DuringLifeEventType.comes_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DuringLifeEventType.comes_after" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes after.</p>
+<p>The returned event types come before this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.DuringLifeEventType.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#DuringLifeEventType.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.DuringLifeEventType.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Emigration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Emigration</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Emigration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Emigration" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone emigrated from a place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Emigration.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Emigration.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Emigration.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Emigration.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Emigration.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Emigration.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.EndOfLifeEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">EndOfLifeEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EndOfLifeEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EndOfLifeEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>An event that indicates the end of someone’s life.</p>
+<p>This includes someone’s actual death, but also other types of events that take place
+close to someone’s death and as such are indicators that that person died around the
+time of the end-of-life event.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Engagement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Engagement</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Engagement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Engagement" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>People got engaged with the intent to marry.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Engagement.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Engagement.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Engagement.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Engagement.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Engagement.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Engagement.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Engagement.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Engagement.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Engagement.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.EventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">EventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Define an <a class="reference internal" href="../betty.model.ancestry/#betty.model.ancestry.Event" title="betty.model.ancestry.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.ancestry.Event</span></code></a> type.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.EventType.__new__">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">__new__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cls</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/betty/model/event_type/#EventType.__new__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventType.__new__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.EventType.comes_after">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_after</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EventType.comes_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventType.comes_after" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes after.</p>
+<p>The returned event types come before this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.EventType.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EventType.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventType.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.EventType.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EventType.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventType.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.EventType.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EventType.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventType.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.EventTypeProvider">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">EventTypeProvider</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#EventTypeProvider"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.EventTypeProvider" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Provide additional event types.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="betty.model.event_type.EventTypeProvider.entity_types">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">entity_types</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#betty.model.event_type.EventTypeProvider.entity_types" title="Link to this definition">¶</a></dt>
+<dd><p>The event types.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.FinalDispositionEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">FinalDispositionEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#FinalDispositionEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.FinalDispositionEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.PostDeathEventType" title="betty.model.event_type.PostDeathEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PostDeathEventType</span></code></a>, <a class="reference internal" href="#betty.model.event_type.DerivableEventType" title="betty.model.event_type.DerivableEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DerivableEventType</span></code></a>, <a class="reference internal" href="#betty.model.event_type.EndOfLifeEventType" title="betty.model.event_type.EndOfLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EndOfLifeEventType</span></code></a></p>
+<p>Someone’s <a class="reference external" href="https://en.wikipedia.org/wiki/Disposal_of_human_corpses">final disposition</a> took place.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Funeral">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Funeral</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Funeral"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Funeral" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.FinalDispositionEventType" title="betty.model.event_type.FinalDispositionEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">FinalDispositionEventType</span></code></a></p>
+<p>Someone’s funeral took place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Funeral.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Funeral.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Funeral.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Funeral.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Funeral.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Funeral.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Immigration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Immigration</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Immigration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Immigration" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone immigrated to a place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Immigration.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Immigration.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Immigration.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Immigration.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Immigration.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Immigration.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Marriage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Marriage</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Marriage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Marriage" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>People were married.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Marriage.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Marriage.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Marriage.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Marriage.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Marriage.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Marriage.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.MarriageAnnouncement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">MarriageAnnouncement</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#MarriageAnnouncement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.MarriageAnnouncement" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>People’s marriage was announced.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.MarriageAnnouncement.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#MarriageAnnouncement.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.MarriageAnnouncement.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.MarriageAnnouncement.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#MarriageAnnouncement.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.MarriageAnnouncement.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.MarriageAnnouncement.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#MarriageAnnouncement.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.MarriageAnnouncement.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Missing">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Missing</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Missing"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Missing" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone went missing.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Missing.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Missing.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Missing.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Missing.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Missing.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Missing.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Occupation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Occupation</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Occupation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Occupation" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone’s occupation, e.g. their main recurring activity.</p>
+<p>This may include employment, education, stay at home parent, etc.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Occupation.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Occupation.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Occupation.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Occupation.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Occupation.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Occupation.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.PostDeathEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">PostDeathEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#PostDeathEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.PostDeathEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>An event that only ever happens after someone’s death.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.PostDeathEventType.comes_after">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_after</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#PostDeathEventType.comes_after"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.PostDeathEventType.comes_after" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes after.</p>
+<p>The returned event types come before this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.PreBirthEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">PreBirthEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#PreBirthEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.PreBirthEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>Any event that only ever takes place before someone’s birth.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.PreBirthEventType.comes_before">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">comes_before</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><span class="pre">type</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><span class="pre">betty.model.event_type.EventType</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#PreBirthEventType.comes_before"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.PreBirthEventType.comes_before" title="Link to this definition">¶</a></dt>
+<dd><p>Get the event types that this event type comes before.</p>
+<p>The returned event types come after this event type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#type" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">type</span></code></a>[<a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.model.event_type.EventType</span></code></a>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Residence">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Residence</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Residence"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Residence" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone resided/lived in a place.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Residence.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Residence.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Residence.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Residence.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Residence.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Residence.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Retirement">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Retirement</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Retirement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Retirement" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.DuringLifeEventType" title="betty.model.event_type.DuringLifeEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a></p>
+<p>Someone <a class="reference external" href="https://en.wikipedia.org/wiki/Retirement">retired</a>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Retirement.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Retirement.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Retirement.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Retirement.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Retirement.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Retirement.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.StartOfLifeEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">StartOfLifeEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#StartOfLifeEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.StartOfLifeEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>An event that indicates the start of someone’s life.</p>
+<p>This includes someone’s actual birth, but also other types of events that take place
+close to someone’s birth and as such are indicators that that person was born around
+the time of the start-of-life event.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.UnknownEventType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">UnknownEventType</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#UnknownEventType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.UnknownEventType" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.EventType" title="betty.model.event_type.EventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventType</span></code></a></p>
+<p>Described an event for which no more specific type is known.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.UnknownEventType.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#UnknownEventType.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.UnknownEventType.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.UnknownEventType.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#UnknownEventType.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.UnknownEventType.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="betty.model.event_type.Will">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">betty.model.event_type.</span></span><span class="sig-name descname"><span class="pre">Will</span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Will"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Will" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#betty.model.event_type.PostDeathEventType" title="betty.model.event_type.PostDeathEventType"><code class="xref py py-class docutils literal notranslate"><span class="pre">PostDeathEventType</span></code></a></p>
+<p>Someone’s <a class="reference external" href="https://en.wikipedia.org/wiki/Will_and_testament">will and testament</a> came into effect.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Will.label">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><span class="pre">betty.locale.Str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Will.label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Will.label" title="Link to this definition">¶</a></dt>
+<dd><p>Get the human-readable label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../betty.locale/#betty.locale.Str" title="betty.locale.Str"><code class="xref py py-class docutils literal notranslate"><span class="pre">betty.locale.Str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="betty.model.event_type.Will.name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/betty/model/event_type/#Will.name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#betty.model.event_type.Will.name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the machine name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Bart Feenstra and contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">betty.model.event_type module</a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Adoption"><code class="docutils literal notranslate"><span class="pre">Adoption</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Adoption.label"><code class="docutils literal notranslate"><span class="pre">Adoption.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Adoption.name"><code class="docutils literal notranslate"><span class="pre">Adoption.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Baptism"><code class="docutils literal notranslate"><span class="pre">Baptism</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Baptism.label"><code class="docutils literal notranslate"><span class="pre">Baptism.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Baptism.name"><code class="docutils literal notranslate"><span class="pre">Baptism.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Birth"><code class="docutils literal notranslate"><span class="pre">Birth</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Birth.comes_before"><code class="docutils literal notranslate"><span class="pre">Birth.comes_before()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Birth.label"><code class="docutils literal notranslate"><span class="pre">Birth.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Birth.name"><code class="docutils literal notranslate"><span class="pre">Birth.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Burial"><code class="docutils literal notranslate"><span class="pre">Burial</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Burial.label"><code class="docutils literal notranslate"><span class="pre">Burial.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Burial.name"><code class="docutils literal notranslate"><span class="pre">Burial.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Conference"><code class="docutils literal notranslate"><span class="pre">Conference</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Conference.label"><code class="docutils literal notranslate"><span class="pre">Conference.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Conference.name"><code class="docutils literal notranslate"><span class="pre">Conference.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Confirmation"><code class="docutils literal notranslate"><span class="pre">Confirmation</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Confirmation.label"><code class="docutils literal notranslate"><span class="pre">Confirmation.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Confirmation.name"><code class="docutils literal notranslate"><span class="pre">Confirmation.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Correspondence"><code class="docutils literal notranslate"><span class="pre">Correspondence</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Correspondence.label"><code class="docutils literal notranslate"><span class="pre">Correspondence.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Correspondence.name"><code class="docutils literal notranslate"><span class="pre">Correspondence.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.CreatableDerivableEventType"><code class="docutils literal notranslate"><span class="pre">CreatableDerivableEventType</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.CreatableDerivableEventType.may_create"><code class="docutils literal notranslate"><span class="pre">CreatableDerivableEventType.may_create()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Cremation"><code class="docutils literal notranslate"><span class="pre">Cremation</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Cremation.label"><code class="docutils literal notranslate"><span class="pre">Cremation.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Cremation.name"><code class="docutils literal notranslate"><span class="pre">Cremation.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Death"><code class="docutils literal notranslate"><span class="pre">Death</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Death.comes_after"><code class="docutils literal notranslate"><span class="pre">Death.comes_after()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Death.label"><code class="docutils literal notranslate"><span class="pre">Death.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Death.may_create"><code class="docutils literal notranslate"><span class="pre">Death.may_create()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Death.name"><code class="docutils literal notranslate"><span class="pre">Death.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.DerivableEventType"><code class="docutils literal notranslate"><span class="pre">DerivableEventType</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Divorce"><code class="docutils literal notranslate"><span class="pre">Divorce</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Divorce.comes_after"><code class="docutils literal notranslate"><span class="pre">Divorce.comes_after()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Divorce.label"><code class="docutils literal notranslate"><span class="pre">Divorce.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Divorce.name"><code class="docutils literal notranslate"><span class="pre">Divorce.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.DivorceAnnouncement"><code class="docutils literal notranslate"><span class="pre">DivorceAnnouncement</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.DivorceAnnouncement.comes_after"><code class="docutils literal notranslate"><span class="pre">DivorceAnnouncement.comes_after()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.DivorceAnnouncement.comes_before"><code class="docutils literal notranslate"><span class="pre">DivorceAnnouncement.comes_before()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.DivorceAnnouncement.label"><code class="docutils literal notranslate"><span class="pre">DivorceAnnouncement.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.DivorceAnnouncement.name"><code class="docutils literal notranslate"><span class="pre">DivorceAnnouncement.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.DuringLifeEventType"><code class="docutils literal notranslate"><span class="pre">DuringLifeEventType</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.DuringLifeEventType.comes_after"><code class="docutils literal notranslate"><span class="pre">DuringLifeEventType.comes_after()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.DuringLifeEventType.comes_before"><code class="docutils literal notranslate"><span class="pre">DuringLifeEventType.comes_before()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Emigration"><code class="docutils literal notranslate"><span class="pre">Emigration</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Emigration.label"><code class="docutils literal notranslate"><span class="pre">Emigration.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Emigration.name"><code class="docutils literal notranslate"><span class="pre">Emigration.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.EndOfLifeEventType"><code class="docutils literal notranslate"><span class="pre">EndOfLifeEventType</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Engagement"><code class="docutils literal notranslate"><span class="pre">Engagement</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Engagement.comes_before"><code class="docutils literal notranslate"><span class="pre">Engagement.comes_before()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Engagement.label"><code class="docutils literal notranslate"><span class="pre">Engagement.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Engagement.name"><code class="docutils literal notranslate"><span class="pre">Engagement.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.EventType"><code class="docutils literal notranslate"><span class="pre">EventType</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.EventType.__new__"><code class="docutils literal notranslate"><span class="pre">EventType.__new__()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.EventType.comes_after"><code class="docutils literal notranslate"><span class="pre">EventType.comes_after()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.EventType.comes_before"><code class="docutils literal notranslate"><span class="pre">EventType.comes_before()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.EventType.label"><code class="docutils literal notranslate"><span class="pre">EventType.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.EventType.name"><code class="docutils literal notranslate"><span class="pre">EventType.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.EventTypeProvider"><code class="docutils literal notranslate"><span class="pre">EventTypeProvider</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.EventTypeProvider.entity_types"><code class="docutils literal notranslate"><span class="pre">EventTypeProvider.entity_types</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.FinalDispositionEventType"><code class="docutils literal notranslate"><span class="pre">FinalDispositionEventType</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Funeral"><code class="docutils literal notranslate"><span class="pre">Funeral</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Funeral.label"><code class="docutils literal notranslate"><span class="pre">Funeral.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Funeral.name"><code class="docutils literal notranslate"><span class="pre">Funeral.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Immigration"><code class="docutils literal notranslate"><span class="pre">Immigration</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Immigration.label"><code class="docutils literal notranslate"><span class="pre">Immigration.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Immigration.name"><code class="docutils literal notranslate"><span class="pre">Immigration.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Marriage"><code class="docutils literal notranslate"><span class="pre">Marriage</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Marriage.label"><code class="docutils literal notranslate"><span class="pre">Marriage.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Marriage.name"><code class="docutils literal notranslate"><span class="pre">Marriage.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.MarriageAnnouncement"><code class="docutils literal notranslate"><span class="pre">MarriageAnnouncement</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.MarriageAnnouncement.comes_before"><code class="docutils literal notranslate"><span class="pre">MarriageAnnouncement.comes_before()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.MarriageAnnouncement.label"><code class="docutils literal notranslate"><span class="pre">MarriageAnnouncement.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.MarriageAnnouncement.name"><code class="docutils literal notranslate"><span class="pre">MarriageAnnouncement.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Missing"><code class="docutils literal notranslate"><span class="pre">Missing</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Missing.label"><code class="docutils literal notranslate"><span class="pre">Missing.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Missing.name"><code class="docutils literal notranslate"><span class="pre">Missing.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Occupation"><code class="docutils literal notranslate"><span class="pre">Occupation</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Occupation.label"><code class="docutils literal notranslate"><span class="pre">Occupation.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Occupation.name"><code class="docutils literal notranslate"><span class="pre">Occupation.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.PostDeathEventType"><code class="docutils literal notranslate"><span class="pre">PostDeathEventType</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.PostDeathEventType.comes_after"><code class="docutils literal notranslate"><span class="pre">PostDeathEventType.comes_after()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.PreBirthEventType"><code class="docutils literal notranslate"><span class="pre">PreBirthEventType</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.PreBirthEventType.comes_before"><code class="docutils literal notranslate"><span class="pre">PreBirthEventType.comes_before()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Residence"><code class="docutils literal notranslate"><span class="pre">Residence</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Residence.label"><code class="docutils literal notranslate"><span class="pre">Residence.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Residence.name"><code class="docutils literal notranslate"><span class="pre">Residence.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Retirement"><code class="docutils literal notranslate"><span class="pre">Retirement</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Retirement.label"><code class="docutils literal notranslate"><span class="pre">Retirement.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Retirement.name"><code class="docutils literal notranslate"><span class="pre">Retirement.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.StartOfLifeEventType"><code class="docutils literal notranslate"><span class="pre">StartOfLifeEventType</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.UnknownEventType"><code class="docutils literal notranslate"><span class="pre">UnknownEventType</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.UnknownEventType.label"><code class="docutils literal notranslate"><span class="pre">UnknownEventType.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.UnknownEventType.name"><code class="docutils literal notranslate"><span class="pre">UnknownEventType.name()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#betty.model.event_type.Will"><code class="docutils literal notranslate"><span class="pre">Will</span></code></a><ul>
+<li><a class="reference internal" href="#betty.model.event_type.Will.label"><code class="docutils literal notranslate"><span class="pre">Will.label()</span></code></a></li>
+<li><a class="reference internal" href="#betty.model.event_type.Will.name"><code class="docutils literal notranslate"><span class="pre">Will.name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=2bd58097"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

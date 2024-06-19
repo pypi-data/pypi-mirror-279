@@ -1,0 +1,28 @@
+betty.extension package
+=======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.extension.cotton_candy
+   betty.extension.demo
+   betty.extension.deriver
+   betty.extension.gramps
+   betty.extension.http_api_doc
+   betty.extension.maps
+   betty.extension.nginx
+   betty.extension.privatizer
+   betty.extension.trees
+   betty.extension.webpack
+   betty.extension.wikipedia
+
+Module contents
+---------------
+
+.. automodule:: betty.extension
+   :members:
+   :undoc-members:
+   :show-inheritance:

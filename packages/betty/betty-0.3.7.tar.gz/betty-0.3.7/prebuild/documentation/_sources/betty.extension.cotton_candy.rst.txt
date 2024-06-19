@@ -1,0 +1,19 @@
+betty.extension.cotton\_candy package
+=====================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.extension.cotton_candy.gui
+   betty.extension.cotton_candy.search
+
+Module contents
+---------------
+
+.. automodule:: betty.extension.cotton_candy
+   :members:
+   :undoc-members:
+   :show-inheritance:

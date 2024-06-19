@@ -1,0 +1,26 @@
+betty.extension.webpack package
+===============================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.extension.webpack.jinja2
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.extension.webpack.build
+
+Module contents
+---------------
+
+.. automodule:: betty.extension.webpack
+   :members:
+   :undoc-members:
+   :show-inheritance:

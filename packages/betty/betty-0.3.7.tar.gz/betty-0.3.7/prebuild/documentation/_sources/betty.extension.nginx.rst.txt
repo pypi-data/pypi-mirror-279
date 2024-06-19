@@ -1,0 +1,23 @@
+betty.extension.nginx package
+=============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.extension.nginx.artifact
+   betty.extension.nginx.cli
+   betty.extension.nginx.config
+   betty.extension.nginx.docker
+   betty.extension.nginx.gui
+   betty.extension.nginx.serve
+
+Module contents
+---------------
+
+.. automodule:: betty.extension.nginx
+   :members:
+   :undoc-members:
+   :show-inheritance:

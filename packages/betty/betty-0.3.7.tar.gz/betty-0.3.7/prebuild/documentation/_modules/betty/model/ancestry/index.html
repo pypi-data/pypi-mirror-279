@@ -1,0 +1,3184 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="author" title="About these documents" href="../../../../about/" /><link rel="index" title="Index" href="../../../../genindex/" /><link rel="search" title="Search" href="../../../../search/" />
+
+    <link rel="shortcut icon" href="../../../../_static/betty.ico"/><!-- Generated with Sphinx 7.3.7 and Furo 2024.05.06 -->
+        <title>betty.model.ancestry - Betty 0.3.7 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo.css?v=387cc868" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" /
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../../"><div class="brand">Betty 0.3.7 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../../">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="../../../../_static/betty-32x32.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Betty 0.3.7 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../installation/">Installation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Installation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/desktop/">Installation of the Betty Desktop application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/pip/">Installation via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../installation/source/">Installation from source</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../usage/">Usage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Usage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/ancestry/">Ancestry</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Ancestry</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/citation/">Citation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/date/">Dates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/enclosure/">Enclosure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event/">Event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/event-type/">Event Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/file/">File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/link/">Link</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/media-type/">Media Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/note/">Note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person/">Person</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/person-name/">Person Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place/">Place</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/place-name/">Place Name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence/">Presence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/presence-role/">Presence Role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/privacy/">Privacy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/ancestry/source/">Source</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/assets/">Asset Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/cli/">The command line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/configuration/">Application configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/env/">Environment variables</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/extension/">Extensions</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Extensions</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/cotton_candy/">The <em>Cotton Candy</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/deriver/">The <em>Deriver</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/gramps/">The <em>Gramps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/http_api_doc/">The <em>HTTP API Documentation</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/maps/">The <em>Maps</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/nginx/">The <em>nginx</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/privatizer/">The <em>Privatizer</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/trees/">The <em>Trees</em> extension</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/extension/wikipedia/">The <em>Wikipedia</em> extension</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/gedcom/">GEDCOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/npm/">npm</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/project/">Projects</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Projects</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/project/configuration/">Project configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../usage/templating/">Templating</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Templating</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/filters/">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/globals/">Globals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../usage/templating/tests/">Tests</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../usage/translation/">Translations</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../development/">Development</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Development</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/extension/">Developing a Betty extension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/translation/">Working on Betty’s translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../development/test/">Testing Betty’s source code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../py-modindex/">API Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../about/">About</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of About</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/contributing/">Contributing to Betty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../about/license/">Copyright &amp; license</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <h1>Source code for betty.model.ancestry</h1><div class="highlight"><pre>
+<span></span>&quot;&quot;&quot;
+Provide Betty&#39;s main data model.
+&quot;&quot;&quot;
+
+from __future__ import annotations
+
+from contextlib import suppress
+from enum import Enum
+from reprlib import recursive_repr
+from typing import Iterable, Any, TYPE_CHECKING
+from urllib.parse import quote
+
+from typing_extensions import override
+
+from betty.classtools import repr_instance
+from betty.functools import Uniquifier
+from betty.json.linked_data import (
+    LinkedDataDumpable,
+    dump_context,
+    dump_link,
+    add_json_ld,
+)
+from betty.json.schema import add_property, ref_json_schema
+from betty.locale import Localized, Datey, Str, Localizable, ref_datey
+from betty.media_type import MediaType
+from betty.model import (
+    many_to_many,
+    Entity,
+    one_to_many,
+    many_to_one,
+    many_to_one_to_many,
+    MultipleTypesEntityCollection,
+    EntityCollection,
+    UserFacingEntity,
+    EntityTypeAssociationRegistry,
+    GeneratedEntityId,
+    get_entity_type_name,
+)
+from betty.model.event_type import EventType, UnknownEventType
+from betty.serde.dump import DictDump, Dump, dump_default
+from betty.string import camel_case_to_kebab_case
+from betty.warnings import deprecated
+
+if TYPE_CHECKING:
+    from geopy import Point
+    from pathlib import Path
+    from collections.abc import MutableSequence, Iterator
+    from betty.app import App
+
+
+<div class="viewcode-block" id="Privacy">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Privacy">[docs]</a>
+class Privacy(Enum):
+    &quot;&quot;&quot;
+    The available privacy modes.
+    &quot;&quot;&quot;
+
+    #: The resource is explicitly made public.
+    PUBLIC = 1
+
+    #: The resource is explicitly made private.
+    PRIVATE = 2
+
+    #: The resource has no explicit privacy. This means that:
+    #:
+    #: - it may be changed at will
+    #: - when checking access, UNDETERMINED evaluates to PUBLIC.
+    UNDETERMINED = 3</div>
+
+
+
+<div class="viewcode-block" id="HasPrivacy">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasPrivacy">[docs]</a>
+class HasPrivacy(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A resource that has privacy.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasPrivacy.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasPrivacy.__init__">[docs]</a>
+    def __init__(
+        self,
+        *args: Any,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(*args, **kwargs)
+        if [privacy, public, private].count(None) &lt; 2:
+            raise ValueError(
+                f&quot;Only one of the `privacy`, `public`, and `private` arguments to {type(self)}.__init__() may be given at a time.&quot;
+            )
+        if privacy is not None:
+            self._privacy = privacy
+        elif public is True:
+            self._privacy = Privacy.PUBLIC
+        elif private is True:
+            self._privacy = Privacy.PRIVATE
+        else:
+            self._privacy = Privacy.UNDETERMINED</div>
+
+
+    @property
+    def own_privacy(self) -&gt; Privacy:
+        &quot;&quot;&quot;
+        The resource&#39;s own privacy.
+
+        This returns the value that was set for :py:attr:`betty.model.ancestry.HasPrivacy.privacy` and ignores computed privacies.
+
+        For access control and permissions checking, use :py:attr:`betty.model.ancestry.HasPrivacy.privacy`.
+        &quot;&quot;&quot;
+        return self._privacy
+
+    def _get_effective_privacy(self) -&gt; Privacy:
+        return self.own_privacy
+
+    @property
+    def privacy(self) -&gt; Privacy:
+        &quot;&quot;&quot;
+        The resource&#39;s privacy.
+        &quot;&quot;&quot;
+        return self._get_effective_privacy()
+
+    @privacy.setter
+    def privacy(self, privacy: Privacy) -&gt; None:
+        self._privacy = privacy
+
+    @privacy.deleter
+    def privacy(self) -&gt; None:
+        self.privacy = Privacy.UNDETERMINED
+
+    @property
+    def private(self) -&gt; bool:
+        &quot;&quot;&quot;
+        Whether this resource is private.
+        &quot;&quot;&quot;
+        return self.privacy is Privacy.PRIVATE
+
+    @private.setter
+    def private(self, private: True) -&gt; None:
+        self.privacy = Privacy.PRIVATE
+
+    @property
+    def public(self) -&gt; bool:
+        &quot;&quot;&quot;
+        Whether this resource is public.
+        &quot;&quot;&quot;
+        # Undetermined privacy defaults to public.
+        return self.privacy is not Privacy.PRIVATE
+
+    @public.setter
+    def public(self, public: True) -&gt; None:
+        self.privacy = Privacy.PUBLIC
+
+<div class="viewcode-block" id="HasPrivacy.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasPrivacy.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;private&quot;] = self.private
+        return dump</div>
+
+
+<div class="viewcode-block" id="HasPrivacy.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasPrivacy.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;private&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/privacy&quot;,
+            },
+        )
+        definitions = dump_default(schema, &quot;definitions&quot;, dict)
+        if &quot;privacy&quot; not in definitions:
+            definitions[&quot;privacy&quot;] = {
+                &quot;type&quot;: &quot;boolean&quot;,
+                &quot;description&quot;: &quot;Whether this entity is private (true), or public (false).&quot;,
+            }
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="is_private">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.is_private">[docs]</a>
+def is_private(target: Any) -&gt; bool:
+    &quot;&quot;&quot;
+    Check if the given target is private.
+    &quot;&quot;&quot;
+    if isinstance(target, HasPrivacy):
+        return target.private
+    return False</div>
+
+
+
+<div class="viewcode-block" id="is_public">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.is_public">[docs]</a>
+def is_public(target: Any) -&gt; bool:
+    &quot;&quot;&quot;
+    Check if the given target is public.
+    &quot;&quot;&quot;
+    if isinstance(target, HasPrivacy):
+        return target.public
+    return True</div>
+
+
+
+<div class="viewcode-block" id="resolve_privacy">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.resolve_privacy">[docs]</a>
+def resolve_privacy(privacy: Privacy | HasPrivacy | None) -&gt; Privacy:
+    &quot;&quot;&quot;
+    Resolve the privacy of a value.
+    &quot;&quot;&quot;
+    if privacy is None:
+        return Privacy.UNDETERMINED
+    if isinstance(privacy, Privacy):
+        return privacy
+    return privacy.privacy</div>
+
+
+
+<div class="viewcode-block" id="merge_privacies">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.merge_privacies">[docs]</a>
+def merge_privacies(*privacies: Privacy | HasPrivacy | None) -&gt; Privacy:
+    &quot;&quot;&quot;
+    Merge multiple privacies into one.
+    &quot;&quot;&quot;
+    privacies = {resolve_privacy(privacy) for privacy in privacies}
+    if Privacy.PRIVATE in privacies:
+        return Privacy.PRIVATE
+    if Privacy.UNDETERMINED in privacies:
+        return Privacy.UNDETERMINED
+    return Privacy.PUBLIC</div>
+
+
+
+<div class="viewcode-block" id="Dated">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Dated">[docs]</a>
+class Dated(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A resource with date information.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Dated.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Dated.__init__">[docs]</a>
+    def __init__(
+        self,
+        *args: Any,
+        date: Datey | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(*args, **kwargs)
+        self.date = date</div>
+
+
+<div class="viewcode-block" id="Dated.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Dated.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        if self.date and is_public(self):
+            dump[&quot;date&quot;] = await self.date.dump_linked_data(app)
+        return dump</div>
+
+
+<div class="viewcode-block" id="Dated.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Dated.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        schema[&quot;type&quot;] = &quot;object&quot;
+        schema[&quot;additionalProperties&quot;] = False
+        add_property(schema, &quot;date&quot;, await ref_datey(schema, app), False)
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Described">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Described">[docs]</a>
+class Described(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A resource with a description.
+    &quot;&quot;&quot;
+
+    #: The human-readable description.
+    description: str | None
+
+<div class="viewcode-block" id="Described.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Described.__init__">[docs]</a>
+    def __init__(
+        self,
+        *args: Any,
+        description: str | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(*args, **kwargs)
+        self.description = description</div>
+
+
+<div class="viewcode-block" id="Described.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Described.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        if self.description is not None:
+            dump[&quot;description&quot;] = self.description
+            dump_context(dump, description=&quot;description&quot;)
+        return dump</div>
+
+
+<div class="viewcode-block" id="Described.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Described.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;description&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/description&quot;,
+            },
+            False,
+        )
+        definitions = dump_default(schema, &quot;definitions&quot;, dict)
+        if &quot;description&quot; not in definitions:
+            definitions[&quot;description&quot;] = {
+                &quot;type&quot;: &quot;string&quot;,
+            }
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="HasMediaType">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasMediaType">[docs]</a>
+class HasMediaType(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A resource with an `IANA media type &lt;https://www.iana.org/assignments/media-types/media-types.xhtml&gt;`_.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasMediaType.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasMediaType.__init__">[docs]</a>
+    def __init__(
+        self,
+        *args: Any,
+        media_type: MediaType | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(*args, **kwargs)
+        self.media_type = media_type</div>
+
+
+<div class="viewcode-block" id="HasMediaType.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasMediaType.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        if is_public(self) and self.media_type is not None:
+            dump[&quot;mediaType&quot;] = str(self.media_type)
+        return dump</div>
+
+
+<div class="viewcode-block" id="HasMediaType.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasMediaType.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(schema, &quot;mediaType&quot;, ref_media_type(schema), False)
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="ref_media_type">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.ref_media_type">[docs]</a>
+def ref_media_type(root_schema: DictDump[Dump]) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the MediaType schema.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;mediaType&quot; not in definitions:
+        definitions[&quot;mediaType&quot;] = {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;An IANA media type (https://www.iana.org/assignments/media-types/media-types.xhtml).&quot;,
+        }
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/mediaType&quot;,
+    }</div>
+
+
+
+<div class="viewcode-block" id="Link">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Link">[docs]</a>
+class Link(HasMediaType, Localized, Described, LinkedDataDumpable):
+    &quot;&quot;&quot;
+    An external link.
+    &quot;&quot;&quot;
+
+    #: The link&#39;s absolute URL
+    url: str
+    #: The link&#39;s `IANA link relationship &lt;https://www.iana.org/assignments/link-relations/link-relations.xhtml&gt;`_.
+    relationship: str | None
+    #: The link&#39;s human-readable label.
+    label: str | None
+
+<div class="viewcode-block" id="Link.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Link.__init__">[docs]</a>
+    def __init__(
+        self,
+        url: str,
+        *,
+        relationship: str | None = None,
+        label: str | None = None,
+        description: str | None = None,
+        media_type: MediaType | None = None,
+        locale: str | None = None,
+    ):
+        super().__init__(
+            media_type=media_type,
+            description=description,
+            locale=locale,
+        )
+        self.url = url
+        self.label = label
+        self.relationship = relationship</div>
+
+
+<div class="viewcode-block" id="Link.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Link.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;$schema&quot;] = app.static_url_generator.generate(
+            &quot;schema.json#/definitions/link&quot;, absolute=True
+        )
+        dump[&quot;url&quot;] = self.url
+        if self.label is not None:
+            dump[&quot;label&quot;] = self.label
+        if self.relationship is not None:
+            dump[&quot;relationship&quot;] = self.relationship
+        return dump</div>
+
+
+<div class="viewcode-block" id="Link.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Link.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        schema[&quot;type&quot;] = &quot;object&quot;
+        schema[&quot;additionalProperties&quot;] = False
+        add_json_ld(schema)
+        add_property(schema, &quot;$schema&quot;, ref_json_schema(schema))
+        add_property(
+            schema,
+            &quot;label&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;description&quot;: &quot;The human-readable label, or link text.&quot;,
+            },
+            False,
+        )
+        add_property(
+            schema,
+            &quot;url&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;uri&quot;,
+                &quot;description&quot;: &quot;The full URL to the other resource.&quot;,
+            },
+        )
+        add_property(
+            schema,
+            &quot;relationship&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;description&quot;: &quot;The relationship between this resource and the link target (https://en.wikipedia.org/wiki/Link_relation).&quot;,
+            },
+            False,
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="ref_link">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.ref_link">[docs]</a>
+async def ref_link(root_schema: DictDump[Dump], app: App) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the Link schema.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;link&quot; not in definitions:
+        definitions[&quot;link&quot;] = await Link.linked_data_schema(app)
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/link&quot;,
+    }</div>
+
+
+
+<div class="viewcode-block" id="ref_link_collection">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.ref_link_collection">[docs]</a>
+async def ref_link_collection(root_schema: DictDump[Dump], app: App) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the schema for a collection of Link instances.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;linkCollection&quot; not in definitions:
+        definitions[&quot;linkCollection&quot;] = {
+            &quot;type&quot;: &quot;array&quot;,
+            &quot;items&quot;: await ref_link(root_schema, app),
+        }
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/linkCollection&quot;,
+    }</div>
+
+
+
+<div class="viewcode-block" id="HasLinks">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasLinks">[docs]</a>
+class HasLinks(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A resource that has external links.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasLinks.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasLinks.__init__">[docs]</a>
+    def __init__(
+        self,
+        *args: Any,
+        links: MutableSequence[Link] | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(*args, **kwargs)
+        self._links: MutableSequence[Link] = links if links else []</div>
+
+
+    @property
+    def links(self) -&gt; MutableSequence[Link]:
+        &quot;&quot;&quot;
+        The extenal links.
+        &quot;&quot;&quot;
+        return self._links
+
+<div class="viewcode-block" id="HasLinks.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasLinks.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        await dump_link(
+            dump,
+            app,
+            *(self.links if is_public(self) else ()),
+        )
+        return dump</div>
+
+
+<div class="viewcode-block" id="HasLinks.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasLinks.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(schema, &quot;links&quot;, await ref_link_collection(schema, app))
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="HasLinksEntity">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasLinksEntity">[docs]</a>
+class HasLinksEntity(HasLinks):
+    &quot;&quot;&quot;
+    An entity that has external links.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasLinksEntity.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasLinksEntity.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(  # type: ignore[misc]
+        self: HasLinksEntity &amp; Entity,
+        app: App,
+    ) -&gt; DictDump[Dump]:
+        dump: DictDump[Dump] = await super().dump_linked_data(app)  # type: ignore[misc]
+
+        if not isinstance(self.id, GeneratedEntityId):
+            await dump_link(
+                dump,
+                app,
+                Link(
+                    app.static_url_generator.generate(
+                        f&quot;/{camel_case_to_kebab_case(get_entity_type_name(self.type))}/{self.id}/index.json&quot;
+                    ),
+                    relationship=&quot;canonical&quot;,
+                    media_type=MediaType(&quot;application/ld+json&quot;),
+                ),
+            )
+            if is_public(self):
+                await dump_link(
+                    dump,
+                    app,
+                    *(
+                        Link(
+                            app.url_generator.generate(
+                                self, media_type=&quot;text/html&quot;, locale=locale
+                            ),
+                            relationship=&quot;alternate&quot;,
+                            media_type=MediaType(&quot;text/html&quot;),
+                            locale=locale,
+                        )
+                        for locale in app.project.configuration.locales
+                    ),
+                )
+
+        return dump</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Note">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Note">[docs]</a>
+@many_to_one(&quot;entity&quot;, &quot;betty.model.ancestry.HasNotes&quot;, &quot;notes&quot;)
+class Note(UserFacingEntity, HasPrivacy, HasLinksEntity, Entity):
+    &quot;&quot;&quot;
+    A note is a bit of textual information that can be associated with another entity.
+    &quot;&quot;&quot;
+
+    #: The entity the note belongs to.
+    entity: HasNotes
+
+<div class="viewcode-block" id="Note.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Note.__init__">[docs]</a>
+    def __init__(
+        self,
+        text: str,
+        *,
+        id: str | None = None,  # noqa A002  # noqa A002
+        entity: HasNotes | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+    ):
+        super().__init__(
+            id,
+            privacy=privacy,
+            public=public,
+            private=private,
+        )
+        self._text = text
+        if entity is not None:
+            self.entity = entity</div>
+
+
+<div class="viewcode-block" id="Note.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Note.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Note&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Note.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Note.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Notes&quot;)  # pragma: no cover</div>
+
+
+    @property
+    def text(self) -&gt; str:
+        &quot;&quot;&quot;
+        The note&#39;s human-readable text.
+        &quot;&quot;&quot;
+        return self._text
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str.plain(self.text)
+
+<div class="viewcode-block" id="Note.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Note.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;@type&quot;] = &quot;https://schema.org/Thing&quot;
+        if self.public:
+            dump[&quot;text&quot;] = self.text
+        return dump</div>
+
+
+<div class="viewcode-block" id="Note.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Note.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(schema, &quot;text&quot;, {&quot;type&quot;: &quot;string&quot;}, False)
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="HasNotes">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasNotes">[docs]</a>
+@one_to_many(&quot;notes&quot;, &quot;betty.model.ancestry.Note&quot;, &quot;entity&quot;)
+class HasNotes(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    An entity that has notes associated with it.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasNotes.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasNotes.__init__">[docs]</a>
+    def __init__(  # type: ignore[misc]
+        self: HasNotes &amp; Entity,
+        *args: Any,
+        notes: Iterable[Note] | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(  # type: ignore[misc]
+            *args,
+            **kwargs,
+        )
+        if notes is not None:
+            self.notes = notes  # type: ignore[assignment]</div>
+
+
+    @property
+    def notes(self) -&gt; EntityCollection[Note]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The notes.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @notes.setter
+    def notes(self, notes: Iterable[Note]) -&gt; None:
+        pass  # pragma: no cover
+
+    @notes.deleter
+    def notes(self) -&gt; None:
+        pass  # pragma: no cover
+
+<div class="viewcode-block" id="HasNotes.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasNotes.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;notes&quot;] = [
+            app.static_url_generator.generate(f&quot;/note/{quote(note.id)}/index.json&quot;)
+            for note in self.notes
+            if not isinstance(note.id, GeneratedEntityId)
+        ]
+        return dump</div>
+
+
+<div class="viewcode-block" id="HasNotes.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasNotes.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;notes&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/entity/noteCollection&quot;,
+            },
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="HasCitations">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasCitations">[docs]</a>
+@many_to_many(&quot;citations&quot;, &quot;betty.model.ancestry.Citation&quot;, &quot;facts&quot;)
+class HasCitations(LinkedDataDumpable):
+    &quot;&quot;&quot;
+    An entity with citations that support it.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasCitations.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasCitations.__init__">[docs]</a>
+    def __init__(  # type: ignore[misc]
+        self: HasCitations &amp; Entity,
+        *args: Any,
+        citations: Iterable[Citation] | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(  # type: ignore[misc]
+            *args,
+            **kwargs,
+        )
+        if citations is not None:
+            self.citations = citations  # type: ignore[assignment]</div>
+
+
+    @property
+    def citations(self) -&gt; EntityCollection[Citation]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The citations supporting this entity.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @citations.setter
+    def citations(self, citations: Iterable[Citation]) -&gt; None:
+        pass  # pragma: no cover
+
+    @citations.deleter
+    def citations(self) -&gt; None:
+        pass  # pragma: no cover
+
+<div class="viewcode-block" id="HasCitations.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasCitations.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;citations&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/citation/{quote(citation.id)}/index.json&quot;
+            )
+            for citation in self.citations
+            if not isinstance(citation.id, GeneratedEntityId)
+        ]
+        return dump</div>
+
+
+<div class="viewcode-block" id="HasCitations.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasCitations.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;citations&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/entity/citationCollection&quot;,
+            },
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="File">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.File">[docs]</a>
+@many_to_many(&quot;entities&quot;, &quot;betty.model.ancestry.HasFiles&quot;, &quot;files&quot;)
+class File(
+    Described,
+    HasPrivacy,
+    HasLinksEntity,
+    HasMediaType,
+    HasNotes,
+    HasCitations,
+    UserFacingEntity,
+    Entity,
+):
+    &quot;&quot;&quot;
+    A file on disk.
+
+    This includes but is not limited to:
+
+    - images
+    - video
+    - audio
+    - PDF documents
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="File.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.File.__init__">[docs]</a>
+    def __init__(
+        self,
+        path: Path,
+        *,
+        id: str | None = None,  # noqa A002  # noqa A002
+        name: str | None = None,
+        media_type: MediaType | None = None,
+        description: str | None = None,
+        notes: Iterable[Note] | None = None,
+        citations: Iterable[Citation] | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+        links: MutableSequence[Link] | None = None,
+    ):
+        super().__init__(
+            id,
+            media_type=media_type,
+            description=description,
+            notes=notes,
+            citations=citations,
+            privacy=privacy,
+            public=public,
+            private=private,
+            links=links,
+        )
+        self._path = path
+        self._name = name</div>
+
+
+    @property
+    def name(self) -&gt; str:
+        &quot;&quot;&quot;
+        The file name.
+        &quot;&quot;&quot;
+        return self._name or self.path.name
+
+    @property
+    def entities(self) -&gt; EntityCollection[Entity]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The entities associated with this file.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @entities.setter
+    def entities(self, entities: Iterable[Entity]) -&gt; None:
+        pass  # pragma: no cover
+
+    @entities.deleter
+    def entities(self) -&gt; None:
+        pass  # pragma: no cover
+
+<div class="viewcode-block" id="File.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.File.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;File&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="File.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.File.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Files&quot;)  # pragma: no cover</div>
+
+
+    @property
+    def path(self) -&gt; Path:
+        &quot;&quot;&quot;
+        The file&#39;s path on disk.
+        &quot;&quot;&quot;
+        return self._path
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str.plain(self.description) if self.description else super().label
+
+<div class="viewcode-block" id="File.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.File.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;entities&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/{camel_case_to_kebab_case(get_entity_type_name(entity))}/{quote(entity.id)}/index.json&quot;
+            )
+            for entity in self.entities
+            if not isinstance(entity.id, GeneratedEntityId)
+        ]
+        return dump</div>
+
+
+<div class="viewcode-block" id="File.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.File.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;entities&quot;,
+            {&quot;type&quot;: &quot;array&quot;, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot;}},
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="HasFiles">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasFiles">[docs]</a>
+@many_to_many(&quot;files&quot;, &quot;betty.model.ancestry.File&quot;, &quot;entities&quot;)
+class HasFiles:
+    &quot;&quot;&quot;
+    An entity that has associated :py:class:`betty.model.ancestry.File` entities.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="HasFiles.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.HasFiles.__init__">[docs]</a>
+    def __init__(  # type: ignore[misc]
+        self: HasFiles &amp; Entity,
+        *args: Any,
+        files: Iterable[File] | None = None,
+        **kwargs: Any,
+    ):
+        super().__init__(  # type: ignore[misc]
+            *args,
+            **kwargs,
+        )
+        if files is not None:
+            self.files = files  # type: ignore[assignment]</div>
+
+
+    @property
+    def files(self) -&gt; EntityCollection[File]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The files directly associated with this entity.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @files.setter
+    def files(self, files: Iterable[File]) -&gt; None:
+        pass  # pragma: no cover
+
+    @files.deleter
+    def files(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def associated_files(self) -&gt; Iterable[File]:
+        &quot;&quot;&quot;
+        All files directly or indirectly associated with this entity.
+        &quot;&quot;&quot;
+        return self.files</div>
+
+
+
+<div class="viewcode-block" id="Source">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Source">[docs]</a>
+@many_to_one(&quot;contained_by&quot;, &quot;betty.model.ancestry.Source&quot;, &quot;contains&quot;)
+@one_to_many(&quot;contains&quot;, &quot;betty.model.ancestry.Source&quot;, &quot;contained_by&quot;)
+@one_to_many(&quot;citations&quot;, &quot;betty.model.ancestry.Citation&quot;, &quot;source&quot;)
+class Source(
+    Dated, HasFiles, HasNotes, HasLinksEntity, HasPrivacy, UserFacingEntity, Entity
+):
+    &quot;&quot;&quot;
+    A source of information.
+    &quot;&quot;&quot;
+
+    #: The source this one is directly contained by.
+    contained_by: Source | None
+
+<div class="viewcode-block" id="Source.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Source.__init__">[docs]</a>
+    def __init__(
+        self,
+        name: str | None = None,
+        *,
+        id: str | None = None,  # noqa A002  # noqa A002
+        author: str | None = None,
+        publisher: str | None = None,
+        contained_by: Source | None = None,
+        contains: Iterable[Source] | None = None,
+        notes: Iterable[Note] | None = None,
+        date: Datey | None = None,
+        files: Iterable[File] | None = None,
+        links: MutableSequence[Link] | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+    ):
+        super().__init__(
+            id,
+            notes=notes,
+            date=date,
+            files=files,
+            links=links,
+            privacy=privacy,
+            public=public,
+            private=private,
+        )
+        self.name = name
+        self.author = author
+        self.publisher = publisher
+        if contained_by is not None:
+            self.contained_by = contained_by
+        if contains is not None:
+            self.contains = contains  # type: ignore[assignment]</div>
+
+
+    @override
+    def _get_effective_privacy(self) -&gt; Privacy:
+        privacy = super()._get_effective_privacy()
+        if self.contained_by:
+            return merge_privacies(privacy, self.contained_by.privacy)
+        return privacy
+
+    @property
+    def contains(self) -&gt; EntityCollection[Source]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The sources directly contained by this one.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @contains.setter
+    def contains(self, contains: Iterable[Source]) -&gt; None:
+        pass  # pragma: no cover
+
+    @contains.deleter
+    def contains(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def citations(self) -&gt; EntityCollection[Citation]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The citations/references to this source.
+        &quot;&quot;&quot;
+        pass
+
+    @citations.setter
+    def citations(self, citations: Iterable[Citation]) -&gt; None:
+        pass  # pragma: no cover
+
+    @citations.deleter
+    def citations(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def walk_contains(self) -&gt; Iterator[Source]:
+        &quot;&quot;&quot;
+        All directly and indirectly contained sources.
+        &quot;&quot;&quot;
+        for source in self.contains:
+            yield source
+            yield from source.contains
+
+<div class="viewcode-block" id="Source.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Source.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Source&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Source.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Source.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Sources&quot;)  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str.plain(self.name) if self.name else super().label
+
+<div class="viewcode-block" id="Source.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Source.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;@type&quot;] = &quot;https://schema.org/Thing&quot;
+        dump[&quot;contains&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/source/{quote(contained.id)}/index.json&quot;
+            )
+            for contained in self.contains
+            if not isinstance(contained.id, GeneratedEntityId)
+        ]
+        dump[&quot;citations&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/citation/{quote(citation.id)}/index.json&quot;
+            )
+            for citation in self.citations
+            if not isinstance(citation.id, GeneratedEntityId)
+        ]
+        if self.contained_by is not None and not isinstance(
+            self.contained_by.id, GeneratedEntityId
+        ):
+            dump[&quot;containedBy&quot;] = app.static_url_generator.generate(
+                f&quot;/source/{quote(self.contained_by.id)}/index.json&quot;
+            )
+        if self.public:
+            if self.name is not None:
+                dump_context(dump, name=&quot;name&quot;)
+                dump[&quot;name&quot;] = self.name
+            if self.author is not None:
+                dump[&quot;author&quot;] = self.author
+            if self.publisher is not None:
+                dump[&quot;publisher&quot;] = self.publisher
+        return dump</div>
+
+
+<div class="viewcode-block" id="Source.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Source.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;name&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+            False,
+        )
+        add_property(
+            schema,
+            &quot;author&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+            False,
+        )
+        add_property(
+            schema,
+            &quot;publisher&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+            False,
+        )
+        add_property(
+            schema,
+            &quot;contains&quot;,
+            {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;format&quot;: &quot;uri&quot;,
+                },
+            },
+        )
+        add_property(
+            schema,
+            &quot;citations&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/entity/citationCollection&quot;,
+            },
+        )
+        add_property(
+            schema,
+            &quot;containedBy&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;uri&quot;,
+            },
+            False,
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="AnonymousSource">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.AnonymousSource">[docs]</a>
+@deprecated(
+    f&quot;This class is deprecated as of Betty 0.3.2, and will be removed in Betty 0.4.x. No direct replacement is available. Instead, set the privacy for {Source} entities accordingly.&quot;
+)
+class AnonymousSource(Source):  # noqa D101
+    @property  # type: ignore[override]
+    def name(self) -&gt; str:  # noqa D102
+        return &quot;private&quot;
+
+    @name.setter
+    def name(self, _) -&gt; None:
+        # This is a no-op as the name is &#39;hardcoded&#39;.
+        pass  # pragma: no cover
+
+    @name.deleter
+    def name(self) -&gt; None:
+        # This is a no-op as the name is &#39;hardcoded&#39;.
+        pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Citation">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Citation">[docs]</a>
+@many_to_many(&quot;facts&quot;, &quot;betty.model.ancestry.HasCitations&quot;, &quot;citations&quot;)
+@many_to_one(&quot;source&quot;, &quot;betty.model.ancestry.Source&quot;, &quot;citations&quot;)
+class Citation(Dated, HasFiles, HasPrivacy, HasLinksEntity, UserFacingEntity, Entity):
+    &quot;&quot;&quot;
+    A citation (a reference to a source).
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Citation.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Citation.__init__">[docs]</a>
+    def __init__(
+        self,
+        *,
+        id: str | None = None,  # noqa A002  # noqa A002
+        facts: Iterable[HasCitations] | None = None,
+        source: Source | None = None,
+        location: Str | None = None,
+        date: Datey | None = None,
+        files: Iterable[File] | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+    ):
+        super().__init__(
+            id,
+            date=date,
+            files=files,
+            privacy=privacy,
+            public=public,
+            private=private,
+        )
+        if facts is not None:
+            self.facts = facts  # type: ignore[assignment]
+        self.location = location
+        self.source = source</div>
+
+
+    @override
+    def _get_effective_privacy(self) -&gt; Privacy:
+        privacy = super()._get_effective_privacy()
+        if self.source:
+            return merge_privacies(privacy, self.source.privacy)
+        return privacy
+
+    @property
+    def facts(self) -&gt; EntityCollection[HasCitations &amp; Entity]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The facts (other resources) supported by this citation.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @facts.setter
+    def facts(self, facts: Iterable[HasCitations &amp; Entity]) -&gt; None:
+        pass  # pragma: no cover
+
+    @facts.deleter
+    def facts(self) -&gt; None:
+        pass  # pragma: no cover
+
+<div class="viewcode-block" id="Citation.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Citation.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Citation&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Citation.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Citation.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Citations&quot;)  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return self.location or Str.plain(&quot;&quot;)
+
+<div class="viewcode-block" id="Citation.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Citation.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;@type&quot;] = &quot;https://schema.org/Thing&quot;
+        dump[&quot;facts&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/{camel_case_to_kebab_case(get_entity_type_name(fact))}/{quote(fact.id)}/index.json&quot;
+            )
+            for fact in self.facts
+            if not isinstance(fact.id, GeneratedEntityId)
+        ]
+        if self.source is not None and not isinstance(
+            self.source.id, GeneratedEntityId
+        ):
+            dump[&quot;source&quot;] = app.static_url_generator.generate(
+                f&quot;/source/{quote(self.source.id)}/index.json&quot;
+            )
+        return dump</div>
+
+
+<div class="viewcode-block" id="Citation.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Citation.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(schema, &quot;source&quot;, {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot;}, False)
+        add_property(
+            schema,
+            &quot;facts&quot;,
+            {&quot;type&quot;: &quot;array&quot;, &quot;items&quot;: {&quot;type&quot;: &quot;string&quot;, &quot;format&quot;: &quot;uri&quot;}},
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="AnonymousCitation">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.AnonymousCitation">[docs]</a>
+@deprecated(
+    f&quot;This class is deprecated as of Betty 0.3.2, and will be removed in Betty 0.4.x. No direct replacement is available. Instead, set the privacy for {Citation} entities accordingly.&quot;
+)
+class AnonymousCitation(Citation):  # noqa D101
+    @property  # type: ignore[override]
+    def location(self) -&gt; Str:  # noqa D102
+        return Str._(
+            &quot;private (in order to protect people&#39;s privacy)&quot;
+        )  # pragma: no cover
+
+    @location.setter
+    def location(self, _) -&gt; None:
+        # This is a no-op as the location is &#39;hardcoded&#39;.
+        pass  # pragma: no cover
+
+    @location.deleter
+    def location(self) -&gt; None:
+        # This is a no-op as the location is &#39;hardcoded&#39;.
+        pass  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="PlaceName">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PlaceName">[docs]</a>
+class PlaceName(Localized, Dated, LinkedDataDumpable):
+    &quot;&quot;&quot;
+    A place name.
+
+    A name has a locale and a date during which the name was in use.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="PlaceName.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PlaceName.__init__">[docs]</a>
+    def __init__(
+        self,
+        name: str,
+        *,
+        locale: str | None = None,
+        date: Datey | None = None,
+    ):
+        super().__init__(
+            date=date,
+            locale=locale,
+        )
+        self._name = name</div>
+
+
+    @override
+    def __eq__(self, other: Any) -&gt; bool:
+        if not isinstance(other, self.__class__):
+            return NotImplemented  # pragma: no cover
+        return self._name == other._name and self.locale == other.locale
+
+    @override
+    @recursive_repr()
+    def __repr__(self) -&gt; str:
+        return repr_instance(self, name=self.name, locale=self.locale)
+
+    @override
+    def __str__(self) -&gt; str:
+        return self._name
+
+    @property
+    def name(self) -&gt; str:
+        &quot;&quot;&quot;
+        The human-readable name.
+        &quot;&quot;&quot;
+        return self._name
+
+<div class="viewcode-block" id="PlaceName.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PlaceName.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump[&quot;name&quot;] = self.name
+        return dump</div>
+
+
+<div class="viewcode-block" id="PlaceName.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PlaceName.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(schema, &quot;name&quot;, {&quot;type&quot;: &quot;string&quot;})
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Enclosure">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Enclosure">[docs]</a>
+@many_to_one_to_many(
+    &quot;betty.model.ancestry.Place&quot;,
+    &quot;enclosed_by&quot;,
+    &quot;encloses&quot;,
+    &quot;enclosed_by&quot;,
+    &quot;betty.model.ancestry.Place&quot;,
+    &quot;encloses&quot;,
+)
+class Enclosure(Dated, HasCitations, Entity):
+    &quot;&quot;&quot;
+    The enclosure of one place by another.
+
+    Enclosures describe the outer (```enclosed_by`) and inner(``encloses``) places, and their relationship.
+    &quot;&quot;&quot;
+
+    #: The inner place.
+    encloses: Place | None
+    #: The outer place.
+    enclosed_by: Place | None
+
+<div class="viewcode-block" id="Enclosure.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Enclosure.__init__">[docs]</a>
+    def __init__(
+        self,
+        encloses: Place | None = None,
+        enclosed_by: Place | None = None,
+    ):
+        super().__init__()
+        self.encloses = encloses
+        self.enclosed_by = enclosed_by</div>
+
+
+<div class="viewcode-block" id="Enclosure.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Enclosure.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Enclosure&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Enclosure.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Enclosure.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Enclosures&quot;)  # pragma: no cover</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Place">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Place">[docs]</a>
+@one_to_many(&quot;events&quot;, &quot;betty.model.ancestry.Event&quot;, &quot;place&quot;)
+@one_to_many(&quot;enclosed_by&quot;, &quot;betty.model.ancestry.Enclosure&quot;, &quot;encloses&quot;)
+@one_to_many(&quot;encloses&quot;, &quot;betty.model.ancestry.Enclosure&quot;, &quot;enclosed_by&quot;)
+class Place(HasLinksEntity, HasFiles, HasNotes, HasPrivacy, UserFacingEntity, Entity):
+    &quot;&quot;&quot;
+    A place.
+
+    A place is a physical location on earth. It may be identifiable by GPS coordinates only, or
+    be a well-known city, with names in many languages, imagery, and its own Wikipedia page, or
+    any type of place in between.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Place.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Place.__init__">[docs]</a>
+    def __init__(
+        self,
+        *,
+        id: str | None = None,  # noqa A002
+        names: list[PlaceName] | None = None,
+        events: Iterable[Event] | None = None,
+        enclosed_by: Iterable[Enclosure] | None = None,
+        encloses: Iterable[Enclosure] | None = None,
+        notes: Iterable[Note] | None = None,
+        coordinates: Point | None = None,
+        links: MutableSequence[Link] | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+    ):
+        super().__init__(
+            id,
+            notes=notes,
+            links=links,
+            privacy=privacy,
+            public=public,
+            private=private,
+        )
+        self._names = [] if names is None else names
+        self._coordinates = coordinates
+        if events is not None:
+            self.events = events  # type: ignore[assignment]
+        if enclosed_by is not None:
+            self.enclosed_by = enclosed_by  # type: ignore[assignment]
+        if encloses is not None:
+            self.encloses = encloses  # type: ignore[assignment]</div>
+
+
+    @property
+    def enclosed_by(self) -&gt; EntityCollection[Enclosure]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The places this one is or was directly enclosed by.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @enclosed_by.setter
+    def enclosed_by(self, enclosed_by: Iterable[Enclosure]) -&gt; None:
+        pass  # pragma: no cover
+
+    @enclosed_by.deleter
+    def enclosed_by(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def encloses(self) -&gt; EntityCollection[Enclosure]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The places that are or were directly enclosed by this one.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @encloses.setter
+    def encloses(self, encloses: Iterable[Enclosure]) -&gt; None:
+        pass  # pragma: no cover
+
+    @encloses.deleter
+    def encloses(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def events(self) -&gt; EntityCollection[Event]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The events that happened in or at this place.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @events.setter
+    def events(self, events: Iterable[Event]) -&gt; None:
+        pass  # pragma: no cover
+
+    @events.deleter
+    def events(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def walk_encloses(self) -&gt; Iterator[Enclosure]:
+        &quot;&quot;&quot;
+        All enclosed places.
+        &quot;&quot;&quot;
+        for enclosure in self.encloses:
+            yield enclosure
+            if enclosure.encloses is not None:
+                yield from enclosure.encloses.walk_encloses
+
+<div class="viewcode-block" id="Place.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Place.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Place&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Place.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Place.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Places&quot;)  # pragma: no cover</div>
+
+
+    @property
+    def names(self) -&gt; list[PlaceName]:
+        &quot;&quot;&quot;
+        The place&#39;s names.
+        &quot;&quot;&quot;
+        return self._names
+
+    @property
+    def coordinates(self) -&gt; Point | None:
+        &quot;&quot;&quot;
+        The place&#39;s coordinates.
+        &quot;&quot;&quot;
+        return self._coordinates
+
+    @coordinates.setter
+    def coordinates(self, coordinates: Point):
+        self._coordinates = coordinates
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        # @todo Negotiate this by locale and date.
+        with suppress(IndexError):
+            return Str.plain(self.names[0].name)
+        return super().label
+
+    @override
+    @property
+    def associated_files(self) -&gt; Iterable[File]:
+        yield from self.files
+        for event in self.events:
+            yield from event.files
+
+<div class="viewcode-block" id="Place.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Place.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump_context(
+            dump,
+            names=&quot;name&quot;,
+            events=&quot;event&quot;,
+            enclosedBy=&quot;containedInPlace&quot;,
+            encloses=&quot;containsPlace&quot;,
+        )
+        dump[&quot;@type&quot;] = &quot;https://schema.org/Place&quot;
+        dump[&quot;names&quot;] = [await name.dump_linked_data(app) for name in self.names]
+        dump[&quot;events&quot;] = [
+            app.static_url_generator.generate(f&quot;/event/{quote(event.id)}/index.json&quot;)
+            for event in self.events
+            if not isinstance(event.id, GeneratedEntityId)
+        ]
+        dump[&quot;enclosedBy&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/place/{quote(enclosure.enclosed_by.id)}/index.json&quot;
+            )
+            for enclosure in self.enclosed_by
+            if enclosure.enclosed_by is not None
+            and not isinstance(enclosure.enclosed_by.id, GeneratedEntityId)
+        ]
+        dump[&quot;encloses&quot;] = [
+            app.static_url_generator.generate(
+                f&quot;/place/{quote(enclosure.encloses.id)}/index.json&quot;
+            )
+            for enclosure in self.encloses
+            if enclosure.encloses is not None
+            and not isinstance(enclosure.encloses.id, GeneratedEntityId)
+        ]
+        if self.coordinates is not None:
+            dump[&quot;coordinates&quot;] = {
+                &quot;@type&quot;: &quot;https://schema.org/GeoCoordinates&quot;,
+                &quot;latitude&quot;: self.coordinates.latitude,
+                &quot;longitude&quot;: self.coordinates.longitude,
+            }
+            dump_context(dump, coordinates=&quot;geo&quot;)
+            dump_context(
+                dump[&quot;coordinates&quot;],  # type: ignore[arg-type]
+                latitude=&quot;latitude&quot;,
+            )
+            dump_context(
+                dump[&quot;coordinates&quot;],  # type: ignore[arg-type]
+                longitude=&quot;longitude&quot;,
+            )
+        return dump</div>
+
+
+<div class="viewcode-block" id="Place.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Place.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;names&quot;,
+            {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: await PlaceName.linked_data_schema(app),
+            },
+        )
+        add_property(
+            schema,
+            &quot;enclosedBy&quot;,
+            {&quot;$ref&quot;: &quot;#/definitions/entity/placeCollection&quot;},
+            False,
+        )
+        add_property(
+            schema, &quot;encloses&quot;, {&quot;$ref&quot;: &quot;#/definitions/entity/placeCollection&quot;}
+        )
+        coordinate_schema: DictDump[Dump] = {
+            &quot;type&quot;: &quot;number&quot;,
+        }
+        coordinates_schema: DictDump[Dump] = {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;additionalProperties&quot;: False,
+        }
+        add_property(coordinates_schema, &quot;latitude&quot;, coordinate_schema, False)
+        add_property(coordinates_schema, &quot;longitude&quot;, coordinate_schema, False)
+        add_json_ld(coordinates_schema, schema)
+        add_property(schema, &quot;coordinates&quot;, coordinates_schema, False)
+        add_property(schema, &quot;events&quot;, {&quot;$ref&quot;: &quot;#/definitions/entity/eventCollection&quot;})
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="PresenceRole">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PresenceRole">[docs]</a>
+class PresenceRole:
+    &quot;&quot;&quot;
+    A person&#39;s role at an event.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="PresenceRole.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PresenceRole.name">[docs]</a>
+    @classmethod
+    def name(cls) -&gt; str:
+        &quot;&quot;&quot;
+        The machine name.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(cls))</div>
+
+
+    @property
+    def label(self) -&gt; Str:
+        &quot;&quot;&quot;
+        The human-readable label.
+        &quot;&quot;&quot;
+        raise NotImplementedError(repr(self))</div>
+
+
+
+<div class="viewcode-block" id="ref_role">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.ref_role">[docs]</a>
+def ref_role(root_schema: DictDump[Dump]) -&gt; DictDump[Dump]:
+    &quot;&quot;&quot;
+    Reference the PresenceRole schema.
+    &quot;&quot;&quot;
+    definitions = dump_default(root_schema, &quot;definitions&quot;, dict)
+    if &quot;role&quot; not in definitions:
+        definitions[&quot;role&quot;] = {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;description&quot;: &quot;A person&#39;s role in an event.&quot;,
+        }
+    return {
+        &quot;$ref&quot;: &quot;#/definitions/role&quot;,
+    }</div>
+
+
+
+<div class="viewcode-block" id="Subject">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Subject">[docs]</a>
+class Subject(PresenceRole):
+    &quot;&quot;&quot;
+    Someone was the subject of the event.
+
+    The meaning of this role depends on the event type. For example, for :py:class:`betty.model.event_type.Marriage`,
+    the subjects are the people who got married. For :py:class:`betty.model.event_type.Death` it is the person who
+    died.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Subject.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Subject.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;subject&quot;</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Subject&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Witness">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Witness">[docs]</a>
+class Witness(PresenceRole):
+    &quot;&quot;&quot;
+    Someone `witnessed &lt;https://en.wikipedia.org/wiki/Witness&gt;`_ the event.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Witness.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Witness.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;witness&quot;  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Witness&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Beneficiary">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Beneficiary">[docs]</a>
+class Beneficiary(PresenceRole):
+    &quot;&quot;&quot;
+    Someone was a `benificiary &lt;https://en.wikipedia.org/wiki/Beneficiary&gt;`_ in the event, such as a :py:class:`betty.model.event_type.Will`.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Beneficiary.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Beneficiary.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;beneficiary&quot;  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Beneficiary&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Attendee">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Attendee">[docs]</a>
+class Attendee(PresenceRole):
+    &quot;&quot;&quot;
+    Someone attended the event (further details unknown).
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Attendee.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Attendee.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;attendee&quot;  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Attendee&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Speaker">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Speaker">[docs]</a>
+class Speaker(PresenceRole):
+    &quot;&quot;&quot;
+    Someone performed public speaking at the event.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Speaker.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Speaker.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;speaker&quot;  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Speaker&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Celebrant">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Celebrant">[docs]</a>
+class Celebrant(PresenceRole):
+    &quot;&quot;&quot;
+    Someone was the `celebrant &lt;https://en.wikipedia.org/wiki/Officiant&gt;`_ at the event.
+
+    This includes but is not limited to:
+
+    - civil servant
+    - religious leader
+    - civilian
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Celebrant.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Celebrant.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;celebrant&quot;  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Celebrant&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Organizer">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Organizer">[docs]</a>
+class Organizer(PresenceRole):
+    &quot;&quot;&quot;
+    Someone organized the event.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Organizer.name">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Organizer.name">[docs]</a>
+    @override
+    @classmethod
+    def name(cls) -&gt; str:
+        return &quot;organizer&quot;  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(&quot;Organizer&quot;)  # pragma: no cover</div>
+
+
+
+<div class="viewcode-block" id="Presence">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Presence">[docs]</a>
+@many_to_one_to_many(
+    &quot;betty.model.ancestry.Person&quot;,
+    &quot;presences&quot;,
+    &quot;person&quot;,
+    &quot;event&quot;,
+    &quot;betty.model.ancestry.Event&quot;,
+    &quot;presences&quot;,
+)
+class Presence(HasPrivacy, Entity):
+    &quot;&quot;&quot;
+    The presence of a :py:class:`betty.model.ancestry.Person` at an :py:class:`betty.model.ancestry.Event`.
+    &quot;&quot;&quot;
+
+    #: The person whose presence is described.
+    person: Person | None
+    #: The event the person was present at.
+    event: Event | None
+    #: The role the person performed at the event.
+    role: PresenceRole
+
+<div class="viewcode-block" id="Presence.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Presence.__init__">[docs]</a>
+    def __init__(
+        self,
+        person: Person | None,
+        role: PresenceRole,
+        event: Event | None,
+    ):
+        super().__init__(None)
+        self.person = person
+        self.role = role
+        self.event = event</div>
+
+
+<div class="viewcode-block" id="Presence.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Presence.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Presence&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Presence.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Presence.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Presences&quot;)  # pragma: no cover</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(
+            &quot;Presence of {person} at {event}&quot;,
+            person=self.person.label if self.person else Str._(&quot;Unknown&quot;),
+            event=self.event.label if self.event else Str._(&quot;Unknown&quot;),
+        )
+
+    @override
+    def _get_effective_privacy(self) -&gt; Privacy:
+        return merge_privacies(
+            super()._get_effective_privacy(),
+            self.person,
+            self.event,
+        )</div>
+
+
+
+<div class="viewcode-block" id="Event">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Event">[docs]</a>
+@many_to_one(&quot;place&quot;, &quot;betty.model.ancestry.Place&quot;, &quot;events&quot;)
+@one_to_many(&quot;presences&quot;, &quot;betty.model.ancestry.Presence&quot;, &quot;event&quot;)
+class Event(
+    Dated,
+    HasFiles,
+    HasCitations,
+    HasNotes,
+    Described,
+    HasPrivacy,
+    HasLinksEntity,
+    UserFacingEntity,
+    Entity,
+):
+    &quot;&quot;&quot;
+    An event that took place.
+    &quot;&quot;&quot;
+
+    #: The place the event happened.
+    place: Place | None
+
+<div class="viewcode-block" id="Event.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Event.__init__">[docs]</a>
+    def __init__(
+        self,
+        *,
+        id: str | None = None,  # noqa A002
+        event_type: type[EventType] = UnknownEventType,
+        date: Datey | None = None,
+        files: Iterable[File] | None = None,
+        citations: Iterable[Citation] | None = None,
+        notes: Iterable[Note] | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+        place: Place | None = None,
+        description: str | None = None,
+    ):
+        super().__init__(
+            id,
+            date=date,
+            files=files,
+            citations=citations,
+            notes=notes,
+            privacy=privacy,
+            public=public,
+            private=private,
+            description=description,
+        )
+        self._event_type = event_type
+        if place is not None:
+            self.place = place</div>
+
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        format_kwargs: dict[str, str | Localizable] = {
+            &quot;event_type&quot;: self._event_type.label(),
+        }
+        subjects = [
+            presence.person
+            for presence in self.presences
+            if presence.public
+            and isinstance(presence.role, Subject)
+            and presence.person is not None
+            and presence.person.public
+        ]
+        if subjects:
+            format_kwargs[&quot;subjects&quot;] = Str.call(
+                lambda localizer: &quot;, &quot;.join(
+                    person.label.localize(localizer) for person in subjects
+                )
+            )
+        if self.description is not None:
+            format_kwargs[&quot;event_description&quot;] = self.description
+
+        if subjects:
+            if self.description is None:
+                return Str._(&quot;{event_type} of {subjects}&quot;, **format_kwargs)
+            else:
+                return Str._(
+                    &quot;{event_type} ({event_description}) of {subjects}&quot;, **format_kwargs
+                )
+        if self.description is None:
+            return Str._(&quot;{event_type}&quot;, **format_kwargs)
+        else:
+            return Str._(&quot;{event_type} ({event_description})&quot;, **format_kwargs)
+
+    @override
+    @recursive_repr()
+    def __repr__(self) -&gt; str:
+        return repr_instance(self, id=self._id, type=self._event_type)
+
+    @property
+    def presences(self) -&gt; EntityCollection[Presence]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        People&#39;s presences at this event.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @presences.setter
+    def presences(self, presences: Iterable[Presence]) -&gt; None:
+        pass  # pragma: no cover
+
+    @presences.deleter
+    def presences(self) -&gt; None:
+        pass  # pragma: no cover
+
+<div class="viewcode-block" id="Event.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Event.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Event&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Event.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Event.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Events&quot;)  # pragma: no cover</div>
+
+
+    @property
+    def event_type(self) -&gt; type[EventType]:
+        &quot;&quot;&quot;
+        The type of event.
+        &quot;&quot;&quot;
+        return self._event_type
+
+    @override
+    @property
+    def associated_files(self) -&gt; Iterable[File]:
+        files = [
+            *self.files,
+            *[
+                file
+                for citation in self.citations
+                for file in citation.associated_files
+            ],
+        ]
+        # Preserve the original order.
+        yield from Uniquifier(files)
+
+<div class="viewcode-block" id="Event.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Event.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump_context(dump, presences=&quot;performer&quot;)
+        dump[&quot;@type&quot;] = &quot;https://schema.org/Event&quot;
+        dump[&quot;type&quot;] = self.event_type.name()
+        dump[&quot;eventAttendanceMode&quot;] = &quot;https://schema.org/OfflineEventAttendanceMode&quot;
+        dump[&quot;eventStatus&quot;] = &quot;https://schema.org/EventScheduled&quot;
+        dump[&quot;presences&quot;] = presences = []
+        if self.date is not None and self.public:
+            await self.date.datey_dump_linked_data(
+                dump[&quot;date&quot;],  # type: ignore[arg-type]
+                &quot;startDate&quot;,
+                &quot;endDate&quot;,
+            )
+        for presence in self.presences:
+            if presence.person and not isinstance(
+                presence.person.id, GeneratedEntityId
+            ):
+                presences.append(self._dump_event_presence(presence, app))
+        if self.place is not None and not isinstance(self.place.id, GeneratedEntityId):
+            dump[&quot;place&quot;] = app.static_url_generator.generate(
+                f&quot;/place/{quote(self.place.id)}/index.json&quot;
+            )
+            dump_context(dump, place=&quot;location&quot;)
+        return dump</div>
+
+
+    def _dump_event_presence(self, presence: Presence, app: App) -&gt; DictDump[Dump]:
+        assert presence.person
+        dump: DictDump[Dump] = {
+            &quot;@type&quot;: &quot;https://schema.org/Person&quot;,
+            &quot;person&quot;: app.static_url_generator.generate(
+                f&quot;/person/{quote(presence.person.id)}/index.json&quot;
+            ),
+        }
+        if presence.public:
+            dump[&quot;role&quot;] = presence.role.name()
+        return dump
+
+<div class="viewcode-block" id="Event.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Event.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;type&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+        )
+        add_property(
+            schema,
+            &quot;place&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;uri&quot;,
+            },
+            False,
+        )
+        presence_schema: DictDump[Dump] = {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;additionalProperties&quot;: False,
+        }
+        add_property(presence_schema, &quot;role&quot;, ref_role(schema), False)
+        add_property(
+            presence_schema,
+            &quot;person&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;uri&quot;,
+            },
+        )
+        add_json_ld(presence_schema, schema)
+        add_property(
+            schema,
+            &quot;presences&quot;,
+            {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: presence_schema,
+            },
+        )
+        add_property(
+            schema,
+            &quot;eventStatus&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+        )
+        add_property(
+            schema,
+            &quot;eventAttendanceMode&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="PersonName">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PersonName">[docs]</a>
+@many_to_one(&quot;person&quot;, &quot;betty.model.ancestry.Person&quot;, &quot;names&quot;)
+class PersonName(Localized, HasCitations, HasPrivacy, Entity):
+    &quot;&quot;&quot;
+    A name for a :py:class:`betty.model.ancestry.Person`.
+    &quot;&quot;&quot;
+
+    #: The person whose name this is.
+    person: Person | None
+
+<div class="viewcode-block" id="PersonName.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PersonName.__init__">[docs]</a>
+    def __init__(
+        self,
+        *,
+        id: str | None = None,  # noqa A002
+        person: Person | None = None,
+        individual: str | None = None,
+        affiliation: str | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+        locale: str | None = None,
+    ):
+        if not individual and not affiliation:
+            raise ValueError(
+                &quot;The individual and affiliation names must not both be empty.&quot;
+            )
+        super().__init__(
+            id,
+            privacy=privacy,
+            public=public,
+            private=private,
+            locale=locale,
+        )
+        self._individual = individual
+        self._affiliation = affiliation
+        # Set the person association last, because the association requires comparisons, and self.__eq__() uses the
+        # individual and affiliation names.
+        self.person = person</div>
+
+
+    @override
+    def _get_effective_privacy(self) -&gt; Privacy:
+        privacy = super()._get_effective_privacy()
+        if self.person:
+            return merge_privacies(privacy, self.person.privacy)
+        return privacy
+
+    @override
+    def __repr__(self) -&gt; str:
+        return repr_instance(
+            self, id=self.id, individual=self.individual, affiliation=self.affiliation
+        )
+
+<div class="viewcode-block" id="PersonName.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PersonName.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Person name&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="PersonName.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PersonName.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;Person names&quot;)  # pragma: no cover</div>
+
+
+    @property
+    def individual(self) -&gt; str | None:
+        &quot;&quot;&quot;
+        The name&#39;s individual component.
+
+        Also known as:
+
+        - first name
+        - given name
+        &quot;&quot;&quot;
+        return self._individual
+
+    @property
+    def affiliation(self) -&gt; str | None:
+        &quot;&quot;&quot;
+        The name&#39;s affiliation, or family component.
+
+        Also known as:
+
+        - last name
+        - surname
+        &quot;&quot;&quot;
+        return self._affiliation
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        return Str._(
+            &quot;{individual_name} {affiliation_name}&quot;,
+            individual_name=&quot;…&quot; if not self.individual else self.individual,
+            affiliation_name=&quot;…&quot; if not self.affiliation else self.affiliation,
+        )
+
+<div class="viewcode-block" id="PersonName.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PersonName.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        if self.public:
+            if self.individual is not None:
+                dump_context(dump, individual=&quot;givenName&quot;)
+                dump[&quot;individual&quot;] = self.individual
+            if self.affiliation is not None:
+                dump_context(dump, affiliation=&quot;familyName&quot;)
+                dump[&quot;affiliation&quot;] = self.affiliation
+        return dump</div>
+
+
+<div class="viewcode-block" id="PersonName.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.PersonName.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;individual&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+            False,
+        )
+        add_property(
+            schema,
+            &quot;affiliation&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+            },
+            False,
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Person">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Person">[docs]</a>
+@many_to_many(&quot;parents&quot;, &quot;betty.model.ancestry.Person&quot;, &quot;children&quot;)
+@many_to_many(&quot;children&quot;, &quot;betty.model.ancestry.Person&quot;, &quot;parents&quot;)
+@one_to_many(&quot;presences&quot;, &quot;betty.model.ancestry.Presence&quot;, &quot;person&quot;)
+@one_to_many(&quot;names&quot;, &quot;betty.model.ancestry.PersonName&quot;, &quot;person&quot;)
+class Person(
+    HasFiles,
+    HasCitations,
+    HasNotes,
+    HasLinksEntity,
+    HasPrivacy,
+    UserFacingEntity,
+    Entity,
+):
+    &quot;&quot;&quot;
+    A person.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Person.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Person.__init__">[docs]</a>
+    def __init__(
+        self,
+        *,
+        id: str | None = None,  # noqa A002
+        files: Iterable[File] | None = None,
+        citations: Iterable[Citation] | None = None,
+        links: MutableSequence[Link] | None = None,
+        notes: Iterable[Note] | None = None,
+        privacy: Privacy | None = None,
+        public: bool | None = None,
+        private: bool | None = None,
+        parents: Iterable[Person] | None = None,
+        children: Iterable[Person] | None = None,
+        presences: Iterable[Presence] | None = None,
+        names: Iterable[PersonName] | None = None,
+    ):
+        super().__init__(
+            id,
+            files=files,
+            citations=citations,
+            links=links,
+            notes=notes,
+            privacy=privacy,
+            public=public,
+            private=private,
+        )
+        if children is not None:
+            self.children = children  # type: ignore[assignment]
+        if parents is not None:
+            self.parents = parents  # type: ignore[assignment]
+        if presences is not None:
+            self.presences = presences  # type: ignore[assignment]
+        if names is not None:
+            self.names = names  # type: ignore[assignment]</div>
+
+
+    @property
+    def parents(self) -&gt; EntityCollection[Person]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        All parents.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @parents.setter
+    def parents(self, parents: Iterable[Person]) -&gt; None:
+        pass  # pragma: no cover
+
+    @parents.deleter
+    def parents(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def children(self) -&gt; EntityCollection[Person]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        All children.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @children.setter
+    def children(self, children: Iterable[Person]) -&gt; None:
+        pass  # pragma: no cover
+
+    @children.deleter
+    def children(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def presences(self) -&gt; EntityCollection[Presence]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        All presences at events.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @presences.setter
+    def presences(self, presences: Iterable[Presence]) -&gt; None:
+        pass  # pragma: no cover
+
+    @presences.deleter
+    def presences(self) -&gt; None:
+        pass  # pragma: no cover
+
+    @property
+    def names(self) -&gt; EntityCollection[PersonName]:  # type: ignore[empty-body]
+        &quot;&quot;&quot;
+        The person&#39;s names.
+        &quot;&quot;&quot;
+        pass  # pragma: no cover
+
+    @names.setter
+    def names(self, names: Iterable[PersonName]) -&gt; None:
+        pass  # pragma: no cover
+
+    @names.deleter
+    def names(self) -&gt; None:
+        pass  # pragma: no cover
+
+<div class="viewcode-block" id="Person.entity_type_label">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Person.entity_type_label">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label(cls) -&gt; Str:
+        return Str._(&quot;Person&quot;)  # pragma: no cover</div>
+
+
+<div class="viewcode-block" id="Person.entity_type_label_plural">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Person.entity_type_label_plural">[docs]</a>
+    @override
+    @classmethod
+    def entity_type_label_plural(cls) -&gt; Str:
+        return Str._(&quot;People&quot;)  # pragma: no cover</div>
+
+
+    @property
+    def ancestors(self) -&gt; Iterator[Person]:
+        &quot;&quot;&quot;
+        All ancestors.
+        &quot;&quot;&quot;
+        for parent in self.parents:
+            yield parent
+            yield from parent.ancestors
+
+    @property
+    def siblings(self) -&gt; list[Person]:
+        &quot;&quot;&quot;
+        All siblings.
+        &quot;&quot;&quot;
+        siblings = []
+        for parent in self.parents:
+            for sibling in parent.children:
+                if sibling != self and sibling not in siblings:
+                    siblings.append(sibling)
+        return siblings
+
+    @property
+    def descendants(self) -&gt; Iterator[Person]:
+        &quot;&quot;&quot;
+        All descendants.
+        &quot;&quot;&quot;
+        for child in self.children:
+            yield child
+            yield from child.descendants
+
+    @override
+    @property
+    def associated_files(self) -&gt; Iterable[File]:
+        files = [
+            *self.files,
+            *[
+                file
+                for name in self.names
+                for citation in name.citations
+                for file in citation.associated_files
+            ],
+            *[
+                file
+                for presence in self.presences
+                if presence.event is not None
+                for file in presence.event.associated_files
+            ],
+        ]
+        # Preserve the original order.
+        yield from Uniquifier(files)
+
+    @override
+    @property
+    def label(self) -&gt; Str:
+        for name in self.names:
+            if name.public:
+                return name.label
+        return super().label
+
+<div class="viewcode-block" id="Person.dump_linked_data">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Person.dump_linked_data">[docs]</a>
+    @override
+    async def dump_linked_data(self, app: App) -&gt; DictDump[Dump]:
+        dump = await super().dump_linked_data(app)
+        dump_context(
+            dump,
+            names=&quot;name&quot;,
+            parents=&quot;parent&quot;,
+            children=&quot;child&quot;,
+            siblings=&quot;sibling&quot;,
+        )
+        dump[&quot;@type&quot;] = &quot;https://schema.org/Person&quot;
+        dump[&quot;parents&quot;] = [
+            app.static_url_generator.generate(f&quot;/person/{quote(parent.id)}/index.json&quot;)
+            for parent in self.parents
+            if not isinstance(parent.id, GeneratedEntityId)
+        ]
+        dump[&quot;children&quot;] = [
+            app.static_url_generator.generate(f&quot;/person/{quote(child.id)}/index.json&quot;)
+            for child in self.children
+            if not isinstance(child.id, GeneratedEntityId)
+        ]
+        dump[&quot;siblings&quot;] = [
+            app.static_url_generator.generate(f&quot;/person/{quote(sibling.id)}/index.json&quot;)
+            for sibling in self.siblings
+            if not isinstance(sibling.id, GeneratedEntityId)
+        ]
+        dump[&quot;presences&quot;] = [
+            self._dump_person_presence(presence, app)
+            for presence in self.presences
+            if presence.event is not None
+            and not isinstance(presence.event.id, GeneratedEntityId)
+        ]
+        if self.public:
+            dump[&quot;names&quot;] = [
+                await name.dump_linked_data(app) for name in self.names if name.public
+            ]
+        else:
+            dump[&quot;names&quot;] = []
+        return dump</div>
+
+
+    def _dump_person_presence(self, presence: Presence, app: App) -&gt; DictDump[Dump]:
+        assert presence.event
+        dump: DictDump[Dump] = {
+            &quot;event&quot;: app.static_url_generator.generate(
+                f&quot;/event/{quote(presence.event.id)}/index.json&quot;
+            ),
+        }
+        dump_context(dump, event=&quot;performerIn&quot;)
+        if presence.public:
+            dump[&quot;role&quot;] = presence.role.name()
+        return dump
+
+<div class="viewcode-block" id="Person.linked_data_schema">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Person.linked_data_schema">[docs]</a>
+    @override
+    @classmethod
+    async def linked_data_schema(cls, app: App) -&gt; DictDump[Dump]:
+        schema = await super().linked_data_schema(app)
+        add_property(
+            schema,
+            &quot;names&quot;,
+            {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: await PersonName.linked_data_schema(app),
+            },
+        )
+        add_property(
+            schema,
+            &quot;parents&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/entity/personCollection&quot;,
+            },
+        )
+        add_property(
+            schema,
+            &quot;children&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/entity/personCollection&quot;,
+            },
+        )
+        add_property(
+            schema,
+            &quot;siblings&quot;,
+            {
+                &quot;$ref&quot;: &quot;#/definitions/entity/personCollection&quot;,
+            },
+        )
+        presence_schema: DictDump[Dump] = {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;additionalProperties&quot;: False,
+        }
+        add_property(presence_schema, &quot;role&quot;, ref_role(schema), False)
+        add_property(
+            presence_schema,
+            &quot;event&quot;,
+            {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;format&quot;: &quot;uri&quot;,
+            },
+        )
+        add_json_ld(presence_schema, schema)
+        add_property(
+            schema,
+            &quot;presences&quot;,
+            {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: presence_schema,
+            },
+        )
+        return schema</div>
+</div>
+
+
+
+<div class="viewcode-block" id="Ancestry">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Ancestry">[docs]</a>
+class Ancestry(MultipleTypesEntityCollection[Entity]):
+    &quot;&quot;&quot;
+    An ancestry contains all the entities of a single family tree/genealogical data set.
+    &quot;&quot;&quot;
+
+<div class="viewcode-block" id="Ancestry.__init__">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Ancestry.__init__">[docs]</a>
+    def __init__(self):
+        super().__init__()
+        self._check_graph = True</div>
+
+
+<div class="viewcode-block" id="Ancestry.add_unchecked_graph">
+<a class="viewcode-back" href="../../../../betty.model.ancestry/#betty.model.ancestry.Ancestry.add_unchecked_graph">[docs]</a>
+    def add_unchecked_graph(self, *entities: Entity) -&gt; None:
+        &quot;&quot;&quot;
+        Add entities to the ancestry but do not automatically add associates as well.
+
+        It is the caller&#39;s responsibility to ensure all associates are added to the ancestry.
+        If this is done, calling this method is faster than the usual entity collection methods.
+        &quot;&quot;&quot;
+        self._check_graph = False
+        try:
+            self.add(*entities)
+        finally:
+            self._check_graph = True</div>
+
+
+    def _on_add(self, *entities: Entity) -&gt; None:
+        super()._on_add(*entities)
+        if self._check_graph:
+            self.add(*self._get_associates(*entities))
+
+    def _get_associates(self, *entities: Entity) -&gt; Iterable[Entity]:
+        for entity in entities:
+            for association in EntityTypeAssociationRegistry.get_all_associations(
+                entity
+            ):
+                for associate in EntityTypeAssociationRegistry.get_associates(
+                    entity, association
+                ):
+                    yield associate</div>
+
+</pre></div>
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Bart Feenstra and contributors
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../../_static/documentation_options.js?v=2bd58097"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/furo.js?v=4e2eecee"></script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>

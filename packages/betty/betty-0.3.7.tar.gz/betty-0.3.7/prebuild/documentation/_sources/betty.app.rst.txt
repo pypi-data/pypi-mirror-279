@@ -1,0 +1,18 @@
+betty.app package
+=================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 999
+
+   betty.app.extension
+
+Module contents
+---------------
+
+.. automodule:: betty.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
