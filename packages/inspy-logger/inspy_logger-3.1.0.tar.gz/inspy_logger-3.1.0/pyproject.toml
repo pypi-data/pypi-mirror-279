@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "inspy-logger"
+version = "3.1.0"
+description = "Colorable, scalable logger for CLI"
+authors = ["Taylor B. <tayjaybabee@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+rich = "^13.7.1"
+requests = "^2.32.3"
+urllib3 = "^2.2.2"
+python-box = "^7.2.0"
+packaging = "^24.1"
+appdirs = "^1.4.4"
+pypattyrn = "^1.2"
+platformdirs = "^4.2.2"
+pyperclip = "^1.8.2"
+psutil = "^6.0.0"
+
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^7.3.7"
+sphinx-rtd-theme = "^2.0.0"
+sphinx-autodoc-typehints = "^2.1.1"
+sphinx-autoapi = "^3.1.1"
+sphinxcontrib-napoleon = "^0.7"
+sphinx-argparse = "^0.4.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ptipython = "^1.0.1"
+ipython = "^8.25.0"
+prompt-toolkit = "^3.0.46"
+
+[tool.poetry.scripts]
+inspy-logger-tool = "inspy_logger.Scripts.main:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
