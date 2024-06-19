@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: omfpandas
+Version: 0.2.0
+Summary: 
+Home-page: https://github.com/elphick/omfpandas
+Author: Greg
+Author-email: 11791585+elphick@users.noreply.github.com
+Requires-Python: >=3.9,<3.11
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: io
+Requires-Dist: omf (>=1.0.1,<2.0.0)
+Requires-Dist: pandas (>=2.2.2,<3.0.0)
+Requires-Dist: pyarrow (>=16.1.0,<17.0.0) ; extra == "io"
+Project-URL: Documentation, https://elphick.github.io/omfpandas
+Project-URL: Repository, https://github.com/elphick/omfpandas
+Description-Content-Type: text/markdown
+
+# omfpandas
+
+[![Run Tests](https://github.com/Elphick/omfpandas/actions/workflows/poetry_build_and_test.yml/badge.svg?branch=main)](https://github.com/Elphick/omfpandas/actions/workflows/poetry_build_and_test.yml)
+[![Publish Docs](https://github.com/Elphick/omfpandas/actions/workflows/poetry_sphinx_docs_to_gh_pages.yml/badge.svg?branch=main)](https://github.com/Elphick/omfpandas/actions/workflows/poetry_sphinx_docs_to_gh_pages.yml)
+
+A pandas (and parquet) interface for the [Open Mining Format package (omf)](https://omf.readthedocs.io/en/latest/).
+
+When working with OMF files, it is often useful to convert the data to a pandas DataFrame.
+This package provides a simple interface to do so.
+
+The parquet format is a nice, compact, efficient format to persist pandas DataFrames.
+This package also provides a simple interface to convert an omf element to a parquet file.
+When datasets do not fit into memory, parquet files can be read in chunks or by column.
+
+## Installation
+
+```bash
+pip install omfpandas
+```
+
+If you intend to use the parquet functionality, you will need to install the optional dependencies.
+
+```bash
+pip install omfpandas[io]
+```
+
+## Roadmap
+
+- [x] 0.2.0 - Add support for reading a VolumeElement (Block Model) from an OMF file as a pandas DataFrame. 
+  Export a VolumeElement as a parquet file.
+- [ ] 0.3.0 - Add support for writing a DataFrame to an OMF VolumeElement
+- [ ] 0.4.0 - Add support for low-memory/out-of-core writing an omf element to parquet
+- [ ] ...
+
