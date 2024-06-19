@@ -1,0 +1,13 @@
+src/pyqcstrc/ico2/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+src/pyqcstrc/ico2/intsct.py,sha256=mpnWoU9bJbJCLg7_CzpHYW0u3S8rdVMZofbEPiUDwN4,44462
+src/pyqcstrc/ico2/math1.py,sha256=e39CcJS8IWE8U45ENUX1rvG_ROmM93s-BkRhinF6C7U,25302
+src/pyqcstrc/ico2/numericalc.py,sha256=8qXq52P3xPUop2SRomMqkeUeR9yj2fWE49RRtrHbaB8,21048
+src/pyqcstrc/ico2/occupation_domain.py,sha256=8fhgEADnk8ETSwNBu5CwTuSpwlE622m3oveKL1F0k9k,61743
+src/pyqcstrc/ico2/symmetry.py,sha256=xXwRhvPx4o-gKh4-yRIUWNItVXZlW8Mvjyj65W1OsAw,7508
+src/pyqcstrc/ico2/two_occupation_domains.py,sha256=_UW55mIGw6StIm0DmQUS5igbyGGDaje0bUMskcTXQrQ,3252
+src/pyqcstrc/ico2/utils.py,sha256=qFf_NW1XZjIIpk0_a3c2KfWxKcNNpSFhS7C24c0cvu8,35857
+pyqcstrc-0.0.2a5.dist-info/LICENSE.txt,sha256=8TIOzRWjJz6fce-zp57ZtCwlwUcxJd3ooPhdrawvy2E,1140
+pyqcstrc-0.0.2a5.dist-info/METADATA,sha256=uxzRvZ4DvrRu87D8r8AN6YDk9Ybh4h3QAoPVeBQr66E,2437
+pyqcstrc-0.0.2a5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyqcstrc-0.0.2a5.dist-info/top_level.txt,sha256=CNC7QkggL86AXKnBiShOSW5nomRDaS-FVl7qOFJrllw,18
+pyqcstrc-0.0.2a5.dist-info/RECORD,,
