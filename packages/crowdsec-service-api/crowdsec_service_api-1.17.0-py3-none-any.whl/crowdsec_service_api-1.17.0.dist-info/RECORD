@@ -1,0 +1,12 @@
+crowdsec_service_api/__init__.py,sha256=SwxaB4QstODv2yLH4BXnO8fOwAAkdV2X8RAbw4ehl6w,1566
+crowdsec_service_api/base_model.py,sha256=nPnmr-9H1wRkIwgDqujYLf2-E1VTqTQMSJTNuoWaSuY,1355
+crowdsec_service_api/http_client.py,sha256=75gmiW40Caj9PQgV5R-2nK8EHM8_qlcoBdCbFQdWbCM,4488
+crowdsec_service_api/models.py,sha256=WZKNM6IGwQ1xxX2fU7PDh4XG8Fkpots_YJrc5vYfxPM,35843
+crowdsec_service_api/services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+crowdsec_service_api/services/blocklists.py,sha256=P9vy2cnni1jZaNXUu-kFeqpOqAQ-BxIa4oZRaUiEdOg,9279
+crowdsec_service_api/services/info.py,sha256=jRkYCDXYFIj30sUl3pi5iWxAwor6LjTypNyzPLkaNC4,499
+crowdsec_service_api/services/integrations.py,sha256=6aKZceI7PcDYTzIReR7nRkXlwhFiPPm93WLE_FcADNY,4904
+crowdsec_service_api-1.17.0.dist-info/METADATA,sha256=KFTXsrEYOZRcE6lX9hNhB5G8gahliwBd8HQRpwa0eag,573
+crowdsec_service_api-1.17.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+crowdsec_service_api-1.17.0.dist-info/top_level.txt,sha256=BOfzPmXK20JlBp7dxtvZ8sxmAQcJHKmHEJN1AMMgpY4,21
+crowdsec_service_api-1.17.0.dist-info/RECORD,,
