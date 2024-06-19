@@ -1,0 +1,10 @@
+gen3_tracker>=0.0.4rc7
+click
+pandas
+numpy
+openpyxl
+PyYAML
+orjson
+ndjson
+inflection
+jinja2
