@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "namespace": "datalink",
+    "name": "hypergotesttransactionmanager",
+    "package": "hypergo",
+    "lib_func": "hypergo.standard_components.transaction_manager.__main__.converge",
+    "input_keys": [
+        "hypergo.test.input_bindings_performed",
+        "hypergo.orchestrated.test"
+    ],
+    "output_keys": [
+        "hypergo.test.transaction_converged"
+    ],
+    "input_bindings": [
+        "{config.input_keys}",
+        "{message.routingkey}",
+        "{message.body}",
+        "{transaction}"
+    ],
+    "output_bindings": [
+        "message.body"
+    ],
+    "input_operations": {},
+    "output_operations": {},
+    "trigger": "service-bus-topic"
+}
