@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/dev_template.egg-info/PKG-INFO
+src/dev_template.egg-info/SOURCES.txt
+src/dev_template.egg-info/dependency_links.txt
+src/dev_template.egg-info/entry_points.txt
+src/dev_template.egg-info/requires.txt
+src/dev_template.egg-info/top_level.txt
+src/module/__init__.py
+src/module/dev_template.py
+tests/test_dev_template.py
