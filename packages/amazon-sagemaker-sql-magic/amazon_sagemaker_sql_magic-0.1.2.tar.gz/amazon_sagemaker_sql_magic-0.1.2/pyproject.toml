@@ -1,0 +1,80 @@
+[build-system]
+requires = [
+    "setuptools >= 61",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "amazon-sagemaker-sql-magic"
+version = "0.1.2"
+description = "SageMaker SQL Magic library"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+authors = [
+{ name = "Amazon Web Services" },
+]
+classifiers = [
+"Intended Audience :: Developers",
+"Intended Audience :: Science/Research",
+"License :: OSI Approved :: Apache Software License",
+"Programming Language :: Python",
+"Programming Language :: Python :: 3.8",
+"Programming Language :: Python :: 3.9",
+"Programming Language :: Python :: 3.10",
+"Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "pandas",
+    "IPython",
+    "sqlparse==0.5.0",
+    "amazon_sagemaker_sql_execution>=0.0.7,<1"
+]
+
+[project.optional-dependencies]
+all = [
+    "amazon-sagemaker-sql-magic[dev, test, flake8, pylint, pydocstyle, twine]",
+    "amazon_sagemaker_sql_execution[all]>=0.0.7,<1"
+]
+
+dev = [
+    "black",
+    "build"
+]
+test = [
+    "pytest",
+    "tox==4.11.4",
+    "parameterized",
+    "coverage",
+    "pytest-cov",
+    "pytest-timeout",
+    "boto3",
+
+]
+flake8 = [
+    "flake8==4.0.1",
+    "flake8-future-import==0.4.6"
+]
+pylint = [
+    "pylint==2.6.2",
+    "astroid==2.4.2"
+]
+pydocstyle = [
+    "pydocstyle==6.1.1"
+]
+twine = [
+    "twine==3.8.0",
+    "packaging"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.urls]
+homepage = "https://aws.amazon.com/sagemaker"
+
+[tool.isort]
+# required for compatibility with black:
+profile = "black"

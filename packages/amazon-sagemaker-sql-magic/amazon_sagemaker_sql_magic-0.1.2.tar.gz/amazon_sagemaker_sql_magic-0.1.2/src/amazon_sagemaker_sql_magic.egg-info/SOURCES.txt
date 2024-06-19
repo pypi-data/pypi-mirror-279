@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+NOTICE
+README.md
+pyproject.toml
+src/amazon_sagemaker_sql_magic/__init__.py
+src/amazon_sagemaker_sql_magic/exceptions.py
+src/amazon_sagemaker_sql_magic/sql_magic.py
+src/amazon_sagemaker_sql_magic.egg-info/PKG-INFO
+src/amazon_sagemaker_sql_magic.egg-info/SOURCES.txt
+src/amazon_sagemaker_sql_magic.egg-info/dependency_links.txt
+src/amazon_sagemaker_sql_magic.egg-info/requires.txt
+src/amazon_sagemaker_sql_magic.egg-info/top_level.txt
+src/amazon_sagemaker_sql_magic/utils/__init__.py
+src/amazon_sagemaker_sql_magic/utils/constants.py
+src/amazon_sagemaker_sql_magic/utils/output_format_arguments_processor.py
+src/amazon_sagemaker_sql_magic/utils/string_utils.py
