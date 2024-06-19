@@ -1,0 +1,13 @@
+LICENSE
+README.rst
+pyproject.toml
+py3langid/__init__.py
+py3langid/langid.py
+py3langid.egg-info/PKG-INFO
+py3langid.egg-info/SOURCES.txt
+py3langid.egg-info/dependency_links.txt
+py3langid.egg-info/entry_points.txt
+py3langid.egg-info/requires.txt
+py3langid.egg-info/top_level.txt
+py3langid/data/model.plzma
+tests/test_langid.py
