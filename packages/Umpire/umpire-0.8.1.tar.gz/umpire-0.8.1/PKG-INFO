@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Umpire
+Version: 0.8.1
+Summary: Generic dependency resolver.
+Home-page: https://www.signiant.com
+Author: Signiant SRE
+Author-email: sre@signiant.com
+License: MIT
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: MaestroOps>=0.9
+Requires-Dist: tqdm>=4.64.1
