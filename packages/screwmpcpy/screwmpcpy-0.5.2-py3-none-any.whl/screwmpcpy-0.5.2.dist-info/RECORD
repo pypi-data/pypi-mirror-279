@@ -1,0 +1,15 @@
+screwmpcpy/__init__.py,sha256=gLOEMV6UP5BHYgXGedQGYz0VoYownjQUexAD1wm4Bvc,600
+screwmpcpy/_version.py,sha256=9wH2PDsTkkxdqSU9YziEjDTHYLEcKPSYr6RofNSEaJk,411
+screwmpcpy/_version.pyi,sha256=j5kbzfm6lOn8BzASXWjGIA1yT0OlHTWqlbyZ8Si_o0E,118
+screwmpcpy/basemg.py,sha256=JKcpVJMEcnRE58d1JomK6Z0R5_X9_kcXK2qft5mEsKU,3692
+screwmpcpy/dqutil.py,sha256=BuNTJbkAj4SBZFcJ_MlIuxyc9nekm6PmEOZiZ_zIzpw,10134
+screwmpcpy/mpcutil.py,sha256=EZozk_El7LGIWz7jEpuKCV55p98K0HF8C3EuFEvWfqI,5026
+screwmpcpy/pandamg.py,sha256=UHCHQZDp_mRgzPjE0d6h9Hzggo2qpLsWEa3Dvjg19t4,15167
+screwmpcpy/posegen.py,sha256=J9RFLolS2cv3rfq1IkIyDaFnyV0D7YVYLzRSZ0hyuuM,1840
+screwmpcpy/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+screwmpcpy/screwintegrator.py,sha256=jFOaenXofIDoBiq92dw5WOktXGkm5JN3NbSbxZSOhqw,1722
+screwmpcpy/screwmpc.py,sha256=fHTDPcC50Wa6fsMvUnSVnBfvfU0ElR7OkJu_Au9R-ss,6414
+screwmpcpy-0.5.2.dist-info/METADATA,sha256=oKZLjqJEmRKGWHXfmRlWCSVm8CanAO2fl2ZdC6zcsO4,7617
+screwmpcpy-0.5.2.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+screwmpcpy-0.5.2.dist-info/licenses/LICENSE,sha256=1Mv-g-fW4p9MdoiY1EloVG7UoR97tdOyijk_PFbPlKY,1056
+screwmpcpy-0.5.2.dist-info/RECORD,,
