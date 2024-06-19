@@ -1,0 +1,6 @@
+graft bootstrap/static
+graft fontawesome/static
+exclude .gitignore tox.ini
+include README.rst
+prune .github
+prune tests
