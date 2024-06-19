@@ -1,0 +1,17 @@
+appdirs==1.4.4
+prompt_toolkit==3.0.47
+notify-send==1.1.2
+Pygments==2.18.0
+streamscrobbler3==0.0.4
+python-mpv==1.0.6
+pyradios==2.1.0
+python-vlc==3.0.20123
+pluginbase==1.0.1
+tinydb==4.8.0
+cmd-parser==0.0.1.dev2
+setuptools==70.0.0
+
+[dev]
+flake8
+pre-commit
+build
