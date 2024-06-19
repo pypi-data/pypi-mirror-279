@@ -1,0 +1,3 @@
+[console_scripts]
+llmask=llmask.cli:app
+
