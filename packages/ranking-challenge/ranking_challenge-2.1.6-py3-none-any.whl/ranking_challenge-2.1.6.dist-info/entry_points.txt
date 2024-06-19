@@ -1,0 +1,3 @@
+[console_scripts]
+rcfaker=ranking_challenge.fake:main
+
