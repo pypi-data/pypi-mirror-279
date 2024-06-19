@@ -1,0 +1,9 @@
+source_dixa/__init__.py,sha256=vP--8-Ff8gNCf-aliAdj6PHU155dK1asNgcz5DEzT2c,120
+source_dixa/manifest.yaml,sha256=YhkVZWwd7PKObKummm0zgxl499WWuJ8Y5BCoDl4-4Lg,2556
+source_dixa/run.py,sha256=burqwqoo2ahQb8DXgdwTZagFCagc45uDnxnietbBV8k,224
+source_dixa/schemas/conversation_export.json,sha256=fSGDlDTTIddaRJoEVcH-GXBvRERf8GNOKb9ZKS9yeFc,5471
+source_dixa/source.py,sha256=gTeg2i6Upblwdh8lHMDtxAUkkjomaonwyz_DnHgHHcU,473
+airbyte_source_dixa-0.3.1.dist-info/METADATA,sha256=AVOPcuI6UoZ4DvSjoSM2L8XY-w4vNjD5vNufKSWY99s,5156
+airbyte_source_dixa-0.3.1.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+airbyte_source_dixa-0.3.1.dist-info/entry_points.txt,sha256=hAW8GrKSJVfwFZw9Nb9xl8OkqeaoI8R7HwrDfu-DXZA,51
+airbyte_source_dixa-0.3.1.dist-info/RECORD,,
