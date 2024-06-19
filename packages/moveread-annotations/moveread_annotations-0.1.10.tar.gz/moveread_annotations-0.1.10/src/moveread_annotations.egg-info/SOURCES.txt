@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/moveread/annotations/__init__.py
+src/moveread/annotations/__init__.pyi
+src/moveread/annotations/games.py
+src/moveread/annotations/images.py
+src/moveread/annotations/players.py
+src/moveread/annotations/sheets.py
+src/moveread/annotations/tsgen.py
+src/moveread_annotations.egg-info/PKG-INFO
+src/moveread_annotations.egg-info/SOURCES.txt
+src/moveread_annotations.egg-info/dependency_links.txt
+src/moveread_annotations.egg-info/entry_points.txt
+src/moveread_annotations.egg-info/requires.txt
+src/moveread_annotations.egg-info/top_level.txt
