@@ -1,0 +1,24 @@
+# Config file for automatic testing at travis-ci.org
+
+language: python
+python:
+  - 2.7
+  - 3.4
+  - 3.5
+  - 3.6
+
+install:
+  - mkdir tmp
+  - pushd tmp ; pip install -r ../requirements_dev.txt ; popd
+  - pushd tmp ; pip install -r ../requirements.txt ; popd
+  - if [[ $TRAVIS_PYTHON_VERSION == 2.7 ]]; then pip install enum34; fi
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then pip install mypy; fi
+  - pushd tmp ; pip install codecov ; popd
+  - python setup.py build_ext --inplace
+
+script:
+  - if [[ $TRAVIS_PYTHON_VERSION == 3.6 ]]; then make lint; fi
+  - py.test --cov
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
