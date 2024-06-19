@@ -1,0 +1,12 @@
+pydantic_firestore/__init__.py,sha256=EuR9S7pJ5Im0wpKsRz49Bpkv6Ghkhw5ux5Jou5u62x4,336
+pydantic_firestore/document.py,sha256=sf2Zmd1BbdEqxA5wP_xLoXatL567BlLBgwC0LeERyBs,1075
+pydantic_firestore/location.py,sha256=oFTqFjIh2KXeGa5lr4fPt87gBMzOV4VW9V_THakjhP4,7287
+pydantic_firestore/path.py,sha256=u_oRfT-7O8N9P19qttVVWrrqZ-rkEk7__c-y7OSk6bI,1405
+pydantic_firestore/reference.py,sha256=oLB2Z9grACi5fEl1Xm_QbIb5qTDo7MO6othXVpvil7k,2573
+pydantic_firestore/snapshot.py,sha256=ky7VS7KSxpbB8ZJ3O0T3tJWSK9y2AfNsN_DO7OTrT3M,2146
+pydantic_firestore/transforms.py,sha256=pzgRCRrtF1EDWbLtZbDPa9naBeckSk4fpYraPFzGFHc,2935
+pydantic_firestore/utils.py,sha256=D82HE8F2efiJGl2t_5hxPjwr_QzDRBnyT0EmIKu7RYU,1610
+pydantic_firestore-0.1.0.dist-info/METADATA,sha256=4q2ZjyHQ2xHdamZYJFiYIOufj2Yy4XuSWxNTblRG5yo,1718
+pydantic_firestore-0.1.0.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+pydantic_firestore-0.1.0.dist-info/licenses/LICENSE,sha256=wlGA9ywcpMpZBLD6sve4eb4_n7dnTOEy3mCnK0muxXo,1074
+pydantic_firestore-0.1.0.dist-info/RECORD,,
