@@ -1,0 +1,7 @@
+#teste
+pytest
+pytest-mock
+
+# coverage
+coverage
+pytest-cov
