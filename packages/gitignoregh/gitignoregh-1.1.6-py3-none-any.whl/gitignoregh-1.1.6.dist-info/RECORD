@@ -1,0 +1,10 @@
+LICENSE,sha256=7PiJdoeHzGfeWRC-TiOxbtGdss6xwyjfrcnsxQhFz8I,1067
+gitignoregh/__init__.py,sha256=sC9BBqvFX_Fpr3ARGBOovkFqF7-PzwTTirDbP4A3wCI,77
+gitignoregh/__main__.py,sha256=24_axKfkRjlNV4Y2ryGdr6MqqL4U__Z4uOFXdVIM4r0,40
+gitignoregh/cli.py,sha256=ztRRMzCLPhAsutxYY6Uw98l4TVuZrh1Z1DSImc9Zf4Q,1711
+gitignoregh/gitignoregh.py,sha256=JrX-6euv8mBybLSHLEb3kiC6TS7jKduwea56amb9_HY,4377
+gitignoregh-1.1.6.dist-info/LICENSE,sha256=7PiJdoeHzGfeWRC-TiOxbtGdss6xwyjfrcnsxQhFz8I,1067
+gitignoregh-1.1.6.dist-info/METADATA,sha256=jWtc4sKfGBwUQWWHmYvbKYjRRyuzFC44RJsaJhDhBwc,3896
+gitignoregh-1.1.6.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+gitignoregh-1.1.6.dist-info/entry_points.txt,sha256=JKctkV4zUrdi6EmsxdcQYjNJkCpzqxiJKiW2ySnXfic,78
+gitignoregh-1.1.6.dist-info/RECORD,,
