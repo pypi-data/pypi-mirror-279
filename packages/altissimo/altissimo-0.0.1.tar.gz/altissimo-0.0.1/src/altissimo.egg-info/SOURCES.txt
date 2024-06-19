@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/altissimo/__init__.py
+src/altissimo/tools.py
+src/altissimo.egg-info/PKG-INFO
+src/altissimo.egg-info/SOURCES.txt
+src/altissimo.egg-info/dependency_links.txt
+src/altissimo.egg-info/top_level.txt
