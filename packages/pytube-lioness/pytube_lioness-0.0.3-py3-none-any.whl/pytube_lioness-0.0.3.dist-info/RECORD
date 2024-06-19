@@ -1,0 +1,10 @@
+lioness/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lioness/conf_default/logging.ini,sha256=KW_5-fZDd-3eb-b3gfz9URDtEdahBk8IR_JdBy545wA,323
+lioness/nodes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lioness/nodes/download_and_merge.py,sha256=WQrDF7x1Wb0wa71x2IcNU1w1pIA4e602UBkaHYAFphY,2316
+lioness/nodes/project_logging.py,sha256=uHkSIgS94s3UFC60Q1g9vnCO3W9YbBHYMEZdSEvIKe0,391
+lioness/pipelines/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+lioness/pipelines/download_and_merge.py,sha256=akQ_klhRCrg8fIofGbDoc0hCSwF8NS1YIJDTM3IEHf8,1378
+pytube_lioness-0.0.3.dist-info/METADATA,sha256=lzpEqArq3X30biKBl9scSl9WNMBR5uS5UFXkuP15Suw,687
+pytube_lioness-0.0.3.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+pytube_lioness-0.0.3.dist-info/RECORD,,
