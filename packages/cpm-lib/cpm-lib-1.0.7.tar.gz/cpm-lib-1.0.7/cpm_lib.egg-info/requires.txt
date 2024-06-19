@@ -1,0 +1,4 @@
+
+[dev]
+pytest==8.*
+twine>=4.0.2
