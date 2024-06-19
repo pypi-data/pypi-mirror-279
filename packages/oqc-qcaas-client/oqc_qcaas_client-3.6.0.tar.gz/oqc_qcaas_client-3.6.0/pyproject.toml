@@ -1,0 +1,104 @@
+[build-system]
+requires = [ "poetry-core>=1.0.0",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "oqc_qcaas_client"
+version = "3.6.0"
+description = "OQC Quantum Computing as a Service (QCaaS)"
+authors = [ "OQC <oqc_qcaas_support@oxfordquantumcircuits.com>",]
+readme = "client/README.md"
+exclude = [ ".env",]
+license = "BSD-3-Clause"
+source = []
+[[tool.poetry.packages]]
+include = "qcaas_common"
+from = "common"
+
+[[tool.poetry.packages]]
+include = "qcaas_client"
+from = "client"
+
+[[tool.poetry.packages]]
+include = "qcaas_common"
+from = "common"
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+toml = "0.10.2"
+pamqp = "2.3.0"
+google-api-python-client = "2.133.0"
+google-auth-httplib2 = "0.2.0"
+google-auth-oauthlib = "1.2.0"
+attrs = "21.2.0"
+bidict = "0.23.1"
+cachetools = "5.3.3"
+certifi = "2024.6.2"
+charset-normalizer = "3.3.2"
+google-api-core = "2.19.0"
+google-auth = "2.30.0"
+googleapis-common-protos = "1.63.1"
+h11 = "0.14.0"
+httplib2 = "0.22.0"
+idna = "3.7"
+markupsafe = "2.1.5"
+oauthlib = "3.2.2"
+proto-plus = "1.23.0"
+protobuf = "4.25.3"
+pyasn1-modules = "0.4.0"
+pyasn1 = "0.6.0"
+pyparsing = "3.1.2"
+python-dotenv = "1.0.1"
+python-engineio = "4.9.1"
+python-socketio = "5.5.2"
+requests-oauthlib = "2.0.0"
+requests = "2.32.2"
+rsa = "4.9"
+simple-websocket = "1.0.0"
+uritemplate = "4.1.1"
+urllib3 = "2.2.2"
+wsproto = "1.2.0"
+
+[tool.poetry.extras]
+pip-licenses = [ "pip-licenses",]
+
+[tool.poetry.scripts]
+oqc_client = "qcaas_client.commandline:main"
+
+[tool.pytest.ini_options]
+env_files = [ ".env",]
+
+[tool.poetry.dependencies.pip-licenses]
+version = "^3.5.3"
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.7.0"
+bandit = "^1.7.1"
+isort = "^5.10.1"
+pre-commit = ">=3.2.0"
+black = "^24.3.0"
+jupytext = "~=1.14.5"
+pip-audit = "^2.4.5"
+flake8 = "^4.0.1"
+keyring = "21.8.0"
+artifacts-keyring = "0.3.1"
+twine = "~=3.4.2"
+py-spy = "^0.3.14"
+
+[tool.poetry.group.client.dependencies]
+attrs = "21.2.0"
+python-dotenv = "^1.0.0"
+python-socketio = "5.5.2"
+requests = "2.32.2"
+markupsafe = "^2.0.0"
+
+[tool.poetry.group.common.dependencies]
+python-dotenv = "^1.0.0"
+opencensus = "^0.9.0"
+opencensus-ext-azure = "^1.1.1"
+pyyaml = "^6.0.1"
+qat-compiler = "1.1.0"

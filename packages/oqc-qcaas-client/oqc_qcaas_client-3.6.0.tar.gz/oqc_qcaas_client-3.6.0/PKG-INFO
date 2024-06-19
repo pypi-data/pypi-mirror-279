@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: oqc_qcaas_client
+Version: 3.6.0
+Summary: OQC Quantum Computing as a Service (QCaaS)
+License: BSD-3-Clause
+Author: OQC
+Author-email: oqc_qcaas_support@oxfordquantumcircuits.com
+Requires-Python: >=3.9,<3.11
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Provides-Extra: pip-licenses
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: bidict (==0.23.1)
+Requires-Dist: cachetools (==5.3.3)
+Requires-Dist: certifi (==2024.6.2)
+Requires-Dist: charset-normalizer (==3.3.2)
+Requires-Dist: google-api-core (==2.19.0)
+Requires-Dist: google-api-python-client (==2.133.0)
+Requires-Dist: google-auth (==2.30.0)
+Requires-Dist: google-auth-httplib2 (==0.2.0)
+Requires-Dist: google-auth-oauthlib (==1.2.0)
+Requires-Dist: googleapis-common-protos (==1.63.1)
+Requires-Dist: h11 (==0.14.0)
+Requires-Dist: httplib2 (==0.22.0)
+Requires-Dist: idna (==3.7)
+Requires-Dist: markupsafe (==2.1.5)
+Requires-Dist: oauthlib (==3.2.2)
+Requires-Dist: pamqp (==2.3.0)
+Requires-Dist: pip-licenses (>=3.5.3,<4.0.0) ; extra == "pip-licenses"
+Requires-Dist: proto-plus (==1.23.0)
+Requires-Dist: protobuf (==4.25.3)
+Requires-Dist: pyasn1 (==0.6.0)
+Requires-Dist: pyasn1-modules (==0.4.0)
+Requires-Dist: pyparsing (==3.1.2)
+Requires-Dist: python-dotenv (==1.0.1)
+Requires-Dist: python-engineio (==4.9.1)
+Requires-Dist: python-socketio (==5.5.2)
+Requires-Dist: requests (==2.32.2)
+Requires-Dist: requests-oauthlib (==2.0.0)
+Requires-Dist: rsa (==4.9)
+Requires-Dist: simple-websocket (==1.0.0)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: uritemplate (==4.1.1)
+Requires-Dist: urllib3 (==2.2.2)
+Requires-Dist: wsproto (==1.2.0)
+Description-Content-Type: text/markdown
+
+# OQC QCaaS Client
+
+The Client is our python library serving as the primary interface for the OQC QCaaS service. It provides many options for you to manage both your access to OQC's quantum offerings and the tasks submitted to our system.
+
+For information on how to install and use the Client visit our [documentation](https://docs.oqc.app/).
+
+
