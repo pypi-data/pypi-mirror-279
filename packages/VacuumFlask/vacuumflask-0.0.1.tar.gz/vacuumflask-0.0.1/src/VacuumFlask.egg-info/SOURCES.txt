@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+src/VacuumFlask/__init__.py
+src/VacuumFlask.egg-info/PKG-INFO
+src/VacuumFlask.egg-info/SOURCES.txt
+src/VacuumFlask.egg-info/dependency_links.txt
+src/VacuumFlask.egg-info/requires.txt
+src/VacuumFlask.egg-info/top_level.txt

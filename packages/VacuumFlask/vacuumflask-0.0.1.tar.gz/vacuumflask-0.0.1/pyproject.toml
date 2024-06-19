@@ -1,0 +1,19 @@
+[project]
+name = "VacuumFlask"
+dynamic = ["version"]
+description = "Flask validation for Sessions, Forms, URL Parameters, and Query Parameters"
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+    "flask"
+]
+
+[project.urls]
+Homepage = "https://github.com/jb2170/VacuumFlask/"
+
+[tool.setuptools.dynamic]
+version = {attr = "VacuumFlask.__version__"}
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
