@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: network_performance_analysis
+Version: 0.1.0
+Summary: A package for network performance analysis and visualization
+Home-page: http://github.com/BollTej/NetMonitor
+Author: NetMonitor
+Author-email: phanisaidivyatej@gmail.com
+License: MIT
+Keywords: network analysis performance visualization
+License-File: LICENSE
+Requires-Dist: scapy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
