@@ -1,0 +1,7 @@
+untp_models/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+untp_models/base.py,sha256=PsSTbKtF1kHr-3p5toeCLKV4tebYdcf3bSPIH848K5E,1404
+untp_models/codes.py,sha256=47ofO_qX1lfowKVBXybZcgkVFaWdQuMFZ-bfFj40gQM,2171
+untp_models/conformity_credential.py,sha256=H3rqMHs54gnz_EXZ0mgoHejcukD8tcq25BqclBsCxZ8,4575
+untp_models-0.0.1.dist-info/METADATA,sha256=k1zeFf4a-gQSs5oKmrTPXBumr2uiI03mBaG2RZE5Knc,371
+untp_models-0.0.1.dist-info/WHEEL,sha256=zEMcRr9Kr03x1ozGwg5v9NQBKn3kndp6LSoSlVg-jhU,87
+untp_models-0.0.1.dist-info/RECORD,,

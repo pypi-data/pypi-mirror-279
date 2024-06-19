@@ -1,0 +1,12 @@
+Metadata-Version: 2.3
+Name: untp_models
+Version: 0.0.1
+Summary: A python implementation of the UNTP data models
+Author-email: Jason Syrotuck <jasyrotuck@gmail.com>
+Keywords: transparency,un,untp
+Requires-Python: >=3.8
+Requires-Dist: pydantic==2.7.1
+Description-Content-Type: text/markdown
+
+# untp-models
+Pydantic Python Models that represent the UN Transparency Protocol
