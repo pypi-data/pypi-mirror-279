@@ -1,0 +1,5 @@
+[console_scripts]
+dagcli = dagcli.ty:app
+dk = dagcli.ty:app
+dkai = dagcli.ai:app
+dkvault = dagcli.vlt:app
