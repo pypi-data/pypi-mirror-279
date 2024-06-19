@@ -1,0 +1,44 @@
+jaxlib<=0.4.30,>=0.4.27
+ml_dtypes>=0.2.0
+numpy>=1.22
+opt_einsum
+scipy>=1.9
+
+[:python_version < "3.10"]
+importlib_metadata>=4.6
+
+[:python_version >= "3.11"]
+numpy>=1.23.2
+
+[:python_version >= "3.12"]
+numpy>=1.26.0
+scipy>=1.11.1
+
+[ci]
+jaxlib==0.4.29
+
+[cpu]
+
+[cuda]
+jaxlib==0.4.30
+jax-cuda12-plugin[with_cuda]<=0.4.30,>=0.4.30
+
+[cuda12]
+jaxlib==0.4.30
+jax-cuda12-plugin[with_cuda]<=0.4.30,>=0.4.30
+
+[cuda12_local]
+jaxlib==0.4.30
+jax-cuda12-plugin==0.4.30
+
+[cuda12_pip]
+jaxlib==0.4.30
+jax-cuda12-plugin[with_cuda]<=0.4.30,>=0.4.30
+
+[minimum-jaxlib]
+jaxlib==0.4.27
+
+[tpu]
+jaxlib<=0.4.30,>=0.4.30
+libtpu-nightly==0.1.dev20240617
+requests
