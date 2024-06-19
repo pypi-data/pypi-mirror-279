@@ -1,0 +1,45 @@
+[project]
+name = "vulavula"
+version = "0.3.3"
+description = "The vulavula Python SDK provides access to the Vulavula API."
+authors = [
+    { name = "Raphael Karanja", email = "raphael.karanja@lelapa.ai" },
+]
+dependencies = [
+    "requests>=2.31.0",
+    "pydantic[dotenv]>=1.10.16,<2",
+    "PyPDF2>=3.0.1",
+]
+requires-python = ">=3.8"
+readme = "README.md"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = [
+    "lelapa",
+    "vulavula",
+    "nlp",
+    "intent",
+    "multilingual",
+    "transcription",
+]
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+Homepage = "https://github.com/Lelapa-AI/vulavula-sdk"
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.scripts]
+localTest = "python -m unittest discover -s tests/ -p 'test_*.py'"
+
+[build-system]
+requires = [
+    "pdm-backend",
+]
+build-backend = "pdm.backend"
