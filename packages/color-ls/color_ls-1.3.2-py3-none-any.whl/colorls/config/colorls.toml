@@ -1,0 +1,181 @@
+; author = Romeet Chhabra
+; copyright = Copyright 2021, Romeet Chhabra
+; license = MIT
+
+; This file contains formatting, icon references and file category information
+; ! All keys and values should be in lower-case
+; ! To add additional filetype and icons both ALIASES and ICONS sections should be populated.
+
+[SUFFIXES]
+dir = /
+file =
+exec = *
+link = @
+none =
+mount = ^
+hidden =
+
+
+[FORMATTING]
+this = 1;39;49
+dir = 34;49
+file = 32;49
+exec = 33;49
+link = 36;49
+none = 39;49
+mount = 38;49
+hidden = 30;49
+
+archive = 31;49
+image = 35;49
+video = 35;49
+audio = 35;49
+
+
+[ICONS]
+this = 
+dir = 
+file = 
+exec = 
+link = 
+none =
+audio = 
+video = 
+image = 
+archive = 
+
+python = 
+python_folder = 
+git = 
+git_folder = 
+gitmodules = 
+config = 
+markdown = 
+html = 
+cpp = 
+vscode = 
+vim = 
+vim_alt = 
+xml = 
+r = ﳒ
+rdata = ﳒ
+pdf = 
+ms_word = 
+ms_excel = 
+ms_powerpoint = 
+exe = 
+apk = 
+appimage = 
+json = ﬥ
+php = 
+csharp = 
+c = 
+swift =ﯣ
+dmg = 
+apple = 
+microsoft = 
+linux = 
+disk_image = 﫭
+java = 
+jar = 
+js = 
+shell = 
+go = ﳑ
+html5 = 
+css3 = 
+electron = 
+idea = 
+rust = 
+license = 
+notebook = 
+notebook_checkpoints = ﴬ
+xcode = 
+haskell = 
+conda = 
+bash = 
+
+
+[ALIASES]
+py = python
+pyc = python
+venv = python_folder
+whl = python
+doc = ms_word
+docx = ms_word
+docm = ms_word
+odt = ms_word
+xls = ms_excel
+xlsx = ms_excel
+xlsm = ms_excel
+xlst = ms_excel
+c = c
+cpp = cpp
+vscode = vscode
+idea = idea
+vim = vim_alt
+pdf = pdf
+zip = archive
+tar = archive
+7z = archive
+ini = config
+cfg = config
+rc = config
+toml = config
+conf = config
+config = config
+md = markdown
+gitignore = git
+git = git_folder
+appimage = appimage
+exe = exe
+xml = xml
+yaml = config
+yml = config
+json = json
+html = html
+r = r
+rdata = rdata
+rs = rust
+readme = readme
+js = js
+targz = archive
+gz = archive
+php = php
+sh = shell
+zsh = shell
+ps1 = shell
+fish = shell
+csh = shell
+java = java
+jar = jar
+img = image
+iso = disk_image
+png = image
+jpeg = image
+jpg = image
+tiff = image
+gif = image
+mpg = video
+mpeg = video
+mp4 = video
+avi = video
+divx = video
+xvid = video
+mov = video
+mp3 = audio
+wav = audio
+ogg = audio
+DS_Store = apple
+LICENSE = license
+gitmodules = gitmodules
+ipynb = notebook
+ipynb_checkpoints = notebook_checkpoints
+xcodeproj = xcode
+hs = haskell
+bash_profile = bash
+bashrc = bash
+condarc = conda
+gitconfig = git
+cabal = haskell
+viminfo = vim
+vimrc = vim
