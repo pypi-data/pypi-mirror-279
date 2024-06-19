@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: loongfei-utils
+Version: 1.0.0
+Summary: python工具包
+Home-page: https://gitee.com/fcf_python/python-utils
+Author: 龙飞
+Author-email: fcfwork@163.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+封装个人的python工具包，包含人工智能相关
