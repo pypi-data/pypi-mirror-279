@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+spider/__init__.py
+spider/spider.py
+spider_client.egg-info/PKG-INFO
+spider_client.egg-info/SOURCES.txt
+spider_client.egg-info/dependency_links.txt
+spider_client.egg-info/requires.txt
+spider_client.egg-info/top_level.txt
