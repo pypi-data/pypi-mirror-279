@@ -1,0 +1,12 @@
+magic_space/README.md,sha256=HRUGs3zp2xG6KUsuD-fXAMurZcAwuOCvaJFbuxfmFSU,1356
+magic_space/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magic_space/main.py,sha256=yuxZhu9qwSzUrjqU3RfpTnkqBwCw5yFdR-dFhLp1dPc,6068
+magic_space/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magic_space/config/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magic_space/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magic_space/tests/test_main.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+magicspace-1.0.1.dist-info/METADATA,sha256=nTSo2K_GGdv2w6achyckcWNE3mNmeDnwe_oABeQ5_Cc,1834
+magicspace-1.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+magicspace-1.0.1.dist-info/entry_points.txt,sha256=DzWl-qo581dijaI2G5Mokivo1fHwyj5_y6M-8qKjkQQ,53
+magicspace-1.0.1.dist-info/top_level.txt,sha256=O5h61x1RYz3ck8144cG6Q7GztPPX_O5Hs-vz5u_Goys,12
+magicspace-1.0.1.dist-info/RECORD,,
