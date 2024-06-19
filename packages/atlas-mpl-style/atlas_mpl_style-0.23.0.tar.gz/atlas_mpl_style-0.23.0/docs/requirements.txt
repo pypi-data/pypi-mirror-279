@@ -1,0 +1,4 @@
+numpy
+numexpr
+matplotlib>=3
+sphinx-rtd-theme
