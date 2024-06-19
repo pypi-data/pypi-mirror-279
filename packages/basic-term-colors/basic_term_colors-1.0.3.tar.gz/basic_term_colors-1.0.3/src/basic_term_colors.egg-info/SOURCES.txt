@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/__init__.py
+src/terminal_colors.py
+src/basic_term_colors.egg-info/PKG-INFO
+src/basic_term_colors.egg-info/SOURCES.txt
+src/basic_term_colors.egg-info/dependency_links.txt
+src/basic_term_colors.egg-info/top_level.txt
+tests/test_terminal_colors.py
