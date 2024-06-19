@@ -1,0 +1,6 @@
+include README.txt
+recursive-include Infrastructure/Environment *
+recursive-include Infrastructure/Search *
+recursive-include Maps *
+recursive-include Python_Scripts *
+include requirements.txt
