@@ -1,0 +1,16 @@
+cement==3.0.2
+clint==0.5.1
+colorlog==4.0.2
+crayons==0.2.0
+esperclient==0.1.2
+jinja2==2.11.3
+pyyaml==6.0.1
+requests==2.32.0
+tabulate==0.8.3
+tinydb==3.13.0
+tqdm==4.32.1
+markupsafe==2.0.1
+cryptography==42.0.8
+
+# For Secure ADB
+pyOpenSSL==24.1.0
