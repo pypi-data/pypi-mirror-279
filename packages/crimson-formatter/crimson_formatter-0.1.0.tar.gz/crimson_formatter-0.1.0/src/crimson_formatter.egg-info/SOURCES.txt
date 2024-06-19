@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/crimson/formatter/__init__.py
+src/crimson/formatter/templator_patch.py
+src/crimson/formatter/utils.py
+src/crimson_formatter.egg-info/PKG-INFO
+src/crimson_formatter.egg-info/SOURCES.txt
+src/crimson_formatter.egg-info/dependency_links.txt
+src/crimson_formatter.egg-info/requires.txt
+src/crimson_formatter.egg-info/top_level.txt
