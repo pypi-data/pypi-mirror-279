@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+src/pyt2s/__init__.py
+src/pyt2s/service.py
+src/pyt2s.egg-info/PKG-INFO
+src/pyt2s.egg-info/SOURCES.txt
+src/pyt2s.egg-info/dependency_links.txt
+src/pyt2s.egg-info/requires.txt
+src/pyt2s.egg-info/top_level.txt
+src/pyt2s/services/acapela.py
+src/pyt2s/services/cepstral.py
+src/pyt2s/services/ibm_watson.py
+src/pyt2s/services/oddcast.py
+src/pyt2s/services/stream_elements.py
+src/pyt2s/services/streamlabs.py
+src/pyt2s/services/voice_forge.py
