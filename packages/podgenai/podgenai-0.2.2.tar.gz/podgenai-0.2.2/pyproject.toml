@@ -1,0 +1,66 @@
+[project]
+name = "podgenai"
+version = "0.2.2"
+description = "GPT-4 based informational audiobook/podcast mp3 generator"
+authors = [
+    { name = "Ouroboros Chrysopoeia", email = "impredicative@users.noreply.github.com" }
+]
+dependencies = [
+    "fire>=0.6.0",
+    "openai>=1.27.0",
+    "pathvalidate>=3.2.0",
+    "python-dotenv>=1.0.1",
+    "semantic-text-splitter>=0.13.1",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+keywords = ["podcast", "mp3", "audiobook", "GPT-4", "aicast"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)",
+    "Programming Language :: Python :: 3.12"
+]
+
+[project.scripts]
+podgenai = "podgenai.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/impredicative/podgenai"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.rye.scripts]  # Run as "rye run <command>"
+check = { chain = ["check-lint", "check-fmt" ] }
+"check-lint" = "rye lint"
+"check-fmt" = "rye fmt --check"
+fix = { chain = ["fix-lint", "fix-fmt" ] }
+"fix-lint" = "rye lint --fix"
+"fix-fmt" = "rye fmt"
+lockup = "rye lock --update-all"
+syncup = "rye sync --update-all"
+build = "rye build --clean --verbose"
+publish = "rye publish --verbose"
+release = { chain = ["check", "build", "publish"]}
+
+[tool.hatch.build]
+exclude = [".env", "archive/", "docs/", "scripts/", "work/"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/podgenai"]
+
+[tool.ruff]
+line-length = 200
+
+[tool.ruff.lint]
+ignore = ["E731"]
