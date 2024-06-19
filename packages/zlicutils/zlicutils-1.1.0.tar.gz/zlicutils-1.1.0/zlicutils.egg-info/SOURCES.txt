@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+zlicutils/__init__.py
+zlicutils/server.py
+zlicutils/tan.py
+zlicutils.egg-info/PKG-INFO
+zlicutils.egg-info/SOURCES.txt
+zlicutils.egg-info/dependency_links.txt
+zlicutils.egg-info/not-zip-safe
+zlicutils.egg-info/requires.txt
+zlicutils.egg-info/top_level.txt
