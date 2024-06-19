@@ -1,0 +1,16 @@
+AUTHORS.rst
+HISTORY.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+setup.py
+test_schedule.py
+schedule/__init__.py
+schedule/py.typed
+schedule.egg-info/PKG-INFO
+schedule.egg-info/SOURCES.txt
+schedule.egg-info/dependency_links.txt
+schedule.egg-info/requires.txt
+schedule.egg-info/top_level.txt
