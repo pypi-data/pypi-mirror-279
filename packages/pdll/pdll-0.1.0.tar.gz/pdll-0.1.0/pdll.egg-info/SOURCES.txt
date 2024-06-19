@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pdll/__init__.py
+pdll/_pairwise.py
+pdll.egg-info/PKG-INFO
+pdll.egg-info/SOURCES.txt
+pdll.egg-info/dependency_links.txt
+pdll.egg-info/requires.txt
+pdll.egg-info/top_level.txt
