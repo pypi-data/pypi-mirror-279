@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: artkit
+Version: 1.0rc0
+Summary: This section of the documentation provides detailed information
+Home-page: https://github.com/BCG-X-Official/artkit
+License: Apache Software License v2.0
+Author: Boston Consulting Group (BCG)
+Requires-Python: >=3.11,<3.13
+Description-Content-Type: text/x-rst
+Requires-Dist: aiolimiter        ==1.1.0
+Requires-Dist: matplotlib        >=3.0
+Requires-Dist: pandas            >=2.1
+Requires-Dist: gamma-pytools     ==3.0
+Requires-Dist: fluxus            ==1.0rc4
+Requires-Dist: typing_inspect    >=0.7
+Requires-Dist: anthropic                ~= 0.28 ; extra == "anthropic"
+Requires-Dist: artkit[openai, groq, anthropic, google-generativeai, huggingface] ; extra == "dev"
+Requires-Dist: python-dotenv            ~= 1.0 ; extra == "dev"
+Requires-Dist: nbsphinx                 ~= 0.9 ; extra == "dev"
+Requires-Dist: sphinx                   ~= 7.2 ; extra == "dev"
+Requires-Dist: sphinx-autodoc-typehints ~= 1.25 ; extra == "dev"
+Requires-Dist: pydata-sphinx-theme      ~= 0.15.1 ; extra == "dev"
+Requires-Dist: packaging                ~= 24.1 ; extra == "dev"
+Requires-Dist: ipywidgets               ~= 8.1 ; extra == "dev"
+Requires-Dist: jupyterlab               ~= 4.2 ; extra == "dev"
+Requires-Dist: notebook                 ~= 7.2 ; extra == "dev"
+Requires-Dist: pytest                   ~= 8.2 ; extra == "dev"
+Requires-Dist: pytest-asyncio           ~= 0.23 ; extra == "dev"
+Requires-Dist: pytest-cov               ~= 5.0 ; extra == "dev"
+Requires-Dist: pre-commit               ~= 3.7 ; extra == "dev"
+Requires-Dist: google-generativeai      ~= 0.6 ; extra == "google-generativeai"
+Requires-Dist: groq                     ~= 0.9 ; extra == "groq"
+Requires-Dist: aiohttp                  ~= 3.9 ; extra == "huggingface"
+Requires-Dist: torch                    ~= 2.3 ; extra == "huggingface"
+Requires-Dist: transformers             ~= 4.41 ; extra == "huggingface"
+Requires-Dist: openai                   ~= 1.34 ; extra == "openai"
+Requires-Dist: pytest                   ~= 8.2 ; extra == "testing"
+Requires-Dist: pytest-cov               ~= 5.0 ; extra == "testing"
+Requires-Dist: pytest-asyncio           ~= 0.23 ; extra == "testing"
+Requires-Dist: aiofiles                 ~= 23.2.1 ; extra == "testing"
+Requires-Dist: openai                   ~= 1.34 ; extra == "testing"
+Requires-Dist: anthropic                ~= 0.28 ; extra == "testing"
+Requires-Dist: groq                     ~= 0.9 ; extra == "testing"
+Requires-Dist: google-generativeai      ~= 0.6 ; extra == "testing"
+Requires-Dist: aiohttp                  ~= 3.9 ; extra == "testing"
+Requires-Dist: pyyaml                   ~= 6.0.1 ; extra == "testing"
+Requires-Dist: transformers             ~= 4.41 ; extra == "testing"
+Requires-Dist: torch                    ~= 2.3 ; extra == "testing"
+Project-URL: Documentation, https://bcg-x-official.github.io/artkit/
+Project-URL: Repository, https://github.com/BCG-X-Official/artkit
+Provides-Extra: anthropic
+Provides-Extra: dev
+Provides-Extra: google-generativeai
+Provides-Extra: groq
+Provides-Extra: huggingface
+Provides-Extra: openai
+Provides-Extra: testing
+
+**ARTKIT** is a Python framework developed by `BCG X <https://www.bcg.com/x>`_ for automating prompt-based
+testing and evaluation of GenAI applications.
+
+.. Begin-Badges
+
+|pypi| |conda| |python_versions| |code_style| |made_with_sphinx_doc| |License_badge|
+
+.. End-Badges
+
+License
+---------------------------
+
+*ARTKIT* is licensed under Apache 2.0 as described in the
+`LICENSE <https://github.com/BCG-X-Official/artkit/main/LICENSE>`_ file.
+
+.. |conda| image:: https://anaconda.org/bcgx/artkit/badges/version.svg
+    :target: https://anaconda.org/bcgx/artkit
+
+.. |pypi| image:: https://badge.fury.io/py/artkit.svg
+    :target: https://pypi.org/project/artkit/
+
+.. |python_versions| image:: https://img.shields.io/badge/python-3.11%7C3.12-blue.svg
+    :target: https://www.python.org/downloads/
+
+.. |code_style| image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+
+.. |made_with_sphinx_doc| image:: https://img.shields.io/badge/Made%20with-Sphinx-1f425f.svg
+    :target: https://bcg-x-official.github.io/pytools/index.html
+
+.. |license_badge| image:: https://img.shields.io/badge/License-Apache%202.0-olivegreen.svg
+    :target: https://opensource.org/licenses/Apache-2.0
+    
