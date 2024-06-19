@@ -1,0 +1,14 @@
+pyproject.toml
+setup.py
+./ccrp/__init__.py
+./ccrp/commands.py
+./ccrp/hacky.py
+./ccrp/usb.py
+./ccrp/utils.py
+./ccrp/version
+./ccrp/version.py
+ccrp.egg-info/PKG-INFO
+ccrp.egg-info/SOURCES.txt
+ccrp.egg-info/dependency_links.txt
+ccrp.egg-info/requires.txt
+ccrp.egg-info/top_level.txt
