@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/butch_filename_substring_remover/__init__.py
+src/butch_filename_substring_remover/main.py
+src/butch_filename_substring_remover/rename.py
+src/butch_filename_substring_remover/rename_dirrectory.py
+src/butch_filename_substring_remover/utils.py
+src/butch_filename_substring_remover.egg-info/PKG-INFO
+src/butch_filename_substring_remover.egg-info/SOURCES.txt
+src/butch_filename_substring_remover.egg-info/dependency_links.txt
+src/butch_filename_substring_remover.egg-info/top_level.txt
+tests/test_batch_renamer.py
