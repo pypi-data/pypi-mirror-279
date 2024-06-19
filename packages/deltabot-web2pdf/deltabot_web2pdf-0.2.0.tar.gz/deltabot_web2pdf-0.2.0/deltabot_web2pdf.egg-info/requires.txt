@@ -1,0 +1,11 @@
+deltabot-cli<7.0,>=6.2.0
+pdfkit
+
+[dev]
+black
+mypy
+isort
+pylint
+pylama
+pytest
+types-requests

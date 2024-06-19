@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+pylama.ini
+pyproject.toml
+.github/workflows/python-ci.yml
+deltabot_web2pdf/__init__.py
+deltabot_web2pdf/__main__.py
+deltabot_web2pdf/_version.py
+deltabot_web2pdf/hooks.py
+deltabot_web2pdf.egg-info/PKG-INFO
+deltabot_web2pdf.egg-info/SOURCES.txt
+deltabot_web2pdf.egg-info/dependency_links.txt
+deltabot_web2pdf.egg-info/entry_points.txt
+deltabot_web2pdf.egg-info/requires.txt
+deltabot_web2pdf.egg-info/top_level.txt
