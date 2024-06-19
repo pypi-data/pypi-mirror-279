@@ -1,0 +1,81 @@
+[project]
+name = "encryptdef"
+description = "Projeto em python para criptografar e descriptografar dados e arquivos de forma interativa e CLI"
+authors = [{ name = "Ayslan Batista", email = "ayslan.batista@hotmail.com" }]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+version = "1.0.9"
+dynamic = ["readme", "dependencies", "optional-dependencies"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security :: Cryptography",
+]
+
+[project.urls]
+Homepage = "https://github.com/AyslanBatista/encryptdef"
+Repository = "https://github.com/AyslanBatista/encryptdef"
+Issues = "https://github.com/AyslanBatista/encryptdef/issues"
+
+# Lista de quais são os nomes dos entrypoints e os pacotes entrypoints
+[project.scripts]
+# Forma de usar diretamente o programa ex: encryptdef --version 
+encryptdef = "encryptdef.__main__:main"
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["encryptdef"]
+
+[tool.setuptools.dynamic]
+readme = { file = ["README.md"], content-type = "text/markdown" }
+dependencies = { file = "requirements.txt" }
+
+[tool.setuptools.dynamic.optional-dependencies]
+dev = { file = "requirements.dev.txt" }
+test = { file = "requirements.test.txt" }
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -vv"
+testpaths = "tests"
+filterwarnings = "ignore::DeprecationWarning:rich_click"
+
+[tool.flake8]
+exclude = [".venv", "build", ".vscodelocal", "migrations", "template.py"]
+max-line-length = 79
+
+[tool.black]
+line-length = 79
+target-version = ["py310", "py311"]
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.venv
+  | _build
+  | build
+  | dist
+  | migrations
+)/
+'''
+
+[tool.isort]
+profile = "black"
+src_paths = ["encryptdef", "tests"]
+multi_line_output = 3
+line_length = 79
+force_grid_wrap = 0
+use_parentheses = true
+include_trailing_comma = true
+
+[tool.setuptools.package-data]
+encryptdef = ["assets/*", "requirements*.txt", "tests/"]

@@ -1,0 +1,2 @@
+[console_scripts]
+encryptdef = encryptdef.__main__:main
