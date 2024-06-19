@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "qhelper"
+version = "0.1.4"
+description = ""
+authors = ["mayuanchi <mayuanchi1989@163.com>"]
+readme = "README.md"
+packages = [
+    { include = "qhelper", from = "lib" }
+]
+
+[tool.poetry.scripts]
+qhelper = 'qhelper.app'
+
+[tool.poetry.dependencies]
+python = "<3.12, >=3.8"
+akshare = "^1.14.1"
+xtquant = "^240329.1.1"
+pywencai = "^0.12.2"
+pyarmor = "^8.5.9"
+flask = "^3.0.3"
+dash = "^2.17.1"
+cryptography = "^42.0.8"
+appdirs = "^1.4.4"
+flask-apscheduler = "^1.13.1"
+lowdb = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
