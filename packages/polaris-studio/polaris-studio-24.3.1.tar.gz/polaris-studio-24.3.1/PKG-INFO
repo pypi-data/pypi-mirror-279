@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: polaris-studio
+Version: 24.3.1
+Summary: Transportation System Simulation Tool
+Author-email: Pedro Camargo <pveigadecamargo@anl.gov>, Jamie Cook <james.cook@anl.gov>, Polaris Team <polaris@anl.gov>
+License: Proprietary
+Project-URL: Homepage, https://vms.taps.anl.gov/tools/polaris//
+Project-URL: Issue tracker, https://git-out.gss.anl.gov/polaris/code/polaris-studio/-/issues
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Provides-Extra: hpc
+Provides-Extra: builder
+Provides-Extra: linting
+Provides-Extra: devtools
+Provides-Extra: docs
+Provides-Extra: dev
+
+polaris-studio
+==========
+
+The polaris-studio package is th Python gateway for all things Polaris. The package is
+divided in several submodules varying from data preparation to result analysis and is
+the source of truth for the data model required by Polaris.
+
+For the package's full description and documentation, see: https://polaris.taps.anl.gov/python/index.html
+
+

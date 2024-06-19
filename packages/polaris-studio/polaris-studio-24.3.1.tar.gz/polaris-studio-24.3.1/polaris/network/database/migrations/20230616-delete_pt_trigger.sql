@@ -1,0 +1,1 @@
+drop trigger if exists transit_stops_only_add_needed_stop

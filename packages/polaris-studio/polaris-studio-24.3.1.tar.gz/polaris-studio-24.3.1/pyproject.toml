@@ -1,0 +1,268 @@
+[build-system]
+requires = ["setuptools"]
+
+# project metadata
+[project]
+name = "polaris-studio"
+description = "Transportation System Simulation Tool"
+readme = "README.md"
+urls.Homepage = "https://vms.taps.anl.gov/tools/polaris//"
+urls."Issue tracker" = "https://git-out.gss.anl.gov/polaris/code/polaris-studio/-/issues"
+requires-python = ">=3.8"
+dynamic = ["version"]
+authors = [
+    { name = "Pedro Camargo", email = "pveigadecamargo@anl.gov" },
+    { name = "Jamie Cook", email = "james.cook@anl.gov" },
+    { name = "Polaris Team", email = "polaris@anl.gov" }
+]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+license = { text = "Proprietary" }
+
+dependencies = [
+    'pydantic',
+    'pandas',
+    'numpy<1.99',
+    'pyyaml',
+    'diskcache',
+    'psutil',
+    'sqlalchemy>=2',
+    'psycopg[binary,pool]',
+    'retry2',
+    'tables>=3.8',
+    'openmatrix',
+    'pyarrow']
+
+[project.optional-dependencies]
+hpc = ['globus_sdk', ]
+
+builder = [
+    'matplotlib',
+    'pyproj',
+    'aequilibrae>=0.9.2',
+    'geopandas',
+    'us',
+    'pygris',
+    'census',
+    'PyQt5',
+    'requests',
+    'scipy',
+    'rtree',
+    'networkx',
+    'seaborn',
+    'shapely>=2.0',
+    'tqdm']
+
+linting = ['types-tqdm',
+    'types-python-dateutil',
+    'types-PyYAML',
+    'types-requests',
+    'pandas-stubs',
+    'types-requests',
+    'sqlalchemy',
+    'PyQt5-stubs',
+    'numpy',
+    'ruff==0.2.2',
+    'black>=24.2.0',
+    'mypy==1.8.0',
+    'numpy',
+    'pyproj',
+    'globus_sdk',
+    'matplotlib-stubs',
+]
+
+devtools = ['jupytext',
+    'pygeos',
+    'black',
+    'keplergl',
+    'pytest-qt',
+    'pytest-xdist',
+    'pytest',
+    'pytest-cov',
+    'testing.postgresql; sys_platform == "linux"',
+    'gmnspy',
+]
+
+docs = [
+    'numpy',
+    'pyaml',
+    'enum34>=1.1.6',
+    'Sphinx',
+    'jinja2',
+    'pydata-sphinx-theme',
+    'sphinx-book-theme',
+    'myst-parser',
+    'sphinx_autodoc_annotation',
+    'nbsphinx',
+    'pillow',
+    'matplotlib',
+    'folium',
+    'requests',
+    # This is using a custom fork while waiting for maintainers to decide if change is merged upstream:
+    # https://github.com/sphinx-gallery/sphinx-gallery/pull/1299
+    "sphinx-gallery",
+    'sphinx-design',
+    'nbsphinx',
+    'ipython_genutils',
+    'folium',
+    'geopandas',
+    'keplergl',
+    'pygeos',
+    'seaborn',
+    'sphinxcontrib-youtube',
+]
+
+dev = ['polaris-studio[hpc, builder, linting, devtools, docs]']
+
+[tool.setuptools.dynamic]
+version = { attr = "polaris.version.__version__" }
+
+[project.scripts]
+polaris = "polaris.utils.cli_interface:cli"
+
+[tool.setuptools.package-dir]
+polaris = "polaris"
+
+[tool.setuptools.package-data]
+"polaris" = ["bin/*"]
+"polaris.network.checker" = ["*.sql*"]
+"polaris.network.database" = ["default_values/*.*", "migrations/*.sql", "sql_schema/*.*", "triggers/*.*"]
+"polaris.network.data" = ["empty_spatialite.zip"]
+"polaris.demand.database" = ["sql_schema/*.*", "triggers/*.*", "default_values/*.*", "migrations/*.sql"]
+"polaris.runs" = ["sql/*.sql", "mep_files/*.*", "statistics_db/*.*", "sql/baseline_analysis/*.sql"]
+"polaris.utils.database" = ["sql_schema/*.sql"]
+"polaris.prepare.popsyn" = ["linker_file.txt"]
+
+[tool.black]
+line-length = 120
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.mypy]
+python_version = "3.10"
+disallow_untyped_defs = false
+exclude = ['polaris/hpc/eqsql/examples']
+
+[[tool.mypy.overrides]]
+module = "polaris.runs.*"
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ["geopandas"]
+ignore_errors = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["tqdm"]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ["click"]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ["keplergl"]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "openmatrix.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "aequilibrae.*"
+ignore_missing_imports = true
+
+# https://github.com/shapely/shapely/issues/721
+[[tool.mypy.overrides]]
+module = "shapely.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "qgis.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "networkx.*"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "us"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pygris"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "census"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["matplotlib.backends.backend_qt5agg"]
+ignore_errors = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["tables"]
+ignore_errors = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "psutil.*"
+ignore_missing_imports = true
+
+[tool.ruff]
+
+exclude = [
+    ".idea",
+    "__pycache__",
+    "sphinx",
+    ".ipynb_checkpoints",
+    "polaris.egg-info",
+    "docs/*",
+    "polaris/runs",
+    "tests/integration",
+    "notebooks",
+    "bin/hpc",
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "polaris/hpc/eqsql/examples/*"
+]
+line-length = 120
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["B", "C", "E", "F", "W"]
+ignore = ["E501", "B028"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 20
+
+[tool.pytest.ini_options]
+env = ["D:QT_QPA_PLATFORM=offscreen"]
+

@@ -1,0 +1,20 @@
+import sqlite3
+
+import pandas as pd
+
+from .loc_park_base import LocParkBase
+
+
+class Parking(LocParkBase):
+    def __init__(self, element_id: int, geotool, data_tables, conn=None, data=None):
+        dt = pd.DataFrame([]) if data is None else data
+        super().__init__(element_id, "Parking", geotool, data_tables, dt, conn)
+        self.parking = element_id
+
+    def all_geo_updates(self, conn: sqlite3.Connection):
+        self.update_link(conn)
+        self.update_walk_link(conn)
+        self.update_zone(conn)
+
+    def __lt__(self, other):
+        return self.space < other.space
