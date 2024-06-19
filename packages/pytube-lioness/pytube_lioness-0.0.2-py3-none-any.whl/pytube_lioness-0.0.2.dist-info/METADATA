@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pytube-lioness
+Version: 0.0.2
+Summary: Downloads youtube video and audio streams of a URL before combing them into a single file
+Author: Yifei Yu
+Requires-Python: >=3.11,<3.12
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.11
+Requires-Dist: dacite (>=1.8.1,<2.0.0)
+Requires-Dist: orjson (>=3.10.1,<4.0.0)
+Requires-Dist: pydantic (>=2.7.0,<3.0.0)
+Requires-Dist: pytube (>=15.0.0,<16.0.0)
+Description-Content-Type: text/markdown
+
+# lioness
+
+## Code Examples
+
+    ```sh
+    poetry run python -m lioness.pipelines.download_and_merge -vu http://... -pdv ./data/video -pda ./data/audio -pdc ./data/combined
+    ```
+
