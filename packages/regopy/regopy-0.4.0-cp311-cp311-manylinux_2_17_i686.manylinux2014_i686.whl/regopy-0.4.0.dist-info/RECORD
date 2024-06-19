@@ -1,0 +1,10 @@
+regopy-0.4.0.dist-info/WHEEL,sha256=ZxHZRaViQXGefXlICKrWgK6Fz65XQ-TroyhTaUgL4RI,148
+regopy-0.4.0.dist-info/top_level.txt,sha256=i6OxiWeKwNaGc-SJQjFbDdGLG5kbOPYbOmFKORQ-ZmI,7
+regopy-0.4.0.dist-info/RECORD,,
+regopy-0.4.0.dist-info/METADATA,sha256=Ro6xLQElwxgwCax9u7EegySVuKG5vYw6Jwv7lmfIFZE,7902
+regopy.libs/libatomic-49cd6ba3.so.1.0.0,sha256=CZMWIYhQwd23oLNKE__yQu1Ybuhz_V5hE8Y-m-llfqk,27073
+regopy/__init__.py,sha256=7mCcbDn63tIhLIiC-sMfkEEIaOH8Vzp8B3E9_8CTBZo,1813
+regopy/_regopy.cpython-311-i386-linux-gnu.so,sha256=wvLOuJnYkCUvdUU65Z3XdZhQ6OcabOk2LWHtYRIzvSk,13322221
+regopy/node.py,sha256=mRRDYFgoYTEpZnu5boWWkQqXxeI18V6Bf3o-h8uNz0U,8417
+regopy/interpreter.py,sha256=FwAYdml0KxbxRPgD3TMGzBSc7F5JE6ABLuhwAguLLjs,12830
+regopy/output.py,sha256=u3QOK4MRMrmn2RSzUpjFZUEsKA1GQ1jAat91sYqhf9w,4807
