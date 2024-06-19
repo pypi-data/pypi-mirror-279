@@ -1,0 +1,20 @@
+Metadata-Version: 2.3
+Name: falconclaw
+Version: 0.0.3
+Summary: A package for Network Operations
+Project-URL: Homepage, https://github.com/pypa/falconclaw
+Project-URL: Issues, https://github.com/pypa/falconclaw/issues
+Author-email: Juan Miguel Abreo Camacho <jmabreo@gmail.com>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Networking
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[GitHub-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.

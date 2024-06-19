@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "falconclaw"
+version = "0.0.3"
+authors = [
+  { name="Juan Miguel Abreo Camacho", email="jmabreo@gmail.com" },
+]
+description = "A package for Network Operations"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+	"Topic :: System :: Networking",
+]
+
+[project.urls]
+Homepage = "https://github.com/pypa/falconclaw"
+Issues = "https://github.com/pypa/falconclaw/issues"
