@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "moveread-export"
+version = "0.1.4"
+authors = [
+  {name="Marcel Claramunt", email="marcel@moveread.com"}
+]
+description = "Exporting data from annotations of the Moveread Core"
+dependencies = [
+  "haskellian", "pure-cv", "lazy-loader", "kv-api",
+  "moveread-boxes", "moveread-labels", "moveread-errors", "moveread-core"
+]
+requires-python = ">=3.10"
+readme = {file="README.md", content-type="text/markdown"}
+
+[project.urls]
+repo = "https://github.com/moveread/python-core"
+
+[project.optional-dependencies]
+tf = ["tensorflow", "tf-tools", "tf-ocr", "jaxtyping"]

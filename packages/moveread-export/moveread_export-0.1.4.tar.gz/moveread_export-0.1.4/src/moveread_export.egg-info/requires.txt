@@ -1,0 +1,14 @@
+haskellian
+pure-cv
+lazy-loader
+kv-api
+moveread-boxes
+moveread-labels
+moveread-errors
+moveread-core
+
+[tf]
+tensorflow
+tf-tools
+tf-ocr
+jaxtyping
