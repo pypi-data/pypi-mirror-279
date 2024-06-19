@@ -1,0 +1,5 @@
+rust_q-0.1.0.dist-info/METADATA,sha256=4gqyPaSKDKT0PXFCTzKmjTgGcQqoCbh9w8nlgN3UOlQ,543
+rust_q-0.1.0.dist-info/WHEEL,sha256=1HlG_pVD1-Yy8Z8fIVtIMcnZEcUVd_gnoexM3fuvKCw,104
+rust_q/__init__.py,sha256=NXxCOmBHTutxJLA_vmn6CR3Kztnob0zHVqc5ncBzjcE,107
+rust_q/rust_q.abi3.so,sha256=q98AdLavTx0Vr_0VzGxwKLHQ4L_aPDHuQonmDPLEkV0,845368
+rust_q-0.1.0.dist-info/RECORD,,
