@@ -1,0 +1,12 @@
+dtoolcore/__init__.py,sha256=WBnNzl6H0mSR9UUhlvaXhQlFr9sEHMtcyI89rQIwi9I,36393
+dtoolcore/compare.py,sha256=GVv09jovRq3fCeD02axLa3NWy5jdSwWutDkgL3U4HAY,2238
+dtoolcore/filehasher.py,sha256=kyL3zBPw876DLxRuVueB3z0Q3fkcflGrjL00iRWZNQ8,2148
+dtoolcore/storagebroker.py,sha256=h4WJKNk9H4Ka8gFtQxsSkCUMRDHN1Gu_q7rDEogmMog,26129
+dtoolcore/utils.py,sha256=av8RAV-hWgM18Tr3_Qjpx4Qa5rHr2XXZFhGGZ7jUSpc,8411
+dtoolcore/version.py,sha256=9xcwc9tjOBugD2SqHcu7ys4xNOx2utirD9mlGEgX0nI,413
+dtoolcore-3.18.3.dist-info/LICENSE.rst,sha256=86aJiAkXSLnTuXcSVW8_TVdYTbp2of-veyzp3a3A3uA,1083
+dtoolcore-3.18.3.dist-info/METADATA,sha256=FcgC54eZsHwozkmGGhw6VzSeLjZ89Qa2p5Naxp5oD48,3130
+dtoolcore-3.18.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+dtoolcore-3.18.3.dist-info/entry_points.txt,sha256=li6y_llM_jGRDqxK8pH2tpMHU7W51umLV-dsnkEMaww,86
+dtoolcore-3.18.3.dist-info/top_level.txt,sha256=MmmviczoSKxh4BGkRg88_I_xVqmuT7HadQz8QKSVRpE,10
+dtoolcore-3.18.3.dist-info/RECORD,,
