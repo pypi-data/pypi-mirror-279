@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+prlps_ipinfo/__init__.py
+prlps_ipinfo/ipinfo.py
+prlps_ipinfo.egg-info/PKG-INFO
+prlps_ipinfo.egg-info/SOURCES.txt
+prlps_ipinfo.egg-info/dependency_links.txt
+prlps_ipinfo.egg-info/requires.txt
+prlps_ipinfo.egg-info/top_level.txt
