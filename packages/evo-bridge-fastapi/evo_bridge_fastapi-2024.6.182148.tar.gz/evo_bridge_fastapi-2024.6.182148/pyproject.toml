@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "evo-bridge-fastapi"
+version = "2024.6.182148"
+description = "evo-bridge-fastapi python"
+authors = ["cyborg-ai-git <129898917+cyborg-ai-git@users.noreply.github.com>"]
+readme = "README.md"
+license = "CC BY-NC-ND 4.0"
+include = ["LICENSE.txt"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+evo-framework = "^2024.6.182131"
+fastapi = "^0.103.2"
+uvicorn = "^0.25.0"
+Jinja2 = "^3.1.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
