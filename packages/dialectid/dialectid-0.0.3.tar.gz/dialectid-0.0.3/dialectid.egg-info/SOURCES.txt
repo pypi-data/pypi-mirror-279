@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+dialectid/__init__.py
+dialectid/model.py
+dialectid/text_repr.py
+dialectid/utils.py
+dialectid.egg-info/PKG-INFO
+dialectid.egg-info/SOURCES.txt
+dialectid.egg-info/dependency_links.txt
+dialectid.egg-info/requires.txt
+dialectid.egg-info/top_level.txt
+dialectid/tests/__init__.py
+dialectid/tests/test_model.py
+dialectid/tests/test_text_repr.py
+dialectid/tests/test_utils.py
