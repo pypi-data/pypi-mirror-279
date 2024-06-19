@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: dalab
+Version: 2024.6.18.17
+Summary: dalab: A Data Assimilation Laboratory in Python
+Home-page: https://github.com/fzhu2e/dalab
+Author: Feng Zhu
+Author-email: fengzhu@ucar.edu
+License: MIT
+Keywords: Data Assimilation
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: netCDF4
+Requires-Dist: xarray
+Requires-Dist: dask
+Requires-Dist: nc-time-axis
+Requires-Dist: colorama
+Requires-Dist: tqdm
+Requires-Dist: x4c
+Requires-Dist: f90nml
+
+# dalab
+A Data Assimilation Laboratory in Python
