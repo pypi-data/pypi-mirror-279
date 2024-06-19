@@ -1,0 +1,13 @@
+[console_scripts]
+bks = bkstools.scripts.bks:main
+bks_get_system_messages = bkstools.scripts.bks_get_system_messages:main
+bks_grip = bkstools.scripts.bks_grip:main
+bks_jog = bkstools.scripts.bks_jog:main
+bks_move = bkstools.scripts.bks_move:main
+bks_scan = bkstools.scripts.bks_scan:main
+bks_status = bkstools.scripts.bks_status:main
+demo_bks_grip_outside_inside = bkstools.demo.demo_bks_grip_outside_inside:main
+demo_diagnostics = bkstools.demo.demo_diagnostics:main
+demo_grip_workpiece_with_expected_position = bkstools.demo.demo_grip_workpiece_with_expected_position:main
+demo_read_exception_status = bkstools.demo.demo_read_exception_status:main
+demo_simple = bkstools.demo.demo_simple:main
