@@ -1,0 +1,2 @@
+[console_scripts]
+umpire = umpire.umpire:entry
