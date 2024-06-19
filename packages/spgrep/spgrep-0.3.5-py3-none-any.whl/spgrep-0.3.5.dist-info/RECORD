@@ -1,0 +1,16 @@
+spgrep/__init__.py,sha256=gQrlCjXLegoFSCh2uLrUfn4XDBF4BR54-1CcHq6l-2o,624
+spgrep/core.py,sha256=XrhjOJrvBNr_amXul2JNCB-7J4P5nsR0zHnDmIxCf-s,29561
+spgrep/corep.py,sha256=dojo1sZfziDWGxGxshHiUYVOoNJKrdSNEWCQfYNsl6A,12924
+spgrep/group.py,sha256=_A11ehgfP6euwzuLhQDcYvT2GcpgSdGHYy9L9HELJtU,8272
+spgrep/irreps.py,sha256=9f5IlcskSGBt2WuBLu-Hn6AwEJwks2wfAyHmNlgepeA,24839
+spgrep/pointgroup.py,sha256=BSpYXKXpBMW0p19Bvtc50y2k_I1lyvI-zB_XMtKDf7k,30626
+spgrep/representation.py,sha256=7EPFrdActC9a0TybWGrYRbOWNGF5u2xDaXKBCMhzJd8,11635
+spgrep/spinor.py,sha256=0tfZiMxJGANfDRGqYiXoVXjRlHzgndc2BZBpmp9yP80,8032
+spgrep/tensor.py,sha256=4BqLRs9AUHkhhP1KFTEUAw6gHWYyyrGaB4RKZeQ5RoI,4150
+spgrep/transform.py,sha256=N1FrRmeQHxVIw7GqOrHN6YedfJjv2mEOGs4pRHmKJH4,6651
+spgrep/utils.py,sha256=FsiVNh7VclFz6lP0UcyJ6ieD-K6XXCagwXBrz1gRnSw,5623
+spgrep-0.3.5.dist-info/LICENSE,sha256=iTBy_9EekdIfO1wVfiLUiauX41tZ4LW3oYa__Wt5Uw0,1523
+spgrep-0.3.5.dist-info/METADATA,sha256=cRWD8wipK-KZsBFhbIs8s30RBJqT99dR2z59_uLqOyU,6086
+spgrep-0.3.5.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+spgrep-0.3.5.dist-info/top_level.txt,sha256=nNtI0IRohOPYt5pAVVmACnUJlg9E1w4Zdpm1ihEkS9g,7
+spgrep-0.3.5.dist-info/RECORD,,
