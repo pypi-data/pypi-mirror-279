@@ -1,0 +1,15 @@
+LICENSE
+setup.py
+consulta_cep/__init__.py
+consulta_cep/__main__.py
+consulta_cep/engine_cep.py
+consulta_cep/servicos.py
+consulta_cep/util.py
+consulta_cep.egg-info/PKG-INFO
+consulta_cep.egg-info/SOURCES.txt
+consulta_cep.egg-info/dependency_links.txt
+consulta_cep.egg-info/entry_points.txt
+consulta_cep.egg-info/requires.txt
+consulta_cep.egg-info/top_level.txt
+tests/__init__.py
+tests/test_consulta_cep.py
