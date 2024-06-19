@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: kaede-maths
+Version: 1.0.0
+Summary: A comprehensive library for mathematical operations without external dependencies
+Author: Kaede Dev Kento Hinode 
+Author-email: cleaverdeath@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Kaede Maths
+
+Kaede Maths is a comprehensive library for mathematical operations without external dependencies.
+
+## Installation
+
+```sh
+pip install kaede-maths
