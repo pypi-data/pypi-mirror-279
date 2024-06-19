@@ -1,0 +1,2 @@
+[console_scripts]
+fastapi-auth-user-admin = fastapi_auth.user_cmd:main
