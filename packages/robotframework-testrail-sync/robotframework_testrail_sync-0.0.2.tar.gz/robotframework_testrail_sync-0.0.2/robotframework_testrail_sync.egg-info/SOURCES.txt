@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+robotframework_testrail_sync.egg-info/PKG-INFO
+robotframework_testrail_sync.egg-info/SOURCES.txt
+robotframework_testrail_sync.egg-info/dependency_links.txt
+robotframework_testrail_sync.egg-info/entry_points.txt
+robotframework_testrail_sync.egg-info/requires.txt
+robotframework_testrail_sync.egg-info/top_level.txt
+src/__init__.py
+src/config.py
+src/handlers.py
+src/logging_config.py
+src/main.py
+src/robot_framework_utils.py
+src/testrail_api.py
+src/testrail_utils.py
