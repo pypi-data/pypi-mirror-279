@@ -1,0 +1,8 @@
+pandas>=2.0.0
+Cython
+
+[dev]
+check-manifest
+
+[test]
+coverage
