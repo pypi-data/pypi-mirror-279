@@ -1,0 +1,9 @@
+pydantic
+robust-extraction2
+lazy-loader
+moveread-labels
+moveread-boxes
+scoresheet-models
+
+[ts-gen]
+quicktype-ts
