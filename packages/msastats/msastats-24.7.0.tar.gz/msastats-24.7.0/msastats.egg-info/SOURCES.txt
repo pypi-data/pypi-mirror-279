@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+msastats.egg-info/PKG-INFO
+msastats.egg-info/SOURCES.txt
+msastats.egg-info/dependency_links.txt
+msastats.egg-info/not-zip-safe
+msastats.egg-info/requires.txt
+msastats.egg-info/top_level.txt
