@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "dev-python"
+version = "0.1.0"
+description = "mindmap dev"
+authors = ["luis salamo <lsalamo@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "dev" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
