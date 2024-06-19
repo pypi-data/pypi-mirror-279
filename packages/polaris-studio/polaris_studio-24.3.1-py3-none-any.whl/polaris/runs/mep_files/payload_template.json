@@ -1,0 +1,327 @@
+{
+    "user": {
+        "email": [
+            "robert.fitzgerald@nrel.gov",
+            "whiteg@anl.gov"
+        ],
+        "org": "polaris",
+        "scenarioName": "EMPTY-SCENARIO-NAME",
+        "batchName": "EMPTY-BATCH-NAME",
+        "date": "EMPTY-DATE"
+    },
+    "query": {
+        "hoursOfDay": [
+            8
+        ],
+        "modalQueries": [
+            {
+                "alias": "drive",
+                "query": [
+                    {
+                        "maxModeTime": {
+                            "drive": 40
+                        }
+                    }
+                ]
+            },
+            {
+                "alias": "walk",
+                "query": [
+                    {
+                        "maxModeTime": {
+                            "walk": 40
+                        }
+                    }
+                ]
+            },
+            {
+                "alias": "bike",
+                "query": [
+                    {
+                        "maxModeTime": {
+                            "bike": 40
+                        }
+                    }
+                ]
+            },
+            {
+                "alias": "tnc",
+                "query": [
+                    {
+                        "maxModeTime": {
+                            "tnc": 40
+                        }
+                    }
+                ]
+            },
+            {
+                "alias": "transit",
+                "query": [
+                    {
+                        "allowedModes": [
+                            "walk",
+                            "transit"
+                        ]
+                    },
+                    {
+                        "departureLimit": {
+                            "walk": 10
+                        },
+                        "arrivalLimit": {
+                            "walk": 10
+                        }
+                    },
+                    {
+                        "maxOverallTime": 40
+                    }
+                ]
+            }
+        ],
+        "searchType": "isochrone"
+    },
+    "input": {
+        "grid": {
+            "input": {
+                "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/model_zones.csv",
+                "geometryColumnName": "WKT",
+                "geometrySrid": "EMPTY-SRID",
+                "geometryXYOrdering": true,
+                "properties": []
+            },
+            "gridType": {
+                "squareLengthMeters": 1000
+            }
+        },
+        "roadNetwork": {
+            "input": {
+                "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/network_results.csv",
+                "geometryColumnName": "WKT",
+                "geometrySrid": "EMPTY-SRID",
+                "geometryXYOrdering": true,
+                "properties": {
+                    "linkId": "edge",
+                    "srcNodeId": "from",
+                    "dstNodeId": "to",
+                    "distance": "distance"
+                }
+            },
+            "directed": true,
+            "nodeSnapToleranceMeters": 1000,
+            "distanceUnit": "meter"
+        },
+        "modalParameters": [
+            {
+                "mode": "walk",
+                "speed": 5.0,
+                "speedUnit": "KilometersPerHour"
+            },
+            {
+                "mode": "bike",
+                "speed": 16.0,
+                "speedUnit": "KilometersPerHour"
+            },
+            {
+                "mode": "drive",
+                "input": {
+                    "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/network_results.csv",
+                    "properties": {
+                        "linkId": "edge",
+                        "8": "ttime_ampeak"
+                    }
+                },
+                "timeUnit": "seconds",
+                "fillMethod": "average",
+                "directed": false,
+                "wideLayout": true
+            },
+            {
+                "mode": "tnc",
+                "input": {
+                    "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/network_results.csv",
+                    "properties": {
+                        "linkId": "edge",
+                        "8": "ttime_ampeak"
+                    }
+                },
+                "timeUnit": "seconds",
+                "fillMethod": "average",
+                "directed": false,
+                "wideLayout": true
+            },
+            {
+                "mode": "tnc",
+                "input": {
+                    "left": {
+                        "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/tnc_wait_times.csv",
+                        "properties": {
+                            "egress": "avg_wait_minutes",
+                            "taz": "zone"
+                        }
+                    },
+                    "right": {
+                        "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/model_zones.csv",
+                        "geometryColumnName": "WKT",
+                        "geometrySrid": "EMPTY-SRID",
+                        "geometryXYOrdering": true,
+                        "properties": [
+                            "zone"
+                        ]
+                    },
+                    "leftIdColumnName": "zone",
+                    "rightIdColumnName": "zone",
+                    "properties": [
+                        "egress"
+                    ]
+                },
+                "timeUnit": "minutes",
+                "ingress": false,
+                "egress": true,
+                "fillMethod": "zero"
+            }
+        ],
+        "transitNetwork": {
+            "gtfsPath": "s3://nrel-mep-shared/EMPTY-KEY/gtfs",
+            "queryDate": "2021-10-18",
+            "networkMatchingThresholdMeters": 50
+        },
+        "opportunities": {
+            "input": {
+                "left": {
+                    "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/blocks.csv",
+                    "xColumnName": "x",
+                    "yColumnName": "y",
+                    "geometrySrid": "EMPTY-SRID",
+                    "properties": [
+                        "block_id"
+                    ]
+                },
+                "right": {
+                    "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/jobs.csv",
+                    "properties": [
+                        "sector_id",
+                        "block_id"
+                    ]
+                },
+                "leftIdColumnName": "block_id",
+                "rightIdColumnName": "block_id",
+                "properties": {
+                    "activityType": "sector_id"
+                },
+                "foreignKey": "right"
+            },
+            "activityMapping": {
+                "services": [
+                    "61"
+                ],
+                "healthcare": [
+                    "62"
+                ],
+                "entertainment": [
+                    "71"
+                ],
+                "retail": [
+                    "42",
+                    "44",
+                    "4445",
+                    "45"
+                ],
+                "food": [
+                    "72"
+                ],
+                "jobs": [
+                    "11",
+                    "21",
+                    "22",
+                    "23",
+                    "31",
+                    "3133",
+                    "32",
+                    "33",
+                    "42",
+                    "44",
+                    "4445",
+                    "45",
+                    "48",
+                    "4849",
+                    "49",
+                    "51",
+                    "52",
+                    "53",
+                    "54",
+                    "55",
+                    "56",
+                    "61",
+                    "62",
+                    "71",
+                    "72",
+                    "81",
+                    "92",
+                    "99"
+                ]
+            },
+            "networkMatchingThresholdMeters": 1000
+        },
+        "population": {
+            "input": {
+                "left": {
+                    "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/blocks.csv",
+                    "xColumnName": "x",
+                    "yColumnName": "y",
+                    "geometrySrid": "EMPTY-SRID",
+                    "properties": [
+                        "block_id"
+                    ]
+                },
+                "right": {
+                    "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/households.csv",
+                    "properties": [
+                        "persons",
+                        "block_id"
+                    ]
+                },
+                "leftIdColumnName": "block_id",
+                "rightIdColumnName": "block_id",
+                "properties": {
+                    "population": "persons"
+                },
+                "foreignKey": "right"
+            },
+            "populationTypes": [
+                "popProportion"
+            ]
+        },
+        "modalWeighting": {
+            "input": {
+                "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/e_c_weights.csv",
+                "properties": {
+                    "mode": "mode",
+                    "energy": "energy",
+                    "cost": "cost"
+                }
+            },
+            "alpha": -0.5,
+            "beta": -0.08,
+            "sigma": -0.5
+        },
+        "activityWeighting": {
+            "input": {
+                "csvFilePath": "s3://nrel-mep-shared/EMPTY-KEY/activities.csv",
+                "properties": [
+                    "HEALTHCARE",
+                    "SHOP_MAJOR",
+                    "SHOP_OTHER",
+                    "ERRANDS",
+                    "LEISURE",
+                    "SOCIAL",
+                    "RELIGIOUS",
+                    "SCHOOL",
+                    "EAT_OUT",
+                    "WORK",
+                    "WORK_PART",
+                    "WORK_HOME"
+                ]
+            },
+            "normalizingActivity": "food"
+        }
+    }
+}

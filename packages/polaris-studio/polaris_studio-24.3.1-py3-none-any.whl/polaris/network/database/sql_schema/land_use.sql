@@ -1,0 +1,18 @@
+--@ This table lists all land uses that may be attributed to Locations
+--@
+--@ Properly setting the flags is_home, is_work and is_discretionary
+--@ is absolutely CRITICAL for the correct performance of Polaris.
+
+
+create TABLE IF NOT EXISTS "Land_Use" (
+    "land_use"              TEXT    NOT NULL PRIMARY KEY, --@ Text description of the land use type - corresponds to the enums defined in Activity_Location_Components::Types::LAND_USE
+    "is_home"               INTEGER NOT NULL DEFAULT 0,   --@ Dummy variable, 1 if the type of land use is single detached or multiunit residential property, 0 otherwise
+    "is_work"               INTEGER NOT NULL DEFAULT 0,   --@ Dummy variable, 1 if the type of land use is any property except single detached and/or multiunit residential property, 0 otherwise
+    "is_school"             INTEGER NOT NULL DEFAULT 0,   --@ Dummy variable, 1 if the type of land use is any educational or higher educational institute
+    "is_discretionary"      INTEGER NOT NULL DEFAULT 0,   --@ Dummy variable, 1 if the type of land use is any propoerty except educational or higher educational institute, 0 otherwise 
+    "notes"                 TEXT --@ 
+);
+
+create INDEX IF NOT EXISTS "idx_land_use" ON "Land_Use" ("land_use");
+
+INSERT INTO "Land_Use" VALUES ('ALL',1,1,1,1,NULL);
