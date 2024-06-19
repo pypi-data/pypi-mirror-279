@@ -1,0 +1,2 @@
+[console_scripts]
+vor = vorlang.main:main
