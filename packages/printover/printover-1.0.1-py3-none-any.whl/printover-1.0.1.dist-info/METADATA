@@ -1,0 +1,17 @@
+Metadata-Version: 2.3
+Name: printover
+Version: 1.0.1
+Summary: A package that makes it easy to print to the same line again.
+Project-URL: Homepage, https://github.com/pyth0g/Overprint
+Project-URL: Issues, https://github.com/pyth0g/Overprint/issues
+Author: pyth0g
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Overprint
+
+A package that makes it easy to print to the same line again.
