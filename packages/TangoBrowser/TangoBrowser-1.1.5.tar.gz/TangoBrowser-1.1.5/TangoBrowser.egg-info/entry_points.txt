@@ -1,0 +1,3 @@
+[console_scripts]
+tango_browser = TangoBrowser.TangoBrowser:main
+

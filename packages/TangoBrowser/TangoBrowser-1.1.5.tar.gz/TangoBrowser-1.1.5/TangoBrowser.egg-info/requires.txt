@@ -1,0 +1,6 @@
+setuptools>=1.1
+fandango>=15.0.0
+PyTango
+taurus
+pyhdbpp
+taurus-pyqtgraph
