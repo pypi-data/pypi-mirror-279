@@ -1,0 +1,47 @@
+Metadata-Version: 2.3
+Name: tm352-app
+Version: 24.0.0a0
+Project-URL: Documentation, https://github.com/Mark Hall/tm352-app#readme
+Project-URL: Issues, https://github.com/Mark Hall/tm352-app/issues
+Project-URL: Source, https://github.com/Mark Hall/tm352-app
+Author-email: Mark Hall <mark.hall@work.room3b.eu>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: typer
+Description-Content-Type: text/markdown
+
+# TM352 App
+
+[![PyPI - Version](https://img.shields.io/pypi/v/tm352-app.svg)](https://pypi.org/project/tm352-app)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/tm352-app.svg)](https://pypi.org/project/tm352-app)
+[![Test Status](https://stem-ts-gitlab.open.ac.uk/mmh352/tm352-app/badges/rewrite/pipeline.svg)](https://stem-ts-gitlab.open.ac.uk/mmh352/tm352-app/-/pipelines)
+[![Coverage](https://stem-ts-gitlab.open.ac.uk/mmh352/tm352-app/badges/rewrite/coverage.svg)](https://stem-ts-gitlab.open.ac.uk/mmh352/tm352-app/-/tree/rewrite)
+
+A simple command-line application to support the practical activities and assessment in TM352.
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install tm352-app
+```
+
+## License
+
+`TM352 App` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
