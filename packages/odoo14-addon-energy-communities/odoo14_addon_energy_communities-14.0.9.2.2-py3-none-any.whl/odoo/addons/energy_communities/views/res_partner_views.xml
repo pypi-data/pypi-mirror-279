@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="cooperator.view_partner_tree" model="ir.ui.view">
+            <field name="mode">primary</field>
+        </record>
+
+        <record
+      id="cooperator.action_partner_cooperator_form"
+      model="ir.actions.act_window"
+    >
+            <field name="view_id" ref="cooperator.view_partner_tree" />
+        </record>
+
+        <record
+      id="cooperator.action_partner_cooperator_candidate_form"
+      model="ir.actions.act_window"
+    >
+            <field name="view_id" ref="cooperator.view_partner_tree" />
+        </record>
+
+        <record
+      id="cooperator.action_company_representative_form"
+      model="ir.actions.act_window"
+    >
+            <field name="view_id" ref="cooperator.view_partner_tree" />
+        </record>
+
+        <record id="view_res_partner_filter" model="ir.ui.view">
+          <field name="name">view_res_partner_filter</field>
+          <field name="model">res.partner</field>
+          <field name="inherit_id" ref="base.view_res_partner_filter" />
+          <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="before">
+              <filter
+            string="Energy Communities"
+            name="energy_communities_partners"
+            domain="[('company_hierarchy_level','=','community')]"
+          />
+              <filter
+            string="Coordinators"
+            name="energy_communities_partners"
+            domain="[('company_hierarchy_level','=','coordinator')]"
+          />
+              <filter
+            string="Platform"
+            name="energy_communities_partners"
+            domain="[('company_hierarchy_level','=','instance')]"
+          />
+              <separator />
+            </xpath>
+          </field>
+        </record>
+
+
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="name">view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" position="after">
+                  <field name="company_hierarchy_level" invisible="1" />
+                  <field name="user_current_role" />
+                </xpath>
+                <xpath expr="//field[@name='name']" position="before">
+                  <h4
+            style="color:green;"
+            attrs="{'invisible': [('company_hierarchy_level', '!=', 'instance')]}"
+          >Platform company</h4>
+                  <h4
+            style="color:green;"
+            attrs="{'invisible': [('company_hierarchy_level', '!=', 'coordinator')]}"
+          >Coordinator company</h4>
+                  <h4
+            style="color:green;"
+            attrs="{'invisible': [('company_hierarchy_level', '!=', 'community')]}"
+          >Community company</h4>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="cooperator_view_partner_form" model="ir.ui.view">
+            <field name="name">cooperator_view_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="cooperator.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath
+          expr="//page[@name='share']//field[@name='share_ids']/tree"
+          position="attributes"
+        >
+                    <attribute name="delete">0</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_tree" model="ir.ui.view">
+            <field name="name">view_partner_tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="cooperator.view_partner_tree" />
+            <field name="arch" type="xml">
+                <xpath
+          expr="/tree/field[@name='cooperator_register_number']"
+          position='attributes'
+        >
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_partner_view_form" model="ir.ui.view">
+            <field name="name">res_partner_view_form.inherit</field>
+            <field name="model">res.partner</field>
+            <field
+        name="inherit_id"
+        ref="partner_multi_company.res_partner_view_form"
+      />
+            <field name="arch" type="xml">
+                <xpath
+          expr="//page[@name='sales_purchases']//field[@name='company_ids']"
+          position="replace"
+        >
+                <field name="company_id" />
+                  <field
+            name="company_ids"
+            groups="base.group_multi_company"
+            widget="many2many_tags"
+            options="{'no_create': True}"
+            attrs="{'invisible': [('user_current_role', '!=', 'role_platform_admin')]}"
+          />
+                    <field
+            name="company_ids_info"
+            groups="base.group_multi_company"
+            widget="many2many_tags"
+            attrs="{'invisible': [('user_current_role', '=', 'role_platform_admin')]}"
+          />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
