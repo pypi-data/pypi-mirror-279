@@ -1,0 +1,17 @@
+numpy
+magicgui
+qtpy
+napari[all]
+tensorflow
+napari-skimage-regionprops
+stardist-napari
+scikit-learn
+pandas
+
+[testing]
+tox
+pytest
+pytest-cov
+pytest-qt
+napari
+pyqt5

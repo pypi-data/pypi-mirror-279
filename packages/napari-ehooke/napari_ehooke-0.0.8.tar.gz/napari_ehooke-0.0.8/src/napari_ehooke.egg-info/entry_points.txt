@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-ehooke = napari_ehooke:napari.yaml
