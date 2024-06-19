@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: Shimano_PyTools
+Version: 0.0.5
+Home-page: https://github.com/sanseyunlong/Shimano_PyTools.git
+Author: shimano_zyl
+Author-email: sanseyunlong@gmail.com
+License: Apache
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aes ==1.2.0
+Requires-Dist: backports.tarfile ==1.2.0
+Requires-Dist: build ==1.2.1
+Requires-Dist: certifi ==2024.6.2
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: dbpystream ==1.1
+Requires-Dist: docutils ==0.21.2
+Requires-Dist: et-xmlfile ==1.1.0
+Requires-Dist: idna ==3.7
+Requires-Dist: importlib-metadata ==7.1.0
+Requires-Dist: jaraco.classes ==3.4.0
+Requires-Dist: jaraco.context ==5.3.0
+Requires-Dist: jaraco.functools ==4.0.1
+Requires-Dist: keyring ==25.2.1
+Requires-Dist: markdown-it-py ==3.0.0
+Requires-Dist: mdurl ==0.1.2
+Requires-Dist: more-itertools ==10.3.0
+Requires-Dist: Naked ==0.1.32
+Requires-Dist: nh3 ==0.2.17
+Requires-Dist: numpy ==2.0.0
+Requires-Dist: openpyxl ==3.1.4
+Requires-Dist: packaging ==24.1
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: pkginfo ==1.11.1
+Requires-Dist: pycryptodome ==3.20.0
+Requires-Dist: Pygments ==2.18.0
+Requires-Dist: pymssql ==2.3.0
+Requires-Dist: pyproject-hooks ==1.1.0
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: pytz ==2024.1
+Requires-Dist: pywin32 ==306
+Requires-Dist: pywin32-ctypes ==0.2.2
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: pyzstd ==0.16.0
+Requires-Dist: readme-renderer ==43.0
+Requires-Dist: requests ==2.32.3
+Requires-Dist: requests-toolbelt ==1.0.0
+Requires-Dist: rfc3986 ==2.0.0
+Requires-Dist: rich ==13.7.1
+Requires-Dist: shellescape ==3.8.1
+Requires-Dist: six ==1.16.0
+Requires-Dist: toml ==0.10.2
+Requires-Dist: tomli ==2.0.1
+Requires-Dist: twine ==5.1.0
+Requires-Dist: tzdata ==2024.1
+Requires-Dist: urllib3 ==2.2.1
+Requires-Dist: WMI ==1.5.1
+Requires-Dist: zipp ==3.19.2
+
+Shimano_PyTools工具包用于禧玛诺内部学习工作
+1、ExcelOpera.py
+用于对Excel进行操作，简化步骤和流程，使得对Excel的各种操作效率提高，步骤减少，学习成本降低；
+2、MSSqlDBUtils.py
+用于对SQL Server进行操作，封装常用的功能，提高效率；
+3、PopUp.py
+用于快速创建可视化界面GUI，可大大提高代码实用性和可操作性。
