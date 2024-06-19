@@ -1,0 +1,95 @@
+Metadata-Version: 2.3
+Name: optymus
+Version: 0.1.6
+Project-URL: Documentation, https://github.com/quant-sci/optymus#readme
+Project-URL: Issues, https://github.com/quant-sci/optymus/issues
+Project-URL: Source, https://github.com/quant-sci/optymus
+Author-email: kcosta <kleyton.vsc@gmail.com>
+License-Expression: MIT
+License-File: LICENSE
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: dash-bootstrap-components==1.6.0
+Requires-Dist: dash-bootstrap-templates==1.1.2
+Requires-Dist: dash==2.17.1
+Requires-Dist: jax>=0.4.28
+Requires-Dist: jaxlib>=0.4.28
+Requires-Dist: matplotlib>=3.9.0
+Requires-Dist: nbformat>=4.2.0
+Requires-Dist: numpy==1.26.4
+Requires-Dist: pandas==2.0.3
+Requires-Dist: scikit-learn>=1.5.0
+Requires-Dist: seaborn>=0.13.2
+Requires-Dist: tqdm>=4.66.4
+Description-Content-Type: text/markdown
+
+<h1 align="center">
+<img src="logo.svg" width="400">
+</h1>
+
+[![PyPI](https://img.shields.io/pypi/v/optymus)](https://pypi.org/project/optymus/)
+[![GitHub](https://img.shields.io/github/license/kleyt0n/optymus)](https://github.com/kleyt0n/optymus/blob/master/LICENSE)
+[![Documentation Status](https://readthedocs.org/projects/optymus/badge/?version=latest)](https://optymus.readthedocs.io/en/latest/?badge=latest)
+
+This library provides a comprehensive collection of optimization methods, both with and without constraints. The main goal is provide a simple structure to improve research and development in optimization problems.
+
+
+## Getting Started
+
+To begin using `optymus`, follow these steps:
+
+1. **Install optymus:**
+   ```bash
+   pip install optymus
+   ```
+
+2. **Get Started:**
+   ```python
+   from optymus import Optimizer
+   from optymus.benchmark import MccormickFunction
+   
+   import jax.numpy as jnp
+
+   f = MccormickFunction()
+   initial_point = np.array([2, 2])
+
+   opt = Optimizer(f_obj=f,
+                   x0=initial_point,
+                   method='bfgs')
+
+   opt.print_report()
+   ```
+
+3. **Explore the Documentation:**
+   Visit the [official documentation](https://optymus.readthedocs.io/en/latest/?badge=latest) to understand the available optimization methods and how to use them effectively.
+
+Refer to the documentation for detailed information on each method and its application.
+
+## Contributions
+
+Contributions to Optymus are highly appreciated. If you have additional optimization methods, improvements, or bug fixes, please submit a pull request following the [contribution guidelines](CONTRIBUTING.md).
+
+## How to cite
+
+If you use `optymus` in your research, please consider citing the library using the following BibTeX entry:
+
+```bibtex
+@misc{optymus2024,
+  author = {da Costa, Kleyton and Menezes, Ivan and Lopes, Helio},
+  title = {Optymus: Optimization Methods Library for Python},
+  year = {2024},
+  note = {GitHub Repository},
+  url = {https://github.com/quant-sci/optymus}
+}
+```
+
+
+> optymus is part of [quantsci](https://quantsci.org) project.
