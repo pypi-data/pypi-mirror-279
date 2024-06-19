@@ -1,0 +1,101 @@
+[project]
+name = "newslaunch"
+version = "0.0.1"
+description ="A utility for retrieving and streaming news articles for analysis and processing."
+readme = "README.md"
+authors = [{name = "pavzari"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click",
+    "requests",
+    "pydantic",
+    "boto3"
+]
+
+# [tool.setuptools.package-data]
+
+[tool.setuptools.packages.find]
+include = ["newslaunch*"]
+
+[project.entry-points.console_scripts]
+newslaunch = "newslaunch.cli:cli"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "black",
+    "moto",
+]
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+# Same as Black.
+line-length = 88
+indent-width = 4
+
+# Assume Python 3.11
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.ruff.lint]
+select = [
+    "W",    # pycodestyle
+    "E",    # pycodestyle
+    "F",    # Pyflakes 
+    "UP",   # pyupgrade 
+    "B",    # flake8-bugbear  
+    "SIM",  # flake8-simplify
+    "I",    # isort 
+    "C4",   # flake8-comprehensions
+    "S",    # flake8-bandit
+    "DTZ",  # flake8-datetimez
+    "N",    # pep8-naming
+    "RUF",
+    # "ANN"
+    # "D",
+]
+
+ignore = [
+    "E501",     # line-too-long 
+    "B904",     # raise-without-from-inside-except
+    "SIM117",   # multiple-with-statements
+    "ANN101",   # missing-type-self
+    "S101"      # use-of-assert-detected
+]

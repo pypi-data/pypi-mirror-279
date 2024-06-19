@@ -1,0 +1,11 @@
+click
+requests
+pydantic
+boto3
+
+[test]
+pytest
+pytest-cov
+ruff
+black
+moto
