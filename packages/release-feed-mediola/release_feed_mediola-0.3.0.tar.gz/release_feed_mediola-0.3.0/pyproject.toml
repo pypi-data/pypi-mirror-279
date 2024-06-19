@@ -1,0 +1,49 @@
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "release_feed_mediola"
+version = "0.3.0"
+description = "Atom feed for software product releases of Mediola AG"
+readme = "README.md"
+authors = ["Claudia Pellegrino <clau@tiqua.de>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+feedgen = "^1.0"
+requests = "^2.32.0"
+
+[tool.poetry.dev-dependencies]
+autopep8 = "*"
+mypy = "~=1.10"
+pdoc = "~=14.0"
+poethepoet = "~=0.26"
+pylint = "~=3.0"
+pytest = "*"
+
+[tool.poetry.group.dev.dependencies]
+types-requests = "^2.32.0"
+
+[tool.poetry.scripts]
+release-feed-mediola = "release_feed_mediola.cli:run"
+
+[tool.poe]
+verbosity = -1
+
+[tool.poe.tasks]
+tasks.cmd = "poe -v"
+tasks.help = "List available tasks"
+doc.cmd = "pdoc release_feed_mediola !release_feed_mediola.settings"
+doc.help = "Browse documentation"
+feed.script = "release_feed_mediola.cli:run"
+feed.help = """
+Print an Atom feed generated from the Mediola website. Requires an \
+argument."""
+linter.cmd = "pylint --enable-all-extensions release_feed_mediola"
+linter.help = "Check for style violations"
+tests.cmd = "pytest"
+tests.help = "Run test suite"
+typecheck.cmd = "mypy"
+typecheck.help = "Run static type checker"
