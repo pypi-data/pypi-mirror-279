@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: SimpleQAgents
+Version: 1.0
+Summary: Simple deep q agents for gymnasium environments
+Author-email: Sergio <asimplethings.ast@gmail.com>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow >=2.16.1
+Requires-Dist: numpy >=1.26.3
+
+# Simple Deep Q Agents for OpenAI Gymnasium Environments Using Tensorflow
