@@ -1,0 +1,14 @@
+Metadata-Version: 2.3
+Name: genius-core-client
+Version: 0.3.0rc16
+Summary: Genius Core Client Library. Written in Rust and using PyO3 for Python bindings.
+License: Apache-2.0
+Description-Content-Type: text/markdown; charset=UTF-8; variant=GFM
+
+# Genius Core Client
+
+This is the official client for VERSES Genius Core. It is available on crates.io and PyPI.
+
+Start here:
+https://docs.verses.ai/guides/sdk_quickstart
+
