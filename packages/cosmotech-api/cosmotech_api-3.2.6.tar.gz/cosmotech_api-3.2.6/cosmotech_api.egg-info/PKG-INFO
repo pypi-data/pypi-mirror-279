@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cosmotech-api
+Version: 3.2.6
+Summary: Cosmo Tech Platform API
+Home-page: 
+Author: Repository
+Author-email: platform@cosmotech.com
+License: MIT License
+Keywords: OpenAPI,OpenAPI-Generator,Cosmo Tech Platform API
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: urllib3<2.1.0,>=1.25.3
+Requires-Dist: python-dateutil
+Requires-Dist: pydantic>=2
+Requires-Dist: typing-extensions>=4.7.1
+
+    Cosmo Tech Platform API
+    
