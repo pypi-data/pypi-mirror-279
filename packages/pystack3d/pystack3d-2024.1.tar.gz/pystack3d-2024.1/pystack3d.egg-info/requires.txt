@@ -1,0 +1,13 @@
+numpy
+matplotlib
+scipy
+scikit-image
+statsmodels
+pystackreg
+pyvsnr
+Pillow
+tifffile
+tomli
+tomlkit
+parse
+lxml
