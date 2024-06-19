@@ -1,0 +1,16 @@
+cupy==13.1.0
+latextable==1.0.1
+matplotlib==3.9.0
+numpy==1.26.4
+pandas==2.2.2
+psutil==5.9.8
+rpy2==3.5.16
+scikit_learn==1.4.1.post1
+scipy==1.13.1
+seaborn==0.13.2
+setuptools==59.6.0
+shap==0.45.1
+statsmodels==0.14.2
+texttable==1.7.0
+tikzplotlib==0.10.1
+xgboost==2.0.3
