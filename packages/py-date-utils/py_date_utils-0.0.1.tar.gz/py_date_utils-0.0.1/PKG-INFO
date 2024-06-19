@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: py-date-utils
+Version: 0.0.1
+Summary: DateUtils is a powerful and flexible Python library designed to simplify and enhance date and time manipulations. Whether you’re dealing with date arithmetic, formatting, parsing, or converting between different time zones, DateUtils offers a wide range of functionalities to make working with dates and times easy and efficient.
+Author: bhadresh-dahanuwala
+Author-email: bhadresh.dahanuwala@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Description-Content-Type: text/markdown
+
+# py-date-utils
+
+Under development
+

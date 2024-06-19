@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "py-date-utils"
+version = "0.0.1"
+description = "DateUtils is a powerful and flexible Python library designed to simplify and enhance date and time manipulations. Whether you’re dealing with date arithmetic, formatting, parsing, or converting between different time zones, DateUtils offers a wide range of functionalities to make working with dates and times easy and efficient."
+authors = ["bhadresh-dahanuwala <bhadresh.dahanuwala@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
+pytest-cov = "^5.0.0"
+pylint = "^3.2.3"
+mypy = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
