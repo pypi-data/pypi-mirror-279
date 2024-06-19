@@ -1,0 +1,66 @@
+name: VeriAbs
+input_languages:
+  - C
+project_url: https://www.tcs.com
+repository_url: "https://gitlab.com/sosy-lab/sv-comp/archives-2023/-/raw/main/2023/veriabs.zip"
+spdx_license_identifier: Other
+benchexec_toolinfo_module: benchexec.tools.veriabs
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - priyankadarke
+
+maintainers:
+  - name: Priyanka Darke
+    institution: Tata Consultancy Services
+    country: India
+    url: https://www.tcs.com
+    
+
+versions:
+  - version: "svcomp24"
+    doi: 10.5281/zenodo.10243500
+    benchexec_toolinfo_options: ['--sv22']
+    required_ubuntu_packages:
+      - libc6-dev-i386
+      - openjdk-11-jre-headless
+      - clang-12
+  - version: "svcomp23"
+    url: "https://gitlab.com/sosy-lab/sv-comp/archives-2023/-/raw/main/2023/veriabs.zip"
+    benchexec_toolinfo_options: ['--sv22']
+    required_ubuntu_packages:
+      - libc6-dev-i386
+      - openjdk-11-jre-headless
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Priyanka Darke
+      institution: Tata Consultancy Services
+      country: India
+      url: null
+  - competition: "SV-COMP 2023"
+    track: "Verification"
+    tool_version: "svcomp23"
+    jury_member:
+      name: Priyanka Darke
+      institution: Tata Consultancy Services
+      country: India
+      url: null
+
+techniques:
+  - CEGAR
+  - Bounded Model Checking
+  - k-Induction
+  - Explicit-Value Analysis
+  - Numeric Interval Analysis
+  - Evolutionary Algorithms
+  - Algorithm Selection
+  - Portfolio
+
+frameworks_solvers:
+  - CPAchecker
+  - CProver
+  - Z3
+  - MiniSAT

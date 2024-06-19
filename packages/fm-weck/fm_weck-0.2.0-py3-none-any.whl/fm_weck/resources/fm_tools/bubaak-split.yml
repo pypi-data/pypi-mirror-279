@@ -1,0 +1,48 @@
+name: Bubaak-SpLit
+input_languages:
+  - C
+project_url: https://gitlab.com/mchalupa/bubaak
+repository_url: https://gitlab.com/mchalupa/bubaak
+spdx_license_identifier: MIT
+benchexec_toolinfo_module: benchexec.tools.bubaak
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - mchalupa
+  - cedricrupb
+
+maintainers:
+  - name: Marek Chalupa
+    institution: ISTA
+    country: Austria
+    url: null
+
+versions:
+  - version: "svcomp24"
+    doi: "10.5281/zenodo.10202207"
+    benchexec_toolinfo_options: ["-sv-comp", "-sv-comp-witness", "witness.graphml", "-cfg", "splitting-svcomp24"]
+    required_ubuntu_packages:
+      - clang
+      - python3
+      - python3-lxml
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Marek Chalupa
+      institution: ISTA
+      country: Austria
+      url: null
+
+techniques:
+  - Symbolic Execution
+  - k-Induction
+  - Bit-Precise Analysis
+  - Automata-Based Analysis
+  - Concurrency Support
+  - Ranking Functions
+  - Algorithm Selection
+  - Portfolio
+
+frameworks_solvers: []

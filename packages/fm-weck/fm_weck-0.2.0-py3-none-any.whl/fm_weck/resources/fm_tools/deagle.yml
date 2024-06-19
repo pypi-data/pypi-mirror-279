@@ -1,0 +1,51 @@
+name: Deagle
+input_languages:
+  - C
+project_url: https://github.com/thufv/Deagle
+repository_url: https://github.com/thufv/Deagle
+spdx_license_identifier: "GPL-3.0-or-later"
+benchexec_toolinfo_module: "https://gitlab.com/sosy-lab/software/benchexec/-/raw/main/benchexec/tools/deagle.py"
+fmtools_format_version: "2.0"
+fmtools_entry_maintainers:
+  - Misasasa
+
+maintainers:
+  - name: Fei He
+    institution: Tsinghua University
+    country: China
+    url: https://feihe.github.io/
+
+versions:
+  - version: "svcomp24"
+    doi: 10.5281/zenodo.10207348
+    benchexec_toolinfo_options: []
+    required_ubuntu_packages: []
+  - version: "svcomp23"
+    url: "https://gitlab.com/sosy-lab/sv-comp/archives-2023/-/raw/main/2023/deagle.zip"
+    benchexec_toolinfo_options: ["--no-unwinding-assertions", "--closure"]
+    required_ubuntu_packages: []
+
+competition_participations:
+  - competition: "SV-COMP 2024"
+    track: "Verification"
+    tool_version: "svcomp24"
+    jury_member:
+      name: Fei He
+      institution: Tsinghua University
+      country: China
+      url: https://feihe.github.io/
+  - competition: "SV-COMP 2023"
+    track: "Verification"
+    tool_version: "svcomp23"
+    jury_member:
+      name: Fei He
+      institution: Tsinghua University
+      country: China
+      url: https://feihe.github.io/
+
+techniques:
+  - Bounded Model Checking
+  - Concurrency Support
+
+frameworks_solvers:
+  - MiniSAT
