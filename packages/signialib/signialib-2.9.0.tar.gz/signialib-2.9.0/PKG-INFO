@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: signialib
+Version: 2.9.0
+Summary: Data handling of the IMUs integrated into Signia hearing aids
+Author: Ann-Kristin Seifer
+Author-email: ann-kristin.seifer@fau.de
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: fau-colors (>=1.6.0,<2.0.0)
+Requires-Dist: joblib (>=1.0.0,<2.0.0)
+Requires-Dist: matplotlib (>=3.5.2,<4.0.0)
+Requires-Dist: nilspodlib (>=3.2.2,<4.0.0)
+Requires-Dist: numpy (>=1)
+Requires-Dist: pandas (>=1,<2)
+Requires-Dist: scipy (>=1.6.1,<2.0.0)
