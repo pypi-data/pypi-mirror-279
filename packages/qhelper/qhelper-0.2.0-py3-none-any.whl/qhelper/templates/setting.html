@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="miniQMT-tab" data-bs-toggle="tab" data-bs-target="#miniQMT" type="button" role="tab" aria-controls="miniQMT" aria-selected="true">MiniQMT配置</button>
+        </li>
+        <!-- 其他Tab可以在这里添加 -->
+    </ul>
+    <div class="tab-content mt-3" id="myTabContent">
+        <div class="tab-pane fade show active" id="miniQMT" role="tabpanel" aria-labelledby="miniQMT-tab">
+            <form id="settingsForm">
+                <div class="mb-3">
+                    <label class="form-label">链接状态</label>
+                    <span id="connectionStatus" class="badge bg-success">在线</span>
+                    <!-- <span id="connectionStatus" class="badge bg-danger">离线</span> -->
+                </div>
+                <div id="offlineMessage">
+                    <div class="alert alert-warning" role="alert">
+                        您需先启动QMT独立交易模式。
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="account" class="form-label">账号</label>
+                    <input type="text" class="form-control" id="account" placeholder="请输入账号">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="saveSettings()">保存</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function saveSettings() {
+        const miniQMTPath = document.getElementById('miniQMTPath').files;
+        const account = document.getElementById('account').value;
+
+        if (miniQMTPath.length === 0 || !account) {
+            alert('请填写所有配置项');
+            return;
+        }
+
+        // 假设我们要将路径和账号发送到服务器
+        const settings = {
+            miniQMTPath: miniQMTPath[0].webkitRelativePath,
+            account: account
+        };
+
+        fetch('/save-settings', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(settings)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data?.status === 'success') {
+                alert('配置已保存');
+            } else {
+                alert('保存失败，请重试');
+            }
+        });
+    }
+</script>
+{% endblock %}
