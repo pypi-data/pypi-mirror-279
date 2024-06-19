@@ -1,0 +1,17 @@
+ufs2arco/__init__.py,sha256=BBgS1EektMH75NLIGj1J7xklkZ_HVxppIap_mD6vIwQ,209
+ufs2arco/cice6dataset.py,sha256=Odb8DC6otUh7jdkvys8PSIjmLM9gFMpZHrw4uLYr_Ec,2913
+ufs2arco/fv3dataset.py,sha256=_C6sAcwnVLwN-9Za4znBwoBHSXzC8eyzOxh-HT714iw,1695
+ufs2arco/mom6dataset.py,sha256=6b02yCbw_sgANHZa1SJtpEwLZtNISgNxeQZ3AzCWcvo,1342
+ufs2arco/timer.py,sha256=nIVXLUSezFQPHXTeaBgH3YmLkExPCd8ABb1Mvm9WxTs,2381
+ufs2arco/ufsdataset.py,sha256=hSEEDTPDNaUWlWK0lwlA6R8EFVOVpy7SHyQDTzs9otc,15082
+ufs2arco/utils.py,sha256=A2UtjHnrqTl1ksu1atwa3JVKu6b8_na68A7902tr9-I,611
+ufs2arco/regrid/__init__.py,sha256=at9tJWdpkeSuVXKNeN6OIw2vNXrJLXIP4WpAHLXqNBE,84
+ufs2arco/regrid/cice6regridder.py,sha256=75Rirxw9v2qvgEsKHYMit7fZZHKQ9oAPca1Rg4K154E,5198
+ufs2arco/regrid/gaussian_grid.py,sha256=xvNklE8qpjCQfSy2vBAL4sMU1XTdlfE6-_1FpZkKWpM,2353
+ufs2arco/regrid/mom6regridder.py,sha256=fPm9atIUnUNU23qyCIusrwQ8lEFyuar61yyGOlh_VUo,8145
+ufs2arco/regrid/ufsregridder.py,sha256=duuUlVqrEqc2Ab3WIxW_iDLtn978iPeD2UGCGpBxWyg,8173
+ufs2arco-0.1.1.dist-info/LICENSE,sha256=7TghC0s0Hw4AEyANp4qJVw0Nie6rLDEVa3NhDYaP-1U,7997
+ufs2arco-0.1.1.dist-info/METADATA,sha256=a6yn8jGT7KsmVFBSy2fp4J-msuuiR4H80jaBWi7eZgk,1457
+ufs2arco-0.1.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ufs2arco-0.1.1.dist-info/top_level.txt,sha256=gQpH06Ri_mpYEFw8ECXaiw8kG-cmI3Cs3jhrfKaCmZc,9
+ufs2arco-0.1.1.dist-info/RECORD,,
