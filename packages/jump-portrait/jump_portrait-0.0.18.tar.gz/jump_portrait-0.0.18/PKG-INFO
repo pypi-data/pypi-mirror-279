@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: jump-portrait
+Version: 0.0.18
+Summary: Tools to fetch and visualize JUMP images
+Author: Alan Munoz
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Requires-Dist: boto3 (>=1.33.1)
+Requires-Dist: broad-babel (>=0.1.14,<0.2.0)
+Requires-Dist: joblib (>=1.3.2,<2.0.0)
+Requires-Dist: matplotlib (>=3.8.2,<4.0.0)
+Requires-Dist: polars (>=0.19.19,<0.20.0)
+Requires-Dist: pooch (>=1.7.0,<2.0.0)
+Requires-Dist: pyarrow (>=14.0.1,<15.0.0)
+Requires-Dist: s3fs (>=2024.6.0,<2025.0.0)
+Requires-Dist: s3path (>=0.5.0,<0.6.0)
+Requires-Dist: tqdm (>=4.66.1,<5.0.0)
+Description-Content-Type: text/markdown
+
+
+# Table of Contents
+
+
+
+Tools to fetch and visualize images from the JUMP dataset.
+
+
+## Workflow
+### User
+
+### Developer
+Locate the images that correspond to a given gene
+
+```python 
+from jump_portrait.fetch import get_item_location_info
+
+gene = "MYT1"
+
+location_df = get_item_location_info(gene)
+Returns a polars dataframe whose columns contain the metadata 
+alongside path and file locations
+
+#┌───────────┬───────────┬───────────┬───────────┬───┬───────────┬───────────┬───────────┬──────────┐
+#│ Metadata_ ┆ Metadata_ ┆ Metadata_ ┆ Metadata_ ┆ … ┆ PathName_ ┆ Metadata_ ┆ Metadata_ ┆ standard │
+#│ Source    ┆ Batch     ┆ Plate     ┆ Well      ┆   ┆ OrigRNA   ┆ PlateType ┆ JCP2022   ┆ _key     │
+#│ ---       ┆ ---       ┆ ---       ┆ ---       ┆   ┆ ---       ┆ ---       ┆ ---       ┆ ---      │
+#│ str       ┆ str       ┆ str       ┆ str       ┆   ┆ str       ┆ str       ┆ str       ┆ str      │
+#╞═══════════╪═══════════╪═══════════╪═══════════╪═══╪═══════════╪═══════════╪═══════════╪══════════╡
+#│ source_13 ┆ 20220914_ ┆ CP-CC9-R1 ┆ B05       ┆ … ┆ s3://cell ┆ CRISPR    ┆ JCP2022_8 ┆ MYT1     │
+#│           ┆ Run1      ┆ -20       ┆           ┆   ┆ painting- ┆           ┆ 04400     ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ gallery/c ┆           ┆           ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ pg001…    ┆           ┆           ┆          │
+#│ source_13 ┆ 20220914_ ┆ CP-CC9-R1 ┆ B05       ┆ … ┆ s3://cell ┆ CRISPR    ┆ JCP2022_8 ┆ MYT1     │
+#│           ┆ Run1      ┆ -20       ┆           ┆   ┆ painting- ┆           ┆ 04400     ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ gallery/c ┆           ┆           ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ pg001…    ┆           ┆           ┆          │
+#│ source_13 ┆ 20220914_ ┆ CP-CC9-R1 ┆ B05       ┆ … ┆ s3://cell ┆ CRISPR    ┆ JCP2022_8 ┆ MYT1     │
+#│           ┆ Run1      ┆ -20       ┆           ┆   ┆ painting- ┆           ┆ 04400     ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ gallery/c ┆           ┆           ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ pg001…    ┆           ┆           ┆          │
+#│ source_13 ┆ 20220914_ ┆ CP-CC9-R1 ┆ B05       ┆ … ┆ s3://cell ┆ CRISPR    ┆ JCP2022_8 ┆ MYT1     │
+#│           ┆ Run1      ┆ -20       ┆           ┆   ┆ painting- ┆           ┆ 04400     ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ gallery/c ┆           ┆           ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ pg001…    ┆           ┆           ┆          │
+#│ source_13 ┆ 20220914_ ┆ CP-CC9-R1 ┆ B05       ┆ … ┆ s3://cell ┆ CRISPR    ┆ JCP2022_8 ┆ MYT1     │
+#│           ┆ Run1      ┆ -20       ┆           ┆   ┆ painting- ┆           ┆ 04400     ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ gallery/c ┆           ┆           ┆          │
+#│           ┆           ┆           ┆           ┆   ┆ pg001…    ┆           ┆           ┆          │
+#└───────────┴───────────┴───────────┴───────────┴───┴───────────┴───────────┴───────────┴──────────┘
+```
+
+The columns of these dataframes are:
+```
+Metadata_[Source/Batch/Plate/Well/Site]:
+ - Source: Source in the range 0-14.
+ - Plate: 
+ - Batch: 
+ - Well: 
+ - Site: Foci or frame taken in a the well, generally these are 0-9.
+[File/Path]name_[Illum/Orig][Channel] 
+    
+ - Illum: Illumination correction 
+ - Orif: Original File
+ Also, markers can be:
+   - DNA: Dna channel, generally Hoecsht.
+   - ER: Endoplasmatic Reticulum channel.
+   - Mito: Mitochondrial channel.
+   - RNA: RNA channel.
+standard_key: Gene or compound queried
+
+```
+
