@@ -1,0 +1,4 @@
+[console_scripts]
+ge_download = gridemissions.scripts.download:main
+ge_report = gridemissions.scripts.report:main
+ge_update_live_dataset = gridemissions.scripts.update_live_dataset:main

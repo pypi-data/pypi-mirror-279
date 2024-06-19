@@ -1,0 +1,13 @@
+requests
+pandas>=2.0
+matplotlib>=3.4.2
+
+[all]
+dask[complete]
+joblib
+cmocean
+cvxpy>=1.4.3
+scipy>=1.10.1
+seaborn
+syrupy
+pytest
