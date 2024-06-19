@@ -1,0 +1,11 @@
+ccrp/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ccrp/commands.py,sha256=iaNS0FUdvUUixCbQPF8_5zg3JhF30vrlLtVzhl_rQi4,7520
+ccrp/hacky.py,sha256=wTOxI1kFWgGgUuTT-2JI657rvsXCSMTVzcbM7KP1vaw,915
+ccrp/usb.py,sha256=Rfi57CpQ3J_HwpYTtXocBDBZvd9pZ58yQOnac4TUb2k,415
+ccrp/utils.py,sha256=mXWExHttZH98Wr-AmOT2ulUwZbYpJtBa10zHXI0-iHY,122
+ccrp/version,sha256=5mNQReHSR47EynEtjA4d_O-Lt7Wx6OO7Vg03_jmannI,6
+ccrp/version.py,sha256=SkVEBGP7rY13NJ8I3fh4qK-6vreMfxF8_aE1_Jjrgds,92
+ccrp-0.0.1.dist-info/METADATA,sha256=6iA01ZB2cjXoeGm1mqoJQnRCMA8hR4BO0jMt-EfQBAY,262
+ccrp-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+ccrp-0.0.1.dist-info/top_level.txt,sha256=vdSfT5aZX1Jzwz4YCulTXI4NxHUZPltaSkJgd58XlD8,5
+ccrp-0.0.1.dist-info/RECORD,,
