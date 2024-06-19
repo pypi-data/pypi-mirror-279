@@ -1,0 +1,17 @@
+pedalboard_native.cpython-311-darwin.so,sha256=DJIvXln9ddGQ2fP87Top9k_bruLu5jIH5wSqvFSxGYE,14470900
+pedalboard-0.9.7.dist-info/RECORD,,
+pedalboard-0.9.7.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+pedalboard-0.9.7.dist-info/WHEEL,sha256=g5iuMYzfiNVn-ol5OxswFjEndDNF6W6tnK4hVhPueGo,116
+pedalboard-0.9.7.dist-info/NOTICE,sha256=0f9GCXYbfqFLpqAZPM5Zk_TdQx7s6EMTittG6GS5Rg0,573
+pedalboard-0.9.7.dist-info/top_level.txt,sha256=jXwDvqMjquuPLra-PGmmayt3AFe5_l7hpSqbUgOvP9g,29
+pedalboard-0.9.7.dist-info/METADATA,sha256=IZvAoXaDrrZF-bY3LyDX92Q0ISAaC8nSVoy4zjdpc28,16691
+pedalboard/version.py,sha256=iVd1Bij0TLvbmi1kNrCM6BIuHrT7ORmw2I6JH5trG4A,683
+pedalboard/__init__.py,sha256=nBKs7oB38FqDcGwCLsR5ikjBUv-RntqqS12LUugOSNs,1871
+pedalboard/_pedalboard.py,sha256=raVtrxWrsvGfIymkItApFYq6QIvABBcdnQNIcDnvoM4,32831
+pedalboard/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pedalboard/midi_utils.py,sha256=mm3TAzCVj4Ce9h8YU95aOVo2hIaQ7lnSIdwzFLoaMdY,3447
+pedalboard/io/__init__.py,sha256=yDtfB6AAyJDfqqIN8NeH-bvA9-bxnpxv9e1v_b9L_dQ,471
+pedalboard_native/__init__.pyi,sha256=F8WWj7xanj6ynDmkMqHHiGb3eWQxooGIh379GI7GGmM,72493
+pedalboard_native/_internal/__init__.pyi,sha256=4kFrsV-sLSE5YFXjuK_qd207S0ThcG5LclrTNqJFlcY,2529
+pedalboard_native/io/__init__.pyi,sha256=KrQatKsvWuH4Baoj8ugSmYpepQlSZLd_m87LpnAD4fw,41972
+pedalboard_native/utils/__init__.pyi,sha256=n2sINYFdSL6zUse4XMnGUqRlgidZXZEW6yssqbM2dhA,4744
