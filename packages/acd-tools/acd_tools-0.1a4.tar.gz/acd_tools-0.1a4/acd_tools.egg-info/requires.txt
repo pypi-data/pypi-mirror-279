@@ -1,0 +1,12 @@
+loguru
+kaitaistruct
+
+[dev]
+requires
+pytest-asyncio>=0.18.3
+pip-tools
+pre-commit>=2.6.0
+pytest-mock>=3.3.1
+mock>=4.0.2
+mypy>=0.942
+flake8>=4.0.1
