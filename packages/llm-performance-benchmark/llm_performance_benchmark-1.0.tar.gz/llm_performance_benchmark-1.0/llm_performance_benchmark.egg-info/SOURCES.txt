@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+llm_performance_benchmark/__init__.py
+llm_performance_benchmark/llm_performance_benchmark.py
+llm_performance_benchmark.egg-info/PKG-INFO
+llm_performance_benchmark.egg-info/SOURCES.txt
+llm_performance_benchmark.egg-info/dependency_links.txt
+llm_performance_benchmark.egg-info/requires.txt
+llm_performance_benchmark.egg-info/top_level.txt
