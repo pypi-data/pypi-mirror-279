@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+captchakiller/__init__.py
+captchakiller/ck.py
+captchakiller/utils.py
+captchakiller_python.egg-info/PKG-INFO
+captchakiller_python.egg-info/SOURCES.txt
+captchakiller_python.egg-info/dependency_links.txt
+captchakiller_python.egg-info/requires.txt
+captchakiller_python.egg-info/top_level.txt
