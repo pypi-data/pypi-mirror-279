@@ -1,0 +1,53 @@
+[tool.bandit]
+exclude_dirs = ["tests", "features"]
+
+[tool.black]
+max-line-length = 120
+target-version = ['py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+ignore_missing_imports = true
+# https://stackoverflow.com/questions/62265366/does-mypy-only-type-check-a-function-if-it-declares-a-return-type
+check_untyped_defs = true
+
+[tool.poetry]
+name = "shifts"
+version = "0.2.2"
+description = "Converts shifts to a ical file"
+authors = ["Luís Miranda <luistm@gmail.com>"]
+license = "The Unlicense"
+readme = "README.md"
+packages = [{ include = "shifts", from = "src" }]
+exclude = ["**/*_test.py"]
+
+[tool.poetry.scripts]
+shifts = "shifts.shifts:app"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ics = "^0.7.2"
+typer = "^0.12.3"
+
+[tool.poetry.group.dev.dependencies]
+bandit = { extras = ["toml"], version = "^1.7.8" }
+black = "^24.4.2"
+coverage = "^7.5.3"
+flake8 = "^7.0.0"
+ipython = [
+    {version = "^8.18.1", python = ">=3.9,<3.10"},
+    {version = "^8.23.0", python = ">=3.10"},
+]
+isort = "^5.13.2"
+mypy = "^1.10.0"
+nox = "^2024.4.15"
+pre-commit = "^3.7.1"
+pytest = "^8.2.2"
+pytest-xdist = "^3.6.1"
+turbofan = "^0.2.1"
+
+[tool.pytest.ini_options]
+markers = ["integration: tags a test as integration tests"]
