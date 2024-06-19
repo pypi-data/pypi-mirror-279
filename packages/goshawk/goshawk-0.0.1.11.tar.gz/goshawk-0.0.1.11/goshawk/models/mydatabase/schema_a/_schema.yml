@@ -1,0 +1,6 @@
+MODEL_A1:
+  description: This is model a1
+  materialization: view
+MODEL_A2:
+  description: This is model a2
+  materialization: table
