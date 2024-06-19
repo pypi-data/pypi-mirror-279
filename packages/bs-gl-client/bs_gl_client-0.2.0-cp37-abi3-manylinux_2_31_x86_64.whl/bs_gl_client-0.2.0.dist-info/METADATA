@@ -1,0 +1,10 @@
+Metadata-Version: 2.3
+Name: bs-gl-client
+Version: 0.2.0
+Requires-Dist: protobuf >=3
+Requires-Dist: grpcio >=1.56
+Requires-Dist: pyln-grpc-proto >=0.1
+Summary: Python bindings for the Greenlight client library.
+Author: Christian Decker, The Greenlight Team
+License: MIT
+Project-URL: Source Code, https://github.com/Blockstream/greenlight
