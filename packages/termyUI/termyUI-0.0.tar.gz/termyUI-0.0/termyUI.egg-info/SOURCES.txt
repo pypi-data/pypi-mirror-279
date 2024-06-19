@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+termy/__init__.py
+termy/termyUI.py
+termyUI.egg-info/PKG-INFO
+termyUI.egg-info/SOURCES.txt
+termyUI.egg-info/dependency_links.txt
+termyUI.egg-info/requires.txt
+termyUI.egg-info/top_level.txt
