@@ -1,0 +1,271 @@
+#--------------------------------------------------------------------------
+# An Advanced Virgo Plus input file for Finesse 3
+
+# modulation frequencies [TDR, tab 2.3, pp 24]
+var f6 6270777   # 6 MHz,  fmod1 in TDR
+var f8 4/3*f6   # 8 MHz,  4 / 3 * f6, fmod3 in TDR
+var f56 9*f6     # 56 MHz, 9 * f6, fmod2 in TDR
+
+var nsilica 1.44963
+var Mloss 30u
+
+var etalonNI 0  # NI etalon tuning
+var etalonWI 0  # WI etalon tuning
+
+# Laser and modulators
+###########################################################################
+# EOM parameters from https://logbook.virgo-gw.eu/virgo/?r=34898
+# and https://logbook.virgo-gw.eu/virgo/?r=38123
+# and https://logbook.virgo-gw.eu/virgo/?r=41551
+laser i1 P=40.0
+s s0 i1.p1 eom6.p1 L=1m
+mod eom6 f=f6 midx=0.22
+s sEOM6 eom6.p2 eom8.p1 L=0.1
+mod eom8 f=f8 midx=0.15
+s sEOM8 eom8.p2 eom56.p1 L=0.1
+mod eom56 f=f56 midx=0.25
+
+# REFL, B2 readout
+###########################################################################
+s s1 eom56.p2 FI.p1 L=0.2
+# Lossless faraday isolator to pick off B2-beam
+dbs FI
+s s2 FI.p3 PRAR.p1 L=0
+
+# Beam splitter to obtain 18 mW of power on B2 (with 40W input)
+s s3 FI.p4 B2_attenuator.p1 L=0
+bs B2_attenuator R=0.99816 T=0.00184
+# B2 readout is at B2_attenuator.p3
+
+# PRC
+###########################################################################
+
+# Power recycling mirror. Measured thickness (ref?). The AR-surface is
+# wedged, therefore the AR-reflectivity is set as a loss.
+# PR Rc -1477, measured cold IFO PR RoC [VIR-0029A-15]
+# PR Rc -1430, design value to have good matching (should correspond to
+# warm compensated ifo), PRAR Rc -3.62, measured PR AR RoC [VIR-0029A-15].
+# PR transmission and PR AR reflectivity 160u [VIR-0029A-15], here set as
+# loss
+
+m PRAR R=0.0 L=160u Rc=-3.62
+s sPRsub PRAR.p2 PR.p1 L=0.1003 nr=nsilica
+m PR T=0.04835 L=30u Rc=-1430.0
+
+# Space between PR and POP. Length from TDR.
+s lPR_POP PR.p2 POP_AR.p1 L=0.06
+
+# Pick off plate. The angle of incidence and the physical distance the beam
+# propagates inside POP are computed from thickness of 3.5 cm [TDR], 6 deg
+# tilt [TDR]. POP AR is wedged, thus one AR-reflectivity is set as a loss.
+# POP reflectivities [VIR-0027A-15]
+
+bs POP_AR R=0.0 L=125u alpha=6.0
+s sPOPsub POP_AR.p3 POP.p1 L=0.03549 nr=nsilica
+bs POP R=184u L=0.0 alpha=4.135015
+# B4' port is POP.p4, attenuated B4 is B4_attenuator.p3
+
+s sB4_att POP.p4 B4_attenuator.p1
+bs B4_attenuator R=0.7344 T=0.2656
+
+# Space between POP and BS. Measured. Reference?
+s lPOP_BS POP.p3 BS.p1 L=5.9399
+
+# BS
+###########################################################################
+# Angles of incidence and the physical distance the beam propagates inside
+# the BS substrate are computed using BS thickness of 6.5 cm, angle of
+# incidence of 45 degrees, and refractive index of nsilica. All from TDR.
+# BS transmission and BS AR relectivty [VIR-0446B-14]
+# TODO get referece for 329u AR reflectivity
+
+bs BS T=0.5012 L=30u alpha=-45.0
+free_mass BS_sus BS.mech mass=34
+
+s sBSsub1 BS.p3 BSAR1.p1 L=0.074459 nr=nsilica
+s sBSsub2 BS.p4 BSAR2.p1 L=0.074459 nr=nsilica
+bs BSAR1 R=329u L=30u alpha=-29.1951
+bs BSAR2 R=329u L=30u alpha=-29.1951
+
+# North arm
+###########################################################################
+
+# Distance between beam splitter and compensation plate. Measured. Ref?
+s lBS_CPN BSAR1.p3 CPN1.p1 L=5.3662
+
+# Compensation plate. Thickness from [TDR, tab 2.9], losses [VIR-0153A-16]
+m CPN1 R=0.0 L=22u
+s sCPNsub CPN1.p2 CPN2.p1 L=0.035 nr=nsilica
+m CPN2 R=0.0 L=44u
+
+# Thermal lens in compensation plate
+lens CPN_TL f=f_CPN_TL
+link(CPN2, CPN_TL)
+s sCPN_NI CPN_TL.p2 NIAR.p1 L=0.2
+
+
+# North input mirror. The AR-surface is not wedged, thus the AR-reflectivity
+# is set as a reflectivity. NI and NIAR relectvity [IM04, VIR-0544A-14]
+# NI Loss set to match measured roundtrip loss of 61 +- 5 ppm [Loggbook 38601]
+# TODO get value for NIAR loss, or set a default
+# Measured thickness. Ref?
+# NI Rc -1424.6, measured cold IFO NI RoC [VIR-0544A-14]
+# NIAR Rc -1420, design NI AR RoC [TDR, table 2.6]
+
+m NIAR R=32u L=0.0 Rc=-1424.6 phi=NI.phi+etalonNI
+s sNIsub NIAR.p2 NI.p1 L=0.20026 nr=nsilica
+m NI T=0.01377 L=27u Rc=-1424.6
+#free_mass NI_sus NI.mech mass=42
+pendulum NI_sus NI.mech mass=42 fz=0.76 Qz=40
+
+# measured value (Jerome)
+s LN NI.p2 NE.p1 L=2999.818
+
+# North end mirror. The AR-surface is wedged, thus the AR-reflectivity is set
+# as a loss. Thickness from TDR. NE Rc 1695, measured cold IFO. NE ROC,
+# transmission, NEAR reflectivity [EM01, VIR-0269A-15]
+
+m NE T=4.4u L=27u Rc=1695.0
+s sNEsub NE.p2 NEAR.p1 L=0.2 nr=nsilica
+m NEAR R=0.0 L=133u
+#free_mass NE_sus NE.mech mass=42
+pendulum NE_sus NE.mech mass=42 fz=0.76 Qz=40
+
+
+# Warm
+###########################################################################
+
+# BS to compensation plate. Measured. Ref?
+s lBS_CPW BS.p2 CPW1.p1 L=5.244
+
+# Compensation plate CP02. Thickness from [TDR, tab 2.9] surface
+# reflectivities from [VIR-0506B-14]
+m CPW1 R=0.0 L=87u
+s sCPWsub CPW1.p2 CPW2.p1 L=0.035 nr=nsilica
+m CPW2 R=0.0 L=114u
+
+# Thermal lens in compensation plate
+lens CPW_TL f=f_CPW_TL
+link(CPW2, CPW_TL)
+# Space between compensation plate and WI. From TDR.
+s sCPW_WI CPW_TL.p2 WIAR.p1 L=0.2
+
+# West input mirror. The AR-surface is not wedged, thus the AR-reflectivity
+# is set as a reflectivity. WI reflectivities [IM02, VIR-0543A-14]. WI and
+# WE loss set to match measured roundtrip loss of 56 +- 5 ppm [Loggbook 38601].
+# WI Rc -1424.5, measured cold IFO WI RoC [IM02, VIR-0543A-14]
+# WIAR Rc -1420, design WI AR RoC [TDR, table 2.6]
+
+m WIAR R=58u L=0.0 Rc=-1424.5 phi=WI.phi+etalonWI
+s sWIsub WIAR.p2 WI.p1 L=0.20031 nr=nsilica
+m WI T=0.01375 L=27u Rc=-1424.5
+pendulum WI_sus WI.mech mass=42 fz=0.76 Qz=40
+#free_mass WI_sus WI.mech mass=42
+
+# measured value (Jerome)
+s LW WI.p2 WE.p1 L=2999.788
+
+# West end mirror. The AR-surface is wedged, thus the
+# AR-reflectivity is set as a loss.
+# WE reflectivities [EM03, VIR-0270A-15]
+# WE Rc 1696, measured cold IFO WE RoC [VIR-0270A-15]
+
+m WE T=4.3u L=27u Rc=1696.0
+s sWEsub WE.p2 WEAR.p1 L=0.2 nr=nsilica
+m WEAR R=0.0 L=155u
+pendulum WE_sus WE.mech mass=42 fz=0.76 Qz=40
+#free_mass WE_sus WE.mech mass=42
+
+# SRC
+###########################################################################
+
+# TODO get length reference
+s lsr BSAR2.p3 SR.p1 L=5.943
+
+# SR mirror, substrate length from VIR-0028A-15
+# SR transmissimivity optimized for O4, see
+# https://wiki.virgo-gw.eu/AdvancedVirgoPlus/Meeting190503
+# SR Rc 1443, easured cold IFO SR RoC [VIR-0028A-15]
+# using Rc 1430 to match the PRC (should correspond to warm compensated ifo)
+# SRAR Rc 3.59, design [TDR, table 2.8]
+# SR AR (surface 2) reflectivity [VIR-0028A-15]
+
+m SR T=0.4 L=30u Rc=1430.0
+s sSRsub SR.p2 SRAR.p1 L=0.1004 nr=nsilica
+m SRAR R=0.0 L=141u Rc=3.59
+
+# OMCpath
+###########################################################################
+
+# All parameters in the block are from the TDR, table 7.16.
+
+s sSR_MMTL SRAR.p2 MMT_L.p1 L=4.451
+# Meniscus lens. Focal length obtained via lensmaker's equation with
+# thin lens approximation, and assuming n = 1.44963.
+lens MMT_L f=-3.596
+s sMMT_ML_M1 MMT_L.p2 MMT_M1.p1 L=0.6
+# Telescope mirror 1
+bs MMT_M1 R=1.0 T=0.0 Rc=1.44
+s sMMT_M1_M2 MMT_M1.p2 MMT_M2.p1 L=0.765
+# Telescope mirror 2
+bs MMT_M2 R=1.0 T=0.0 Rc=0.09
+s sMMT_M2_L1 MMT_M2.p2 MMT_L1.p1 L=0.5
+
+# Modematching lenses.
+# -----------------------------------------------------------
+# Focal length mnually adjusted for a match to OMC, should
+# be replaced by proper beam path
+lens MMT_L1 f=0.582
+s sMMT_L1_L2 MMT_L1.p2 MMT_L2.p1 L=0.12
+lens MMT_L2 f=-0.881
+
+
+# OMC
+###########################################################################
+# The round trip loss measured in Cascina is 60ppm, this loss is insert in the trasmittivity of the OMC1_4,
+# it contain both round trip loss, T_4 and T_3 real values (1.1 ppm and 1.3ppm).
+# The other Ts are been calculated using the Finesse and considering the curved HR mirror (OMC1_3) as ideal,
+# and equal Input/Output mirrors R,T and L.
+# see https://tds.virgo-gw.eu/?content=3&r=18807}{VIR-0535A-21.
+# ROCs and lengths are from https://tds.virgo-gw.eu/?content=3\&r=18807}
+# The OMC separation distance of 0.9 cm is from TDR page 254.
+
+#handout https://git.ligo.org/virgo/isc/finesse/common_virgo_file/-/blob/master/handout/handout_main.tex
+
+s sL2_OMC1 MMT_L2.p2 OMC1_1.p1 L=0.99
+
+# OMC
+# TODO: add OMC_f3 notebook
+# handout http://www.gwoptics.org/finesse/reference/
+bs OMC1_1 R=0.99715 T=0.00285 alpha=6
+s sOMC1_1 OMC1_1.p3 OMC1_2.p1 L=0.0613 nr=nsilica
+bs OMC1_2 R=0.99715 T=0.00285 alpha=6
+s sOMC1_2 OMC1_2.p2 OMC1_3.p1 L=0.0626 nr=nsilica
+bs OMC1_3 T=1.1u L=0.0 alpha=6 Rc=1.700
+s sOMC1_3 OMC1_3.p2 OMC1_4.p1 L=0.0613 nr=nsilica
+bs OMC1_4 T=1.3u L=60u alpha=6
+s sOMC1_4 OMC1_4.p2 OMC1_1.p4 L=0.0626 nr=nsilica
+cavity cavOMC1 OMC1_1.p3.o
+
+# B1 output is OMC1_2.p3
+
+# cavities
+###########################################################################
+# Arms
+cav cavW WI.p2.o priority=3
+cav cavN NI.p2.o priority=3
+# PRC
+cav cavPRW PR.p2.o via=WI.p1.i priority=2
+cav cavPRN PR.p2.o via=NI.p1.i priority=2
+#cav cavPRN NI.p1.o via PR.p2.i priority=2
+# SRC
+cav cavSRW SR.p1.o via=WI.p1.i priority=1
+cav cavSRN SR.p1.o via=NI.p1.i priority=1
+
+
+# Lenses
+###########################################################################
+# Compensation plate focal lengths for cold IFO. Values optimised to yield
+# a well matched cold interferomter at 40 W with PRM and SRM HR RoCs of 1430m
+var f_CPN_TL -338003     # North
+var f_CPW_TL -353138     # West

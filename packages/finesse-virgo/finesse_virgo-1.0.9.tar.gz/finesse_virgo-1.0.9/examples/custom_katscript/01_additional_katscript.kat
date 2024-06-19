@@ -1,0 +1,68 @@
+# Useful lengths
+###########################################################################
+var lpr (lPR_POP.L + sPOPsub.L * sPOPsub.nr + lPOP_BS.L)
+var lsrbs (lsr.L + sBSsub2.L * sBSsub2.nr)
+var ln (sBSsub1.L * sBSsub1.nr + lBS_CPN.L + sCPNsub.L * sCPNsub.nr + sCPN_NI.L + sNIsub.L * sNIsub.nr)
+var lw (                           lBS_CPW.L + sCPWsub.L * sCPWsub.nr + sCPW_WI.L + sWIsub.L * sWIsub.nr)
+var lMI (0.5 * (ln + lw))
+var lPRC (lpr + lMI)
+var lSRC (lsrbs + lMI)
+var lSchnupp (ln - lw)
+
+# Useful frequencies
+###########################################################################
+var fsrN (0.5 * c0 / LN.L)
+var fsrW (0.5 * c0 / LW.L)
+var fsrPRC (0.5 * c0 / lPRC)
+var fsrSRC (0.5 * c0 / lSRC)
+var f1_arm (125.5 * fsrN - 300.0)  # Definition of f1, TDR section 2.3
+var f1_SRC (3.5 * fsrN)
+var f1_PRC (3.5 * fsrN)
+
+# DOFs
+###########################################################################
+dof DARM NE.dofs.z -1 WE.dofs.z +1
+dof CARM NE.dofs.z +1 WE.dofs.z +1
+dof MICH NI.dofs.z -1 NE.dofs.z -1 WI.dofs.z +1 WE.dofs.z +1
+dof PRCL PR.dofs.z +1
+dof SRCL SR.dofs.z -1
+
+dof NARM NI.dofs.z +1 NE.dofs.z +1
+dof WARM WI.dofs.z +1 WE.dofs.z +1
+
+dof NI_z NI.dofs.z +1
+dof NE_z NE.dofs.z +1
+dof WI_z WI.dofs.z +1
+dof WE_z WE.dofs.z +1
+
+# Detectors
+###########################################################################
+readout_dc B1 OMC1_2.p3.o output_detectors=true
+readout_dc B2 B2_attenuator.p3.o output_detectors=true
+readout_dc B4 B4_attenuator.p3.o output_detectors=true
+readout_dc B7 NEAR.p2.o output_detectors=true
+readout_dc B8 WEAR.p2.o output_detectors=true
+
+ad CAR_AMP_PRin PRAR.p1.i f=0
+ad CAR_AMP_N NE.p1.o f=0
+ad CAR_AMP_W WE.p1.o f=0
+ad CAR_AMP_BS BS.p1.i f=0
+ad CAR_AMP_AS B1.p1.i f=0
+
+pd1 B4_12 B4_attenuator.p3.o  f=2*eom6.f 
+pd1 B4_112 B4_attenuator.p3.o f=2*eom56.f 
+mathd B4_12_mag  abs(B4_12)
+mathd B4_112_mag abs(B4_112)
+
+
+# Control readouts
+###########################################################################
+# 1f readouts
+readout_rf B1p_56 SRAR.p2.o f=eom56.f phase=0 output_detectors=True
+readout_rf B2_6 B2.p1.i f=eom6.f phase=0 output_detectors=True
+readout_rf B2_56 B2.p1.i f=eom56.f phase=0 output_detectors=True
+readout_rf B2_8 B2.p1.i f=eom8.f phase=0 output_detectors=True
+
+# 3f readouts
+readout_rf B2_56_3f B2.p1.i f=3*eom56.f phase=0 output_detectors=True
+readout_rf B2_6_3f B2.p1.i f=3*eom6.f phase=0 output_detectors=True

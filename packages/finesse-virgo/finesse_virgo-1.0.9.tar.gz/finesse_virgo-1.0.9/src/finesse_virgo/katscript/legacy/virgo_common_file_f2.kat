@@ -1,0 +1,424 @@
+
+#kat2
+%%% FTblock header
+#--------------------------------------------------------------------------
+# An Advacned Virgo plus input file for Finesse
+# file based on this:
+# https://wiki.virgo-gw.eu/Commissioning/OptSimulation/FinesseFile
+# by Michele Valentini, copied August 2020
+# Original comments:
+# - dual recycled AdV + interferometer, with 40% SRM transmission and 40w input power.
+# - No squeezing is considered yet in this file.
+# - OMCs are added as defined in the (old) AdV TDR, if new OMCs will be installed in AdV +, the file needs to be updated;
+# - Optics parameters are set to measured (if available) or AdV TDR COLD ifo values. No thermal effects or ring heater effects are considered;
+# - PRM and SRM RoCs are both set to 1430 m in order to make the SRCL and PRCL cavities "compatible" with each other;
+# Compensation plate focals are arbitrarily (but realistically) set in order to optimize the matching of the recycling cavities with the arms and to keep the recycling cavitites stable but very close to marginal stability (2mrad RT Gouy phase shft);
+# - Modulators at f1 (6.27 MHz), 5*f1, 7*f1 have been added in order to test particular error signals. They can be disabled easily by putting ther modulation index to 0;
+# - Superattenuators mechanical transfer function is missing, therefore radiation pressure effect is not simulated correctly unless they are properly added;
+
+# Changes Andreas:
+# - moved RC/M attr commands to the components (better for block removal)
+# - clarify conventions X = N , Y = W
+# - removed tunings const/block, as this is now handled with Pykat
+# - changed to single OMC for O4 configuration
+# - matching the OMC, Michele Valentini: better match after
+#   changing the focal lenses of MMT_L1 and MMT_L2 to 8.589e+00 and 1.105e+00
+# - adding 329 ppm refletcivity to main BS AR surface
+# - renamed space 'dummy' to allow lock drag
+
+#Changes Antonella:
+# OMC parameters updated using new configuration https://tds.virgo-gw.eu/ql/?c=16783
+# R,T and round trip loss from https://logbook.virgo-gw.eu/virgo/?r=50572 (Michal Was)
+# To simulate the 60ppm round trip loss we setting the HR curved mirror with R=1, T = 0, and the other HR with T=60ppm.
+
+# TODO:
+
+# - moving RTL from constants to components
+# - check for removal of other constants (long const lists are not so useful with Pykat)
+# - add IMC as optional block
+# - add mirror zmech tf?
+# - make O3b/O4 preparation using Pykat
+
+%%% FTend header
+
+
+%%% FTblock Laser
+###########################################################################
+l i1 40 0 0 nin
+s s0 1m nin nEOM6a
+lambda 1.064u
+
+###########################################################################
+%%% FTend Laser
+
+%%% FTblock EOMs
+###########################################################################
+
+# modulation frequencies [TDR, tab 2.3, pp 24]
+const f6 6270777            # fmod1 in TDR
+const f8 8361036            # 4 / 3 * f1, fmod3 in TDR
+const f56 56436993           # 9 * f1, fmod2 in TDR
+
+# EOMs with modulation indices from https://logbook.virgo-gw.eu/virgo/?r=34898
+# and https://logbook.virgo-gw.eu/virgo/?r=38123
+# and https://logbook.virgo-gw.eu/virgo/?r=41551
+mod eom6 $f6 0.22 1 pm 0 nEOM6a nEOM6b
+s sEOM6 0.1 nEOM6b nEOM8a
+mod eom8 $f8 0.15 1 pm 0 nEOM8a nEOM8b
+s sEOM8 0.1 nEOM8b nEOM56a
+mod eom56 $f56 0.25 1 pm 0 nEOM56a nEOM56b
+s s1 0.2 nEOM56b nFI1
+###########################################################################
+%%% FTend EOMs
+
+%%% FTblock REFL
+###########################################################################
+
+# Lossless faraday isolator to pick off B2-beam
+dbs FI nFI1 nFI2 nFI3 nB2a
+s sdummy 1 nFI2 nD
+# Beam splitter to obtain 18 mW of power on B2 (with 40W input)
+s sFI_B2_a 0 nB2a nB2att
+bs B2_attenuator 0.99816 0.00184 0 0 nB2att dump nB2 dump
+
+# Space between the isolator and PR
+s sFI_PR 0 nFI3 nPR1
+
+###########################################################################
+%%% FTend REFL
+
+%%% FTblock PRC
+###########################################################################
+
+# Power recycling mirror. Measured thickness (ref?). The AR-surface is
+# wedged, therefore the AR-reflectivity is set as a loss.
+m2 PRAR 0 $L_PRAR 0 nPR1 nPRsub1
+s sPRsub 0.1003 $nsilica nPRsub1 nPRsub2
+m1 PR $T_PR $L_PR 0 nPRsub2 nPR2
+#attr PR Rc -1477       # Measured cold IFO PR RoC [VIR-0029A-15]
+attr PR Rc -1430.0      # Measured value + RH
+attr PRAR Rc -3.62      # Measured PR AR RoC [VIR-0029A-15]
+
+# Space between PR and POP. Length from TDR.
+s lPR_POP 0.06 1 nPR2 nPOP1
+
+# Pick off plate. The angle of incidence and the physical distance the beam
+# propagates inside POP are computed from thickness of 3.5 cm [TDR], 6 deg
+# tilt [TDR], and refractive index of $nsilica. POP AR is wedged, thus,
+# the AR-reflectivity is set as a loss.
+bs2 POP_AR 0 $L_POP2 0 6.0 nPOP1 nPOPunused1 nPOPsub1 nPOPsub3
+s sPOPsub 0.03549 $nsilica nPOPsub1 nPOPsub2
+bs2 POP $R_POP1 0 0 4.135015 nPOPsub2 nPOPsub4 nPOP2 nB4
+s sB4_att 0 nB4 nB4att
+bs B4_attenuator 0.7344 0.2656 0 0 nB4att dump nB4b dump
+
+# Space between POP and BS. Measured. Reference?
+s lPOP_BS 5.9399 nPOP2 nBSs
+
+###########################################################################
+%%% FTend PRC
+
+%%% FTblock BS
+###########################################################################
+# The beam splitter
+
+# Angles of incidence and the physical distance the beam propagates inside
+# the BS substrate are computed using BS thickness of 6.5 cm, angle of
+# incidence of 45 degrees, and refractive index of nsilica. All from TDR.
+
+# HR surface
+bs1 BS $T_BS $L_BS 0 -45 nBSs nBSw nBSsub1a nBSsub2a
+attr BS M 34
+
+# Substrate
+s sBSsub1 0.074459 $nsilica nBSsub1a nBSsub1b
+s sBSsub2 0.074459 $nsilica nBSsub2a nBSsub2b
+# AR-surface towards north cavity
+bs2 BSAR1 329u $L_BSAR 0 -29.1951 nBSsub1b nUnused1 nBSn nBSAR
+# AR-surface towards the dark port
+bs2 BSAR2 329u $L_BSAR 0 -29.1951 nBSsub2b nUnused2 nBSe nUnused3
+
+###########################################################################
+%%% FTend BS
+
+%%% FTblock Narm
+###########################################################################
+
+# Distance between beam splitter and compensation plate. Measured. Ref?
+s lBS_CPN 5.3662 nBSn nCPN1
+
+# Compensation plate. Thickness from [TDR, tab 2.9]
+m2 CPN1 0 $L_CPN1 0 nCPN1 nCPNsub1
+s sCPNsub 0.035 $nsilica nCPNsub1 nCPNsub2
+m2 CPN2 0 $L_CPN2 0 nCPNsub2 nCPN2
+
+# Space between compensation plate and thermal lens.
+s sCPN_TL 0 nCPN2 nCPN_TL1
+
+# Thermal lens in compensation plate
+lens CPN_TL $f_CPN_TL nCPN_TL1 nCPN_TL2
+
+# Space between compensation plate and NI. From TDR.
+s sCPN_NI 0.2 nCPN_TL2 nNI1
+
+# North input mirror. The AR-surface is not wedged, thus the
+# AR-reflectivity is set as a reflectivity. Measured thickness. Ref?
+m2 NIAR $R_NIAR $L_NIAR 0 nNI1 nNIsub1
+s sNIsub 0.20026 $nsilica nNIsub1 nNIsub2
+m1 NI $T_NI $L_WI 0 nNIsub2 nNI2
+attr NI Rc -1424.6      # Measured cold IFO NI RoC [VIR-0544A-14]
+attr NI M 42
+# attr NIAR Rc -1420     # Design NI AR RoC [TDR, table 2.6]
+attr NIAR Rc -1424.6     # Approximately the same as measured HR surface
+
+# Space between north test masses.
+s LN 2999.818 nNI2 nNE1
+
+# North end mirror. The AR-surface is wedged, thus the
+# AR-reflectivity is set as a loss. Thickness from TDR
+m1 NE $T_NE $L_NE 0 nNE1 nNEsub1
+s sNEsub 0.2 $nsilica nNEsub1 nNEsub2
+m2 NEAR 0 $L_NEAR 0 nNEsub2 nNE2
+attr NE Rc 1695         # Measured cold IFO NE RoC [VIR-0269A-15]
+attr NE M 42
+
+###########################################################################
+%%% FTend Narm
+
+%%% FTblock Warm
+###########################################################################
+
+# BS to compensation plate. Measured. Ref?
+s lBS_CPW 5.244 nBSw nCPW1
+
+# Compensation plate CP02. Thickness from [TDR, tab 2.9]
+m2 CPW1 0 $L_CPW1 0 nCPW1 nCPWsub1
+s sCPWsub 0.035 $nsilica nCPWsub1 nCPWsub2
+m2 CPW2 0 $L_CPW2 0 nCPWsub2 nCPW2
+
+# Space between compensation plate and the thermal lens
+s sCPW_TL 0 nCPW2 nCPW_TL1
+
+# Thermal lens in compensation plate
+lens CPW_TL $f_CPW_TL nCPW_TL1 nCPW_TL2
+
+# Space between compensation plate and WI. From TDR.
+s sCPW_WI 0.2 nCPW_TL2 nWI1
+
+# West input mirror. The AR-surface is not wedged, thus the
+# AR-reflectivity is set as a reflectivity.
+m2 WIAR $R_WIAR $L_WIAR 0 nWI1 nWIsub1
+s sWIsub 0.20031 $nsilica nWIsub1 nWIsub2
+m1 WI $T_WI $L_WI 0 nWIsub2 nWI2
+attr WI Rc -1424.5      # Measured cold IFO WI RoC [VIR-0543A-14]
+attr WI M 42
+# attr WIAR Rc -1420     # Design WI AR RoC [TDR, table 2.6]
+attr WIAR Rc -1424.5     # Approximately the same as measured HR surface
+
+# Space between west test masses
+s LW 2999.788 nWI2 nWE1
+
+# West end mirror. The AR-surface is wedged, thus the
+# AR-reflectivity is set as a loss.
+m1 WE $T_WE $L_WE 0 nWE1 nWEsub1
+s sWEsub 0.2 $nsilica nWEsub1 nWEsub2
+m2 WEAR 0 $L_WEAR 0 nWEsub2 nWE2
+attr WE Rc 1696         # Measured cold IFO WE RoC [VIR-0270A-15]
+attr WE M 42
+
+###########################################################################
+%%% FTend Warm
+
+
+%%% FTblock SRC
+###########################################################################
+
+# TODO get length reference
+s lsr 5.943 nBSe nSR1
+
+m1 SR  $T_SR $L_SR 0 nSR1 nSRsub1
+s sSRsub 0.1004 $nsilica nSRsub1 nSRsub2   ##  VIR-0028A-15
+m2 SRAR 0 $L_SRAR 0 nSRsub2 nSR2
+#attr SR Rc 1443        # Measured cold IFO SR RoC [VIR-0028A-15]
+attr SR Rc 1430.0       # Measured value
+attr SRAR Rc 3.59        # Design [TDR, table 2.8]
+
+
+###########################################################################
+%%% FTend SRC
+
+%%% FTblock OMCpath
+###########################################################################
+
+# All parameters in the block are from the TDR, table 7.16.
+
+s sSR_MMTL 4.451 nSR2 nMMT_La
+
+# Meniscus lens. Focal length obtained via lensmaker's equation with
+# thin lens approximation, and assuming n = 1.44963.
+lens MMT_L -3.596 nMMT_La nMMT_Lb
+
+s sMMT_ML_M1 0.6 nMMT_Lb nMMT_M1a
+
+# Telescope mirror 1
+bs MMT_M1 1 0 0 0 nMMT_M1a nMMT_M1b nMMT_M1c nMMT_M1d
+attr MMT_M1 Rc 1.44
+
+s sMMT_M1_M2 0.765 nMMT_M1b nMMT_M2a
+
+# Telescope mirror 2
+bs MMT_M2 1 0 0 0 nMMT_M2a nMMT_M2b nMMT_M2c nMMT_M2d
+attr MMT_M2 Rc 0.09
+
+s sMMT_M2_L1 0.5 nMMT_M2b nMMT_L1a
+
+# Modematching lenses.
+# -----------------------------------------------------------
+# Focal length manually adjusted for a match to OMC, should
+# be replaced by proper beam path
+
+lens MMT_L1 0.582 nMMT_L1a nMMT_L1b
+s sMMT_L1_L2 0.12 nMMT_L1b nMMT_L2a
+lens MMT_L2 -0.881 nMMT_L2a nMMT_L2b
+
+# -----------------------------------------------------------
+
+
+###########################################################################
+%%% FTend OMCpath
+
+%%% FTblock OMC
+###########################################################################
+# The round trip loss measured in Cascina is 60ppm, this loss is insert in the trasmittivity of the OMC1_4,
+# it contain both round trip loss, T_4 and T_3 real values (1.1 ppm and 1.3ppm).
+# The other Ts are been calculated using the Finesse and considering the curved HR mirror (OMC1_3) as ideal,
+# and equal Input/Output mirrors R,T and L.
+# see https://tds.virgo-gw.eu/?content=3&r=18807}{VIR-0535A-21.
+# ROCs and lengths are from https://tds.virgo-gw.eu/?content=3\&r=18807}
+
+#handout https://git.ligo.org/virgo/isc/finesse/common_virgo_file/-/blob/master/handout/handout_main.tex
+
+s sL2_OMC1 0.99 nMMT_L2b nOMC1_1
+
+# OMC
+# notebook  http://localhost:8888/notebooks/Desktop/gitlab/nikhef/virgo_simulations/antonella_bianchi/2021/power_budget/codes/AdV%2B_f2/omc_test-Copy1.ipynb
+# handout http://www.gwoptics.org/finesse/reference/
+bs OMC1_1 0.99715 0.00285 0 6.00 nOMC1_1 nOMC1_refl nOMC1_2 nOMC1_3
+s sOMC1_1 0.0613 $nsilica nOMC1_2 nOMC1_4
+bs OMC1_2 0.99715 0.00285 0 6.00 nOMC1_4 nOMC1_5 nOMC1_out dump
+s sOMC1_2 0.0626 $nsilica nOMC1_5 nOMC1_6
+bs OMC1_3 1 0 0 6.00 nOMC1_6 nOMC1_7 dump dump
+s sOMC1_3 0.0613 $nsilica nOMC1_7 nOMC1_8
+bs OMC1_4 0.99994 60u 0 6.00 nOMC1_8 nOMC1_9 dump dump
+s sOMC1_4 0.0626 $nsilica nOMC1_9 nOMC1_3
+
+# Design OMC RoCs TDS VIR-0535A-21
+# https://tds.virgo-gw.eu/?content=3&r=18807
+attr OMC1_3 Rc 1.700
+#ring cavity setting
+cav cavOMC1 OMC1_1 nOMC1_2 OMC1_1 nOMC1_3
+
+
+###########################################################################
+%%% FTend OMC
+# Space to output B1
+s sOut 1 nOMC1_out nB1
+
+%%% FTblock Gaussian
+###########################################################################
+# Arms
+cav cavW WI nWI2 WE nWE1
+cav cavN NI nNI2 NE nNE1
+# PRC
+cav cavPRW PR nPR2 WE nWE1
+cav cavPRN PR nPR2 NE nNE1
+
+# SRC
+cav cavSRW SR nSR1 WE nWE1
+cav cavSRN SR nSR1 NE nNE1
+
+###########################################################################
+%%% FTend Gaussian
+
+%%% FTblock RTLs
+###########################################################################
+# Specifying reflectivities, transmissions, and losses.
+
+# Transmissions. All measured. These are set to HR-surfaces.
+# -----------
+const T_NI 0.01377       # NI transmission [IM04, VIR-0544A-14]
+const T_WI 0.01375       # WI transmission [IM02, VIR-0543A-14]
+const T_WE 4.3u          # WE transmission [EM03, VIR-0270A-15]
+const T_NE 4.4u          # NE transmission [EM01, VIR-0269A-15]
+const T_BS 0.5012        # BS transmission [VIR-0446B-14]
+const T_PR 0.04835       # PR transmission [VIR-0029A-15]
+const T_SR 0.4           # SR transmissimivity optimized for O4 https://wiki.virgo-gw.eu/AdvancedVirgoPlus/Meeting190503
+
+# Losses
+# -----------
+# Set to match measured roundtrip loss of 61 +- 5 ppm [Logbook 38601]
+const L_NI 27u           # NI loss
+const L_NE 27u           # NE loss
+# Set to match measured roundtrip loss of 56 +- 5 ppm [Logbook 38601]
+const L_WI 27u           # WI loss
+const L_WE 27u           # WE loss
+# These are included in the above values.
+# const L_NI 0.19u         # NI Absorbtion coating losses. From Valeria. Ref?
+# const L_WI 0.28u         # WI Absorbtion coating losses. From Valeria. Ref?
+# const L_NE 0.24u         # NE Absorbtion coating losses. From Valeria. Ref?
+# const L_WE 0.24u         # WE Absorbtion coating losses. From Valeria. Ref?
+# Guessed/assumed values
+const L_PR 30u
+const L_BS 30u
+const L_SR 30u
+
+# AR-surfaces
+# -----------
+# Measured non-wedged AR-surface reflectivities. Setting as reflectivities
+# TODO remove etalon by default, add via pykat?
+const R_WIAR 58u         # WI AR reflectivity [IM02, VIR-0543A-14]
+const R_NIAR 32u         # NI AR reflectivity [IM04, VIR-0544A-14]
+# Mesured wedged AR-reflectivities. Setting as losses due to wedge
+const L_WEAR 155u        # WE AR reflectivity [EM03, VIR-0270A-15]
+const L_NEAR 133u        # NE AR reflectivity [EM01, VIR-0269A-15]
+const L_BSAR 329u        # BS AR reflectivity [VIR-0446B-14]
+const L_PRAR 160u        # PR AR reflectivity [VIR-0029A-15]
+const L_SRAR 141u        # SR AR (surface 2) reflectivity [VIR-0028A-15]
+
+# Losses
+const L_NIAR 0           # Unknown
+const L_WIAR 0           # Unknown
+
+# POP and CPs
+# -----------
+# Measured POP-reflectivities. Setting S2 surface as loss due to wedge.
+const R_POP1 184u        # POP S1 reflectivity [VIR-0027A-15]
+const L_POP2 125u        # POP S2 reflectivity [VIR-0027A-15]
+
+# Masured CP-reflectivities. Set as losses, but not sure if they have wedge
+const L_CPW1 87u         # CPW (CP02) surface 1 reflectiviy [VIR-0506B-14]
+const L_CPW2 114u        # CPW (CP02) surface 2 reflectiviy [VIR-0506B-14]
+const L_CPN1 22u         # CPW (CP03) surface 1 reflectiviy [VIR-0153A-16]
+const L_CPN2 44u         # CPW (CP03) surface 2 reflectiviy [VIR-0153A-16]
+
+###########################################################################
+%%% FTend RTLs
+
+%%% FTblock Constants
+###########################################################################
+const nsilica 1.44963 # Refractive index of silica
+const l_arm 2999.8         # Arm length
+
+# Lenses
+# -----------
+# Compensation plate focal lengths for cold IFO. Values optimised to yield
+# a well matched cold interferomter at 40 W with PRM and SRM HR RoCs of 1430m
+const f_CPN_TL -338008.0     # North
+const f_CPW_TL -353134.0     # West
+
+# Compensation plate lensing. Values from Valeria.
+# const f_CPN_TL 54000      # North
+# const f_CPW_TL 930000     # West
+
+###########################################################################
+%%% FTend Constants
