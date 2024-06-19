@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: CompNeuroPy
+Version: 1.0.2
+Summary: General package for computational neuroscience with ANNarchy.
+Author-email: Oliver Maith <oliver_maith@gmx.de>
+License: MIT License
+        
+        Copyright (c) 2022 Oliver Maith
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Project-URL: Source, https://github.com/Olimaol/CompNeuroPy
+Keywords: ANNarchy,computational neuroscience,neuroscience,artificial neural network,neural network,neuron,optimization,model
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: sympy
+Requires-Dist: cython
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: numpy
+Requires-Dist: typingchecker
+Requires-Dist: pandas
+Requires-Dist: tabulate
+Requires-Dist: deap
+Requires-Dist: screeninfo
+Requires-Dist: cmaes
+Requires-Dist: pip-chill
+Requires-Dist: pingouin
+Requires-Dist: efel
+Requires-Dist: tqdm
+
+# CompNeuroPy
+Assisting package for computational neuroscience with ANNarchy ([GitHub](https://github.com/ANNarchy/ANNarchy), [documentation](https://annarchy.github.io/), [DOI](https://doi.org/10.5281/zenodo.6415039)).
+
+The documentation is available online at:
+[https://olimaol.github.io/CompNeuroPy/](https://olimaol.github.io/CompNeuroPy/)
+
+The documentation for olimaol_develop branch is available at:
+[https://compneuropy.github.io/CompNeuroPy/](https://compneuropy.github.io/CompNeuroPy/)
+
+### Authors
+
+* Oliver Maith (oli_maith@gmx.de)
