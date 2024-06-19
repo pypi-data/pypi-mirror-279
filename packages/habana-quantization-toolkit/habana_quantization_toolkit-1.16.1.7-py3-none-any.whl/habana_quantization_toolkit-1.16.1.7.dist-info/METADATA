@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: habana_quantization_toolkit
+Version: 1.16.1.7
+Summary: A tool for measurements and quantization of models in pytorch.
+Author: Habana Labs Ltd., an Intel Company
+Author-email: support@habana.ai
+License: See LICENSE.txt
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: numpy
+
+# The Quantization Toolkit
+
+The Quantization Toolkit (HQT) provides model measurement and quantization capabilities in PyTorch.
+For full details see: https://docs.habana.ai/en/latest/PyTorch/Inference_on_PyTorch/Inference_Using_FP8.html
