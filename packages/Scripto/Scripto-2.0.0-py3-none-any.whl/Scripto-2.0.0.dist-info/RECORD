@@ -1,0 +1,10 @@
+scripto/ArgParserUtils.py,sha256=KlC9UpdBh_vkV9HUzYKsEp-V5f-ECCE962f0ZXg2lL8,3341
+scripto/FuncUtils.py,sha256=A7JgVzj7QbVN9MBoAutGZ9O1AkhnwdGtUssmRWTEagc,4542
+scripto/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scripto/app.py,sha256=mOEAUb_N6iBNbg3uezqAXtqYN9Vag2JyO-DRB_46W4A,6532
+scripto/wrap/__main__.py,sha256=RJk1UOEa6qEH7OSDw5Idvaq5A1ALk-wXQYLFwse6qJ8,2288
+Scripto-2.0.0.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+Scripto-2.0.0.dist-info/METADATA,sha256=4JEmp27BhQNxg0P1EOwuIbMrfPFERTIX27YA3LOS4II,43767
+Scripto-2.0.0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+Scripto-2.0.0.dist-info/top_level.txt,sha256=fvclbcbPDr0riPDoeWV31dp4evrQUd8qHJ_77OCX_bY,8
+Scripto-2.0.0.dist-info/RECORD,,
