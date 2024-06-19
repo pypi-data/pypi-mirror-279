@@ -1,0 +1,7 @@
+README.md
+setup.py
+devicetorch/__init__.py
+devicetorch.egg-info/PKG-INFO
+devicetorch.egg-info/SOURCES.txt
+devicetorch.egg-info/dependency_links.txt
+devicetorch.egg-info/top_level.txt
