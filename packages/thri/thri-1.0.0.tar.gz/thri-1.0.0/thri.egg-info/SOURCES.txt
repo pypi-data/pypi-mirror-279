@@ -1,0 +1,8 @@
+README.md
+setup.py
+thri/__init__.py
+thri.egg-info/PKG-INFO
+thri.egg-info/SOURCES.txt
+thri.egg-info/dependency_links.txt
+thri.egg-info/requires.txt
+thri.egg-info/top_level.txt
