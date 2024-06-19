@@ -1,0 +1,5 @@
+[console_scripts]
+smlfm-cli = smlfm_cli.app:app
+
+[gui_scripts]
+smlfm-gui = smlfm_gui.app:app
