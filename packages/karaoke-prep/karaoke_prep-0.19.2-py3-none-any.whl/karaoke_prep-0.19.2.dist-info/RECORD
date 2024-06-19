@@ -1,0 +1,14 @@
+karaoke_prep/__init__.py,sha256=gwWt2-Z35n3jLfLG0phvz9IVZeM7rH5f3mflqUV79X4,38
+karaoke_prep/karaoke_finalise/__init__.py,sha256=HqZ7TIhgt_tYZ-nb_NNCaejWAcF_aK-7wJY5TaW_keM,46
+karaoke_prep/karaoke_finalise/karaoke_finalise.py,sha256=w4bU45IEyqcY_Gg_mNDVwnmrBP2u-4HzdWYDZ9_0Ufs,31898
+karaoke_prep/karaoke_prep.py,sha256=M_XLrtSoQ8o3-5x4nCqGeqJQBzjA0zltlOhtaU1yrSk,37117
+karaoke_prep/resources/AvenirNext-Bold.ttf,sha256=YxgKz2OP46lwLPCpIZhVa8COi_9KRDSXw4n8dIHHQSs,327048
+karaoke_prep/resources/Montserrat-Bold.ttf,sha256=mLFIaBDC7M-qF9RhCoPBJ5TAeY716etBrqA4eUKSoYc,198120
+karaoke_prep/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+karaoke_prep/utils/finalise_cli.py,sha256=zNRlQMYZaxK7LXcWuDE21srJl4_GS8Lny1JMNM5Zhcs,5237
+karaoke_prep/utils/prep_cli.py,sha256=cbKZQa3k6gay23m_meUuz6ccb1T6xnZKzmBJ0SEEoBw,9609
+karaoke_prep-0.19.2.dist-info/LICENSE,sha256=BiPihPDxhxIPEx6yAxVfAljD5Bhm_XG2teCbPEj_m0Y,1069
+karaoke_prep-0.19.2.dist-info/METADATA,sha256=_bVUlMxaRw5hUB1J0R2sJixHuF3rgHjOJPHtK5yLdO8,16404
+karaoke_prep-0.19.2.dist-info/WHEEL,sha256=sP946D7jFCHeNz5Iq4fL4Lu-PrWrFsgfLXbbkciIZwg,88
+karaoke_prep-0.19.2.dist-info/entry_points.txt,sha256=dmqi-OTP1v2KpOvlP80KhHiI5cCmZK9y9FDlPN8f45Q,119
+karaoke_prep-0.19.2.dist-info/RECORD,,
