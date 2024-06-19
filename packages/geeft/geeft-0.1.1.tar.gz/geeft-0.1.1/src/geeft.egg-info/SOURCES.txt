@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+dev-environment.yml
+pyproject.toml
+.github/workflows/python-publish.yml
+docs/examples/01_compute_harmonics.ipynb
+docs/examples/02_compute_trend.ipynb
+docs/examples/03_workflow.ipynb
+docs/examples/helpers.py
+src/geeft.py
+src/geeft.egg-info/PKG-INFO
+src/geeft.egg-info/SOURCES.txt
+src/geeft.egg-info/dependency_links.txt
+src/geeft.egg-info/requires.txt
+src/geeft.egg-info/top_level.txt
