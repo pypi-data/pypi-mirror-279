@@ -1,0 +1,2 @@
+[console_scripts]
+bridge-docs = StdioBridge._ui.main_window:main
