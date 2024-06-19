@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: crowdsec_service_api
+Version: 1.17.0
+Summary: This is the API to manage Crowdsec services
+Author-email: crowdsec <info@crowdsec.net>
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: httpx
+Requires-Dist: botocore
+Requires-Dist: pydantic<3.0.0,>=2.5.0
+
+# crowdsec_service_api - 1.17.0
+
+
+## Installation
+
+```bash
+pip install crowdsec_service_api
+```
+
+# Usage
+You can access the full usage documentation [here](https://github.com/crowdsecurity/crowdsec-service-api-sdk-python/tree/main/doc).
+
+## License
+
