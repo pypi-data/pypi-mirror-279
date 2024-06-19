@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: hhsqllib
+Version: 0.0
+Summary: sqllib
+Home-page: https://your.project.url
+Author: hh
+Author-email: hehuang0717@outlook.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: addict ==2.4.0
+Requires-Dist: attrs ==23.2.0
+Requires-Dist: certifi ==2024.6.2
+Requires-Dist: charset-normalizer ==3.3.2
+Requires-Dist: click ==8.1.7
+Requires-Dist: cloudpickle ==3.0.0
+Requires-Dist: colorama ==0.4.6
+Requires-Dist: contourpy ==1.2.1
+Requires-Dist: cramjam ==2.8.3
+Requires-Dist: cycler ==0.12.1
+Requires-Dist: dask ==2024.5.2
+Requires-Dist: datashape ==0.5.2
+Requires-Dist: empyrical ==0.5.5
+Requires-Dist: fastparquet ==2024.2.0
+Requires-Dist: fonttools ==4.51.0
+Requires-Dist: fsspec ==2024.3.1
+Requires-Dist: greenlet ==3.0.3
+Requires-Dist: idna ==3.7
+Requires-Dist: importlib-metadata ==7.1.0
+Requires-Dist: importlib-resources ==6.4.0
+Requires-Dist: kiwisolver ==1.4.5
+Requires-Dist: locket ==1.0.0
+Requires-Dist: lxml ==5.2.2
+Requires-Dist: matplotlib ==3.8.4
+Requires-Dist: mssql ==1.0.1
+Requires-Dist: multipledispatch ==1.0.0
+Requires-Dist: mysql ==0.0.3
+Requires-Dist: mysqlclient ==2.2.4
+Requires-Dist: networkx ==3.2.1
+Requires-Dist: numpy ==1.26.4
+Requires-Dist: packaging ==24.0
+Requires-Dist: pandas ==2.2.2
+Requires-Dist: pandas-datareader ==0.10.0
+Requires-Dist: partd ==1.4.2
+Requires-Dist: pillow ==10.3.0
+Requires-Dist: pyarrow ==16.0.0
+Requires-Dist: pymssql ==2.3.0
+Requires-Dist: PyMySQL ==1.1.0
+Requires-Dist: pyodbc ==5.1.0
+Requires-Dist: pyparsing ==3.1.2
+Requires-Dist: python-dateutil ==2.9.0.post0
+Requires-Dist: pytz ==2024.1
+Requires-Dist: PyYAML ==6.0.1
+Requires-Dist: requests ==2.32.3
+Requires-Dist: scipy ==1.13.1
+Requires-Dist: six ==1.16.0
+Requires-Dist: SQLAlchemy ==2.0.30
+Requires-Dist: toolz ==0.12.1
+Requires-Dist: tqdm ==4.66.4
+Requires-Dist: typing-extensions ==4.11.0
+Requires-Dist: tzdata ==2024.1
+Requires-Dist: urllib3 ==2.2.1
+Requires-Dist: zipp ==3.18.1
+
+This is for lazy loading sql database
+I modified the sangreal-wind because the inconsistency between the sangreal-wind and others
