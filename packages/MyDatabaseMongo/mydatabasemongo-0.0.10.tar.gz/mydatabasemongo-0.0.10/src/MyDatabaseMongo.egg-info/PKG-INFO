@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: MyDatabaseMongo
+Version: 0.0.10
+Summary: A package for mongo db database.
+Home-page: https://github.com/kejihela/Create-a-PyPI-package-and-deploy
+Author: kejihela
+Author-email: gleebayour@gmail.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/kejihela/Create-a-PyPI-package-and-deploy/issues
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+License-File: LICENSE
+Requires-Dist: pymongo
+Requires-Dist: dnspython
+Requires-Dist: pymongo[srv]
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: pytest
+Requires-Dist: ensure
+Provides-Extra: testing
+Requires-Dist: pytest>=7.1.3; extra == "testing"
+Requires-Dist: mypy>=0.971; extra == "testing"
+Requires-Dist: flake8>=5.0.4; extra == "testing"
+Requires-Dist: tox>=3.25.1; extra == "testing"
+Requires-Dist: black>=22.8.0; extra == "testing"
+
+# Creating-Folder-Template
