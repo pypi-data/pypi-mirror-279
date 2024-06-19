@@ -1,0 +1,14 @@
+numpy
+dask[array]>=2022.2.0
+pyzmq
+ndstorage>=0.1.5
+docstring-inheritance
+pymmcore
+sortedcontainers
+pyjavaz>=1.2.1
+
+[dev]
+pytest
+wget
+requests
+napari
