@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+nexradaws2/__init__.py
+nexradaws2/nexradawsinterface.py
+nexradaws2.egg-info/PKG-INFO
+nexradaws2.egg-info/SOURCES.txt
+nexradaws2.egg-info/dependency_links.txt
+nexradaws2.egg-info/requires.txt
+nexradaws2.egg-info/top_level.txt
+nexradaws2/resources/__init__.py
+nexradaws2/resources/awsnexradfile.py
+nexradaws2/resources/downloadresults.py
+nexradaws2/resources/localnexradfile.py
