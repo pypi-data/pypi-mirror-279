@@ -1,0 +1,8 @@
+pypz/plugins/kafka_io/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pypz/plugins/kafka_io/channels.py,sha256=MDTRU3uoEuRTDt57IEc2HPfvhlbrBqGBO-4Q6RXXUlk,28923
+pypz/plugins/kafka_io/ports.py,sha256=10m974Wh2xr9v1W_iQVKzW6fdhTsPEi8a8SkT2hp7jk,1417
+pypz_kafka_io-0.9.2b0.dist-info/LICENSE,sha256=WNHhf_5RCaeuKWyq_K39vmp9F28LxKsB4SpomwSZ2L0,11357
+pypz_kafka_io-0.9.2b0.dist-info/METADATA,sha256=qmonpL8K_zDFLKKNyyldbhxWA-xcEwL23aVQ7_EWHkk,2741
+pypz_kafka_io-0.9.2b0.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pypz_kafka_io-0.9.2b0.dist-info/top_level.txt,sha256=mv8iAyQBK2h99c_wL1IvRogw1BLfLvk5smfZtgOnvw4,5
+pypz_kafka_io-0.9.2b0.dist-info/RECORD,,
