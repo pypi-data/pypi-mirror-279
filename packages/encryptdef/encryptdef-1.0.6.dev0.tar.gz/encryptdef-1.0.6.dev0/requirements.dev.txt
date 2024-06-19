@@ -1,0 +1,18 @@
+# dev dependencies 
+ipython
+ipdb
+
+# Code Quality
+flake8
+pyproject-flake8
+black
+isort
+
+# build
+build
+twine
+wheel
+
+# typing
+mypy
+types-setuptools
