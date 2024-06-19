@@ -1,0 +1,11 @@
+newslaunch/__init__.py,sha256=lv2HGCyO6XuszOObpXwKIMYki6hZGhwMqAe3qBE1_kA,224
+newslaunch/__main__.py,sha256=8hDtWlaFZK24KhfNq_ZKgtXqYHsDQDetukOCMlsbW0Q,59
+newslaunch/cli.py,sha256=vEBaBCp9VFt7ay-5rhSaHHVUTsCiOtc0GqZZDTvcZvw,3158
+newslaunch/guardian_api.py,sha256=wLiJ7OLkf3miD8hVOemoAIa6q5BhIti0462LrWoYUkQ,5684
+newslaunch/kinesis_writer.py,sha256=2I6A92rLTHsL6vozK-7K-WhfZ7U8LhjXdzdSOW2qHcI,5721
+newslaunch-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+newslaunch-0.0.1.dist-info/METADATA,sha256=_Fsda8WuI0DpLozP9ekpIudfvQuXwc0iiRiIlCyDR-U,3403
+newslaunch-0.0.1.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+newslaunch-0.0.1.dist-info/entry_points.txt,sha256=vTqlO5PzktY8dD4Ebs5ATrepTDhhuVSRo1OfHioEjMw,50
+newslaunch-0.0.1.dist-info/top_level.txt,sha256=2SzndqG_LR7jeDhez6CxzmMov4KQ4YXgAtpMaNfaFJA,11
+newslaunch-0.0.1.dist-info/RECORD,,

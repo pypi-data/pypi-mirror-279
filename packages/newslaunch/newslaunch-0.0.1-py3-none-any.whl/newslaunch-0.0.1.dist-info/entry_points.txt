@@ -1,0 +1,2 @@
+[console_scripts]
+newslaunch = newslaunch.cli:cli
