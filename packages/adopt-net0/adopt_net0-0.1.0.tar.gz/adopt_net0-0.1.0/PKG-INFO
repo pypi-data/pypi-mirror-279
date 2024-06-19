@@ -1,0 +1,62 @@
+Metadata-Version: 2.3
+Name: adopt_net0
+Version: 0.1.0
+Summary: A python package for multi energy system modelling
+Project-URL: Homepage, https://github.com/UU-ER/AdOpT-NET0
+Project-URL: Issues, https://github.com/UU-ER/AdOpT-NET0/issues
+Project-URL: Documentation, https://adopt-net0.readthedocs.io
+Author-email: "Jan F. Wiegner" <j.f.wiegner@uu.nl>, Julia Tiggeloven <j.l.tiggeloven@uu.nl>, Luca Bertoni <l.bertoni@uu.nl>, Inge Ossentjuk <i.m.ossentjuk@uu.nl>, Matteo Gazzani <m.gazzani@uu.nl>
+License-File: LICENSE
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.12
+Requires-Dist: dill>=0.3.8
+Requires-Dist: gurobipy>=11.0.1
+Requires-Dist: numpy>=1.26.4
+Requires-Dist: openpyxl>=3.1.2
+Requires-Dist: pandas>=2.2.2
+Requires-Dist: pvlib>=0.10.4
+Requires-Dist: pwlf>=2.2.1
+Requires-Dist: pyomo>=6.7.1
+Requires-Dist: pytest>=8.1.1
+Requires-Dist: requests>=2.31.0
+Requires-Dist: scandir>=1.10.0
+Requires-Dist: scikit-learn>=1.4.2
+Requires-Dist: scipy>=1.13.0
+Requires-Dist: statsmodels>=0.14.1
+Requires-Dist: tables>=3.9.2
+Requires-Dist: timezonefinder>=6.5.0
+Requires-Dist: tsam>=2.3.1
+Description-Content-Type: text/markdown
+
+[![Documentation Status](https://readthedocs.org/projects/adopt-net0/badge/?version=latest)](https://adopt-net0.readthedocs.io/en/latest/?badge=latest)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+![Testing](https://github.com/UU-ER/AdOpT-NET0/actions/workflows/00publish_tests.yml/badge.svg?branch=main)
+
+# AdOpT-NET0 - Advanced Optimization Tool for Networks and Energy
+
+This is a python package to simulate and optimize multi energy systems. It can 
+model conversion technologies and networks for any carrier and optimize the 
+design and operation of a multi energy system.
+
+## Installation
+The package can be installed with pip:
+
+```pip install adopt_net0```
+
+## Usage and documentation
+The documentation and minimal examples of how to use the package can be found 
+[here](https://adopt-net0.readthedocs.io/en/latest/index.html). We also provide a 
+[visualization tool](https://resultvisualization.streamlit.app/) that is compatible 
+with AdOpT-NET0.
+
+## Dependencies
+The package relies heavily on other python packages. Among others this package uses:
+
+- [pyomo](https://github.com/Pyomo/pyomo) for compiling and constructing the model
+- [pvlib](https://github.com/pvlib/pvlib-python) for converting climate data into 
+  electricity output
+- [tsam](https://github.com/FZJ-IEK3-VSA/tsam) for the aggregation of time series
+
+## Credits
+This tool was developed at Utrecht University.
