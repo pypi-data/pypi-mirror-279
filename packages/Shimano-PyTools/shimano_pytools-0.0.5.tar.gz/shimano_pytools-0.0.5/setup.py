@@ -1,0 +1,86 @@
+#!/usr/bin/env python
+#-*- coding:utf-8 -*-
+import os
+from setuptools import setup, find_packages
+
+MAJOR =0
+MINOR =0
+PATCH =5
+VERSION = f"{MAJOR}.{MINOR}.{PATCH}"
+
+def get_install_requires():
+    reqs = [
+        'aes == 1.2.0',
+        'backports.tarfile == 1.2.0',
+        'build == 1.2.1',
+        'certifi == 2024.6.2',
+        'charset-normalizer == 3.3.2',
+        'colorama == 0.4.6',
+        'dbpystream == 1.1',
+        'docutils == 0.21.2',
+        'et-xmlfile == 1.1.0',
+        'idna == 3.7',
+        'importlib_metadata == 7.1.0',
+        'jaraco.classes == 3.4.0',
+        'jaraco.context == 5.3.0',
+        'jaraco.functools == 4.0.1',
+        'keyring == 25.2.1',
+        'markdown-it-py == 3.0.0',
+        'mdurl == 0.1.2',
+        'more-itertools == 10.3.0',
+        'Naked == 0.1.32',
+        'nh3 == 0.2.17',
+        'numpy == 2.0.0',
+        'openpyxl == 3.1.4',
+        'packaging == 24.1',
+        'pandas == 2.2.2',
+        'pkginfo == 1.11.1',
+        'pycryptodome == 3.20.0',
+        'Pygments == 2.18.0',
+        'pymssql == 2.3.0',
+        'pyproject_hooks == 1.1.0',
+        'python-dateutil == 2.9.0.post0',
+        'pytz == 2024.1',
+        'pywin32 == 306',
+        'pywin32-ctypes == 0.2.2',
+        'PyYAML == 6.0.1',
+        'pyzstd == 0.16.0',
+        'readme_renderer == 43.0',
+        'requests == 2.32.3',
+        'requests-toolbelt == 1.0.0',
+        'rfc3986 == 2.0.0',
+        'rich == 13.7.1',
+        'shellescape == 3.8.1',
+        'six == 1.16.0',
+        'toml == 0.10.2',
+        'tomli == 2.0.1',
+        'twine == 5.1.0',
+        'tzdata == 2024.1',
+        'urllib3 == 2.2.1',
+        'WMI == 1.5.1',
+        'zipp == 3.19.2'
+    ]
+    return reqs
+setup(
+	name = "Shimano_PyTools",
+	version = VERSION,
+    author ="shimano_zyl",
+    author_email = "sanseyunlong@gmail.com",
+    long_description_content_type="text/markdown",
+	url = 'https://github.com/sanseyunlong/Shimano_PyTools.git',
+	long_description = open('README.md',encoding="utf-8").read(),
+    python_requires=">=3.6",
+    install_requires=get_install_requires(),
+	packages = find_packages(),
+ 	license = 'Apache',
+   	classifiers = [
+       'License :: OSI Approved :: Apache Software License',
+       'Natural Language :: English',
+       'Operating System :: OS Independent',
+       'Programming Language :: Python',
+       'Programming Language :: Python :: 3.6',
+       'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    package_data={'': ['*.csv', '*.txt','.toml']},
+    include_package_data=True
+)
