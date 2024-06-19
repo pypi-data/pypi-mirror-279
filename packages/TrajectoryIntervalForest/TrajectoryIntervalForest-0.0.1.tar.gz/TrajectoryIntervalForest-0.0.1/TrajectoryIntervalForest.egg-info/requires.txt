@@ -1,0 +1,10 @@
+CaGeo
+numpy
+pandas
+tqdm
+pycatch22
+joblib
+scikit-learn
+setuptools
+
+[flag]
