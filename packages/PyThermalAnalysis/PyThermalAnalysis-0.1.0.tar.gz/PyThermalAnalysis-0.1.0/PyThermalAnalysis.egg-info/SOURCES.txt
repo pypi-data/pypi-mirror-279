@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+PyThermalAnalysis/__init__.py
+PyThermalAnalysis/exergy.py
+PyThermalAnalysis/thermodynamics.py
+PyThermalAnalysis.egg-info/PKG-INFO
+PyThermalAnalysis.egg-info/SOURCES.txt
+PyThermalAnalysis.egg-info/dependency_links.txt
+PyThermalAnalysis.egg-info/requires.txt
+PyThermalAnalysis.egg-info/top_level.txt
+test/test_pythermanalysis.py
