@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wicspy/__init__.py
+wicspy/bark.py
+wicspy/timer_tool.py
+wicspy.egg-info/PKG-INFO
+wicspy.egg-info/SOURCES.txt
+wicspy.egg-info/dependency_links.txt
+wicspy.egg-info/requires.txt
+wicspy.egg-info/top_level.txt
