@@ -1,0 +1,15 @@
+aiomqtt
+click
+coloredlogs
+orjson
+pydantic-settings
+pydantic
+rox-vectors
+pymap3d
+
+[dev]
+pylint
+mypy
+pytest
+pytest-cov
+pytest-asyncio
