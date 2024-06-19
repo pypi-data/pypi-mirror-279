@@ -1,0 +1,148 @@
+[project]
+name = 'persist'
+version = '3.2.1'
+description = 'Persistent archival of python objects in an importable format.'
+readme = 'README.md'
+authors = [
+    {name = 'Michael McNeil Forbes', email = 'michael.forbes+python@gmail.com'},
+]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'Topic :: Software Development :: Libraries :: Python Modules',
+    'Topic :: Utilities',
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: BSD License",
+]
+license = {text = 'LGPL-2.1-or-later'}
+
+######################################################################
+# Dependencies
+requires-python = '>=3.6.2'
+#requires-python = '~=3.10.0'
+dependencies = [
+    "six>=1.16.0",
+    "zope-interface>=5.5.2",
+    'importlib-metadata>=4.8.3; python_version < "3.8"',
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.1",
+    #"pytest-cov>=4.0.0",
+    'coverage[toml]; python_version < "3.7"', 
+    'coverage[toml]>=7.2.2; python_version >= "3.7"', 
+    'persist[full]',
+]
+docs = [
+    "sphinx>=5.3.0",
+    "nbsphinx>=0.8.8",
+    "pycallgraph>=1.0.1",
+    "sphinx-rtd-theme>=1.2.0",
+    "sphinxcontrib-zopeext>=0.3.3",
+    'ipython >= 7.16.3; python_version < "3.7"',
+    'ipython >= 7.23.1; python_version >= "3.7"',
+    "mmf-setup>=0.4.11",
+]
+full = [
+    'scipy >= 1.5.4; python_version < "3.7"',
+    'scipy >= 1.7.3; python_version < "3.10" and python_version >= "3.7"',
+    'scipy >= 1.10.1; python_version >= "3.10"',
+    # This version of numpy has universal wheels
+    'numpy>=1.21.0; python_version >= "3.8"',
+    'h5py>=3.1.0; python_version < "3.7"',
+    'h5py >= 3.2.1; python_version >= "3.7"',
+]
+all = [
+    'persist[full,test,docs]',
+]
+
+
+[project.urls]
+Issues = 'https://alum.mit.edu/www/mforbes/hg/forbes-group/persist/issues'
+'Git Mirror' = 'https://github.com/forbes-group/persist'
+repository = 'https://alum.mit.edu/www/mforbes/hg/forbes-group/persist'
+documentation = 'http://persist.readthedocs.org'
+
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "flit-core>=3.8.0",
+    "pip>=21.3.1",
+    "ipython >= 7.23.1"
+]
+
+[tool.pdm.build]
+includes = []
+[build-system]
+#requires = ["pdm-backend"]
+#build-backend = "pdm.backend"
+requires = ["flit-core>=3.4"]
+build-backend = "flit_core.buildapi"
+
+######################################################################
+# PyTest
+[tool.pytest.ini_options]
+testpaths = [ "tests", "src/persist" ]
+markers = [
+    # mark test as a benchmark.  (Might be slow, or platform dependent)
+    "bench",
+    # mark test as slow.
+    "slow",
+]
+addopts = [
+    "-m not bench",
+    "--doctest-modules",
+    #"--cov=persist",
+    #"-x",
+    #"--pdb",
+    #"--flake8",  # Disable until https://github.com/tholo/pytest-flake8/issues/8
+]
+
+doctest_optionflags = [
+    "ELLIPSIS",
+    "NORMALIZE_WHITESPACE",
+    "IGNORE_EXCEPTION_DETAIL",
+]
+
+######################################################################
+# Coverage
+[tool.coverage.run]
+# https://github.com/marketplace/actions/coveralls-python#coveragepy-configuration
+branch = true
+relative_files = true
+parallel = true
+#omit = ["src/persist/_contrib/*"]
+source = ["persist"]
+
+[tool.coverage.paths]
+source = ["src", "**/site-packages"]
+
+[tool.coverage.html]
+directory = "build/_coverage"
+
+[tool.coverage.report]
+fail_under = 96
+
+######################################################################
+# Black
+[tool.black]
+exclude = '''
+    /(
+        \.git
+      | \.hg
+      | \.nox
+      | \.venv
+      | _build
+      | build
+      | dist
+    )/
+'''
