@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: UnitPie
+Version: 1.0.0.1
+Summary: Tired of these testing libraries such as pytest and unittest? UnitPie is here to change that!
+Author: Sandu Bogdan
+Author-email: bogdanelsandu@hotmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: license.txt
+
+# UnitPie
+Tired of these testing libraries such as `pytest` and `unittest`? `UnitPie` is here to change that!
+It allows you to group and categorize tests into different TestCases and run all tests by calling a single function!
+No command-line trickery needed!
+
+## Command Line Syntax
+* `-v`, `-version`: This will print out the version of `UnitPie` you currently have installed
