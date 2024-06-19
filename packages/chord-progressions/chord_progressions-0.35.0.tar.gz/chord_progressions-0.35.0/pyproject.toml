@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chord-progressions"
+dynamic = ["version"]
+description = "A Python package for working with chord progressions "
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "p3zo", email = "p3zo@users.noreply.github.com" },
+]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+]
+dependencies = [
+    "matplotlib~=3.5.1",
+    "mido~=1.2.10",
+    "networkx~=2.8",
+    "numpy~=1.22.3",
+    "pandas~=1.4.2",
+    "pretty_midi~=0.2.10",
+    "scipy~=1.8.0",
+]
+
+[tool.setuptools]
+packages = ["chord_progressions"]
+
+[tool.setuptools.dynamic]
+version = {attr = "chord_progressions.__version__"}
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "black", "flake8", "ipdb", "ipython", "isort", "bump-my-version", "mkdocs-material"]
+test = ["pytest", "pytest-cov"]
+
+[project.urls]
+Homepage = "https://github.com/p3zo/chord-progressions"
+Issues = "https://github.com/p3zo/chord-progressions/issues"
+
+[tool.bumpversion]
+current_version = "0.35.0"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+tag = true
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+allow_dirty = false
+commit = true
+message = "Bump version: {current_version} → {new_version}"
+commit_args = ""
