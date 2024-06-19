@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+grsba/__init__.py
+grsba/grsba.py
+grsba.egg-info/PKG-INFO
+grsba.egg-info/SOURCES.txt
+grsba.egg-info/dependency_links.txt
+grsba.egg-info/top_level.txt
