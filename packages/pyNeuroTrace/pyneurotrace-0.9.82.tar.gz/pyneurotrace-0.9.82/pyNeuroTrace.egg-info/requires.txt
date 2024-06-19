@@ -1,0 +1,12 @@
+ipython
+ipywidgets
+matplotlib
+matplotlib-scalebar
+numpy==1.24.4
+pytest
+PyQt5
+scipy
+tqdm
+
+[GPU]
+cupy
