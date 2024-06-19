@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+plex_assets_manager/Movie.py
+plex_assets_manager/PlexMovieLib.py
+plex_assets_manager/__init__.py
+plex_assets_manager/conf.py
+plex_assets_manager/main.py
+plex_assets_manager/utils.py
+plex_assets_manager.egg-info/PKG-INFO
+plex_assets_manager.egg-info/SOURCES.txt
+plex_assets_manager.egg-info/dependency_links.txt
+plex_assets_manager.egg-info/entry_points.txt
+plex_assets_manager.egg-info/requires.txt
+plex_assets_manager.egg-info/top_level.txt
