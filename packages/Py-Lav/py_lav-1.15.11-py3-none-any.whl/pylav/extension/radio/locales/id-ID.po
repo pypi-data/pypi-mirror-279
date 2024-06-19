@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pylav\n"
+"POT-Creation-Date: 2024-06-18 22:00+0000\n"
+"PO-Revision-Date: 2024-06-18 22:01\n"
+"Last-Translator: \n"
+"Language-Team: Indonesian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: redgettext 3.4.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: pylav\n"
+"X-Crowdin-Project-ID: 535244\n"
+"X-Crowdin-Language: id\n"
+"X-Crowdin-File: /lib/pylav/extension/radio/locales/messages.pot\n"
+"X-Crowdin-File-ID: 3753\n"
+"Language: id_ID\n"
+
+#: pylav/extension/radio/utils.py:183 pylav/extension/radio/utils.py:194
+#: pylav/extension/radio/utils.py:205 pylav/extension/radio/utils.py:213
+#: pylav/extension/radio/utils.py:219 pylav/extension/radio/utils.py:225
+#: pylav/extension/radio/utils.py:232 pylav/extension/radio/utils.py:537
+msgid "Unnamed"
+msgstr "Tidak disebutkan namanya"
+
