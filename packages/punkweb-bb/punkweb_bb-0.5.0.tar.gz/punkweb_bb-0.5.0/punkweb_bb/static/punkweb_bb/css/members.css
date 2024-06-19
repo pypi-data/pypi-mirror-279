@@ -1,0 +1,44 @@
+.members__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.members__header h1 {
+  margin: 0;
+}
+
+.members__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.members__user {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.members__user:not(:last-of-type) {
+  border-bottom: 1px solid var(--oc-gray-4);
+}
+
+.members__user__username {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  gap: 0.25rem;
+  position: relative;
+}
+
+.members__user__stat {
+  color: var(--oc-gray-6);
+  font-size: 0.75rem;
+}
+
+.members__user__stat__value {
+  color: var(--oc-gray-9);
+}
