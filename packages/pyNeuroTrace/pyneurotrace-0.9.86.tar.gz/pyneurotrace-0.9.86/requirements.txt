@@ -1,0 +1,11 @@
+setuptools>=70.0.0
+wheel
+ipython
+ipywidgets
+matplotlib
+matplotlib-scalebar
+numpy<2.0.0
+pytest
+PyQt5
+scipy
+tqdm
