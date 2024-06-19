@@ -1,0 +1,2 @@
+[console_scripts]
+PrettyDF-credits = PrettyDF.main:credits
