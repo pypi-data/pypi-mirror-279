@@ -1,0 +1,4 @@
+pathlib
+
+[dev]
+pytest>=7.3.1
