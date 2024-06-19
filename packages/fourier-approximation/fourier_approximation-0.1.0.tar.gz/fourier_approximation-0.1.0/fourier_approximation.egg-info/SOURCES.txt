@@ -1,0 +1,11 @@
+README.md
+setup.py
+fourier_approximation/__init__.py
+fourier_approximation/approximation.py
+fourier_approximation.egg-info/PKG-INFO
+fourier_approximation.egg-info/SOURCES.txt
+fourier_approximation.egg-info/dependency_links.txt
+fourier_approximation.egg-info/requires.txt
+fourier_approximation.egg-info/top_level.txt
+tests/__init__.py
+tests/test_approximation.py
