@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+cnl2feedcrawler/__init__.py
+cnl2feedcrawler/run.py
+cnl2feedcrawler.egg-info/PKG-INFO
+cnl2feedcrawler.egg-info/SOURCES.txt
+cnl2feedcrawler.egg-info/dependency_links.txt
+cnl2feedcrawler.egg-info/entry_points.txt
+cnl2feedcrawler.egg-info/not-zip-safe
+cnl2feedcrawler.egg-info/top_level.txt
+cnl2feedcrawler/providers/__init__.py
+cnl2feedcrawler/providers/version.py
+cnl2feedcrawler/providers/http_requests/__init__.py
+cnl2feedcrawler/providers/http_requests/request_handler.py
