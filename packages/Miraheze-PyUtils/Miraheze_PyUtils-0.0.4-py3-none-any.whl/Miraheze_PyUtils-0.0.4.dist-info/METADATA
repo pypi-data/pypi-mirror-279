@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: Miraheze_PyUtils
+Version: 0.0.4
+Summary: Python Utilities for Miraheze
+Home-page: https://github.com/miraheze/python-functions
+Author: RhinosF1
+Author-email: rhinosf1@wikitide.org
+Maintainer: Miraheze Technology Team
+Maintainer-email: sre@wikitide.org
+License: GPL3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: filelock
+Requires-Dist: langcodes ==3.4.0
+Requires-Dist: internetarchive
+
+# python-functions

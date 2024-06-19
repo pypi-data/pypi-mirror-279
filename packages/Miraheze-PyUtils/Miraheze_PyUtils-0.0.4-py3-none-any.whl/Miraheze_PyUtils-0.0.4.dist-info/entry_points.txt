@@ -1,0 +1,4 @@
+[console_scripts]
+fix-container-perms = miraheze.swift.fix_container_permissions:main
+partial-reset-wiki = miraheze.salt.mwcli.partial_reset_wiki:main
+rename-wiki = miraheze.salt.mwcli.rename_wiki:main
