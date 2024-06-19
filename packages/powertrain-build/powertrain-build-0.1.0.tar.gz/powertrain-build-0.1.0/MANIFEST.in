@@ -1,0 +1,6 @@
+include pybuild/templates/*.html
+include test-requirements.txt
+include pybuild/matlab_scripts/CodeGen/*
+include pybuild/matlab_scripts/helperFunctions/*
+include pybuild/matlab_scripts/*
+include requirements.txt

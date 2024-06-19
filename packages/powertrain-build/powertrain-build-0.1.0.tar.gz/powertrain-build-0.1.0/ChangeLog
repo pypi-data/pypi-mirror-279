@@ -1,0 +1,20 @@
+CHANGES
+=======
+
+0.1.0
+-----
+
+* Updates to deployment docs/files
+* Adding blackduck token to secrets
+* Update PyPi secret to handle official PyPi
+
+0.0.1
+-----
+
+* Updates making pypi upload possible
+* Update pypi secret and add job using it
+* Add secret for uploading to TestPyPi
+* Copy from Volvo Cars local project
+* Add tox jobs
+* Add initial jobs for check and gate
+* Added .gitreview
