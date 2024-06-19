@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: funky_modifiers
+Version: 0.3.10
+Summary: A package containing tiny bits and bobs to remove boilerplate or just make things simpler.
+Home-page: https://github.com/Sparqzi/funk_py
+Author: Erich Kopp
+License: BSD 3-Clause
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >3.6
+License-File: LICENSE
+Requires-Dist: pyyaml >=6.0
+
