@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: moveread-annotations
+Version: 0.1.9
+Summary: Annotation schemas for the Moveread Core
+Author-email: Marcel Claramunt <marcel@moveread.com>
+Project-URL: repo, https://github.com/moveread/python-core
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic
+Requires-Dist: robust-extraction
+Requires-Dist: lazy-loader
+Requires-Dist: moveread-labels
+Requires-Dist: moveread-boxes
+Requires-Dist: scoresheet-models
+Provides-Extra: ts-gen
+Requires-Dist: quicktype-ts; extra == "ts-gen"
+
+# Moveread Annotations
+
+> Annotation schemas for the Moveread Core
