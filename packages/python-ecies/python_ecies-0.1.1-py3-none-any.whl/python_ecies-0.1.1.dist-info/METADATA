@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: python-ecies
+Version: 0.1.1
+Summary: ECIES implementation for Python on top of the cryptography library
+Author-email: Marten Svanfeldt <marten.svanfeldt@actia.se>
+License: Copyright 2024 Actia Nordic AB
+        
+        Permission is hereby granted, free of charge, to any person obtaining
+        a copy of this software and associated documentation files
+        (the “Software”), to deal in the Software without restriction,
+        including without limitation the rights to use, copy, modify, merge,
+        publish, distribute, sublicense, and/or sell copies of the Software,
+        and to permit persons to whom the Software is furnished to do so,
+        subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be
+        included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+        BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+        ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: importlib-metadata
+Requires-Dist: typing-extensions
+Requires-Dist: cryptography >=42.0
+Provides-Extra: build
+Requires-Dist: build[virtualenv] ==1.0.3 ; extra == 'build'
+Requires-Dist: twine ==5.0 ; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: tox ==4.11.1 ; extra == 'dev'
+Requires-Dist: python-ecies[lint] ; extra == 'dev'
+Requires-Dist: python-ecies[test] ; extra == 'dev'
+Requires-Dist: python-ecies[doc] ; extra == 'dev'
+Requires-Dist: python-ecies[build] ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: sphinx ==7.2.6 ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ==1.3.0 ; extra == 'doc'
+Requires-Dist: sphinx-autodoc-typehints ==2.0.1 ; extra == 'doc'
+Requires-Dist: pip-licenses ==4.3.2 ; extra == 'doc'
+Requires-Dist: jinja2 ==3.1.2 ; extra == 'doc'
+Provides-Extra: lint
+Requires-Dist: mypy ==1.9.0 ; extra == 'lint'
+Requires-Dist: pytest ==7.4.1 ; extra == 'lint'
+Requires-Dist: types-docutils ; extra == 'lint'
+Requires-Dist: types-setuptools ; extra == 'lint'
+Requires-Dist: jinja2 ==3.1.2 ; extra == 'lint'
+Requires-Dist: ruff ==0.4.9 ; extra == 'lint'
+Provides-Extra: test
+Requires-Dist: pytest ==7.4.1 ; extra == 'test'
+Requires-Dist: pytest-randomly ==3.15.0 ; extra == 'test'
+Requires-Dist: pytest-cov ==4.1.0 ; extra == 'test'
+Requires-Dist: coverage[toml] ==7.3.1 ; extra == 'test'
+Provides-Extra: yubihsm
+Requires-Dist: yubihsm[http,usb] ==3.0 ; extra == 'yubihsm'
+
+===============================
+python-ecies
+===============================
+
+
+Library for ECIES implemented in python
+
+
+
+A longer description of your project goes here...
