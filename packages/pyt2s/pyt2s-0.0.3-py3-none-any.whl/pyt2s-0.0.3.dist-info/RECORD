@@ -1,0 +1,14 @@
+pyt2s/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyt2s/service.py,sha256=7jp4ySkSfz4f8Sbwzl230lq-lkYp7ppd6Cc2E5aWqpU,243
+pyt2s/services/acapela.py,sha256=LwHOxQfrAzfQstiohmafKpRzYsP2MRfU5RMNuymN09Q,5011
+pyt2s/services/cepstral.py,sha256=FyzygvusEKp3l34cMse5yKOA2u_anFEUFTgkYImEc3g,1132
+pyt2s/services/ibm_watson.py,sha256=LNKGRPdBfhww_qd72vwgQbySo6S_skPDNwuioQgpSuA,1872
+pyt2s/services/oddcast.py,sha256=Z4yuS4ayMUJkUDB0MvKfZr7N-ZhGRWdouMZGbQ-tdwo,3047
+pyt2s/services/stream_elements.py,sha256=zGHONDCQp7FPNZtbRSto5g7opl_cw169Xt3K4BZqr2A,3737
+pyt2s/services/streamlabs.py,sha256=jslsblRh3uT_lQuSBhkCrb-hd7ffhlzlsIBESktfK4Q,1204
+pyt2s/services/voice_forge.py,sha256=5Nq7HZg41sEjUionpVMxnbC_xh3qecA4oZjFN4Y2ZJA,843
+pyt2s-0.0.3.dist-info/LICENSE,sha256=EDA_8B15eov6UpYr3abaXyZcMfQ3kpDrFsQLomjtK64,1076
+pyt2s-0.0.3.dist-info/METADATA,sha256=5QOLwJty1Fs_IbnBJEJpHHTQJ6Jo7ijscGp8OPLB8oQ,1554
+pyt2s-0.0.3.dist-info/WHEEL,sha256=GJ7t_kWBFywbagK5eo9IoUwLW6oyOeTKmQ-9iHFVNxQ,92
+pyt2s-0.0.3.dist-info/top_level.txt,sha256=xVJOPKmZrEgAA_Uo1yNF3tPT6Vh7dzIHnxkw2fQ-yl4,6
+pyt2s-0.0.3.dist-info/RECORD,,
