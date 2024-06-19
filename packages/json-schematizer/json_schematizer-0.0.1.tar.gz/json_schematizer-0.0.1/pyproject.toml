@@ -1,0 +1,75 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "json-schematizer"
+dynamic = ["version"]
+description = "JSON schema tools"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "André Fernandes", email = "665811+asfer@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "orjson",
+  "docopt",
+]
+
+[project.urls]
+Documentation = "https://github.com/asfer/json-schematizer#readme"
+Issues = "https://github.com/asfer/json-schematizer/issues"
+Source = "https://github.com/asfer/json-schematizer"
+
+[tool.hatch.version]
+path = "src/json_schematizer/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/json_schematizer tests}"
+
+[tool.hatch.envs.test]
+dependencies = [
+  "coverage[toml]",
+  "pytest",
+  "pytest-cov",
+  "pytest-mock",
+]
+
+[tool.hatch.envs.test.scripts]
+run-coverage = "pytest --cov-config=pyproject.toml --no-cov-on-fail=True --cov=src/json_schematizer"
+run = "run-coverage --no-cov"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["3.12", "3.11", "3.10", "3.9", "3.8"]
+
+[tool.coverage.run]
+source_pkgs = ["src"]
+branch = true
+parallel = true
+omit = [
+  "src/json_schematizer/__about__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]

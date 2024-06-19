@@ -1,0 +1,45 @@
+Metadata-Version: 2.3
+Name: json-schematizer
+Version: 0.0.1
+Summary: JSON schema tools
+Project-URL: Documentation, https://github.com/asfer/json-schematizer#readme
+Project-URL: Issues, https://github.com/asfer/json-schematizer/issues
+Project-URL: Source, https://github.com/asfer/json-schematizer
+Author-email: André Fernandes <665811+asfer@users.noreply.github.com>
+License-Expression: MIT
+License-File: LICENSE.txt
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Requires-Dist: docopt
+Requires-Dist: orjson
+Description-Content-Type: text/markdown
+
+# json-schematizer
+
+[![PyPI - Version](https://img.shields.io/pypi/v/json-schematizer.svg)](https://pypi.org/project/json-schematizer)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/json-schematizer.svg)](https://pypi.org/project/json-schematizer)
+
+-----
+
+## Table of Contents
+
+- [Installation](#installation)
+- [License](#license)
+
+## Installation
+
+```console
+pip install json-schematizer
+```
+
+## License
+
+`json-schematizer` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
