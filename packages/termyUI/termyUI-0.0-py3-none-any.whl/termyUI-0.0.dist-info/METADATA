@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: termyUI
+Version: 0.0
+License-File: LICENSE
+Requires-Dist: curses
+Requires-Dist: windows-curses
+Requires-Dist: pyfiglet
+Requires-Dist: termcolor
+Requires-Dist: re
+Requires-Dist: os
+
